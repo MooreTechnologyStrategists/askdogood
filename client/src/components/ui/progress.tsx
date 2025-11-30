@@ -1,29 +1,33 @@
+// client/src/components/ui/progress.tsx
 import * as React from "react";
-import * as ProgressPrimitive from "@radix-ui/react-progress";
 
-import { cn } from "@/lib/utils";
+export interface ProgressProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  value?: number;
+}
 
-function Progress({
-  className,
-  value,
-  ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Root>) {
+export function Progress({ value = 0, ...props }: ProgressProps) {
   return (
-    <ProgressPrimitive.Root
-      data-slot="progress"
-      className={cn(
-        "bg-primary/20 relative h-2 w-full overflow-hidden rounded-full",
-        className
-      )}
+    <div
       {...props}
+      style={{
+        width: "100%",
+        backgroundColor: "#eee",
+        height: "0.5rem",
+        borderRadius: "999px",
+        overflow: "hidden",
+        ...(props.style || {}),
+      }}
     >
-      <ProgressPrimitive.Indicator
-        data-slot="progress-indicator"
-        className="bg-primary h-full w-full flex-1 transition-all"
-        style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+      <div
+        style={{
+          width: `${value}%`,
+          height: "100%",
+          backgroundColor: "#555",
+        }}
       />
-    </ProgressPrimitive.Root>
+    </div>
   );
 }
 
-export { Progress };
+export default Progress;
