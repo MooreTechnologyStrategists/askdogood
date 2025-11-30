@@ -1,23 +1,13 @@
-import { useTheme } from "next-themes";
-import { Toaster as Sonner, type ToasterProps } from "sonner";
+// client/src/components/ui/sonner.tsx
+// Simple placeholder Toaster so the frontend can build without next-themes/sonner.
 
-const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme();
+import * as React from "react";
 
-  return (
-    <Sonner
-      theme={theme as ToasterProps["theme"]}
-      className="toaster group"
-      style={
-        {
-          "--normal-bg": "var(--popover)",
-          "--normal-text": "var(--popover-foreground)",
-          "--normal-border": "var(--border)",
-        } as React.CSSProperties
-      }
-      {...props}
-    />
-  );
-};
+export type ToasterProps = React.HTMLAttributes<HTMLDivElement>;
 
-export { Toaster };
+export function Toaster(_props: ToasterProps) {
+  // No-op toaster for now. You can wire up real toasts later.
+  return null;
+}
+
+export default Toaster;
