@@ -7,25 +7,46 @@ export function Card({ children, ...props }: CardProps) {
   return <div {...props}>{children}</div>;
 }
 
-export function CardHeader({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
-  return <div {...props}>{children}</div>;
+export function CardHeader(
+  props: React.HTMLAttributes<HTMLDivElement>
+) {
+  const { children, ...rest } = props;
+  return <div {...rest}>{children}</div>;
 }
 
-export function CardTitle({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) {
-  return <h3 {...props}>{children}</h3>;
+export function CardTitle(
+  props: React.HTMLAttributes<HTMLHeadingElement>
+) {
+  const { children, ...rest } = props;
+  return <h3 {...rest}>{children}</h3>;
 }
 
-export function CardContent({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
-  return <div {...props}>{children}</div>;
+/**
+ * Added to satisfy imports like:
+ * import { CardDescription } from "@/components/ui/card";
+ */
+export function CardDescription(
+  props: React.HTMLAttributes<HTMLParagraphElement>
+) {
+  const { children, ...rest } = props;
+  return <p {...rest}>{children}</p>;
+}
+
+export function CardContent(
+  props: React.HTMLAttributes<HTMLDivElement>
+) {
+  const { children, ...rest } = props;
+  return <div {...rest}>{children}</div>;
+}
+
+/**
+ * Optional but common in these UI patterns – future-proofing.
+ */
+export function CardFooter(
+  props: React.HTMLAttributes<HTMLDivElement>
+) {
+  const { children, ...rest } = props;
+  return <div {...rest}>{children}</div>;
 }
 
 export default Card;
