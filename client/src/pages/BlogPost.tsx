@@ -23,11 +23,31 @@ This is one of the most controversial questions in health and wellness today, an
 
 ## My Personal Experience
 
-I've had my own journey with both substances, and I'm not here to preach or judge. Instead, I want to share what I've learned through research, personal experience, and conversations with healthcare professionals.
+I've had my own journey with both substances, from many different angles and I'm not here to preach or judge. Instead, I want to share what I've learned through research, personal experience, and conversations with healthcare professionals.
+It may surprise you that when I say I have had my own journeys with these substances, I am not even speaking
+of my direct consumption; but rather about how those close to me have been affected by them, and how I have had to navigate relationships and social situations involving both alcohol and marijuana.  Both my parents have struggled with
+the realities of alcoholism.  Just the same, most all of my ex boyfriends have had a more complex life due to the influence of alcohol.
+I have watched alcohol abuse and consumption tear families apart.  
+
+Just the same, my distain for marijuana in my young adult life is why I ended up divorcing my children's father; only to find myself later using this same coping mechanism to numb my own pain.  It was not until I got sober that I realized 
+how much both substances had negatively impacted my life and health.  
+
+In the hood, we tend to want to believe that weed somehow helps us to be more creative, more relaxed, and more in tune with ourselves.  
+But the reality is that it can also lead to dependency, lack of motivation, and mental health issues.
+
+Then we say things like "at least weed isn't as bad as alcohol," but is that really true?  We furthermore allow and accept how our children pick up the same bad habits that we ourselves have struggled with.  We fail to see how our own actions 
+and choices impact the next generation.
 
 ## The Science on Alcohol
 
-Alcohol is one of the most widely consumed substances globally, yet it's also one of the most harmful. According to the World Health Organization, alcohol contributes to over 3 million deaths worldwide each year.
+Alcohol is one of the most widely consumed substances globally, yet it's also one of the most harmful. According to the World Health Organization, alcohol contributes to over 3 million deaths worldwide each year. The fact that it is legal and 
+socially accepted does not negate its risks.  And the peer pressure to drink in social settings can be overwhelming, leading many to consume more than they should.
+
+And while yes we know that our children will explore as they become teenagers and young adults, we must also teach them the importance of moderation and responsible consumption.  We must also teach them the dangers of addiction and how to seek 
+help if they need it.  As you read my many writings, you will learn that one of my biggest advocacies is communication and education.  We must educate our youth on the realities of substance use and abuse.
+
+Stop turning a blind eye to the realities of alcohol consumption.  It is not glamorous, it is not fun, and it is not worth the risk to your health and well-being.  Just because you are not the parent or you feel the kid will not listen to you, does not
+validate your choice to ignore the situation.  Be the change you want to see in the world.
 
 **Key health impacts of alcohol:**
 - Liver damage and cirrhosis
@@ -68,65 +88,6 @@ Remember: there's no shame in asking for help. Your health and well-being are wo
 *This article is based on my personal experience and research. It is not medical advice. Please consult with a healthcare professional for personalized guidance.*
     `
   },
-  "my-recovery-journey-one-year": {
-    title: "One Year Sober: Reflections on My Recovery Journey",
-    date: "2024-11-10",
-    readTime: "10 min read",
-    category: "Recovery",
-    image: "/recovery-strength.png",
-    content: `
-Today marks one year since I made the decision to get sober. It's been the hardest and most rewarding year of my life.
-
-## The Decision
-
-I didn't hit rock bottom in the dramatic way you see in movies. There was no single catastrophic event. Instead, it was a slow realization that I was living a life that didn't align with who I wanted to be.
-
-I was tired of waking up with regret. Tired of the anxiety. Tired of feeling like I was just going through the motions.
-
-## The First 30 Days
-
-The first month was brutal. I won't sugarcoat it. The physical withdrawal was one thing, but the emotional and psychological challenges were even harder.
-
-**What helped me:**
-- Daily check-ins with a support group
-- Journaling my thoughts and triggers
-- Finding new routines to replace old habits
-- Leaning on friends and family who supported my decision
-
-## Months 3-6: Finding My Footing
-
-By month three, the fog started to lift. I began to rediscover who I was without substances. I picked up old hobbies, started exercising regularly, and invested in my mental health.
-
-This period wasn't without challenges. I had to navigate social situations, deal with cravings, and learn to sit with uncomfortable emotions instead of numbing them.
-
-## Months 6-12: Building a New Life
-
-The second half of the year has been about building. Building new habits, new relationships, new goals. I've accomplished more in the past six months than I did in the previous five years.
-
-**Key milestones:**
-- Completed my first 5K
-- Improved my professional performance
-- Rebuilt relationships with family
-- Developed a consistent meditation practice
-- Started this blog to share my journey
-
-## What I've Learned
-
-1. **Recovery isn't linear.** There are good days and hard days. That's okay.
-2. **You can't do it alone.** Support is essential, whether it's from friends, family, or a formal program.
-3. **Sobriety is a gift, not a punishment.** I'm not missing out—I'm gaining clarity, health, and purpose.
-4. **It gets easier.** The first few months are the hardest, but it does get better.
-
-## Looking Forward
-
-I don't know what the next year will bring, but I'm excited to find out—sober, clear-headed, and ready for whatever comes my way.
-
-If you're considering sobriety or struggling with your own recovery, know that you're not alone. It's possible, and it's worth it.
-
----
-
-*If you're struggling with substance use, please reach out to a professional or support group. You don't have to do this alone.*
-    `
   }
 };
 
