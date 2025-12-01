@@ -2,16 +2,17 @@
 import * as React from "react";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
+}
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, className, ...props }, ref) => (
-    <button ref={ref} className={className} {...props}>
+export function Button({ asChild, children, ...props }: ButtonProps) {
+  // We ignore `asChild` for now and always render a native button
+  return (
+    <button {...props}>
       {children}
     </button>
-  )
-);
-
-Button.displayName = "Button";
+  );
+}
 
 export default Button;
