@@ -1,14 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
+import { Menu, X, User } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 import { useUser } from "@/hooks/useUser";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  const { user } = useUser();
+  // useUser may return null when not authenticated or not initialized
+  const user = useUser();
+  const displayName = user?.name ?? "Guest";
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -27,7 +30,10 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <span className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer text-2xl font-bold text-primary" style={{ fontFamily: 'var(--font-serif)' }}>
+            <span
+              className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer text-2xl font-bold text-primary"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
               Ask Do Good
             </span>
           </Link>
@@ -47,12 +53,13 @@ export default function Header() {
                 </span>
               </Link>
             ))}
+
             {user ? (
               <div className="flex items-center gap-4">
                 <Link href="/profile">
                   <Button variant="ghost" size="sm" className="gap-2">
                     <User className="h-4 w-4" />
-                    {user.name || 'Profile'}
+                    {displayName}
                   </Button>
                 </Link>
                 <Button variant="outline" size="sm" asChild>
@@ -71,7 +78,7 @@ export default function Header() {
             variant="ghost"
             size="icon"
             className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen((open) => !open)}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -94,6 +101,35 @@ export default function Header() {
                 </span>
               </Link>
             ))}
+
+            <div className="pt-2 flex items-center gap-3">
+              {user ? (
+                <>
+                  <Link href="/profile">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="gap-2 w-full justify-start"
+                    >
+                      <User className="h-4 w-4" />
+                      {displayName}
+                    </Button>
+                  </Link>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="w-full justify-center"
+                  >
+                    <a href="/api/auth/logout">Logout</a>
+                  </Button>
+                </>
+              ) : (
+                <Button size="sm" asChild className="w-full">
+                  <a href="/api/auth/login">Login</a>
+                </Button>
+              )}
+            </div>
           </nav>
         )}
       </div>
