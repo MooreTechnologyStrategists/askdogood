@@ -1,5 +1,9 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+/* 1. Turn Tailwind on */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Theme + fonts (your existing styles, kept) */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,6 +12,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -40,10 +45,10 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  
+
   /* Custom font families */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
 }
 
 :root {
@@ -52,29 +57,39 @@
   --primary-foreground: oklch(0.98 0.01 45);
   --sidebar-primary: oklch(0.50 0.12 45);
   --sidebar-primary-foreground: oklch(0.98 0.01 45);
+
   --chart-1: oklch(0.65 0.10 45);
   --chart-2: oklch(0.55 0.12 45);
   --chart-3: oklch(0.45 0.14 45);
   --chart-4: oklch(0.60 0.08 120);
   --chart-5: oklch(0.50 0.10 120);
+
   --radius: 0.5rem;
+
   --background: oklch(0.98 0.005 45); /* Warm off-white */
-  --foreground: oklch(0.25 0.02 45); /* Deep warm brown */
+  --foreground: oklch(0.25 0.02 45);  /* Deep warm brown */
+
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.02 45);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.02 45);
+
   --secondary: oklch(0.92 0.01 45); /* Light warm beige */
   --secondary-foreground: oklch(0.30 0.02 45);
+
   --muted: oklch(0.94 0.01 45);
   --muted-foreground: oklch(0.50 0.02 45);
+
   --accent: oklch(0.60 0.10 120); /* Sage green accent */
   --accent-foreground: oklch(0.98 0.01 120);
+
   --destructive: oklch(0.55 0.20 25);
   --destructive-foreground: oklch(0.98 0 0);
+
   --border: oklch(0.88 0.01 45);
   --input: oklch(0.88 0.01 45);
   --ring: oklch(0.55 0.12 45);
+
   --sidebar: oklch(0.98 0.005 45);
   --sidebar-foreground: oklch(0.25 0.02 45);
   --sidebar-accent: oklch(0.92 0.01 45);
@@ -83,18 +98,28 @@
   --sidebar-ring: oklch(0.55 0.12 45);
 }
 
+/* 3. Base + component tweaks (yours, but now riding on real Tailwind) */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
     font-weight: 700;
   }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
