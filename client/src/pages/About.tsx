@@ -63,14 +63,17 @@ export default function About() {
             <p className="text-lg leading-relaxed">
               For over two decades, I dealt with symptoms that were dismissed, minimized, or misdiagnosed. Because my family's history with thyroid issues, I would get my thyroid 
               checked annually, and even though it would abnormal every time, the doctor's would always suggest to 
-              just 'monitor' my thyroid.  Meanwhile, I was falling apart internally.  At my lowest, I would ot even
-              drive on the highway.  I would palpitate just watching a highway on the television. All i heard was...
-              Brain fog? "Maybe it's depression." Hair loss? "That's just aging." The constant feeling that something was wrong with my body? "It's all in your head."
+              just 'monitor' my thyroid.  Meanwhile, I was falling apart internally.  At my lowest, I would not even
+              drive on the highway. I could not walk outside to go to the mailbox or even the sidewalk in front of my home.  I would palpitate just watching a highway on the television. All I heard was...
+              Brain fog? "Maybe it's depression." Hair loss? "That's just aging." The constant feeling that something was wrong with my body? "It's all in your head."  And to be fair, it was all in my head.
+              But why? Because no one was willing to dig deeper. No one was willing to listen.  My thyroid was failing, and no one was willing to do the proper testing to find out why.   
             </p>
 
             <p className="text-lg leading-relaxed">
               I can't tell you how many times I was told to see a psychiatrist instead of getting proper thyroid testing. How many times my symptoms were attributed to being a 
-              black woman who "just needs to manage stress better." How many times I left a doctor's office feeling gaslit, unheard, and defeated.
+              black woman who "just needs to manage stress better." How many times I left a doctor's office feeling gaslit, unheard, and defeated. We are largely classified as being b*****s and crazy 
+              when our hormones are out of whack. But it is just assumed that we are angry and emotional beings.  So, we just accept it and move on.  All the while, depriving ourselves of thyroid stabilizing treatments 
+              like vitamin D, iodine, and proper thyroid medication. Please. Take care of yourself.
             </p>
 
             <p className="text-lg leading-relaxed">
@@ -163,8 +166,8 @@ export default function About() {
             <p className="text-lg leading-relaxed">
               While health advocacy is at the core of what I do, I'm also passionate about restoration, 
               personal growth, and living authentically. I'm in healing mode myself, and I know firsthand how 
-              hard it is to break free from depression and anxiety—especially in a community where running away from 
-              disrespecting yourself and not communicaating the truth is normalized.
+              hard it is to break free from depression and anxiety—especially in a community where choosing to 
+              respect yourself and communicate the truth is abnormalized.
             </p>
 
             <p className="text-lg leading-relaxed">

@@ -30,7 +30,7 @@ export default function BlogPost() {
       <article className="max-w-3xl space-y-6">
         <header className="space-y-2">
           <p className="text-sm uppercase tracking-wide text-muted-foreground">
-            Ask Do Good • Blog
+            Ask DoGood • Blog
           </p>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
             {readableTitle}
