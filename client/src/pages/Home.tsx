@@ -19,7 +19,7 @@ export default function Home() {
             {/* Left: Hero copy */}
             <div className="space-y-6">
               <p className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                Ask Do Good · Mind · Body · Soul
+                Ask DoGood · Mind · Body · Soul
               </p>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -27,7 +27,7 @@ export default function Home() {
               </h1>
 
               <p className="max-w-xl text-base md:text-lg text-muted-foreground">
-                Ask Do Good is your hub for real-world healing: practical
+                Ask DoGood is your hub for real-world healing: practical
                 wellness tips, thyroid + chronic illness support, and
                 faith-filled encouragement for people who are tired of
                 starting over from scratch.
@@ -111,7 +111,7 @@ export default function Home() {
                       variant="outline"
                       className="w-full justify-center text-xs"
                     >
-                      Connect with Ask Do Good
+                      Connect with Ask DoGood
                     </Button>
                   </Link>
                 </CardContent>
