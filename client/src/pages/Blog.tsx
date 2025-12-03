@@ -4,73 +4,21 @@ import { Input } from "@/components/ui/input";
 import { Calendar, Clock, Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
-
-// Sample blog posts - will be replaced with actual content
-const blogPosts = [
-  {
-    slug: "alcohol-vs-weed-health-impact",
-    title: "Alcohol vs. Weed: Which Is More Harmful to Your Health?",
-    excerpt: "An honest, research-backed look at the health impacts of alcohol versus marijuana. My personal experience and what the science actually says.",
-    date: "2024-11-15",
-    readTime: "8 min read",
-    category: "Hot Topics",
-    image: "/blog-discussion.png"
-  },
-  {
-    slug: "my-restoration-journey-one-year",
-    title: "One Year Cancer-Free: Reflections on My Restoration Journey",
-    excerpt: "Celebrating one year of being cancer-free and reflecting on the challenges, victories, and unexpected lessons I've learned along the way.",
-    date: "2024-11-10",
-    readTime: "10 min read",
-    category: "Restoration",
-    image: "/recovery-strength.png"
-  },
-  {
-    slug: "fitness-transformation-2-year",
-    title: "My 2-Year Fitness Transformation: What Worked and What Didn't",
-    excerpt: "A transparent look at my fitness journey, including the workouts, nutrition changes, and mindset shifts that made the biggest difference.",
-    date: "2024-11-05",
-    readTime: "12 min read",
-    category: "Health & Wellness",
-    image: "/health-wellness.png"
-  },
-  {
-    slug: "mental-health-stigma-real-talk",
-    title: "Breaking the Mental Health Stigma: Why We Need to Talk More",
-    excerpt: "Mental health struggles are real, and they're nothing to be ashamed of. Here's why I'm choosing to speak openly about my own challenges.",
-    date: "2024-10-28",
-    readTime: "7 min read",
-    category: "Mental Health",
-    image: "/transparency-authenticity.png"
-  },
-  {
-    slug: "nutrition-myths-debunked",
-    title: "5 Nutrition Myths I Believed (And Why They're Wrong)",
-    excerpt: "From carbs to fats to meal timing—I'm breaking down the nutrition myths that held me back and sharing what actually works.",
-    date: "2024-10-20",
-    readTime: "9 min read",
-    category: "Health & Wellness",
-    image: "/health-wellness.png"
-  },
-  {
-    slug: "transparency-in-business",
-    title: "Why Transparency Makes Me a Better Professional",
-    excerpt: "How being open about my struggles and journey has actually strengthened my professional relationships and credibility.",
-    date: "2024-10-12",
-    readTime: "6 min read",
-    category: "Personal Growth",
-    image: "/transparency-authenticity.png"
-  }
-];
+import { blogPosts, searchPosts, getAllCategories } from "@/content/blogData";
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredPosts = blogPosts.filter(post =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Get all categories
+  const categories = ["All", ...getAllCategories()];
+
+  // Filter posts
+  const filteredPosts = searchQuery
+    ? searchPosts(searchQuery)
+    : selectedCategory === "All"
+    ? blogPosts
+    : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
     <div className="min-h-screen">
@@ -82,7 +30,7 @@ export default function Blog() {
               Blog
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Real conversations about health, recovery, and living authentically
+              Real conversations about health, recovery, and living authentically. {blogPosts.length} articles to explore.
             </p>
             
             {/* Search Bar */}
@@ -94,8 +42,31 @@ export default function Blog() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
+                data-testid="blog-search-input"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-8 border-b">
+        <div className="container">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setSearchQuery("");
+                }}
+                size="sm"
+                data-testid={`category-filter-${category.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                {category}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
@@ -105,7 +76,7 @@ export default function Blog() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <Card key={post.slug} className="hover:shadow-lg transition-shadow flex flex-col">
+              <Card key={post.id} className="hover:shadow-lg transition-shadow flex flex-col" data-testid={`blog-post-${post.slug}`}>
                 <div 
                   className="w-full h-48 bg-cover bg-center rounded-t-lg"
                   style={{ backgroundImage: `url(${post.image})` }}
@@ -135,7 +106,7 @@ export default function Blog() {
                     </div>
                   </div>
                   <Link href={`/blog/${post.slug}`}>
-                    <Button variant="outline" className="w-full mt-4">
+                    <Button variant="outline" className="w-full mt-4" data-testid={`read-more-${post.slug}`}>
                       Read More
                     </Button>
                   </Link>
