@@ -1,50 +1,41 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy AskDoGood to Azure Static Web Apps
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+  build_and_deploy:
+    # Run on pushes and PR updates (but not when a PR is closed)
+    if: github.event_name != 'pull_request' || github.event.action != 'closed'
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          lfs: false
+      - uses: actions/checkout@v4
 
-      - name: Build and Deploy
-        id: builddeploy
+      - name: Build & Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_BAY_04E36961E }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for PR comments
-          action: "upload"
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
 
-          # IMPORTANT: paths are relative to repo ROOT
-          app_location: "client"          # where package.json + src live
-          api_location: ""                # no API right now
-          output_location: "dist"         # Vite build output
+          # 👇 REQUIRED
+          deployment_action: upload
 
-          # Make it explicit what to run
-          app_build_command: "npm run build"
+          # Your site is plain static files at the repo root
+          app_location: "client"
+          api_location: ""        # leave empty unless you actually have an Azure Functions app in /api
+          output_location: "dist"     # no build output folder for plain HTML
 
-  close_pull_request_job:
+  close_pull_request_environment:
+    # Auto-close preview envs when a PR is closed (optional but nice)
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    name: Close Pull Request Job
     steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
+      - uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_BAY_04E36961E }}
-          action: "close"
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          deployment_action: close
