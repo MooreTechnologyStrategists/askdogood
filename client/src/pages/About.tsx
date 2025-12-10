@@ -65,8 +65,12 @@ export default function About() {
               checked annually, and even though it would abnormal every time, the doctor's would always suggest to 
               just 'monitor' my thyroid.  Meanwhile, I was falling apart internally.  At my lowest, I would not even
               drive on the highway. I could not walk outside to go to the mailbox or even the sidewalk in front of my home.  I would palpitate just watching a highway on the television. All I heard was...
-              Brain fog? "Maybe it's depression." Hair loss? "That's just aging." The constant feeling that something was wrong with my body? "It's all in your head."  And to be fair, it was all in my head.
-              But why? Because no one was willing to dig deeper. No one was willing to listen.  My thyroid was failing, and no one was willing to do the proper testing to find out why.   
+              Brain fog? "Maybe it's depression." <br/>
+              Hair loss? "That's just aging." <br/>
+              The constant feeling that something was wrong with my body? <br/>
+              "It's all in your head."  And to be fair, it was all in my head.<br/><br/>
+              But why? <br/>Because no one was willing to dig deeper. No one was willing to listen.  
+              My thyroid was failing, and no one was willing to do the proper testing to find out why.   
             </p>
 
             <p className="text-lg leading-relaxed">
