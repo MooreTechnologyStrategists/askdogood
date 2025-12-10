@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps CI/CD - AskDoGood
 
 on:
   push:
@@ -11,40 +11,66 @@ on:
 
 jobs:
   build_and_deploy_job:
+    # Only run deploy on:
+    # - direct pushes to main
+    # - PR events that are not "closed"
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
-          lfs: false
 
-      - name: Build and Deploy
-        id: builddeploy
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: client
+
+      - name: Build application
+        run: pnpm build
+        working-directory: client
+        env:
+          # Frontend env vars go here (optional)
+          VITE_CLINICAL_RECIPE_APP_URL: ${{ secrets.VITE_CLINICAL_RECIPE_APP_URL }}
+          # Add any others you actually use in the client:
+          # VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
+
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_BAY_04E36961E }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for PR comments
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # for PR comments
           action: "upload"
-
-          # IMPORTANT: paths are relative to repo ROOT
-          app_location: "client"          # where package.json + src live
-          api_location: ""                # no API right now
-          output_location: "dist"         # Vite build output
-
-          # Make it explicit what to run
-          app_build_command: "npm run build"
+          # Root of your frontend source
+          app_location: "client"
+          # No API for now – update if you add one later
+          api_location: ""
+          # Where the built static files live *inside* client/
+          output_location: "dist"
+          skip_app_build: true
 
   close_pull_request_job:
+    # This runs when a PR targeting main is closed and cleans up the SWA preview environment
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
+
     steps:
-      - name: Close Pull Request
-        id: closepullrequest
+      - name: Close Pull Request Environment
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_BAY_04E36961E }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           action: "close"
