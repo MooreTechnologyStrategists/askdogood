@@ -2,61 +2,62 @@ name: Azure Static Web Apps CI/CD
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build_and_deploy_job:
+  build_and_deploy:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install (client)
         working-directory: client
         run: npm ci
 
-      - name: Build (Vite)
+      - name: Build (client)
         working-directory: client
         run: npm run build
 
-      # Optional but VERY useful if you ever hit size limits again
-      - name: Show build output size
-        working-directory: client
+      - name: Verify dist + size
         run: |
-          echo "Total dist size:"
-          du -sh dist || true
+          echo "Dist exists?"
+          ls -la client/dist || exit 1
           echo ""
-          echo "Largest files in dist:"
-          du -ah dist | sort -rh | head -n 40 || true
+          echo "Dist size:"
+          du -sh client/dist || true
+          echo ""
+          echo "Largest files:"
+          du -ah client/dist | sort -rh | head -n 40 || true
 
+      # ✅ Deploy ONLY the artifact folder (client/dist)
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
-          app_location: client
-          api_location: ""
-          output_location: dist
 
-  close_pull_request_job:
+          # IMPORTANT: deploy ONLY this folder
+          app_artifact_location: client/dist
+
+          # IMPORTANT: don't let the action try to build (and accidentally package too much)
+          skip_app_build: true
+          skip_api_build: true
+
+  close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    name: Close Pull Request Job
-
     steps:
       - name: Close PR deployment
         uses: Azure/static-web-apps-deploy@v1
