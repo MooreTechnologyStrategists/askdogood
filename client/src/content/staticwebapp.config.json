@@ -11,15 +11,7 @@
       "/*.gif",
       "/*.svg",
       "/*.ico",
-      "/*.webp",
-      "/favicon.ico",
-      "/robots.txt",
-      "/sitemap.xml"
+      "/api/*"
     ]
-  },
-  "responseOverrides": {
-    "404": {
-      "rewrite": "/index.html"
-    }
   }
 }
