@@ -23,6 +23,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
+          fetch-depth: 0
+
+      # ✅ Install pnpm FIRST so setup-node caching doesn't fail
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,20 +37,14 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
         working-directory: client
 
       - name: Build application
         run: pnpm build
         working-directory: client
         env:
-          # Frontend env vars go here (optional)
           VITE_CLINICAL_RECIPE_APP_URL: ${{ secrets.VITE_CLINICAL_RECIPE_APP_URL }}
           # Add any others you actually use in the client:
           # VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
@@ -54,11 +55,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # for PR comments
           action: "upload"
-          # Root of your frontend source
           app_location: "client"
-          # No API for now – update if you add one later
           api_location: ""
-          # Where the built static files live *inside* client/
           output_location: "dist"
           skip_app_build: true
 
