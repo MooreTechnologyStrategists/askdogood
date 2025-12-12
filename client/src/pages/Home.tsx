@@ -33,20 +33,28 @@ export default function Home() {
                 starting over from scratch.
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-4">
                 <Link href="/journey">
-                  <Button className="inline-flex items-center gap-2">
+                  <Button
+                    size="lg"
+                    className="group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-6 text-base font-semibold shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                  >
                     Start Your Healing Journey
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
 
                 <Link href="/blog">
-                  <Button className="border border-input bg-background text-foreground hover:bg-muted">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="rounded-full px-8 py-6 text-base font-semibold border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+                  >
                     Read the Latest Posts
                   </Button>
                 </Link>
               </div>
+
 
               <p className="text-xs md:text-sm text-muted-foreground">
                 No fluff. No fake perfection. Just honest conversations and
