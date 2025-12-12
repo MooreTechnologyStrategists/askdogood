@@ -7,6 +7,17 @@ dist/
 build/
 *.dist
 
+# --- Client build outputs (explicit) ---
+client/dist/
+client/build/
+client/.vite/
+client/node_modules/
+
+# --- Azure Static Web Apps / local tooling ---
+.swa/
+.azure/
+
+
 # Environment variables
 .env
 .env.local
