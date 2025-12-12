@@ -1,4 +1,4 @@
-# The Cost of Getting High: How Marijuana Is Affecting Our Youth
+# The Cost of Getting High: How Marijuana Is Affecting Our Youth 
 
 **By: AskDoGood | Published: November 28, 2025 | Category: Community Health**
 
