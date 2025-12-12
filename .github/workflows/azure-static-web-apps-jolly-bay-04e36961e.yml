@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD - AskDoGood
+name: Azure Static Web Apps CI/CD
 
 on:
   push:
@@ -11,64 +11,55 @@ on:
 
 jobs:
   build_and_deploy_job:
-    # Only run deploy on:
-    # - direct pushes to main
-    # - PR events that are not "closed"
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
 
-      # ✅ Install pnpm FIRST so setup-node caching doesn't fail
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "pnpm"
+          node-version: 20
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
         working-directory: client
+        run: npm ci
 
-      - name: Build application
-        run: pnpm build
+      - name: Build (Vite)
         working-directory: client
-        env:
-          VITE_CLINICAL_RECIPE_APP_URL: ${{ secrets.VITE_CLINICAL_RECIPE_APP_URL }}
-          # Add any others you actually use in the client:
-          # VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
+        run: npm run build
+
+      # Optional but VERY useful if you ever hit size limits again
+      - name: Show build output size
+        working-directory: client
+        run: |
+          echo "Total dist size:"
+          du -sh dist || true
+          echo ""
+          echo "Largest files in dist:"
+          du -ah dist | sort -rh | head -n 40 || true
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # for PR comments
-          action: "upload"
-          app_location: "client"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: upload
+          app_location: client
           api_location: ""
-          output_location: "dist"
-          skip_app_build: true
+          output_location: dist
 
   close_pull_request_job:
-    # This runs when a PR targeting main is closed and cleans up the SWA preview environment
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
 
     steps:
-      - name: Close Pull Request Environment
+      - name: Close PR deployment
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "close"
+          action: close
