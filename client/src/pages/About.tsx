@@ -42,7 +42,7 @@ export default function About() {
               About Me
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
-              Thyroid cancer survivor. Health advocate. Black, disabled, veteran woman. Truth-teller.
+              Thyroid cancer survivor. Balanced-Living Health advocate. Black, disabled, veteran woman. Truth-teller.
             </p>
           </div>
         </div>
