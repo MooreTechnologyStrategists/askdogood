@@ -114,12 +114,12 @@ export default function About() {
 
             <p className="text-lg leading-relaxed">
               This platform is my way of fighting back. I talk about the hard stuff—thyroid health, 
-              addiction, smoking in our community, the impact of marijuana on our youth—because these 
+              addiction and vices, smoking in our community, the impact of marijuana on our youth—because these 
               conversations save lives.
             </p>
 
             <p className="text-lg leading-relaxed">
-              I'm not a doctor, but I am someone who's been through it. Someone who knows what it's like 
+              I'm not a doctor, but I am someone who's been through endless challenges that strengthened me. Someone who knows what it's like 
               to be dismissed, to fight for answers, and to finally find healing. If my story helps even one 
               person advocate for themselves, demand better care, or recognize their symptoms earlier, then 
               this work is worth it.
