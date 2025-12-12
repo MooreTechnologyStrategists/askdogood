@@ -29,23 +29,22 @@ jobs:
         working-directory: client
         run: npm run build
 
-      - name: Verify dist contains index.html
+      - name: Verify dist
         run: |
           ls -la client/dist
           test -f client/dist/index.html
 
-      - name: Deploy to Azure Static Web Apps
+      - name: Deploy (dist only)
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
 
-          # 👇 Force SWA to use the built output
-          app_location: client
-          output_location: dist
+          # ✅ upload ONLY the built static site
+          app_location: client/dist
+          output_location: ""
 
-          # 👇 Don't let SWA build/package the repo root
           skip_app_build: true
           skip_api_build: true
 
