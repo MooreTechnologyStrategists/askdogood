@@ -29,18 +29,11 @@ jobs:
         working-directory: client
         run: npm run build
 
-      - name: Verify dist + size
+      - name: Verify dist contains index.html
         run: |
-          echo "Dist exists?"
-          ls -la client/dist || exit 1
-          echo ""
-          echo "Dist size:"
-          du -sh client/dist || true
-          echo ""
-          echo "Largest files:"
-          du -ah client/dist | sort -rh | head -n 40 || true
+          ls -la client/dist
+          test -f client/dist/index.html
 
-      # ✅ Deploy ONLY the artifact folder (client/dist)
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -48,10 +41,11 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
 
-          # IMPORTANT: deploy ONLY this folder
-          app_artifact_location: client/dist
+          # 👇 Force SWA to use the built output
+          app_location: client
+          output_location: dist
 
-          # IMPORTANT: don't let the action try to build (and accidentally package too much)
+          # 👇 Don't let SWA build/package the repo root
           skip_app_build: true
           skip_api_build: true
 
