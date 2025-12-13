@@ -60,24 +60,6 @@
 
     <!-- Vite entry -->
     <script type="module" src="/src/main.tsx"></script>
-
-    <!-- Optional Analytics (Umami) — safe to keep; only runs if you set env vars at build time -->
-    <script>
-      (function () {
-        var endpoint = "%VITE_ANALYTICS_ENDPOINT%";
-        var websiteId = "%VITE_ANALYTICS_WEBSITE_ID%";
-
-        // If Vite didn't replace env vars, they will still contain "%VITE_...%".
-        // In that case, do nothing.
-        if (
-          !endpoint ||
-          !websiteId ||
-          endpoint.indexOf("%VITE_") === 0 ||
-          websiteId.indexOf("%VITE_") === 0
-        ) {
-          return;
-        }
-
         var s = document.createElement("script");
         s.defer = true;
         s.src = endpoint.replace(/\/$/, "") + "/umami";
