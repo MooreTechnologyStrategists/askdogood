@@ -57,17 +57,6 @@
 
   <body>
     <div id="root"></div>
-
-    <!-- Vite entry -->
-    <script type="module" src="/src/main.tsx"></script>
-        var s = document.createElement("script");
-        s.defer = true;
-        s.src = endpoint.replace(/\/$/, "") + "/umami";
-        s.setAttribute("data-website-id", websiteId);
-        document.head.appendChild(s);
-      })();
-    </script>
-
     <!-- Analytics intentionally off until env + tracking is confirmed -->
   </body>
 </html>
