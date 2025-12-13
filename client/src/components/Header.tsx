@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User as UserIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/hooks/useUser";
@@ -9,9 +9,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  // useUser may return null when not authenticated or not initialized
   const user = useUser();
-  const displayName = user?.name ?? "Guest";
+  const displayName = user?.name || user?.email || "Account";
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -44,9 +43,7 @@ export default function Header() {
               <Link key={item.path} href={item.path}>
                 <span
                   className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    isActive(item.path)
-                      ? "text-primary"
-                      : "text-foreground/60"
+                    isActive(item.path) ? "text-primary" : "text-foreground/60"
                   }`}
                 >
                   {item.label}
@@ -55,21 +52,28 @@ export default function Header() {
             ))}
 
             {user ? (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <Link href="/profile">
                   <Button variant="ghost" size="sm" className="gap-2">
-                    <User className="h-4 w-4" />
+                    <UserIcon className="h-4 w-4" />
                     {displayName}
                   </Button>
                 </Link>
+
+                {/* SWA managed logout */}
                 <Button variant="outline" size="sm" asChild>
-                  <a href="/api/auth/logout">Logout</a>
+                  <a href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>
                 </Button>
               </div>
             ) : (
-              <Button size="sm" asChild>
-                <a href="/api/auth/login">Login</a>
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/signup">Join</Link>
+                </Button>
+                <Button size="sm" asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+              </div>
             )}
           </nav>
 
@@ -91,9 +95,7 @@ export default function Header() {
               <Link key={item.path} href={item.path}>
                 <span
                   className={`block py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    isActive(item.path)
-                      ? "text-primary"
-                      : "text-foreground/60"
+                    isActive(item.path) ? "text-primary" : "text-foreground/60"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -102,7 +104,7 @@ export default function Header() {
               </Link>
             ))}
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-col gap-2">
               {user ? (
                 <>
                   <Link href="/profile">
@@ -110,24 +112,31 @@ export default function Header() {
                       variant="ghost"
                       size="sm"
                       className="gap-2 w-full justify-start"
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      <User className="h-4 w-4" />
+                      <UserIcon className="h-4 w-4" />
                       {displayName}
                     </Button>
                   </Link>
+
                   <Button
                     variant="outline"
                     size="sm"
                     asChild
                     className="w-full justify-center"
                   >
-                    <a href="/api/auth/logout">Logout</a>
+                    <a href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>
                   </Button>
                 </>
               ) : (
-                <Button size="sm" asChild className="w-full">
-                  <a href="/api/auth/login">Login</a>
-                </Button>
+                <>
+                  <Button size="sm" asChild className="w-full">
+                    <Link href="/login">Login</Link>
+                  </Button>
+                  <Button variant="outline" size="sm" asChild className="w-full">
+                    <Link href="/signup">Join</Link>
+                  </Button>
+                </>
               )}
             </div>
           </nav>

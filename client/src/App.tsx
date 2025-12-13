@@ -26,6 +26,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 const CLINICAL_RECIPE_APP_URL: string =
   import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ??
@@ -130,6 +132,8 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/login"} component={Login} />
+      <Route path={"/signup"} component={Signup} />
       <Route path={"/dashboard"} component={Dashboard} />
       <Route path={"/rewards"} component={Rewards} />
       <Route path={"/challenges"} component={Challenges} />
