@@ -71,7 +71,10 @@ export default function BlogPost() {
       {/* Hero Section with Featured Image */}
       <section
         className="relative py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${post.image})` }}
+        const heroSrc = blogImages[slug] ?? BLOG_DEFAULT_HERO;
+        // ...
+        style={{ backgroundImage: `url(${heroSrc})` }}
+
       >
         <div className="absolute inset-0 bg-black/60"></div>
 
