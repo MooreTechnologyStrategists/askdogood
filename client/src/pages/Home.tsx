@@ -1,264 +1,190 @@
-import Hero from "@/components/site/Hero";
-
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ArrowRight, Heart, Lightbulb, Sparkles, Users } from "lucide-react";
 import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, ShieldCheck, Sparkles, Utensils, HeartPulse, BookOpen } from "lucide-react";
 
 export default function Home() {
+  const heroImg = "/assets/img/brand/rosee-hero.webp"; // swap to .jpg/.png if needed
+  const fallbackHeroImg = "/assets/img/brand/rosee-hero.jpg"; // optional fallback if you keep both
+
   return (
-    <main className="min-h-screen bg-background">
-      {/* Primary hero (image-forward) */}
-      <Hero
-        title="Ask DoGood"
-        subtitle="Healing, resilience, and building a better life on purpose."
-        image="/assets/img/heroes/hero-home.webp"
-        align="center"
-      />
+    <div className="min-h-screen bg-background">
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b">
+        {/* subtle background wash */}
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
 
-      {/* Supporting section (no longer a competing hero) */}
-      <section className="border-b bg-background">
-        <div className="container py-12 md:py-20 lg:py-24">
-          <div className="grid gap-8 md:grid-cols-[1.3fr,1fr] md:items-center">
-            {/* Left: Supporting copy */}
-            <div className="space-y-6">
-              <p className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                Ask DoGood · Mind · Body · Soul
+        <div className="container relative py-16 md:py-24">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            {/* Copy */}
+            <div className="space-y-7">
+              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-muted-foreground bg-background/60 backdrop-blur">
+                <Sparkles className="h-4 w-4 text-primary" />
+                Calm structure. Real results. No fluff.
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                A calmer way to heal, rebuild, and move forward.
+              </h1>
+
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+                Ask DoGood is your wellness ecosystem — built for real life. Grounded guidance,
+                practical tools, and a community vibe that helps you stay consistent without burning out.
               </p>
 
-              {/* Hero owns the H1, so this is an H2 */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-                Healing isn’t a trend. It’s a lifestyle.
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button asChild size="lg" className="gap-2">
+                  <Link href="/signup">
+                    Begin your journey <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/login">Continue where you left off</Link>
+                </Button>
+              </div>
+
+              <div className="flex items-start gap-2 rounded-xl border p-4 bg-background/70 backdrop-blur">
+                <ShieldCheck className="h-5 w-5 text-primary mt-0.5" />
+                <div className="text-sm text-muted-foreground">
+                  Secure sign-in is handled by Azure Static Web Apps (Microsoft). Ask DoGood does not store passwords.
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[2rem] bg-primary/10 blur-2xl" />
+              <div className="relative rounded-[2rem] border bg-card shadow-sm overflow-hidden">
+                {/* editorial frame */}
+                <div className="aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src={heroImg}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = fallbackHeroImg;
+                    }}
+                    alt="RoSeé Murphy — Ask DoGood"
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+
+                {/* caption bar */}
+                <div className="p-5 border-t bg-background/70 backdrop-blur">
+                  <div className="text-sm font-medium">RoSeé “DoGood” Murphy</div>
+                  <div className="text-sm text-muted-foreground">
+                    Wellness advocate • lived experience • practical healing
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick tiles */}
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            <Card className="hover:shadow-md transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <HeartPulse className="h-5 w-5 text-primary" />
+                  Structure for healing
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Small steps, weekly focus areas, and a dashboard that keeps you grounded — not overwhelmed.
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Utensils className="h-5 w-5 text-primary" />
+                  Food that fits real life
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Meal prep + a Clinical Recipe System that turns goals into practical, everyday meals.
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-md transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  Stories & guidance
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Real talk about wellness, mindset, and rebuilding — with clarity, compassion, and backbone.
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE: Clinical Recipe System */}
+      <section className="py-16 md:py-20">
+        <div className="container">
+          <div className="grid gap-8 md:grid-cols-2 items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                The Clinical Recipe System
               </h2>
-
-              <p className="max-w-xl text-base md:text-lg text-muted-foreground">
-                Ask DoGood is your hub for real-world healing: practical
-                wellness tools, thyroid + chronic illness support, and
-                faith-filled encouragement for people who are tired of starting
-                over from scratch.
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl">
+                AI-powered nutritional recipes tailored to real health conditions. Use it to turn labs,
+                symptoms, and goals into meals that actually fit your lifestyle.
               </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Link href="/journey">
-                  <Button
-                    size="lg"
-                    className="group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-6 text-base font-semibold shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
-                  >
-                    Start Your Healing Journey
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-
-                <Link href="/blog">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-full px-8 py-6 text-base font-semibold border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
-                  >
-                    Read the Latest Posts
-                  </Button>
-                </Link>
-              </div>
-
-              <p className="text-xs md:text-sm text-muted-foreground">
-                No fluff. No fake perfection. Just honest conversations and
-                tools to help you feel better in your body and your life.
-              </p>
-            </div>
-
-            {/* Right: Feature cards */}
-            <div className="grid gap-4">
-              <Card className="shadow-sm">
-                <CardHeader className="flex flex-row items-center gap-3 pb-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Heart className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">
-                      Thyroid & Chronic Illness Support
-                    </CardTitle>
-                    <CardDescription>
-                      Learn from real experience—fighting, surviving, and
-                      rebuilding with structure.
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              <Card className="shadow-sm">
-                <CardHeader className="flex flex-row items-center gap-3 pb-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Lightbulb className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">
-                      Practical Holistic Health
-                    </CardTitle>
-                    <CardDescription>
-                      Food, movement, stress, and mindset—broken down so real
-                      people can actually use it.
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              <Card className="shadow-sm">
-                <CardHeader className="flex flex-row items-center gap-3 pb-2">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Users className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">
-                      Community & Conversation
-                    </CardTitle>
-                    <CardDescription>
-                      Join the stories, questions, and small wins from people
-                      healing while life keeps lifing.
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="pt-0">
-                  <Link href="/contact">
-                    <Button
-                      variant="outline"
-                      className="w-full justify-center text-xs"
-                    >
-                      Connect with Ask DoGood
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Highlight: Clinical Recipes System (drives users to your embedded app page) */}
-      <section className="py-12 md:py-16">
-        <div className="container">
-          <Card className="overflow-hidden">
-            <div className="grid gap-0 md:grid-cols-[1.2fr,0.8fr]">
-              <div className="p-6 md:p-8">
-                <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  Tool inside Ask DoGood
-                </div>
-
-                <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
-                  Clinical Recipes System
-                </h3>
-
-                <p className="mt-3 text-muted-foreground max-w-2xl">
-                  A practical tool you can use to turn your health goals into
-                  meals that actually fit your lifestyle. Open it inside the
-                  Ask DoGood dashboard experience.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-3">
+              <div className="flex gap-3 flex-col sm:flex-row">
+                <Button asChild className="gap-2">
                   <Link href="/clinical-recipes">
-                    <Button className="rounded-full">
-                      Open Clinical Recipes <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    Open Recipe System <ArrowRight className="h-4 w-4" />
                   </Link>
-
-                  <Link href="/journey">
-                    <Button variant="outline" className="rounded-full">
-                      See the Journey
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Optional image side */}
-              <div className="bg-muted">
-                <img
-                  src="/assets/img/heroes/hero-home.webp"
-                  alt="Healthy meals and healing lifestyle"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/blog">Read the blog</Link>
+                </Button>
               </div>
             </div>
-          </Card>
+
+            <Card className="border bg-secondary/20">
+              <CardContent className="p-6 space-y-3">
+                <div className="text-sm text-muted-foreground">How it fits:</div>
+                <ul className="text-sm text-muted-foreground list-disc list-inside space-y-2">
+                  <li>Pick a weekly focus area (energy, stress, inflammation, sleep).</li>
+                  <li>Translate it into meals using the Clinical Recipe System.</li>
+                  <li>Track wins and reflections inside your Ask DoGood journey.</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      {/* Optional: Latest posts teaser (kept simple—can wire real posts later) */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      {/* CTA */}
+      <section className="py-16 border-t bg-secondary/20">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold">Latest Posts</h3>
-              <p className="text-muted-foreground mt-2 max-w-2xl">
-                Real words for real life—healing, clarity, and the rebuild.
-              </p>
-            </div>
-
-            <Link href="/blog">
-              <Button variant="outline" className="rounded-full">
-                See all posts <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="rounded-2xl border bg-background p-10 md:p-12 text-center space-y-4">
+            <h3 className="text-3xl md:text-4xl font-bold">
+              Start where you are. Build what you deserve.
+            </h3>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              If you’ve been carrying too much for too long — this is your reset. Calm structure, bold truth,
+              and real tools you’ll actually use.
+            </p>
+            <div className="flex justify-center gap-3 flex-col sm:flex-row">
+              <Button asChild size="lg" className="gap-2">
+                <Link href="/signup">
+                  Begin your journey <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
-            </Link>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">The Glow After the Storm</CardTitle>
-                <CardDescription>
-                  Choosing peace and thriving after being misunderstood.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Healing Isn’t Pretty — But It’s Holy</CardTitle>
-                <CardDescription>
-                  The real rebuild: discipline, faith, and quiet consistency.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Practical Healing for Busy People</CardTitle>
-                <CardDescription>
-                  Small actions that compound into big wins over time.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/about">Meet RoSeé</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
