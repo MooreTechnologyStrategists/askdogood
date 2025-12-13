@@ -1,3 +1,5 @@
+import { CLINICAL_RECIPE_APP_URL } from "@/config/clinicalRecipes";
+
 export const DEFAULT_CLINICAL_RECIPE_APP_URL =
   "https://clinical-food-rx.preview.emergentagent.com/";
 
