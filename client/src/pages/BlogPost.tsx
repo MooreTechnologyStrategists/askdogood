@@ -9,7 +9,7 @@ type BlogRouteParams = {
   slug?: string;
 };
 
-const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.webp"; // change if your default is different
+const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg"; // change if your default is different
 
 export default function BlogPost() {
   const params = (useParams() as BlogRouteParams) ?? {};
