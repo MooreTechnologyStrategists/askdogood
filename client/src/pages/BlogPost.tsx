@@ -1,9 +1,10 @@
 import { useParams, Link, useLocation } from "wouter";
 import { getPostBySlug } from "@/content/blogData";
-import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
+import { blogImages, BLOG_DEFAULT_HERO } from "@/data/blogImages";
+
 
 type BlogRouteParams = {
   slug?: string;
@@ -70,7 +71,7 @@ export default function BlogPost() {
       {/* Hero Section with Featured Image */}
       <section
         className="relative py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroSrc})` }}
+        style={{ backgroundImage: `url(${post.image})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
 
