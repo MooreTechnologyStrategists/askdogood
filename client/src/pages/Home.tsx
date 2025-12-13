@@ -1,33 +1,20 @@
 import { Link } from "wouter";
-import { ArrowRight, ShieldCheck, Sparkles, HeartPulse, UtensilsCrossed, BookOpen, Users } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
-const HERO_IMG = "/assets/img/heroes/hero-home.webp";
-const HERO_IMG_FALLBACK = "/assets/img/rosee-home.jpg"; // optional fallback if you have it
-
-const CLINICAL_RECIPE_APP_URL =
-  (import.meta.env.VITE_CLINICAL_RECIPE_APP_URL as string | undefined) ??
-  "https://clinical-food-rx.preview.emergentagent.com/";
+import { ArrowRight, Sparkles, HeartPulse, BookOpen, UtensilsCrossed } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* HERO */}
-      <section className="relative overflow-hidden border-b">
-        {/* Background glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
-        <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-
-        <div className="container relative py-14 md:py-24">
-          <div className="grid gap-10 md:grid-cols-2 items-center">
-            {/* Copy */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+        <div className="container relative py-16 md:py-24">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-muted-foreground bg-background/60 backdrop-blur">
+              <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground">
                 <Sparkles className="h-4 w-4 text-primary" />
-                Calm structure for real healing.
+                Healing. Structure. Real-life growth.
               </div>
 
               <h1
@@ -35,96 +22,136 @@ export default function Home() {
                 style={{ fontFamily: "var(--font-serif)" }}
               >
                 Ask DoGood
-                <span className="block text-muted-foreground font-sans text-xl md:text-2xl mt-3">
-                  Healing, clarity, and community — built with truth.
-                </span>
+                <span className="block text-primary">Your healing, with a plan.</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Welcome. I’m RoSeé — thyroid cancer survivor, wellness advocate, and builder.
-                This is a grounded space for better habits, better questions, and better outcomes.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
+                A real-life wellness ecosystem focused on thyroid recovery, mindset, routines, and rebuilding
+                your life with purpose — not perfection.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg" className="gap-2">
-                  <Link href="/journey">
-                    Start with my story <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/blog">Read the Blog</Link>
-                </Button>
+                <Link href="/dashboard">
+                  <Button size="lg" className="gap-2">
+                    Go to Dashboard <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/clinical-recipes">
+                  <Button size="lg" variant="outline" className="gap-2">
+                    Open Recipe App <UtensilsCrossed className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
 
-              {/* Trust bullets */}
-              <div className="grid gap-3 sm:grid-cols-3 pt-2">
-                <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <ShieldCheck className="h-4 w-4 mt-0.5 text-primary" />
-                  Real-life lessons, not fluff.
-                </div>
-                <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <HeartPulse className="h-4 w-4 mt-0.5 text-primary" />
-                  Body-first, nervous-system aware.
-                </div>
-                <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <Users className="h-4 w-4 mt-0.5 text-primary" />
-                  Community energy, not judgment.
-                </div>
+              <div className="text-sm text-muted-foreground">
+                Built for the people who are tired of “just be consistent” with no system.
               </div>
             </div>
 
-            {/* Image */}
+            {/* HERO IMAGE PANEL */}
             <div className="relative">
-              <div className="absolute -inset-6 rounded-[2rem] bg-primary/10 blur-2xl" />
-              <div className="relative rounded-[2rem] border bg-card shadow-sm overflow-hidden">
-                <div className="aspect-[4/5] w-full overflow-hidden">
-                  <img
-                    src={HERO_IMG}
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = HERO_IMG_FALLBACK;
-                    }}
-                    alt="RoSeé Murphy — Ask DoGood"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="p-5 border-t bg-background/70 backdrop-blur">
-                  <div className="text-sm font-medium">RoSeé “DoGood” Murphy</div>
-                  <div className="text-sm text-muted-foreground">
-                    Survivor • Advocate • Builder • DMV vibes with global vision
-                  </div>
-                </div>
+              <div className="aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
+                {/* Replace the src below with your real homepage image path when VS Code behaves */}
+                <img
+                  src="/assets/img/hero/hero-home.webp"
+                  alt="Ask DoGood hero"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 text-xs text-muted-foreground">
+                Tip: if this image 404s, the site still loads — you just see the panel background.
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Quick feature row */}
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
-            <Card className="bg-background/70 backdrop-blur">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-base">Healing paths</CardTitle>
-                <CardDescription>Pick your focus. Keep it simple.</CardDescription>
+      {/* FEATURES */}
+      <section className="py-14 md:py-20">
+        <div className="container">
+          <div className="max-w-2xl mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+              What you’ll find here
+            </h2>
+            <p className="mt-2 text-muted-foreground text-lg">
+              Practical tools + real talk — designed to help you stabilize, rebuild, and level up.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <HeartPulse className="h-5 w-5 text-primary" />
+                  Healing Paths
+                </CardTitle>
+                <CardDescription>Mind, body, and soul support that actually applies.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground leading-relaxed">
-                Thyroid & hormones, plant-based healing, mind/stress/soul — built to meet you where you are.
+                Guided focus areas (thyroid, stress, habits) that help you build momentum without burnout.
               </CardContent>
             </Card>
 
-            <Card className="bg-background/70 backdrop-blur">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-base">Practical tools</CardTitle>
-                <CardDescription>Structure beats motivation.</CardDescription>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <UtensilsCrossed className="h-5 w-5 text-primary" />
+                  Clinical Recipe System
+                </CardTitle>
+                <CardDescription>Meals tailored to real conditions.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground leading-relaxed">
-                Guides, checklists, and habit systems that help you stay consistent without burning out.
+                Turn symptoms, goals, and reality into meals you can actually stick to.
               </CardContent>
             </Card>
 
-            <Card className="bg-background/70 backdrop-blur">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-base">Real conversations</CardTitle>
-                <CardDescription>Truth is part of the treatment.</CardDescription>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-primary" />
+                  Challenges
+                </CardTitle>
+                <CardDescription>Small wins that compound.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Weekly challenges to create structure and track your progress without shame.
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  Blog
+                </CardTitle>
+                <CardDescription>Truth, strategy, and encouragement.</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                The honest conversations people avoid — delivered with compassion and receipts.
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <Link href="/about">
+              <Button variant="outline" className="gap-2">
+                Meet RoSeé <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/blog">
+              <Button variant="outline" className="gap-2">
+                Read the Blog <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button className="gap-2">
+                Contact <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
