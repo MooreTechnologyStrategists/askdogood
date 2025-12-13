@@ -27,11 +27,10 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const CLINICAL_RECIPE_APP_URL =
-  import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ||
-  const CLINICAL_RECIPE_APP_URL = import.meta.env.VITE_CLINICAL_RECIPE_APP_URL as
-  | string
-  | undefined;
+const CLINICAL_RECIPE_APP_URL: string =
+  import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ??
+  "https://clinical-food-rx.preview.emergentagent.com/";
+
 
 
 /**
