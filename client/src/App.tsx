@@ -29,7 +29,10 @@ import { Button } from "@/components/ui/button";
 
 const CLINICAL_RECIPE_APP_URL =
   import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ||
-  "https://YOUR-CLINICAL-RECIPE-APP-URL";
+  const CLINICAL_RECIPE_APP_URL = import.meta.env.VITE_CLINICAL_RECIPE_APP_URL as
+  | string
+  | undefined;
+
 
 /**
  * Clinical Recipe System page
@@ -76,7 +79,10 @@ function ClinicalRecipesPage() {
                   title="Clinical Recipe System"
                   className="w-full h-full border-0"
                   loading="lazy"
+                  referrerPolicy="no-referrer"
+                  sandbox="allow-forms allow-scripts allow-same-origin allow-downloads"
                 />
+
               </div>
             </CardContent>
           </Card>

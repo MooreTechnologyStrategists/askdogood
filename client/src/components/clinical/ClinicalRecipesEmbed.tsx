@@ -8,13 +8,61 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, Heart, Lightbulb, Sparkles, Users } from "lucide-react";
+import { ArrowRight, Heart, Lightbulb, Users } from "lucide-react";
 import { Link } from "wouter";
 
+// If you haven't created this yet, comment it out for now
+import ClinicalRecipesEmbed from "@/components/clinical/ClinicalRecipesEmbed";
+
 export default function Home() {
+  const healingPaths = [
+    {
+      title: "Thyroid & Hormones",
+      description:
+        "Simple, grounded support for thyroid recovery, energy, inflammation, and day-to-day stability.",
+      href: "/journey",
+      image: "/assets/img/journey/hero-journey.webp",
+    },
+    {
+      title: "Plant-Based Healing",
+      description:
+        "Real-life food shifts that support the body without turning your life into a punishment.",
+      href: "/blog",
+      image: "/assets/img/blog/default.webp",
+    },
+    {
+      title: "Mind, Stress & Soul",
+      description:
+        "Nervous system care, boundaries, breath, faith, and the quiet rebuild behind the scenes.",
+      href: "/journey",
+      image: "/assets/img/about/hero-about.webp",
+    },
+  ];
+
+  const latestPosts = [
+    {
+      title: "The Glow After the Storm",
+      description:
+        "What life looks like when you stop carrying blame that was never yours—and start living on purpose.",
+      href: "/blog",
+    },
+    {
+      title: "Healing Isn’t Pretty — But It’s Holy",
+      description:
+        "A real talk reflection on rebuilding with dignity, patience, and faith when life gets heavy.",
+      href: "/blog",
+    },
+    {
+      title: "Alcohol vs. Weed: How Are You Really Coping?",
+      description:
+        "Not judgment—just clarity. Let’s talk coping, habits, and what healing actually demands.",
+      href: "/blog",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-background">
-      {/* Primary hero (image-forward) */}
+      {/* Single, primary hero */}
       <Hero
         title="Ask DoGood"
         subtitle="Healing, resilience, and building a better life on purpose."
@@ -32,7 +80,6 @@ export default function Home() {
                 Ask DoGood · Mind · Body · Soul
               </p>
 
-              {/* Hero owns the H1, so this is an H2 */}
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
                 Healing isn’t a trend. It’s a lifestyle.
               </h2>
@@ -84,8 +131,8 @@ export default function Home() {
                       Thyroid & Chronic Illness Support
                     </CardTitle>
                     <CardDescription>
-                      Learn from real experience—fighting, surviving, and
-                      rebuilding with structure.
+                      Learn from real experience—20+ years of fighting,
+                      surviving, and rebuilding.
                     </CardDescription>
                   </div>
                 </CardHeader>
@@ -140,62 +187,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Highlight: Clinical Recipes System (drives users to your embedded app page) */}
-      <section className="py-12 md:py-16">
+      {/* Healing Paths / Featured Guides */}
+      <section className="py-14 md:py-20 bg-secondary/30">
         <div className="container">
-          <Card className="overflow-hidden">
-            <div className="grid gap-0 md:grid-cols-[1.2fr,0.8fr]">
-              <div className="p-6 md:p-8">
-                <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  Tool inside Ask DoGood
-                </div>
-
-                <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight">
-                  Clinical Recipes System
-                </h3>
-
-                <p className="mt-3 text-muted-foreground max-w-2xl">
-                  A practical tool you can use to turn your health goals into
-                  meals that actually fit your lifestyle. Open it inside the
-                  Ask DoGood dashboard experience.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href="/clinical-recipes">
-                    <Button className="rounded-full">
-                      Open Clinical Recipes <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-
-                  <Link href="/journey">
-                    <Button variant="outline" className="rounded-full">
-                      See the Journey
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Optional image side */}
-              <div className="bg-muted">
-                <img
-                  src="/assets/img/heroes/hero-home.webp"
-                  alt="Healthy meals and healing lifestyle"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold">Featured Healing Paths</h2>
+              <p className="text-muted-foreground mt-2 max-w-2xl">
+                Choose a starting point. Keep it simple. Build consistency.
+              </p>
             </div>
-          </Card>
+
+            <Link href="/journey">
+              <Button variant="outline" className="rounded-full">
+                Explore the Journey <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {healingPaths.map((p) => (
+              <Card key={p.title} className="overflow-hidden shadow-sm">
+                <div className="h-40 w-full bg-muted">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{p.title}</CardTitle>
+                  <CardDescription>{p.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href={p.href}>
+                    <Button className="w-full rounded-full">Start Here</Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Optional: Latest posts teaser (kept simple—can wire real posts later) */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      {/* Clinical Recipes (embed + CTA) */}
+      <section className="py-14 md:py-20">
+        <ClinicalRecipesEmbed />
+      </section>
+
+      {/* Latest Posts Preview */}
+      <section className="py-14 md:py-20 bg-secondary/30">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold">Latest Posts</h3>
+              <h2 className="text-3xl md:text-4xl font-bold">Latest Posts</h2>
               <p className="text-muted-foreground mt-2 max-w-2xl">
                 Real words for real life—healing, clarity, and the rebuild.
               </p>
@@ -209,53 +255,21 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">The Glow After the Storm</CardTitle>
-                <CardDescription>
-                  Choosing peace and thriving after being misunderstood.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Healing Isn’t Pretty — But It’s Holy</CardTitle>
-                <CardDescription>
-                  The real rebuild: discipline, faith, and quiet consistency.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Practical Healing for Busy People</CardTitle>
-                <CardDescription>
-                  Small actions that compound into big wins over time.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/blog">
-                  <Button variant="outline" className="w-full rounded-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+            {latestPosts.map((post) => (
+              <Card key={post.title} className="shadow-sm">
+                <CardHeader>
+                  <CardTitle className="text-lg">{post.title}</CardTitle>
+                  <CardDescription>{post.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href={post.href}>
+                    <Button variant="outline" className="w-full rounded-full">
+                      Read More
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
