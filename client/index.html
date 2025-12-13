@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Viewport -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -20,43 +22,23 @@
     <meta name="author" content="Ask DoGood" />
     <meta name="theme-color" content="#000000" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://askdogood.com/" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://askdogood.com/" />
-    <meta property="og:title" content="Ask DoGood — Healing, Resilience & Real-Life Growth" />
-    <meta
-      property="og:description"
-      content="A real-life journey of healing, resilience, and growth—thyroid recovery, mindset, wellness routines, and building a better life with structure and hope."
-    />
-    <meta property="og:image" content="https://askdogood.com/hero-journey.png" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://askdogood.com/" />
-    <meta name="twitter:title" content="Ask DoGood — Healing, Resilience & Real-Life Growth" />
-    <meta
-      name="twitter:description"
-      content="A real-life journey of healing, resilience, and growth—thyroid recovery, mindset, wellness routines, and building a better life with structure and hope."
-    />
-    <meta name="twitter:image" content="https://askdogood.com/hero-journey.png" />
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Fonts -->
+    <!-- Fonts (optional but clean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
-  <body>
+  <body class="bg-background text-foreground antialiased">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <!-- React root -->
     <div id="root"></div>
-    <!-- Analytics intentionally off until env + tracking is confirmed -->
+
+    <!-- Vite entry point (DO NOT change this) -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
