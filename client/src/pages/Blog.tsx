@@ -5,6 +5,8 @@ import { Calendar, Clock, Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import { blogPosts, searchPosts, getAllCategories } from "@/content/blogData";
+import { blogImages } from "@/data/blogImages";
+
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
