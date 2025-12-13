@@ -29,9 +29,12 @@ import { Button } from "@/components/ui/button";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
+const DEFAULT_CLINICAL_RECIPE_APP_URL = "https://clinical-food-rx.preview.emergentagent.com/";
+
 const CLINICAL_RECIPE_APP_URL: string =
-  import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ??
-  "https://clinical-food-rx.preview.emergentagent.com/";
+  (import.meta.env.VITE_CLINICAL_RECIPE_APP_URL?.trim() as string | undefined) ||
+  DEFAULT_CLINICAL_RECIPE_APP_URL;
+
 
 
 
