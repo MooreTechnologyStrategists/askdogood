@@ -1,52 +1,41 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Calendar, Clock, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
-import { blogPosts, searchPosts, getAllCategories } from "@/content/blogData";
-import { blogImages } from "@/data/blogImages";
 
-const FALLBACK_BLOG_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
+import { blogPosts, searchPosts, getAllCategories } from "@/content/blogData";
+import { blogImages, BLOG_DEFAULT_CARD } from "@/data/blogImages";
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Get all categories
   const categories = useMemo(() => ["All", ...getAllCategories()], []);
 
-  // Filter posts
   const filteredPosts = useMemo(() => {
-    const base = searchQuery
-      ? searchPosts(searchQuery)
-      : selectedCategory === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === selectedCategory);
+    if (searchQuery.trim()) return searchPosts(searchQuery);
 
-    return base;
+    if (selectedCategory === "All") return blogPosts;
+
+    return blogPosts.filter((post) => post.category === selectedCategory);
   }, [searchQuery, selectedCategory]);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-secondary/30 border-b">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog</h1>
-
+            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: "var(--font-serif)" }}>
+              Blog
+            </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Real conversations about health, recovery, and living authentically.{" "}
               {blogPosts.length} articles to explore.
             </p>
 
-            {/* Search Bar */}
             <div className="relative max-w-md mx-auto">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
@@ -75,9 +64,7 @@ export default function Blog() {
                   setSearchQuery("");
                 }}
                 size="sm"
-                data-testid={`category-filter-${category
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
+                data-testid={`category-filter-${category.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {category}
               </Button>
@@ -91,37 +78,24 @@ export default function Blog() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => {
-              const heroSrc =
-                blogImages[post.slug] ?? post.image ?? FALLBACK_BLOG_HERO;
+              const heroSrc = blogImages[post.slug] ?? BLOG_DEFAULT_CARD;
 
               return (
-                <Card
-                  key={post.id}
-                  className="hover:shadow-lg transition-shadow flex flex-col"
-                  data-testid={`blog-post-${post.slug}`}
-                >
+                <Card key={post.id} className="hover:shadow-lg transition-shadow flex flex-col" data-testid={`blog-post-${post.slug}`}>
                   <div
                     className="w-full h-48 bg-cover bg-center rounded-t-lg"
                     style={{ backgroundImage: `url(${heroSrc})` }}
-                    aria-label={`${post.title} cover image`}
                   />
-
                   <CardHeader className="flex-1">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <span className="text-primary font-medium">
-                        {post.category}
-                      </span>
+                      <span className="text-primary font-medium">{post.category}</span>
                     </div>
-
                     <Link href={`/blog/${post.slug}`}>
                       <CardTitle className="text-2xl mb-2 hover:text-primary transition-colors cursor-pointer">
                         {post.title}
                       </CardTitle>
                     </Link>
-
-                    <CardDescription className="text-base">
-                      {post.excerpt}
-                    </CardDescription>
+                    <CardDescription className="text-base">{post.excerpt}</CardDescription>
                   </CardHeader>
 
                   <CardContent>
@@ -143,11 +117,7 @@ export default function Blog() {
                     </div>
 
                     <Link href={`/blog/${post.slug}`}>
-                      <Button
-                        variant="outline"
-                        className="w-full mt-4"
-                        data-testid={`read-more-${post.slug}`}
-                      >
+                      <Button variant="outline" className="w-full mt-4" data-testid={`read-more-${post.slug}`}>
                         Read More
                       </Button>
                     </Link>
@@ -159,9 +129,7 @@ export default function Blog() {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-xl text-muted-foreground">
-                No articles found matching your search.
-              </p>
+              <p className="text-xl text-muted-foreground">No articles found matching your search.</p>
             </div>
           )}
         </div>
