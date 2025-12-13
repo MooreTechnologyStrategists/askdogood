@@ -557,10 +557,11 @@ export function searchPosts(query: string): BlogPost[] {
   if (!q) return [];
 
   return blogPosts.filter((post) => {
-    const haystack = `${post.title} ${post.excerpt} ${post.category}`.toLowerCase();
+    const haystack = `${post.title} ${post.excerpt} ${post.category} ${post.content}`.toLowerCase();
     return haystack.includes(q);
   });
 }
+
 
 // Optional: newest-first (useful for blog index pages)
 export function getPostsNewestFirst(): BlogPost[] {
