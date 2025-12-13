@@ -1,5 +1,6 @@
 import { useParams, Link, useLocation } from "wouter";
 import { getPostBySlug } from "@/content/blogData";
+import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
@@ -8,23 +9,28 @@ type BlogRouteParams = {
   slug?: string;
 };
 
+const FALLBACK_BLOG_IMAGE = "/assets/img/blog/library/blog-list-hero.jpg";
+
 export default function BlogPost() {
   const params = (useParams() as BlogRouteParams) ?? {};
   const slug = params.slug ?? "";
   const [, setLocation] = useLocation();
-  
+
   // Get post data
   const post = getPostBySlug(slug);
+
+  // Use centralized hero image mapping (fallback if missing)
+  const heroSrc = blogImages[slug] ?? FALLBACK_BLOG_IMAGE;
 
   // Update page title and meta tags
   useEffect(() => {
     if (post) {
       document.title = `${post.title} | Ask DoGood`;
-      
+
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', post.excerpt);
+        metaDescription.setAttribute("content", post.excerpt);
       }
     }
   }, [post]);
@@ -54,39 +60,52 @@ export default function BlogPost() {
         url: window.location.href,
       });
     } else {
-      // Fallback: copy to clipboard
       navigator.clipboard.writeText(window.location.href);
-      alert('Link copied to clipboard!');
+      alert("Link copied to clipboard!");
     }
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section with Featured Image */}
-      <section 
+      <section
         className="relative py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${post.image})` }}
+        style={{ backgroundImage: `url(${heroSrc})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
+
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <Link href="/blog">
-              <Button variant="ghost" className="text-white mb-6 hover:bg-white/20">
+              <Button
+                variant="ghost"
+                className="text-white mb-6 hover:bg-white/20"
+              >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>
             </Link>
+
             <div className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium mb-4">
               {post.category}
             </div>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {post.title}
             </h1>
+
             <div className="flex items-center justify-center gap-6 text-white/90">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                <span>
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
               </div>
+
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 <span>{post.readTime}</span>
@@ -109,7 +128,7 @@ export default function BlogPost() {
             </div>
 
             {/* Content */}
-            <div 
+            <div
               className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
@@ -131,11 +150,15 @@ export default function BlogPost() {
 
             {/* Call to Action */}
             <div className="mt-16 text-center p-8 bg-primary/10 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Join the DoGood Wellness Circle</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Join the DoGood Wellness Circle
+              </h3>
               <p className="text-lg text-muted-foreground mb-6">
                 Get exclusive wellness content, recipes, and community support delivered to your inbox.
               </p>
-              <Button size="lg" onClick={() => setLocation("/signup")}>
+
+              {/* IMPORTANT: If /signup isn't implemented, route to /login to avoid 404 */}
+              <Button size="lg" onClick={() => setLocation("/login")}>
                 Get Started Free
               </Button>
             </div>
