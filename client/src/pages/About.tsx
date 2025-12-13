@@ -1,156 +1,246 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Lightbulb, Shield, Users } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Heart, Lightbulb, Shield, Users, ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "wouter";
 
 export default function About() {
   const values = [
     {
       icon: Heart,
       title: "Authenticity",
-      description: "No filters, no pretense. Just real talk about real experiences."
+      description: "No filters, no pretense — real talk about real experiences.",
     },
     {
       icon: Users,
       title: "Community",
-      description: "We heal together. Our stories matter, and so do our voices."
+      description: "We heal together. Our stories matter, and so do our voices.",
     },
     {
       icon: Shield,
       title: "Advocacy",
-      description: "Fighting for better healthcare, better outcomes, and better treatment for all of us."
+      description: "Fighting for better care, better outcomes, and better treatment for all of us.",
     },
     {
       icon: Lightbulb,
       title: "Empowerment",
-      description: "Knowledge is power. I'm here to share what I've learned so you can advocate for yourself."
-    }
+      description: "Knowledge is power. I share what I’ve learned so you can advocate for yourself.",
+    },
   ];
 
+  const heroImg = "/assets/img/brand/rosee-about.webp";
+  const fallbackHeroImg = "/assets/img/brand/rosee-about.jpg";
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/thyroid-awareness-black-woman.png)' }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        </div>
-        
-        <div className="container relative z-10 text-white">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
-              About Me
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90">
-              Thyroid cancer survivor. Balanced-Living Health advocate. Black, disabled, veteran woman. Truth-teller.
-            </p>
+    <div className="min-h-screen bg-background">
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b">
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+
+        <div className="container relative py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-2 items-center">
+            {/* Copy */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-muted-foreground bg-background/60 backdrop-blur">
+                <Sparkles className="h-4 w-4 text-primary" />
+                Grounded power. Quiet confidence. Real healing.
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
+                About RoSeé
+              </h1>
+
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                Thyroid cancer survivor. Balanced-living advocate. Black, disabled, veteran woman.
+                Truth-teller — with receipts.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button asChild size="lg" className="gap-2">
+                  <Link href="/contact">
+                    Connect with me <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/blog">Read the Blog</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[2rem] bg-primary/10 blur-2xl" />
+              <div className="relative rounded-[2rem] border bg-card shadow-sm overflow-hidden">
+                <div className="aspect-[4/5] w-full overflow-hidden">
+                  <img
+                    src={heroImg}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = fallbackHeroImg;
+                    }}
+                    alt="RoSeé Murphy — Ask DoGood"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-5 border-t bg-background/70 backdrop-blur">
+                  <div className="text-sm font-medium">RoSeé “DoGood” Murphy</div>
+                  <div className="text-sm text-muted-foreground">
+                    Founder, Ask DoGood • Advocate • Builder
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Micro statement row */}
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <Card className="bg-background/70 backdrop-blur">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base">What I do</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                I translate complicated health realities into clear, practical steps you can actually apply.
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/70 backdrop-blur">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base">Why I do it</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Because being dismissed for decades can break you — or build you. I chose built.
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/70 backdrop-blur">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base">What you’ll get here</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                Honest storytelling, advocacy energy, and a calm ecosystem that helps you stay consistent.
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* My Story Section */}
-      <section className="py-20 bg-background">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-serif)' }}>
-            My Story
-          </h2>
-          
-          <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
-            <p className="text-lg leading-relaxed">
-              I'm a black, disabled veteran woman who spent 22 years navigating a broken healthcare system before finally getting the diagnosis that changed everything: thyroid cancer.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              For over two decades, I dealt with symptoms that were dismissed, minimized, or misdiagnosed. Because my family's history with thyroid issues, I would get my thyroid 
-              checked annually, and even though it would abnormal every time, the doctor's would always suggest to 
-              just 'monitor' my thyroid.  Meanwhile, I was falling apart internally.  At my lowest, I would not even
-              drive on the highway. I could not walk outside to go to the mailbox or even the sidewalk in front of my home.  I would palpitate just watching a highway on the television. All I heard was...
-              Brain fog? "Maybe it's depression." <br/>
-              Hair loss? "That's just aging." <br/>
-              The constant feeling that something was wrong with my body? <br/>
-              "It's all in your head."  And to be fair, it was all in my head.<br/><br/>
-              But why? <br/>Because no one was willing to dig deeper. No one was willing to listen.  
-              My thyroid was failing, and no one was willing to do the proper testing to find out why.   
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              I can't tell you how many times I was told to see a psychiatrist instead of getting proper thyroid testing. How many times my symptoms were attributed to being a 
-              black woman who "just needs to manage stress better." How many times I left a doctor's office feeling gaslit, unheard, and defeated. We are largely classified as being b*****s and crazy 
-              when our hormones are out of whack. But it is just assumed that we are angry and emotional beings.  So, we just accept it and move on.  All the while, depriving ourselves of thyroid stabilizing treatments 
-              like vitamin D, iodine, and proper thyroid medication. Please. Take care of yourself.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              The truth is, thyroid issues—especially in black women—are chronically overlooked. Our symptoms get dismissed as mental health issues. 
-              We're told we're exaggerating. We're prescribed antidepressants when what we really need is proper thyroid testing, vitamin D levels checked, and doctors who actually listen.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              When I finally got diagnosed with thyroid cancer, it was both devastating and validating. I wasn't crazy. I wasn't making it up. 
-              My body had been trying to tell me something for 22 years, and the medical system had failed to listen.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              Now, I'm cancer-free and committed to using my voice to advocate for better healthcare for black and brown communities. I share my story not for sympathy, but to empower others to trust their bodies, 
-              demand better care, and know they're not alone.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why This Matters Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-serif)' }}>
-            Why This Work Matters
-          </h2>
-          
-          <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
-            <p className="text-lg leading-relaxed">
-              Black women face significant health disparities. We're more likely to have our pain dismissed, 
-              our symptoms minimized, and our concerns ignored. We die at higher rates from preventable 
-              conditions because we're not getting the care we deserve.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              This platform is my way of fighting back. I talk about the hard stuff—thyroid health, 
-              addiction and vices, smoking in our community, the impact of marijuana on our youth—because these 
-              conversations save lives.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              I'm not a doctor, but I am someone who's been through endless challenges that strengthened me. Someone who knows what it's like 
-              to be dismissed, to fight for answers, and to finally find healing. If my story helps even one 
-              person advocate for themselves, demand better care, or recognize their symptoms earlier, then 
-              this work is worth it.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-              What I Stand For
+      {/* STORY */}
+      <section className="py-16 md:py-20">
+        <div className="container max-w-4xl space-y-10">
+          <header className="space-y-3">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+              My story
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              These values guide everything I do and every conversation I have.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              This is the part where people expect a neat summary. That’s not my life — so this won’t be neat.
+            </p>
+          </header>
+
+          <Card className="border bg-secondary/10">
+            <CardContent className="p-8 space-y-6 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                I’m a Black, disabled veteran woman who spent over two decades navigating a healthcare system
+                that kept “monitoring” my thyroid while I was slowly unraveling inside.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                The symptoms weren’t subtle — they were life-altering. Brain fog. Hair loss. Anxiety that didn’t
+                make sense. The constant feeling that something was wrong. And I kept hearing the same message:
+                <span className="font-medium text-foreground"> “It’s in your head.”</span>
+              </p>
+
+              <div className="rounded-xl border bg-background p-5">
+                <p className="text-base leading-relaxed">
+                  The truth? It *was* in my head — because my hormones were wrecking my nervous system, and no one
+                  wanted to dig deeper.
+                </p>
+              </div>
+
+              <p className="text-lg leading-relaxed">
+                I can’t count how many times I was nudged toward psychiatry instead of real thyroid testing.
+                How often my pain got labeled “stress.” How often I left appointments feeling unheard.
+                That’s not just personal — it’s a pattern.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                When I finally got diagnosed with thyroid cancer, it was devastating… and validating.
+                I wasn’t crazy. I wasn’t dramatic. My body was trying to warn me for years.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Now I use my voice to help others trust themselves, ask better questions, and demand better care —
+                especially in Black and brown communities where symptoms get minimized and outcomes get worse.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* WHY IT MATTERS */}
+      <section className="py-16 md:py-20 bg-secondary/20 border-y">
+        <div className="container max-w-4xl space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+            Why this work matters
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="bg-background">
+              <CardContent className="p-7 space-y-3">
+                <div className="text-sm text-muted-foreground">The reality</div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Black women are more likely to have symptoms dismissed, concerns minimized, and pain ignored.
+                  That costs lives — and it doesn’t have to.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background">
+              <CardContent className="p-7 space-y-3">
+                <div className="text-sm text-muted-foreground">The mission</div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  This platform exists to help you stay grounded, informed, and confident — so you can advocate
+                  for yourself and move toward real healing with structure.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-background/70">
+            <CardContent className="p-7 text-muted-foreground leading-relaxed">
+              I’m not a doctor. I’m someone who lived through the confusion, the dismissal, and the “you’re fine”
+              when I wasn’t fine. If my story helps one person recognize the signs sooner, ask better questions,
+              or refuse to be gaslit — then this work is worth it.
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* VALUES */}
+      <section className="py-16 md:py-20">
+        <div className="container">
+          <div className="text-center mb-12 space-y-3">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+              What I stand for
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              These values guide how I show up — and how Ask DoGood is being built.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <Card key={index}>
-                  <CardContent className="pt-6 text-center">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Card key={index} className="hover:shadow-md transition-shadow">
+                  <CardContent className="pt-6 text-center space-y-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <h3 className="text-lg font-bold">{value.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               );
@@ -159,49 +249,61 @@ export default function About() {
         </div>
       </section>
 
-      {/* Beyond Health Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-serif)' }}>
-            Beyond Health
+      {/* BEYOND HEALTH */}
+      <section className="py-16 md:py-20 bg-secondary/20 border-y">
+        <div className="container max-w-4xl space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+            Beyond health
           </h2>
-          
-          <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
-            <p className="text-lg leading-relaxed">
-              While health advocacy is at the core of what I do, I'm also passionate about restoration, 
-              personal growth, and living authentically. I'm in healing mode myself, and I know firsthand how 
-              hard it is to break free from depression and anxiety—especially in a community where choosing to 
-              respect yourself and communicate the truth is abnormalized.
-            </p>
 
-            <p className="text-lg leading-relaxed">
-              I talk about these things not to judge, but to share what I've learned. To be real about the 
-              struggles, the setbacks, and the victories. To create a space where we can have honest conversations 
-              about our health, our habits, and our futures.
-            </p>
+          <Card className="bg-background">
+            <CardContent className="p-8 space-y-6 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                While health advocacy is at the core, I’m also about restoration, personal growth, and living
+                honestly — even when it’s messy.
+              </p>
 
-            <p className="text-lg leading-relaxed">
-              I'm a professional, a survivor, a work in progress, and someone who believes in the power of community. 
-              I'm here to share my journey, learn from yours, and build something meaningful together.
-            </p>
+              <p className="text-lg leading-relaxed">
+                I talk about habits, vices, healing, relapse, rebuilding, and faith — not to judge, but to make
+                space for truth. In communities where silence is normal, truth is revolutionary.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                I’m a professional, a survivor, a work in progress — and a builder. If you’re trying to rebuild
+                your health and your life at the same time… welcome home.
+              </p>
+            </CardContent>
+          </Card>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button asChild size="lg" className="gap-2">
+              <Link href="/signup">
+                Begin your journey <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/contact">Get in touch</Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
-            Let's Connect
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Have questions? Want to share your story? I'm here to listen.
-          </p>
-          <a href="/contact" className="inline-block">
-            <button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-              Get in Touch
-            </button>
-          </a>
+      {/* CTA */}
+      <section className="py-16 md:py-20">
+        <div className="container">
+          <div className="rounded-2xl border bg-background p-10 md:p-12 text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+              Let’s connect
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have questions? Want to share your story? I’m here to listen — and I’ll keep it real with you.
+            </p>
+            <Button asChild size="lg" className="gap-2">
+              <Link href="/contact">
+                Get in touch <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
