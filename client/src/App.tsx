@@ -28,6 +28,8 @@ import {
 import { Button } from "@/components/ui/button";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import { GA_MEASUREMENT_ID } from "./config/analytics";
 
 const CLINICAL_RECIPE_APP_URL: string =
   import.meta.env.VITE_CLINICAL_RECIPE_APP_URL ??
@@ -157,6 +159,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
+          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
           <Toaster />
           <div className="flex flex-col min-h-screen">
             <Header />

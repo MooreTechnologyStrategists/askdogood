@@ -4,12 +4,23 @@ import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
+import ProductRecommendations from "@/components/ProductRecommendations";
 
 type BlogRouteParams = {
   slug?: string;
 };
 
 const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg"; // change if your default is different
+
+// Map blog post slugs to recommended product IDs
+function getProductRecommendations(slug: string): string[] | null {
+  const recommendations: Record<string, string[]> = {
+    "the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness": ["seaMoss", "vitaminD", "omega3"],
+    "how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life": ["collagen", "vitaminD", "turmeric"],
+    "superfoods-the-superfood-that-helped-sustain-me-for-7-years": ["superBeets", "magnesium", "omega3"],
+  };
+  return recommendations[slug] || null;
+}
 
 export default function BlogPost() {
   const params = (useParams() as BlogRouteParams) ?? {};
@@ -129,6 +140,15 @@ export default function BlogPost() {
               className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
+
+            {/* Product Recommendations */}
+            {getProductRecommendations(slug) && (
+              <ProductRecommendations
+                productIds={getProductRecommendations(slug)!}
+                title="Products I Recommend"
+                variant="card"
+              />
+            )}
 
             {/* Author Section */}
             <div className="mt-16 p-8 bg-secondary/30 rounded-lg">
