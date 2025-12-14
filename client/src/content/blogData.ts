@@ -80,6 +80,8 @@ export const blogPosts: BlogPost[] = [
     id: "1777",
     slug: "the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness",
     title: "The Superpower of Sea Moss: The Ocean's Secret Weapon for Everyday Wellness",
+    image: "https://askdogoodassets.blob.core.windows.net/images/the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness.webp",
+    imageAlt: "Sea moss natural wellness",
     excerpt:
       "If you're looking for a natural way to boost your health, sea moss might just be your new best friend. This humble ocean plant is packed with 92 of the 102 minerals your body needs to function at its best. Let's dive into why sea moss deserves a spot in your...",
     content: `<!-- wp:paragraph -->
@@ -150,6 +152,8 @@ export const blogPosts: BlogPost[] = [
     id: "1775",
     slug: "how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life",
     title: "How Collagen Saved My Skin, My Dad's Mobility, and Maybe Even My Life",
+    image: "https://askdogoodassets.blob.core.windows.net/images/how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life.webp",
+    imageAlt: "Collagen wellness supplement concept",
     excerpt:
       "Collagen is one of those wellness buzzwords you hear everywhere, but for me, it's been nothing short of life-changing. From healing my skin after cancer to helping my dad regain mobility, collagen has proven itself to be a true powerhouse. Let me share why...",
     content: `<!-- wp:paragraph -->
@@ -220,7 +224,7 @@ export const blogPosts: BlogPost[] = [
     category: "Thyroid & Autoimmune",
     date: "2024-11-21",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1740582421304-7e94e718042b",
+    image: "https://askdogoodassets.blob.core.windows.net/images/thyroid_and_immune.webp",
     imageAlt: "Collagen wellness supplement concept",
     tags: ["Thyroid", "Autoimmune", "Skin", "Mobility"],
     featured: true,
@@ -229,6 +233,8 @@ export const blogPosts: BlogPost[] = [
     id: "1773",
     slug: "superfoods-the-superfood-that-helped-sustain-me-for-7-years",
     title: "SuperBeets: The Superfood That Helped Sustain Me for 7 Years",
+    image: "https://askdogoodassets.blob.core.windows.net/images/superbeets-the-superfood-that-helped-sustain-me-for-7-years.webp",
+    imageAlt: "Beets / superfood wellness concept",
     excerpt:
       "When I was first diagnosed with thyroid cancer, my world turned upside down. I had to rethink everything—what I ate, how I moved, and how I approached my health. One discovery that became a cornerstone of my wellness journey was beets, specifically SuperBeets...",
     content: `<!-- wp:paragraph -->
@@ -291,7 +297,7 @@ export const blogPosts: BlogPost[] = [
     category: "Thyroid & Autoimmune",
     date: "2024-11-19",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1554244933-d876deb6b2ff",
+    image: "https://askdogoodassets.blob.core.windows.net/images/thyroid_and_immune.webp",
     imageAlt: "Beets / superfood wellness concept",
     tags: ["Thyroid", "Energy", "Heart Health"],
     featured: true,
@@ -300,6 +306,8 @@ export const blogPosts: BlogPost[] = [
     id: "1771",
     slug: "finding-peace-in-the-chaos-mindfulness-for-black-women",
     title: "Finding Peace in the Chaos: Mindfulness for Black Women",
+    image: "https://askdogoodassets.blob.core.windows.net/images/finding-peace-in-the-chaos-mindfulness-for-black-women.webp",
+    imageAlt: "Mindfulness and peace concept for Black women",
     excerpt:
       "Let's be real—life as a Black woman can feel like you're constantly juggling a million things while trying to keep it all together. Between work, family, societal expectations, and the weight of simply existing in a world that doesn't always value us, finding...",
     content: `<!-- wp:paragraph -->
@@ -388,7 +396,7 @@ export const blogPosts: BlogPost[] = [
     category: "Mental Health",
     date: "2024-11-17",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1758620942918-4990013421ad",
+    image: "https://askdogoodassets.blob.core.windows.net/images/mental_health.webp",
     imageAlt: "Mindfulness and calm reflection",
     tags: ["Mental Health", "Mindfulness", "Black Women"],
     featured: true,
@@ -397,6 +405,8 @@ export const blogPosts: BlogPost[] = [
     id: "1769",
     slug: "the-beautiful-big-bill-americas-reckoning",
     title: "The Beautiful Big Bill: America's Reckoning",
+    image: "https://askdogoodassets.blob.core.windows.net/images/the-beautiful-big-bill-americas-reckoning.webp",
+    imageAlt: "Justice and reflection concept",
     excerpt:
       `There's a phrase that's been making the rounds lately: "the beautiful big bill." It's not about money, though. It's about the reckoning America is finally starting to face—a reckoning with its history, its systems, and its treatment of Black people...`,
     content: `<!-- wp:paragraph -->
@@ -461,7 +471,7 @@ export const blogPosts: BlogPost[] = [
     category: "Black Women's Health",
     date: "2024-11-15",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1655720357761-f18ea9e5e7e6",
+    image: "https://askdogoodassets.blob.core.windows.net/images/black_womens_health.webp",
     imageAlt: "Justice and reflection concept",
     tags: ["Community", "Equity", "Black Women"],
   },
@@ -469,6 +479,8 @@ export const blogPosts: BlogPost[] = [
     id: "1767",
     slug: "understanding-panic-attacks-a-story-of-inner-conflict",
     title: "Understanding Panic Attacks: A Story of Inner Conflict",
+    image: "https://askdogoodassets.blob.core.windows.net/images/understanding-panic-attacks-a-story-of-inner-conflict.webp",
+    imageAlt: "Anxiety and panic attack support concept",
     excerpt:
       "Panic attacks are terrifying. Your heart races, your chest tightens, and it feels like the world is closing in on you. If you've ever experienced one, you know how overwhelming they can be. But what if I told you that panic attacks are often your body's way of...",
     content: `<!-- wp:paragraph -->
@@ -545,7 +557,7 @@ export const blogPosts: BlogPost[] = [
     category: "Mental Health",
     date: "2024-11-13",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1759873911661-d4cba84d2eff",
+    image: "https://askdogoodassets.blob.core.windows.net/images/mental_health.webp",
     imageAlt: "Anxiety support and calm coping concept",
     tags: ["Mental Health", "Anxiety", "Mindfulness"],
   },
