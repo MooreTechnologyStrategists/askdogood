@@ -53,7 +53,7 @@ export default function Home() {
               <div className="aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
                 {/* Replace the src below with your real homepage image path when VS Code behaves */}
                 <img
-                  src="/assets/img/hero/hero-home.webp"
+                  src="/client/public/hero-home.webp/"
                   alt="Ask DoGood hero"
                   className="h-full w-full object-cover"
                   loading="lazy"
