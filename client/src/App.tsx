@@ -17,6 +17,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Journey from "./pages/Journey";
 import Contact from "./pages/Contact";
+import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
 import DashboardLayout from "@/components/DashboardLayout";
 import {
   Card,
@@ -34,97 +35,7 @@ import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
 
 
 
-/**
- * Clinical Recipe System page
- *
- * This keeps the AskDoGood dashboard look and simply embeds
- * the external Clinical Recipe System frontend.
- *
- * 1. Deploy the Clinical Recipe System (frontend) somewhere
- *    (e.g. recipes.askdogood.com or an Azure Static Web App).
- * 2. Set VITE_CLINICAL_RECIPE_APP_URL in your .env to that URL.
- * 3. Redeploy this app – /clinical-recipes will then “just work”.
- */
-function ClinicalRecipesPage() {
-  return (
-    <DashboardLayout>
-      <div className="space-y-6">
-        <header className="space-y-2">
-          <h1
-            className="text-3xl md:text-4xl font-bold tracking-tight"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
-            Clinical Recipe System
-          </h1>
-          <p className="text-muted-foreground max-w-2xl">
-            AI-powered nutritional recipes tailored to real health conditions.
-            Use this tool to turn your labs, symptoms, and goals into practical,
-            everyday meals that actually fit your lifestyle.
-          </p>
-        </header>
-
-        <div className="grid gap-4 md:grid-cols-3">
-          {/* Embedded app */}
-          <Card className="md:col-span-2">
-            <CardHeader>
-              <CardTitle>Recipe App Preview</CardTitle>
-              <CardDescription>
-                Use the full-screen button if the embedded view feels cramped.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="aspect-video w-full rounded-xl overflow-hidden border bg-muted">
-                <iframe
-                  src={CLINICAL_RECIPE_APP_URL}
-                  title="Clinical Recipe System"
-                  className="w-full h-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  sandbox="allow-forms allow-scripts allow-same-origin allow-downloads"
-                />
-
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Explainer / strategy card */}
-          <Card>
-            <CardHeader>
-              <CardTitle>How this fits AskDoGood</CardTitle>
-              <CardDescription>
-                Keep your healing journey, dashboard, and recipes in one ecosystem.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3 text-sm text-muted-foreground">
-              <ul className="list-disc list-inside space-y-1">
-                <li>
-                  Use your existing AskDoGood challenges to pick weekly focus
-                  areas.
-                </li>
-                <li>
-                  Translate those goals into meals using the Clinical Recipe
-                  System.
-                </li>
-                <li>
-                  Save favorites in the recipe app, track wins & reflections here.
-                </li>
-              </ul>
-              <Button asChild className="w-full mt-2">
-                <a
-                  href={CLINICAL_RECIPE_APP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open Full Recipe App
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </DashboardLayout>
-  );
-}
+// Clinical Recipe System page - using standalone component from pages folder
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -144,7 +55,7 @@ function Router() {
       <Route path={"/journey"} component={Journey} />
       <Route path={"/contact"} component={Contact} />
       {/* NEW: Clinical Recipe System route */}
-      <Route path={"/clinical-recipes"} component={ClinicalRecipesPage} />
+      <Route path={"/clinical-recipes"} component={ClinicalRecipesPageComponent} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
