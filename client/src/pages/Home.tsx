@@ -15,6 +15,8 @@ import {
   UtensilsCrossed,
   ShieldCheck,
   Users,
+  CheckCircle2,
+  Mail,
 } from "lucide-react";
 
 export default function Home() {
@@ -26,6 +28,7 @@ export default function Home() {
 
         <div className="container relative py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* LEFT */}
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground">
                 <Sparkles className="h-4 w-4 text-primary" />
@@ -41,10 +44,11 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                A real-life wellness ecosystem focused on thyroid recovery, mindset, routines,
-                and rebuilding your life with purpose — not perfection.
+                A real-life wellness ecosystem focused on thyroid recovery, mindset,
+                routines, and rebuilding your life with purpose — not perfection.
               </p>
 
+              {/* HERO BUTTONS (this is the block you asked about) */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/journey">
                   <Button size="lg" className="gap-2">
@@ -63,7 +67,7 @@ export default function Home() {
                 Built for the people who are tired of “just be consistent” with no system.
               </div>
 
-              {/* Trust / positioning */}
+              {/* Trust / positioning strip */}
               <div className="grid gap-3 sm:grid-cols-3 pt-2">
                 <div className="rounded-xl border bg-background/60 px-4 py-3">
                   <div className="flex items-center gap-2 text-sm font-medium">
@@ -74,6 +78,7 @@ export default function Home() {
                     Real talk + real tools.
                   </div>
                 </div>
+
                 <div className="rounded-xl border bg-background/60 px-4 py-3">
                   <div className="flex items-center gap-2 text-sm font-medium">
                     <HeartPulse className="h-4 w-4 text-primary" />
@@ -83,6 +88,7 @@ export default function Home() {
                     Symptoms, meds, goals.
                   </div>
                 </div>
+
                 <div className="rounded-xl border bg-background/60 px-4 py-3">
                   <div className="flex items-center gap-2 text-sm font-medium">
                     <Users className="h-4 w-4 text-primary" />
@@ -95,30 +101,43 @@ export default function Home() {
               </div>
             </div>
 
-            {/* HERO IMAGE PANEL */}
-           <div className="relative aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
-              <img
-                src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
-                alt="Ask DoGood hero"
-                className="h-full w-full object-cover object-top"
-                style={{ imageRendering: "auto" }}
-                loading="lazy"
-              />
+            {/* RIGHT (Hero Image Panel) */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-full max-w-lg">
+                <div className="relative aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
+                  <img
+                    src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
+                    alt="Ask DoGood hero"
+                    className="h-full w-full object-cover object-top"
+                    loading="eager"
+                  />
 
-              {/* soft overlay to make low-res images look smoother */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" />
-            </div>
-              <div className="relative lg:pl-8">
-                  <div className="mx-auto max-w-md lg:max-w-lg">
-                    {/* image panel here */}
-                  </div>
+                  {/* Soft overlay to reduce harsh pixel vibe */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
+
+                  {/* Optional subtle frame glow */}
+                  <div className="pointer-events-none absolute inset-0 ring-1 ring-border/40 rounded-3xl" />
+                </div>
+
+                {/* Micro CTA under image (not the old “tip” line) */}
+                <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
+                  <span className="inline-flex items-center gap-1 rounded-full border bg-background/70 px-3 py-1">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
+                    Start with “My Journey”
+                  </span>
+                  <span className="inline-flex items-center gap-1 rounded-full border bg-background/70 px-3 py-1">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
+                    Use Clinical Food RX for structure
+                  </span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* STEP 2: FEATURES */}
       <section className="py-14 md:py-20">
         <div className="container">
           <div className="max-w-2xl mb-10">
@@ -204,6 +223,30 @@ export default function Home() {
                 Contact <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* STEP 3: EMAIL CAPTURE (lightweight marketing) */}
+      <section className="pb-14 md:pb-20">
+        <div className="container">
+          <div className="rounded-3xl border bg-background/60 p-8 md:p-10 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="max-w-xl">
+                <h3 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+                  Want a weekly reset plan?
+                </h3>
+                <p className="mt-2 text-muted-foreground">
+                  Get one practical “do this next” step each week — healing structure without the guilt trip.
+                </p>
+              </div>
+
+              <Link href="/contact">
+                <Button size="lg" className="gap-2">
+                  Join the list <Mail className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
