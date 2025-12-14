@@ -178,18 +178,23 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <UtensilsCrossed className="h-5 w-5 text-primary" />
-                  Clinical Food RX
-                </CardTitle>
-                <CardDescription>Meals tailored to real conditions.</CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground leading-relaxed">
-                Turn symptoms, goals, and reality into meals you can actually stick to.
-              </CardContent>
-            </Card>
+            <Link href="/clinical-recipes">
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer hover:border-primary/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <UtensilsCrossed className="h-5 w-5 text-primary" />
+                    Clinical Food RX
+                  </CardTitle>
+                  <CardDescription>Meals tailored to real conditions.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                  Turn symptoms, goals, and reality into meals you can actually stick to.
+                  <div className="mt-3 flex items-center gap-1 text-primary font-medium text-sm">
+                    Try it now <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
