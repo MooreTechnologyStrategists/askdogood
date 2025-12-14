@@ -96,16 +96,18 @@ export default function Home() {
             </div>
 
             {/* HERO IMAGE PANEL */}
-            <div className="relative">
-              <div className="aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
-                <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
-                  alt="Ask DoGood hero"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+           <div className="relative aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
+              <img
+                src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
+                alt="Ask DoGood hero"
+                className="h-full w-full object-cover object-top"
+                style={{ imageRendering: "auto" }}
+                loading="lazy"
+              />
 
+              {/* soft overlay to make low-res images look smoother */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" />
+            </div>
               <div className="mt-4 text-xs text-muted-foreground">
                 If you still see a blank box: open DevTools → Network → filter “img” and confirm
                 <code className="mx-1">/hero-home.webp</code> returns 200 (not 404).
