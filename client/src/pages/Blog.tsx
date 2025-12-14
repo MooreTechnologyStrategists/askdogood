@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 // ✅ If your file exports a different name, adjust this import (see note below)
-import { posts as BLOG_POSTS } from "@/content/blog/blogData";
+import { posts as BLOG_POSTS } from "@/content/blogData";
 
 type BlogPost = {
   slug: string;
