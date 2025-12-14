@@ -16,6 +16,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 export default function Home() {
   return (
@@ -251,6 +252,17 @@ export default function Home() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* NEWSLETTER SIGNUP */}
+      <section className="py-20 bg-secondary/20">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Join the AskDoGood Newsletter"
+            description="Get weekly insights on healing, thyroid health, mindset, and real-life strategies delivered straight to your inbox. No fluff, just real talk."
+          />
         </div>
       </section>
     </div>

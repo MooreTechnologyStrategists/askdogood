@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import ProductRecommendations from "@/components/ProductRecommendations";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 type BlogRouteParams = {
   slug?: string;
@@ -165,15 +166,13 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="mt-16 text-center p-8 bg-primary/10 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Join the DoGood Wellness Circle</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Get exclusive wellness content, recipes, and community support delivered to your inbox.
-              </p>
-              <Button size="lg" onClick={() => setLocation("/signup")}>
-                Get Started Free
-              </Button>
+            {/* Newsletter Signup */}
+            <div className="mt-16">
+              <BeehiivSubscribe
+                variant="inline"
+                title="Love this content? Get more like it."
+                description="Join the AskDoGood Newsletter for weekly insights on healing, wellness, and real-life strategies."
+              />
             </div>
 
             {/* Back to Blog */}
