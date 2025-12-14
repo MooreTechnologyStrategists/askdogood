@@ -28,6 +28,16 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* LEFT: COPY */}
             <div className="space-y-6 text-center lg:text-left">
+              {/* Brand Logo */}
+              <div className="flex justify-center lg:justify-start mb-4">
+                <img
+                  src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
+                  alt="Ask DoGood"
+                  className="h-20 w-20 object-contain"
+                  loading="eager"
+                />
+              </div>
+
               <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground mx-auto lg:mx-0">
                 <Sparkles className="h-4 w-4 text-primary" />
                 Healing. Structure. Real-life growth.
