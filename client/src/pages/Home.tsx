@@ -1,7 +1,21 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Sparkles, HeartPulse, BookOpen, UtensilsCrossed } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  ArrowRight,
+  Sparkles,
+  HeartPulse,
+  BookOpen,
+  UtensilsCrossed,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -9,6 +23,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+
         <div className="container relative py-16 md:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-6">
@@ -26,19 +41,20 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                A real-life wellness ecosystem focused on thyroid recovery, mindset, routines, and rebuilding
-                your life with purpose — not perfection.
+                A real-life wellness ecosystem focused on thyroid recovery, mindset, routines,
+                and rebuilding your life with purpose — not perfection.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/dashboard">
+                <Link href="/journey">
                   <Button size="lg" className="gap-2">
-                    Go to Dashboard <ArrowRight className="h-4 w-4" />
+                    Start Here <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
+
                 <Link href="/clinical-recipes">
                   <Button size="lg" variant="outline" className="gap-2">
-                    Open Recipe App <UtensilsCrossed className="h-4 w-4" />
+                    Clinical Food RX <UtensilsCrossed className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -46,21 +62,53 @@ export default function Home() {
               <div className="text-sm text-muted-foreground">
                 Built for the people who are tired of “just be consistent” with no system.
               </div>
+
+              {/* Trust / positioning */}
+              <div className="grid gap-3 sm:grid-cols-3 pt-2">
+                <div className="rounded-xl border bg-background/60 px-4 py-3">
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    <ShieldCheck className="h-4 w-4 text-primary" />
+                    No fluff
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    Real talk + real tools.
+                  </div>
+                </div>
+                <div className="rounded-xl border bg-background/60 px-4 py-3">
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    <HeartPulse className="h-4 w-4 text-primary" />
+                    Health-aware
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    Symptoms, meds, goals.
+                  </div>
+                </div>
+                <div className="rounded-xl border bg-background/60 px-4 py-3">
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    <Users className="h-4 w-4 text-primary" />
+                    Community-first
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    Healing out loud.
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* HERO IMAGE PANEL */}
             <div className="relative">
               <div className="aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
-                {/* Replace the src below with your real homepage image path when VS Code behaves */}
                 <img
-                  src="/client/public/hero-home.webp/"
+                  src="/hero-home.webp"
                   alt="Ask DoGood hero"
                   className="h-full w-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                 />
               </div>
+
               <div className="mt-4 text-xs text-muted-foreground">
-                Tip: if this image 404s, the site still loads — you just see the panel background.
+                If you still see a blank box: open DevTools → Network → filter “img” and confirm
+                <code className="mx-1">/hero-home.webp</code> returns 200 (not 404).
               </div>
             </div>
           </div>
@@ -71,7 +119,10 @@ export default function Home() {
       <section className="py-14 md:py-20">
         <div className="container">
           <div className="max-w-2xl mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
               What you’ll find here
             </h2>
             <p className="mt-2 text-muted-foreground text-lg">
@@ -97,7 +148,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <UtensilsCrossed className="h-5 w-5 text-primary" />
-                  Clinical Recipe System
+                  Clinical Food RX
                 </CardTitle>
                 <CardDescription>Meals tailored to real conditions.</CardDescription>
               </CardHeader>
@@ -133,6 +184,7 @@ export default function Home() {
             </Card>
           </div>
 
+          {/* CTA Row */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <Link href="/about">
               <Button variant="outline" className="gap-2">
