@@ -29,8 +29,9 @@ type BlogPost = {
   date?: string;
   tags?: string[];
   featured?: boolean;
-  coverImage?: string; // optional if you add later
-  readingTime?: string; // optional
+  image?: string; // blog post image URL
+  imageAlt?: string;
+  readTime?: string;
 };
 
 const BLOG_ICON_URL =
@@ -209,7 +210,17 @@ export default function Blog() {
 
             <div className="grid gap-6 md:grid-cols-3">
               {featured.map((post) => (
-                <Card key={post.slug} className="hover:shadow-lg transition-shadow">
+                <Card key={post.slug} className="hover:shadow-lg transition-shadow overflow-hidden">
+                  {post.image && (
+                    <div className="aspect-video w-full overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.imageAlt || post.title}
+                        className="h-full w-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
                   <CardHeader>
                     <CardTitle className="leading-tight">{post.title}</CardTitle>
                     <CardDescription className="line-clamp-2">
@@ -262,7 +273,17 @@ export default function Blog() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post) => (
-              <Card key={post.slug} className="hover:shadow-lg transition-shadow">
+              <Card key={post.slug} className="hover:shadow-lg transition-shadow overflow-hidden">
+                {post.image && (
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      className="h-full w-full object-cover transition-transform hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <CardHeader>
                   <CardTitle className="leading-tight">{post.title}</CardTitle>
                   <CardDescription className="line-clamp-3">
