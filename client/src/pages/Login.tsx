@@ -1,14 +1,54 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { CheckCircle, AlertCircle } from "lucide-react";
+
+type AuthMeResponse = {
+  clientPrincipal: null | {
+    userDetails: string;
+    userId: string;
+    identityProvider: string;
+    userRoles: string[];
+  };
+};
+
+async function getMe() {
+  const res = await fetch("/.auth/me", { credentials: "include" });
+  if (!res.ok) return null;
+  return (await res.json()) as AuthMeResponse;
+}
 
 export default function Login() {
   const [, setLocation] = useLocation();
+  const [checking, setChecking] = useState(true);
+  const [isAuthed, setIsAuthed] = useState(false);
+  const [error, setError] = useState("");
 
-  const AAD_LOGIN = "/.auth/login/aad";
-  // Optional later:
-  // const GOOGLE_LOGIN = "/.auth/login/google";
+  useEffect(() => {
+    (async () => {
+      const data = await getMe();
+      if (data?.clientPrincipal) {
+        setIsAuthed(true);
+        setTimeout(() => setLocation("/dashboard"), 600);
+      }
+      setChecking(false);
+    })();
+  }, [setLocation]);
+
+  const loginMicrosoft = () => {
+    // SWA built-in provider route (works if provider is enabled)
+    window.location.href = "/.auth/login/aad?post_login_redirect_uri=/dashboard";
+  };
+
+  const loginGoogle = () => {
+    window.location.href = "/.auth/login/google?post_login_redirect_uri=/dashboard";
+  };
+
+  const loginFacebook = () => {
+    window.location.href = "/.auth/login/facebook?post_login_redirect_uri=/dashboard";
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
@@ -18,7 +58,7 @@ export default function Login() {
             Welcome Back
           </h1>
           <p className="text-muted-foreground font-sans">
-            Sign in securely to access your wellness journey.
+            Sign in to access your wellness journey
           </p>
         </div>
 
@@ -26,70 +66,77 @@ export default function Login() {
           <CardHeader className="space-y-1">
             <CardTitle className="font-serif text-2xl">Sign In</CardTitle>
             <CardDescription className="font-sans">
-              We use secure Microsoft sign-in. No passwords stored by Ask DoGood.
+              Use a secure provider login.
             </CardDescription>
           </CardHeader>
 
           <CardContent className="space-y-4">
-            <a href={AAD_LOGIN} className="block">
-              <Button className="w-full" size="lg">
-                Continue with Microsoft
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
+            {error && (
+              <Alert variant="destructive" className="border-destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
 
-            {/* Optional later
-            <a href={GOOGLE_LOGIN} className="block">
-              <Button variant="outline" className="w-full" size="lg">
-                Continue with Google
-              </Button>
-            </a>
-            */}
+            {isAuthed && (
+              <Alert className="border-primary bg-primary/5">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <AlertDescription className="text-primary">
+                  You’re signed in. Redirecting…
+                </AlertDescription>
+              </Alert>
+            )}
 
-            <div className="flex items-start gap-2 rounded-xl border p-3 text-sm text-muted-foreground">
-              <ShieldCheck className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-              <p>
-                Your identity is handled by Azure Static Web Apps authentication.
-                Ask DoGood does not store your password.
-              </p>
-            </div>
-          </CardContent>
+            <Button
+              type="button"
+              className="w-full"
+              size="lg"
+              disabled={checking}
+              onClick={loginMicrosoft}
+            >
+              Continue with Microsoft
+            </Button>
 
-          <CardFooter className="flex flex-col space-y-3">
-            <div className="text-sm text-muted-foreground font-sans">
-              New here?
-            </div>
+            {/* These only work if you configure providers in staticwebapp.config.json */}
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              size="lg"
+              disabled={checking}
+              onClick={loginGoogle}
+            >
+              Continue with Google
+            </Button>
 
             <Button
               type="button"
               variant="outline"
               className="w-full"
-              onClick={() => setLocation("/signup")}
+              size="lg"
+              disabled={checking}
+              onClick={loginFacebook}
             >
-              See membership benefits
+              Continue with Facebook
+            </Button>
+
+            <p className="text-xs text-muted-foreground">
+              If Google/Facebook don’t work yet, that’s normal until we enable them
+              in your Static Web Apps auth config.
+            </p>
+          </CardContent>
+
+          <CardFooter className="flex flex-col space-y-3">
+            <Button
+              type="button"
+              variant="ghost"
+              className="w-full"
+              onClick={() => setLocation("/")}
+            >
+              Back to Home
             </Button>
           </CardFooter>
         </Card>
-
-        <div className="text-center text-sm text-muted-foreground font-sans">
-          <p>
-            By continuing, you agree to our{" "}
-            <button
-              onClick={() => setLocation("/terms")}
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              Terms
-            </button>{" "}
-            and{" "}
-            <button
-              onClick={() => setLocation("/privacy")}
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              Privacy Policy
-            </button>
-            .
-          </p>
-        </div>
       </div>
     </div>
   );
