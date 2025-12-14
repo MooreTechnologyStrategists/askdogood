@@ -99,10 +99,10 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
                 <img
-                  src="/hero-home.webp"
+                  src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
                   alt="Ask DoGood hero"
                   className="h-full w-full object-cover"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
 
