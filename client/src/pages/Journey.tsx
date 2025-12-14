@@ -8,12 +8,13 @@ export default function Journey() {
       years: "1997–2004",
       title: "Building the Base",
       description:
-        "My journey began at North Carolina A&T, where I learned independence and possibility. After facing mental health challenges during 2001-2003, I made a strategic reset—returning to education, enrolling at TechSkills, and earning my CompTIA A+ certification. This wasn't just recovery; it was recalibration with purpose.",
+        "My technical journey took off at North Carolina A&T in 1997, where the dream of working in technology became real. After facing mental health challenges during 2001-2003, I made a strategic reset—enrolling at TechSkills and earning my CompTIA A+ certification in 2004. This wasn't just recovery; it was recalibration with purpose. I also completed my AAIT at University of Phoenix, building the foundation for a career that would span government, finance, and enterprise tech.",
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/ncat-foundation.webp",
       milestones: [
-        "NCAT student (1997–1998)",
+        "NCAT - where the technical dream started (1997–1998)",
         "Resilience through the 2001–2003 reset",
-        "TechSkills enrollment & CompTIA A+ certified (2004)",
+        "CompTIA A+ certified via TechSkills (2004)",
+        "AAIT completed at University of Phoenix",
       ],
       icon: GraduationCap,
     },
@@ -50,11 +51,13 @@ export default function Journey() {
       years: "2024–Present",
       title: "Structure, Career & Mission",
       description:
-        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. Now, I'm writing 'Starting From Scratch in the Basement' and building AskDoGood with positivity, structure, and encouragement—because healing should create impact.",
+        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. Currently pursuing Agentic AI at Johns Hopkins University and one semester away from my BS in Web Design. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. My career has spanned US Census Bureau, US Department of Energy, Synchrony Financial, LPL Financial, Kyndryl, and consulting for Goldman Sachs, Fidelity, M&T Bank, and Phillips 66. Now I teach at PG Parks & Planning and online at TheDopeClo udTeacher, while writing 'Starting From Scratch in the Basement' and building AskDoGood—because healing should create impact.",
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
       milestones: [
         "Returned to Microsoft (Oct 2025)",
-        "Azure security & compliance focus",
+        "Teaching at PG Parks & Planning + TheDopeCl oudTeacher",
+        "Agentic AI at Johns Hopkins (current)",
+        "BS Web Design - one semester away",
         "Writing book & building AskDoGood",
       ],
       icon: Rocket,
@@ -63,9 +66,9 @@ export default function Journey() {
 
   const keyAchievements = [
     {
-      title: "NCAT Graduate",
-      description: "HBCU education foundation",
-      icon: GraduationCap,
+      title: "Multi-Cloud Certified",
+      description: "Azure Solutions Architect, AWS Cloud Practitioner, CompTIA A+ & Project+",
+      icon: CheckCircle2,
     },
     {
       title: "U.S. Army Veteran",
@@ -73,9 +76,9 @@ export default function Journey() {
       icon: Shield,
     },
     {
-      title: "CompTIA A+ Certified",
-      description: "Technical foundation",
-      icon: CheckCircle2,
+      title: "Educator & Mentor",
+      description: "Teaching at PG Parks & Planning + TheDopeCl oudTeacher",
+      icon: GraduationCap,
     },
     {
       title: "Thyroid Cancer Survivor",
@@ -217,6 +220,153 @@ export default function Journey() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Career Highlights Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Career Highlights</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              20+ years building secure, scalable systems across government, finance, and enterprise tech.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Government Sector */}
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Shield className="h-8 w-8 text-primary" />
+                    <h3 className="text-2xl font-bold">Government</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>US Census Bureau (USCB)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>US Department of Energy (DOE)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Forsyth County DSS, Winston-Salem</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>CATS of Charlotte, NC</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Financial Services */}
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                    <h3 className="text-2xl font-bold">Financial Services</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Synchrony Financial</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>LPL Financial</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Goldman Sachs (client)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Fidelity Investments (client)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>M&T Bank (client)</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Tech & Consulting */}
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Rocket className="h-8 w-8 text-primary" />
+                    <h3 className="text-2xl font-bold">Tech & Consulting</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Microsoft (Customer Engineer)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Kyndryl</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>NewBreed</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Phillips 66 (customer engineer)</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Education & Teaching */}
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <GraduationCap className="h-8 w-8 text-primary" />
+                    <h3 className="text-2xl font-bold">Education & Teaching</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>PG Parks & Planning (Instructor)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>TheDopeCl oudTeacher (Online)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Johns Hopkins - Agentic AI (current)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>BS Web Design - one semester away</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Certifications Highlight */}
+            <Card className="mt-8 bg-primary text-primary-foreground">
+              <CardContent className="pt-6">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mb-4">Professional Certifications</h3>
+                  <div className="flex flex-wrap justify-center gap-4 text-lg">
+                    <span className="px-4 py-2 bg-primary-foreground/10 rounded-lg">Azure Solutions Architect</span>
+                    <span className="px-4 py-2 bg-primary-foreground/10 rounded-lg">AWS Cloud Practitioner</span>
+                    <span className="px-4 py-2 bg-primary-foreground/10 rounded-lg">CompTIA A+</span>
+                    <span className="px-4 py-2 bg-primary-foreground/10 rounded-lg">CompTIA Project+</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
