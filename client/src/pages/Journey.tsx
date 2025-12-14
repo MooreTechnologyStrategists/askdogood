@@ -101,7 +101,7 @@ export default function Journey() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/journey/hero-journey.webp)" 
+            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/personal/dogood-shift-logo.webp)" 
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />

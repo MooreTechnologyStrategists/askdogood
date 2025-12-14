@@ -255,6 +255,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ASKDOGOOD SHOW TEASER */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <Card className="overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-[400px] md:h-auto">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/personal/askdogood-show-teaser.webp)" }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 rounded-full border bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 w-fit">
+                    <Sparkles className="h-4 w-4" />
+                    Coming Soon
+                  </div>
+                  
+                  <h2 className="text-4xl font-bold mb-4">The AskDoGood Show</h2>
+                  <p className="text-xl text-muted-foreground mb-6">
+                    Real conversations about health, healing, and thriving in Black & Brown communities.
+                  </p>
+                  
+                  <div className="space-y-3 text-muted-foreground mb-8">
+                    <p>
+                      From thyroid health to mental wellness, from navigating healthcare to building resilience—this is where we talk about what matters.
+                    </p>
+                    <p className="font-medium text-foreground">
+                      Podcast. Radio. Real talk. No filters.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button size="lg" className="gap-2">
+                      Get Notified <ArrowRight className="h-4 w-4" />
+                    </Button>
+                    <Button size="lg" variant="outline" className="gap-2">
+                      Learn More <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* NEWSLETTER SIGNUP */}
       <section className="py-20 bg-secondary/20">
         <div className="container max-w-4xl">
