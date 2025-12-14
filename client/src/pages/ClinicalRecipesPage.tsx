@@ -2,24 +2,30 @@ import { CLINICAL_RECIPE_APP_URL } from "@/config/clinicalRecipes";
 
 export default function ClinicalRecipesPage() {
   return (
-    <div className="min-h-screen">
-      <div className="container py-8">
-        <h1 className="text-3xl font-bold mb-2">Clinical Recipes</h1>
-        <p className="text-muted-foreground mb-6">
-          Your personalized nutrition lab — built for real life.
+    <main className="min-h-screen bg-background">
+      {/* Page Header */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <h1 className="text-4xl font-bold tracking-tight">
+          Clinical Food RX
+        </h1>
+        <p className="mt-3 text-muted-foreground max-w-2xl">
+          Personalized, health-aware recipes built around your conditions,
+          medications, and real-life needs.
         </p>
+      </section>
 
-        <div className="rounded-2xl overflow-hidden border bg-background shadow-sm">
+      {/* Embedded App */}
+      <section className="max-w-7xl mx-auto px-6 pb-16">
+        <div className="w-full h-[80vh] rounded-xl overflow-hidden border shadow-sm bg-black">
           <iframe
-            title="Clinical Recipe System"
             src={CLINICAL_RECIPE_APP_URL}
-            className="w-full h-[80vh]"
+            title="Clinical Recipe System"
+            className="w-full h-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer"
-            allow="clipboard-read; clipboard-write"
           />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
