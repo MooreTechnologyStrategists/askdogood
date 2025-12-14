@@ -1,27 +1,67 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, User as UserIcon } from "lucide-react";
+import { Menu, X, User, LogOut } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { useUser } from "@/hooks/useUser";
+
+type AuthUser = {
+  name?: string;
+  email?: string;
+  userId?: string;
+};
+
+async function fetchAuthUser(): Promise<AuthUser | null> {
+  try {
+    const res = await fetch("/.auth/me", { credentials: "include" });
+    if (!res.ok) return null;
+
+    const data = await res.json();
+    // Azure SWA returns: { clientPrincipal: {...} } or { clientPrincipal: null }
+    const principal = data?.clientPrincipal;
+    if (!principal) return null;
+
+    return {
+      name: principal.userDetails,
+      email: principal.userDetails,
+      userId: principal.userId,
+    };
+  } catch {
+    return null;
+  }
+}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
+  const [user, setUser] = useState<AuthUser | null>(null);
 
-  const user = useUser();
-  const displayName = user?.name || user?.email || "Account";
+  useEffect(() => {
+    fetchAuthUser().then(setUser);
+  }, [location]);
 
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/blog", label: "Blog" },
-    { path: "/journey", label: "My Journey" },
-    ...(user ? [{ path: "/dashboard", label: "Dashboard" }] : []),
-    { path: "/contact", label: "Contact" },
-  ];
+  const displayName = user?.name ?? "Guest";
+
+  const navItems = useMemo(
+    () => [
+      { path: "/", label: "Home" },
+      { path: "/about", label: "About" },
+      { path: "/blog", label: "Blog" },
+      { path: "/journey", label: "My Journey" },
+      { path: "/clinical-recipes", label: "Clinical Recipes" },
+      ...(user ? [{ path: "/dashboard", label: "Dashboard" }] : []),
+      { path: "/contact", label: "Contact" },
+    ],
+    [user]
+  );
 
   const isActive = (path: string) => location === path;
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleLogout = () => {
+    // SWA logout route
+    window.location.href = "/.auth/logout?post_logout_redirect_uri=/";
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,12 +72,13 @@ export default function Header() {
             <span
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer text-2xl font-bold text-primary"
               style={{ fontFamily: "var(--font-serif)" }}
+              onClick={closeMenu}
             >
-              Ask Do Good
+              Ask DoGood
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
@@ -52,28 +93,23 @@ export default function Header() {
             ))}
 
             {user ? (
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <Link href="/profile">
                   <Button variant="ghost" size="sm" className="gap-2">
-                    <UserIcon className="h-4 w-4" />
+                    <User className="h-4 w-4" />
                     {displayName}
                   </Button>
                 </Link>
 
-                {/* SWA managed logout */}
-                <Button variant="outline" size="sm" asChild>
-                  <a href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>
+                <Button variant="outline" size="sm" className="gap-2" onClick={handleLogout}>
+                  <LogOut className="h-4 w-4" />
+                  Sign out
                 </Button>
               </div>
             ) : (
-              <div className="flex items-center gap-2">
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/signup">Join</Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href="/login">Login</Link>
-                </Button>
-              </div>
+              <Link href="/login">
+                <Button size="sm">Login</Button>
+              </Link>
             )}
           </nav>
 
@@ -88,7 +124,7 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Nav */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 space-y-2">
             {navItems.map((item) => (
@@ -97,7 +133,7 @@ export default function Header() {
                   className={`block py-2 text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                     isActive(item.path) ? "text-primary" : "text-foreground/60"
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                 >
                   {item.label}
                 </span>
@@ -108,35 +144,23 @@ export default function Header() {
               {user ? (
                 <>
                   <Link href="/profile">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="gap-2 w-full justify-start"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <UserIcon className="h-4 w-4" />
+                    <Button variant="ghost" size="sm" className="gap-2 w-full justify-start" onClick={closeMenu}>
+                      <User className="h-4 w-4" />
                       {displayName}
                     </Button>
                   </Link>
 
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    asChild
-                    className="w-full justify-center"
-                  >
-                    <a href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>
+                  <Button variant="outline" size="sm" className="gap-2 w-full" onClick={handleLogout}>
+                    <LogOut className="h-4 w-4" />
+                    Sign out
                   </Button>
                 </>
               ) : (
-                <>
-                  <Button size="sm" asChild className="w-full">
-                    <Link href="/login">Login</Link>
+                <Link href="/login">
+                  <Button size="sm" className="w-full" onClick={closeMenu}>
+                    Login
                   </Button>
-                  <Button variant="outline" size="sm" asChild className="w-full">
-                    <Link href="/signup">Join</Link>
-                  </Button>
-                </>
+                </Link>
               )}
             </div>
           </nav>
