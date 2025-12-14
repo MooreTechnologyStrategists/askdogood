@@ -108,6 +108,12 @@ export default function Home() {
               {/* soft overlay to make low-res images look smoother */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" />
             </div>
+              <div className="relative lg:pl-8">
+                  <div className="mx-auto max-w-md lg:max-w-lg">
+                    {/* image panel here */}
+                  </div>
+              </div>
+
               <div className="mt-4 text-xs text-muted-foreground">
                 If you still see a blank box: open DevTools → Network → filter “img” and confirm
                 <code className="mx-1">/hero-home.webp</code> returns 200 (not 404).
