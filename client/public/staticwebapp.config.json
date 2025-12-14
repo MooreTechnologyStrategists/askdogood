@@ -2,6 +2,7 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
+      "/.auth/*",
       "/assets/*",
       "/*.css",
       "/*.js",
@@ -13,5 +14,41 @@
       "/*.ico",
       "/api/*"
     ]
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 302,
+      "redirect": "/login"
+    },
+    {
+      "route": "/profile",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 302,
+      "redirect": "/login"
+    },
+    {
+      "route": "/rewards",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 302,
+      "redirect": "/login"
+    },
+    {
+      "route": "/challenges",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 302,
+      "redirect": "/login"
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/login",
+      "statusCode": 302
+    },
+    "403": {
+      "redirect": "/login",
+      "statusCode": 302
+    }
   }
 }
