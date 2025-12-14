@@ -1,6 +1,6 @@
 // Google Analytics Configuration
 
-export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-7K8N2DFHDP';
 
 // Set to true to enable debug logging
 export const GA_DEBUG = import.meta.env.DEV;
