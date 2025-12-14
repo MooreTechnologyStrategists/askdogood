@@ -1,18 +1,29 @@
 // blogPosts.ts
-// NOTE: I can only “complete” what you pasted here. This file is syntactically correct
-// with the posts you included. Paste the remaining posts into the array where indicated.
+// Source of truth for Blog index + Blog post rendering.
+//
+// Notes:
+// - "image" should be a full URL (Azure Blob) or a local path.
+// - If an image is missing, UI should fall back to DEFAULT_BLOG_IMAGE.
 
 export interface BlogPost {
   id: string;
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content: string; // currently WordPress HTML block markup
   category: string;
   date: string; // YYYY-MM-DD
   readTime: string;
   image: string; // URL or local path
+
+  // Optional future-friendly fields (safe to ignore in UI)
+  tags?: string[];
+  featured?: boolean;
+  imageAlt?: string;
 }
+
+export const DEFAULT_BLOG_IMAGE =
+  "https://askdogoodassets.blob.core.windows.net/images/blog_fallback.webp";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -62,6 +73,8 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-26",
     readTime: "2 min read",
     image: "https://images.unsplash.com/photo-1635367216109-aa3353c0c22e",
+    imageAlt: "Hands offering support and generosity",
+    tags: ["Community", "Wellness", "Giving"],
   },
   {
     id: "1777",
@@ -130,6 +143,8 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-23",
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1728636945305-67a629484ff7",
+    imageAlt: "Sea moss / ocean plant wellness concept",
+    tags: ["Nutrition", "Thyroid", "Minerals"],
   },
   {
     id: "1775",
@@ -206,6 +221,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-21",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1740582421304-7e94e718042b",
+    imageAlt: "Collagen wellness supplement concept",
+    tags: ["Thyroid", "Autoimmune", "Skin", "Mobility"],
+    featured: true,
   },
   {
     id: "1773",
@@ -274,6 +292,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-19",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1554244933-d876deb6b2ff",
+    imageAlt: "Beets / superfood wellness concept",
+    tags: ["Thyroid", "Energy", "Heart Health"],
+    featured: true,
   },
   {
     id: "1771",
@@ -368,6 +389,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-17",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1758620942918-4990013421ad",
+    imageAlt: "Mindfulness and calm reflection",
+    tags: ["Mental Health", "Mindfulness", "Black Women"],
+    featured: true,
   },
   {
     id: "1769",
@@ -438,6 +462,8 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-15",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1655720357761-f18ea9e5e7e6",
+    imageAlt: "Justice and reflection concept",
+    tags: ["Community", "Equity", "Black Women"],
   },
   {
     id: "1767",
@@ -520,20 +546,11 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-13",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1759873911661-d4cba84d2eff",
+    imageAlt: "Anxiety support and calm coping concept",
+    tags: ["Mental Health", "Anxiety", "Mindfulness"],
   },
 
-  // ✅ Paste the rest of your posts here (the other ~90 posts you mentioned)
-  // {
-  //   id: "...",
-  //   slug: "...",
-  //   title: "...",
-  //   excerpt: "...",
-  //   content: `...`,
-  //   category: "...",
-  //   date: "YYYY-MM-DD",
-  //   readTime: "...",
-  //   image: "...",
-  // },
+  // ✅ Paste the rest of your posts here...
 ];
 
 // ---------- helpers ----------
@@ -562,8 +579,11 @@ export function searchPosts(query: string): BlogPost[] {
   });
 }
 
-
-// Optional: newest-first (useful for blog index pages)
 export function getPostsNewestFirst(): BlogPost[] {
   return [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// Convenience: ensures UI always has an image (useful if you forget one)
+export function getPostImage(post: BlogPost): string {
+  return post.image?.trim() ? post.image : DEFAULT_BLOG_IMAGE;
 }
