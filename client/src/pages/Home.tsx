@@ -113,11 +113,6 @@ export default function Home() {
                     {/* image panel here */}
                   </div>
               </div>
-
-              <div className="mt-4 text-xs text-muted-foreground">
-                If you still see a blank box: open DevTools → Network → filter “img” and confirm
-                <code className="mx-1">/hero-home.webp</code> returns 200 (not 404).
-              </div>
             </div>
           </div>
         </div>
