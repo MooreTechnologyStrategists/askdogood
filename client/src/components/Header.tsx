@@ -1,45 +1,17 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, User, LogOut } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-
-type AuthUser = {
-  name?: string;
-  email?: string;
-  userId?: string;
-};
-
-async function fetchAuthUser(): Promise<AuthUser | null> {
-  try {
-    const res = await fetch("/.auth/me", { credentials: "include" });
-    if (!res.ok) return null;
-
-    const data = await res.json();
-    // Azure SWA returns: { clientPrincipal: {...} } or { clientPrincipal: null }
-    const principal = data?.clientPrincipal;
-    if (!principal) return null;
-
-    return {
-      name: principal.userDetails,
-      email: principal.userDetails,
-      userId: principal.userId,
-    };
-  } catch {
-    return null;
-  }
-}
+import { useUser } from "@/hooks/useUser";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
-  const [user, setUser] = useState<AuthUser | null>(null);
 
-  useEffect(() => {
-    fetchAuthUser().then(setUser);
-  }, [location]);
+  const { user, isAuthenticated } = useUser();
 
-  const displayName = user?.name ?? "Guest";
+  const displayName = user?.userDetails ?? "Account";
 
   const navItems = useMemo(
     () => [
@@ -48,18 +20,22 @@ export default function Header() {
       { path: "/blog", label: "Blog" },
       { path: "/journey", label: "My Journey" },
       { path: "/clinical-recipes", label: "Clinical Recipes" },
-      ...(user ? [{ path: "/dashboard", label: "Dashboard" }] : []),
+      ...(isAuthenticated ? [{ path: "/dashboard", label: "Dashboard" }] : []),
       { path: "/contact", label: "Contact" },
     ],
-    [user]
+    [isAuthenticated]
   );
 
   const isActive = (path: string) => location === path;
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const handleLogin = () => {
+    // Azure Static Web Apps auth (Microsoft Entra ID / AAD)
+    window.location.href = "/.auth/login/aad?post_login_redirect_uri=/dashboard";
+  };
+
   const handleLogout = () => {
-    // SWA logout route
     window.location.href = "/.auth/logout?post_logout_redirect_uri=/";
   };
 
@@ -92,7 +68,7 @@ export default function Header() {
               </Link>
             ))}
 
-            {user ? (
+            {isAuthenticated ? (
               <div className="flex items-center gap-2">
                 <Link href="/profile">
                   <Button variant="ghost" size="sm" className="gap-2">
@@ -107,9 +83,9 @@ export default function Header() {
                 </Button>
               </div>
             ) : (
-              <Link href="/login">
-                <Button size="sm">Login</Button>
-              </Link>
+              <Button size="sm" onClick={handleLogin}>
+                Login
+              </Button>
             )}
           </nav>
 
@@ -141,10 +117,15 @@ export default function Header() {
             ))}
 
             <div className="pt-2 flex flex-col gap-2">
-              {user ? (
+              {isAuthenticated ? (
                 <>
                   <Link href="/profile">
-                    <Button variant="ghost" size="sm" className="gap-2 w-full justify-start" onClick={closeMenu}>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="gap-2 w-full justify-start"
+                      onClick={closeMenu}
+                    >
                       <User className="h-4 w-4" />
                       {displayName}
                     </Button>
@@ -156,11 +137,9 @@ export default function Header() {
                   </Button>
                 </>
               ) : (
-                <Link href="/login">
-                  <Button size="sm" className="w-full" onClick={closeMenu}>
-                    Login
-                  </Button>
-                </Link>
+                <Button size="sm" className="w-full" onClick={handleLogin}>
+                  Login
+                </Button>
               )}
             </div>
           </nav>

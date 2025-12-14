@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export type AuthUser = {
-  identityProvider: string;
-  userId: string;
-  userDetails: string;
-  userRoles: string[];
+  identityProvider?: string;
+  userId?: string;
+  userDetails?: string;
+  userRoles?: string[];
 };
 
 type AuthMeResponse = {
@@ -15,27 +15,32 @@ export function useUser() {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    let cancelled = false;
-
-    async function load() {
-      try {
-        const res = await fetch("/.auth/me", { credentials: "include" });
-        const data = (await res.json()) as AuthMeResponse;
-
-        if (!cancelled) setUser(data?.clientPrincipal ?? null);
-      } catch {
-        if (!cancelled) setUser(null);
-      } finally {
-        if (!cancelled) setIsLoading(false);
+  const refresh = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const res = await fetch("/.auth/me", { credentials: "include" });
+      if (!res.ok) {
+        setUser(null);
+        return;
       }
-    }
 
-    load();
-    return () => {
-      cancelled = true;
-    };
+      const data = (await res.json()) as AuthMeResponse;
+      setUser(data?.clientPrincipal ?? null);
+    } catch {
+      setUser(null);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
-  return { user, isLoading, isAuthenticated: !!user };
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
+
+  return {
+    user,
+    isLoading,
+    isAuthenticated: !!user,
+    refresh,
+  };
 }
