@@ -62,7 +62,7 @@ export default function Home() {
                 <Link href="/journey">
                   <Button
                     size="lg"
-                    className="gap-2 shadow-md hover:shadow-lg transition-shadow border border-primary/20"
+                    className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border border-primary/20"
                   >
                     Start Here <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -72,7 +72,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70"
+                    className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70"
                   >
                     Clinical Food RX <UtensilsCrossed className="h-4 w-4" />
                   </Button>
@@ -85,15 +85,17 @@ export default function Home() {
 
               {/* TRUST / POSITIONING */}
               <div className="grid gap-3 sm:grid-cols-3 pt-2">
-                <div className="rounded-xl border bg-background/60 px-4 py-3">
-                  <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                    <ShieldCheck className="h-4 w-4 text-primary" />
-                    No fluff
+                <Link href="/no-fluff">
+                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
+                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
+                      <ShieldCheck className="h-4 w-4 text-primary" />
+                      No fluff
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Real talk + real tools.
+                    </div>
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    Real talk + real tools.
-                  </div>
-                </div>
+                </Link>
 
                 <div className="rounded-xl border bg-background/60 px-4 py-3">
                   <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">

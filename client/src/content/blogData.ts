@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
     category: "Thyroid & Autoimmune",
     date: "2024-11-21",
     readTime: "4 min read",
-    image: "https://askdogoodassets.blob.core.windows.net/images/the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life.webp",
     imageAlt: "Collagen wellness supplement concept",
     tags: ["Thyroid", "Autoimmune", "Skin", "Mobility"],
     featured: true,
