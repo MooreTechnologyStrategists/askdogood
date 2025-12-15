@@ -1,54 +1,22 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": [
-      "/.auth/*",
-      "/assets/*",
-      "/*.css",
-      "/*.js",
-      "/*.png",
-      "/*.jpg",
-      "/*.jpeg",
-      "/*.gif",
-      "/*.svg",
-      "/*.ico",
-      "/api/*"
-    ]
+    "exclude": ["/assets/*", "/*.{css,scss,js,png,gif,ico,jpg,svg,webp,woff,woff2}"]
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".js": "text/javascript",
+    ".css": "text/css"
+  },
+  "globalHeaders": {
+    "cache-control": "public, max-age=31536000, immutable"
   },
   "routes": [
     {
-      "route": "/dashboard",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 302,
-      "redirect": "/login"
-    },
-    {
-      "route": "/profile",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 302,
-      "redirect": "/login"
-    },
-    {
-      "route": "/rewards",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 302,
-      "redirect": "/login"
-    },
-    {
-      "route": "/challenges",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 302,
-      "redirect": "/login"
+      "route": "/assets/*",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     }
-  ],
-  "responseOverrides": {
-    "401": {
-      "redirect": "/login",
-      "statusCode": 302
-    },
-    "403": {
-      "redirect": "/login",
-      "statusCode": 302
-    }
-  }
+  ]
 }
