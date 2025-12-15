@@ -55,7 +55,7 @@ export default function Journey() {
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
       milestones: [
         "Returned to Microsoft (Oct 2025)",
-        "Teaching at PG Parks & Planning + TheDopeCl oudTeacher",
+        "Teaching at PG Parks & Planning + TheDopeCloudTeacher",
         "Agentic AI at Johns Hopkins (current)",
         "BS Web Design - one semester away",
         "Writing book & building AskDoGood",
@@ -338,7 +338,7 @@ export default function Journey() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>TheDopeCl oudTeacher (Online)</span>
+                      <span>TheDopeCloudTeacher (Online)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
