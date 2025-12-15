@@ -20,7 +20,10 @@ import {
 } from "lucide-react";
 
 // ✅ If your file exports a different name, adjust this import (see note below)
-import { blogPosts as BLOG_POSTS } from "@/content/blogData";
+import { 
+  blogPosts,
+  getPostImage,
+}  from "@/content/blogData";
 
 type BlogPost = {
   slug: string;
@@ -51,7 +54,7 @@ export default function Blog() {
   const [query, setQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string>("All");
 
-  const posts = (BLOG_POSTS as unknown as BlogPost[]) ?? [];
+  const posts =  BlogPosts;;
 
   const allTags = useMemo(() => {
     const tags = posts.flatMap((p) => p.tags ?? []);
