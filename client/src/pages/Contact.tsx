@@ -47,7 +47,7 @@ export default function Contact() {
             {/* Image */}
             <div className="mb-8">
               <img 
-                src="https://askdogoodassets.blob.core.windows.net/images/about-hero.webp" 
+                src="https://askdogoodassets.blob.core.windows.net/images/Contact-DoGood.webp" 
                 alt="Contact illustration" 
                 className="w-full max-w-md mx-auto rounded-lg shadow-lg"
               />
