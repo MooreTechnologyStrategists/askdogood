@@ -7,7 +7,7 @@ export default function Interests() {
       title: "Gardening",
       subtitle: "Growing Wellness",
       description: "There's something deeply healing about working with soil, watching seeds transform into life, and creating beauty from the ground up. Gardening teaches patience, consistency, and the power of small daily actions—lessons that apply to every area of healing and growth.",
-      image: "https://askdogoodassets.blob.core.windows.net/images/personal/rosee-flowers-portrait.webp",
+      image: "https://askdogoodassets.blob.core.windows.net/images/personal/gardening.webp",
       icon: Flower2,
       color: "from-green-500/20 to-emerald-500/20",
     },

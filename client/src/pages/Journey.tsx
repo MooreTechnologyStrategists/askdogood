@@ -77,7 +77,7 @@ export default function Journey() {
     },
     {
       title: "Educator & Mentor",
-      description: "Teaching at PG Parks & Planning + TheDopeCl oudTeacher",
+      description: "Teaching at PG Parks & Planning + TheDopeCloudTeacher",
       icon: GraduationCap,
     },
     {
@@ -104,7 +104,7 @@ export default function Journey() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/personal/dogood-shift-logo.webp)" 
+            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/hero-journey.webp)" 
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
