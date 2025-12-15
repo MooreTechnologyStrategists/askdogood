@@ -229,6 +229,78 @@ export const blogPosts: BlogPost[] = [
   // ✅ Paste the rest of your posts here...
 ];
 
+/* -------------------------------------------------------------------------- */
+/*                                  SANITIZER                                 */
+/* -------------------------------------------------------------------------- */
+
+type AnyPost = any;
+
+function normalizePost(p: AnyPost): BlogPost | null {
+  const id = typeof p?.id === "string" ? p.id.trim() : String(p?.id ?? "").trim();
+  const slug =
+    typeof p?.slug === "string" ? p.slug.trim() : String(p?.slug ?? "").trim();
+  const title =
+    typeof p?.title === "string" ? p.title.trim() : String(p?.title ?? "").trim();
+  const excerpt =
+    typeof p?.excerpt === "string"
+      ? p.excerpt.trim()
+      : String(p?.excerpt ?? "").trim();
+  const content =
+    typeof p?.content === "string"
+      ? p.content
+      : String(p?.content ?? "").trim();
+  const category =
+    typeof p?.category === "string"
+      ? p.category.trim()
+      : String(p?.category ?? "General").trim();
+  const date =
+    typeof p?.date === "string" ? p.date.trim() : String(p?.date ?? "").trim();
+  const readTime =
+    typeof p?.readTime === "string"
+      ? p.readTime.trim()
+      : String(p?.readTime ?? "5 min read").trim();
+
+  const imageRaw = typeof p?.image === "string" ? p.image.trim() : "";
+  const image = imageRaw.length ? imageRaw : DEFAULT_BLOG_IMAGE;
+
+  const tags = Array.isArray(p?.tags) ? p.tags.filter(Boolean) : undefined;
+  const featured = typeof p?.featured === "boolean" ? p.featured : undefined;
+  const imageAlt =
+    typeof p?.imageAlt === "string" ? p.imageAlt.trim() : undefined;
+
+  // Required fields check — if these are missing, we drop the post.
+  const requiredOk = Boolean(id && slug && title && excerpt && content && date);
+
+  if (!requiredOk) return null;
+
+  return {
+    id,
+    slug,
+    title,
+    excerpt,
+    content,
+    category: category || "General",
+    date,
+    readTime: readTime || "5 min read",
+    image,
+    tags,
+    featured,
+    imageAlt,
+  };
+}
+
+/**
+ * Use this everywhere in the UI (BlogIndex, home "latest posts", etc.)
+ * so a single malformed post can't crash the app.
+ */
+export const safeBlogPosts: BlogPost[] = (blogPosts as AnyPost[])
+  .map(normalizePost)
+  .filter(Boolean) as BlogPost[];
+
+/* -------------------------------------------------------------------------- */
+/*                                   HELPERS                                  */
+/* -------------------------------------------------------------------------- */
+
 // ---------- helpers ----------
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
