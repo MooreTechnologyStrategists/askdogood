@@ -10,7 +10,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Sparkles, Search, Bookmark, Flame, BookOpen } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Search,
+  Bookmark,
+  Flame,
+  BookOpen,
+} from "lucide-react";
 
 import { safeBlogPosts, getPostImage } from "@/content/blogData";
 
@@ -31,7 +38,6 @@ export default function Blog() {
   const [query, setQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string>("All");
 
-  // ✅ Single source of truth (sanitized)
   const posts = safeBlogPosts;
 
   const allTags = useMemo(() => {
@@ -60,7 +66,6 @@ export default function Blog() {
         return matchesTag && matchesQuery;
       })
       .sort((a, b) => {
-        // Newer first; invalid/missing dates fall to bottom without crashing
         const ad = a.date ? Date.parse(a.date) : 0;
         const bd = b.date ? Date.parse(b.date) : 0;
         return bd - ad;
@@ -115,7 +120,7 @@ export default function Blog() {
                 </Link>
               </div>
 
-              {/* Tag / pillar chips */}
+              {/* Tag chips */}
               <div className="flex flex-wrap gap-2 pt-1">
                 {allTags.slice(0, 10).map((tag) => {
                   const active = tag === activeTag;
@@ -123,13 +128,11 @@ export default function Blog() {
                     <button
                       key={tag}
                       onClick={() => setActiveTag(tag)}
-                      className={`rounded-full border px-3 py-1 text-xs transition-colors
-                        ${
-                          active
-                            ? "bg-primary text-primary-foreground border-primary"
-                            : "bg-background hover:bg-secondary/50"
-                        }
-                      `}
+                      className={`rounded-full border px-3 py-1 text-xs transition-colors ${
+                        active
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background hover:bg-secondary/50"
+                      }`}
                     >
                       {tag}
                     </button>
@@ -152,13 +155,10 @@ export default function Blog() {
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
-
-                  {/* elegant overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
                   <div className="absolute -top-16 -right-20 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
                 </div>
 
-                {/* small caption row */}
                 <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
                   <Bookmark className="h-4 w-4 text-primary" />
                   Start with what applies today — save the rest for later.
@@ -202,4 +202,123 @@ export default function Blog() {
                     <img
                       src={getPostImage(post)}
                       alt={post.imageAlt ?? `${post.title} cover image`}
-                      className="h-full w-full object-cover tran
+                      className="h-full w-full object-cover transition-transform hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="leading-tight">{post.title}</CardTitle>
+                    <CardDescription className="line-clamp-2">
+                      {post.excerpt ??
+                        "A grounded, real-life breakdown with tools you can apply."}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent className="space-y-3">
+                    <div className="flex flex-wrap gap-2">
+                      {(post.tags ?? []).slice(0, 3).map((t) => (
+                        <Badge key={t} variant="secondary">
+                          {t}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button variant="outline" className="w-full gap-2">
+                        Read now <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ALL POSTS */}
+      <section className="py-10 md:py-14">
+        <div className="container">
+          <div className="flex items-end justify-between gap-4 mb-6">
+            <div>
+              <h2
+                className="text-2xl md:text-3xl font-bold"
+                style={{ fontFamily: "var(--font-serif)" }}
+              >
+                All posts
+              </h2>
+              <p className="text-muted-foreground mt-1">
+                Browse by topic, pillar, or pure curiosity.
+              </p>
+            </div>
+
+            <div className="text-sm text-muted-foreground">
+              {filtered.length} post{filtered.length === 1 ? "" : "s"}
+              {activeTag !== "All" ? ` • Tag: ${activeTag}` : ""}
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((post) => (
+              <Card
+                key={post.slug}
+                className="hover:shadow-lg transition-shadow overflow-hidden"
+              >
+                <div className="aspect-video w-full overflow-hidden">
+                  <img
+                    src={getPostImage(post)}
+                    alt={post.imageAlt || post.title}
+                    className="h-full w-full object-cover transition-transform hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+
+                <CardHeader>
+                  <CardTitle className="leading-tight">{post.title}</CardTitle>
+                  <CardDescription className="line-clamp-3">
+                    {post.excerpt ??
+                      "Practical, honest guidance — built for real people with real lives."}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {(post.tags ?? []).slice(0, 4).map((t) => (
+                      <Badge key={t} variant="secondary">
+                        {t}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <Link href={`/blog/${post.slug}`}>
+                    <Button className="w-full gap-2 shadow-sm hover:shadow-md transition-shadow">
+                      Read post <BookOpen className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {filtered.length === 0 && (
+            <div className="mt-10 rounded-2xl border bg-secondary/20 p-8 text-center">
+              <div className="text-lg font-semibold">No matches found.</div>
+              <div className="text-muted-foreground mt-2">
+                Try a different keyword or switch tags.
+              </div>
+              <div className="mt-4 flex justify-center gap-3">
+                <Button variant="outline" onClick={() => setQuery("")}>
+                  Clear search
+                </Button>
+                <Button variant="outline" onClick={() => setActiveTag("All")}>
+                  Reset tags
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    </main>
+  );
+}
