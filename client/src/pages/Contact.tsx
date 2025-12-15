@@ -47,7 +47,7 @@ export default function Contact() {
           {/* Image */}
           <div className="mb-8">
             <img 
-  src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800" 
+  src="https://askdogoodassets.blob.core.windows.net/images/about-hero.webp" 
   alt="Contact illustration" 
   className="w-full max-w-md mx-auto rounded-lg shadow-lg"
 />
