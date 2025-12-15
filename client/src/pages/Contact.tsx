@@ -44,6 +44,14 @@ export default function Contact() {
       <section className="py-20 bg-secondary/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
+          {/* Image */}
+            <div className="mb-8">
+              <img 
+                src="https://askdogoodassets.blob.core.windows.net/images/Contact DoGood.webp" 
+                alt="Contact illustration" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+              />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Get in Touch
             </h1>
