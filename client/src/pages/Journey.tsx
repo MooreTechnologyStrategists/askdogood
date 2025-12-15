@@ -51,7 +51,7 @@ export default function Journey() {
       years: "2024–Present",
       title: "Structure, Career & Mission",
       description:
-        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. Currently pursuing Agentic AI at Johns Hopkins University and one semester away from my BS in Web Design. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. My career has spanned US Census Bureau, US Department of Energy, Synchrony Financial, LPL Financial, Kyndryl, and consulting for Goldman Sachs, Fidelity, M&T Bank, and Phillips 66. Now I teach at PG Parks & Planning and online at TheDopeClo udTeacher, while writing 'Starting From Scratch in the Basement' and building AskDoGood—because healing should create impact.",
+        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. Currently pursuing Agentic AI at Johns Hopkins University and one semester away from my BS in Web Design at UMGC. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. My career has spanned US Census Bureau, US Department of Energy, Synchrony Financial, LPL Financial, Kyndryl, and consulting for Goldman Sachs, Fidelity, M&T Bank, and Phillips 66. Now I teach at PG Parks & Planning and online at TheDopeClo udTeacher, while writing 'Starting From Scratch in the Basement' and building AskDoGood—because healing should create impact.",
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
       milestones: [
         "Returned to Microsoft (Oct 2025)",
@@ -346,7 +346,7 @@ export default function Journey() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>BS Web Design - one semester away</span>
+                      <span>BS Web Design at UMGC - one semester away</span>
                     </li>
                   </ul>
                 </CardContent>
