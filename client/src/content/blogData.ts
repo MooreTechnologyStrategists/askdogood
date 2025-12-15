@@ -1259,3 +1259,8 @@ export const safeBlogPosts = blogPosts.map(post => ({
   authorImage: post.authorImage || "https://askdogoodassets.blob.core.windows.net/images/brand/author-photo.webp",
   featured: post.featured || false,
 }));
+
+// Helper function to get a blog post by its slug
+export const getPostBySlug = (slug: string): BlogPost | undefined => {
+  return safeBlogPosts.find(post => post.slug === slug);
+};
