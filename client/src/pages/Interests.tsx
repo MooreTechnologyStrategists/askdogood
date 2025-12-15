@@ -15,7 +15,7 @@ export default function Interests() {
       title: "Music",
       subtitle: "Creative Expression",
       description: "Music is my creative outlet, my therapy, and my joy. Whether I'm listening, creating playlists, or just vibing to the rhythm, music helps me process emotions, celebrate wins, and stay grounded. It's the soundtrack to my healing journey.",
-      image: "https://askdogoodassets.blob.core.windows.net/images/personal/communication-tips.webp",
+      image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp",
       icon: Music,
       color: "from-purple-500/20 to-pink-500/20",
     },
