@@ -226,6 +226,348 @@ export const blogPosts: BlogPost[] = [
     tags: ["Mental Health", "Anxiety", "Mindfulness"],
   },
 
+
+  // === WordPress Batch 1 (Posts 1-20) ===
+  {
+    id: 'pro-tips-for-giving-your-partner-a-massage',
+    title: 'Pro Tips for Giving Your Partner a Massage',
+    excerpt: 'You don’t have to be a professional masseuse to give your partner a high-quality massage.',
+    content: `You don’t have to be a professional masseuse to give your partner a high-quality massage. However, giving a good massage is probably more challenging than you think. You can’t just pull a bottle of moisturizer out of the bathroom closet and start slathering it on your partner. There’s some skill and technique involved.
+
+Learn how to give a great massage and your partner will be impressed and grateful.
+
+A great massage is something your partner won’t soon forget!
+
+Try these techniques:
+
+1. Consid...`,
+    date: '2022-12-12',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: '10-tips-to-boost-your-emotional-wellness',
+    title: '10 Tips to Boost Your Emotional Wellness',
+    excerpt: 'Work, family, financial challenges, Covid-19, and all the other stressors in the world can really take a toll on one’s emotional wellness.',
+    content: `Work, family, financial challenges, Covid-19, and all the other stressors in the world can really take a toll on one’s emotional wellness. It’s not easy to be happy and enjoy life if your emotional health isn’t at a high level. While many of life’s ups and downs are beyond our control, there are a lot of things that are within our control.
+
+ 
+
+There are several things you can do to increase your emotional wellness that won’t cost a penny or require a lot of time. Practice these strategies and po...`,
+    date: '2022-12-12',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: '5-foods-you-need-to-include-in-a-vegan-diet',
+    title: '5 Foods You Need to Include in a Vegan Diet!',
+    excerpt: 'A vegan diet is one of the healthiest diets you could engage in when it\'s done properly.',
+    content: `A vegan diet is one of the healthiest diets you could engage in when it's done properly. On the other hand, some people struggle to find foods that are not only healthy but also tasty and calorie rich to support their busy lives.
+ 
+
+Blogging from the Dashboard
+
+
+Remember that the bulk of calories for most people’s diet will come from meat.
+When these meats are removed from your diet, it’s crucial to fill your calorie needs with foods that are rich in protein and healthy fats.
+ 
+
+
+
+Here are 5 foo...`,
+    date: '2022-12-19',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: '7-ways-to-boost-focus-and-productivity-while-working-from-home',
+    title: '7 Ways to Boost Focus and Productivity While Working From Home',
+    excerpt: 'Many businesses have allowed or forced employees to work from home.',
+    content: `Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be productive from home.
+
+ 
+
+It can be easy to sleep late, watch a little TV, spend too much time on social media, or just waste time in general. Having children at home makes everything even more challenging.
+
+
+
+There are many distractions that can make working from home especially difficult. It’s also easy to be unproductive without a boss or coworker...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'a-sober-living-guide-for-the-holidays',
+    title: 'A Sober Living Guide for the Holidays',
+    excerpt: 'The winter holidays are supposed to be a magical time of year.',
+    content: `The winter holidays are supposed to be a magical time of year. However, they can pose extra challenges if you’re trying to live sober.
+ 
+
+You may look forward to decorating the tree and baking sugar cookies. Then, you remember crowded shopping malls and family dinners with distant relatives asking you about your childbearing plans.
+
+
+
+You may also wonder how you’ll handle annual rituals that usually involve rum punch and champagne.
+
+
+
+Learn how to celebrate the holidays without risking your reco...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'an-introverts-guide-to-dating',
+    title: 'An Introvert’s Guide to Dating',
+    excerpt: 'Have you ever felt misunderstood or overwhelmed by conventional dating advice?\nAre you tired of hearing about how “dating is just a numbers game”?\n \n\nMuch of conventional relationship advice doesn',
+    content: `Have you ever felt misunderstood or overwhelmed by conventional dating advice?
+Are you tired of hearing about how “dating is just a numbers game”?
+ 
+
+Much of conventional relationship advice doesn’t take introversion into account.
+
+
+
+Introverts are people who focus inward and tend to be more in touch with their thoughts and feelings. They are best known for needing alone time to recharge their energy. Sometimes, people mistake that fact to mean introverts are shy - but that is not always the cas...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'healthy-tips-for-daily-workouts',
+    title: 'Healthy Tips for Daily Workouts',
+    excerpt: 'Do you want to make working out a part of your daily routine? Exercising has\n\ncompounding benefits.',
+    content: `Do you want to make working out a part of your daily routine? Exercising has
+
+compounding benefits. Working out regularly can uplift your mood, reduce your risk of illness, and help you get better sleep.
+
+In the long run, working out every day can help keep you mobile, agile, and moving. It can also help you live longer.
+
+To receive the most benefits from working out each day, it’s beneficial to change up the exercises in your routine. Doing different types of exercises can also help to
+
+reduce ...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'say-goodbye-to-muscle-cramps',
+    title: 'Say Goodbye to Muscle Cramps',
+    excerpt: 'Muscle cramps are rarely serious.',
+    content: `Muscle cramps are rarely serious. However, they can make it difficult to enjoy your
+
+morning run or get a restful night’s sleep.
+
+Most adults experience cramps at least occasionally. They occur when muscle fibers contract involuntarily. The areas most frequently affected include your legs, back, hands, feet, and abdomen.
+
+You’re probably familiar with the sudden tightness and pain. You may also notice a lump or twitching under your skin. The sensation can be mild or severe. It may last a few sec...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'setting-healthy-boundaries-for-lasting-love',
+    title: 'Setting Healthy Boundaries for Lasting Love',
+    excerpt: 'Have you ever felt angry or hurt because of something your partner said or did? Setting healthy boundaries can help you protect your emotional energy and deepen the connection within your...',
+    content: `Have you ever felt angry or hurt because of something your partner said or did? Setting healthy boundaries can help you protect your emotional energy and deepen the connection within your relationship.
+
+ 
+
+Boundaries are the guidelines we set about our expectations, availability, and energy. Because boundaries communicate how we feel, they prevent us from
+
+over committing or feeling resentful. They also help give others guidelines with how to treat you.
+
+They do not have to be hard, aggressive r...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'take-charge-of-your-health-and-well-being-with-naturopathy',
+    title: 'Take Charge of Your Health and Well Being With Naturopathy',
+    excerpt: 'Naturopathy is a holistic approach to medicine that treats the entire person with the intention of allowing and stimulating the body to heal itself.',
+    content: `Naturopathy is a holistic approach to medicine that treats the entire person with the intention of allowing and stimulating the body to heal itself. Treatment methods commonly include diet, exercise, stress reduction, homeopathy, herbs, massage, acupuncture, and physical manipulations.
+
+Naturopathy might sound like voodoo to the uninformed, but its popularity is
+
+increasing.
+
+There are studies underway in the US and Canada to assess its efficacy and cost-effectiveness for treating many medical c...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'the-tremendous-health-benefits-of-a-vegan-diet',
+    title: 'The Tremendous Health Benefits of a Vegan Diet',
+    excerpt: 'You’ve heard about the vegan diet.',
+    content: `You’ve heard about the vegan diet. Maybe you’re not convinced that it’s for you. All
+
+you know is that it sounds extreme and boring. Still, you might consider it if there
+
+were sufficient benefits.
+
+Could you be one of those “vegan people”? Maybe you could! It might be the best
+
+decision you could make for your health and longevity.
+
+First, let’s define what a vegan diet actually is. Essentially, it’s a diet that is free of
+
+animal products. So, that means no meat of any kind, including fish and...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'how-to-solve-trust-issues-in-a-relationship',
+    title: 'How to Solve Trust Issues in a Relationship',
+    excerpt: 'At some point or another, you\'re likely to experience trust issues in your relationship.',
+    content: `At some point or another, you're likely to experience trust issues in your relationship. Whether it's brought about by infidelity, a decrease in your own self esteem, your partner's newly hired young assistant, or a simple change in your partner's behavior, your relationship can weather this storm and rise above feelings of uncertainty.
+
+Follow these tips to solve the trust issues you face so you can experience the thriving relationship you deserve:
+
+1. Work on your self-esteem. Many trust issue...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'top-10-benefits-of-adopting-a-vegan-lifestyle',
+    title: 'Top 10 Benefits of Adopting a Vegan Lifestyle',
+    excerpt: 'A vegan diet doesn’t sound too appetizing to most meat, cheese, and egg lovers.',
+    content: `A vegan diet doesn’t sound too appetizing to most meat, cheese, and egg lovers. However, a vegan diet can be kind to your health and your wallet. You also gain the benefit of knowing that you’re being kinder to animals and the environment. Making the switch isn’t easy, but you might find it a little easier if you know more about the benefits that veganism provides.
+
+It’s not necessary to make a complete change overnight. Make the change slowly over time. Note how you feel and then decide how you...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'what-you-need-to-know-about-serotonin-and-weight-loss',
+    title: 'What You Need to Know About Serotonin and Weight Loss',
+    excerpt: 'Do you diet and exercise, but stay the same size? A serotonin imbalance could be the reason that you find it difficult to lose weight.\n\nSerotonin may be best known as a neurotransmitter that fights.',
+    content: `Do you diet and exercise, but stay the same size? A serotonin imbalance could be the reason that you find it difficult to lose weight.
+
+Serotonin may be best known as a neurotransmitter that fights anxiety and depression. However, it also plays a major role in digestive health. In fact, most of the serotonin in your body is in your gut, rather than in your brain.
+
+Put this natural appetite suppressant to work for you. Learn more about how serotonin affects weight loss and lifestyle choices you c...`,
+    date: '2022-12-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'natural-cures-for-black-women-living-with-arthritis',
+    title: 'Natural Cures for Black Women Living with Arthritis',
+    excerpt: 'Dear AskDoGood Community,\n\nWe’re here to talk about a topic we believe is very important: natural remedies for arthritis in black women.\n\nRecent studies show that arthritis disproportionately affe',
+    content: `Dear AskDoGood Community,
+
+We’re here to talk about a topic we believe is very important: natural remedies for arthritis in black women.
+
+Recent studies show that arthritis disproportionately affects black women. It affects approximately 23 percent of black women over the age of 65, and studies show this is likely due to a combination of lifestyle, genetics, and environment.
+
+Arthritis is a very painful and debilitating condition that affects many aspects of your life, so it’s essential to find ...`,
+    date: '2023-02-17',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'step-up-and-seize-the-moment-empowering-young-women-to-embrace-their-independence',
+    title: 'Step Up and Seize the Moment: Empowering Young Women to Embrace Their Independence!',
+    excerpt: 'As a young woman, it can be hard to find the confidence to go out in the world and make something of yourself.\n\nYou are probably questioning whether or not you are capable and strong enough to take.',
+    content: `As a young woman, it can be hard to find the confidence to go out in the world and make something of yourself.
+
+You are probably questioning whether or not you are capable and strong enough to take the necessary steps towards financial independence and building a future for yourself. But, young sister, rest assured that you have the ability to become a powerful and independent woman.
+
+Financial independence is crucial for your personal development as a young woman and it’s something you should s...`,
+    date: '2023-02-21',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'i-mean-really-what-is-a-landing-zone-in-microsoft-azure-cloud-technologies',
+    title: 'I mean, really... What is a Landing Zone in Microsoft Azure Cloud Technologies?',
+    excerpt: 'A landing zone is a foundational environment that is set up in a cloud platform such as Microsoft Azure.',
+    content: `A landing zone is a foundational environment that is set up in a cloud platform such as Microsoft Azure. It is designed to provide a secure, reliable, and scalable foundation that can be used as a starting point for deploying workloads and applications to the cloud.
+
+The purpose of a landing zone is to provide a set of guidelines and best practices for configuring and managing the cloud environment. It is intended to be a well-architected, standardized, and repeatable environment that can be eas...`,
+    date: '2023-02-21',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'black-men-want-to-lead-in-their-relationship-household-profession-but-are-they-up-for-the-task',
+    title: 'Black Men want to Lead in their Relationship, Household & Profession but are they up for the task?',
+    excerpt: 'Now more than ever, black men are in a unique position to lead in relationships.',
+    content: `Now more than ever, black men are in a unique position to lead in relationships. The winds of the 21st century have brought on increased visibility and influence for black males and collective strides in leadership. This is a valuable opportunity for a group generations in the past were less encouraged to assume any type of leadership.
+
+However, with this newfound authority over relationships comes great responsibility. As a black man, you must be willing to take ownership of your own journey an...`,
+    date: '2023-02-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'manifestation-says-i-got-the-power-if-you-want-it-just-ask',
+    title: 'Manifestation says “I Got The Power” : If You Want It, Just Ask',
+    excerpt: 'We all have the power to manifest what we want from within, yet far too often we let that power go untapped.',
+    content: `We all have the power to manifest what we want from within, yet far too often we let that power go untapped. As spiritual beings we can learn to use our spiritual power to manifest what we want in our lives. When we align our thoughts and feelings with the power of the Universe, we have the capacity to move mountains and create mountains of abundance.
+
+One way to use our spiritual power to manifest what we desire is by feeling what we need. When we take the time to get in touch with what we need...`,
+    date: '2023-02-22',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+  {
+    id: 'claim-what-you-want-own-your-life',
+    title: 'Claim What You Want — Own Your Life',
+    excerpt: 'We have the power to claim what we want when we feel what we need From self-love to self-efficacy, we have the power to take control of our lives and have what we want.',
+    content: `We have the power to claim what we want when we feel what we need From self-love to self-efficacy, we have the power to take control of our lives and have what we want. No longer do we have to wait in the wings, hoping to find some kind of secret key that unlocks an easier life.
+
+Instead, we can seek what we need, claim what we want, and carve out a life that is personally fulfilling for each of us. No matter what walks of life we come from, we each have the power to claim what we want and feel ...`,
+    date: '2023-05-08',
+    author: 'Rosee Moore',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp',
+    tags: ['Wellness', 'Health'],
+    featured: false,
+  },
+
   // ✅ Paste the rest of your posts here...
 ];
 
