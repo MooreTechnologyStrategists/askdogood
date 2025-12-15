@@ -38,32 +38,30 @@ export default function Contact() {
     });
   };
 
- return (
-  <div className="min-h-screen">
-    {/* Hero Section */}
-    <section className="py-20 bg-secondary/30">
-      <div className="container">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Image */}
-          <div className="mb-8">
-            <img 
-  src="https://askdogoodassets.blob.core.windows.net/images/about-hero.webp" 
-  alt="Contact illustration" 
-  className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-/>
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            {/* Image */}
+            <div className="mb-8">
+              <img 
+                src="https://askdogoodassets.blob.core.windows.net/images/about-hero.webp" 
+                alt="Contact illustration" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Get in Touch
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Have questions, feedback, or just want to share your story? I'd love to hear from you.
+            </p>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Have questions, feedback, or just want to share your story? I'd love to hear from you.
-          </p>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
 
       {/* Contact Form Section */}
       <section className="py-20">
