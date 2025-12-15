@@ -16,6 +16,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 export default function Home() {
   return (
@@ -28,6 +29,16 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* LEFT: COPY */}
             <div className="space-y-6 text-center lg:text-left">
+              {/* Brand Logo */}
+              <div className="flex justify-center lg:justify-start mb-4">
+                <img
+                  src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
+                  alt="Ask DoGood"
+                  className="h-20 w-20 object-contain"
+                  loading="eager"
+                />
+              </div>
+
               <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground mx-auto lg:mx-0">
                 <Sparkles className="h-4 w-4 text-primary" />
                 Healing. Structure. Real-life growth.
@@ -178,18 +189,23 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <UtensilsCrossed className="h-5 w-5 text-primary" />
-                  Clinical Food RX
-                </CardTitle>
-                <CardDescription>Meals tailored to real conditions.</CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground leading-relaxed">
-                Turn symptoms, goals, and reality into meals you can actually stick to.
-              </CardContent>
-            </Card>
+            <Link href="/clinical-recipes">
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer hover:border-primary/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <UtensilsCrossed className="h-5 w-5 text-primary" />
+                    Clinical Food RX
+                  </CardTitle>
+                  <CardDescription>Meals tailored to real conditions.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground leading-relaxed">
+                  Turn symptoms, goals, and reality into meals you can actually stick to.
+                  <div className="mt-3 flex items-center gap-1 text-primary font-medium text-sm">
+                    Try it now <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -236,6 +252,69 @@ export default function Home() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ASKDOGOOD SHOW TEASER */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <Card className="overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-[400px] md:h-auto">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/personal/askdogood-show-teaser.webp)" }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 rounded-full border bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 w-fit">
+                    <Sparkles className="h-4 w-4" />
+                    Coming Soon
+                  </div>
+                  
+                  <h2 className="text-4xl font-bold mb-4">The AskDoGood Show</h2>
+                  <p className="text-xl text-muted-foreground mb-6">
+                    Real conversations about health, healing, and thriving in Black & Brown communities.
+                  </p>
+                  
+                  <div className="space-y-3 text-muted-foreground mb-8">
+                    <p>
+                      From thyroid health to mental wellness, from navigating healthcare to building resilience—this is where we talk about what matters.
+                    </p>
+                    <p className="font-medium text-foreground">
+                      Podcast. Radio. Real talk. No filters.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button size="lg" className="gap-2">
+                      Get Notified <ArrowRight className="h-4 w-4" />
+                    </Button>
+                    <Button size="lg" variant="outline" className="gap-2">
+                      Learn More <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* NEWSLETTER SIGNUP */}
+      <section className="py-20 bg-secondary/20">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Join the AskDoGood Newsletter"
+            description="Get weekly insights on healing, thyroid health, mindset, and real-life strategies delivered straight to your inbox. No fluff, just real talk."
+          />
         </div>
       </section>
     </div>

@@ -4,12 +4,24 @@ import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
+import ProductRecommendations from "@/components/ProductRecommendations";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 type BlogRouteParams = {
   slug?: string;
 };
 
 const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg"; // change if your default is different
+
+// Map blog post slugs to recommended product IDs
+function getProductRecommendations(slug: string): string[] | null {
+  const recommendations: Record<string, string[]> = {
+    "the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness": ["seaMoss", "vitaminD", "omega3"],
+    "how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life": ["collagen", "vitaminD", "turmeric"],
+    "superfoods-the-superfood-that-helped-sustain-me-for-7-years": ["superBeets", "magnesium", "omega3"],
+  };
+  return recommendations[slug] || null;
+}
 
 export default function BlogPost() {
   const params = (useParams() as BlogRouteParams) ?? {};
@@ -130,6 +142,15 @@ export default function BlogPost() {
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
+            {/* Product Recommendations */}
+            {getProductRecommendations(slug) && (
+              <ProductRecommendations
+                productIds={getProductRecommendations(slug)!}
+                title="Products I Recommend"
+                variant="card"
+              />
+            )}
+
             {/* Author Section */}
             <div className="mt-16 p-8 bg-secondary/30 rounded-lg">
               <div className="flex items-center gap-4">
@@ -145,15 +166,13 @@ export default function BlogPost() {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="mt-16 text-center p-8 bg-primary/10 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Join the DoGood Wellness Circle</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Get exclusive wellness content, recipes, and community support delivered to your inbox.
-              </p>
-              <Button size="lg" onClick={() => setLocation("/signup")}>
-                Get Started Free
-              </Button>
+            {/* Newsletter Signup */}
+            <div className="mt-16">
+              <BeehiivSubscribe
+                variant="inline"
+                title="Love this content? Get more like it."
+                description="Join the AskDoGood Newsletter for weekly insights on healing, wellness, and real-life strategies."
+              />
             </div>
 
             {/* Back to Blog */}

@@ -19,6 +19,7 @@ export default function Header() {
       { path: "/about", label: "About" },
       { path: "/blog", label: "Blog" },
       { path: "/journey", label: "My Journey" },
+      { path: "/interests", label: "Interests" },
       { path: "/clinical-recipes", label: "Clinical Recipes" },
       ...(isAuthenticated ? [{ path: "/dashboard", label: "Dashboard" }] : []),
       { path: "/contact", label: "Contact" },
