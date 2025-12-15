@@ -25,17 +25,8 @@ import {
   getPostImage,
 }  from "@/content/blogData";
 
-type BlogPost = {
-  slug: string;
-  title: string;
-  excerpt?: string;
-  date?: string;
-  tags?: string[];
-  featured?: boolean;
-  image?: string; // blog post image URL
-  imageAlt?: string;
-  readTime?: string;
-};
+import type { BlogPost } from "@/content/blogData";
+
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
