@@ -21,6 +21,7 @@ import Contact from "./pages/Contact";
 import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
 import Interests from "./pages/Interests";
 import NoFluff from "./pages/NoFluff";
+import Resources from "./pages/Resources";
 import DashboardLayout from "@/components/DashboardLayout";
 import {
   Card,
@@ -64,6 +65,7 @@ function Router() {
       <Route path={"/journey"} component={Journey} />
       <Route path={"/interests"} component={Interests} />
       <Route path={"/no-fluff"} component={NoFluff} />
+      <Route path={"/resources"} component={Resources} />
       <Route path={"/contact"} component={Contact} />
       {/* NEW: Clinical Recipe System route */}
       <Route path={"/clinical-recipes"} component={ClinicalRecipesPageComponent} />

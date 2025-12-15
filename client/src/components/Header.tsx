@@ -20,6 +20,7 @@ export default function Header() {
       { path: "/blog", label: "Blog" },
       { path: "/journey", label: "My Journey" },
       { path: "/interests", label: "Interests" },
+      { path: "/resources", label: "Resources" },
       { path: "/clinical-recipes", label: "Clinical Recipes" },
       ...(isAuthenticated ? [{ path: "/dashboard", label: "Dashboard" }] : []),
       { path: "/contact", label: "Contact" },
