@@ -19,7 +19,7 @@ import {
   BookOpen,
 } from "lucide-react";
 
-import { safeBlogPosts, getPostImage } from "@/content/blogData";
+import { safeBlogPosts } from "@/content/blogData";
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";

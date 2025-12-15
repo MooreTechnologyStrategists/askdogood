@@ -18,9 +18,14 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // For now, just show a toast message
-    // In a real implementation, this would send the form data to a backend
-    toast.success("Message sent! I'll get back to you soon.");
+    // Create mailto link with form data
+    const mailtoLink = `mailto:askdogood@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+    
+    toast.success("Opening your email client...");
     
     // Reset form
     setFormData({
@@ -101,9 +106,11 @@ export default function Contact() {
                         <Mail className="h-5 w-5 text-accent" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg">Collaboration</CardTitle>
+                        <CardTitle className="text-lg">Email Me Directly</CardTitle>
                         <CardDescription>
-                          Interested in working together? Let's talk
+                          <a href="mailto:askdogood@gmail.com" className="text-primary hover:underline">
+                            askdogood@gmail.com
+                          </a>
                         </CardDescription>
                       </div>
                     </div>

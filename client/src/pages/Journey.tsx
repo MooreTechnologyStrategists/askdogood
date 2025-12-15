@@ -17,6 +17,7 @@ export default function Journey() {
         "AAIT completed at University of Phoenix",
       ],
       icon: GraduationCap,
+      certificationLogo: "https://askdogoodassets.blob.core.windows.net/images/certifications/comptia-aplus.png",
     },
     {
       phase: "Phase 2: Service & Discipline",
@@ -61,6 +62,11 @@ export default function Journey() {
         "Writing book & building AskDoGood",
       ],
       icon: Rocket,
+      certificationLogos: [
+        { name: "Azure Solutions Architect", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/azure-solutions-architect.png" },
+        { name: "AWS Cloud Practitioner", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/aws-cloud-practitioner.png" },
+        { name: "CompTIA Project+", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/comptia-project-plus.png" },
+      ],
     },
   ];
 
@@ -69,6 +75,12 @@ export default function Journey() {
       title: "Multi-Cloud Certified",
       description: "Azure Solutions Architect, AWS Cloud Practitioner, CompTIA A+ & Project+",
       icon: CheckCircle2,
+      certifications: [
+        { name: "Azure Solutions Architect", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/azure-solutions-architect.png" },
+        { name: "AWS Cloud Practitioner", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/aws-cloud-practitioner.png" },
+        { name: "CompTIA A+", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/comptia-aplus.png" },
+        { name: "CompTIA Project+", logo: "https://askdogoodassets.blob.core.windows.net/images/certifications/comptia-project-plus.png" },
+      ],
     },
     {
       title: "U.S. Army Veteran",
@@ -104,7 +116,7 @@ export default function Journey() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/hero-journey.webp)" 
+            backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/hero/journey-hero-new.webp)" 
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
@@ -139,6 +151,21 @@ export default function Journey() {
                     <Icon className="h-10 w-10 text-primary mx-auto mb-3" />
                     <h3 className="font-bold text-lg mb-2">{achievement.title}</h3>
                     <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                    
+                    {/* Certification Logos */}
+                    {achievement.certifications && (
+                      <div className="mt-4 flex flex-wrap justify-center gap-3">
+                        {achievement.certifications.map((cert, certIdx) => (
+                          <img
+                            key={certIdx}
+                            src={cert.logo}
+                            alt={cert.name}
+                            title={cert.name}
+                            className="h-16 w-16 object-contain hover:scale-110 transition-transform"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -201,6 +228,37 @@ export default function Journey() {
                             ))}
                           </ul>
                         </div>
+
+                        {/* Certification Logos - Single Logo */}
+                        {phase.certificationLogo && (
+                          <div className="mt-6 flex justify-start">
+                            <img
+                              src={phase.certificationLogo}
+                              alt="CompTIA A+ Certification"
+                              className="h-20 w-20 object-contain hover:scale-110 transition-transform"
+                            />
+                          </div>
+                        )}
+
+                        {/* Certification Logos - Multiple Logos */}
+                        {phase.certificationLogos && (
+                          <div className="mt-6">
+                            <p className="font-semibold text-sm uppercase tracking-wide text-muted-foreground mb-3">
+                              Certifications:
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                              {phase.certificationLogos.map((cert, certIdx) => (
+                                <img
+                                  key={certIdx}
+                                  src={cert.logo}
+                                  alt={cert.name}
+                                  title={cert.name}
+                                  className="h-20 w-20 object-contain hover:scale-110 transition-transform"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
 

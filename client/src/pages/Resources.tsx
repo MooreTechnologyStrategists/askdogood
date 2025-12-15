@@ -4,7 +4,7 @@ const Resources = () => {
   const partners = [
     {
       name: 'PG Parks & Planning',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/pg-parks.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/pg-parks.png',
       mission: 'The Maryland-National Capital Park and Planning Commission enriches lives by creating exceptional parks and planning vibrant communities.',
       myConnection: "I'm honored to teach with PG Parks & Planning, sharing my passion for wellness and technology with our community. Their commitment to accessible recreation and education aligns perfectly with my mission to make health and tech knowledge available to everyone.",
       website: 'https://www.pgparks.com',
@@ -12,7 +12,7 @@ const Resources = () => {
     },
     {
       name: 'Microsoft',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/microsoft.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/microsoft.png',
       mission: 'Microsoft empowers every person and every organization on the planet to achieve more through innovative technology solutions.',
       myConnection: "My journey with Microsoft shaped my career in cloud technologies. As a Customer Engineer supporting clients like Phillips 66, Goldman Sachs, and Fidelity, I learned the power of technology to transform businesses and lives. This experience fuels my passion for teaching Azure and cloud solutions.",
       website: 'https://www.microsoft.com',
@@ -20,7 +20,7 @@ const Resources = () => {
     },
     {
       name: 'Johns Hopkins University',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/johns-hopkins.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/johns-hopkins.png',
       mission: 'Johns Hopkins University is dedicated to educating students and cultivating their capacity for life-long learning, fostering independent and original research, and bringing the benefits of discovery to the world.',
       myConnection: "Currently expanding my expertise through Johns Hopkins' Agentic AI course, I'm exploring how artificial intelligence can revolutionize healthcare and wellness. This cutting-edge knowledge will enhance the Clinical Food RX app and future wellness technology solutions.",
       website: 'https://www.jhu.edu',
@@ -28,7 +28,7 @@ const Resources = () => {
     },
     {
       name: 'University of Maryland Global Campus (UMGC)',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/umgc.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/umgc.png',
       mission: 'UMGC transforms lives through innovative and affordable educational opportunities that connect a diverse global community to credible, relevant knowledge.',
       myConnection: "Just one semester away from completing my BS in Web Design at UMGC! This journey has been about more than credentials—it's about mastering the craft of creating accessible, beautiful digital experiences that serve my community. Every lesson learned goes directly into building better wellness platforms.",
       website: 'https://www.umgc.edu',
@@ -36,7 +36,7 @@ const Resources = () => {
     },
     {
       name: 'Food 4 Families',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/food4families.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/food4families.png',
       mission: 'Food 4 Families works to end hunger by providing nutritious food and resources to families in need throughout the DMV area.',
       myConnection: "Food security is health security. I'm passionate about partnering with Food 4 Families because wellness starts with access to nutritious food. Their work in our community directly supports the holistic health approach I advocate for—you can't heal if you can't eat well.",
       website: 'https://www.food4families.org',
@@ -44,7 +44,7 @@ const Resources = () => {
     },
     {
       name: 'FRESHFARM FoodPrints',
-      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/freshfarm.webp',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/freshfarm.png',
       mission: 'FRESHFARM FoodPrints connects students to healthy food and the natural world through hands-on learning experiences in gardens, kitchens, and classrooms.',
       myConnection: "As someone who finds healing in gardening, I deeply appreciate FRESHFARM's mission to teach children where their food comes from. Their grow-cook-eat-learn approach mirrors my own wellness philosophy: understanding and connecting with our food is fundamental to health and healing.",
       website: 'https://www.freshfarm.org/foodprints',
@@ -55,8 +55,17 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
+        style={{
+          backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-teal-900/70"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               Community & Collaboration

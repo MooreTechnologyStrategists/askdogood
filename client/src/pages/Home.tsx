@@ -97,25 +97,29 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <div className="rounded-xl border bg-background/60 px-4 py-3">
-                  <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                    <HeartPulse className="h-4 w-4 text-primary" />
-                    Health-aware
+                <Link href="/clinical-recipes">
+                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
+                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
+                      <HeartPulse className="h-4 w-4 text-primary" />
+                      Health-aware
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Symptoms, meds, goals.
+                    </div>
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    Symptoms, meds, goals.
-                  </div>
-                </div>
+                </Link>
 
-                <div className="rounded-xl border bg-background/60 px-4 py-3">
-                  <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                    <Users className="h-4 w-4 text-primary" />
-                    Community-first
+                <Link href="/blog">
+                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
+                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
+                      <Users className="h-4 w-4 text-primary" />
+                      Community-first
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Healing out loud.
+                    </div>
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    Healing out loud.
-                  </div>
-                </div>
+                </Link>
               </div>
             </div>
 
