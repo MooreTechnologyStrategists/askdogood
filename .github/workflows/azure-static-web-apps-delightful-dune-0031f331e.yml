@@ -29,7 +29,7 @@ jobs:
         working-directory: client
         run: |
           npm run build
-          cp staticwebapp.config.json dist/
+          cp public/staticwebapp.config.json dist/
 
       - name: Verify dist
         run: |
