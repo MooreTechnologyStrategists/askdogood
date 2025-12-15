@@ -24,6 +24,17 @@ import { safeBlogPosts } from "@/content/blogData";
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
 
+function getPostImage(post: any): string {
+  // Try to get the image from the post, fallback to blog icon
+  if (post.image) {
+    return post.image;
+  }
+  if (post.imageUrl) {
+    return post.imageUrl;
+  }
+  return BLOG_ICON_URL;
+}
+
 function normalize(str: string) {
   return (str || "").toLowerCase().trim();
 }
@@ -96,7 +107,7 @@ export default function Blog() {
               </h1>
 
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                This isn’t “just post and pray.” It’s a library of wellness,
+                This isn't "just post and pray." It's a library of wellness,
                 mindset, and recovery guidance — written with compassion, strategy,
                 and receipts. Pick a pillar, search a topic, and start where you are.
               </p>
@@ -141,7 +152,7 @@ export default function Blog() {
               </div>
 
               <div className="text-sm text-muted-foreground">
-                Tip: Use the search box when you’re in “I don’t even know what I need” mode.
+                Tip: Use the search box when you're in "I don't even know what I need" mode.
               </div>
             </div>
 
@@ -182,7 +193,7 @@ export default function Blog() {
                   Featured reads
                 </h2>
                 <p className="text-muted-foreground mt-1">
-                  Strong starters if you’re overwhelmed.
+                  Strong starters if you're overwhelmed.
                 </p>
               </div>
 
