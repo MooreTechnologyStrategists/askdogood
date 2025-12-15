@@ -214,16 +214,15 @@ export default function Blog() {
             <div className="grid gap-6 md:grid-cols-3">
               {featured.map((post) => (
                 <Card key={post.slug} className="hover:shadow-lg transition-shadow overflow-hidden">
-                  {post.image && (
-                    <div className="aspect-video w-full overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.imageAlt || post.title}
-                        className="h-full w-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img
+                      src={getPostImage(post)}
+                      alt={post.imageAlt ?? `${post.title} cover image`}
+                      className="h-full w-full object-cover transition-transform hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
                   <CardHeader>
                     <CardTitle className="leading-tight">{post.title}</CardTitle>
                     <CardDescription className="line-clamp-2">
