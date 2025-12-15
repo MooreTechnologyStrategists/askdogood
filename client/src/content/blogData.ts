@@ -1264,3 +1264,8 @@ export const safeBlogPosts = blogPosts.map(post => ({
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return safeBlogPosts.find(post => post.slug === slug);
 };
+
+// Helper function to get a blog post image
+export const getPostImage = (post: BlogPost): string => {
+  return post.image || "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp";
+};
