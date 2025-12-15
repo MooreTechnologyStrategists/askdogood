@@ -35,37 +35,37 @@ export const blogPosts: BlogPost[] = [
     content: `<!-- wp:paragraph -->
 <p>Giving Tuesday is a global day of generosity celebrated on the Tuesday following Thanksgiving. It encourages people to give back to their communities and support causes they care about. Here are some pro tips to make the most of Giving Tuesday:</p>
 <!-- /wp:paragraph -->
-
+<br/>
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
 <li><strong>Plan Ahead</strong>: Research organizations and causes you want to support. Make a list of charities or nonprofits that align with your values.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Set a Budget</strong>: Determine how much you can afford to donate. Even small contributions can make a big difference.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Spread the Word</strong>: Use social media to promote Giving Tuesday. Share information about the causes you're supporting and encourage others to participate.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Volunteer Your Time</strong>: If you can't donate money, consider volunteering. Many organizations need help with events, programs, and services.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Match Donations</strong>: If you're able, offer to match donations made by friends or family. This can double the impact of their contributions.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Thank Donors</strong>: If you're part of an organization, make sure to thank those who donate. A simple thank-you note or social media shoutout can go a long way.</li>
 <!-- /wp:list-item -->
-
+<br/>
 <!-- wp:list-item -->
 <li><strong>Think Long-Term</strong>: Consider setting up recurring donations to support your favorite causes throughout the year, not just on Giving Tuesday.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
-
+<br/>
 <!-- wp:paragraph -->
 <p>By following these tips, you can make a meaningful impact on Giving Tuesday and beyond!</p>
 <!-- /wp:paragraph -->`,
