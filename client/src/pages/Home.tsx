@@ -74,6 +74,10 @@ export default function Home() {
                     variant="outline"
                     className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70"
                   >
+                    {/* Add this where you want the form to appear on homepage */}
+                    <div className="thyroid-toolkit-signup">
+                      <script async data-uid="8918501" src="https://ask-dogood.kit.com/7455966d1b/index.js"></script>
+                    </div>
                     Clinical Food RX <UtensilsCrossed className="h-4 w-4" />
                   </Button>
                 </Link>
