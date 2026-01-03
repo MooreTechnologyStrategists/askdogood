@@ -1,13 +1,17 @@
-import os
-import json
-import time
-import base64
-import re
+import os, json
 from pathlib import Path
 from io import BytesIO
-
 from PIL import Image
 from openai import OpenAI
+
+SCRIPT_ROOT = Path(__file__).parent
+EXPORT_PATH = SCRIPT_ROOT / "blog_posts_export.json"
+PROMPTS_OUT = SCRIPT_ROOT / "generated_prompts.json"
+ASSIGNED_DIR = SCRIPT_ROOT.parent / "client/public/assets/img/blog/assigned"
+
+MODEL = "gpt-image-1"
+SIZE = "1024x1024"
+QUALITY = "standard"
 
 print("SCRIPT LOADED ✅")
 
