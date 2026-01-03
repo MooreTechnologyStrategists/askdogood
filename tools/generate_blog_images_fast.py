@@ -145,12 +145,13 @@ def main():
         raise SystemExit("Missing OPENAI_API_KEY env var.")
 
     # ✅ Update this if your blogData path differs
-    blogdata_path = REPO_ROOT / "client" / "src" / "content" / "blogData.ts"
+    export_path = REPO_ROOT / "tools" / "blog_posts_export.json"
+if not export_path.exists():
+    raise SystemExit(
+        f"Export file not found: {export_path}. Run: npx tsx tools/export_blog_posts.ts"
+    )
 
-    if not blogdata_path.exists():
-        raise SystemExit(f"Could not find blogData at: {blogdata_path}")
-
-    posts = load_posts_from_blogdata_js_like(blogdata_path)
+posts = json.loads(export_path.read_text(encoding="utf-8"))
 
     # Write prompts
     prompts = []
