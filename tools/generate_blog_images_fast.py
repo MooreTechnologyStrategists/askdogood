@@ -163,27 +163,7 @@ def main():
     if not isinstance(posts, list) or not posts:
         raise SystemExit("blog_posts_export.json is empty or invalid.")
 
-    # -----------------------------
-    # BUILD PROMPTS
-    # -----------------------------
-    prompts = []
-    for p in posts:
-        slug = p.get("slug") or p.get("id") or slugify(p.get("title", "post"))
-        slug = slugify(slug)
-        title = p.get("title") or slug.replace("-", " ").title()
-        tags = p.get("tags") or []
-
-        prompts.append({
-            "slug": slug,
-            "title": title,
-            "tags": tags,
-            "prompt": build_prompt(title, tags),
-        })
-
-    PROMPTS_OUT.parent.mkdir(parents=True, exist_ok=True)
-    PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
-    print(f"✅ Wrote prompts: {PROMPTS_OUT}")
-
+    # 
     # -----------------------------
     # GENERATE IMAGES
     # -----------------------------
