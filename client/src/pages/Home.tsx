@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +20,24 @@ import {
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://ask-dogood.kit.com/7455966d1b/index.js';
+    script.async = true;
+    script.setAttribute('data-uid', '8918501');
+    
+    const container = document.getElementById('thyroid-toolkit-signup');
+    if (container) {
+      container.appendChild(script);
+    }
+    
+    return () => {
+      if (container && script.parentNode) {
+        container.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* HERO */}
@@ -61,8 +80,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link href="/journey">
                   <Button
-                    size="lg"
-                    className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border border-primary/20"
+                    className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border border-primary/20 px-6 py-3 text-lg"
                   >
                     Start Here <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -70,21 +88,15 @@ export default function Home() {
 
                 <Link href="/clinical-recipes">
                   <Button
-                    size="lg"
-                    variant="outline"
-                    className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70"
+                    className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70 px-6 py-3 text-lg"
                   >
-                    {/* Add this where you want the form to appear on homepage */}
-                    <div className="thyroid-toolkit-signup">
-                      <script async data-uid="8918501" src="https://ask-dogood.kit.com/7455966d1b/index.js"></script>
-                    </div>
                     Clinical Food RX <UtensilsCrossed className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>
 
               <div className="text-sm text-muted-foreground">
-                Built for the people who are tired of “just be consistent” with no system.
+                Built for the people who are tired of "just be consistent" with no system.
               </div>
 
               {/* TRUST / POSITIONING */}
@@ -168,6 +180,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THYROID RESET TOOLKIT CTA */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container max-w-4xl">
+          <div id="thyroid-toolkit-signup"></div>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="py-14 md:py-20">
         <div className="container">
@@ -176,7 +195,7 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              What you’ll find here
+              What you'll find here
             </h2>
             <p className="mt-2 text-muted-foreground text-lg">
               Practical tools + real talk — designed to help you stabilize, rebuild, and level up.
@@ -247,12 +266,12 @@ export default function Home() {
           {/* CTA Row */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <Link href="/about">
-              <Button variant="outline" className="gap-2">
+              <Button className="gap-2 border border-border/70 bg-background/60">
                 Meet RoSeé <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
             <Link href="/blog">
-              <Button variant="outline" className="gap-2">
+              <Button className="gap-2 border border-border/70 bg-background/60">
                 Read the Blog <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -303,10 +322,10 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button size="lg" className="gap-2">
+                    <Button className="gap-2 px-6 py-3 text-lg">
                       Get Notified <ArrowRight className="h-4 w-4" />
                     </Button>
-                    <Button size="lg" variant="outline" className="gap-2">
+                    <Button className="gap-2 border border-border/70 bg-background/60 px-6 py-3 text-lg">
                       Learn More <ArrowRight className="h-4 w-4" />
                     </Button>
                   </div>
