@@ -153,15 +153,19 @@ if not export_path.exists():
 
 posts = json.loads(export_path.read_text(encoding="utf-8"))
 
-    # Write prompts
-    prompts = []
-    for p in posts:
-        prompts.append({
-            "slug": p["slug"],
-            "title": p["title"],
-            "tags": p.get("tags", []),
-            "prompt": build_prompt(p["title"], p.get("tags", [])),
-        })
+# Write prompts
+prompts = []
+for p in posts:
+    slug = p.get("slug") or p.get("id") or slugify(p.get("title", "post"))
+    title = p.get("title") or slug.replace("-", " ").title()
+    tags = p.get("tags") or []
+    prompts.append({
+        "slug": slugify(slug),
+        "title": title,
+        "tags": tags,
+        "prompt": build_prompt(title, tags),
+    })
+
 
     PROMPTS_OUT.parent.mkdir(parents=True, exist_ok=True)
     PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
