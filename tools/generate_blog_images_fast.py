@@ -113,39 +113,57 @@ def main():
     mapping = {}
     failures = []
 
-    total = len(prompts)
-    for i, item in enumerate(prompts, start=1):
-        slug = item["slug"]
-        out_file = ASSIGNED_DIR / f"{slug}.webp"
-        public_url = f"{ASSIGNED_PUBLIC_PREFIX}{slug}.webp"
+total = len(prompts)
+for i, item in enumerate(prompts, start=1):
+    slug = item["slug"]
+    out_file = ASSIGNED_DIR / f"{slug}.webp"
+    public_url = f"{ASSIGNED_PUBLIC_PREFIX}{slug}.webp"
 
-        # Skip if already exists
-        if out_file.exists():
-            print(f"[{i}/{total}] ⏭️ exists: {slug}")
-            mapping[slug] = public_url
-            continue
+    # Skip if already exists
+    if out_file.exists():
+        print(f"[{i}/{total}] ⏭️ exists: {slug}")
+        mapping[slug] = public_url
+        continue
 
-        print(f"[{i}/{total}] 🎨 generating: {slug}")
+    print(f"[{i}/{total}] 🎨 generating: {slug}")
 
-        try:
-            resp = client.images.generate(
-                model=MODEL,
-                prompt=item["prompt"],
-                size=SIZE,
-                quality=QUALITY,
-                n=1,
-                response_format="b64_json",
-            )
+    try:
+        resp = client.images.generate(
+            model=MODEL,
+            prompt=item["prompt"],
+            size=SIZE,
+            quality=QUALITY,
+            n=1,
+        )
 
-            save_webp_from_b64(resp.data[0].b64_json, out_file)
-            mapping[slug] = public_url
-            print(f"   ✅ saved: {out_file}")
+        # Different SDK versions return image data differently.
+        # Try base64 first, then fall back to URL download if needed.
+        data0 = resp.data[0]
 
-            time.sleep(SLEEP_SECONDS)
+        if getattr(data0, "b64_json", None):
+            save_webp_from_b64(data0.b64_json, out_file)
+        elif isinstance(data0, dict) and data0.get("b64_json"):
+            save_webp_from_b64(data0["b64_json"], out_file)
+        elif getattr(data0, "url", None) or (isinstance(data0, dict) and data0.get("url")):
+            # URL fallback (older formats)
+            import urllib.request
 
-        except Exception as e:
-            print(f"   ❌ failed: {slug} → {e}")
-            failures.append({"slug": slug, "error": str(e)})
+            url = data0.url if hasattr(data0, "url") else data0["url"]
+            with urllib.request.urlopen(url) as r:
+                img = Image.open(BytesIO(r.read())).convert("RGB")
+                out_file.parent.mkdir(parents=True, exist_ok=True)
+                img.save(out_file, "WEBP", quality=82, method=6)
+        else:
+            raise RuntimeError(f"Unrecognized image response format: {type(data0)}")
+
+        mapping[slug] = public_url
+        print(f"   ✅ saved: {out_file}")
+
+    except Exception as e:
+        failures.append({"slug": slug, "error": str(e)})
+        print(f"   ❌ failed: {slug} → {e}")
+
+    time.sleep(SLEEP_SECONDS)
 
     MAP_OUT.write_text(json.dumps(mapping, indent=2), encoding="utf-8")
     print(f"✅ Image map written: {MAP_OUT}")
