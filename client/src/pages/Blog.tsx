@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,14 +24,15 @@ import { safeBlogPosts } from "@/content/blogData";
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
 
+// ✅ Local fallback asset (must exist at: client/public/assets/img/blog/_fallback/blog.webp)
+const BLOG_FALLBACK = "/assets/img/blog/_fallback/blog.webp";
+
 function getPostImage(post: any): string {
-  // Try to get the image from the post, fallback to blog icon
-  if (post.image) {
-    return post.image;
-  }
-  if (post.imageUrl) {
-    return post.imageUrl;
-  }
+  if (post?.image) return post.image;
+  if (post?.imageUrl) return post.imageUrl;
+
+  // safest default for your current structure:
+  // use icon if you want a consistent brand image everywhere
   return BLOG_ICON_URL;
 }
 
@@ -48,6 +49,37 @@ function uniqueStrings(items: string[]) {
 export default function Blog() {
   const [query, setQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string>("All");
+
+  // ✅ One reusable, TS-safe fallback handler
+  const handleImgError = (
+    e: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
+    const img = e.currentTarget;
+
+    // prevent infinite loop if fallback missing too
+    if (img.dataset.fallbackApplied === "true") return;
+
+    img.dataset.fallbackApplied = "true";
+    img.src = BLOG_FALLBACK;
+  };
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://ask-dogood.kit.com/7455966d1b/index.js";
+    script.async = true;
+    script.setAttribute("data-uid", "8918501");
+
+    const container = document.getElementById("thyroid-toolkit-signup");
+    if (container) {
+      container.appendChild(script);
+    }
+
+    return () => {
+      if (container && script.parentNode) {
+        container.removeChild(script);
+      }
+    };
+  }, []);
 
   const posts = safeBlogPosts;
 
@@ -165,6 +197,8 @@ export default function Blog() {
                     alt="Ask DoGood Blog icon"
                     className="h-full w-full object-cover"
                     loading="lazy"
+                    decoding="async"
+                    onError={handleImgError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
                   <div className="absolute -top-16 -right-20 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
@@ -177,6 +211,13 @@ export default function Blog() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* THYROID RESET TOOLKIT CTA */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container max-w-4xl">
+          <div id="thyroid-toolkit-signup"></div>
         </div>
       </section>
 
@@ -215,6 +256,8 @@ export default function Blog() {
                       alt={post.imageAlt ?? `${post.title} cover image`}
                       className="h-full w-full object-cover transition-transform hover:scale-105"
                       loading="lazy"
+                      decoding="async"
+                      onError={handleImgError}
                     />
                   </div>
 
@@ -236,7 +279,7 @@ export default function Blog() {
                     </div>
 
                     <Link href={`/blog/${post.slug}`}>
-                      <Button variant="outline" className="w-full gap-2">
+                      <Button className="w-full gap-2 border border-border/70 bg-background/60">
                         Read now <ArrowRight className="h-4 w-4" />
                       </Button>
                     </Link>
@@ -282,6 +325,8 @@ export default function Blog() {
                     alt={post.imageAlt || post.title}
                     className="h-full w-full object-cover transition-transform hover:scale-105"
                     loading="lazy"
+                    decoding="async"
+                    onError={handleImgError}
                   />
                 </div>
 
@@ -319,10 +364,16 @@ export default function Blog() {
                 Try a different keyword or switch tags.
               </div>
               <div className="mt-4 flex justify-center gap-3">
-                <Button variant="outline" onClick={() => setQuery("")}>
+                <Button
+                  onClick={() => setQuery("")}
+                  className="border border-border/70 bg-background/60"
+                >
                   Clear search
                 </Button>
-                <Button variant="outline" onClick={() => setActiveTag("All")}>
+                <Button
+                  onClick={() => setActiveTag("All")}
+                  className="border border-border/70 bg-background/60"
+                >
                   Reset tags
                 </Button>
               </div>
