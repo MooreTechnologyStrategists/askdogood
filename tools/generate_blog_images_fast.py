@@ -88,3 +88,12 @@ def main():
 
     prompts = []
     for p in posts:
+        slug = p.get("slug") or p.get("id") or slugify(p.get("title", "post"))
+        slug = slugify(slug)
+        title = p.get("title") or slug.replace("-", " ").title()
+        tags = p.get("tags") or []
+
+        prompts.append({
+            "slug": slug,
+            "prompt": build_prompt(title, tags),
+        })
