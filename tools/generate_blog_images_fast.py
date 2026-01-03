@@ -1,3 +1,5 @@
+print("SCRIPT LOADED ✅")
+
 import os
 import json
 import time
