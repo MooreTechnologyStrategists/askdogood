@@ -1,5 +1,3 @@
-print("SCRIPT LOADED ✅")
-
 import os
 import json
 import time
@@ -10,6 +8,8 @@ from io import BytesIO
 
 from PIL import Image
 from openai import OpenAI
+
+print("SCRIPT LOADED ✅")
 
 # -----------------------------
 # PATHS
@@ -27,17 +27,17 @@ ASSIGNED_DIR = (
 )
 
 EXPORT_PATH = REPO_ROOT / "tools" / "blog_posts_export.json"
-
 PROMPTS_OUT = REPO_ROOT / "tools" / "generated_prompts.json"
 MAP_OUT = REPO_ROOT / "tools" / "generated_image_map.json"
 
 ASSIGNED_PUBLIC_PREFIX = "/assets/img/blog/assigned/"
 FALLBACK_PATH = "/assets/img/blog/_fallback/blog.webp"
 
-MODEL = "gpt-image-1"
-SIZE = "1536x1024"
-QUALITY = "medium"
-SLEEP_SECONDS = 0.8
+# OpenAI image settings
+MODEL = os.getenv("OPENAI_IMAGE_MODEL", "gpt-image-1")
+SIZE = os.getenv("OPENAI_IMAGE_SIZE", "1536x1024")
+QUALITY = os.getenv("OPENAI_IMAGE_QUALITY", "medium")
+SLEEP_SECONDS = float(os.getenv("OPENAI_IMAGE_SLEEP", "0.8"))
 
 # -----------------------------
 # HELPERS
@@ -56,7 +56,7 @@ def build_prompt(title: str, tags: list[str]) -> str:
         "Create a clean, modern blog hero image for a wellness website called AskDoGood.\n"
         f"Topic: {title}\n"
         f"Keywords: {tag_str}\n"
-        "Style: holistic wellness, calm, premium, minimalist, editorial photography.\n"
+        "Style: holistic wellness, calm, premium, minimalist, editorial photography, soft natural light.\n"
         "Rules: no text, no words, no logos, no watermarks.\n"
         "Aspect ratio: wide 16:9."
     )
@@ -88,6 +88,7 @@ def main():
     if not isinstance(posts, list) or not posts:
         raise SystemExit("blog_posts_export.json is empty or invalid.")
 
+    # Build prompts
     prompts = []
     for p in posts:
         slug = p.get("slug") or p.get("id") or slugify(p.get("title", "post"))
@@ -97,17 +98,68 @@ def main():
 
         prompts.append({
             "slug": slug,
+            "title": title,
+            "tags": tags,
             "prompt": build_prompt(title, tags),
         })
 
     PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
     print(f"✅ Prompts written: {PROMPTS_OUT}")
 
-    # (keep the rest of your generation code here)
+    # Generate images
+    client = OpenAI()
+    ASSIGNED_DIR.mkdir(parents=True, exist_ok=True)
+
+    mapping = {}
+    failures = []
+
+    total = len(prompts)
+    for i, item in enumerate(prompts, start=1):
+        slug = item["slug"]
+        out_file = ASSIGNED_DIR / f"{slug}.webp"
+        public_url = f"{ASSIGNED_PUBLIC_PREFIX}{slug}.webp"
+
+        # Skip if already exists
+        if out_file.exists():
+            print(f"[{i}/{total}] ⏭️ exists: {slug}")
+            mapping[slug] = public_url
+            continue
+
+        print(f"[{i}/{total}] 🎨 generating: {slug}")
+
+        try:
+            resp = client.images.generate(
+                model=MODEL,
+                prompt=item["prompt"],
+                size=SIZE,
+                quality=QUALITY,
+                n=1,
+                response_format="b64_json",
+            )
+
+            save_webp_from_b64(resp.data[0].b64_json, out_file)
+            mapping[slug] = public_url
+            print(f"   ✅ saved: {out_file}")
+
+            time.sleep(SLEEP_SECONDS)
+
+        except Exception as e:
+            print(f"   ❌ failed: {slug} → {e}")
+            failures.append({"slug": slug, "error": str(e)})
+
+    MAP_OUT.write_text(json.dumps(mapping, indent=2), encoding="utf-8")
+    print(f"✅ Image map written: {MAP_OUT}")
+
+    if failures:
+        fail_path = REPO_ROOT / "tools" / "image_failures.json"
+        fail_path.write_text(json.dumps(failures, indent=2), encoding="utf-8")
+        print(f"⚠️ Failures logged: {fail_path}")
+
+    print("\nDONE 🎉")
+    print(f"- Images: {ASSIGNED_DIR}")
+    print(f"- Fallback path: {FALLBACK_PATH}")
 
 
-# ✅ THIS MUST BE OUTSIDE MAIN (NO INDENT)
+# ✅ MUST BE OUTSIDE main()
 if __name__ == "__main__":
     main()
-
-
