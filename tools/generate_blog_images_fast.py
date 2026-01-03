@@ -110,8 +110,8 @@ def main():
     client = OpenAI()
     ASSIGNED_DIR.mkdir(parents=True, exist_ok=True)
 
-    mapping = {}
-    failures = []
+mapping = {}
+failures = []
 
 total = len(prompts)
 for i, item in enumerate(prompts, start=1):
