@@ -99,8 +99,15 @@ def main():
             "slug": slug,
             "prompt": build_prompt(title, tags),
         })
-    
 
-    if __name__ == "__main__":
-        main()
+    PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
+    print(f"✅ Prompts written: {PROMPTS_OUT}")
+
+    # (keep the rest of your generation code here)
+
+
+# ✅ THIS MUST BE OUTSIDE MAIN (NO INDENT)
+if __name__ == "__main__":
+    main()
+
 
