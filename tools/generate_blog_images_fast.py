@@ -77,38 +77,42 @@ def save_webp_from_b64(b64: str, out_path: Path):
 # MAIN
 # -----------------------------
 def main():
-    # ENV
     if not os.getenv("OPENAI_API_KEY"):
         raise SystemExit("Missing OPENAI_API_KEY env var.")
 
     if not EXPORT_PATH.exists():
-        raise SystemExit(
-            f"Missing {EXPORT_PATH}. Run:\n"
-            "npx tsx tools/export_blog_posts.ts"
-        )
+        raise SystemExit("Missing blog_posts_export.json")
 
     posts = json.loads(EXPORT_PATH.read_text(encoding="utf-8"))
 
-    if not isinstance(posts, list) or not posts:
-        raise SystemExit("blog_posts_export.json is empty or invalid.")
-
-    # Build prompts
+    # ✅ prompts is defined HERE
     prompts = []
     for p in posts:
-        slug = p.get("slug") or p.get("id") or slugify(p.get("title", "post"))
-        slug = slugify(slug)
-        title = p.get("title") or slug.replace("-", " ").title()
-        tags = p.get("tags") or []
+        slug = p.get("slug") or p.get("id")
+        title = p.get("title", slug.replace("-", " ").title())
+        tags = p.get("tags", [])
 
         prompts.append({
             "slug": slug,
-            "title": title,
-            "tags": tags,
-            "prompt": build_prompt(title, tags),
+            "prompt": f"Editorial wellness blog hero image about {title}. Clean, modern, professional photography style."
         })
 
-PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
-print(f"✅ Prompts written: {PROMPTS_OUT}")
+    # ✅ NOW this line is legal
+    PROMPTS_OUT.write_text(
+        json.dumps(prompts, indent=2),
+        encoding="utf-8"
+    )
+    print(f"✅ Prompts written: {PROMPTS_OUT}")
+
+    # ⬇️ everything else that uses prompts stays BELOW
+    client = OpenAI()
+    mapping = {}
+    failures = []
+
+    total = len(prompts)
+    for i, item in enumerate(prompts, start=1):
+        ...
+
 
 # Generate images
 client = OpenAI()
