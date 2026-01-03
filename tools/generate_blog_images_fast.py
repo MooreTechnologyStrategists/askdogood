@@ -103,12 +103,12 @@ def main():
             "prompt": build_prompt(title, tags),
         })
 
-    PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
-    print(f"✅ Prompts written: {PROMPTS_OUT}")
+PROMPTS_OUT.write_text(json.dumps(prompts, indent=2), encoding="utf-8")
+print(f"✅ Prompts written: {PROMPTS_OUT}")
 
-    # Generate images
-    client = OpenAI()
-    ASSIGNED_DIR.mkdir(parents=True, exist_ok=True)
+# Generate images
+client = OpenAI()
+ASSIGNED_DIR.mkdir(parents=True, exist_ok=True)
 
 mapping = {}
 failures = []
