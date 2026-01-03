@@ -97,3 +97,8 @@ def main():
             "slug": slug,
             "prompt": build_prompt(title, tags),
         })
+    
+
+    if __name__ == "__main__":
+        main()
+
