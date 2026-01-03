@@ -1,16 +1,17 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Adjust if your path differs
-const blogDataPath = path.resolve(__dirname, "../client/src/content/blogData");
+// Point to your blogData file (no extension needed if it's blogData.ts)
+const blogDataFsPath = path.resolve(__dirname, "../client/src/content/blogData");
 
-// IMPORTANT:
-// This assumes blogData exports `safeBlogPosts` exactly like your Blog.tsx imports.
-const mod = await import(blogDataPath);
+// Convert Windows absolute path => file:// URL
+const blogDataUrl = pathToFileURL(blogDataFsPath).href;
+
+const mod = await import(blogDataUrl);
 
 const posts = mod.safeBlogPosts ?? mod.blogPosts ?? mod.default ?? null;
 
