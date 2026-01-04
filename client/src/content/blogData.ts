@@ -1255,14 +1255,14 @@ You're not alone in this. Reach out. Get help. You deserve to feel safe in your 
 // Sanitize blog posts to ensure all fields are present
 export const safeBlogPosts = blogPosts.map(post => ({
   ...post,
-  author: post.author || "Rosee Moore",
+  author: post.author || "RoSeé Murphy",
   authorImage: post.authorImage || "https://askdogoodassets.blob.core.windows.net/images/brand/author-photo.webp",
   featured: post.featured || false,
 }));
 
 // Helper function to get a blog post by its slug
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
-  return safeBlogPosts.find(post => post.slug === slug);
+  return safeBlogPosts.find(post => post.id === slug);
 };
 
 // Helper function to get a blog post image
