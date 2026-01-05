@@ -110,8 +110,8 @@ export default function BlogPost() {
       : "Untitled Post";
 
   const safeCategory =
-    typeof post.category === "string" && post.category.trim()
-      ? post.category.trim()
+    typeof (post as any).category === "string" && (post as any).category.trim()
+      ? (post as any).category.trim()
       : "General";
 
   const safeReadTime =
@@ -159,10 +159,7 @@ export default function BlogPost() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <Link href="/blog">
-              <Button
-                variant="ghost"
-                className="text-white mb-6 hover:bg-white/20"
-              >
+              <Button className="text-white mb-6 hover:bg-white/20 bg-transparent">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>
@@ -196,7 +193,7 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto">
             {/* Share Button */}
             <div className="flex justify-end mb-8">
-              <Button variant="outline" onClick={handleShare}>
+              <Button onClick={handleShare}>
                 <Share2 className="mr-2 h-4 w-4" />
                 Share
               </Button>
@@ -244,7 +241,7 @@ export default function BlogPost() {
             {/* Back to Blog */}
             <div className="mt-12 text-center">
               <Link href="/blog">
-                <Button variant="outline" size="lg">
+                <Button>
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Read More Articles
                 </Button>
