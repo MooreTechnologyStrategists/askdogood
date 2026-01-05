@@ -16,12 +16,12 @@ const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
 // Map blog post slugs to recommended product IDs
 function getProductRecommendations(slug: string): string[] | null {
   const recommendations: Record<string, string[]> = {
-    "the-superpower-of-sea-moss-the-oceans-secret-weapon-for-everyday-wellness": [
+    "the-superpower-of-sea-moss-the-ocean-s-secret-weapon-for-everyday-wellness": [
       "seaMoss",
       "vitaminD",
       "omega3",
     ],
-    "how-collagen-saved-my-skin-my-dads-mobility-and-maybe-even-my-life": [
+    "how-collagen-saved-my-skin-my-dad-s-mobility-and-maybe-even-my-life": [
       "collagen",
       "vitaminD",
       "turmeric",
@@ -204,7 +204,7 @@ export default function BlogPost() {
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
               dangerouslySetInnerHTML={{ __html: safeHtml }}
             />
 

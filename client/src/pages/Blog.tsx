@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 
 import { safeBlogPosts } from "@/content/blogData";
+import { blogImages } from "@/data/blogImages";
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
@@ -28,12 +29,18 @@ const BLOG_ICON_URL =
 const BLOG_FALLBACK = "/assets/img/blog/_fallback/blog.webp";
 
 function getPostImage(post: any): string {
-  if (post?.image) return post.image;
-  if (post?.imageUrl) return post.imageUrl;
+  // ✅ Check blogImages mapping first (by post.id or post.slug)
+  const slug = post?.id || post?.slug;
+  if (slug && blogImages?.[slug]) {
+    return blogImages[slug];
+  }
+  
+  // Then check post properties
+  if (post?.image && post.image.trim()) return post.image;
+  if (post?.imageUrl && post.imageUrl.trim()) return post.imageUrl;
 
-  // safest default for your current structure:
-  // use icon if you want a consistent brand image everywhere
-  return BLOG_ICON_URL;
+  // Finally fallback to default
+  return BLOG_FALLBACK;
 }
 
 function normalize(str: string) {
