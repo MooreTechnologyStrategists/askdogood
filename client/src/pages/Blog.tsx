@@ -254,7 +254,7 @@ export default function Blog() {
             <div className="grid gap-6 md:grid-cols-3">
               {featured.map((post) => (
                 <Card
-                  key={post.slug}
+                  key={post.id}
                   className="hover:shadow-lg transition-shadow overflow-hidden"
                 >
                   <div className="aspect-video w-full overflow-hidden">
@@ -285,7 +285,7 @@ export default function Blog() {
                       ))}
                     </div>
 
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.id}`}>
                       <Button className="w-full gap-2 border border-border/70 bg-background/60">
                         Read now <ArrowRight className="h-4 w-4" />
                       </Button>
@@ -323,7 +323,7 @@ export default function Blog() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post) => (
               <Card
-                key={post.slug}
+                key={post.id}
                 className="hover:shadow-lg transition-shadow overflow-hidden"
               >
                 <div className="aspect-video w-full overflow-hidden">
@@ -354,7 +354,7 @@ export default function Blog() {
                     ))}
                   </div>
 
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/blog/${post.id}`}>
                     <Button className="w-full gap-2 shadow-sm hover:shadow-md transition-shadow">
                       Read post <BookOpen className="h-4 w-4" />
                     </Button>
