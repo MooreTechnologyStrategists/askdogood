@@ -1,5 +1,6 @@
 import { useParams, Link, useLocation } from "wouter";
 import { useEffect, useMemo } from "react";
+import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
 import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
@@ -119,10 +120,13 @@ export default function BlogPost() {
       ? post.readTime.trim()
       : "5 min";
 
-  const safeHtml =
-    typeof post.content === "string" && post.content.trim()
-      ? post.content
-      : "<p>Content coming soon.</p>";
+  const safeHtml = useMemo(() => {
+    if (typeof post.content === "string" && post.content.trim()) {
+      // Convert Markdown to HTML
+      return marked.parse(post.content);
+    }
+    return "<p>Content coming soon.</p>";
+  }, [post.content]);
 
   const handleShare = async () => {
     try {
