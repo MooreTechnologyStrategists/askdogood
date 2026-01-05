@@ -1215,7 +1215,7 @@ Remember to replace \`<VM_NAME>\` and \`<RESOURCE_GROUP>\` with the actual names
   {
     id: "flexatarian-stop-asking-me-what-am-i-i-listen-to-my-body-and-respond-with-wisdom",
     title: "FLEXATARIAN!!! Stop asking me what am I! I listen to my body and respond with wisdom",
-    excerpt: "What's poppin', yo? As a Flexitarian, I know how it is tryna explain my diet to folks. They be like, "",
+    excerpt: "What's poppin', yo? As a Flexitarian, I know how it is tryna explain my diet to folks. They be like, 'What in tarnation is a Flexitarian?' But lemme break it down for y'all.",
     content: `What's poppin', yo? As a **Flexitarian**, I know how it is tryna explain my diet to folks. They be like, "What in tarnation is a **Flexitarian**?" But lemme break it down for y'all.
 
 ## Understanding the Flexitarian Lifestyle
@@ -3015,3 +3015,6 @@ export function getFeaturedPosts(): BlogPost[] {
 export function getPostsByTag(tag: string): BlogPost[] {
   return blogPosts.filter(post => post.tags.includes(tag));
 }
+
+// Safe export for components that need validated blog posts
+export const safeBlogPosts = blogPosts;
