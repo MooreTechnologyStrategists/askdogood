@@ -170,8 +170,7 @@ Remember, supplements work best as part of a holistic approach to health that in
   {
     id: "finding-peace-in-the-chaos-mindfulness-for-black-women",
     title: "Finding Peace in the Chaos: Mindfulness for Black Women",
-    excerpt: "The best thing you can do greater than finding peace, is maintaining it. 
--DoGood",
+    excerpt: "The best thing you can do greater than finding peace, is maintaining it. -DoGood",
     content: `Sis, **peace** isn’t accidental—it’s an agenda item. **Finding Peace in the Chaos: Mindfulness & Meditation for Black Women** is not a luxury; it’s survival. Between family, work, and the weight of microaggressions, our nervous systems stay on high alert. Mindfulness gives us the pause we’ve been denied—space to breathe, process, and come back home to ourselves.
 
 ## Why This Practice Hits Different for Us
@@ -2018,8 +2017,7 @@ In conclusion, a vegan lifestyle has both **benefits and drawbacks**. While it c
   {
     id: "finding-peace-in-the-chaos-mindfulness-for-black-women",
     title: "Finding Peace in the Chaos: Mindfulness for Black Women",
-    excerpt: "The best thing you can do greater than finding peace, is maintaining it. 
--DoGood",
+    excerpt: "The best thing you can do greater than finding peace, is maintaining it. -DoGood",
     content: `Sis, **peace** isn’t accidental—it’s an agenda item. **Finding Peace in the Chaos: Mindfulness & Meditation for Black Women** is not a luxury; it’s survival. Between family, work, and the weight of microaggressions, our nervous systems stay on high alert. Mindfulness gives us the pause we’ve been denied—space to breathe, process, and come back home to ourselves.
 
 ## Why This Practice Hits Different for Us
