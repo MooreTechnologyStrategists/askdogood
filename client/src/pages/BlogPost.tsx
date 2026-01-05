@@ -6,7 +6,7 @@ import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
-import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
 
 type BlogRouteParams = {
   slug?: string;
@@ -235,7 +235,7 @@ export default function BlogPost() {
 
             {/* Newsletter Signup */}
             <div className="mt-16">
-              <BeehiivSubscribe
+              <ConvertKitSubscribe
                 variant="inline"
                 title="Love this content? Get more like it."
                 description="Join the AskDoGood Newsletter for weekly insights on healing, wellness, and real-life strategies."
