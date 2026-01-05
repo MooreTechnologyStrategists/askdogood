@@ -238,7 +238,7 @@ export default function MealPrepResources() {
                 <Button 
                   size="lg" 
                   className="text-lg"
-                  onClick={() => window.open('https://buy.stripe.com/test_00g00000000000000000', '_blank')}
+                  onClick={() => window.open('https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03', '_blank')}
                 >
                   Get All 50+ Recipes in the Garden to Table Bundle - $37
                 </Button>

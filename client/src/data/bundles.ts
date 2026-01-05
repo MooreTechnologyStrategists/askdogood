@@ -25,8 +25,8 @@ export const gardenToTableBundle: Bundle = {
     "Freezer-Friendly Recipes",
     "Lifetime Access & Updates"
   ],
-  image: "/bundle-garden-to-table.png",
-  stripeLink: "https://buy.stripe.com/test_00g00000000000000000" // Replace with real Stripe link
+  image: "/bundle-garden-to-table-v2.png",
+  stripeLink: "https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03"
 };
 
 export const bundles: Bundle[] = [gardenToTableBundle];
