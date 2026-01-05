@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -12,69 +13,11 @@ import {
   Calendar,
   MapPin
 } from "lucide-react";
+import { recipes } from "@/data/recipes";
+import RecipeModal from "@/components/RecipeModal";
+import type { Recipe } from "@/data/recipes";
 
-const recipes = [
-  {
-    name: "Rainbow Quinoa Power Bowl",
-    prepTime: "15 min",
-    servings: 4,
-    cost: "$12",
-    image: "/recipe-quinoa-bowl.png",
-    tags: ["Anti-Inflammatory", "High Protein", "Meal Prep Friendly"],
-    description: "Nutrient-dense bowl with quinoa, roasted veggies, chickpeas, and tahini dressing",
-    macros: { protein: "18g", carbs: "45g", fat: "14g", calories: "380" }
-  },
-  {
-    name: "Sweet Potato & Black Bean Tacos",
-    prepTime: "25 min",
-    servings: 6,
-    cost: "$10",
-    image: "/recipe-sweet-potato-tacos.png",
-    tags: ["Budget-Friendly", "Kid-Friendly", "Batch Cook"],
-    description: "Flavorful plant-based tacos with cumin-spiced sweet potatoes and black beans",
-    macros: { protein: "12g", carbs: "52g", fat: "8g", calories: "320" }
-  },
-  {
-    name: "Garden Fresh Green Smoothie",
-    prepTime: "5 min",
-    servings: 2,
-    cost: "$5",
-    image: "/recipe-green-smoothie.png",
-    tags: ["Quick", "Thyroid Support", "Breakfast"],
-    description: "Kale, banana, mango, coconut water, and chia seeds for morning energy",
-    macros: { protein: "6g", carbs: "35g", fat: "4g", calories: "200" }
-  },
-  {
-    name: "Lentil & Vegetable Curry",
-    prepTime: "40 min",
-    servings: 8,
-    cost: "$15",
-    image: "/recipe-lentil-curry.png",
-    tags: ["Freezer-Friendly", "High Fiber", "Autoimmune Protocol"],
-    description: "Warming curry with red lentils, spinach, and anti-inflammatory spices",
-    macros: { protein: "16g", carbs: "42g", fat: "6g", calories: "290" }
-  },
-  {
-    name: "Mediterranean Chickpea Salad",
-    prepTime: "10 min",
-    servings: 4,
-    cost: "$8",
-    image: "/recipe-chickpea-salad.png",
-    tags: ["No Cook", "Portable", "High Protein"],
-    description: "Chickpeas, cucumbers, tomatoes, red onion with lemon-herb dressing",
-    macros: { protein: "14g", carbs: "38g", fat: "10g", calories: "300" }
-  },
-  {
-    name: "Healing Turmeric Rice & Veggies",
-    prepTime: "30 min",
-    servings: 6,
-    cost: "$12",
-    image: "/recipe-turmeric-rice.png",
-    tags: ["Anti-Inflammatory", "Gluten-Free", "Meal Prep"],
-    description: "Golden rice with roasted cauliflower, carrots, and anti-inflammatory spices",
-    macros: { protein: "8g", carbs: "48g", fat: "7g", calories: "280" }
-  }
-];
+
 
 const mealPlans = [
   {
@@ -152,6 +95,14 @@ const dmvStores = [
 ];
 
 export default function MealPrepResources() {
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewRecipe = (recipe: Recipe) => {
+    setSelectedRecipe(recipe);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -272,17 +223,32 @@ export default function MealPrepResources() {
                         </div>
                       </div>
 
-                      <Button className="w-full">View Full Recipe</Button>
+                      <Button 
+                        className="w-full"
+                        onClick={() => handleViewRecipe(recipe)}
+                      >
+                        View Full Recipe
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
               <div className="text-center mt-12">
-                <Button size="lg" className="text-lg">
+                <Button 
+                  size="lg" 
+                  className="text-lg"
+                  onClick={() => window.open('https://buy.stripe.com/test_00g00000000000000000', '_blank')}
+                >
                   Get All 50+ Recipes in the Garden to Table Bundle - $37
                 </Button>
               </div>
+
+              <RecipeModal 
+                recipe={selectedRecipe}
+                open={isModalOpen}
+                onOpenChange={setIsModalOpen}
+              />
             </TabsContent>
 
             {/* Meal Plans Tab */}

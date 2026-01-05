@@ -22,6 +22,7 @@ export default function Header() {
       { path: "/interests", label: "Interests" },
       { path: "/resources", label: "Resources" },
       { path: "/clinical-recipes", label: "Clinical Recipes" },
+      { path: "/meal-prep", label: "Meal Prep" },
       ...(isAuthenticated ? [{ path: "/dashboard", label: "Dashboard" }] : []),
       { path: "/contact", label: "Contact" },
     ],
