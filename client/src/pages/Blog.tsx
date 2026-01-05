@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 
 import { safeBlogPosts } from "@/content/blogData";
+import { blogImages } from "@/data/blogImages";
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
@@ -28,12 +29,18 @@ const BLOG_ICON_URL =
 const BLOG_FALLBACK = "/assets/img/blog/_fallback/blog.webp";
 
 function getPostImage(post: any): string {
-  if (post?.image) return post.image;
-  if (post?.imageUrl) return post.imageUrl;
+  // ✅ Check blogImages mapping first (by post.id)
+  const slug = post?.id;
+  if (slug && blogImages?.[slug]) {
+    return blogImages[slug];
+  }
+  
+  // Then check post properties
+  if (post?.image && post.image.trim()) return post.image;
+  if (post?.imageUrl && post.imageUrl.trim()) return post.imageUrl;
 
-  // safest default for your current structure:
-  // use icon if you want a consistent brand image everywhere
-  return BLOG_ICON_URL;
+  // Finally fallback to default
+  return BLOG_FALLBACK;
 }
 
 function normalize(str: string) {
@@ -247,13 +254,13 @@ export default function Blog() {
             <div className="grid gap-6 md:grid-cols-3">
               {featured.map((post) => (
                 <Card
-                  key={post.slug}
+                  key={post.id}
                   className="hover:shadow-lg transition-shadow overflow-hidden"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
                       src={getPostImage(post)}
-                      alt={post.imageAlt ?? `${post.title} cover image`}
+                      alt={`${post.title} cover image`}
                       className="h-full w-full object-cover transition-transform hover:scale-105"
                       loading="lazy"
                       decoding="async"
@@ -278,7 +285,7 @@ export default function Blog() {
                       ))}
                     </div>
 
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.id}`}>
                       <Button className="w-full gap-2 border border-border/70 bg-background/60">
                         Read now <ArrowRight className="h-4 w-4" />
                       </Button>
@@ -316,13 +323,13 @@ export default function Blog() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post) => (
               <Card
-                key={post.slug}
+                key={post.id}
                 className="hover:shadow-lg transition-shadow overflow-hidden"
               >
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={getPostImage(post)}
-                    alt={post.imageAlt || post.title}
+                    alt={`${post.title} cover image`}
                     className="h-full w-full object-cover transition-transform hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -347,7 +354,7 @@ export default function Blog() {
                     ))}
                   </div>
 
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/blog/${post.id}`}>
                     <Button className="w-full gap-2 shadow-sm hover:shadow-md transition-shadow">
                       Read post <BookOpen className="h-4 w-4" />
                     </Button>
