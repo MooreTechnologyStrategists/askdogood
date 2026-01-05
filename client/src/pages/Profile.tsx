@@ -106,12 +106,12 @@ export default function Profile() {
                 <div className="flex items-center gap-6">
                   <Avatar className={`h-24 w-24 ${getAvatarClass(avatarColor)}`}>
                     <AvatarFallback className="text-white text-2xl font-bold">
-                      {user.name ? getInitials(user.name) : <User />}
+                      {profile?.name ? getInitials(profile.name) : <User />}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-xl font-semibold">{user.name}</h3>
-                    <p className="text-sm text-muted-foreground">{user.email}</p>
+                    <h3 className="text-xl font-semibold">{profile?.name || "User"}</h3>
+                    <p className="text-sm text-muted-foreground">Member</p>
                     <div className="flex items-center gap-2 mt-2">
                       <Badge variant="outline">
                         Level {profile?.level || 1}
