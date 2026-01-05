@@ -466,11 +466,7 @@ date: "2022-12-19`,
   {
     id: "7-ways-to-boost-focus-and-productivity-while-working-from-home",
     title: "7 Ways to Boost Focus and Productivity While Working From Home",
-    excerpt: "Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be productive from home.
-
- 
-
-It can be easy to sleep la...",
+    excerpt: "Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be productive from home. It can be easy to sleep la...",
     content: `Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be **productive** from home.
 
 It can be easy to sleep late, watch a little TV, spend too much time on social media, or just waste time in general. Having children at home makes everything even more challenging.
@@ -596,11 +592,7 @@ Remember to give your muscles time to recover. Pushing yourself too hard during 
   {
     id: "say-goodbye-to-muscle-cramps",
     title: "Say Goodbye to Muscle Cramps",
-    excerpt: "Muscle cramps are rarely serious. However, they can make it difficult to enjoy your
-
-morning run or get a restful night’s sleep.
-
-Most adults experience cramps at least occasionally. They occur when m...",
+    excerpt: "Muscle cramps are rarely serious. However, they can make it difficult to enjoy your morning run or get a restful night’s sleep. Most adults experience cramps at least occasionally. They occur when m...",
     content: `Muscle cramps are rarely serious. However, they can make it difficult to enjoy your morning run or get a restful night’s sleep.
 
 Most adults experience cramps at least occasionally. They occur when muscle fibers contract involuntarily. The areas most frequently affected include your **legs**, **back**, **hands**, **feet**, and **abdomen**.
@@ -715,13 +707,7 @@ Many of the treatments recommended by **naturopathic doctors** are inexpensive c
   {
     id: "the-tremendous-health-benefits-of-a-vegan-diet",
     title: "The Tremendous Health Benefits of a Vegan Diet",
-    excerpt: "You’ve heard about the vegan diet. Maybe you’re not convinced that it’s for you. All
-
-you know is that it sounds extreme and boring. Still, you might consider it if there
-
-were sufficient benefits.
-
-C...",
+    excerpt: "You’ve heard about the vegan diet. Maybe you’re not convinced that it’s for you. All you know is that it sounds extreme and boring. Still, you might consider it if there were sufficient benefits. C...",
     content: `You’ve heard about the vegan diet. Maybe you’re not convinced that it’s for you. All you know is that it sounds extreme and boring. Still, you might consider it if there were sufficient benefits.
 
 Could you be one of those “vegan people”? Maybe you could! It might be the best decision you could make for your health and longevity.
@@ -850,9 +836,7 @@ date: "2022-12-22`,
   {
     id: "what-you-need-to-know-about-serotonin-and-weight-loss",
     title: "What You Need to Know About Serotonin and Weight Loss",
-    excerpt: "Do you diet and exercise, but stay the same size? A serotonin imbalance could be the reason that you find it difficult to lose weight.
-
-Serotonin may be best known as a neurotransmitter that fights an...",
+    excerpt: "Do you diet and exercise, but stay the same size? A serotonin imbalance could be the reason that you find it difficult to lose weight. Serotonin may be best known as a neurotransmitter that fights an...",
     content: `Do you diet and exercise, but stay the same size? A **serotonin imbalance** could be the reason that you find it difficult to lose weight.
 
 Serotonin may be best known as a **neurotransmitter** that fights anxiety and depression. However, it also plays a major role in **digestive health**. In fact, most of the serotonin in your body is in your gut, rather than in your brain.
@@ -924,11 +908,7 @@ When your serotonin levels are balanced, you’ll have more energy and feel full
   {
     id: "natural-cures-for-black-women-living-with-arthritis",
     title: "Natural Cures for Black Women Living with Arthritis",
-    excerpt: "Dear AskDoGood Community,
-
-We’re here to talk about a topic we believe is very important: natural remedies for arthritis in black women.
-
-Recent studies show that arthritis disproportionately affects ...",
+    excerpt: "Dear AskDoGood Community, We’re here to talk about a topic we believe is very important: natural remedies for arthritis in black women. Recent studies show that arthritis disproportionately affects ...",
     content: `Dear AskDoGood Community,
 
 We’re here to talk about a topic we believe is very important: **natural remedies for arthritis in black women**.
@@ -1118,9 +1098,7 @@ But don’t just take my word for it—go out there and prove yourself. Take the
   {
     id: "ladies-don-t-give-him-your-all-if-you-want-him-to-value-you",
     title: "Ladies Don't Give Him Your All If You Want Him To Value You",
-    excerpt: "Giving a man your sex and your heart too soon will never work. It’s toxic, and always end in bad energy.
-
-Ladies, it’s time for a radical shift in how we approach relationships and value ourselves. We...",
+    excerpt: "Giving a man your sex and your heart too soon will never work. It’s toxic, and always end in bad energy. Ladies, it’s time for a radical shift in how we approach relationships and value ourselves. We...",
     content: `Giving a man your sex and your heart too soon will never work. It’s toxic, and always ends in bad energy.
 
 Ladies, it’s time for a radical shift in how we approach relationships and value ourselves. We often give our all to our partners, only to be taken for granted or, worse, taken advantage of. But no more! Today, we start a new movement of self-respect, where we make a commitment to ourselves to **not give him our all** if we want him to truly value us.
@@ -1416,11 +1394,7 @@ In conclusion, if you're over 40 and wondering if there's any love left to love 
   {
     id: "reclaiming-peace",
     title: "Reclaiming Peace",
-    excerpt: "It’s the reminder to stay present and pray for clarity.
-
-Acknowledge the moment, release the resistance, practice mindfulness and accept what is.
-
-Be easy in your pursuit to manage the chaos and let p...",
+    excerpt: "It’s the reminder to stay present and pray for clarity. Acknowledge the moment, release the resistance, practice mindfulness and accept what is. Be easy in your pursuit to manage the chaos and let p...",
     content: `It’s the reminder to stay present and pray for clarity. Acknowledge the moment, release the resistance, practice mindfulness and accept what is. Be easy in your pursuit to manage the chaos and let pass over you.
 
 ## **The Pursuit of Inner Peace**
@@ -1453,9 +1427,7 @@ The one thing that remains paramount is to stay **consistent** in the pursuit of
   {
     id: "stop-hiding-and-embrace-mental-illness",
     title: "Stop Hiding and Embrace Mental Illness",
-    excerpt: "Transforming a Nervous Breakdown Into a Strengthening Catalyst
-
-Mental illness affects millions of people worldwide, and yet it is still a topic that is widely stigmatized and shrouded in secrecy. The...",
+    excerpt: "Transforming a Nervous Breakdown Into a Strengthening Catalyst Mental illness affects millions of people worldwide, and yet it is still a topic that is widely stigmatized and shrouded in secrecy. The...",
     content: `## **Transforming a Nervous Breakdown Into a Strengthening Catalyst**
 
 Mental illness affects millions of people worldwide, and yet it is still a topic that is widely **stigmatized** and shrouded in secrecy. The fear of being judged and misunderstood often leads those suffering to hide their struggles and suffer in silence. But it doesn't have to be this way. It's time to **stop hiding and embrace mental illness** as a part of the human experience.
@@ -1578,9 +1550,7 @@ Amen.
   {
     id: "the-thyroid-why-this-small-gland-is-such-a-big-deal",
     title: "The thyroid: Why This Small Gland is Such a Big Deal",
-    excerpt: "Many of us have never heard of the thyroid gland, let alone know where it is located or what it does.
-
-However, this small butterfly-shaped gland located in the neck plays a crucial role in our overall health and wellbeing.",
+    excerpt: "Many of us have never heard of the thyroid gland, let alone know where it is located or what it does. However, this small butterfly-shaped gland located in the neck plays a crucial role in our overall health and wellbeing.",
     content: `Many of us have never heard of the thyroid gland, let alone know where it is located or what it does.
 
 However, this small butterfly-shaped gland located in the neck plays a crucial role in our overall health and wellbeing. The thyroid gland produces hormones that regulate metabolism, growth, and development, and when this gland is not functioning properly, it can lead to a range of health problems.
@@ -1635,9 +1605,7 @@ date: "2023-03-27`,
   {
     id: "how-to-unlock-the-hidden-secret-of-squirting-a-stress-relieving-guide",
     title: "How to Unlock the Hidden Secret of Squirting: A Stress-Relieving Guide",
-    excerpt: "Disclaimer: This blog post contains explicit content and is not suitable for all audiences.
-
-Squirting, also known as female ejaculation, is a natural bodily function that many women experience during...",
+    excerpt: "Disclaimer: This blog post contains explicit content and is not suitable for all audiences. Squirting, also known as female ejaculation, is a natural bodily function that many women experience during...",
     content: `Disclaimer: This blog post contains explicit content and is not suitable for all audiences.
 
 **Squirting**, also known as **female ejaculation**, is a natural bodily function that many women experience during sexual activity. Unfortunately, many women often feel embarrassed or ashamed about it.
@@ -1733,9 +1701,7 @@ In conclusion, feeling mental panic when interacting with the police is a common
   {
     id: "when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication",
     title: "When Good Intentions Go Awry: How to Handle Misunderstandings in Communication",
-    excerpt: "Photo by: Hispanolistic
-
-As humans, we often strive to have good intentions in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will ...",
+    excerpt: "Photo by: Hispanolistic As humans, we often strive to have good intentions in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will ...",
     content: `Photo by: Hispanolistic
 
 As humans, we often strive to have **good intentions** in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will be readily apparent to others. However, sometimes our good intentions can be misinterpreted or not come across the way we intended, leading to **misunderstandings** and conflicts in our relationships.
@@ -1979,9 +1945,7 @@ While cosmetic procedures like Botox injections have their place in the world of
   {
     id: "the-benefits-and-drawbacks-of-a-vegan-lifestyle",
     title: "The Benefits and Drawbacks of a Vegan Lifestyle",
-    excerpt: "Photo By: Blubfish
-
-A vegan lifestyle involves abstaining from consuming any animal products, including meat, dairy, eggs, and honey. Many people choose to follow a vegan diet for a variety of reasons...",
+    excerpt: "Photo By: Blubfish A vegan lifestyle involves abstaining from consuming any animal products, including meat, dairy, eggs, and honey. Many people choose to follow a vegan diet for a variety of reasons...",
     content: `Photo By: Blubfish
 
 A vegan lifestyle involves abstaining from consuming any animal products, including meat, dairy, eggs, and honey. Many people choose to follow a vegan diet for a variety of reasons, such as **animal welfare**, **environmental concerns**, or **personal health reasons**.
@@ -2149,9 +2113,7 @@ In conclusion, damaged people have much to teach us about life. We can learn fro
   {
     id: "breaking-the-chain-tips-to-quit-smoking-and-improve-your-health",
     title: "Breaking the Chain: Tips to Quit Smoking and Improve Your Health",
-    excerpt: "Photo By: Pixabay
-
-Chain smoking, or smoking multiple cigarettes in a short period of time, can have serious negative effects on your health. In this blog, we'll explore some of the effects of chain s...",
+    excerpt: "Photo By: Pixabay Chain smoking, or smoking multiple cigarettes in a short period of time, can have serious negative effects on your health. In this blog, we'll explore some of the effects of chain s...",
     content: `Photo By: Pixabay
 
 Chain smoking, or smoking multiple cigarettes in a short period of time, can have serious negative effects on your health. In this blog, we'll explore some of the effects of **chain smoking** and provide tips on how to quit.
@@ -2332,9 +2294,7 @@ In conclusion, taking these important steps regarding **life insurance** is cruc
   {
     id: "debunking-the-myth-does-the-size-of-a-man-s-shoes-determine-the-size-of-his-penis",
     title: "Debunking the Myth: Does the Size of a Man's Shoes Determine the Size of His Penis?",
-    excerpt: "Photo by: Deon Black
-
-There has been a long-standing myth and belief that the size of a man's shoes is correlated to the size of his penis. This idea has been perpetuated in popular culture and jokes,...",
+    excerpt: "Photo by: Deon Black There has been a long-standing myth and belief that the size of a man's shoes is correlated to the size of his penis. This idea has been perpetuated in popular culture and jokes,...",
     content: `Photo by: Deon Black
 
 There has been a long-standing myth and belief that the size of a man's shoes is correlated to the size of his penis. This idea has been perpetuated in popular culture and jokes, with the assumption that larger feet equate to a larger penis. But is there any truth to this claim, or is it just a baseless myth? Let's take a closer look and debunk this common misconception.
@@ -2565,9 +2525,7 @@ date: "2023-05-29`,
   {
     id: "when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication",
     title: "When Good Intentions Go Awry: How to Handle Misunderstandings in Communication",
-    excerpt: "Photo by: Hispanolistic
-
-As humans, we often strive to have good intentions in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will ...",
+    excerpt: "Photo by: Hispanolistic As humans, we often strive to have good intentions in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will ...",
     content: `Photo by: Hispanolistic
 
 As humans, we often strive to have **good intentions** in our interactions with others. We want to be kind, helpful, and supportive, and we often believe that our intentions will be readily apparent to others. However, sometimes our good intentions can be misinterpreted or not come across the way we intended, leading to **misunderstandings** and conflicts in our relationships.
