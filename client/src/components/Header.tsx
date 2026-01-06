@@ -23,6 +23,8 @@ export default function Header() {
       { path: "/resources", label: "Resources" },
       { path: "/clinical-recipes", label: "Clinical Recipes" },
       { path: "/meal-prep", label: "Meal Prep" },
+      { path: "/shop", label: "Shop" },
+      { path: "/merch", label: "Merch" },
       ...(isAuthenticated ? [{ path: "/dashboard", label: "Dashboard" }] : []),
       { path: "/contact", label: "Contact" },
     ],
