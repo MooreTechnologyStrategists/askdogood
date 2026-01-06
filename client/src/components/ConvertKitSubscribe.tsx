@@ -20,7 +20,7 @@ export default function ConvertKitSubscribe({
   placeholder = "Enter your email",
   buttonText = "Subscribe",
   className = "",
-  formId = "8918501", // Default to your ConvertKit form ID
+  formId = "8943650", // AskDoGood Newsletter form ID
 }: ConvertKitSubscribeProps) {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
