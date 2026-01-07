@@ -1,18 +1,23 @@
-import { useState } from "react";
-import { products, categories, type Product } from "@/data/products";
+import { useState, useEffect } from "react";
+import { merchProducts, merchCategories, type MerchProduct } from "@/data/merch-products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Filter } from "lucide-react";
+import { ShoppingCart, Filter, Sparkles } from "lucide-react";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<MerchProduct | null>(null);
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredProducts = selectedCategory === "all" 
-    ? products 
-    : products.filter(p => p.category === selectedCategory);
+    ? merchProducts 
+    : merchProducts.filter(p => p.category === selectedCategory);
 
-  const handleAddToCart = (product: Product) => {
+  const handleAddToCart = (product: MerchProduct) => {
     if (product.stripeLink && !product.stripeLink.includes("PLACEHOLDER")) {
       window.open(product.stripeLink, "_blank");
     } else {
@@ -25,16 +30,22 @@ export default function Merch() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/20 py-20">
         <div className="container mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full border mb-6">
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-sm font-medium">Real talk. Real healing. Real merch.</span>
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            AskDoGood Merch
+            The AskDoGood Shop
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Wear your peace. Rep your boundaries. DMV intellectual energy meets wellness culture.
+            Wear your healing journey with pride. Our collection features motivational, inspirational, 
+            and real-talk designs that celebrate your commitment to growth, wellness, and showing up 
+            for yourself—every damn day.
           </p>
-          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground flex-wrap">
+          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground flex-wrap">
+            <span>✓ Holistic Healing Vibes</span>
+            <span>✓ Culturally Authentic</span>
             <span>✓ Premium Quality</span>
-            <span>✓ DTF Printing</span>
-            <span>✓ Designed for Grown Women</span>
           </div>
         </div>
       </section>
@@ -44,7 +55,7 @@ export default function Merch() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 overflow-x-auto">
             <Filter className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-            {categories.map((category) => (
+            {merchCategories.map((category) => (
               <Button
                 key={category.id}
                 variant={selectedCategory === category.id ? "default" : "outline"}
@@ -90,6 +101,12 @@ export default function Merch() {
                       Featured
                     </Badge>
                   )}
+                  <Badge 
+                    variant="outline" 
+                    className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm capitalize text-xs"
+                  >
+                    {product.designStyle}
+                  </Badge>
                 </div>
 
                 {/* Product Info */}
@@ -123,6 +140,16 @@ export default function Merch() {
                     </div>
                   )}
 
+                  {product.colors && (
+                    <div className="flex flex-wrap gap-2">
+                      {product.colors.map((color) => (
+                        <Badge key={color} variant="secondary" className="text-xs">
+                          {color}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+
                   <Button
                     onClick={() => handleAddToCart(product)}
                     disabled={!product.inStock}
@@ -151,25 +178,69 @@ export default function Merch() {
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">You're Not Selling Pain. You're Selling Arrival.</h2>
+            <h2 className="text-3xl font-bold">Healing. Structure. Real-Life Growth.</h2>
             <p className="text-lg text-muted-foreground">
-              Every piece aligns with AskDoGood's core philosophy: Peace is non-negotiable. 
-              Boundaries as self-respect. Alignment over approval. DMV intellectual energy. 
-              Grown-woman wellness. Arrival, not pain.
+              Every piece celebrates holistic healing, ancestral wisdom, and authentic wellness. 
+              We believe in therapy, plant-based healing, community support, and the power of 
+              choosing yourself. No toxic positivity—just real talk and real healing.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
               <div className="space-y-2">
-                <div className="text-2xl font-bold">20</div>
+                <div className="text-2xl font-bold">{merchProducts.length}</div>
                 <div className="text-sm text-muted-foreground">Unique Designs</div>
               </div>
               <div className="space-y-2">
-                <div className="text-2xl font-bold">DTF</div>
-                <div className="text-sm text-muted-foreground">Premium Printing</div>
+                <div className="text-2xl font-bold">5</div>
+                <div className="text-sm text-muted-foreground">Design Styles</div>
               </div>
               <div className="space-y-2">
                 <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm text-muted-foreground">Quality Guarantee</div>
+                <div className="text-sm text-muted-foreground">Holistic Vibes</div>
               </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold">Premium</div>
+                <div className="text-sm text-muted-foreground">Quality</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Styles Showcase */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Diverse Design Styles</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              From clean minimalist to playful cartoon, artsy abstract to bold statements—
+              we've got something for every vibe.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="text-center p-6 bg-card rounded-xl border">
+              <div className="text-3xl mb-2">✨</div>
+              <div className="font-semibold mb-1">Minimalist</div>
+              <div className="text-xs text-muted-foreground">Clean & Simple</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl border">
+              <div className="text-3xl mb-2">🎨</div>
+              <div className="font-semibold mb-1">Artsy</div>
+              <div className="text-xs text-muted-foreground">Abstract & Creative</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl border">
+              <div className="text-3xl mb-2">💫</div>
+              <div className="font-semibold mb-1">Cartoon</div>
+              <div className="text-xs text-muted-foreground">Playful & Fun</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl border">
+              <div className="text-3xl mb-2">💪</div>
+              <div className="font-semibold mb-1">Bold</div>
+              <div className="text-xs text-muted-foreground">Strong Statements</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl border">
+              <div className="text-3xl mb-2">🌿</div>
+              <div className="font-semibold mb-1">Holistic</div>
+              <div className="text-xs text-muted-foreground">Earth & Healing</div>
             </div>
           </div>
         </div>
