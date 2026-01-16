@@ -29,8 +29,8 @@ const BLOG_ICON_URL =
 const BLOG_FALLBACK = "/assets/img/blog/_fallback/blog.webp";
 
 function getPostImage(post: any): string {
-  // ✅ Check blogImages mapping first (by post.id)
-  const slug = post?.id;
+  // ✅ Check blogImages mapping first (by post.id or post.slug)
+  const slug = post?.id || post?.slug;
   if (slug && blogImages?.[slug]) {
     return blogImages[slug];
   }
@@ -260,7 +260,7 @@ export default function Blog() {
                   <div className="aspect-video w-full overflow-hidden">
                     <img
                       src={getPostImage(post)}
-                      alt={`${post.title} cover image`}
+                      alt={post.imageAlt ?? `${post.title} cover image`}
                       className="h-full w-full object-cover transition-transform hover:scale-105"
                       loading="lazy"
                       decoding="async"
@@ -329,7 +329,7 @@ export default function Blog() {
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={getPostImage(post)}
-                    alt={`${post.title} cover image`}
+                    alt={post.imageAlt || post.title}
                     className="h-full w-full object-cover transition-transform hover:scale-105"
                     loading="lazy"
                     decoding="async"

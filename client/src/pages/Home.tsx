@@ -17,7 +17,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
 
 export default function Home() {
   useEffect(() => {
@@ -339,7 +339,7 @@ export default function Home() {
       {/* NEWSLETTER SIGNUP */}
       <section className="py-20 bg-secondary/20">
         <div className="container max-w-4xl">
-          <BeehiivSubscribe
+          <ConvertKitSubscribe
             variant="card"
             title="Join the AskDoGood Newsletter"
             description="Get weekly insights on healing, thyroid health, mindset, and real-life strategies delivered straight to your inbox. No fluff, just real talk."

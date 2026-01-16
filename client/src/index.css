@@ -140,3 +140,23 @@
     }
   }
 }
+
+/* Blog post drop cap styling - beautiful large first letter */
+@layer components {
+  .blog-content-dropcap > p:first-of-type::first-letter {
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.85;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    color: var(--primary);
+    margin-right: 0.15em;
+    margin-top: 0.1em;
+    margin-bottom: -0.1em;
+  }
+  
+  /* Ensure proper text flow around drop cap */
+  .blog-content-dropcap > p:first-of-type {
+    overflow: visible;
+  }
+}

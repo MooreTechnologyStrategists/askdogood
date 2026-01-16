@@ -1,11 +1,12 @@
 import { useParams, Link, useLocation } from "wouter";
 import { useEffect, useMemo } from "react";
+import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
 import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
-import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
 
 type BlogRouteParams = {
   slug?: string;
@@ -119,10 +120,13 @@ export default function BlogPost() {
       ? post.readTime.trim()
       : "5 min";
 
-  const safeHtml =
-    typeof post.content === "string" && post.content.trim()
-      ? post.content
-      : "<p>Content coming soon.</p>";
+  const safeHtml = useMemo(() => {
+    if (typeof post.content === "string" && post.content.trim()) {
+      // Convert Markdown to HTML
+      return marked.parse(post.content);
+    }
+    return "<p>Content coming soon.</p>";
+  }, [post.content]);
 
   const handleShare = async () => {
     try {
@@ -201,7 +205,7 @@ export default function BlogPost() {
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
               dangerouslySetInnerHTML={{ __html: safeHtml }}
             />
 
@@ -231,7 +235,7 @@ export default function BlogPost() {
 
             {/* Newsletter Signup */}
             <div className="mt-16">
-              <BeehiivSubscribe
+              <ConvertKitSubscribe
                 variant="inline"
                 title="Love this content? Get more like it."
                 description="Join the AskDoGood Newsletter for weekly insights on healing, wellness, and real-life strategies."

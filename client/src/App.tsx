@@ -19,6 +19,8 @@ import BlogPost from "./pages/BlogPost";
 import Journey from "./pages/Journey";
 import Contact from "./pages/Contact";
 import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
+import Shop from "./pages/Shop";
+import Merch from "./pages/Merch";
 import Interests from "./pages/Interests";
 import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
@@ -58,6 +60,8 @@ function Router() {
       <Route path={"/rewards"} component={Rewards} />
       <Route path={"/challenges"} component={Challenges} />
       <Route path={"/meal-prep"} component={MealPrep} />
+      <Route path={"/shop"} component={Shop} />
+      <Route path={"/merch"} component={Merch} />
       <Route path={"/profile"} component={Profile} />
       <Route path={"/about"} component={About} />
       <Route path={"/blog"} component={Blog} />
