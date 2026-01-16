@@ -24,7 +24,7 @@ export default function Journey() {
       years: "2004–2008",
       title: "Military Service & Personal Growth",
       description:
-        "In August 2004, I joined the Army National Guard, stepping into a world of discipline, resilience, and leadership. By 2007, I transitioned to the U.S. Army, taking on more responsibility and deepening my commitment to service. In 2008, I quit smoking—a personal upgrade that reflected my growing commitment to longevity, clarity, and self-respect.",
+        "In August 2004, I joined the Army National Guard, 113th Battalion of North Carolinastepping into a world of discipline, resilience, and leadership. By 2007, I transitioned to the U.S. Army, attempting to take on more responsibility and deepening my commitment to service. I ended up with an Honorable Medical Discharge.  In 2008, I quit smoking—a personal upgrade that reflected my growing commitment to longevity, clarity, and self-respect.",
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/military-service.webp",
       milestones: [
         "Army National Guard service (2004)",
