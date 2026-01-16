@@ -24,17 +24,16 @@ export default function About() {
                 About Ask DoGood
               </div>
 
-              <h1
-                className="text-4xl md:text-6xl font-bold tracking-tight"
-                style={{ fontFamily: "var(--font-serif)" }}
-              >
-                I built this from real life.
-                <span className="block text-primary">Not a Pinterest quote.</span>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                  I help people rebuild
+                   <span className="block text-primary">
+                    when life feels unstable.
+                  </span>
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Ask DoGood is a healing + structure ecosystem for people rebuilding their health, their habits,
-                and their confidence — one honest step at a time.
+                  Ask DoGood is where health, structure, and faith meet real life.
+                  No hype. No guilt. Just systems that help you feel steady again.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
