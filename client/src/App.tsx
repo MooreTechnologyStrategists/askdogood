@@ -25,6 +25,8 @@ import Interests from "./pages/Interests";
 import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
 import DashboardLayout from "@/components/DashboardLayout";
+import Garden from "@/pages/Garden";
+
 import {
   Card,
   CardContent,
