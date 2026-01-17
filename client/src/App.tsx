@@ -62,7 +62,7 @@ function Router() {
       <Route path={"/rewards"} component={Rewards} />
       <Route path={"/challenges"} component={Challenges} />
       <Route path={"/meal-prep"} component={MealPrep} />
-      <Route path={"/shop"} component={Shop} />
+      <Route path={"/shop"} component={ShopRedirect} />
       <Route path={"/merch"} component={Merch} />
       <Route path={"/profile"} component={Profile} />
       <Route path={"/about"} component={About} />
