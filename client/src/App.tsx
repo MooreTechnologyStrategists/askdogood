@@ -54,32 +54,44 @@ function Router() {
   }, [location]);
   
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/login"} component={Login} />
-      <Route path={"/signup"} component={Signup} />
-      <Route path={"/dashboard"} component={Dashboard} />
-      <Route path={"/rewards"} component={Rewards} />
-      <Route path={"/challenges"} component={Challenges} />
-      <Route path={"/meal-prep"} component={MealPrep} />
-      <Route path={"/shop"} component={ShopRedirect} />
-      <Route path={"/merch"} component={Merch} />
-      <Route path={"/profile"} component={Profile} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/blog"} component={Blog} />
-      <Route path={"/blog/:slug"} component={BlogPost} />
-      <Route path={"/journey"} component={Journey} />
-      <Route path={"/interests"} component={Interests} />
-      <Route path={"/no-fluff"} component={NoFluff} />
-      <Route path={"/resources"} component={Resources} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path="/garden" component={Garden} />
-      {/* NEW: Clinical Recipe System route */}
-      <Route path={"/clinical-recipes"} component={ClinicalRecipesPageComponent} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
-  );
+  <Switch>
+    <Route path="/" component={Home} />
+    <Route path="/login" component={Login} />
+    <Route path="/signup" component={Signup} />
+
+    {/* Auth */}
+    <Route path="/dashboard" component={Dashboard} />
+    <Route path="/profile" component={Profile} />
+    <Route path="/rewards" component={Rewards} />
+    <Route path="/challenges" component={Challenges} />
+
+    {/* Content */}
+    <Route path="/about" component={About} />
+    <Route path="/blog" component={Blog} />
+    <Route path="/blog/:slug" component={BlogPost} />
+    <Route path="/journey" component={Journey} />
+    <Route path="/interests" component={Interests} />
+    <Route path="/garden" component={Garden} />
+    <Route path="/no-fluff" component={NoFluff} />
+    <Route path="/resources" component={Resources} />
+    <Route path="/contact" component={Contact} />
+
+    {/* Wellness */}
+    <Route path="/meal-prep" component={MealPrep} />
+    <Route
+      path="/clinical-recipes"
+      component={ClinicalRecipesPageComponent}
+    />
+
+    {/* Commerce */}
+    <Route path="/shop" component={ShopRedirect} />
+    <Route path="/merch" component={Merch} />
+
+    {/* Errors */}
+    <Route path="/404" component={NotFound} />
+    <Route component={NotFound} />
+  </Switch>
+);
 }
 
 function App() {
