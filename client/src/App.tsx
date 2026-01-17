@@ -73,6 +73,7 @@ function Router() {
       <Route path={"/no-fluff"} component={NoFluff} />
       <Route path={"/resources"} component={Resources} />
       <Route path={"/contact"} component={Contact} />
+      <Route path="/garden" component={Garden} />
       {/* NEW: Clinical Recipe System route */}
       <Route path={"/clinical-recipes"} component={ClinicalRecipesPageComponent} />
       <Route path={"/404"} component={NotFound} />
