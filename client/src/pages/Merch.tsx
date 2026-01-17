@@ -3,6 +3,7 @@ import { merchProducts, merchCategories, type MerchProduct } from "@/data/merch-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Filter, Sparkles } from "lucide-react";
+import { products as shopProducts } from "@/data/products";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
