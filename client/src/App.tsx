@@ -42,6 +42,7 @@ import Login from "./pages/Login";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { GA_MEASUREMENT_ID } from "./config/analytics";
 import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
+import ShopRedirect from "./pages/ShopRedirect";
 
 
 
@@ -77,6 +78,9 @@ function Router() {
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
     <Route path="/contact" component={Contact} />
+    <Route path="/garden" component={Garden} />
+    <Route path="/garden/:season" component={GardenSeasonPost} />
+
 
     {/* Wellness */}
     <Route path="/meal-prep" component={MealPrep} />
@@ -86,7 +90,7 @@ function Router() {
     />
 
     {/* Commerce */}
-    <Route path="/shop" component={ShopRedirect} />
+    <Route path="/shop" component={ ShopRedirect} />
     <Route path="/merch" component={Merch} />
 
     {/* Errors */}
