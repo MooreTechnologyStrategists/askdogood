@@ -181,6 +181,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* THYROID RESET TOOLKIT CTA */}
       <section className="py-14 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container max-w-4xl">
