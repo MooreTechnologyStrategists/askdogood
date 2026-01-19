@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { gardenSeasons } from "@/content/gardenSeasons";
 
+
 /**
  * Garden landing page
  * Fixes:

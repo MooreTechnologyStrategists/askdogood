@@ -18,6 +18,7 @@ import {
   Users,
 } from "lucide-react";
 import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
+import GardenSeasonsSection from "@/components/GardenSeasonsSection";
 
 export default function Home() {
   useEffect(() => {
