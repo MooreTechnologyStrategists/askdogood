@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AnnouncementBar from "./components/AnnouncementBar";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -108,6 +109,7 @@ function App() {
           <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
           <Toaster />
           <div className="flex flex-col min-h-screen">
+            <AnnouncementBar />
             <Header />
             <main className="flex-1">
               <Router />
