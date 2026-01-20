@@ -33,7 +33,9 @@
 2. Choose "Regular" campaign
 3. Add recipients: Select "Launch Blast 2026" tag
 4. From name: "RoSeé from AskDoGood"
-5. Subject: "It's finally here (and I'm terrified)"
+5. From email: askdogood@gmail.com
+6. Reply-to: askdogood@gmail.com
+7. Subject: "It's finally here (and I'm terrified)"
 6. Design email: Choose "Code your own" or "Plain text"
 7. Copy Email #1 from EMAIL_BLAST_TEMPLATES.md
 8. Paste into Mailchimp editor
@@ -103,7 +105,8 @@ Before hitting send, make sure:
 - [ ] Desktop preview looks good
 - [ ] Unsubscribe link present (Mailchimp adds automatically)
 - [ ] Sender name is "RoSeé - AskDoGood"
-- [ ] Reply-to is your email
+- [ ] From email is askdogood@gmail.com
+- [ ] Reply-to is askdogood@gmail.com
 
 ### Tracking Setup
 - [ ] Google Analytics campaign tags

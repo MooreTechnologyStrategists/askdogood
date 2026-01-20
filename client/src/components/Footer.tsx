@@ -27,32 +27,24 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4">Get Started</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/journey">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Start Your Journey
-                  </span>
+                <Link href="/journey" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                  Start Your Journey
                 </Link>
               </li>
               <li>
-                <Link href="/shop">
-                  <span className="text-sm text-primary hover:text-primary/80 font-medium transition-colors cursor-pointer flex items-center gap-1">
-                    <ShoppingBag className="h-3 w-3" />
-                    Shop Courses & Products
-                  </span>
+                <Link href="/shop" className="text-sm text-primary hover:text-primary/80 font-medium transition-colors cursor-pointer flex items-center gap-1">
+                  <ShoppingBag className="h-3 w-3" />
+                  Shop Courses & Products
                 </Link>
               </li>
               <li>
-                <Link href="/clinical-recipes">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Clinical Food RX
-                  </span>
+                <Link href="/clinical-recipes" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                  Clinical Food RX
                 </Link>
               </li>
               <li>
-                <Link href="/resources">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Free Resources
-                  </span>
+                <Link href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                  Free Resources
                 </Link>
               </li>
             </ul>
@@ -63,26 +55,20 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4">Learn More</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    About RoSeé
-                  </span>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                  About RoSeé
                 </Link>
               </li>
               <li>
-                <Link href="/blog">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
-                    <BookOpen className="h-3 w-3" />
-                    Blog & Articles
-                  </span>
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                  <BookOpen className="h-3 w-3" />
+                  Blog & Articles
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <span className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
-                    <Mail className="h-3 w-3" />
-                    Contact & Coaching
-                  </span>
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                  <Mail className="h-3 w-3" />
+                  Contact & Coaching
                 </Link>
               </li>
             </ul>
