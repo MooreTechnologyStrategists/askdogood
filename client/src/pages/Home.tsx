@@ -195,6 +195,209 @@ export default function Home() {
       {/* TRUST BADGES */}
       <TrustBadges />
 
+      {/* MY STORY / PERSONAL SECTION */}
+      <section className="py-20 bg-gradient-to-br from-secondary/20 to-background">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* LEFT: Image */}
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden border shadow-lg">
+                  <img
+                    src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-story.webp"
+                    alt="RoSeé's wellness journey"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://askdogoodassets.blob.core.windows.net/images/hero-home.webp';
+                    }}
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-xl max-w-[200px]">
+                  <p className="text-sm font-medium">7+ years of thyroid recovery, countless lessons learned</p>
+                </div>
+              </div>
+
+              {/* RIGHT: Story */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-2">
+                  <Sparkles className="h-4 w-4 text-primary" />
+                  <span className="text-sm font-medium text-primary">My Story</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'var(--font-serif)' }}>
+                  From Misdiagnosed to Mission-Driven
+                </h2>
+                
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    I spent years being told my thyroid symptoms were "just stress" or "in my head." 
+                    The fatigue, brain fog, weight struggles—all dismissed. Until I couldn't ignore it anymore.
+                  </p>
+                  <p>
+                    After finally getting diagnosed and having my thyroid removed, I realized the medical system 
+                    wasn't designed to help people like us truly <em>heal</em>—just manage symptoms. So I became 
+                    my own advocate, my own researcher, my own healer.
+                  </p>
+                  <p>
+                    <strong>Seven years later,</strong> I've built a life I love despite chronic illness. 
+                    I've learned that healing isn't linear, that structure creates freedom, and that 
+                    you can thrive while being transparent about the struggle.
+                  </p>
+                  <p className="text-foreground font-medium">
+                    AskDoGood is everything I wish someone had given me on day one. 
+                    Real guidance. Real empathy. Real results.
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <Link href="/about">
+                    <Button size="lg" className="gap-2">
+                      Read My Full Story <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link href="/journey">
+                    <Button size="lg" variant="outline" className="gap-2">
+                      Start Your Journey
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GARDEN SECTION - Seasons of Growth */}
+      <section className="py-20 border-t">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <Sparkles className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Finding Peace in Growth</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+                Seasons of Growth: My Garden Journey
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Gardening saved me. It taught me patience, faith, and the beauty of slow growth. 
+                Each season mirrors life—planting, tending, harvesting, and letting go.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/garden/spring">
+                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/content/images/garden/spring.webp"
+                      alt="Spring garden"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                      }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      Spring
+                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </CardTitle>
+                    <CardDescription>
+                      Planting with faith and patience
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+
+              <Link href="/garden/summer">
+                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/content/images/garden/summer.webp"
+                      alt="Summer garden"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                      }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      Summer
+                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </CardTitle>
+                    <CardDescription>
+                      Tending what you prayed for
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+
+              <Link href="/garden/fall">
+                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/content/images/garden/fall.webp"
+                      alt="Fall garden harvest"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                      }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      Fall
+                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </CardTitle>
+                    <CardDescription>
+                      Harvest, release, and reflection
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+
+              <Link href="/garden/winter">
+                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/content/images/garden/winter.webp"
+                      alt="Winter garden rest"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                      }}
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      Winter
+                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </CardTitle>
+                    <CardDescription>
+                      Rest, restoration, and trust
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-muted-foreground mb-4">
+                "I try to find joy in everything. Even when it's draining or thankless, 
+                the real reward is the wisdom you pick up along the way."
+              </p>
+              <Link href="/garden">
+                <Button size="lg" variant="outline" className="gap-2">
+                  Explore All Seasons <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <Testimonials />
 
