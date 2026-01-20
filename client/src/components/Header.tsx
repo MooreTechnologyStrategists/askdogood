@@ -24,6 +24,7 @@ export default function Header() {
     { href: "/", label: "Home", icon: Home },
     { href: "/journey", label: "Journey", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
+    { href: "/stories", label: "Stories", icon: BookOpen },
     { href: "/clinical-recipes", label: "Recipes", icon: UtensilsCrossed },
     { href: "/resources", label: "Resources", icon: Library },
     { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
