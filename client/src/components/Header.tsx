@@ -31,15 +31,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         {/* LEFT: Logo / Brand */}
-        <Link href="/">
-          <a className="flex items-center gap-2 font-semibold tracking-tight">
-            <img
-              src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
-              alt="Ask DoGood"
-              className="h-8 w-8 object-contain"
-            />
-            <span className="hidden sm:inline">Ask DoGood</span>
-          </a>
+        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight cursor-pointer">
+          <img
+            src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
+            alt="Ask DoGood"
+            className="h-8 w-8 object-contain"
+          />
+          <span className="hidden sm:inline">Ask DoGood</span>
         </Link>
 
         {/* CENTER: Nav (desktop) */}
@@ -49,21 +47,21 @@ export default function Header() {
             const Icon = item.icon;
 
             return (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={[
-                    "flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all",
-                    "hover:bg-accent hover:text-accent-foreground hover:shadow-sm",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-                    isActive
-                      ? "bg-accent text-accent-foreground shadow-sm"
-                      : "text-muted-foreground",
-                    item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
-                  ].join(" ")}
-                >
-                  <Icon className="h-3.5 w-3.5" />
-                  {item.label}
-                </a>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className={[
+                  "flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all cursor-pointer",
+                  "hover:bg-accent hover:text-accent-foreground hover:shadow-sm",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+                  isActive
+                    ? "bg-accent text-accent-foreground shadow-sm"
+                    : "text-muted-foreground",
+                  item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
+                ].join(" ")}
+              >
+                <Icon className="h-3.5 w-3.5" />
+                {item.label}
               </Link>
             );
           })}
