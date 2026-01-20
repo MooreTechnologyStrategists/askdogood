@@ -6,16 +6,25 @@ import {
   UtensilsCrossed,
   BookOpen,
   Users,
+  ShoppingBag,
+  Library,
+  Mail,
+  User,
+  Home,
 } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/journey", label: "Start Here", icon: Sparkles },
-    { href: "/clinical-recipes", label: "Clinical Food RX", icon: UtensilsCrossed },
+    { href: "/", label: "Home", icon: Home },
+    { href: "/journey", label: "Journey", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
-    { href: "/community", label: "Community", icon: Users },
+    { href: "/clinical-recipes", label: "Recipes", icon: UtensilsCrossed },
+    { href: "/resources", label: "Resources", icon: Library },
+    { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
+    { href: "/about", label: "About", icon: User },
+    { href: "/contact", label: "Contact", icon: Mail },
   ];
 
   return (
@@ -34,7 +43,7 @@ export default function Header() {
         </Link>
 
         {/* CENTER: Nav (desktop) */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {navItems.map((item) => {
             const isActive = location === item.href;
             const Icon = item.icon;
@@ -43,15 +52,16 @@ export default function Header() {
               <Link key={item.href} href={item.href}>
                 <a
                   className={[
-                    "flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                    "hover:bg-accent hover:text-accent-foreground",
+                    "flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all",
+                    "hover:bg-accent hover:text-accent-foreground hover:shadow-sm",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
                     isActive
-                      ? "bg-accent text-accent-foreground"
+                      ? "bg-accent text-accent-foreground shadow-sm"
                       : "text-muted-foreground",
+                    item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
                   ].join(" ")}
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-3.5 w-3.5" />
                   {item.label}
                 </a>
               </Link>
@@ -61,10 +71,10 @@ export default function Header() {
 
         {/* RIGHT: CTA */}
         <div className="flex items-center gap-2">
-          <Link href="/contact">
-            <Button size="sm" className="gap-2">
-              <HeartPulse className="h-4 w-4" />
-              Connect
+          <Link href="/shop">
+            <Button size="sm" className="gap-2 hidden md:flex">
+              <ShoppingBag className="h-4 w-4" />
+              Shop
             </Button>
           </Link>
         </div>
