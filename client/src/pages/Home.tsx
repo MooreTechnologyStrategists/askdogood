@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
 import GardenSeasonsSection from "@/components/GardenSeasonsSection";
+import Testimonials from "@/components/Testimonials";
+import TrustBadges from "@/components/TrustBadges";
+import AffiliateProductRecommendations from "@/components/AffiliateProductRecommendations";
 
 export default function Home() {
   useEffect(() => {
@@ -189,6 +192,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST BADGES */}
+      <TrustBadges />
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
+
       {/* FEATURES */}
       <section className="py-14 md:py-20">
         <div className="container">
@@ -348,6 +357,9 @@ export default function Home() {
           />
         </div>
       </section>
+
+      {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
+      <AffiliateProductRecommendations />
     </div>
   );
 }
