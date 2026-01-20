@@ -2,22 +2,25 @@
 
 ## � HOW TO SEND TO YOUR AZURE ENTRA ID SUBSCRIBERS
 
-### Option 1: Export & Use ConvertKit (RECOMMENDED)
+### Option 1: Export & Use Mailchimp (RECOMMENDED)
 1. **Export from Azure Entra ID:**
    - Go to Azure Portal → Entra ID → Users
    - Select all 1500+ subscribers
    - Export to CSV
+   - Verify columns: Email Address, First Name, Last Name
    
-2. **Import to ConvertKit:**
-   - Log into ConvertKit dashboard
-   - Broadcasts → Import Subscribers
+2. **Import to Mailchimp:**
+   - Log into Mailchimp dashboard
+   - Audience → All contacts → Add contacts → Import
    - Upload CSV file
-   - Map email field
-   - Tag as "Launch List 2026"
+   - Map fields (Email, First Name, Last Name)
+   - Add tags: "Launch Blast 2026"
 
-3. **Send Broadcast:**
-   - Create broadcast email
+3. **Send Campaign:**
+   - Campaigns → Create Campaign → Email
+   - Choose "Launch Blast 2026" audience
    - Copy/paste template below
+   - Replace [FIRST NAME] with *|FNAME|* (Mailchimp merge tag)
    - Schedule or send immediately
    - Track opens, clicks, conversions
 

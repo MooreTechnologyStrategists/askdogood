@@ -2,7 +2,7 @@
 
 ## Step-by-Step: Send to 1500+ Subscribers TODAY
 
-### ⚡ FASTEST METHOD: ConvertKit
+### ⚡ FASTEST METHOD: Mailchimp
 
 **Time: 30 minutes**
 
@@ -13,27 +13,34 @@
 3. Click "Download users"
 4. Save CSV file to desktop
 5. Open in Excel, verify email column exists
+6. Make sure columns include: Email Address, First Name, Last Name
 ```
 
-#### Step 2: Import to ConvertKit (10 min)
+#### Step 2: Import to Mailchimp (10 min)
 ```
-1. Log into ConvertKit (convertkit.com)
-2. Go to: Subscribers → Import
-3. Upload your CSV file
-4. Map the email field
-5. Add tag: "Launch Blast 2026"
-6. Click Import (wait for processing)
+1. Log into Mailchimp (mailchimp.com)
+2. Go to: Audience → All contacts
+3. Click "Add contacts" → Import contacts
+4. Upload your CSV file
+5. Map fields: Email Address, First Name, Last Name
+6. Add tags: "Launch Blast 2026", "Thyroid Course Launch"
+7. Click Import (wait for processing - can take 5-15 min for 1500)
 ```
 
-#### Step 3: Create Broadcast (10 min)
+#### Step 3: Create Campaign (10 min)
 ```
-1. Go to: Broadcasts → New Broadcast
-2. Subject: "It's finally here (and I'm terrified)"
-3. Copy Email #1 from EMAIL_BLAST_TEMPLATES.md
-4. Paste into ConvertKit editor
-5. Replace [INSERT LINK] with your Gumroad link
-6. Preview on mobile and desktop
-7. Schedule for 10 AM tomorrow
+1. Go to: Campaigns → Create Campaign → Email
+2. Choose "Regular" campaign
+3. Add recipients: Select "Launch Blast 2026" tag
+4. From name: "RoSeé from AskDoGood"
+5. Subject: "It's finally here (and I'm terrified)"
+6. Design email: Choose "Code your own" or "Plain text"
+7. Copy Email #1 from EMAIL_BLAST_TEMPLATES.md
+8. Paste into Mailchimp editor
+9. Replace [INSERT LINK] with your Gumroad link
+10. Use merge tags: *|FNAME|* for [FIRST NAME]
+11. Preview and test
+12. Schedule for 10 AM tomorrow or send immediately
 ```
 
 ---
@@ -91,16 +98,17 @@ Before hitting send, make sure:
 
 ### Email Setup
 - [ ] Links replaced with real URLs
-- [ ] Personalization tags work ([FIRST NAME])
-- [ ] Mobile preview looks good
+- [ ] Personalization tags work (*|FNAME|* for Mailchimp)
+- [ ] Mobile preview looks good (use Mailchimp preview tool)
 - [ ] Desktop preview looks good
-- [ ] Unsubscribe link present
+- [ ] Unsubscribe link present (Mailchimp adds automatically)
 - [ ] Sender name is "RoSeé - AskDoGood"
 - [ ] Reply-to is your email
 
 ### Tracking Setup
 - [ ] Google Analytics campaign tags
-- [ ] ConvertKit tracking enabled
+- [ ] Mailchimp tracking enabled (opens, clicks)
+- [ ] Mailchimp e-commerce tracking linked to Gumroad
 - [ ] Conversion goals set up
 - [ ] Spreadsheet ready for manual tracking
 
