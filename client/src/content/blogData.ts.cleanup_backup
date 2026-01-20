@@ -43,7 +43,7 @@ Here are some pro tips to make the most of **Giving Tuesday**:
 Remember, giving isn't just about money. Your time, voice, and **advocacy** are equally powerful tools for change. This **Giving Tuesday**, let's come together to create a lasting ripple effect of kindness and compassion in the world.`,
     date: "2024-11-26",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/giving-tuesday.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/giving-tuesday.webp",
     tags: ["Giving", "Community", "Equity"],
     featured: true,
   },
@@ -78,7 +78,7 @@ You can blend it into your morning **smoothies**, stir it into **teas** or **sou
 For many, including those living with conditions like thyroid issues, sea moss has proven to be a **game-changer** in their wellness journey. It's one of those simple, natural additions that can make a profound difference in how you feel every day.`,
     date: "2024-10-15",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/sea-moss.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/sea-moss.webp",
     tags: ["Superfoods", "Thyroid Health", "Black Women"],
     featured: true,
   },
@@ -90,7 +90,9 @@ For many, including those living with conditions like thyroid issues, sea moss h
 
 ## My Collagen Journey: The First Six Weeks
 
-When I first started taking **collagen peptides**, I was skeptical. How could a simple powder make a difference? I had read all the claims, but seeing was believing. I committed to a daily routine, and within just **six weeks**, I noticed several significant changes: 1.  **Improved Skin Elasticity:** My skin felt noticeably firmer and more supple to the touch.
+When I first started taking **collagen peptides**, I was skeptical. How could a simple powder make a difference? I had read all the claims, but seeing was believing. I committed to a daily routine, and within just **six weeks**, I noticed several significant changes:
+
+1.  **Improved Skin Elasticity:** My skin felt noticeably firmer and more supple to the touch.
 2.  **Reduced Fine Lines:** The small lines, especially around my eyes and mouth, appeared softer and less pronounced.
 3.  **Better Hydration:** My skin seemed to retain moisture better, reducing the need for constant reapplication of heavy moisturizers.
 4.  **Stronger Nails:** An unexpected but welcome bonus—my nails stopped peeling and breaking.
@@ -112,14 +114,16 @@ To ensure I'm getting the best quality, I always prefer **grass-fed, pasture-rai
 
 Six months in, my skin has truly transformed. Friends and family frequently ask what I'm doing differently, and my secret is simple: **consistency with collagen**.
 
-My overall approach to skin health now includes three key pillars: *   **Daily Collagen Supplementation**
+My overall approach to skin health now includes three key pillars:
+
+*   **Daily Collagen Supplementation**
 *   **Plenty of Water Intake**
 *   **Consistent Sun Protection**
 
 If you are struggling with aging skin, joint discomfort, or weak nails, I highly recommend giving a high-quality collagen supplement a try. Your body will thank you for providing it with the building blocks it needs to thrive.`,
     date: "2024-09-20",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/collagen.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/collagen.webp",
     tags: ["Skincare", "Anti-Aging", "Supplements"],
     featured: false,
   },
@@ -142,7 +146,9 @@ SuperBeets is a concentrated form of beet root powder that's rich in dietary nit
 
 **My Experience:**
 
-As someone who's always looking for natural ways to support my health, SuperBeets has been a revelation. I mix it into water or my morning smoothie, and I've noticed: - More sustained energy throughout the day
+As someone who's always looking for natural ways to support my health, SuperBeets has been a revelation. I mix it into water or my morning smoothie, and I've noticed:
+
+- More sustained energy throughout the day
 - Better workout endurance
 - Improved focus and mental clarity
 
@@ -157,7 +163,7 @@ Start with one scoop daily, mixed into water or your favorite beverage. Some peo
 Remember, supplements work best as part of a holistic approach to health that includes good nutrition, regular exercise, and stress management.`,
     date: "2024-08-10",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/superbeets.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/superbeets.webp",
     tags: ["Heart Health", "Energy", "Superfoods"],
     featured: true,
   },
@@ -211,10 +217,12 @@ Your **peace** is a **boundary**, not a bonus. Make **mindfulness** a daily, con
 
 And not only do you owe yourself the peace, but even more, you owe yourself the desire to **maintain it**.
 
-Related on AskDoGood: *   **Finding Peace Through Prayer & Relationships**`,
+Related on AskDoGood:
+
+*   **Finding Peace Through Prayer & Relationships**`,
     date: "2023-05-13",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -253,7 +261,7 @@ True health equity requires systemic change. But while we fight for that change,
 Your health matters. Your life matters. Don't let anyone tell you otherwise.`,
     date: "2024-06-20",
     readTime: "6 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Health Equity", "Black Women", "Advocacy"],
     featured: false,
   },
@@ -306,7 +314,7 @@ Therapy, particularly **Cognitive Behavioral Therapy (CBT)**, is highly effectiv
 You're not alone in this. Reach out. Get help. You deserve to feel safe and secure in your own body.`,
     date: "",
     readTime: "",
-    image: "/assets/img/blog/assigned/understanding-panic-attacks-what-they-are-and-how-to-cope.webp",
+    image: "",
     tags: [],
   },
   {
@@ -377,7 +385,7 @@ You’ll learn more about giving a massage if you’re regularly on the receivin
 Surprise your partner this weekend with a professional quality massage. You’ll be impressed by how many points you score and by how much fun you have in the process. Make plans to shake up your weekend routine and pamper your partner.`,
     date: "2022-12-12",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -386,7 +394,9 @@ Surprise your partner this weekend with a professional quality massage. You’ll
     excerpt: "Work, family, financial challenges, Covid-19, and all the other stressors in the world can really take a toll on one’s emotional wellness. It’s not easy to be happy and enjoy life if your emotional he...",
     content: `Work, family, financial challenges, the ongoing pandemic, and all the other stressors in the world can really take a toll on one’s emotional wellness. It’s not easy to be happy and enjoy life if your emotional health isn’t at a high level. While many of life’s ups and downs are beyond our control, there are a lot of things that are within our control.
 
-There are several things you can do to increase your emotional wellness that won’t cost a penny or require a lot of time. **Practice these strategies** and positively affect your emotional wellness: ## 10 Tips to Boost Your Emotional Wellness
+There are several things you can do to increase your emotional wellness that won’t cost a penny or require a lot of time. **Practice these strategies** and positively affect your emotional wellness:
+
+## 10 Tips to Boost Your Emotional Wellness
 
 ### 1. Move More
 
@@ -439,7 +449,7 @@ Get out of the house and the office and take a nice walk each day. Just take a s
 Avoid those things that can have a negative impact on your sense of emotional well-being. This includes social media, the news, unreasonable expectations, and unnecessary obligations. Get your rest, move around, and address the challenges in your life that are within your control. Spend time with people that you love. When your emotional health is high, you have a solid foundation for enjoying many other aspects of life. Review the tips above and pick one to implement today.`,
     date: "2022-12-12",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -450,7 +460,7 @@ Avoid those things that can have a negative impact on your sense of emotional we
 date: "2022-12-19`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -463,7 +473,9 @@ It can be easy to sleep late, watch a little TV, spend too much time on social m
 
 There are many **distractions** that can make working from home especially difficult. It’s also easy to be unproductive without a boss or coworkers around.
 
-Try these **seven strategies** to get more work done when you’re working from home: ## 1. Set a Schedule and Stick to It
+Try these **seven strategies** to get more work done when you’re working from home:
+
+## 1. Set a Schedule and Stick to It
 
 One of the benefits of going into the office is that you have a set period of time to work each day. You can’t arbitrarily sleep in, read the paper on the couch, check your Facebook page, and then decide to get to work.
 
@@ -510,7 +522,7 @@ Working from home might seem like the ideal situation, but it can be challenging
 Working from home can be highly **productive** but might require a few changes in your approach."`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -521,7 +533,7 @@ Working from home can be highly **productive** but might require a few changes i
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -532,7 +544,7 @@ date: "2022-12-22`,
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -545,7 +557,9 @@ To receive the most benefits from working out each day, it’s beneficial to cha
 
 ## The Four Pillars of Exercise
 
-Research has shown that it’s important to integrate all four main types of exercise into your routine. These are the four types of exercises to include in your routine: 1.  **Endurance**: Endurance exercises increase your breathing and heart rate. To build endurance, do aerobic or cardio exercises, like jogging, swimming, dancing, cycling, climbing stairs, or **HIIT**.
+Research has shown that it’s important to integrate all four main types of exercise into your routine. These are the four types of exercises to include in your routine:
+
+1.  **Endurance**: Endurance exercises increase your breathing and heart rate. To build endurance, do aerobic or cardio exercises, like jogging, swimming, dancing, cycling, climbing stairs, or **HIIT**.
 2.  **Strength**: Strength exercises build your muscles, strengthen bones, and manage weight. These exercises are workouts that incorporate resistance including lifting weights, push-ups, arm curls, or using a resistance band.
 3.  **Balance**: These exercises help prevent falls in the long run. Balance exercises include yoga, tai chi, and balancing on a single leg.
 4.  **Flexibility**: Flexibility exercises increase our mobility and reduce pain. Exercises to work out your flexibility include yoga and stretching.
@@ -556,7 +570,9 @@ But most importantly, start with finding the **motivation** to work out every da
 
 ## Tips to Work Out Every Day
 
-Follow these tips to work out every day: 1.  **Start with two minutes**: When it comes to creating a new daily habit, make it as easy as possible to get started. Transition into the routine of working out by starting with two minutes. After two minutes, do you want to continue? If so, keep going! If not, show up again tomorrow.
+Follow these tips to work out every day:
+
+1.  **Start with two minutes**: When it comes to creating a new daily habit, make it as easy as possible to get started. Transition into the routine of working out by starting with two minutes. After two minutes, do you want to continue? If so, keep going! If not, show up again tomorrow.
 2.  **Make it easy to exercise**: The ultimate mind hack to exercise is making it easy.
     *   The day before, decide the time and place you will work out.
     *   Prepare your workout clothes in a specific, open place each day.
@@ -570,7 +586,7 @@ It can be a challenge to fit exercise into your already existing schedule. Don�
 Remember to give your muscles time to recover. Pushing yourself too hard during a workout can also be damaging. If you feel lethargic or tired, allow yourself to rest. **Exercise** can greatly benefit your life. It’s all about finding the motivation to get started!`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -587,7 +603,9 @@ There can be a wide range of triggers, each requiring its own different solution
 
 ## Preventing Muscle Cramps
 
-Sometimes your muscles can spasm for no obvious reason. More often, you can avoid activities that are likely to cause cramps or make the symptoms worse. Try these solutions: 1.  **Pace yourself**. Overexertion while working out is one of the most common situations where cramps occur. Start off slow and increase the intensity gradually. Be especially careful on hot days when your body perspires more.
+Sometimes your muscles can spasm for no obvious reason. More often, you can avoid activities that are likely to cause cramps or make the symptoms worse. Try these solutions:
+
+1.  **Pace yourself**. Overexertion while working out is one of the most common situations where cramps occur. Start off slow and increase the intensity gradually. Be especially careful on hot days when your body perspires more.
 2.  **Warm up**. Spend your first ten minutes preparing your body for exercise. You might walk in place and swing your arms, or do reps with light weights. Any gentle movement similar to what you’ll be doing for the rest of your session is beneficial.
 3.  **Cool down**. How you end your workouts counts too. Give your body time to adjust back to a resting state.
 4.  **Stretch your muscles**. Training for flexibility reduces the risk of cramps. You can do stretching exercises during your cooldown or any time your muscles are adequately warmed up. Stay within a comfortable range of motion and hold each stretch for at least 15 seconds.
@@ -598,7 +616,9 @@ Sometimes your muscles can spasm for no obvious reason. More often, you can avoi
 
 ## Treating Muscle Cramps
 
-Patience and self-care are usually enough. However, there may be times when you need medical care, or want to find quicker relief for muscle cramps. Use these strategies: 1.  **See your doctor**. Get a checkup if your cramps are frequent, severe, or accompanied by other symptoms like numbness and weakness. In rare cases, these could be signs of spinal damage or other issues that need treatment.
+Patience and self-care are usually enough. However, there may be times when you need medical care, or want to find quicker relief for muscle cramps. Use these strategies:
+
+1.  **See your doctor**. Get a checkup if your cramps are frequent, severe, or accompanied by other symptoms like numbness and weakness. In rare cases, these could be signs of spinal damage or other issues that need treatment.
 2.  **Consider medication**. Your doctor may prescribe muscle relaxants temporarily. It’s also important to let them know if you take any over the counter pain relievers or other drugs.
 3.  **Massage the area**. For quick relief, gently rub the area. Press firmly and move your fingers in small circles. You may also try pinching the painful spot for a few seconds.
 4.  **Apply heat**. Warm compresses can be another quick solution. Use a heating pad or a damp towel. Leave it on for up to 20 minutes at a time.
@@ -606,7 +626,7 @@ Patience and self-care are usually enough. However, there may be times when you 
 Most cramps can be prevented or allowed to go away on their own. Talk with your doctor if home remedies fail to provide relief. Once you understand what’s causing your cramps, you can take steps to make yourself more comfortable and limit disruptions in your daily routines.`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -617,7 +637,7 @@ Most cramps can be prevented or allowed to go away on their own. Talk with your 
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -681,7 +701,7 @@ Many of the treatments recommended by **naturopathic doctors** are inexpensive c
 **Naturopathy** can be a good option for those with an open mind and a commitment to health and disease prevention. While it isn’t the answer for every health condition, it can be a better option for many. Give your body the chance to heal itself. It’s smarter than you think.`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -702,7 +722,9 @@ Keep in mind that a vegan food isn’t necessarily a healthy food. French fries,
 
 ## Health Benefits of a Nutritious Vegan Diet
 
-A vegan diet with nutritious foods can provide many health benefits: 1. **Reduced Arthritis Pain**: Multiple studies have demonstrated that following a vegan diet can reduce the pain of rheumatoid arthritis. Study participants reported less joint swelling and less morning stiffness, too.
+A vegan diet with nutritious foods can provide many health benefits:
+
+1. **Reduced Arthritis Pain**: Multiple studies have demonstrated that following a vegan diet can reduce the pain of rheumatoid arthritis. Study participants reported less joint swelling and less morning stiffness, too.
 
 2. **Metabolism Benefits**: Vegan diets can be extremely healthy. A good vegan diet is full of vitamins, minerals, fiber, and phytochemicals. Just as important, a proper vegan diet is also low in calories, cholesterol, and saturated fat. This type of diet is high in nutrition, but low in calories and disease-causing components.
 
@@ -722,7 +744,9 @@ A vegan diet can be extremely healthy if good food choices are made. If you’re
 
 ## Getting Started With a Vegan Diet
 
-How can you get started with a minimal amount of trouble? Follow this process: 1. First, make a list of healthy vegan foods that you enjoy.
+How can you get started with a minimal amount of trouble? Follow this process:
+
+1. First, make a list of healthy vegan foods that you enjoy.
 
 2. Then, start by eating one vegan meal each day.
 
@@ -734,7 +758,7 @@ Get started today, and it won’t be long before you can call yourself a **legit
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -745,7 +769,7 @@ date: "2022-12-22`,
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -806,7 +830,7 @@ To start, try incorporating a few vegan meals into your weekly routine. Notice h
 date: "2022-12-22`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -839,7 +863,9 @@ Do you reach for comfort food when you’re sad or frustrated? You may find your
 
 ## How to Boost Serotonin
 
-Here are several ways you can naturally boost your serotonin levels: 1.  **Work Out**
+Here are several ways you can naturally boost your serotonin levels:
+
+1.  **Work Out**
     Physical exercise increases serotonin. Aim for at least 150 minutes a week of moderate-intensity activity. Focus on cardio activities and strength training if you’re trying to lose weight.
 
 2.  **Adjust Your Diet**
@@ -876,7 +902,7 @@ Along with serotonin and exercise, there are many more natural and safe ways to 
 When your serotonin levels are balanced, you’ll have more energy and feel full while eating less food. Along with losing weight, you may also enjoy greater happiness, sounder sleep, and significant relief from headaches and many other common conditions.`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -901,7 +927,9 @@ Arthritis is a very painful and debilitating condition that affects many aspects
 
 One natural remedy to help with arthritis is to **regularly exercise**. Exercise helps reduce inflammation and stretching helps to keep your joints flexible and strong.
 
-You don't have to go to a gym to get moving. Consider incorporating movement into your daily routine through activities such as: *   Doing chores around the house
+You don't have to go to a gym to get moving. Consider incorporating movement into your daily routine through activities such as:
+
+*   Doing chores around the house
 *   Walking instead of taking the elevator
 *   Parking farther away from your destination
 
@@ -909,7 +937,9 @@ You don't have to go to a gym to get moving. Consider incorporating movement int
 
 Besides regular exercise, consuming certain foods may help reduce inflammation and swelling in the joints.
 
-Foods high in **antioxidants** can help soothe inflammation. Examples include: *   Cherries
+Foods high in **antioxidants** can help soothe inflammation. Examples include:
+
+*   Cherries
 *   Tomatoes
 *   Green tea
 
@@ -934,7 +964,7 @@ Sincerely,
 The AskDoGood Team`,
     date: "2023-02-17",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -945,7 +975,7 @@ The AskDoGood Team`,
 date: "2023-02-21`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -956,7 +986,7 @@ date: "2023-02-21`,
 date: "2023-02-21`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -977,7 +1007,9 @@ The realities of racial, gender, and social bias still exist, even if we like to
 
 The reassuring part is that in today's society, black men now have the capability, confidence, and community to pursue relationships as a leader.
 
-Black men can demonstrate their leadership through qualities such as: *   Being supportive and involved
+Black men can demonstrate their leadership through qualities such as:
+
+*   Being supportive and involved
 *   Being communicative and emotionally intelligent
 *   Setting healthy boundaries
 
@@ -988,7 +1020,7 @@ Of course, nobody is perfect, and there is no one-size-fits-all approach that wo
 **Leadership for black men** is not impossible; it is only rarely attempted in a present-day relationship. With a personal commitment to take ownership and make the necessary adjustments, black men can unapologetically embrace the leadership they bring to relationships.`,
     date: "2023-03-25",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1014,7 +1046,7 @@ We can also use our spiritual power to manifest what we want with the help of ou
 As spiritual beings, we have the power to focus our attention and intention on what we want to create in our lives. By understanding the power of our thoughts and knowing that it can shift our circumstances, we can begin to direct our energy and attention towards that which we want to manifest, thereby allowing us to take steps towards creating the life we have been dreaming of. **You got the power!**`,
     date: "2023-02-22",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1035,7 +1067,9 @@ Life is filled with unprecedented opportunities, and when we stop waiting around
 
 Whether in our relationships, our careers, or our personal lives, we have the power to make decisions that feel right and fruitful for us, no matter the consequences. The best way to do this is to first **identify what it is that we really want**, and understand why we want it.
 
-This process involves deep introspection and honesty. Ask yourself: *   What truly makes me feel fulfilled?
+This process involves deep introspection and honesty. Ask yourself:
+
+*   What truly makes me feel fulfilled?
 *   What changes would bring me closer to my ideal life?
 *   What are the underlying reasons for these desires?
 
@@ -1058,7 +1092,7 @@ It is so important to tap into our power and intuition and to **follow our gut**
 But don’t just take my word for it—go out there and prove yourself. Take the reins and prove that you have what it takes to get what you want from life. Because you can.`,
     date: "2023-05-08",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1085,7 +1119,9 @@ To value your guy, which you absolutely should, you must first master your own s
 
 We need to spread this message to all the ladies out there. This isn't just about personal change; it's about a collective shift.
 
-But it’s not just about spreading the message. We need to ensure that we back it up with action. This could involve: *   Organizing a series of global events where women can come together.
+But it’s not just about spreading the message. We need to ensure that we back it up with action. This could involve:
+
+*   Organizing a series of global events where women can come together.
 *   Providing resources related to setting **healthy boundaries**.
 *   Creating relationships based on **mutual respect**.
 *   Empowering women to recognize their inherent value.
@@ -1093,7 +1129,7 @@ But it’s not just about spreading the message. We need to ensure that we back 
 Ladies, let’s give ourselves the love and respect that we truly deserve today. Let’s make a commitment to ourselves not to give him our all if we want him to value us. Let’s start taking the steps needed to realize our own value and make sure that we get the respect that we deserve by spreading the message of self-respect to all the ladies out there. **#DontGiveHimYourAll**`,
     date: "",
     readTime: "",
-    image: "/assets/img/blog/assigned/ladies-don-t-give-him-your-all-if-you-want-him-to-value-you.webp",
+    image: "",
     tags: [],
   },
   {
@@ -1104,7 +1140,9 @@ Ladies, let’s give ourselves the love and respect that we truly deserve today.
 
 ## General Steps for Role Assignment
 
-To successfully assign a role, you must first complete a few preparatory steps: 1.  **Identify the Service Principal**: You must first identify the **Service Principal** that will receive the role. You can use the Azure portal, Azure CLI, or Azure PowerShell to create a new Service Principal or retrieve the details of an existing one.
+To successfully assign a role, you must first complete a few preparatory steps:
+
+1.  **Identify the Service Principal**: You must first identify the **Service Principal** that will receive the role. You can use the Azure portal, Azure CLI, or Azure PowerShell to create a new Service Principal or retrieve the details of an existing one.
 
 2.  **Choose the Role**: Determine the appropriate role to assign. Azure offers several **built-in roles** that grant specific permissions to resources. If the built-in roles do not meet your requirements, you have the option to create **custom roles**.
 
@@ -1131,7 +1169,7 @@ For a visual and guided approach, follow these detailed steps to assign a role u
 With these steps complete, the **Service Principal** now possesses the assigned role and the necessary permissions to access the specified Azure resources. This is a critical process for enabling secure, automated operations within your Azure environment.`,
     date: "",
     readTime: "",
-    image: "/assets/img/blog/assigned/assign-a-role-to-a-service-principal-in-azure.webp",
+    image: "",
     tags: [],
   },
   {
@@ -1142,7 +1180,9 @@ With these steps complete, the **Service Principal** now possesses the assigned 
 
 ## The Decommissioning Process
 
-To safely and effectively decommission a VM in Azure, follow these three primary steps: 1.  **Stop the Virtual Machine**
+To safely and effectively decommission a VM in Azure, follow these three primary steps:
+
+1.  **Stop the Virtual Machine**
 
     Before you can decommission a virtual machine, you must first stop it. This action can be performed through the **Azure portal**, the **Azure CLI**, or **Azure PowerShell**. Stopping the VM is the initial step to prepare it for deallocation.
 
@@ -1169,7 +1209,7 @@ az vm delete --name <VM_NAME> --resource-group <RESOURCE_GROUP> --yes
 Remember to replace \`<VM_NAME>\` and \`<RESOURCE_GROUP>\` with the actual names of your virtual machine and resource group to execute these commands successfully. Proper decommissioning is key to maintaining a clean and cost-efficient Azure environment.`,
     date: "2023-03-25",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1188,7 +1228,9 @@ This lifestyle is all about **balance** and **wisdom**. It's not a strict diet; 
 
 But let's keep it a buck, trying to school people on this can be a real struggle. They think we're flaky or just tryna be trendy. "You ain't really a vegetarian, though, right?" they say, like we're some kinda poser.
 
-And don't even get me started on the endless questions. They come at you with the same energy: *   "What even is your diet, bruh?"
+And don't even get me started on the endless questions. They come at you with the same energy:
+
+*   "What even is your diet, bruh?"
 *   "Do you just live off kale or what?"
 *   "Where's the protein at?"
 
@@ -1196,7 +1238,9 @@ It's like they're stuck on repeat, but we ain't sweating it, **Flexitarians**. W
 
 ## Flexitarian Clapbacks: Humor is Key
 
-Next time someone tries to come at you, hit 'em with some humor. Here are a couple of my go-to lines: 1.  "I'm a **Flexitarian**, meaning I eat everything except for trash and nonsense."
+Next time someone tries to come at you, hit 'em with some humor. Here are a couple of my go-to lines:
+
+1.  "I'm a **Flexitarian**, meaning I eat everything except for trash and nonsense."
 2.  "I'm a **Flexitarian**, meaning I listen to my body, and my body's like, 'Give me a juicy burger, fam!'"
 
 Laughter is key to living our best lives, y'all. And if all else fails, just shrug your shoulders and say, "I don't even know, but I'm hungry as hell, so let's eat!"
@@ -1204,7 +1248,7 @@ Laughter is key to living our best lives, y'all. And if all else fails, just shr
 At the end of the day, it's all about making choices that feel good for us and our bods. So let's rep our **Flexitarianism** and enjoy the best of both worlds - the satisfaction of a tasty meal and the knowledge that we're doing our part for the environment. Aight, peace out, fam!`,
     date: "2023-03-25",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1235,7 +1279,9 @@ Moreover, I have discovered that many doctors rely solely on blood tests to diag
 
 It is frustrating to feel as though America's healthcare system is failing us, but as a Black woman, I refuse to let this discourage me from taking control of my own health.
 
-I encourage all women, especially **Black women**, to educate ourselves about: *   PTSD
+I encourage all women, especially **Black women**, to educate ourselves about:
+
+*   PTSD
 *   Thyroid disorders
 *   Other health issues that may affect us disproportionately
 
@@ -1244,7 +1290,7 @@ We must advocate for ourselves and demand that the medical community provides us
 In conclusion, America may be misleading us when it comes to PTSD and thyroid disorders, but we have the power to take control of our own health and well-being. Let's educate ourselves, speak up, and demand the care and attention that we deserve.`,
     date: "2023-03-25",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1255,7 +1301,7 @@ In conclusion, America may be misleading us when it comes to PTSD and thyroid di
 date: "2023-03-25`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1266,7 +1312,7 @@ date: "2023-03-25`,
 date: "2023-03-25`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1287,7 +1333,9 @@ The realities of racial, gender, and social bias still exist, even if we like to
 
 The reassuring part is that in today's society, black men now have the capability, confidence, and community to pursue relationships as a leader.
 
-Black men can demonstrate their leadership through qualities such as: *   Being supportive and involved
+Black men can demonstrate their leadership through qualities such as:
+
+*   Being supportive and involved
 *   Being communicative and emotionally intelligent
 *   Setting healthy boundaries
 
@@ -1298,7 +1346,7 @@ Of course, nobody is perfect, and there is no one-size-fits-all approach that wo
 **Leadership for black men** is not impossible; it is only rarely attempted in a present-day relationship. With a personal commitment to take ownership and make the necessary adjustments, black men can unapologetically embrace the leadership they bring to relationships.`,
     date: "2023-03-25",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1340,7 +1388,7 @@ It's important to remember that finding love is a journey, not a destination. It
 In conclusion, if you're over 40 and wondering if there's any love left to love you, the answer is a resounding **yes**. Your age doesn't define you, and it doesn't mean that you're less deserving of love and happiness. Keep an open heart and mind, and trust that love will come your way when the time is right. Don't let fear hold you back from the possibility of finding your soulmate. Embrace life, take chances, and above all, love yourself.`,
     date: "2023-03-25",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1353,7 +1401,9 @@ In conclusion, if you're over 40 and wondering if there's any love left to love 
 
 **Reclaim peace** by allowing powerful energy to be your guide; it’ll keep you strong with faith.
 
-Persons everyday are learning how they can reclaim peace in their constantly changing environment. Many have found ways to foster their inner peace with activities such as: *   Meditating
+Persons everyday are learning how they can reclaim peace in their constantly changing environment. Many have found ways to foster their inner peace with activities such as:
+
+*   Meditating
 *   Journaling
 *   Prayers
 *   Turning off the TV
@@ -1371,7 +1421,7 @@ The one thing that remains paramount is to stay **consistent** in the pursuit of
 -RoSeé`,
     date: "2023-03-25",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1399,7 +1449,7 @@ Of course, this journey is not easy. It takes time, patience, and a willingness 
 So if you're struggling with mental illness, don't hide from it. Embrace it as an opportunity for growth and transformation. Seek out the support you need, whether that be through therapy, medication, or holistic health practices. Remember, you are not alone, and there is no shame in asking for help. With time, patience, and **self-love**, you can transform your struggles into strengths and emerge stronger and more resilient than ever before.`,
     date: "2023-03-25",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1410,7 +1460,7 @@ So if you're struggling with mental illness, don't hide from it. Embrace it as a
 date: "2023-03-26`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1437,7 +1487,9 @@ The result is a generation of **entitled**, **disrespectful**, and **undisciplin
 
 So what can we do to reverse this trend? How can we teach our kids to be respectful and obedient without resorting to violence or punishment? One solution is to focus on **positive reinforcement** and building strong relationships with our children. We can teach them the value of hard work, responsibility, and consequences in a positive and supportive manner.
 
-Another approach is to reintroduce discipline practices that have been lost over the years. This could mean: *   Incorporating **prayer** or **meditation** into our daily routines.
+Another approach is to reintroduce discipline practices that have been lost over the years. This could mean:
+
+*   Incorporating **prayer** or **meditation** into our daily routines.
 *   Revisiting the idea of **spanking** as a form of discipline (but only if done in an appropriate and safe manner).
 
 The key is to find a balance between **structure** and **freedom**, so our children learn both responsibility and independence.
@@ -1445,7 +1497,7 @@ The key is to find a balance between **structure** and **freedom**, so our child
 In conclusion, **discipline**, **structure**, and **obedience** are all vital traits that we need to instill in our children if they are to succeed in life. While the removal of prayer and punishment from schools and communities may have had some unintended consequences, it is up to us as parents to find new and effective ways to instill these values in our children. Only then can we hope to raise a generation of responsible, respectful, and successful young adults.`,
     date: "",
     readTime: "",
-    image: "/assets/img/blog/assigned/the-decline-of-discipline-losing-prayer-spankings-in-schools-led-to-kids-calling-cops-on-parents.webp",
+    image: "",
     tags: [],
   },
   {
@@ -1456,7 +1508,7 @@ In conclusion, **discipline**, **structure**, and **obedience** are all vital tr
 date: "2023-03-27`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1492,7 +1544,7 @@ Amen.
 *DoGood*`,
     date: "",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1513,7 +1565,9 @@ The **thyroid gland** is a small gland, about the size of a walnut, located in t
 
 ## What are Thyroid Issues?
 
-**Thyroid issues** are conditions in which the thyroid gland produces too much or too little hormones, leading to a range of health problems. There are several different types of thyroid issues, including: *   **Hypothyroidism**: This is a condition in which the thyroid gland does not produce enough hormones. Symptoms of hypothyroidism include fatigue, weight gain, cold intolerance, constipation, dry skin, and depression.
+**Thyroid issues** are conditions in which the thyroid gland produces too much or too little hormones, leading to a range of health problems. There are several different types of thyroid issues, including:
+
+*   **Hypothyroidism**: This is a condition in which the thyroid gland does not produce enough hormones. Symptoms of hypothyroidism include fatigue, weight gain, cold intolerance, constipation, dry skin, and depression.
 
 *   **Hyperthyroidism**: This is a condition in which the thyroid gland produces too much hormones. Symptoms of hyperthyroidism include weight loss, rapid heartbeat, irritability, sweating, and tremors.
 
@@ -1534,7 +1588,7 @@ The thyroid gland may be small, but it plays a big role in our health and wellbe
 Thank you for reading, and remember to take care of yourself – including your thyroid gland!`,
     date: "2023-03-27",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1545,7 +1599,7 @@ Thank you for reading, and remember to take care of yourself – including your 
 date: "2023-03-27`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1560,7 +1614,9 @@ However, embracing this natural function can have numerous benefits, including l
 
 ## Unlocking the Secret: Tips for Squirting
 
-So, how can you unlock the hidden secret of **squirting**? Here are some tips to guide your exploration: 1.  **Get Comfortable with Your Body**
+So, how can you unlock the hidden secret of **squirting**? Here are some tips to guide your exploration:
+
+1.  **Get Comfortable with Your Body**
 
     Before you can start **squirting**, you need to be comfortable with your body and understand what feels good for you. Spend some time exploring your erogenous zones and figuring out what turns you on. This self-discovery is a crucial first step.
 
@@ -1574,7 +1630,9 @@ So, how can you unlock the hidden secret of **squirting**? Here are some tips to
 
 ## The Benefits of Squirting
 
-So, why should you bother **squirting** in the first place? Beyond the pleasure, there are several significant benefits: 1.  **Lower Stress Levels**
+So, why should you bother **squirting** in the first place? Beyond the pleasure, there are several significant benefits:
+
+1.  **Lower Stress Levels**
 
     **Squirting** can release **endorphins** and **oxytocin**, which are natural stress-relievers. This can help you feel more relaxed and less anxious, contributing to overall well-being.
 
@@ -1593,7 +1651,7 @@ Overall, **squirting** can be a thrilling and rewarding experience for women who
 -DoGood`,
     date: "2023-04-02",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1624,7 +1682,9 @@ While it's understandable to feel anxious or stressed when interacting with the 
 
 ### Strategies for Managing Anxiety
 
-Some effective strategies for managing anxiety during police encounters include: *   **Educate yourself**: Knowing your rights and understanding the law can help you feel more confident and in control when interacting with the police. Take the time to learn about your legal rights and how to assert them in different situations.
+Some effective strategies for managing anxiety during police encounters include:
+
+*   **Educate yourself**: Knowing your rights and understanding the law can help you feel more confident and in control when interacting with the police. Take the time to learn about your legal rights and how to assert them in different situations.
 *   **Practice self-care**: Self-care techniques such as deep breathing, meditation, and mindfulness can help to calm your mind and reduce feelings of anxiety and panic. Taking care of your physical and emotional well-being can also help to reduce stress in high-pressure situations.
 *   **Seek support**: If you have experienced trauma or negative experiences with law enforcement in the past, it can be helpful to seek support from a therapist or counselor. Talking through your experiences and learning **coping strategies** can help to reduce feelings of panic and anxiety.
 
@@ -1635,7 +1695,7 @@ If you are a member of a marginalized community that is disproportionately impac
 In conclusion, feeling mental panic when interacting with the police is a common experience for many individuals, particularly those who have had negative experiences with law enforcement in the past or who belong to marginalized communities. While it's important to be prepared and take steps to protect yourself, it's also important to remember that there are strategies that can be used to reduce feelings of anxiety and panic. By educating yourself, practicing self-care, seeking support, and advocating for change, you can navigate interactions with the police with greater confidence and control.`,
     date: "2023-04-30",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1695,7 +1755,7 @@ So, what can you do when your good intentions are not coming across as intended?
 Misunderstandings are a natural part of human interaction, but by being mindful of our communication and following these steps, we can ensure our good intentions are more effectively conveyed and relationships remain strong.`,
     date: "2023-05-01",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1718,7 +1778,9 @@ In addition to these factors, the removal of corporal punishment in schools and 
 
 ## A Path Forward: Addressing the Issue
 
-So what can be done to address this issue? There are no easy answers, but some possible solutions include: *   Providing greater support for single parent families
+So what can be done to address this issue? There are no easy answers, but some possible solutions include:
+
+*   Providing greater support for single parent families
 *   Promoting positive role models
 *   Creating opportunities for black men to become more involved in the lives of their children
 
@@ -1735,7 +1797,7 @@ Host of The AskDoGood Show
 The Dope Cloud TeacHer`,
     date: "2023-05-05",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1766,7 +1828,9 @@ In some cases, individuals may even resort to illegal activities to support thei
 
 Preventing gambling addiction involves practicing **responsible gambling habits** and recognizing the early signs of addiction. Setting limits on time and money spent gambling, avoiding chasing losses, and seeking support from loved ones are all important strategies to prevent gambling addiction.
 
-For those already struggling with gambling addiction, various treatment options are available, including: *   Counseling
+For those already struggling with gambling addiction, various treatment options are available, including:
+
+*   Counseling
 *   Support groups
 *   Self-help strategies
 
@@ -1779,7 +1843,7 @@ While gambling can be a fun and exciting activity, it’s important to recognize
 By practicing responsible gambling habits, recognizing the early signs of addiction, and seeking help and support when needed, individuals can overcome gambling addiction and regain control of their lives.`,
     date: "2023-05-09",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1797,7 +1861,9 @@ By practicing responsible gambling habits, recognizing the early signs of addict
 
 ## Why Observe Your Child's Motor Skills?
 
-Observing your child's motor skills can provide valuable information about their physical abilities and potential for athleticism. Here are some key reasons why it's important to observe your child's motor skills: ### Identifying Natural Abilities
+Observing your child's motor skills can provide valuable information about their physical abilities and potential for athleticism. Here are some key reasons why it's important to observe your child's motor skills:
+
+### Identifying Natural Abilities
 
 Motor skills can be an early indicator of your child's **natural physical talents**. For example, if your child demonstrates excellent balance, coordination, and agility, they may have a natural aptitude for sports that require these skills, such as gymnastics, soccer, or basketball. By observing their motor skills, you can identify their strengths and interests, which can guide you in finding suitable sports or physical activities for them to excel in.
 
@@ -1819,12 +1885,14 @@ Athletic success can significantly impact a child's **confidence and self-esteem
 
 ## How to Observe Your Child's Motor Skills
 
-So, how can you observe your child's motor skills to determine their athletic abilities? Here are some tips: *   **Playtime Observation**: During playtime, carefully observe how your child moves and interacts with their environment. Notice their balance, coordination, and agility.
+So, how can you observe your child's motor skills to determine their athletic abilities? Here are some tips:
+
+*   **Playtime Observation**: During playtime, carefully observe how your child moves and interacts with their environment. Notice their balance, coordination, and agility.
 
 By paying close attention to your child's motor skills, you can gain valuable insights into their athletic potential and help guide them toward activities where they can thrive. This observation is not about pressuring them, but about providing the right support for their natural development and interests.`,
     date: "2023-05-09",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1871,7 +1939,7 @@ While cosmetic procedures like Botox injections have their place in the world of
 `,
     date: "2023-05-10",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1892,7 +1960,9 @@ In addition to health benefits, a vegan lifestyle also has a **positive impact o
 
 ## Potential Drawbacks
 
-However, there are also potential drawbacks to a vegan lifestyle. One of the most significant is the difficulty in obtaining certain nutrients that are primarily found in animal products, such as: *   **Vitamin B12**
+However, there are also potential drawbacks to a vegan lifestyle. One of the most significant is the difficulty in obtaining certain nutrients that are primarily found in animal products, such as:
+
+*   **Vitamin B12**
 *   **Iron**
 *   **Omega-3 fatty acids**
 
@@ -1905,7 +1975,7 @@ Another potential drawback is the **social aspect** of a vegan lifestyle. It can
 In conclusion, a vegan lifestyle has both **benefits and drawbacks**. While it can improve health and have a positive impact on the environment, it requires careful attention to meeting nutritional needs and may present social challenges. It is ultimately up to the individual to decide if a vegan lifestyle is right for them.`,
     date: "2023-05-11",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1958,10 +2028,12 @@ Your **peace** is a **boundary**, not a bonus. Make **mindfulness** a daily, con
 
 And not only do you owe yourself the peace, but even more, you owe yourself the desire to **maintain it**.
 
-Related on AskDoGood: *   **Finding Peace Through Prayer & Relationships**`,
+Related on AskDoGood:
+
+*   **Finding Peace Through Prayer & Relationships**`,
     date: "2023-05-13",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -1986,7 +2058,9 @@ Despite the constant need, the supply of plasma is inherently limited, while the
 
 ## Who Can Donate Plasma?
 
-Plasma donation is a safe and generally straightforward process, and most healthy adults are eligible to donate. To ensure the safety of both the donor and the recipient, certain criteria must be met: *   **Age:** Donors must be at least 18 years old.
+Plasma donation is a safe and generally straightforward process, and most healthy adults are eligible to donate. To ensure the safety of both the donor and the recipient, certain criteria must be met:
+
+*   **Age:** Donors must be at least 18 years old.
 *   **Weight:** Donors must weigh at least 110 pounds.
 *   **Screening:** Donors must successfully pass a medical screening process to confirm their plasma is suitable for donation.
 
@@ -2003,7 +2077,7 @@ In conclusion, **plasma donation is a critical process** that helps save countle
 By choosing to donate their plasma, individuals can make a significant and tangible impact, directly improving the health and well-being of others in their community and beyond. If you are interested in becoming a plasma donor, please contact your local blood center or plasma donation center to learn more about the process and how you can help make a difference.`,
     date: "2023-05-14",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2033,7 +2107,7 @@ Learning from damaged people is not about glorifying their pain or minimizing th
 In conclusion, damaged people have much to teach us about life. We can learn from their **resilience**, **empathy**, **appreciation**, **strength**, and **perspective**. By being open to learning from these individuals, we can become better, more well-rounded individuals who are better equipped to handle the challenges that life throws our way.`,
     date: "2023-05-15",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2064,7 +2138,9 @@ Quitting chain smoking is a challenging but achievable goal. The first step is t
 
 Next, it is crucial to **identify triggers**. Determine what situations, emotions, or habits trigger your chain smoking. Once identified, try to avoid these situations or find healthier alternatives to manage stress or anxiety.
 
-Consider using **nicotine replacement therapy (NRT)**. NRT can help reduce cravings and make it easier to quit smoking. Options include: *   Nicotine patches
+Consider using **nicotine replacement therapy (NRT)**. NRT can help reduce cravings and make it easier to quit smoking. Options include:
+
+*   Nicotine patches
 *   Nicotine gum
 *   Nicotine lozenges
 
@@ -2077,7 +2153,7 @@ Finally, **stay motivated** and focused on your goal. Quitting smoking is a jour
 Chain smoking can have serious negative effects on your health, but quitting is possible. By making a plan, identifying triggers, using nicotine replacement therapy, seeking professional help, and staying motivated, you can successfully quit chain smoking and improve your overall health and well-being. Remember, quitting smoking is a journey and may take time, but the **benefits to your health are worth the effort**.`,
     date: "2023-05-16",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2092,7 +2168,9 @@ However, there are several ways around infertility for those who want to have ch
 
 ## Fertility Treatments
 
-There are several fertility treatments available that can help couples conceive. Some of these treatments include: - **Intrauterine insemination (IUI):** A procedure where sperm is directly inserted into the uterus to increase the chances of fertilization.
+There are several fertility treatments available that can help couples conceive. Some of these treatments include:
+
+- **Intrauterine insemination (IUI):** A procedure where sperm is directly inserted into the uterus to increase the chances of fertilization.
 
 - **In vitro fertilization (IVF):** A procedure where eggs are removed from the woman's ovaries, fertilized in a laboratory, and then implanted into the uterus.
 
@@ -2100,13 +2178,17 @@ There are several fertility treatments available that can help couples conceive.
 
 ## Adoption
 
-Adoption is another option for couples who are unable to conceive. Adoption involves taking legal responsibility for a child who is not biologically related to the couple. There are several different types of adoption, including: - Domestic adoption  
+Adoption is another option for couples who are unable to conceive. Adoption involves taking legal responsibility for a child who is not biologically related to the couple. There are several different types of adoption, including:
+
+- Domestic adoption  
 - International adoption  
 - Foster care adoption  
 
 ## Surrogacy
 
-Surrogacy is another option for couples who are unable to conceive. It involves using a surrogate mother to carry a child to term for the couple. There are two types of surrogacy: - **Traditional surrogacy:** The surrogate mother is biologically related to the child.  
+Surrogacy is another option for couples who are unable to conceive. It involves using a surrogate mother to carry a child to term for the couple. There are two types of surrogacy:
+
+- **Traditional surrogacy:** The surrogate mother is biologically related to the child.  
 - **Gestational surrogacy:** The surrogate mother is not biologically related to the child.  
 
 ## Donor Eggs or Sperm
@@ -2127,7 +2209,7 @@ Infertility can be a challenging and emotional experience for couples who want t
 It is important to explore all options and find the one that is right for you and your partner. With the right support and resources, starting a family is possible, even for those dealing with infertility.`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2148,7 +2230,9 @@ Use online salary calculators and talk to colleagues or industry contacts to get
 
 ### Document Your Accomplishments
 
-It's important to be able to **demonstrate your value** to the company when asking for a raise. Make a list of your accomplishments over the past year, including: *   Any projects you've completed
+It's important to be able to **demonstrate your value** to the company when asking for a raise. Make a list of your accomplishments over the past year, including:
+
+*   Any projects you've completed
 *   Sales you've made
 *   Other significant contributions you've made to the company
 
@@ -2170,14 +2254,16 @@ Practice responding to potential objections or concerns your employer may raise.
 
 When asking for a raise, it's important to be **open to negotiation**. Your employer may not be able to offer you the exact salary increase you're asking for, but they may be able to offer other benefits or perks that can help make up the difference.
 
-Be prepared to discuss alternatives to a salary increase, such as: *   Additional vacation time
+Be prepared to discuss alternatives to a salary increase, such as:
+
+*   Additional vacation time
 *   Flexible scheduling
 *   Professional development opportunities
 
 In conclusion, asking for a raise after just one year on the job is **not unreasonable** if you feel that your contributions to the company justify it. By following these steps, you can increase your chances of success. Remember to be **professional and confident** in your approach, and be prepared to make a compelling case for why you deserve a raise.`,
     date: "2023-05-18",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2188,7 +2274,7 @@ In conclusion, asking for a raise after just one year on the job is **not unreas
 date: "2023-05-19`,
     date: "",
     readTime: "1 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2202,7 +2288,7 @@ date: "2023-05-20
 In conclusion, taking these important steps regarding **life insurance** is crucial to ensure that your loved ones are financially protected and have **peace of mind** during a difficult time. By evaluating your needs, choosing the right type of policy, researching and comparing insurers, reviewing and updating your policy regularly, designating beneficiaries, communicating with your loved ones, and keeping your policy and documents safe, you can secure your family's future. These actions are a final act of love and responsibility, ensuring your legacy provides the support your family deserves.`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2244,7 +2330,7 @@ In conclusion, the belief that the size of a man's shoes determines the size of 
 It's important to embrace and appreciate the **diversity of human anatomy** and not make assumptions or judgments based on external physical traits. Sexual health and well-being are influenced by many complex factors, and penis size should not be a source of concern or comparison. It's always best to rely on **accurate and evidence-based information** rather than fallacies or myths when it comes to matters of sexual health and human anatomy.`,
     date: "2023-05-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2257,7 +2343,9 @@ In this blog, we will explore cystic fibrosis in more detail, including its symp
 
 ## Symptoms of Cystic Fibrosis
 
-Cystic fibrosis affects various organs in the body, and the severity of symptoms can vary widely between individuals. Some of the most common symptoms of cystic fibrosis include: 1.  **Persistent coughing**: People with cystic fibrosis may experience chronic coughing that produces thick mucus.
+Cystic fibrosis affects various organs in the body, and the severity of symptoms can vary widely between individuals. Some of the most common symptoms of cystic fibrosis include:
+
+1.  **Persistent coughing**: People with cystic fibrosis may experience chronic coughing that produces thick mucus.
 2.  **Shortness of breath**: The accumulation of mucus in the lungs can make it difficult to breathe, leading to shortness of breath and wheezing.
 3.  **Recurring lung infections**: People with cystic fibrosis are more susceptible to lung infections, which can cause fever, fatigue, and difficulty breathing.
 4.  **Poor growth**: Children with cystic fibrosis may have trouble gaining weight and growing properly due to digestive problems.
@@ -2271,7 +2359,9 @@ Cystic fibrosis is an **inherited disease**, which means that it is passed down 
 
 ## Treatment Options for Cystic Fibrosis
 
-While there is currently no cure for cystic fibrosis, there are various treatment options available that can help manage the symptoms and improve quality of life. Some of these options include: *   **Airway clearance techniques**: These techniques involve using various devices and exercises to loosen and remove mucus from the lungs.
+While there is currently no cure for cystic fibrosis, there are various treatment options available that can help manage the symptoms and improve quality of life. Some of these options include:
+
+*   **Airway clearance techniques**: These techniques involve using various devices and exercises to loosen and remove mucus from the lungs.
 *   **Medications**: There are various medications available that can help reduce inflammation in the airways, open up the airways, and prevent or treat infections.
 *   **Nutritional support**: People with cystic fibrosis may have trouble absorbing nutrients from their food, so they may need to take enzyme supplements and eat a high-calorie diet to maintain their weight and growth.
 *   **Lung transplant**: In severe cases, a lung transplant may be necessary to improve lung function and quality of life.
@@ -2283,7 +2373,7 @@ Cystic fibrosis is a serious genetic disease that affects various organs in the 
 If you or someone you know has been diagnosed with cystic fibrosis, it is important to work closely with a healthcare team to develop a personalized treatment plan that meets your unique needs and goals. With proper management, people with cystic fibrosis can lead full and active lives."`,
     date: "2023-05-23",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2325,7 +2415,7 @@ If you're struggling with managing stress on the job, consider seeking support f
 In conclusion, managing stress on the job when you feel the need to be nice, even when you're not naturally inclined to be, can be challenging. It's important to acknowledge the impact it can have on your mental health and take steps to manage stress effectively. By practicing self-care, setting boundaries, finding outlets for stress, being authentic, and seeking support when needed, you can better cope with the pressures of your job and prioritize your mental well-being. Remember, it's okay to be true to yourself while still maintaining professionalism at work. Your mental health matters, and taking care of it should be a **priority**."`,
     date: "2023-05-24",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2374,7 +2464,9 @@ Being able to speak multiple languages can also connect toddlers with their exte
 
 ## Tips for Teaching a Toddler Multiple Languages
 
-If you're interested in teaching your toddler multiple languages, here are some tips to keep in mind: *   **Start Early**: The earlier you start, the better. Research suggests that the optimal time for language learning is during the toddler years when the brain is highly receptive to language development.
+If you're interested in teaching your toddler multiple languages, here are some tips to keep in mind:
+
+*   **Start Early**: The earlier you start, the better. Research suggests that the optimal time for language learning is during the toddler years when the brain is highly receptive to language development.
 *   **Consistency is Key**: Ensure consistent exposure to both languages. This could be through dedicated language time, using one language for specific activities, or having different family members speak different languages.
 *   **Make it Fun**: Use games, songs, books, and interactive activities to make language learning enjoyable and engaging for your toddler.
 *   **Seek Support**: Connect with other bilingual families or seek out language classes or resources to support your efforts.
@@ -2383,7 +2475,7 @@ The earlier toddlers are exposed to multiple languages, the greater the potentia
 `,
     date: "2023-05-25",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2394,7 +2486,7 @@ The earlier toddlers are exposed to multiple languages, the greater the potentia
 date: "2023-05-26`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2405,7 +2497,7 @@ date: "2023-05-26`,
 date: "2023-05-27`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2416,7 +2508,7 @@ date: "2023-05-27`,
 date: "2023-05-28`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2427,7 +2519,7 @@ date: "2023-05-28`,
 date: "2023-05-29`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2487,7 +2579,7 @@ So, what can you do when your good intentions are not coming across as intended?
 Misunderstandings are a natural part of human interaction, but by being mindful of our communication and following these steps, we can ensure our good intentions are more effectively conveyed and relationships remain strong.`,
     date: "2023-05-01",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2498,7 +2590,7 @@ Misunderstandings are a natural part of human interaction, but by being mindful 
 date: "2023-05-31`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2509,7 +2601,7 @@ date: "2023-05-31`,
 date: "2023-06-01`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2520,7 +2612,7 @@ date: "2023-06-01`,
 date: "2023-06-02`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2531,7 +2623,7 @@ date: "2023-06-02`,
 date: "2023-06-03`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2542,7 +2634,7 @@ date: "2023-06-03`,
 date: "2023-06-04`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2553,7 +2645,7 @@ date: "2023-06-04`,
 date: "2023-06-05`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2564,7 +2656,7 @@ date: "2023-06-05`,
 date: "2023-06-06`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2575,7 +2667,7 @@ date: "2023-06-06`,
 date: "2023-06-07`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2586,7 +2678,7 @@ date: "2023-06-07`,
 date: "2023-06-08`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2597,7 +2689,7 @@ date: "2023-06-08`,
 date: "2023-06-09`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2608,7 +2700,7 @@ date: "2023-06-09`,
 date: "2023-06-13`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2619,7 +2711,7 @@ date: "2023-06-13`,
 date: "2023-06-15`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2630,7 +2722,7 @@ date: "2023-06-15`,
 date: "2023-06-16`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2641,7 +2733,7 @@ date: "2023-06-16`,
 date: "2023-06-19`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2652,7 +2744,7 @@ date: "2023-06-19`,
 date: "2023-06-21`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2663,7 +2755,7 @@ date: "2023-06-21`,
 date: "2023-11-22`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2674,7 +2766,7 @@ date: "2023-11-22`,
 date: "2024-09-07`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2685,7 +2777,7 @@ date: "2024-09-07`,
 date: "2024-09-18`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2696,7 +2788,7 @@ date: "2024-09-18`,
 date: "2024-09-18`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2707,7 +2799,7 @@ date: "2024-09-18`,
 date: "2024-09-19`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2718,7 +2810,7 @@ date: "2024-09-19`,
 date: "2024-09-19`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2729,7 +2821,7 @@ date: "2024-09-19`,
 date: "2024-09-20`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2740,7 +2832,7 @@ date: "2024-09-20`,
 date: "2024-12-29`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2751,7 +2843,7 @@ date: "2024-12-29`,
 date: "2025-01-18`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2762,7 +2854,7 @@ date: "2025-01-18`,
 date: "2025-01-19`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2773,7 +2865,7 @@ date: "2025-01-19`,
 date: "2025-01-24`,
     date: "",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2784,7 +2876,7 @@ date: "2025-01-24`,
 date: "2025-01-21`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2795,7 +2887,7 @@ date: "2025-01-21`,
 date: "2025-01-23`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2806,7 +2898,7 @@ date: "2025-01-23`,
 date: "2025-02-20`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2817,7 +2909,7 @@ date: "2025-02-20`,
 date: "2025-02-28`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2828,7 +2920,7 @@ date: "2025-02-28`,
 date: "2025-03-05`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2839,7 +2931,7 @@ date: "2025-03-05`,
 date: "2025-04-27`,
     date: "",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2873,7 +2965,7 @@ You can blend it into your morning **smoothies**, stir it into **teas** or **sou
 For many, including those living with conditions like thyroid issues, sea moss has proven to be a **game-changer** in their wellness journey. It's one of those simple, natural additions that can make a profound difference in how you feel every day.`,
     date: "2024-10-15",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/sea-moss.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/sea-moss.webp",
     tags: ["Superfoods", "Thyroid Health", "Black Women"],
     featured: true,
   },
@@ -2885,7 +2977,7 @@ For many, including those living with conditions like thyroid issues, sea moss h
 date: "2025-06-18`,
     date: "",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2896,7 +2988,7 @@ date: "2025-06-18`,
 date: "2025-06-30`,
     date: "",
     readTime: "6 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -2907,7 +2999,7 @@ date: "2025-06-30`,
 date: "2025-06-30`,
     date: "",
     readTime: "5 min read",
-    image: "/assets/img/blog/assigned/blog_fallback.webp",
+    image: "https://askdogoodassets.blob.core.windows.net/images/blog/blog_fallback.webp",
     tags: ["Wellness", "Health"],
   },
 ];
