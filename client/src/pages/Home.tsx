@@ -22,6 +22,7 @@ import GardenSeasonsSection from "@/components/GardenSeasonsSection";
 import Testimonials from "@/components/Testimonials";
 import TrustBadges from "@/components/TrustBadges";
 import AffiliateProductRecommendations from "@/components/AffiliateProductRecommendations";
+import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
   useEffect(() => {
@@ -286,101 +287,31 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/garden/spring">
-                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/content/images/garden/spring.webp"
-                      alt="Spring garden"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      onError={(e) => {
-                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
-                      }}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between">
-                      Spring
-                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </CardTitle>
-                    <CardDescription>
-                      Planting with faith and patience
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-
-              <Link href="/garden/summer">
-                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/content/images/garden/summer.webp"
-                      alt="Summer garden"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      onError={(e) => {
-                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
-                      }}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between">
-                      Summer
-                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </CardTitle>
-                    <CardDescription>
-                      Tending what you prayed for
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-
-              <Link href="/garden/fall">
-                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/content/images/garden/fall.webp"
-                      alt="Fall garden harvest"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      onError={(e) => {
-                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
-                      }}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between">
-                      Fall
-                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </CardTitle>
-                    <CardDescription>
-                      Harvest, release, and reflection
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-
-              <Link href="/garden/winter">
-                <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/content/images/garden/winter.webp"
-                      alt="Winter garden rest"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      onError={(e) => {
-                        e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
-                      }}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between">
-                      Winter
-                      <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </CardTitle>
-                    <CardDescription>
-                      Rest, restoration, and trust
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
+              {gardenSeasons.map((season) => (
+                <Link key={season.slug} href={`/garden/${season.slug}`}>
+                  <Card className="group cursor-pointer hover:shadow-xl transition-all overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={season.heroImg}
+                        alt={season.heroAlt}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                        }}
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        {season.title}
+                        <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </CardTitle>
+                      <CardDescription>
+                        {season.subtitle}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
             </div>
 
             <div className="text-center mt-10">
