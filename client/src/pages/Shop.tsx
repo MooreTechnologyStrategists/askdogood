@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Star, Download, Video, BookOpen, Users, Award, Shield, Clock, TrendingUp } from "lucide-react";
+import { useState } from "react";
 
 const products = [
   {
@@ -712,9 +713,52 @@ This is the community I wish I had when I was in the thick of it. Now it's here 
 
 export default function Shop() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [promoCode, setPromoCode] = useState("");
+  const [promoApplied, setPromoApplied] = useState(false);
+  const [promoError, setPromoError] = useState("");
+
+  const applyPromoCode = () => {
+    if (promoCode.toUpperCase() === "MLKLEGACY") {
+      setPromoApplied(true);
+      setPromoError("");
+    } else {
+      setPromoError("Invalid promo code");
+      setPromoApplied(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
+      {/* MLK Legacy Promo Banner */}
+      <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-white">
+        <div className="container py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left">
+              <p className="text-sm font-semibold uppercase tracking-wide mb-1">
+                🕊️ Honoring Dr. King's Legacy
+              </p>
+              <p className="text-lg md:text-xl font-bold">
+                50% OFF Thyroid Health Mastery Course This Week
+              </p>
+              <p className="text-sm opacity-90 mt-1">
+                Use code <span className="font-mono bg-white/20 px-2 py-0.5 rounded">MLKLEGACY</span> at checkout • Valid through January 27, 2026
+              </p>
+            </div>
+            <Button 
+              size="lg"
+              variant="secondary"
+              className="bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
+              onClick={() => {
+                const element = document.getElementById('thyroid-course');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Get Course Now →
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/20 to-accent/10">
         <div className="container">
@@ -762,6 +806,7 @@ export default function Shop() {
               return (
                 <Card 
                   key={product.id} 
+                  id={product.id === 1 ? "thyroid-course" : undefined}
                   className={`hover:shadow-2xl transition-all duration-300 flex flex-col relative group ${
                     product.bestseller || product.popular ? 'border-2 border-primary' : ''
                   }`}
@@ -816,9 +861,21 @@ export default function Shop() {
                           <div className="text-xl text-muted-foreground line-through">
                             ${product.price}
                           </div>
-                        )}
-                        <div className="text-3xl font-bold text-primary">
-                          ${product.foundingPrice || product.price}
+                        {product.id === 1 && promoApplied ? (
+                          <>
+                            <div className="text-xl text-muted-foreground line-through">
+                              ${product.price}
+                            </div>
+                            <div className="text-3xl font-bold text-green-600">
+                              $48.50
+                            </div>
+                            <Badge className="mt-1 bg-green-600">MLK Legacy 50% OFF</Badge>
+                          </>
+                        ) : (
+                          <div className="text-3xl font-bold text-primary">
+                            ${product.foundingPrice || product.price}
+                          </div>
+                        )}oduct.foundingPrice || product.price}
                         </div>
                         {product.recurring && (
                           <div className="text-sm text-muted-foreground">
