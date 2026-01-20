@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Star, Download, Video, BookOpen, Users, Award, Shield, Clock, TrendingUp } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 const products = [
   {
@@ -748,12 +749,11 @@ export default function Shop() {
               size="lg"
               variant="secondary"
               className="bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
-              onClick={() => {
-                const element = document.getElementById('thyroid-course');
-                element?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              asChild
             >
-              Get Course Now →
+              <a href="/course/thyroid-health-mastery">
+                Get Course Now →
+              </a>
             </Button>
           </div>
         </div>
@@ -952,14 +952,27 @@ export default function Shop() {
                   </CardContent>
 
                   <CardFooter className="flex-col gap-2 pt-4">
-                    <Button 
-                      size="lg" 
-                      className="w-full text-lg font-semibold group-hover:scale-105 transition-transform"
-                      onClick={() => setSelectedProduct(product)}
-                    >
-                      {product.recurring ? 'Start Membership' : 'Get Instant Access'}
-                      <TrendingUp className="ml-2 h-5 w-5" />
-                    </Button>
+                    {product.id === 1 ? (
+                      <Button 
+                        size="lg" 
+                        className="w-full text-lg font-semibold group-hover:scale-105 transition-transform"
+                        asChild
+                      >
+                        <Link href="/course/thyroid-health-mastery">
+                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                          <TrendingUp className="ml-2 h-5 w-5" />
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="lg" 
+                        className="w-full text-lg font-semibold group-hover:scale-105 transition-transform"
+                        onClick={() => setSelectedProduct(product)}
+                      >
+                        {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                        <TrendingUp className="ml-2 h-5 w-5" />
+                      </Button>
+                    )}
                     <p className="text-xs text-center text-muted-foreground">
                       <Shield className="h-3 w-3 inline mr-1" />
                       30-day money-back guarantee • Instant access

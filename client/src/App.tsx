@@ -23,8 +23,12 @@ import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
 import Shop from "./pages/Shop";
 import Merch from "./pages/Merch";
 import Interests from "./pages/Interests";
+import ThyroidCourse from "./pages/ThyroidCourse";
 import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
+import ShortStories from "./pages/ShortStories";
+import ChinaWhiteSeries from "./pages/ChinaWhiteSeries";
+import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
 import { Route } from "wouter";
@@ -93,6 +97,12 @@ function Router() {
     {/* Commerce */}
     <Route path="/shop" component={ ShopRedirect} />
     <Route path="/merch" component={Merch} />
+    <Route path="/course/thyroid-health-mastery" component={ThyroidCourse} />
+
+    {/* Stories */}
+    <Route path="/stories" component={ShortStories} />
+    <Route path="/stories/chyna-white" component={ChinaWhiteSeries} />
+    <Route path="/stories/chyna-white/episode-1" component={ChinaWhiteEpisode1} />
 
     {/* Errors */}
     <Route path="/404" component={NotFound} />

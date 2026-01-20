@@ -203,14 +203,11 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* LEFT: Image */}
               <div className="relative">
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden border shadow-lg">
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden border shadow-lg bg-gradient-to-br from-primary/20 to-secondary/20">
                   <img
                     src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-story.webp"
                     alt="RoSeé's wellness journey"
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://askdogoodassets.blob.core.windows.net/images/hero-home.webp';
-                    }}
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-xl max-w-[200px]">
