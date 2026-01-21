@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://askdogood.com/sitemap.xml
+Sitemap: https://askdogood.com/blog-rss.xml

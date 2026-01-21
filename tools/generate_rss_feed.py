@@ -49,8 +49,12 @@ def generate_rss_item(post):
     content = post.get('content', post.get('excerpt', ''))
     excerpt = post.get('excerpt', '')[:200] + "..."
     
-    # Get image URL
-    image_url = f"{SITE_URL}{post.get('image', '/assets/img/blog/_fallback/blog.webp')}"
+    # Get image URL - handle both absolute and relative URLs
+    raw_image = post.get('image', '/assets/img/blog/_fallback/blog.webp')
+    if raw_image.startswith('http://') or raw_image.startswith('https://'):
+        image_url = raw_image
+    else:
+        image_url = f"{SITE_URL}{raw_image}"
     
     item = f"""
     <item>
