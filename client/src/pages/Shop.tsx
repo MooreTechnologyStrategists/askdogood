@@ -857,10 +857,6 @@ export default function Shop() {
                     <div className="flex items-start justify-between mb-3">
                       <IconComponent className="h-8 w-8 text-primary shrink-0" />
                       <div className="text-right">
-                        {product.foundingPrice && (
-                          <div className="text-xl text-muted-foreground line-through">
-                            ${product.price}
-                          </div>
                         {product.id === 1 && promoApplied ? (
                           <>
                             <div className="text-xl text-muted-foreground line-through">
@@ -872,11 +868,17 @@ export default function Shop() {
                             <Badge className="mt-1 bg-green-600">MLK Legacy 50% OFF</Badge>
                           </>
                         ) : (
-                          <div className="text-3xl font-bold text-primary">
-                            ${product.foundingPrice || product.price}
-                          </div>
-                        )}oduct.foundingPrice || product.price}
-                        </div>
+                          <>
+                            {product.foundingPrice && (
+                              <div className="text-xl text-muted-foreground line-through">
+                                ${product.price}
+                              </div>
+                            )}
+                            <div className="text-3xl font-bold text-primary">
+                              ${product.foundingPrice || product.price}
+                            </div>
+                          </>
+                        )}
                         {product.recurring && (
                           <div className="text-sm text-muted-foreground">
                             per {product.recurring}

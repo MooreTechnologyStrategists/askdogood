@@ -398,13 +398,7 @@ export default function ClinicalRecipesApp() {
                     <Button 
                       variant="ghost" 
                       size="sm"
-                      className="hover:bg-amber-100{() => handleEdit(selectedRecipe)}
-                    >
-                      <Edit className="w-4 h-4" />
-                    </Button>
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
+                      className="hover:bg-amber-100"
                       onClick={() => {
                         setShowDetailView(false);
                         setSelectedRecipe(null);
@@ -420,7 +414,15 @@ export default function ClinicalRecipesApp() {
                 <div className="px-6">
                   <img 
                     src={selectedRecipe.imageUrl} 
-                    alt={selectedRecipe.title}amber-50 rounded-lg border border-amber-200">
+                    alt={selectedRecipe.title}
+                    className="w-full h-64 object-cover rounded-lg border border-amber-200"
+                  />
+                </div>
+              )}
+
+              <CardContent className="space-y-6">
+                {/* Recipe Info Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
                   {selectedRecipe.prepTime && (
                     <div className="text-center">
                       <Clock className="w-5 h-5 mx-auto mb-1 text-amber-900" />
@@ -485,17 +487,16 @@ export default function ClinicalRecipesApp() {
                     <h3 className="text-sm font-semibold mb-2 text-amber-950">Tags</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedRecipe.tags.split(',').map((tag, idx) => (
-                        <Badge key={idx} className="bg-stone-200 text-stone-700 hover:bg-stone-300
-
-                {/* Tags */}
-                {selectedRecipe.tags && (
-                  <div>
-                    <h3 className="text-sm font-semibold mb-2">Tags</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedRecipe.tags.split(',').map((tag, idx) => (
-                        <Badge key={idx} variant="secondary">
+                        <Badge key={idx} className="bg-stone-200 text-stone-700 hover:bg-stone-300">
                           {tag.trim()}
-                        </Badge> bg-stone-50">
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </CardContent>
+
+              <CardFooter className="flex gap-2 bg-stone-50">
                 <Button 
                   variant="outline"
                   className="flex-1 border-stone-300 hover:bg-amber-100"
@@ -506,14 +507,7 @@ export default function ClinicalRecipesApp() {
                 </Button>
                 <Button 
                   variant="destructive"
-                  className="bg-red-800 hover:bg-red-900
-                  onClick={() => handleEdit(selectedRecipe)}
-                >
-                  <Edit className="w-4 h-4 mr-2" />
-                  Edit Recipe
-                </Button>
-                <Button 
-                  variant="destructive"
+                  className="bg-red-800 hover:bg-red-900"
                   onClick={() => {
                     if (confirm('Are you sure you want to delete this recipe?')) {
                       deleteMutation.mutate(selectedRecipe.id);
@@ -526,7 +520,15 @@ export default function ClinicalRecipesApp() {
                   Delete
                 </Button>
               </CardFooter>
-            </Card>amber-900" />
+            </Card>
+          </div>
+        )}
+
+        {/* Recipes Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredRecipes.length === 0 ? (
+            <div className="col-span-full text-center py-12">
+              <ChefHat className="w-16 h-16 mx-auto mb-4 text-amber-900" />
               <h3 className="text-xl font-semibold mb-2 text-amber-950">No recipes found</h3>
               <p className="text-stone-600 mb-4">
                 {searchTerm ? 'Try a different search term' : 'Get started by adding your first recipe!'}
@@ -535,17 +537,15 @@ export default function ClinicalRecipesApp() {
                 <Button 
                   onClick={() => setShowCreateForm(true)} 
                   className="gap-2 bg-amber-900 hover:bg-amber-950 text-amber-50"
-                
-            <div className="col-span-full text-center py-12">
-              <ChefHat className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-              <h3 className="text-xl font-semibold mb-2">No recipes found</h3>
-              <p className="text-muted-foreground mb-4">
-                {searchTerm ? 'Try a different search term' : 'Get started by adding your first recipe!'}
-              </p>
-              {!searchTerm && (
-                <Button onClick={() => setShowCreateForm(true)} className="gap-2">
+                >
                   <Plus className="w-4 h-4" />
-                  Add Recipexl transition-all hover:-translate-y-1 border-stone-300">
+                  Add Recipe
+                </Button>
+              )}
+            </div>
+          ) : (
+            filteredRecipes.map((recipe) => (
+              <Card key={recipe.id} className="overflow-hidden shadow-xl transition-all hover:-translate-y-1 border-stone-300">
                 {recipe.imageUrl && (
                   <div className="aspect-video overflow-hidden bg-stone-100">
                     <img
@@ -605,13 +605,7 @@ export default function ClinicalRecipesApp() {
                 <CardFooter className="bg-stone-50">
                   <Button 
                     variant="outline" 
-                    className="w-full border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-amber-50 transition-colors
-                  )}
-                </CardContent>
-                <CardFooter>
-                  <Button 
-                    variant="outline" 
-                    className="w-full"
+                    className="w-full border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-amber-50 transition-colors"
                     onClick={() => {
                       setSelectedRecipe(recipe);
                       setShowDetailView(true);
