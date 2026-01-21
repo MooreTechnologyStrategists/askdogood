@@ -18,19 +18,19 @@ const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
 function getProductRecommendations(slug: string): string[] | null {
   const recommendations: Record<string, string[]> = {
     "the-superpower-of-sea-moss-the-ocean-s-secret-weapon-for-everyday-wellness": [
+      "hairGrowth",
+      "skinSnapback",
       "seaMoss",
-      "vitaminD",
-      "omega3",
     ],
     "how-collagen-saved-my-skin-my-dad-s-mobility-and-maybe-even-my-life": [
+      "skinSnapback",
+      "hairGrowth",
       "collagen",
-      "vitaminD",
-      "turmeric",
     ],
     "superfoods-the-superfood-that-helped-sustain-me-for-7-years": [
+      "weightLoss",
+      "hairGrowth",
       "superBeets",
-      "magnesium",
-      "omega3",
     ],
   };
   return recommendations[slug] ?? null;

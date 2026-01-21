@@ -343,6 +343,7 @@ export default function ClinicalRecipesApp() {
                 <CardFooter className="flex gap-2 justify-end">
                   <Button 
                     type="button" 
+                    variant="outline"
                     className="border-stone-300 hover:bg-stone-100"
                     onClick={() => {
                       setShowCreateForm(false);
@@ -355,14 +356,19 @@ export default function ClinicalRecipesApp() {
                     type="submit" 
                     disabled={createMutation.isPending || updateMutation.isPending} 
                     className="gap-2 bg-amber-900 hover:bg-amber-950 text-amber-50"
-                  
-                  <Button type="submit" disabled={createMutation.isPending || updateMutation.isPending} className="gap-2">
+                  >
                     <Save className="w-4 h-4" />
                     {(createMutation.isPending || updateMutation.isPending) ? 'Saving...' : 'Save Recipe'}
                   </Button>
                 </CardFooter>
               </form>
-            </Card>stone-950/50 backdrop-blur-sm flex items-center justify-center p-4">
+            </Card>
+          </div>
+        )}
+
+        {/* Recipe Detail View Modal */}
+        {showDetailView && selectedRecipe && (
+          <div className="fixed inset-0 z-50 bg-stone-950/50 backdrop-blur-sm flex items-center justify-center p-4">
             <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto border-stone-300 shadow-2xl">
               <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
                 <div className="flex items-start justify-between gap-4">

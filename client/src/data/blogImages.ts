@@ -94,6 +94,7 @@ export const blogImages: Record<string, string> = {
   "understanding-panic-attacks-what-they-are-and-how-to-cope": "/assets/img/blog/assigned/understanding-panic-attacks-what-they-are-and-how-to-cope.webp",
   "unlocking-the-potential-effective-strategies-for-living-with-adhd": "/assets/img/blog/assigned/unlocking-the-potential-effective-strategies-for-living-with-adhd.webp",
   "unlocking-the-world-the-benefits-of-teaching-a-toddler-multiple-languages": "/assets/img/blog/assigned/unlocking-the-world-the-benefits-of-teaching-a-toddler-multiple-languages.webp",
+  "unlocking-potential-observing-your-child-s-motor-skills-to-determine-athletic-abilities": "/assets/img/blog/assigned/healthy-tips-for-daily-workouts.webp",
   "what-is-askdogood": "/assets/img/blog/assigned/what-is-askdogood.webp",
   "what-you-need-to-know-about-serotonin-and-weight-loss": "/assets/img/blog/assigned/what-you-need-to-know-about-serotonin-and-weight-loss.webp",
   "when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication": "/assets/img/blog/assigned/when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication.webp",

@@ -15,40 +15,40 @@ interface Product {
 
 const featuredProducts: Product[] = [
   {
-    name: "SuperBeets Heart Chews",
-    description: "The superfood that helped sustain me for 7+ years during my thyroid recovery. Supports healthy blood pressure and energy.",
-    image: "/images/products/superbeets.jpg",
-    affiliateLink: "https://amzn.to/superbeets",
-    price: "$29.99",
-    rating: 5,
-    category: "Superfood",
-  },
-  {
-    name: "Sea Moss Gel (Organic)",
-    description: "92 of 102 minerals your body needs! Essential for thyroid function and immune support.",
-    image: "/images/products/seamoss.jpg",
-    affiliateLink: "https://amzn.to/seamoss",
+    name: "Hair Growth Formula - Biotin & Collagen",
+    description: "My go-to for stress thinning spots! Helps hair get fuller, thicker, and longer fast. Only downside - you'll have to shave everywhere more often! 💁‍♀️",
+    image: "https://m.media-amazon.com/images/I/71xR5gQYdPL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/49HJmhu",
     price: "$24.99",
     rating: 5,
-    category: "Superfood",
+    category: "Hair Care",
   },
   {
-    name: "Collagen Peptides",
-    description: "Transformed my skin, joints, and overall wellness. The supplement that truly delivers results.",
-    image: "/images/products/collagen.jpg",
-    affiliateLink: "https://amzn.to/collagen",
+    name: "Quick Weight Loss Supplement",
+    description: "When I seriously need to lose a few pounds quick, this is my secret weapon. Fast results you can actually see! 🔥",
+    image: "https://m.media-amazon.com/images/I/71JtZqZ8YxL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/4b5H0LN",
     price: "$34.99",
     rating: 5,
-    category: "Supplement",
+    category: "Weight Management",
   },
   {
-    name: "Thyroid Support Supplement",
-    description: "Comprehensive thyroid formula with selenium, zinc, and iodine. My go-to recommendation.",
-    image: "/images/products/thyroid-support.jpg",
-    affiliateLink: "https://amzn.to/thyroidsupport",
-    price: "$27.99",
-    rating: 4,
-    category: "Supplement",
+    name: "Youthful Skin Complex - The Snapback",
+    description: "I call this my 'snapback' - take this for a few days and see the results in glowy, youthful skin. Absolutely love it! ✨",
+    image: "https://m.media-amazon.com/images/I/61oqvGH7zVL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/3YMbdIr",
+    price: "$29.99",
+    rating: 5,
+    category: "Skin Care",
+  },
+  {
+    name: "Premium Thermal Fleece Lined Leggings",
+    description: "I love these SO much I bought 4 pairs! Amazing price, feel, length, and quality. Perfect as main pants or layered for cold weather. 🖤",
+    image: "https://m.media-amazon.com/images/I/61z8M+kDe9L._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/4pIJGm1",
+    price: "$19.99",
+    rating: 5,
+    category: "Apparel",
   },
 ];
 
@@ -58,11 +58,11 @@ export default function AffiliateProductRecommendations() {
       <div className="container">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-            Products I Actually Use & Recommend
+            Rosee's Personal Favorites
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            These are the supplements and products that made a real difference in my thyroid recovery journey. 
-            I only recommend what I personally use and trust.
+            These are the products I actually use and swear by - no BS, just real results from things that work for me. 
+            From hair growth to glowing skin, these are my everyday essentials. 💯
           </p>
           <p className="text-xs text-muted-foreground mt-2">
             * As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
