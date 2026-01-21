@@ -160,8 +160,8 @@ export default function ClinicalRecipesApp() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <ChefHat className="w-12 h-12 mx-auto mb-4 text-primary animate-bounce" />
-          <p className="text-muted-foreground">Loading recipes...</p>
+          <ChefHat className="w-12 h-12 mx-auto mb-4 text-amber-900 animate-bounce" />
+          <p className="text-stone-600">Loading recipes...</p>
         </div>
       </div>
     );
@@ -170,16 +170,20 @@ export default function ClinicalRecipesApp() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="border-b bg-gradient-to-r from-primary/10 to-secondary/10">
+      <div className="border-b bg-gradient-to-br from-amber-900/20 via-orange-900/15 to-stone-800/20">
         <div className="container py-12">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold mb-2">Clinical Food RX</h1>
-              <p className="text-muted-foreground">
+              <h1 className="text-4xl font-bold mb-2 text-amber-950 font-serif">Clinical Food RX</h1>
+              <p className="text-stone-700">
                 Thyroid-supporting, anti-inflammatory recipes designed for healing
               </p>
             </div>
-            <Button onClick={() => setShowCreateForm(true)} size="lg" className="gap-2">
+            <Button 
+              onClick={() => setShowCreateForm(true)} 
+              size="lg" 
+              className="gap-2 bg-amber-900 hover:bg-amber-950 text-amber-50"
+            >
               <Plus className="w-5 h-5" />
               Add Recipe
             </Button>
@@ -191,26 +195,27 @@ export default function ClinicalRecipesApp() {
         {/* Search Bar */}
         <div className="mb-8">
           <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-500" />
             <Input
               placeholder="Search recipes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
+              className="pl-10 border-stone-300 focus:border-amber-900 focus:ring-amber-900"
             />
           </div>
         </div>
 
         {/* Create/Edit Form Modal */}
         {showCreateForm && (
-          <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <Card className="w-full max-w-3xl max-h-[90vh] overflow-y-auto">
-              <CardHeader>
+          <div className="fixed inset-0 z-50 bg-stone-950/50 backdrop-blur-sm flex items-center justify-center p-4">
+            <Card className="w-full max-w-3xl max-h-[90vh] overflow-y-auto border-stone-300 shadow-2xl">
+              <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
                 <div className="flex items-center justify-between">
-                  <CardTitle>{selectedRecipe ? 'Edit' : 'Create'} Recipe</CardTitle>
+                  <CardTitle className="text-amber-950 font-serif">{selectedRecipe ? 'Edit' : 'Create'} Recipe</CardTitle>
                   <Button 
                     variant="ghost" 
                     size="sm"
+                    className="hover:bg-amber-100"
                     onClick={() => {
                       setShowCreateForm(false);
                       resetForm();
@@ -219,7 +224,7 @@ export default function ClinicalRecipesApp() {
                     <X className="w-4 h-4" />
                   </Button>
                 </div>
-                <CardDescription>
+                <CardDescription className="text-stone-700">
                   Add a new thyroid-supporting recipe to your collection
                 </CardDescription>
               </CardHeader>
@@ -338,7 +343,7 @@ export default function ClinicalRecipesApp() {
                 <CardFooter className="flex gap-2 justify-end">
                   <Button 
                     type="button" 
-                    variant="outline"
+                    className="border-stone-300 hover:bg-stone-100"
                     onClick={() => {
                       setShowCreateForm(false);
                       resetForm();
@@ -346,33 +351,32 @@ export default function ClinicalRecipesApp() {
                   >
                     Cancel
                   </Button>
+                  <Button 
+                    type="submit" 
+                    disabled={createMutation.isPending || updateMutation.isPending} 
+                    className="gap-2 bg-amber-900 hover:bg-amber-950 text-amber-50"
+                  
                   <Button type="submit" disabled={createMutation.isPending || updateMutation.isPending} className="gap-2">
                     <Save className="w-4 h-4" />
                     {(createMutation.isPending || updateMutation.isPending) ? 'Saving...' : 'Save Recipe'}
                   </Button>
                 </CardFooter>
               </form>
-            </Card>
-          </div>
-        )}
-
-        {/* Recipe Detail View Modal */}
-        {showDetailView && selectedRecipe && (
-          <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto">
-              <CardHeader>
+            </Card>stone-950/50 backdrop-blur-sm flex items-center justify-center p-4">
+            <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto border-stone-300 shadow-2xl">
+              <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-3xl mb-2">{selectedRecipe.title}</CardTitle>
+                    <CardTitle className="text-3xl mb-2 text-amber-950 font-serif">{selectedRecipe.title}</CardTitle>
                     {selectedRecipe.description && (
-                      <CardDescription className="text-base">{selectedRecipe.description}</CardDescription>
+                      <CardDescription className="text-base text-stone-700">{selectedRecipe.description}</CardDescription>
                     )}
                     <div className="flex flex-wrap gap-2 mt-3">
                       {selectedRecipe.category && (
-                        <Badge variant="outline">{selectedRecipe.category}</Badge>
+                        <Badge variant="outline" className="border-amber-900 text-amber-900">{selectedRecipe.category}</Badge>
                       )}
                       {selectedRecipe.isPremium && (
-                        <Badge variant="secondary">Premium</Badge>
+                        <Badge className="bg-amber-900 text-amber-50">Premium</Badge>
                       )}
                     </div>
                   </div>
@@ -380,7 +384,15 @@ export default function ClinicalRecipesApp() {
                     <Button 
                       variant="outline" 
                       size="sm"
+                      className="border-stone-300 hover:bg-amber-100"
                       onClick={() => handleEdit(selectedRecipe)}
+                    >
+                      <Edit className="w-4 h-4" />
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="hover:bg-amber-100{() => handleEdit(selectedRecipe)}
                     >
                       <Edit className="w-4 h-4" />
                     </Button>
@@ -402,53 +414,45 @@ export default function ClinicalRecipesApp() {
                 <div className="px-6">
                   <img 
                     src={selectedRecipe.imageUrl} 
-                    alt={selectedRecipe.title}
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-              )}
-
-              <CardContent className="space-y-6 mt-4">
-                {/* Recipe Stats */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-muted rounded-lg">
+                    alt={selectedRecipe.title}amber-50 rounded-lg border border-amber-200">
                   {selectedRecipe.prepTime && (
                     <div className="text-center">
-                      <Clock className="w-5 h-5 mx-auto mb-1 text-muted-foreground" />
-                      <p className="text-sm font-medium">Prep Time</p>
-                      <p className="text-sm text-muted-foreground">{selectedRecipe.prepTime} min</p>
+                      <Clock className="w-5 h-5 mx-auto mb-1 text-amber-900" />
+                      <p className="text-sm font-medium text-amber-950">Prep Time</p>
+                      <p className="text-sm text-stone-600">{selectedRecipe.prepTime} min</p>
                     </div>
                   )}
                   {selectedRecipe.cookTime && (
                     <div className="text-center">
-                      <Clock className="w-5 h-5 mx-auto mb-1 text-muted-foreground" />
-                      <p className="text-sm font-medium">Cook Time</p>
-                      <p className="text-sm text-muted-foreground">{selectedRecipe.cookTime} min</p>
+                      <Clock className="w-5 h-5 mx-auto mb-1 text-amber-900" />
+                      <p className="text-sm font-medium text-amber-950">Cook Time</p>
+                      <p className="text-sm text-stone-600">{selectedRecipe.cookTime} min</p>
                     </div>
                   )}
                   {selectedRecipe.servings && (
                     <div className="text-center">
-                      <Users className="w-5 h-5 mx-auto mb-1 text-muted-foreground" />
-                      <p className="text-sm font-medium">Servings</p>
-                      <p className="text-sm text-muted-foreground">{selectedRecipe.servings}</p>
+                      <Users className="w-5 h-5 mx-auto mb-1 text-amber-900" />
+                      <p className="text-sm font-medium text-amber-950">Servings</p>
+                      <p className="text-sm text-stone-600">{selectedRecipe.servings}</p>
                     </div>
                   )}
                   {selectedRecipe.calories && (
                     <div className="text-center">
-                      <Flame className="w-5 h-5 mx-auto mb-1 text-muted-foreground" />
-                      <p className="text-sm font-medium">Calories</p>
-                      <p className="text-sm text-muted-foreground">{selectedRecipe.calories}</p>
+                      <Flame className="w-5 h-5 mx-auto mb-1 text-amber-900" />
+                      <p className="text-sm font-medium text-amber-950">Calories</p>
+                      <p className="text-sm text-stone-600">{selectedRecipe.calories}</p>
                     </div>
                   )}
                 </div>
 
                 {/* Ingredients */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Ingredients</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Ingredients</h3>
                   <ul className="space-y-2">
                     {selectedRecipe.ingredients.split('\n').filter(i => i.trim()).map((ingredient, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span>{ingredient.trim()}</span>
+                        <span className="text-amber-900 mt-1">•</span>
+                        <span className="text-stone-700">{ingredient.trim()}</span>
                       </li>
                     ))}
                   </ul>
@@ -456,18 +460,26 @@ export default function ClinicalRecipesApp() {
 
                 {/* Instructions */}
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Instructions</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Instructions</h3>
                   <ol className="space-y-3">
                     {selectedRecipe.instructions.split('\n').filter(i => i.trim()).map((instruction, idx) => (
                       <li key={idx} className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-semibold">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-900 text-amber-50 flex items-center justify-center text-sm font-semibold">
                           {idx + 1}
                         </span>
-                        <span className="flex-1 pt-0.5">{instruction.replace(/^\d+\.\s*/, '').trim()}</span>
+                        <span className="flex-1 pt-0.5 text-stone-700">{instruction.replace(/^\d+\.\s*/, '').trim()}</span>
                       </li>
                     ))}
                   </ol>
                 </div>
+
+                {/* Tags */}
+                {selectedRecipe.tags && (
+                  <div>
+                    <h3 className="text-sm font-semibold mb-2 text-amber-950">Tags</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedRecipe.tags.split(',').map((tag, idx) => (
+                        <Badge key={idx} className="bg-stone-200 text-stone-700 hover:bg-stone-300
 
                 {/* Tags */}
                 {selectedRecipe.tags && (
@@ -477,17 +489,18 @@ export default function ClinicalRecipesApp() {
                       {selectedRecipe.tags.split(',').map((tag, idx) => (
                         <Badge key={idx} variant="secondary">
                           {tag.trim()}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </CardContent>
-
-              <CardFooter className="flex gap-2">
+                        </Badge> bg-stone-50">
                 <Button 
                   variant="outline"
-                  className="flex-1"
+                  className="flex-1 border-stone-300 hover:bg-amber-100"
+                  onClick={() => handleEdit(selectedRecipe)}
+                >
+                  <Edit className="w-4 h-4 mr-2" />
+                  Edit Recipe
+                </Button>
+                <Button 
+                  variant="destructive"
+                  className="bg-red-800 hover:bg-red-900
                   onClick={() => handleEdit(selectedRecipe)}
                 >
                   <Edit className="w-4 h-4 mr-2" />
@@ -507,13 +520,16 @@ export default function ClinicalRecipesApp() {
                   Delete
                 </Button>
               </CardFooter>
-            </Card>
-          </div>
-        )}
-
-        {/* Recipe Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredRecipes.length === 0 ? (
+            </Card>amber-900" />
+              <h3 className="text-xl font-semibold mb-2 text-amber-950">No recipes found</h3>
+              <p className="text-stone-600 mb-4">
+                {searchTerm ? 'Try a different search term' : 'Get started by adding your first recipe!'}
+              </p>
+              {!searchTerm && (
+                <Button 
+                  onClick={() => setShowCreateForm(true)} 
+                  className="gap-2 bg-amber-900 hover:bg-amber-950 text-amber-50"
+                
             <div className="col-span-full text-center py-12">
               <ChefHat className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
               <h3 className="text-xl font-semibold mb-2">No recipes found</h3>
@@ -523,55 +539,49 @@ export default function ClinicalRecipesApp() {
               {!searchTerm && (
                 <Button onClick={() => setShowCreateForm(true)} className="gap-2">
                   <Plus className="w-4 h-4" />
-                  Add Recipe
-                </Button>
-              )}
-            </div>
-          ) : (
-            filteredRecipes.map((recipe) => (
-              <Card key={recipe.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  Add Recipexl transition-all hover:-translate-y-1 border-stone-300">
                 {recipe.imageUrl && (
-                  <div className="aspect-video overflow-hidden bg-muted">
+                  <div className="aspect-video overflow-hidden bg-stone-100">
                     <img
                       src={recipe.imageUrl}
                       alt={recipe.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}
                 <CardHeader>
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <CardTitle className="text-xl">{recipe.title}</CardTitle>
+                    <CardTitle className="text-xl text-amber-950 font-serif">{recipe.title}</CardTitle>
                     {recipe.isPremium && (
-                      <Badge variant="secondary" className="shrink-0">Premium</Badge>
+                      <Badge className="shrink-0 bg-amber-900 text-amber-50">Premium</Badge>
                     )}
                   </div>
                   {recipe.category && (
-                    <Badge variant="outline" className="w-fit">{recipe.category}</Badge>
+                    <Badge variant="outline" className="w-fit border-amber-900 text-amber-900">{recipe.category}</Badge>
                   )}
                   {recipe.description && (
-                    <CardDescription className="line-clamp-2 mt-2">
+                    <CardDescription className="line-clamp-2 mt-2 text-stone-600">
                       {recipe.description}
                     </CardDescription>
                   )}
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                  <div className="flex flex-wrap gap-4 text-sm text-stone-600">
                     {recipe.prepTime && (
                       <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4 text-amber-900" />
                         <span>{recipe.prepTime + (recipe.cookTime || 0)} min</span>
                       </div>
                     )}
                     {recipe.servings && (
                       <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
+                        <Users className="w-4 h-4 text-amber-900" />
                         <span>{recipe.servings} servings</span>
                       </div>
                     )}
                     {recipe.calories && (
                       <div className="flex items-center gap-1">
-                        <Flame className="w-4 h-4" />
+                        <Flame className="w-4 h-4 text-amber-900" />
                         <span>{recipe.calories} cal</span>
                       </div>
                     )}
@@ -579,11 +589,17 @@ export default function ClinicalRecipesApp() {
                   {recipe.tags && (
                     <div className="flex flex-wrap gap-2 mt-3">
                       {recipe.tags.split(',').map((tag, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs">
+                        <Badge key={idx} className="text-xs bg-stone-200 text-stone-700 hover:bg-stone-300">
                           {tag.trim()}
                         </Badge>
                       ))}
                     </div>
+                  )}
+                </CardContent>
+                <CardFooter className="bg-stone-50">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-amber-50 transition-colors
                   )}
                 </CardContent>
                 <CardFooter>
