@@ -473,6 +473,99 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CHYNA WHITE STORY SERIES - NEW! */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-background" />
+        <div className="container relative">
+          <div className="max-w-6xl mx-auto">
+            <Card className="overflow-hidden border-2 border-purple-500/30 bg-gradient-to-br from-purple-950/40 via-pink-950/30 to-zinc-900/40 backdrop-blur">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image Gallery Side */}
+                <div className="relative h-[500px] lg:h-auto">
+                  <div className="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                    <div 
+                      className="relative rounded-lg overflow-hidden"
+                      style={{ backgroundImage: "url(/images/stories/chyna-white-1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent" />
+                    </div>
+                    <div 
+                      className="relative rounded-lg overflow-hidden"
+                      style={{ backgroundImage: "url(/images/stories/chyna-white-2.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-transparent" />
+                    </div>
+                    <div 
+                      className="relative rounded-lg overflow-hidden col-span-2"
+                      style={{ backgroundImage: "url(/images/stories/chyna-white-3.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30" />
+                    </div>
+                  </div>
+                  
+                  {/* New Badge */}
+                  <div className="absolute top-6 left-6 z-10">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-bold text-white shadow-lg animate-pulse">
+                      <Sparkles className="h-4 w-4" />
+                      NEW SERIES
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Side */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-zinc-900/60 to-purple-950/40">
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                        Chyna White
+                      </h2>
+                      <p className="text-xl text-purple-300 font-semibold tracking-wide">
+                        A Story Series
+                      </p>
+                    </div>
+
+                    <div className="space-y-4 text-lg text-gray-200">
+                      <p className="leading-relaxed">
+                        Meet <strong className="text-purple-300">Chyna White</strong>—a brown-skinned powerhouse navigating 
+                        corporate America, street politics, and her own truth in a world that wants her to choose sides.
+                      </p>
+                      <p className="leading-relaxed">
+                        She's professional AF with that <em className="text-pink-300">perfectly undone</em> edge. 
+                        BB girl energy meets boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and unapologetic.
+                      </p>
+                      <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-4">
+                        <p className="text-purple-200 font-medium">
+                          🔥 Fiction that feels like real life<br />
+                          💼 Corporate drama meets street wisdom<br />
+                          👑 A heroine who plays by her own rules
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                      <Link href="/stories">
+                        <Button size="lg" className="gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
+                          Read Episode 1 <ArrowRight className="h-5 w-5" />
+                        </Button>
+                      </Link>
+                      <Link href="/stories">
+                        <Button size="lg" className="gap-2 border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
+                          Explore the Series <BookOpen className="h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </div>
+
+                    <p className="text-sm text-gray-400 italic pt-2">
+                      ⚠️ 18+ Content | Mature themes, language, and real talk
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="py-14 md:py-20">
         <div className="container">
