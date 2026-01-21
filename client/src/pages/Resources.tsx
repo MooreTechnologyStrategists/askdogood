@@ -166,6 +166,204 @@ const Resources = () => {
         </div>
       </section>
 
+      {/* Style & Survival Resources Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-block bg-pink-100 px-4 py-2 rounded-full text-sm font-medium text-pink-700 mb-4">
+                Thrift, Style & Survival
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Where I Find My Style
+              </h2>
+            </div>
+
+            {/* Personal Style Story */}
+            <div className="bg-gradient-to-r from-teal-50 to-pink-50 rounded-2xl p-8 mb-12 border-l-4 border-teal-500">
+              <p className="text-lg text-gray-800 leading-relaxed mb-4">
+                My daughter says I'm a "very hip dresser"—and honestly, I'll take it! My style is uniquely mine: not necessarily dressy, but always intentional. I can be primp and proper, or tomboy with a splash of hood. You name it, I can pull it off.
+              </p>
+              <p className="text-lg text-gray-800 leading-relaxed mb-4">
+                Having always done hair, I keep mine perfectly <em>undone</em>—there's an art to that controlled chaos. And my wardrobe? It's built on thrift finds, second-hand treasures, and survival sources that prove you don't need a big budget to have big style.
+              </p>
+              <p className="text-lg text-gray-800 leading-relaxed">
+                Here are some of my go-to spots across DC, Maryland, Virginia, North Carolina, South Carolina, and New York—where I find pieces that tell a story and keep my look fresh without breaking the bank.
+              </p>
+            </div>
+
+            {/* Thrift & Second-Hand Spots by Region */}
+            <div className="space-y-8">
+              {/* DC */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🏛️</span> Washington, DC
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Goodwill of Greater Washington:</strong> Multiple locations, great for professional pieces and hidden gems</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Value Village (Wheaton):</strong> Huge selection, organized by color—makes thrifting easy</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Friendship Thrift (multiple locations):</strong> Supports community programs, clean and curated</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Annie's Boutique (Capitol Hill):</strong> Designer consignment, when you want to splurge smart</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Maryland */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🦀</span> Maryland
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Unique Thrift Store (Hyattsville, Laurel):</strong> My go-to for everyday finds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Plato's Closet (multiple locations):</strong> Name brands at thrift prices, perfect for streetwear</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Second Chance (Baltimore):</strong> Not just clothes—furniture, home goods, creative finds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Poshmark/Mercari:</strong> Online thrifting from Maryland sellers—shop from the couch</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Virginia */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🌳</span> Virginia
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Goodwill of Greater Washington (Alexandria, Arlington):</strong> Professional wear heaven</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Clarendon Poshmark Boutique:</strong> Curated secondhand, Instagram-worthy finds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Unique Thrift (Fairfax):</strong> Large selection, organized racks</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* North Carolina */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🌲</span> North Carolina
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Buffalo Exchange (Durham, Chapel Hill):</strong> Buy-sell-trade, great for trendy pieces</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Father & Son Antiques (Asheville):</strong> Vintage clothing and unique statement pieces</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Goodwill (Charlotte, Raleigh):</strong> Multiple locations with rotating stock</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* South Carolina */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🌊</span> South Carolina
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Palmetto Goodwill (Charleston, Columbia):</strong> Southern style meets thrift prices</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>It's a New Beginning Thrift (Myrtle Beach):</strong> Beach vibes, affordable finds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Southern Thrift (Greenville):</strong> Family-friendly, great for basics</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* New York */}
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-teal-600">🗽</span> New York
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Housing Works (Manhattan, Brooklyn):</strong> Designer pieces, supports housing + HIV/AIDS services</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Beacon's Closet (Brooklyn, Queens):</strong> Trendsetter central, curated vintage</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>L Train Vintage (Brooklyn):</strong> Instagram-famous for a reason</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-500 font-bold">•</span>
+                    <span><strong>Buffalo Exchange (Manhattan):</strong> Affordable, always rotating stock</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Pro Tips */}
+            <div className="mt-12 bg-gradient-to-r from-pink-100 to-orange-100 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">💎 My Thrifting Pro Tips</h3>
+              <ul className="space-y-2 text-gray-800">
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600">✓</span>
+                  <span>Shop weekdays for less crowded racks and better finds</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600">✓</span>
+                  <span>Look in the men's section for oversized tees, blazers, and vintage pieces</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600">✓</span>
+                  <span>Check tags for quality fabrics: silk, linen, 100% cotton, wool</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600">✓</span>
+                  <span>Don't skip the jewelry and accessories sections—that's where magic happens</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600">✓</span>
+                  <span>If you love it but it doesn't fit perfectly, consider tailoring—it's worth it</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-pink-500 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">
