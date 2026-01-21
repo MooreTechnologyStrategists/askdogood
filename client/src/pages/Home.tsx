@@ -331,6 +331,148 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <Testimonials />
 
+      {/* READ LABELS - Education Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20 border-y">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full mb-4">
+                <BookOpen className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+                <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Real Talk</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+                I Teach My Clients to <span className="text-primary">READ LABELS!</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Because labels tell you everything—and hide just as much. Let's break down what you need to know.
+              </p>
+            </div>
+
+            {/* Main Content */}
+            <div className="space-y-8">
+              {/* The Organic Trap */}
+              <Card className="border-l-4 border-l-orange-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <span>🏷️</span> The "Organic" Trap
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">Here's what they don't tell you:</strong> If a product has <em>one</em> organic ingredient, 
+                    they can slap "organic" on the label and charge you double. Read that again. ONE. INGREDIENT.
+                  </p>
+                  <p className="leading-relaxed">
+                    So when you see "organic coconut water," check if it's actually coconut—or mostly water with a splash of coconut. 
+                    The first ingredient listed is what the product <strong className="text-foreground">mainly consists of</strong>. 
+                    If water's first, you're paying premium prices for diluted product.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Sodium Reality Check */}
+              <Card className="border-l-4 border-l-pink-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <span>🧂</span> Sodium: The Silent Saboteur
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">For my high blood pressure warriors:</strong> This is critical. 
+                    Processed foods are LOADED with sodium. And that "small" bag of chips? Check the servings.
+                  </p>
+                  <div className="bg-pink-50 dark:bg-pink-950/30 p-6 rounded-lg space-y-3">
+                    <p className="text-foreground font-semibold">Let's do the math:</p>
+                    <ul className="space-y-2 list-disc list-inside">
+                      <li><strong>Bag says:</strong> 150mg sodium per serving</li>
+                      <li><strong>Servings per bag:</strong> 6</li>
+                      <li><strong>You eat the whole bag:</strong> 150mg × 6 = <span className="text-pink-700 dark:text-pink-400 font-bold">900mg sodium</span></li>
+                      <li><strong>That was just a SNACK.</strong></li>
+                    </ul>
+                  </div>
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">Pro tip:</strong> If you're managing high blood pressure, aim for around <strong>1,200mg of sodium daily</strong>. 
+                    Yes, that means more veggies, more fruits, less processed everything. And please—<em>stop adding salt after your food is already prepared</em>. 
+                    The damage is done before it hits your plate.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Change Your Taste Buds */}
+              <Card className="border-l-4 border-l-purple-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <span>🌱</span> Change Your Taste Buds, Change Your Life
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">Real talk:</strong> I get it. You don't like certain foods. They don't taste good to you. 
+                    But here's the thing—<em>your taste buds can change</em>. And they will, if you give them a chance.
+                  </p>
+                  <p className="leading-relaxed">
+                    The smarter choice isn't to turn your nose up at foods that can <strong className="text-foreground">actually benefit your health</strong>. 
+                    The smarter choice is to <strong className="text-foreground">retrain your palate</strong>.
+                  </p>
+                  <div className="bg-purple-50 dark:bg-purple-950/30 p-6 rounded-lg">
+                    <p className="text-foreground font-semibold mb-3">Get out of that poverty mindset:</p>
+                    <p className="leading-relaxed">
+                      Even if you're living in poverty financially—and I see you, I've been there—<em>you don't have to eat like it</em>. 
+                      Read those labels. Make the smartest decisions you can with what you have. Small changes compound.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* What Else Labels Reveal */}
+              <Card className="border-l-4 border-l-teal-500 bg-gradient-to-br from-teal-50/50 to-white dark:from-teal-950/20 dark:to-zinc-900">
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <span>🔍</span> What Else Labels Tell You
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <span className="text-teal-600 dark:text-teal-400 font-bold shrink-0">→</span>
+                      <span><strong className="text-foreground">Ingredient order matters:</strong> First ingredient = highest quantity. If sugar's second, you're eating candy disguised as health food.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-teal-600 dark:text-teal-400 font-bold shrink-0">→</span>
+                      <span><strong className="text-foreground">Check serving sizes:</strong> Companies love to split products into tiny servings to make numbers look better.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-teal-600 dark:text-teal-400 font-bold shrink-0">→</span>
+                      <span><strong className="text-foreground">Extra ingredients = extra risk:</strong> If you can't pronounce it, your body probably doesn't want it.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-teal-600 dark:text-teal-400 font-bold shrink-0">→</span>
+                      <span><strong className="text-foreground">Hidden sugars:</strong> They go by 50+ names. Dextrose, maltose, corn syrup—it's all sugar, baby.</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center bg-gradient-to-r from-primary/10 to-pink-500/10 rounded-2xl p-8 border border-primary/20">
+              <h3 className="text-2xl font-bold mb-4">Want to Master Your Nutrition?</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                My Thyroid Health Mastery Course teaches you exactly how to read labels, 
+                choose the right foods for YOUR body, and build a sustainable wellness routine—no BS, just results.
+              </p>
+              <Link href="/shop">
+                <Button size="lg" className="gap-2">
+                  Learn More About the Course <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="py-14 md:py-20">
         <div className="container">

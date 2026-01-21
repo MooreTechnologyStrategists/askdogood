@@ -45,9 +45,12 @@ export default function ChinaWhiteSeries() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/10 to-zinc-900 text-white">
+      {/* Dimmer overlay for better readability */}
+      <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+      
       {/* Header */}
-      <div className="border-b border-purple-500/30 bg-black/40 backdrop-blur">
+      <div className="border-b border-purple-500/30 bg-black/60 backdrop-blur relative z-10">
         <div className="container py-4">
           <Button variant="ghost" size="sm" asChild>
             <Link href="/stories">
@@ -59,12 +62,12 @@ export default function ChinaWhiteSeries() {
       </div>
 
       {/* Series Hero */}
-      <section className="py-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-br from-purple-600/10 to-pink-600/10 relative z-10">
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Character Image */}
             <div className="relative">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-2 border-purple-500/30">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/10 to-pink-600/10 border-2 border-purple-500/30">
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp"
                   alt="Chyna White"
@@ -197,7 +200,7 @@ export default function ChinaWhiteSeries() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-br from-purple-600/10 to-pink-600/10 relative z-10">
         <div className="container max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">
             Get New Episodes First
@@ -210,7 +213,7 @@ export default function ChinaWhiteSeries() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-black/40 border border-purple-500/30 text-white placeholder:text-gray-500"
+                className="flex-1 px-4 py-3 rounded-lg bg-black/60 border border-purple-500/30 text-white placeholder:text-gray-500"
               />
               <Button size="lg">
                 Subscribe

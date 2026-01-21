@@ -3,33 +3,49 @@
 ## Quick Reference
 **Character:** Chyna White - protagonist of fiction series  
 **Style Needed:** Realistic portrait, 3:4 aspect ratio  
-**Usage:** Series cover image, episode headers, promotional materials
+**Skin Tone:** Brown to dark brown (BB girl but professional AF!)  
+**Usage:** Series cover image, episode headers, different scenes/gestures
 
 ---
 
-## 🖼️ AI Image Generation Prompts
+## 🖼️ AI Image Generation Prompts (Updated!)
 
-### Option 1: Midjourney/DALL-E (Realistic Style)
+### Main Cover Art - Boss Mode
 ```
-Portrait of a confident Black woman in her late 20s, gorgeous and stylish, multiple visible tattoos on arms and shoulders, long styled locs or braids, tomboy-diva fashion aesthetic, wearing designer streetwear (tailored blazer over graphic tee, or fitted hoodie), gold jewelry, natural makeup with bold lip, standing with confident posture, urban background with soft bokeh, cinematic lighting, professional photography style, 3:4 portrait orientation, high fashion editorial look
-```
-
-### Option 2: Midjourney (Edgier/Urban)
-```
-Beautiful Black woman entrepreneur, age 28-32, full sleeve tattoos visible, fashioned locs styled up, wearing mix of streetwear and business casual, confident smirk, leaning against luxury car or brick wall, city skyline at golden hour, cinematic portrait photography, editorial style, dramatic lighting, 3:4 aspect ratio, hyper-realistic
+Professional portrait of a stunning deep brown-skinned Black woman, age 28-32, gorgeous dark brown to deep chocolate complexion, full sleeve tattoos visible on both arms, long styled locs or sleek braids, wearing oversized tailored blazer with fitted designer jeans, gold layered necklaces and hoop earrings, natural glam makeup with bold burgundy lip, confident stance with arms crossed, soft smirk expression, urban loft background with dim purple and pink accent lighting, professional photography, cinematic depth, 3:4 portrait format, high-end editorial aesthetic, BB girl energy but boss-level professional
 ```
 
-### Option 3: DALL-E 3 (Fashion Forward)
+### Scene 1 - Corporate Chyna (Confident)
 ```
-Professional portrait photograph of an elegant Black woman with tattoos, late 20s, styled locs or natural hair in high bun, wearing tailored black blazer with gold accents, multiple visible tattoos on arms and neck, gold hoop earrings, natural glam makeup, confident expression, soft studio lighting with purple and pink accent lights, luxury modern background, editorial fashion photography, 3:4 portrait format
+Dark brown-skinned Black woman executive, late 20s, gorgeous deep complexion, visible arm tattoos under rolled-up sleeves, styled locs in elegant high bun, sitting at mahogany conference table, leaning back with hands behind head, confident smirk, wearing fitted blazer with gold accessories, floor-to-ceiling windows with city skyline, soft natural lighting, professional portrait photography, 3:4 aspect ratio, luxury office aesthetic
 ```
 
-### Option 4: Canva AI (Accessible/Free)
-Use Canva's AI image generator with:
+### Scene 2 - Thinking/Planning (Contemplative)
 ```
-Black woman boss with tattoos, confident style, urban fashion, professional portrait
+Beautiful brown-skinned Black woman, deep complexion, age 28-32, visible tattoos on arms, long locs cascading over shoulder, wearing designer turtleneck and gold jewelry, hand on chin in thoughtful pose, looking off to side with knowing expression, sitting in modern minimalist office, purple and pink accent lighting, cinematic photography, professional yet creative vibe, 3:4 portrait
 ```
-Then enhance with Canva's photo editing tools.
+
+### Scene 3 - Street Chyna (Hood + Professional)
+```
+Gorgeous dark brown-skinned Black woman, late 20s, deep chocolate complexion, full arm tattoos visible, long braids or locs styled, wearing leather jacket over graphic designer tee, gold chains, leaning against luxury car or brick wall, slight smirk with hand in pocket, confident posture, urban setting at golden hour, dramatic lighting, editorial street photography style, 3:4 ratio, tomboy-diva aesthetic meets executive presence
+```
+
+### Scene 4 - Listening/Observing (Side Profile)
+```
+Stunning brown-skinned Black woman, age 28-32, gorgeous deep brown complexion, side profile showing elegant neck line and tattoos, locs or braids flowing, wearing tailored blazer, gold hoop earrings catching light, hand gesturing while speaking, professional setting with soft bokeh background, dramatic side lighting, cinematic portrait photography, 3:4 format, sophisticated yet approachable
+```
+
+### Scene 5 - Power Move (Full Confidence)
+```
+Dark brown-skinned Black woman boss, late 20s, gorgeous deep complexion, visible tattoos on arms and shoulders, styled locs or sleek straight hair, wearing all-black tailored suit with gold statement jewelry, standing with hand on hip, direct eye contact with camera, power stance, luxury office or penthouse setting, dramatic lighting with purple and gold accents, professional editorial photography, 3:4 portrait, unapologetic boss energy
+```
+
+### Canva AI (Quick Generation)
+Use these keywords:
+```
+Gorgeous dark brown-skinned Black woman, professional executive with tattoos, styled locs, tailored fashion, gold jewelry, confident pose, luxury setting, 3:4 portrait
+```
+Then adjust in Canva with filters and overlays.
 
 ---
 
