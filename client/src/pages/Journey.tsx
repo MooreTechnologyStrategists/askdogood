@@ -52,7 +52,7 @@ export default function Journey() {
       years: "2024–Present",
       title: "Structure, Career & Mission",
       description:
-        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. Currently pursuing Agentic AI at Johns Hopkins University and one semester away from my BS in Web Design at UMGC. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. My career has spanned US Census Bureau, US Department of Energy, Synchrony Financial, LPL Financial, Kyndryl, and consulting for Goldman Sachs, Fidelity, M&T Bank, and Phillips 66. Now I teach at PG Parks & Planning and online at TheDopeCloudTeacher, while writing 'Starting From Scratch in the Basement' and building AskDoGood—because healing should create impact.",
+        "Between 2024 and 2025, I re-centered around consistency: education, healing, and building a mission-driven platform. Currently pursuing Agentic AI at Johns Hopkins University and one semester away from my BS in Web Design at UMGC. In October 2025, I returned to Microsoft in a high-impact Azure security role—working on ADO, compliance, CodeQL scanning, Entra ID, and threat modeling. My career has spanned US Census Bureau, US Department of Energy, Synchrony Financial, LPL Financial, Kyndryl, and consulting for Goldman Sachs, Fidelity, M&T Bank, and Phillips 66. Now I teach at PG Parks & Planning and online at TheDopeCloudTeacher, while writing 'Starting From Scratch in the Basement' and building AskDoGood. I'm also an active member of NSBE (National Society of Black Engineers, originally joined at NCAT in 1997, reconnected in 2026) and serve with Blacks in Government, Region XI, Energy Chapter—because healing should create impact and community matters.",
       image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
       milestones: [
         "Returned to Microsoft (Oct 2025)",
@@ -60,6 +60,8 @@ export default function Journey() {
         "Agentic AI at Johns Hopkins (current)",
         "BS Web Design - one semester away",
         "Writing book & building AskDoGood",
+        "NSBE member (1997–present, reconnected 2026)",
+        "Blacks in Government, Region XI, Energy Chapter",
       ],
       icon: Rocket,
       certificationLogos: [

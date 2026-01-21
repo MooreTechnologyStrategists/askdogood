@@ -50,6 +50,14 @@ const Resources = () => {
       website: 'https://www.freshfarm.org/foodprints',
       contact: 'https://www.freshfarm.org/contact',
     },
+    {
+      name: 'Washington Association of Black Journalists (WABJ)',
+      logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/wabj.png',
+      mission: 'The Washington Association of Black Journalists (WABJ) is dedicated to strengthening the ties among African American journalists and increasing diversity in newsrooms through programs like the Urban Journalism Workshop.',
+      myConnection: "The Urban Journalism Workshop represents everything I believe about creating pipelines for the next generation. As someone who mentors and teaches, I'm passionate about programs that give high school students hands-on journalism experience and open doors to media careers. Their 40th anniversary in 2026 is a testament to building lasting impact—the kind of legacy work that inspires my own mission.",
+      website: 'https://www.wabjdc.org',
+      contact: 'https://www.wabjdc.org/contact',
+    },
   ];
 
   return (
