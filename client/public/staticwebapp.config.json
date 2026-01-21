@@ -1,12 +1,13 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/*.{css,scss,js,png,gif,ico,jpg,svg,webp,woff,woff2}"]
+    "exclude": ["/assets/*", "/*.{css,scss,js,png,gif,ico,jpg,svg,webp,woff,woff2,xml}"]
   },
   "mimeTypes": {
     ".json": "application/json",
     ".js": "text/javascript",
-    ".css": "text/css"
+    ".css": "text/css",
+    ".xml": "application/rss+xml"
   },
   "globalHeaders": {
     "cache-control": "public, max-age=31536000, immutable"
