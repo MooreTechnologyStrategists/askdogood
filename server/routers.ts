@@ -126,6 +126,54 @@ export const appRouter = router({
       .query(async ({ input }) => {
         return await db.getRecipeById(input.id);
       }),
+    
+    create: publicProcedure
+      .input(z.object({
+        title: z.string(),
+        description: z.string().nullable().optional(),
+        ingredients: z.string(),
+        instructions: z.string(),
+        prepTime: z.number().nullable().optional(),
+        cookTime: z.number().nullable().optional(),
+        servings: z.number().nullable().optional(),
+        calories: z.number().nullable().optional(),
+        imageUrl: z.string().nullable().optional(),
+        category: z.string().nullable().optional(),
+        tags: z.string().nullable().optional(),
+        isPremium: z.boolean().optional().default(false),
+      }))
+      .mutation(async ({ input }) => {
+        return await db.createRecipe(input);
+      }),
+    
+    update: publicProcedure
+      .input(z.object({
+        id: z.number(),
+        title: z.string().optional(),
+        description: z.string().nullable().optional(),
+        ingredients: z.string().optional(),
+        instructions: z.string().optional(),
+        prepTime: z.number().nullable().optional(),
+        cookTime: z.number().nullable().optional(),
+        servings: z.number().nullable().optional(),
+        calories: z.number().nullable().optional(),
+        imageUrl: z.string().nullable().optional(),
+        category: z.string().nullable().optional(),
+        tags: z.string().nullable().optional(),
+        isPremium: z.boolean().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        return await db.updateRecipe(id, data);
+      }),
+    
+    delete: publicProcedure
+      .input(z.object({
+        id: z.number(),
+      }))
+      .mutation(async ({ input }) => {
+        return await db.deleteRecipe(input.id);
+      }),
   }),
 
   mealPlans: router({

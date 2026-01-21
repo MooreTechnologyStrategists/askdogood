@@ -18,6 +18,7 @@ import {
   userAchievements,
   InsertUserAchievement,
   recipes,
+  InsertRecipe,
   mealPlans
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -350,6 +351,42 @@ export async function getRecipeById(id: number) {
 
   const result = await db.select().from(recipes).where(eq(recipes.id, id)).limit(1);
   return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createRecipe(data: InsertRecipe) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const result = await db.insert(recipes).values({
+    ...data,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  });
+  
+  return result;
+}
+
+export async function updateRecipe(id: number, data: Partial<InsertRecipe>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const result = await db
+    .update(recipes)
+    .set({
+      ...data,
+      updatedAt: new Date()
+    })
+    .where(eq(recipes.id, id));
+  
+  return result;
+}
+
+export async function deleteRecipe(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const result = await db.delete(recipes).where(eq(recipes.id, id));
+  return result;
 }
 
 // Meal Plan Functions

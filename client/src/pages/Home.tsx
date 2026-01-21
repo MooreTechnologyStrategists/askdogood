@@ -22,6 +22,8 @@ import GardenSeasonsSection from "@/components/GardenSeasonsSection";
 import Testimonials from "@/components/Testimonials";
 import TrustBadges from "@/components/TrustBadges";
 import AffiliateProductRecommendations from "@/components/AffiliateProductRecommendations";
+import SpicyCarousel from "@/components/SpicyCarousel";
+import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
@@ -477,6 +479,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SPICY CAROUSEL - Daily Dose of Realness */}
+      <SpicyCarousel />
+
+      {/* EXTERNAL NEWS FEEDS */}
+      <ExternalNewsFeeds />
 
       {/* NEWSLETTER SIGNUP */}
       <section className="py-20 bg-secondary/20">
