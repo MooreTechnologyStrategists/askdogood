@@ -21,14 +21,19 @@ jobs:
         with:
           node-version: 20
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Install (client)
         working-directory: client
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build (client)
         working-directory: client
         run: |
-          npm run build
+          pnpm run build
           cp public/staticwebapp.config.json dist/
 
       - name: Verify dist
