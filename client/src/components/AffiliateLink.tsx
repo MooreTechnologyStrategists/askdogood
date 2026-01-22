@@ -86,11 +86,9 @@ const AffiliateLink: React.FC<AffiliateLinkProps> = ({
               className="w-full h-full object-contain p-4"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent) {
-                  parent.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-400 text-sm p-8 text-center">Product Image</div>';
-                }
+                // Use Amazon icon/logo as fallback instead of hiding the image
+                target.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg';
+                target.className = 'w-1/2 h-1/2 object-contain mx-auto my-auto';
               }}
             />
           </div>

@@ -79,7 +79,9 @@ export default function AffiliateProductRecommendations() {
                     alt={product.name}
                     className="w-full h-full object-cover rounded-lg"
                     onError={(e) => {
-                      e.currentTarget.src = '/assets/img/blog/_fallback/blog.webp';
+                      // Use Amazon logo as fallback for better brand consistency
+                      e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg';
+                      e.currentTarget.className = 'w-1/2 h-1/2 object-contain mx-auto my-auto';
                     }}
                   />
                 </div>

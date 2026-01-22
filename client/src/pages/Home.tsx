@@ -167,13 +167,15 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/clinical-recipes">
-                    <Button size="lg" className="gap-2 w-full sm:w-auto">
-                      Get Custom Meal Plans <ArrowRight className="h-5 w-5" />
+                    <Button size="lg" className="gap-2 w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 hover:from-primary/90 hover:to-pink-600/90 group">
+                      Get Custom Meal Plans 
+                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
-                      Book Consultation <Users className="h-5 w-5" />
+                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 group">
+                      Book Consultation 
+                      <Users className="h-5 w-5 group-hover:scale-110 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -187,10 +189,16 @@ export default function Home() {
       <TrustBadges />
 
       {/* SPECIAL OFFERS & QUICK WINS */}
-      <section className="py-16 bg-gradient-to-r from-amber-500/10 via-pink-500/10 to-purple-500/10">
-        <div className="container">
+      <section className="py-16 bg-gradient-to-r from-amber-500/10 via-pink-500/10 to-purple-500/10 relative overflow-hidden">
+        {/* 3D Background Effect */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 right-20 w-64 h-64 bg-amber-500 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-20 w-72 h-72 bg-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+        
+        <div className="container relative z-10">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full mb-4 animate-pulse">
+            <div className="inline-flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full mb-4 animate-pulse shadow-xl">
               <Gift className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white">LIMITED TIME OFFERS</span>
             </div>
@@ -223,8 +231,9 @@ export default function Home() {
                     Code: <span className="font-mono bg-primary/10 px-2 py-1 rounded">MLKLEGACY</span>
                   </p>
                   <Link href="/shop">
-                    <Button className="w-full gap-2 group-hover:scale-105 transition-transform">
-                      Enroll Now <Zap className="h-4 w-4" />
+                    <Button className="w-full gap-2 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 group">
+                      Enroll Now 
+                      <Zap className="h-4 w-4 group-hover:rotate-12 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -251,8 +260,9 @@ export default function Home() {
                     Input your conditions, get instant meal recommendations
                   </p>
                   <Link href="/clinical-recipes">
-                    <Button variant="outline" className="w-full gap-2 group-hover:scale-105 transition-transform">
-                      Try It Now <TrendingUp className="h-4 w-4" />
+                    <Button variant="outline" className="w-full gap-2 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-green-500/50 hover:border-green-500 group">
+                      Try It Now 
+                      <TrendingUp className="h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -260,8 +270,8 @@ export default function Home() {
             </Card>
 
             {/* Offer 3 */}
-            <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-purple-500/30">
-              <div className="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+            <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-purple-500/30 transform hover:scale-105 duration-300">
+              <div className="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg shadow-lg">
                 NEW
               </div>
               <CardHeader>
@@ -350,12 +360,13 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Link href="/about">
-                    <Button size="lg" className="gap-2">
-                      Read My Full Story <ArrowRight className="h-4 w-4" />
+                    <Button size="lg" className="gap-2 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 group">
+                      Read My Full Story 
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/journey">
-                    <Button size="lg" variant="outline" className="gap-2">
+                    <Button size="lg" variant="outline" className="gap-2 shadow-md hover:shadow-xl transition-all transform hover:scale-105">
                       Start Your Journey
                     </Button>
                   </Link>
@@ -418,8 +429,9 @@ export default function Home() {
                 the real reward is the wisdom you pick up along the way."
               </p>
               <Link href="/garden">
-                <Button size="lg" variant="outline" className="gap-2">
-                  Explore All Seasons <ArrowRight className="h-4 w-4" />
+                <Button size="lg" variant="outline" className="gap-2 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
+                  Explore All Seasons 
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </div>
@@ -451,13 +463,24 @@ export default function Home() {
             {/* Main Content */}
             <div className="space-y-8">
               {/* The Organic Trap */}
-              <Card className="border-l-4 border-l-orange-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
-                <CardHeader>
+              <Card className="border-l-4 border-l-orange-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 dark:opacity-10">
+                  <img 
+                    src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=400" 
+                    alt="Organic label background"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400";
+                    }}
+                  />
+                </div>
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <span>🏷️</span> The "Organic" Trap
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
+                <CardContent className="space-y-4 text-muted-foreground relative z-10">
                   <p className="leading-relaxed">
                     <strong className="text-foreground">Here's what they don't tell you:</strong> If a product has <em>one</em> organic ingredient, 
                     they can slap "organic" on the label and charge you double. Read that again. ONE. INGREDIENT.
@@ -471,13 +494,24 @@ export default function Home() {
               </Card>
 
               {/* Sodium Reality Check */}
-              <Card className="border-l-4 border-l-pink-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
-                <CardHeader>
+              <Card className="border-l-4 border-l-pink-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+                {/* Background Image - Salt Shaker on Fries */}
+                <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 dark:opacity-10">
+                  <img 
+                    src="https://images.unsplash.com/photo-1526346698789-22d93a86419f?w=400" 
+                    alt="Salt shaker on food background"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=400";
+                    }}
+                  />
+                </div>
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <span>🧂</span> Sodium: The Silent Saboteur
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
+                <CardContent className="space-y-4 text-muted-foreground relative z-10">
                   <p className="leading-relaxed">
                     <strong className="text-foreground">For my high blood pressure warriors:</strong> This is critical. 
                     Processed foods are LOADED with sodium. And that "small" bag of chips? Check the servings.
@@ -500,13 +534,37 @@ export default function Home() {
               </Card>
 
               {/* Change Your Taste Buds */}
-              <Card className="border-l-4 border-l-purple-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur">
-                <CardHeader>
+              <Card className="border-l-4 border-l-purple-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+                {/* Side-by-side Vegetable Images */}
+                <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-15 dark:opacity-10 flex">
+                  <div className="w-1/3 h-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=200" 
+                      alt="Fresh kale"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-1/3 h-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=200" 
+                      alt="Fresh beets"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-1/3 h-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?w=200" 
+                      alt="Fresh broccoli"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <span>🌱</span> Change Your Taste Buds, Change Your Life
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
+                <CardContent className="space-y-4 text-muted-foreground relative z-10">
                   <p className="leading-relaxed">
                     <strong className="text-foreground">Real talk:</strong> I get it. You don't like certain foods. They don't taste good to you. 
                     But here's the thing—<em>your taste buds can change</em>. And they will, if you give them a chance.
@@ -555,18 +613,65 @@ export default function Home() {
               </Card>
             </div>
 
-            {/* CTA */}
-            <div className="mt-12 text-center bg-gradient-to-r from-primary/10 to-pink-500/10 rounded-2xl p-8 border border-primary/20">
-              <h3 className="text-2xl font-bold mb-4">Want to Master Your Nutrition?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                My Thyroid Health Mastery Course teaches you exactly how to read labels, 
-                choose the right foods for YOUR body, and build a sustainable wellness routine—no BS, just results.
-              </p>
-              <Link href="/shop">
-                <Button size="lg" className="gap-2">
-                  Learn More About the Course <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
+            {/* CTA - Enhanced with Visual Elements */}
+            <div className="mt-12 bg-gradient-to-br from-primary/20 via-pink-500/20 to-purple-500/20 rounded-3xl overflow-hidden border-2 border-primary/30 shadow-2xl relative">
+              {/* 3D Background Elements */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-primary rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12 relative z-10">
+                {/* Image Side */}
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://askdogoodassets.blob.core.windows.net/images/education/nutrition-meal-planning.webp" 
+                    alt="Healthy nutrition and meal planning"
+                    className="w-full h-full object-cover min-h-[300px]"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600";
+                    }}
+                  />
+                  {/* Overlay Badge */}
+                  <div className="absolute top-4 left-4 bg-primary text-white px-4 py-2 rounded-full font-bold shadow-lg">
+                    <span classNaimages.unsplash.com/photo-1490645935967-10de6ba17061?w=600" 
+                    alt="Healthy nutrition and meal planning"
+                    className="w-full h-full object-cover min-h-[300px]"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd
+                </div>
+                
+                {/* Content Side */}
+                <div className="flex flex-col justify-center text-center md:text-left">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+                    Want to Master Your Nutrition?
+                  </h3>
+                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                    My <strong className="text-foreground">Thyroid Health Mastery Course</strong> teaches you exactly how to read labels, 
+                    choose the right foods for YOUR body, and build a sustainable wellness routine—no BS, just results.
+                  </p>
+                  
+                  {/* Feature Pills */}
+                  <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
+                    <span className="bg-white/80 dark:bg-zinc-800/80 px-3 py-1 rounded-full text-sm font-medium">
+                      ✅ Label Reading Mastery
+                    </span>
+                    <span className="bg-white/80 dark:bg-zinc-800/80 px-3 py-1 rounded-full text-sm font-medium">
+                      ✅ Thyroid Optimization
+                    </span>
+                    <span className="bg-white/80 dark:bg-zinc-800/80 px-3 py-1 rounded-full text-sm font-medium">
+                      ✅ Lifetime Access
+                    </span>
+                  </div>
+                  
+                  <Link href="/shop">
+                    <Button size="lg" className="gap-2 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 w-full md:w-auto group">
+                      Learn More About the Course 
+                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -666,8 +771,15 @@ export default function Home() {
       </section>
 
       {/* FEATURES */}
-      <section className="py-14 md:py-20">
-        <div className="container">
+      <section className="py-14 md:py-20 relative overflow-hidden">
+        {/* 3D Floating Background Elements */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+        </div>
+        
+        <div className="container relative z-10">
           <div className="max-w-2xl mb-10">
             <h2
               className="text-3xl md:text-4xl font-bold"
@@ -681,7 +793,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <HeartPulse className="h-5 w-5 text-primary" />
@@ -697,7 +809,7 @@ export default function Home() {
             </Card>
 
             <Link href="/clinical-recipes">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer hover:border-primary/50">
+              <Card className="hover:shadow-2xl transition-all cursor-pointer hover:border-primary/50 transform hover:scale-105 hover:-translate-y-2 duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <UtensilsCrossed className="h-5 w-5 text-primary" />
@@ -707,14 +819,14 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="text-sm text-muted-foreground leading-relaxed">
                   Turn symptoms, goals, and reality into meals you can actually stick to.
-                  <div className="mt-3 flex items-center gap-1 text-primary font-medium text-sm">
-                    Try it now <ArrowRight className="h-3.5 w-3.5" />
+                  <div className="mt-3 flex items-center gap-1 text-primary font-medium text-sm group">
+                    Try it now <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
               </Card>
             </Link>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Sparkles className="h-5 w-5 text-primary" />
@@ -727,7 +839,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BookOpen className="h-5 w-5 text-primary" />
@@ -744,17 +856,19 @@ export default function Home() {
           {/* CTA Row */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <Link href="/about">
-              <Button className="gap-2 border border-border/70 bg-background/60">
-                Meet RoSeé <ArrowRight className="h-4 w-4" />
+              <Button className="gap-2 border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
+                Meet RoSeé 
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/blog">
-              <Button className="gap-2 border border-border/70 bg-background/60">
-                Read the Blog <ArrowRight className="h-4 w-4" />
+              <Button className="gap-2 border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
+                Read the Blog 
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button className="gap-2">
+              <Button className="gap-2 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
                 Contact <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
