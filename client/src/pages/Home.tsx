@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,7 +21,7 @@ import {
   TrendingUp,
   Zap,
 } from "lucide-react";
-import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import GardenSeasonsSection from "@/components/GardenSeasonsSection";
 import Testimonials from "@/components/Testimonials";
 import TrustBadges from "@/components/TrustBadges";
@@ -32,24 +31,6 @@ import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://ask-dogood.kit.com/7455966d1b/index.js';
-    script.async = true;
-    script.setAttribute('data-uid', '8918501');
-    
-    const container = document.getElementById('thyroid-toolkit-signup');
-    if (container) {
-      container.appendChild(script);
-    }
-    
-    return () => {
-      if (container && script.parentNode) {
-        container.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen">
       {/* LOGO HEADER - Clean and Professional */}
@@ -937,7 +918,7 @@ export default function Home() {
       {/* NEWSLETTER SIGNUP */}
       <section className="py-20 bg-secondary/20">
         <div className="container max-w-4xl">
-          <ConvertKitSubscribe
+          <BeehiivSubscribe
             variant="card"
             title="Join the AskDoGood Newsletter"
             description="Get weekly insights on healing, thyroid health, mindset, and real-life strategies delivered straight to your inbox. No fluff, just real talk."

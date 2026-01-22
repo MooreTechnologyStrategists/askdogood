@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -70,23 +70,7 @@ export default function Blog() {
     img.src = BLOG_FALLBACK;
   };
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://ask-dogood.kit.com/7455966d1b/index.js";
-    script.async = true;
-    script.setAttribute("data-uid", "8918501");
-
-    const container = document.getElementById("thyroid-toolkit-signup");
-    if (container) {
-      container.appendChild(script);
-    }
-
-    return () => {
-      if (container && script.parentNode) {
-        container.removeChild(script);
-      }
-    };
-  }, []);
+  // ConvertKit script removed - now using Beehiiv
 
   const posts = safeBlogPosts;
 
