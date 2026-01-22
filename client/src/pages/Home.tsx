@@ -16,6 +16,11 @@ import {
   UtensilsCrossed,
   ShieldCheck,
   Users,
+  Star,
+  Quote,
+  Gift,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 import ConvertKitSubscribe from "@/components/ConvertKitSubscribe";
 import GardenSeasonsSection from "@/components/GardenSeasonsSection";
@@ -47,146 +52,197 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
-
-        <div className="container relative py-16 md:py-24">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            {/* LEFT: COPY */}
-            <div className="space-y-6 text-center lg:text-left">
-              {/* Brand Logo */}
-              <div className="flex justify-center lg:justify-start mb-4">
-                <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
-                  alt="Ask DoGood"
-                  className="h-20 w-20 object-contain"
-                  loading="eager"
-                />
-              </div>
-
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground mx-auto lg:mx-0">
-                <Sparkles className="h-4 w-4 text-primary" />
-                Healing. Structure. Real-life growth.
-              </div>
-
-              <h1
-                className="text-4xl md:text-6xl font-bold tracking-tight"
-                style={{ fontFamily: "var(--font-serif)" }}
-              >
+      {/* LOGO HEADER - Clean and Professional */}
+      <section className="py-8 border-b bg-gradient-to-r from-background via-primary/5 to-background">
+        <div className="container">
+          <div className="flex items-center justify-center gap-4">
+            <img
+              src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
+              alt="Ask DoGood"
+              className="h-24 w-24 object-contain drop-shadow-lg"
+              loading="eager"
+            />
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
                 Ask DoGood
-                <span className="block text-primary">Your healing, with a plan.</span>
               </h1>
-
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                A real-life wellness ecosystem focused on thyroid recovery, mindset, routines,
-                and rebuilding your life with purpose — not perfection.
+              <p className="text-sm md:text-base text-primary font-medium mt-1">
+                Healing. Structure. Real-life growth.
               </p>
-
-              {/* HERO BUTTONS */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Link href="/journey">
-                  <Button
-                    className="flex items-center gap-2 shadow-md hover:shadow-lg transition-shadow border border-primary/20 px-6 py-3 text-lg"
-                  >
-                    Start Here <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-
-                <Link href="/clinical-recipes">
-                  <Button
-                    className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur border border-border/70 px-6 py-3 text-lg"
-                  >
-                    Clinical Food RX <UtensilsCrossed className="h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-
-              <div className="text-sm text-muted-foreground">
-                Built for the people who are tired of "just be consistent" with no system.
-              </div>
-
-              {/* TRUST / POSITIONING */}
-              <div className="grid gap-3 sm:grid-cols-3 pt-2">
-                <Link href="/no-fluff">
-                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
-                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                      <ShieldCheck className="h-4 w-4 text-primary" />
-                      No fluff
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Real talk + real tools.
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/clinical-recipes">
-                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
-                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                      <HeartPulse className="h-4 w-4 text-primary" />
-                      Health-aware
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Symptoms, meds, goals.
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/blog">
-                  <div className="rounded-xl border bg-background/60 px-4 py-3 hover:bg-background/80 hover:shadow-md transition-all cursor-pointer">
-                    <div className="flex items-center gap-2 text-sm font-medium justify-center lg:justify-start">
-                      <Users className="h-4 w-4 text-primary" />
-                      Community-first
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Healing out loud.
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            {/* RIGHT: IMAGE + LABELS */}
-            <div className="relative">
-              <div className="relative aspect-[4/3] w-full rounded-3xl border bg-secondary/20 overflow-hidden shadow-sm">
-                <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
-                  alt="Ask DoGood hero"
-                  className="h-full w-full object-cover"
-                  style={{
-                    objectPosition: "50% 35%", // tweak 30–45% to center face vertically
-                  }}
-                  loading="eager"
-                />
-
-                {/* Creative overlay: cinematic + subtle brand tint + vignette */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-transparent to-primary/10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
-                <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_80%)] bg-black/25" />
-
-                {/* Optional: subtle highlight flare */}
-                <div className="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
-
-                {/* Frame ring */}
-                <div className="pointer-events-none absolute inset-0 ring-1 ring-border/40 rounded-3xl" />
-              </div>
-
-              {/* Centered labels under image */}
-              <div className="mt-4 flex flex-wrap justify-center gap-2 text-xs text-muted-foreground text-center">
-                <span className="inline-flex items-center justify-center gap-1 rounded-full border bg-background/70 px-3 py-1">
-                  <ShieldCheck className="h-3.5 w-3.5 text-primary" />
-                  Structure you can follow
-                </span>
-                <span className="inline-flex items-center justify-center gap-1 rounded-full border bg-background/70 px-3 py-1">
-                  <HeartPulse className="h-3.5 w-3.5 text-primary" />
-                  Healing that respects reality
-                </span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* MUHAMMAD FAMILY TESTIMONIAL - HERO SPOT */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        <div className="container max-w-6xl">
+          <Card className="overflow-hidden border-2 border-primary/30 shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image Side */}
+              <div className="relative h-[400px] md:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
+                <div className="absolute inset-0 flex items-center justify-center p-8">
+                  <div className="text-center">
+                    <div className="text-8xl mb-4">👨‍👩‍👧‍👦</div>
+                    <p className="text-3xl font-bold text-foreground">The Muhammad Family</p>
+                    <p className="text-lg text-muted-foreground mt-2">Washington, DC</p>
+                    <div className="flex gap-1 justify-center mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Side */}
+              <CardContent className="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-background to-primary/5">
+                <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-6 w-fit">
+                  <Sparkles className="h-4 w-4 text-white" />
+                  <span className="text-sm font-bold text-white">FEATURED SUCCESS STORY</span>
+                </div>
+                
+                <Quote className="h-12 w-12 text-primary/30 mb-4" />
+                
+                <blockquote className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
+                  "RoSeé's Clinical Food RX app changed our entire family's relationship with food and health."
+                </blockquote>
+
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Our 8-year-old daughter was struggling with eczema, constant skin flare-ups, and food sensitivities we couldn't figure out. 
+                  Doctors kept saying "just moisturize" — but RoSeé's app helped us identify trigger foods, build healing meal plans, 
+                  and track her symptoms in real-time.
+                </p>
+
+                <p className="text-lg text-foreground font-semibold mb-8">
+                  Within 6 weeks, her skin cleared up 80%. No more itching. No more tears. Just a happy, healthy kid. 
+                  This app is a GAME CHANGER for families dealing with chronic conditions. 💯
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="/clinical-recipes">
+                    <Button size="lg" className="gap-2 w-full sm:w-auto">
+                      Try Clinical Food RX <ArrowRight className="h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <Link href="/shop">
+                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
+                      View All Products <UtensilsCrossed className="h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* TRUST BADGES */}
+      <TrustBadges />
+
+      {/* SPECIAL OFFERS & QUICK WINS */}
+      <section className="py-16 bg-gradient-to-r from-amber-500/10 via-pink-500/10 to-purple-500/10">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full mb-4 animate-pulse">
+              <Gift className="h-5 w-5 text-white" />
+              <span className="text-sm font-bold text-white">LIMITED TIME OFFERS</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              Start Healing <span className="text-primary">Today</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Grab these resources and start seeing results immediately
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Offer 1 */}
+            <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-primary/30">
+              <div className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                50% OFF
+              </div>
+              <CardHeader>
+                <div className="text-4xl mb-3">🎓</div>
+                <CardTitle className="text-2xl">Thyroid Course</CardTitle>
+                <CardDescription>Master your thyroid health in 6 modules</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">$48.50</span>
+                    <span className="text-xl text-muted-foreground line-through">$97</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Code: <span className="font-mono bg-primary/10 px-2 py-1 rounded">MLKLEGACY</span>
+                  </p>
+                  <Link href="/shop">
+                    <Button className="w-full gap-2 group-hover:scale-105 transition-transform">
+                      Enroll Now <Zap className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Offer 2 */}
+            <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-green-500/30">
+              <div className="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                FREE
+              </div>
+              <CardHeader>
+                <div className="text-4xl mb-3">🥗</div>
+                <CardTitle className="text-2xl">Clinical Food RX</CardTitle>
+                <CardDescription>Personalized meal plans for YOUR symptoms</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">$0</span>
+                    <span className="text-sm text-green-600 font-medium">Always Free</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Input your conditions, get instant meal recommendations
+                  </p>
+                  <Link href="/clinical-recipes">
+                    <Button variant="outline" className="w-full gap-2 group-hover:scale-105 transition-transform">
+                      Try It Now <TrendingUp className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Offer 3 */}
+            <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-purple-500/30">
+              <div className="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                NEW
+              </div>
+              <CardHeader>
+                <div className="text-4xl mb-3">📚</div>
+                <CardTitle className="text-2xl">Chyna White Series</CardTitle>
+                <CardDescription>Fiction with attitude & real talk</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">Free</span>
+                    <span className="text-sm text-muted-foreground">18+ content</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    BB girl meets corporate boss. Unapologetically Black.
+                  </p>
+                  <Link href="/stories">
+                    <Button variant="outline" className="w-full gap-2 group-hover:scale-105 transition-transform bg-gradient-to-r from-purple-600/10 to-pink-600/10">
+                      Read Episode 1 <BookOpen className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* THYROID RESET TOOLKIT CTA */}
       <section className="py-14 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
@@ -194,9 +250,6 @@ export default function Home() {
           <div id="thyroid-toolkit-signup"></div>
         </div>
       </section>
-
-      {/* TRUST BADGES */}
-      <TrustBadges />
 
       {/* MY STORY / PERSONAL SECTION */}
       <section className="py-20 bg-gradient-to-br from-secondary/20 to-background">

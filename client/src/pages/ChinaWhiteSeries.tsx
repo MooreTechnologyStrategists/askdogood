@@ -63,10 +63,79 @@ export default function ChinaWhiteSeries() {
 
       {/* Series Hero */}
       <section className="py-20 bg-gradient-to-br from-purple-600/10 to-pink-600/10 relative z-10">
-        <div className="container max-w-5xl">
+        <div className="container max-w-6xl">
+          {/* Character Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
+              <img
+                src="/images/stories/chyna-white-1.jpg"
+                alt="Chyna White - Boss Mode"
+                className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                      <div class="text-center p-4">
+                        <div class="text-4xl mb-2">👑</div>
+                        <p class="text-sm text-white">Boss Mode</p>
+                      </div>
+                    </div>
+                  `;
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-white font-bold text-sm">Boss Mode</p>
+              </div>
+            </div>
+
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
+              <img
+                src="/images/stories/chyna-white-2.jpg"
+                alt="Chyna White - Corporate"
+                className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                      <div class="text-center p-4">
+                        <div class="text-4xl mb-2">💼</div>
+                        <p class="text-sm text-white">Corporate</p>
+                      </div>
+                    </div>
+                  `;
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-white font-bold text-sm">Corporate</p>
+              </div>
+            </div>
+
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group col-span-2 md:col-span-1">
+              <img
+                src="/images/stories/chyna-white-3.jpg"
+                alt="Chyna White - Artistic"
+                className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                      <div class="text-center p-4">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <p class="text-sm text-white">Artistic Vision</p>
+                      </div>
+                    </div>
+                  `;
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-white font-bold text-sm">Artistic Vision</p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Character Image */}
-            <div className="relative">
+            {/* Left: Character Description */}
+            <div>
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/10 to-pink-600/10 border-2 border-purple-500/30">
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp"
