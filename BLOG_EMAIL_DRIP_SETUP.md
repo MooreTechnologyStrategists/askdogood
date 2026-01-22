@@ -1,6 +1,4 @@
-# 📧 Blog Email Drip Campaign Setup
-
-## Overview
+# 📧 Blog Email Drip Campaign Setu## Overview
 Automatically send one blog post per day (or every other day) to your subscribers via Mailchimp.
 
 ---
