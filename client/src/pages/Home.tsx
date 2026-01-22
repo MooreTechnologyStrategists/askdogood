@@ -77,57 +77,103 @@ export default function Home() {
       {/* MUHAMMAD FAMILY TESTIMONIAL - HERO SPOT */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         <div className="container max-w-6xl">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-4">
+              <Sparkles className="h-4 w-4 text-white" />
+              <span className="text-sm font-bold text-white">DMV METRO AREA SUCCESS STORY</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              The Muhammad Family: <span className="text-primary">5 Months of Transformation</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Upper Marlboro, MD • Found via Nextdoor App • May-September 2025
+            </p>
+          </div>
+
           <Card className="overflow-hidden border-2 border-primary/30 shadow-2xl">
             <div className="grid md:grid-cols-2 gap-0">
-              {/* Image Side */}
+              {/* Image Side - Meal Prep Dishes */}
               <div className="relative h-[400px] md:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="text-8xl mb-4">👨‍👩‍👧‍👦</div>
-                    <p className="text-3xl font-bold text-foreground">The Muhammad Family</p>
-                    <p className="text-lg text-muted-foreground mt-2">Washington, DC</p>
-                    <div className="flex gap-1 justify-center mt-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
+                <div className="grid grid-cols-2 gap-2 p-4 h-full">
+                  <div className="rounded-lg overflow-hidden">
+                    <img src="/images/testimonials/muhammad-dishes-1.jpg" alt="Lentil and chickpea burgers" className="w-full h-full object-cover" 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400"; }} />
                   </div>
+                  <div className="rounded-lg overflow-hidden">
+                    <img src="/images/testimonials/muhammad-dishes-2.jpg" alt="Quinoa and rice varieties" className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400"; }} />
+                  </div>
+                  <div className="rounded-lg overflow-hidden">
+                    <img src="/images/testimonials/muhammad-dishes-3.jpg" alt="Fresh vegetables and salad jars" className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"; }} />
+                  </div>
+                  <div className="rounded-lg overflow-hidden">
+                    <img src="/images/testimonials/muhammad-dishes-4.jpg" alt="Salmon and vegan chili" className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400"; }} />
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur p-3 rounded-lg">
+                  <p className="text-white text-sm font-semibold">
+                    📦 Weekly Meal Prep • 🚫 No Pork • 🌽 Corn Allergy-Friendly • 🧂 Low Sodium
+                  </p>
                 </div>
               </div>
 
               {/* Content Side */}
               <CardContent className="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-background to-primary/5">
-                <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-6 w-fit">
-                  <Sparkles className="h-4 w-4 text-white" />
-                  <span className="text-sm font-bold text-white">FEATURED SUCCESS STORY</span>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 
-                <Quote className="h-12 w-12 text-primary/30 mb-4" />
+                <Quote className="h-10 w-10 text-primary/30 mb-4" />
                 
-                <blockquote className="text-2xl md:text-3xl font-bold mb-6 leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
-                  "RoSeé's Clinical Food RX app changed our entire family's relationship with food and health."
+                <blockquote className="text-xl md:text-2xl font-bold mb-6 leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
+                  "My 11-year-old son said it best: 'Miss RoSeé's food isn't salty, but it's SO tasty — even my baby sister loves it!'"
                 </blockquote>
 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Our 8-year-old daughter was struggling with eczema, constant skin flare-ups, and food sensitivities we couldn't figure out. 
-                  Doctors kept saying "just moisturize" — but RoSeé's app helped us identify trigger foods, build healing meal plans, 
-                  and track her symptoms in real-time.
-                </p>
+                <div className="space-y-4 text-muted-foreground mb-6">
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">The Muhammad family of 6</strong> — two government employees working sedentary desk jobs, 
+                    4 beautiful, disciplined children, and a Muslim household committed to healthy living — reached out via <strong className="text-foreground">Nextdoor</strong> with 
+                    one goal: <em>learn to cook healthier meals for their family</em>.
+                  </p>
 
-                <p className="text-lg text-foreground font-semibold mb-8">
-                  Within 6 weeks, her skin cleared up 80%. No more itching. No more tears. Just a happy, healthy kid. 
-                  This app is a GAME CHANGER for families dealing with chronic conditions. 💯
-                </p>
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">The challenge:</strong> One child with a yellow corn allergy. No pork (perfect match for my lifestyle). 
+                    Parents wanted weight loss. Dad's a chef himself — so the food had to be GOOD.
+                  </p>
+
+                  <p className="leading-relaxed">
+                    <strong className="text-foreground">My solution:</strong> Weekly meal prep service featuring lentil burgers, chickpea burgers, 21-bean burgers, 
+                    quinoa, couscous, 5 varieties of rice, white corn only, zucchini medleys, salad jars, salmon fillets, vegan chili, navy bean burgers, 
+                    and perfectly seasoned veggies — all low sodium, minimal bad fats, maximum flavor.
+                  </p>
+
+                  <p className="leading-relaxed font-semibold text-foreground">
+                    <strong>The sweetest moment?</strong> One weekend delivery felt like an award ceremony. The kids lined up to tell me how much they loved the food. 
+                    The oldest said, "It's not salty but tasty, and pure enough for my baby sister to eat!" I was touched to my core. 💯
+                  </p>
+
+                  <p className="leading-relaxed text-lg text-foreground font-bold">
+                    📍 5 months of service (May-Sept 2025)<br />
+                    ✅ Family lost weight<br />
+                    ✅ Learned to cook these meals themselves<br />
+                    ✅ Mission accomplished — helping a beautiful family thrive
+                  </p>
+                </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/clinical-recipes">
                     <Button size="lg" className="gap-2 w-full sm:w-auto">
-                      Try Clinical Food RX <ArrowRight className="h-5 w-5" />
+                      Get Custom Meal Plans <ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
-                  <Link href="/shop">
+                  <Link href="/contact">
                     <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
-                      View All Products <UtensilsCrossed className="h-5 w-5" />
+                      Book Consultation <Users className="h-5 w-5" />
                     </Button>
                   </Link>
                 </div>

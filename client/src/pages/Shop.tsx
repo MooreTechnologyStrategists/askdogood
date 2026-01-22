@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check, Star, Download, Video, BookOpen, Users, Award, Shield, Clock, TrendingUp } from "lucide-react";
+import { Check, Star, Download, Video, BookOpen, Users, Award, Shield, Clock, TrendingUp, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 
@@ -751,9 +751,9 @@ export default function Shop() {
               className="bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
               asChild
             >
-              <a href="/course/thyroid-health-mastery">
+              <Link href="/course/thyroid-health-mastery">
                 Get Course Now →
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -1059,6 +1059,122 @@ export default function Shop() {
                 <p className="text-sm text-muted-foreground">Average satisfaction rating</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MERCH SECTION */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-purple-950/20 dark:via-pink-950/20 dark:to-orange-950/20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full mb-4">
+              <ShoppingBag className="h-5 w-5" />
+              <span className="text-sm font-bold">OFFICIAL MERCH</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
+              Healing Looks Good On You
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Rep your wellness journey. Real talk merch that sparks conversations and celebrates healing.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Featured Merch Items */}
+            <Card className="hover:shadow-xl transition-all group">
+              <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-amber-100 to-orange-100">
+                <img 
+                  src="/images/merch/mockup_mug_gratitude.webp" 
+                  alt="Gratitude Mug"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400"; }}
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg">The "Gratitude" Mug</CardTitle>
+                <CardDescription>Less f*ckin' attitude, more f*ckin' gratitude</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold">$18</span>
+                  <Badge variant="secondary">Mugs</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all group">
+              <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-cream-100 to-beige-100">
+                <img 
+                  src="/images/merch/mockup_tshirt_progress.webp" 
+                  alt="Progress Tee"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400"; }}
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg">The "Progress" Tee</CardTitle>
+                <CardDescription>Progress over perfection every damn time</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold">$28</span>
+                  <Badge variant="secondary">T-Shirts</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all group">
+              <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-slate-100">
+                <img 
+                  src="/images/merch/mockup_hoodie_healing.webp" 
+                  alt="Healing Hoodie"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400"; }}
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg">The "Healing" Hoodie</CardTitle>
+                <CardDescription>Healing isn't linear and that's okay</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold">$52</span>
+                  <Badge variant="secondary">Hoodies</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all group">
+              <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-green-100 to-teal-100">
+                <img 
+                  src="/images/merch/mockup_tote_thriving.webp" 
+                  alt="Thriving Tote"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400"; }}
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg">The "Thriving" Tote</CardTitle>
+                <CardDescription>Carry your wellness essentials in style</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold">$22</span>
+                  <Badge variant="secondary">Totes</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Link href="/merch">
+              <Button size="lg" className="gap-2 text-lg">
+                Shop All Merch <ShoppingBag className="h-5 w-5" />
+              </Button>
+            </Link>
+            <p className="text-sm text-muted-foreground mt-4">
+              20+ designs • Mugs, Tees, Hoodies & Totes • Fast shipping
+            </p>
           </div>
         </div>
       </section>
