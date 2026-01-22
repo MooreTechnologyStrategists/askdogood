@@ -295,16 +295,22 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* LEFT: Image */}
               <div className="relative">
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden border shadow-lg bg-gradient-to-br from-primary/20 to-secondary/20">
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                   <img
-                    src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-story.webp"
-                    alt="RoSeé's wellness journey"
+                    src="https://askdogoodassets.blob.core.windows.net/images/personal/outdoor-photoshoot.webp"
+                    alt="Rosee Murphy - Thyroid Cancer Survivor & Wellness Advocate"
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/personal/rosee-story.webp";
+                    }}
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-xl max-w-[200px]">
-                  <p className="text-sm font-medium">7+ years of thyroid recovery, countless lessons learned</p>
+                {/* Floating Badge */}
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-2xl p-6 shadow-2xl max-w-[240px] transform hover:scale-105 transition-transform">
+                  <p className="text-sm font-semibold leading-snug">7+ years of thyroid recovery, countless lessons learned</p>
                 </div>
+                {/* Decorative Element */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-secondary/30 rounded-full blur-2xl" />
               </div>
 
               {/* RIGHT: Story */}
