@@ -155,20 +155,31 @@ export default function ShortStories() {
             <div key={s.id} className="grid md:grid-cols-2 gap-12 items-center mb-20">
               {/* Character Image */}
               <div className="relative group">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-2 border-purple-500/30">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900/50 to-purple-900 border-2 border-purple-500/50 shadow-2xl">
                   <img
                     src={s.coverImage}
                     alt={s.title}
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                     onError={(e) => {
-                      // Fallback to placeholder
+                      // Professional fallback placeholder
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.parentElement!.innerHTML = `
-                        <div class="w-full h-full flex items-center justify-center">
-                          <div class="text-center">
-                            <div class="text-6xl mb-4">👑</div>
-                            <p class="text-2xl font-bold">${s.title}</p>
-                            <p class="text-sm text-gray-400 mt-2">Character art coming soon</p>
+                        <div class="w-full h-full flex items-center justify-center relative overflow-hidden">
+                          <!-- Animated background -->
+                          <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 via-pink-600/20 to-purple-600/30 animate-pulse"></div>
+                          <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzljMjdmMCIgc3Ryb2tlLW9wYWNpdHk9Ii4xIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-20"></div>
+                          
+                          <!-- Content -->
+                          <div class="text-center relative z-10 px-8">
+                            <div class="text-8xl mb-6 animate-bounce">👑</div>
+                            <div class="bg-black/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
+                              <p class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">${s.title}</p>
+                              <p class="text-base text-purple-300 mb-4">Character Reveal Coming Soon</p>
+                              <div class="flex items-center justify-center gap-2 text-xs text-gray-400">
+                                <span class="inline-block w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                                <span>Art in Development</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       `;
