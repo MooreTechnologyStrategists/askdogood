@@ -31,7 +31,6 @@ import ChinaWhiteSeries from "./pages/ChinaWhiteSeries";
 import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
-import { Route } from "wouter";
 import GardenSeasonPost from "@/pages/GardenSeasonPost";
 
 import {

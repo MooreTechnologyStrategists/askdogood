@@ -951,11 +951,8 @@ export default function Home() {
                   />
                   {/* Overlay Badge */}
                   <div className="absolute top-4 left-4 bg-primary text-white px-4 py-2 rounded-full font-bold shadow-lg">
-                    <span classNaimages.unsplash.com/photo-1490645935967-10de6ba17061?w=600" 
-                    alt="Healthy nutrition and meal planning"
-                    className="w-full h-full object-cover min-h-[300px]"
-                    onError={(e) => {
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd
+                    <span className="text-sm">Expert Guidance</span>
+                  </div>
                 </div>
                 
                 {/* Content Side */}
