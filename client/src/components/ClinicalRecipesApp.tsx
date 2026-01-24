@@ -713,21 +713,123 @@ export default function ClinicalRecipesApp() {
                   )}
                 </CardContent>
                 <CardFooter className="bg-stone-50">
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-amber-50 transition-colors"
-                    onClick={() => {
-                      setSelectedRecipe(recipe);
-                      setShowDetailView(true);
-                    }}
-                  >
-                    View Recipe
-                  </Button>
+                  <div className="flex gap-2 w-full">
+                    <Button 
+                      variant="outline" 
+                      className="flex-1 border-amber-900 text-amber-900 hover:bg-amber-900 hover:text-amber-50 transition-colors"
+                      onClick={() => {
+                        setSelectedRecipe(recipe);
+                        setShowDetailView(true);
+                      }}
+                    >
+                      View Recipe
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => setCookingModeRecipe(recipe)}
+                      title="Cooking Mode"
+                    >
+                      <ChefHat className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </CardFooter>
               </Card>
             ))
           )}
         </div>
+          </TabsContent>
+
+          {/* Meal Planning Tab */}
+          <TabsContent value="meal-plan">
+            <MealPlanningCalendar recipes={recipes} />
+          </TabsContent>
+
+          {/* Shopping List Tab */}
+          <TabsContent value="shopping">
+            <ShoppingListGenerator selectedRecipes={recipes.filter(r => selectedForShopping.includes(r.id))} />
+            <Card className="mt-4">
+              <CardHeader>
+                <CardTitle>Select Recipes for Shopping List</CardTitle>
+                <CardDescription>Choose recipes to generate your shopping list</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {recipes.map(recipe => (
+                  <div key={recipe.id} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      id={`shop-${recipe.id}`}
+                      checked={selectedForShopping.includes(recipe.id)}
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          setSelectedForShopping([...selectedForShopping, recipe.id]);
+                        } else {
+                          setSelectedForShopping(selectedForShopping.filter(id => id !== recipe.id));
+                        }
+                      }}
+                      className="h-4 w-4"
+                    />
+                    <label htmlFor={`shop-${recipe.id}`} className="text-sm cursor-pointer flex-1">
+                      {recipe.title}
+                    </label>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Nutrition Tab */}
+          <TabsContent value="nutrition">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5" />
+                  Nutrition Dashboard
+                </CardTitle>
+                <CardDescription>Track your favorite recipes' nutrition stats</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {nutritionStats.count === 0 ? (
+                  <p className="text-center py-8 text-muted-foreground">
+                    Mark recipes as favorites to track their nutrition
+                  </p>
+                ) : (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Favorite Recipes</p>
+                      <p className="text-3xl font-bold text-primary">{nutritionStats.count}</p>
+                    </div>
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Avg Calories</p>
+                      <p className="text-3xl font-bold">{Math.round(nutritionStats.avgCalories)}</p>
+                    </div>
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Total Protein</p>
+                      <p className="text-3xl font-bold">{nutritionStats.totalProtein}g</p>
+                    </div>
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Total Carbs</p>
+                      <p className="text-3xl font-bold">{nutritionStats.totalCarbs}g</p>
+                    </div>
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Total Fat</p>
+                      <p className="text-3xl font-bold">{nutritionStats.totalFat}g</p>
+                    </div>
+                    <div className="p-4 border rounded-lg">
+                      <p className="text-sm text-muted-foreground">Total Fiber</p>
+                      <p className="text-3xl font-bold">{nutritionStats.totalFiber}g</p>
+                    </div>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+
+        {/* Cooking Mode */}
+        {cookingModeRecipe && (
+          <CookingMode recipe={cookingModeRecipe} onClose={() => setCookingModeRecipe(null)} />
+        )}
       </div>
     </div>
   );
