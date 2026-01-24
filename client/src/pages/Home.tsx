@@ -137,8 +137,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" 
-                  alt="Thyroid-friendly recipes"
+                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800" 
+                  alt="Black woman preparing healthy thyroid-healing meals"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -163,8 +163,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800" 
-                  alt="Diverse warrior community"
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" 
+                  alt="Black women supporting each other in wellness community"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -189,8 +189,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800" 
-                  alt="One-on-one consultation with diverse clients"
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800" 
+                  alt="Black woman health coaching consultation session"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -215,8 +215,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1594745561149-2211ca8c5d98?w=800" 
-                  alt="Diverse people wellness challenges"
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" 
+                  alt="Black woman doing wellness activities and self-care"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
