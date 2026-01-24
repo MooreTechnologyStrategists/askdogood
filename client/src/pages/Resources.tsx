@@ -5,8 +5,8 @@ const Resources = () => {
     {
       name: 'PG Parks & Planning',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/pg-parks.png',
-      image: 'https://images.unsplash.com/photo-1441123100240-f9f3f77ed41b?w=800',
-      mission: 'The Maryland-National Capital Park and Planning Commission enriches lives by creating exceptional parks and planning vibrant communities.',
+      image: 'https://images.unsplash.com/photo-1560523159-4a9692d222ef?w=800',
+      mission: 'The Maryland-National Capital Park and Planning Commission enriches lives by creating exceptional parks and planning vibrant communities.'
       myConnection: "I'm honored to teach with PG Parks & Planning, sharing my passion for wellness and technology with our community. Their commitment to accessible recreation and education aligns perfectly with my mission to make health and tech knowledge available to everyone.",
       website: 'https://www.pgparks.com',
       contact: 'https://www.pgparks.com/contact',
@@ -14,8 +14,8 @@ const Resources = () => {
     {
       name: 'Microsoft',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/microsoft.png',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800',
-      mission: 'Microsoft empowers every person and every organization on the planet to achieve more through innovative technology solutions.',
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
+      mission: 'Microsoft empowers every person and every organization on the planet to achieve more through innovative technology solutions.'
       myConnection: "My journey with Microsoft shaped my career in cloud technologies. As a Customer Engineer supporting clients like Phillips 66, Goldman Sachs, and Fidelity, I learned the power of technology to transform businesses and lives. This experience fuels my passion for teaching Azure and cloud solutions.",
       website: 'https://www.microsoft.com',
       contact: 'https://www.microsoft.com/contact',
@@ -23,8 +23,8 @@ const Resources = () => {
     {
       name: 'Johns Hopkins University',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/johns-hopkins.png',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800',
-      mission: 'Johns Hopkins University is dedicated to educating students and cultivating their capacity for life-long learning, fostering independent and original research, and bringing the benefits of discovery to the world.',
+      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800',
+      mission: 'Johns Hopkins University is dedicated to educating students and cultivating their capacity for life-long learning, fostering independent and original research, and bringing the benefits of discovery to the world.'
       myConnection: "Currently expanding my expertise through Johns Hopkins' Agentic AI course, I'm exploring how artificial intelligence can revolutionize healthcare and wellness. This cutting-edge knowledge will enhance the Clinical Food RX app and future wellness technology solutions.",
       website: 'https://www.jhu.edu',
       contact: 'https://www.jhu.edu/contact',
@@ -32,8 +32,8 @@ const Resources = () => {
     {
       name: 'University of Maryland Global Campus (UMGC)',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/umgc.png',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
-      mission: 'UMGC transforms lives through innovative and affordable educational opportunities that connect a diverse global community to credible, relevant knowledge.',
+      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800',
+      mission: 'UMGC transforms lives through innovative and affordable educational opportunities that connect a diverse global community to credible, relevant knowledge.'
       myConnection: "Just one semester away from completing my BS in Web Design at UMGC! This journey has been about more than credentials—it's about mastering the craft of creating accessible, beautiful digital experiences that serve my community. Every lesson learned goes directly into building better wellness platforms.",
       website: 'https://www.umgc.edu',
       contact: 'https://www.umgc.edu/contact',
@@ -41,8 +41,8 @@ const Resources = () => {
     {
       name: 'Food 4 Families',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/food4families.png',
-      image: 'https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=800',
-      mission: 'Food 4 Families works to end hunger by providing nutritious food and resources to families in need throughout the DMV area.',
+      image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800',
+      mission: 'Food 4 Families works to end hunger by providing nutritious food and resources to families in need throughout the DMV area.'
       myConnection: "Food security is health security. I'm passionate about partnering with Food 4 Families because wellness starts with access to nutritious food. Their work in our community directly supports the holistic health approach I advocate for—you can't heal if you can't eat well.",
       website: 'https://www.food4families.org',
       contact: 'mailto:info@food4families.org',
@@ -50,8 +50,8 @@ const Resources = () => {
     {
       name: 'FRESHFARM FoodPrints',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/freshfarm.png',
-      image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800',
-      mission: 'FRESHFARM FoodPrints connects students to healthy food and the natural world through hands-on learning experiences in gardens, kitchens, and classrooms.',
+      image: 'https://images.unsplash.com/photo-1587735243615-c03f25aaff15?w=800',
+      mission: 'FRESHFARM FoodPrints connects students to healthy food and the natural world through hands-on learning experiences in gardens, kitchens, and classrooms.'
       myConnection: "As someone who finds healing in gardening, I deeply appreciate FRESHFARM's mission to teach children where their food comes from. Their grow-cook-eat-learn approach mirrors my own wellness philosophy: understanding and connecting with our food is fundamental to health and healing.",
       website: 'https://www.freshfarm.org/foodprints',
       contact: 'https://www.freshfarm.org/contact',
@@ -59,8 +59,8 @@ const Resources = () => {
     {
       name: 'Washington Association of Black Journalists (WABJ)',
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/wabj.png',
-      image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800',
-      mission: 'The Washington Association of Black Journalists (WABJ) is dedicated to strengthening the ties among African American journalists and increasing diversity in newsrooms through programs like the Urban Journalism Workshop.',
+      image: 'https://images.unsplash.com/photo-1595503240812-7286dafaddc1?w=800',
+      mission: 'The Washington Association of Black Journalists (WABJ) is dedicated to strengthening the ties among African American journalists and increasing diversity in newsrooms through programs like the Urban Journalism Workshop.'
       myConnection: "The Urban Journalism Workshop represents everything I believe about creating pipelines for the next generation. As someone who mentors and teaches, I'm passionate about programs that give high school students hands-on journalism experience and open doors to media careers. Their 40th anniversary in 2026 is a testament to building lasting impact—the kind of legacy work that inspires my own mission.",
       website: 'https://www.wabjdc.org',
       contact: 'https://www.wabjdc.org/contact',

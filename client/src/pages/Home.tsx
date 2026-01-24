@@ -247,6 +247,189 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW 2026 BLOG SERIES TEASER - 3D Style */}
+      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Header with Badge */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full mb-6 shadow-2xl animate-bounce">
+                <Sparkles className="h-5 w-5 text-white" />
+                <span className="text-sm font-bold text-white uppercase tracking-wider">NEW 2026 Series</span>
+                <Sparkles className="h-5 w-5 text-white" />
+              </div>
+              
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
+                Real Talk. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">Real Change.</span>
+              </h2>
+              
+              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+                The conversations we need to have about health, wealth, and community in 2026
+              </p>
+              
+              <p className="text-sm text-gray-400">
+                Professional but hip-hop Black chic. No BS, just facts + receipts.
+              </p>
+            </div>
+
+            {/* 4 Blog Cards in Grid */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {/* Blog 1: Healthcare */}
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="relative z-10">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                      <HeartPulse className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-white group-hover:text-primary transition-colors mb-2">
+                        World Peace Starts With Healthcare
+                      </CardTitle>
+                      <CardDescription className="text-gray-400 text-sm">
+                        Why free healthcare isn't radical—it's necessary. Black and brown communities deserve better.
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-primary/20 text-primary font-medium">Social Justice</span>
+                    <span>•</span>
+                    <span>9 min read</span>
+                  </div>
+                  <Link href="/blog/world-peace-starts-with-healthcare">
+                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                      Read Now
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Blog 2: Credit Card Debt */}
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="relative z-10">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                      <TrendingUp className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-white group-hover:text-secondary transition-colors mb-2">
+                        The Credit Card Trap
+                      </CardTitle>
+                      <CardDescription className="text-gray-400 text-sm">
+                        How America set us up to stay broke—and how we break free from the debt cycle.
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-secondary/20 text-secondary font-medium">Financial Wellness</span>
+                    <span>•</span>
+                    <span>10 min read</span>
+                  </div>
+                  <Link href="/blog/credit-card-debt-trap-america">
+                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                      Read Now
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Blog 3: Student Loans */}
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="relative z-10">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                      <BookOpen className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-white group-hover:text-purple-400 transition-colors mb-2">
+                        The Student Loan Crisis
+                      </CardTitle>
+                      <CardDescription className="text-gray-400 text-sm">
+                        How higher education became a lifetime sentence. The HBCU tax is real.
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 font-medium">Education & Economics</span>
+                    <span>•</span>
+                    <span>11 min read</span>
+                  </div>
+                  <Link href="/blog/student-loan-crisis-lifetime-sentence">
+                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                      Read Now
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Blog 4: Building Villages */}
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="relative z-10">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                      <Users className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-white group-hover:text-emerald-400 transition-colors mb-2">
+                        Building Back Our Villages
+                      </CardTitle>
+                      <CardDescription className="text-gray-400 text-sm">
+                        Community, technology, and the future we deserve. Nobody gets left behind in the AI revolution.
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-medium">Community & Tech</span>
+                    <span>•</span>
+                    <span>12 min read</span>
+                  </div>
+                  <Link href="/blog/building-back-our-villages-community-technology">
+                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                      Read Now
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center">
+              <Link href="/blog">
+                <Button size="lg" className="gap-3 rounded-3xl bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all text-lg px-8 py-6">
+                  <Zap className="h-6 w-6" />
+                  Read All NEW 2026 Articles
+                  <ArrowRight className="h-6 w-6" />
+                </Button>
+              </Link>
+              <p className="text-gray-400 text-sm mt-4">
+                Credible sources • Professional analysis • Hip-hop Black chic energy
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MUHAMMAD FAMILY TESTIMONIAL - FULL STORY */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         <div className="container max-w-6xl">
