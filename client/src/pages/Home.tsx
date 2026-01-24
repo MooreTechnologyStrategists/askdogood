@@ -71,6 +71,18 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
+            {/* Masked Circle Hero Image */}
+            <div className="flex justify-center mb-8">
+              <div className="relative w-40 h-40 md:w-48 md:h-48">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
+                <img 
+                  src="/images/personal/professional/hero-circle.jpg"
+                  alt="RoSeé Muhammad - Thyroid Health Specialist"
+                  className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
+                />
+              </div>
+            </div>
+
             <h2 className="text-5xl md:text-7xl font-bold leading-tight" style={{ fontFamily: 'var(--font-serif)' }}>
               Healing.Structure.<br />
               <span className="text-primary">Real-life Growth.</span>

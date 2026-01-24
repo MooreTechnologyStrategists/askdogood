@@ -8,6 +8,9 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Plus, Search, Clock, Users, Flame, Save, X, ChefHat, Edit, Trash2, Heart, Filter, TrendingUp, Calendar, ShoppingCart } from 'lucide-react';
 import { apiClient } from '@/lib/api';
+import MealPlanningCalendar from './MealPlanningCalendar';
+import ShoppingListGenerator from './ShoppingListGenerator';
+import CookingMode from './CookingMode';
 
 interface Recipe {
   id: number;
@@ -51,7 +54,9 @@ export default function ClinicalRecipesApp() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [showDetailView, setShowDetailView] = useState(false);
   const [editingRecipe, setEditingRecipe] = useState<Recipe | null>(null);
-  const [viewMode, setViewMode] = useState<'browse' | 'nutrition'>('browse');
+  const [viewMode, setViewMode] = useState<'browse' | 'nutrition' | 'meal-plan' | 'shopping'>('browse');
+  const [cookingModeRecipe, setCookingModeRecipe] = useState<Recipe | null>(null);
+  const [selectedForShopping, setSelectedForShopping] = useState<number[]>([]);
   const queryClient = useQueryClient();
 
   // Form state
@@ -274,6 +279,29 @@ export default function ClinicalRecipesApp() {
       </div>
 
       <div className="container py-8">
+        {/* Tabs */}
+        <Tabs value={viewMode} onValueChange={(v) => setViewMode(v as any)} className="mb-8">
+          <TabsList className="grid w-full max-w-2xl grid-cols-4">
+            <TabsTrigger value="browse" className="gap-2">
+              <ChefHat className="h-4 w-4" />
+              Browse
+            </TabsTrigger>
+            <TabsTrigger value="meal-plan" className="gap-2">
+              <Calendar className="h-4 w-4" />
+              Meal Plan
+            </TabsTrigger>
+            <TabsTrigger value="shopping" className="gap-2">
+              <ShoppingCart className="h-4 w-4" />
+              Shopping List
+            </TabsTrigger>
+            <TabsTrigger value="nutrition" className="gap-2">
+              <TrendingUp className="h-4 w-4" />
+              Nutrition
+            </TabsTrigger>
+          </TabsList>
+
+          {/* Browse Tab */}
+          <TabsContent value="browse" className="space-y-8">
         {/* Search Bar */}
         <div className="mb-8">
           <div className="relative max-w-md">
