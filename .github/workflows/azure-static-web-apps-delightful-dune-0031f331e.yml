@@ -28,7 +28,7 @@ jobs:
 
       - name: Install (client)
         working-directory: client
-        run: pnpm install --frozen-lockfile --legacy-peer-deps
+        run: pnpm install --frozen-lockfile
 
       - name: Build (client)
         working-directory: client
