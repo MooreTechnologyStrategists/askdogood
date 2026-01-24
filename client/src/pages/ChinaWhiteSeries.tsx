@@ -68,16 +68,17 @@ export default function ChinaWhiteSeries() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
               <img
-                src="/images/stories/chyna-white-1.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.webp"
                 alt="Chyna White - Boss Mode"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
-                      <div class="text-center p-4">
-                        <div class="text-4xl mb-2">👑</div>
-                        <p class="text-sm text-white">Boss Mode</p>
+                    <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                      <div class="text-center p-6">
+                        <div class="text-6xl mb-3 animate-bounce">👑</div>
+                        <p class="text-white font-bold">Boss Mode</p>
+                        <p class="text-white/60 text-xs mt-2">Coming Soon</p>
                       </div>
                     </div>
                   `;
@@ -90,14 +91,14 @@ export default function ChinaWhiteSeries() {
 
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
               <img
-                src="/images/stories/chyna-white-2.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.webp"
                 alt="Chyna White - Corporate"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
-                      <div class="text-center p-4">
+                    <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                      <div class="text-center p-6">
                         <div class="text-4xl mb-2">💼</div>
                         <p class="text-sm text-white">Corporate</p>
                       </div>

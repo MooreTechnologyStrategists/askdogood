@@ -150,8 +150,21 @@ export default function ThyroidCourse() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <section className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-background py-20 overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://askdogoodassets.blob.core.windows.net/images/courses/thyroid-course-hero.webp"
+            alt="Thyroid Health"
+            className="w-full h-full object-cover opacity-20"
+            onError={(e) => {
+              e.currentTarget.src = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600";
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-background/90" />
+        </div>
+        
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 text-lg px-4 py-2">

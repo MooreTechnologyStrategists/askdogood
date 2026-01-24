@@ -78,20 +78,36 @@ export default function Home() {
               <div className="relative h-[400px] md:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
                 <div className="grid grid-cols-2 gap-2 p-4 h-full">
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/images/testimonials/muhammad-dishes-1.jpg" alt="Lentil and chickpea burgers" className="w-full h-full object-cover" 
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400"; }} />
+                    <img 
+                      src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-1.webp" 
+                      alt="Lentil and chickpea burgers" 
+                      className="w-full h-full object-cover" 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400"; }} 
+                    />
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/images/testimonials/muhammad-dishes-2.jpg" alt="Quinoa and rice varieties" className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400"; }} />
+                    <img 
+                      src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-2.webp" 
+                      alt="Quinoa and rice varieties" 
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400"; }} 
+                    />
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/images/testimonials/muhammad-dishes-3.jpg" alt="Fresh vegetables and salad jars" className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"; }} />
+                    <img 
+                      src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-3.webp" 
+                      alt="Fresh vegetables and salad jars" 
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"; }} 
+                    />
                   </div>
                   <div className="rounded-lg overflow-hidden">
-                    <img src="/images/testimonials/muhammad-dishes-4.jpg" alt="Salmon and vegan chili" className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400"; }} />
+                    <img 
+                      src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-4.webp" 
+                      alt="Salmon and vegan chili" 
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400"; }} 
+                    />
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur p-3 rounded-lg">
@@ -194,8 +210,20 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Offer 1 */}
             <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-primary/30">
-              <div className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+              <div className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg z-10">
                 50% OFF
+              </div>
+              {/* Hero Image */}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                <img 
+                  src="https://askdogoodassets.blob.core.windows.net/images/courses/thyroid-course-hero.webp" 
+                  alt="Thyroid Health Mastery Course"
+                  className="w-full h-full object-cover opacity-80"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
               <CardHeader>
                 <div className="text-4xl mb-3">🎓</div>
@@ -223,8 +251,20 @@ export default function Home() {
 
             {/* Offer 2 */}
             <Card className="relative overflow-hidden hover:shadow-2xl transition-all group border-2 border-green-500/30">
-              <div className="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+              <div className="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg z-10">
                 FREE
+              </div>
+              {/* Hero Image */}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
+                <img 
+                  src="https://askdogoodassets.blob.core.windows.net/images/apps/clinical-food-rx-hero.webp" 
+                  alt="Clinical Food RX App"
+                  className="w-full h-full object-cover opacity-80"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
               <CardHeader>
                 <div className="text-4xl mb-3">🥗</div>
