@@ -16,7 +16,7 @@ const Resources = () => {
       logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/microsoft.png',
       image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800',
       mission: 'Microsoft empowers every person and every organization on the planet to achieve more through innovative technology solutions.',
-      myConnection: "My journey with Microsoft shaped my career in cloud technologies. As a Customer Engineer supporting clients like Phillips 66, Goldman Sachs, and Fidelity, I learned the power of technology to transform businesses and lives. This experience fuels my passion for teaching Azure and cloud solutions.",
+      myConnection: 'My journey with Microsoft shaped my career in cloud technologies. As a Customer Engineer supporting clients like Phillips 66, Goldman Sachs, and Fidelity, I learned the power of technology to transform businesses and lives. This experience fuels my passion for teaching Azure and cloud solutions.',
       website: 'https://www.microsoft.com',
       contact: 'https://www.microsoft.com/contact',
     },

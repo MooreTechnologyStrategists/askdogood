@@ -171,7 +171,7 @@ export const apiClient: ApiClient = {
       const index = recipes.findIndex(r => r.id === id);
       if (index === -1) throw new Error('Recipe not found');
       
-      const updated Recipe: Recipe = {
+      const updatedRecipe: Recipe = {
         ...recipes[index],
         ...data,
         id,
