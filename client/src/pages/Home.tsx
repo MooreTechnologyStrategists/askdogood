@@ -134,10 +134,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Card 1: Thyroid-Healing Recipes */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800" 
+                  src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=800" 
                   alt="Black woman preparing healthy thyroid-healing meals"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -160,10 +160,10 @@ export default function Home() {
             </Card>
 
             {/* Card 2: Warrior Community */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800" 
                   alt="Black women supporting each other in wellness community"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -186,10 +186,10 @@ export default function Home() {
             </Card>
 
             {/* Card 3: Book a Session */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800" 
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" 
                   alt="Black woman health coaching consultation session"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -212,10 +212,10 @@ export default function Home() {
             </Card>
 
             {/* Card 4: Wellness Challenges */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" 
+                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800" 
                   alt="Black woman doing wellness activities and self-care"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
