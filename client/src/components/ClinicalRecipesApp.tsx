@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Plus, Search, Clock, Users, Flame, Save, X, ChefHat, Edit, Trash2 } from 'lucide-react';
+import { Plus, Search, Clock, Users, Flame, Save, X, ChefHat, Edit, Trash2, Heart, Filter, TrendingUp, Calendar, ShoppingCart } from 'lucide-react';
 import { apiClient } from '@/lib/api';
 
 interface Recipe {
@@ -19,19 +19,39 @@ interface Recipe {
   cookTime: number | null;
   servings: number | null;
   calories: number | null;
+  protein: number | null;
+  carbs: number | null;
+  fat: number | null;
+  fiber: number | null;
+  sodium: number | null;
   imageUrl: string | null;
   category: string | null;
   tags: string | null;
   isPremium: boolean;
+  isFavorite?: boolean;
   createdAt: string;
   updatedAt: string;
 }
 
+const CATEGORIES = ['All', 'Smoothies', 'Main Dishes', 'Sides', 'Snacks', 'Breakfast', 'Desserts'];
+const DIETARY_FILTERS = [
+  { id: 'thyroid-friendly', label: 'Thyroid Friendly' },
+  { id: 'anti-inflammatory', label: 'Anti-Inflammatory' },
+  { id: 'plant-based', label: 'Plant-Based' },
+  { id: 'high-protein', label: 'High Protein' },
+  { id: 'low-sodium', label: 'Low Sodium' },
+];
+
 export default function ClinicalRecipesApp() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [dietaryFilters, setDietaryFilters] = useState<string[]>([]);
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [showDetailView, setShowDetailView] = useState(false);
+  const [editingRecipe, setEditingRecipe] = useState<Recipe | null>(null);
+  const [viewMode, setViewMode] = useState<'browse' | 'nutrition'>('browse');
   const queryClient = useQueryClient();
 
   // Form state
@@ -44,6 +64,11 @@ export default function ClinicalRecipesApp() {
     cookTime: '',
     servings: '',
     calories: '',
+    protein: '',
+    carbs: '',
+    fat: '',
+    fiber: '',
+    sodium: '',
     category: '',
     tags: '',
     imageUrl: ''
@@ -52,17 +77,12 @@ export default function ClinicalRecipesApp() {
   // Fetch recipes
   const { data: recipes = [], isLoading } = useQuery({
     queryKey: ['recipes'],
-    queryFn: async () => {
-      const response = await apiClient.recipes.getAll.query({ includePremium: true });
-      return response as Recipe[];
-    }
+    queryFn: () => apiClient.recipes.list()
   });
 
-  // Create/Update mutation
+  // Mutations
   const createMutation = useMutation({
-    mutationFn: async (data: any) => {
-      return await apiClient.recipes.create.mutate(data);
-    },
+    mutationFn: (data: any) => apiClient.recipes.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
       resetForm();
@@ -71,24 +91,89 @@ export default function ClinicalRecipesApp() {
   });
 
   const updateMutation = useMutation({
-    mutationFn: async ({ id, ...data }: any) => {
-      return await apiClient.recipes.update.mutate({ id, ...data });
-    },
+    mutationFn: ({ id, ...data }: any) => apiClient.recipes.update(id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
       resetForm();
       setShowCreateForm(false);
+      setEditingRecipe(null);
     }
   });
 
   const deleteMutation = useMutation({
-    mutationFn: async (id: number) => {
-      return await apiClient.recipes.delete.mutate({ id });
-    },
+    mutationFn: (id: number) => apiClient.recipes.delete(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['recipes'] });
+      setShowDetailView(false);
+      setSelectedRecipe(null);
+    }
+  });
+
+  const toggleFavoriteMutation = useMutation({
+    mutationFn: (id: number) => apiClient.recipes.toggleFavorite(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
     }
   });
+
+  // Filter and search logic
+  const filteredRecipes = useMemo(() => {
+    let filtered = [...recipes];
+    
+    // Search
+    if (searchTerm) {
+      const query = searchTerm.toLowerCase();
+      filtered = filtered.filter(recipe =>
+        recipe.title.toLowerCase().includes(query) ||
+        recipe.description?.toLowerCase().includes(query) ||
+        recipe.ingredients.toLowerCase().includes(query) ||
+        recipe.tags?.toLowerCase().includes(query)
+      );
+    }
+    
+    // Category
+    if (categoryFilter !== 'All') {
+      filtered = filtered.filter(recipe => recipe.category === categoryFilter);
+    }
+    
+    // Dietary filters
+    if (dietaryFilters.length > 0) {
+      filtered = filtered.filter(recipe => {
+        const recipeTags = recipe.tags?.toLowerCase() || '';
+        return dietaryFilters.every(filter =>
+          recipeTags.includes(filter.toLowerCase())
+        );
+      });
+    }
+    
+    // Favorites
+    if (showFavoritesOnly) {
+      filtered = filtered.filter(recipe => recipe.isFavorite);
+    }
+    
+    return filtered;
+  }, [recipes, searchTerm, categoryFilter, dietaryFilters, showFavoritesOnly]);
+
+  // Nutrition stats
+  const nutritionStats = useMemo(() => {
+    const favoriteRecipes = recipes.filter(r => r.isFavorite);
+    if (favoriteRecipes.length === 0) return null;
+    
+    const totalCalories = favoriteRecipes.reduce((sum, r) => sum + (r.calories || 0), 0);
+    const totalProtein = favoriteRecipes.reduce((sum, r) => sum + (r.protein || 0), 0);
+    const totalCarbs = favoriteRecipes.reduce((sum, r) => sum + (r.carbs || 0), 0);
+    const totalFat = favoriteRecipes.reduce((sum, r) => sum + (r.fat || 0), 0);
+    const totalFiber = favoriteRecipes.reduce((sum, r) => sum + (r.fiber || 0), 0);
+    
+    return {
+      count: favoriteRecipes.length,
+      avgCalories: Math.round(totalCalories / favoriteRecipes.length),
+      totalProtein,
+      totalCarbs,
+      totalFat,
+      totalFiber,
+    };
+  }, [recipes]);
 
   const resetForm = () => {
     setFormData({
@@ -98,6 +183,60 @@ export default function ClinicalRecipesApp() {
       instructions: '',
       prepTime: '',
       cookTime: '',
+      servings: '',
+      calories: '',
+      protein: '',
+      carbs: '',
+      fat: '',
+      fiber: '',
+      sodium: '',
+      category: '',
+      tags: '',
+      imageUrl: ''
+    });
+    setEditingRecipe(null);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (editingRecipe) {
+      updateMutation.mutate({ id: editingRecipe.id, ...formData });
+    } else {
+      createMutation.mutate(formData);
+    }
+  };
+
+  const handleEdit = (recipe: Recipe) => {
+    setEditingRecipe(recipe);
+    setFormData({
+      title: recipe.title,
+      description: recipe.description || '',
+      ingredients: recipe.ingredients,
+      instructions: recipe.instructions,
+      prepTime: recipe.prepTime?.toString() || '',
+      cookTime: recipe.cookTime?.toString() || '',
+      servings: recipe.servings?.toString() || '',
+      calories: recipe.calories?.toString() || '',
+      protein: recipe.protein?.toString() || '',
+      carbs: recipe.carbs?.toString() || '',
+      fat: recipe.fat?.toString() || '',
+      fiber: recipe.fiber?.toString() || '',
+      sodium: recipe.sodium?.toString() || '',
+      category: recipe.category || '',
+      tags: recipe.tags || '',
+      imageUrl: recipe.imageUrl || ''
+    });
+    setShowCreateForm(true);
+    setShowDetailView(false);
+  };
+
+  const toggleDietaryFilter = (filterId: string) => {
+    setDietaryFilters(prev =>
+      prev.includes(filterId)
+        ? prev.filter(f => f !== filterId)
+        : [...prev, filterId]
+    );
+  };
       servings: '',
       calories: '',
       category: '',
