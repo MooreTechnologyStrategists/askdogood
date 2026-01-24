@@ -1,44 +1,34 @@
 import { useEffect, useState } from 'react';
 
-const foodImages = [
+const personalImages = [
   {
-    src: '/images/personal/food/smoothie-green-goddess.jpg',
-    alt: 'Green Goddess Thyroid Smoothie',
-    caption: 'Green Goddess Smoothie'
+    src: '/images/personal/food/muhammad-dishes-1.jpg',
+    alt: 'RoSeé Muhammad preparing healthy thyroid meals',
+    caption: 'Healing in the Kitchen'
   },
   {
-    src: '/images/personal/food/smoothie-purple.jpg',
-    alt: 'Purple Berry Power Smoothie',
-    caption: 'Berry Power Smoothie'
+    src: '/images/personal/food/muhammad-dishes-2.jpg',
+    alt: 'RoSeé with fresh prepared meals',
+    caption: 'Real Food, Real Healing'
   },
   {
-    src: '/images/personal/food/burgers-plated.jpg',
-    alt: 'Black Bean & Quinoa Power Burgers',
-    caption: 'Plant-Powered Burgers'
+    src: '/images/personal/food/muhammad-dishes-3.jpg',
+    alt: 'RoSeé Muhammad cooking nutritious dishes',
+    caption: 'Made with Love'
   },
   {
-    src: '/images/personal/food/vegetables-roasted.jpg',
-    alt: 'Roasted vegetables with anti-inflammatory spices',
-    caption: 'Anti-Inflammatory Veggies'
-  },
-  {
-    src: '/images/personal/food/meal-complete.jpg',
-    alt: 'Complete thyroid-friendly balanced meal',
-    caption: 'Complete Healing Meal'
-  },
-  {
-    src: '/images/personal/food/veggies-bowl.jpg',
-    alt: 'Colorful veggie bowl with healing ingredients',
-    caption: 'Rainbow Veggie Bowl'
+    src: '/images/personal/food/muhammad-dishes-4.jpg',
+    alt: 'RoSeé showing healthy meal preparation',
+    caption: 'Your Thyroid Chef'
   }
 ];
 
-export default function FoodSlideshow() {
+export default function PersonalSlideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % foodImages.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % personalImages.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -47,7 +37,7 @@ export default function FoodSlideshow() {
   return (
     <div className="relative w-full max-w-5xl mx-auto">
       <div className="relative h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
-        {foodImages.map((image, index) => (
+        {personalImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -72,7 +62,7 @@ export default function FoodSlideshow() {
 
       {/* Indicators */}
       <div className="flex justify-center gap-2 mt-4">
-        {foodImages.map((_, index) => (
+        {personalImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}

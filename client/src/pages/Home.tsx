@@ -29,6 +29,7 @@ import AffiliateProductRecommendations from "@/components/AffiliateProductRecomm
 import SpicyCarousel from "@/components/SpicyCarousel";
 import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import FoodSlideshow from "@/components/FoodSlideshow";
+import PersonalSlideshow from "@/components/PersonalSlideshow";
 import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
@@ -120,18 +121,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOD SLIDESHOW - Real Meals, Real Healing */}
+      {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Real Food. <span className="text-primary">Real Healing.</span>
+              Meet Your <span className="text-primary">Thyroid Chef</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Thyroid-friendly meals that actually taste good
+              Where healing meets flavor in every dish
             </p>
           </div>
-          <FoodSlideshow />
+          <PersonalSlideshow />
         </div>
       </section>
 
@@ -145,6 +146,21 @@ export default function Home() {
             </blockquote>
             <p className="text-muted-foreground">— Muhammad Family</p>
           </div>
+        </div>
+      </section>
+
+      {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+              Real Food. <span className="text-primary">Real Healing.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Thyroid-friendly meals that actually taste good
+            </p>
+          </div>
+          <FoodSlideshow />
         </div>
       </section>
 
