@@ -6,7 +6,7 @@ author: "RoSeé Muhammad"
 excerpt: "They say it takes a village to raise a child, but what happens when the village is gone? Let's talk about rebuilding our community foundations, making sure nobody gets left behind in the AI revolution, and creating the future our ancestors dreamed of."
 category: "Community & Technology"
 tags: ["Community Building", "Technology Access", "AI", "Black Communities", "Digital Divide", "Economic Justice"]
-image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200"
+image: "/images/personal/blog-graphics/building-back-our-villages.png"
 readTime: "12 min read"
 ---
 

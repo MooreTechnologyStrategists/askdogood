@@ -6,7 +6,7 @@ author: "RoSeé Muhammad"
 excerpt: "They told us college was the key to success. They didn't mention the $1.77 trillion debt crisis waiting on the other side. Let's unpack how the American Dream became a financial nightmare."
 category: "Education & Economics"
 tags: ["Student Loans", "Higher Education", "Economic Justice", "Black Students", "HBCU", "Financial Freedom"]
-image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200"
+image: "/images/personal/blog-graphics/the-student-loan-crisis.png"
 readTime: "11 min read"
 ---
 

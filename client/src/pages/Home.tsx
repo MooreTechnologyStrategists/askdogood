@@ -28,6 +28,7 @@ import TrustBadges from "@/components/TrustBadges";
 import AffiliateProductRecommendations from "@/components/AffiliateProductRecommendations";
 import SpicyCarousel from "@/components/SpicyCarousel";
 import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
+import FoodSlideshow from "@/components/FoodSlideshow";
 import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
@@ -107,6 +108,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOOD SLIDESHOW - Real Meals, Real Healing */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+              Real Food. <span className="text-primary">Real Healing.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Thyroid-friendly meals that actually taste good
+            </p>
+          </div>
+          <FoodSlideshow />
+        </div>
+      </section>
+
       {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful */}
       <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
         <div className="container">
@@ -163,8 +179,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800" 
-                  alt="Black women supporting each other in wellness community"
+                  src="/images/personal/professional/clay-banks-hands-together.jpg" 
+                  alt="Diverse community hands together - supporting each other"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -189,8 +205,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" 
-                  alt="Black woman health coaching consultation session"
+                  src="/images/personal/professional/rosee-professional-suit.jpg" 
+                  alt="RoSeé Murphy - Professional health coaching consultation"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -215,8 +231,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800" 
-                  alt="Black woman doing wellness activities and self-care"
+                  src="/images/personal/professional/jamaica-youth-team.webp" 
+                  alt="Community wellness activities - Jamaica Youth Team"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

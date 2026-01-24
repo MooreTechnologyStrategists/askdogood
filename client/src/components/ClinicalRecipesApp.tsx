@@ -237,63 +237,6 @@ export default function ClinicalRecipesApp() {
         : [...prev, filterId]
     );
   };
-      servings: '',
-      calories: '',
-      category: '',
-      tags: '',
-      imageUrl: ''
-    });
-    setSelectedRecipe(null);
-  };
-
-  const handleEdit = (recipe: Recipe) => {
-    setSelectedRecipe(recipe);
-    setFormData({
-      title: recipe.title,
-      description: recipe.description || '',
-      ingredients: recipe.ingredients,
-      instructions: recipe.instructions,
-      prepTime: recipe.prepTime?.toString() || '',
-      cookTime: recipe.cookTime?.toString() || '',
-      servings: recipe.servings?.toString() || '',
-      calories: recipe.calories?.toString() || '',
-      category: recipe.category || '',
-      tags: recipe.tags || '',
-      imageUrl: recipe.imageUrl || ''
-    });
-    setShowDetailView(false);
-    setShowCreateForm(true);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const recipeData = {
-      title: formData.title,
-      description: formData.description || null,
-      ingredients: formData.ingredients,
-      instructions: formData.instructions,
-      prepTime: formData.prepTime ? parseInt(formData.prepTime) : null,
-      cookTime: formData.cookTime ? parseInt(formData.cookTime) : null,
-      servings: formData.servings ? parseInt(formData.servings) : null,
-      calories: formData.calories ? parseInt(formData.calories) : null,
-      imageUrl: formData.imageUrl || null,
-      category: formData.category || null,
-      tags: formData.tags || null,
-    };
-
-    if (selectedRecipe) {
-      updateMutation.mutate({ id: selectedRecipe.id, ...recipeData });
-    } else {
-      createMutation.mutate(recipeData);
-    }
-  };
-
-  const filteredRecipes = recipes.filter(recipe =>
-    recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    recipe.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    recipe.category?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   if (isLoading) {
     return (

@@ -6,7 +6,7 @@ author: "RoSeé Muhammad"
 excerpt: "From predatory interest rates to systemic debt cycles, let's unpack how the American financial system was designed to keep Black and brown folks in perpetual debt—and how we break free."
 category: "Financial Wellness"
 tags: ["Financial Freedom", "Credit Card Debt", "Economic Justice", "Black Wealth", "Financial Literacy"]
-image: "https://images.unsplash.com/photo-1556742400-b5d8c72e4f5e?w=1200"
+image: "/images/personal/blog-graphics/the-credit-card-trap.png"
 readTime: "10 min read"
 ---
 
