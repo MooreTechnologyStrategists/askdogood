@@ -55,7 +55,203 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MUHAMMAD FAMILY TESTIMONIAL - HERO SPOT */}
+      {/* HERO SECTION - Main Value Proposition */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background Images Grid */}
+        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 opacity-20">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+        </div>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight" style={{ fontFamily: 'var(--font-serif)' }}>
+              Healing.Structure.<br />
+              <span className="text-primary">Real-life Growth.</span>
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              Join 1,000+ thyroid warriors who've taken control of their health with real food, real talk, and real results. No BS, just healing.
+            </p>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5 text-primary" />
+                <span className="font-semibold">1,000+ Warriors</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 text-primary" />
+                <span className="font-semibold">7+ Years Experience</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <HeartPulse className="h-5 w-5 text-primary" />
+                <span className="font-semibold">100% Real Talk</span>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <BeehiivSubscribe variant="inline" />
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              📧 Free Thyroid Symptom Checklist + 3-Day Meal Plan
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful */}
+      <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
+            <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              "Miss RoSeé's food isn't salty, but it's SO tasty!"
+            </blockquote>
+            <p className="text-muted-foreground">— Muhammad Family</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4-CARD FEATURE GRID - Everything You Need */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
+        <div className="container max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              Everything You Need to <span className="text-primary">Heal & Thrive</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Practical tools + real talk — designed to help you stabilize, rebuild, and level up.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Card 1: Thyroid-Healing Recipes */}
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" 
+                  alt="Thyroid-friendly recipes"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="text-4xl mb-2">🥗</div>
+                  <h3 className="text-xl font-bold text-white">Thyroid-Healing Recipes</h3>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4">
+                  Curated meals designed for real conditions. Low sodium, allergen-friendly, and actually delicious.
+                </p>
+                <Link href="/clinical-recipes">
+                  <Button className="w-full gap-2 group/btn">
+                    Explore Recipes
+                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Card 2: Warrior Community */}
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" 
+                  alt="Warrior community"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="text-4xl mb-2">💪</div>
+                  <h3 className="text-xl font-bold text-white">Warrior Community</h3>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4">
+                  Connect with 1,000+ thyroid warriors. Share wins, ask questions, find your tribe.
+                </p>
+                <Link href="/contact">
+                  <Button className="w-full gap-2 group/btn">
+                    Join the Tribe
+                    <Users className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Card 3: Book a Session */}
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800" 
+                  alt="One-on-one consultation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="text-4xl mb-2">📅</div>
+                  <h3 className="text-xl font-bold text-white">Book a Session</h3>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4">
+                  1:1 consultations for meal planning, health coaching, or custom meal prep services.
+                </p>
+                <Link href="/contact">
+                  <Button className="w-full gap-2 group/btn">
+                    Schedule Now
+                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Card 4: Wellness Challenges */}
+            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=800" 
+                  alt="Wellness challenges"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="text-4xl mb-2">🎯</div>
+                  <h3 className="text-xl font-bold text-white">Wellness Challenges</h3>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4">
+                  Small wins that compound. Weekly challenges to build structure and track progress.
+                </p>
+                <Link href="/shop">
+                  <Button className="w-full gap-2 group/btn">
+                    Start a Challenge
+                    <TrendingUp className="h-4 w-4 group-hover/btn:translate-y-[-2px] transition-transform" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Trust Badge */}
+          <div className="text-center mt-12">
+            <p className="text-sm text-muted-foreground font-medium">
+              Trusted by 1,000+ Warriors
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MUHAMMAD FAMILY TESTIMONIAL - FULL STORY */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         <div className="container max-w-6xl">
           {/* Section Header */}
@@ -468,6 +664,100 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <Testimonials />
+
+      {/* REAL PEOPLE, REAL RESULTS - Enhanced Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
+        <div className="container max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              Real People, <span className="text-primary">Real Results</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Join thousands who've taken control of their thyroid health
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <Card className="hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-pink-600 flex items-center justify-center text-white text-2xl font-bold">
+                    M
+                  </div>
+                  <div>
+                    <p className="font-bold">Maya T.</p>
+                    <p className="text-sm text-muted-foreground">Washington, DC</p>
+                    <div className="inline-block mt-1 px-2 py-1 bg-primary/10 rounded text-xs font-medium text-primary">
+                      Hypothyroidism
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  "This course changed everything. I finally understand my body and how to advocate for myself. Within 3 months, my energy returned and I feel like ME again."
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-2xl font-bold">
+                    K
+                  </div>
+                  <div>
+                    <p className="font-bold">Keisha M.</p>
+                    <p className="text-sm text-muted-foreground">Baltimore, MD</p>
+                    <div className="inline-block mt-1 px-2 py-1 bg-green-500/10 rounded text-xs font-medium text-green-600 dark:text-green-400">
+                      Post-Thyroidectomy
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  "I've spent thousands on doctors who didn't listen. This $97 course gave me more practical information than years of appointments. RoSeé just GETS it."
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 3 */}
+            <Card className="hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-2xl font-bold">
+                    S
+                  </div>
+                  <div>
+                    <p className="font-bold">Simone W.</p>
+                    <p className="text-sm text-muted-foreground">Arlington, VA</p>
+                    <div className="inline-block mt-1 px-2 py-1 bg-purple-500/10 rounded text-xs font-medium text-purple-600 dark:text-purple-400">
+                      Hashimoto's Thyroiditis
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  "As a newly diagnosed Hashimoto's patient, I was overwhelmed. This course broke everything down in a way that made sense. The community support alone is worth it!"
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* READ LABELS - Education Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20 border-y">
@@ -961,14 +1251,37 @@ export default function Home() {
       {/* EXTERNAL NEWS FEEDS */}
       <ExternalNewsFeeds />
 
-      {/* NEWSLETTER SIGNUP */}
-      <section className="py-20 bg-secondary/20">
-        <div className="container max-w-4xl">
+      {/* NEWSLETTER SIGNUP - Lead Magnet CTA */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container max-w-4xl relative z-10">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4">
+              <Gift className="h-5 w-5 text-white" />
+              <span className="text-sm font-bold text-white">FREE RESOURCE</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              Ready to Start Your <span className="text-primary">Healing Journey?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real talk and real food.
+            </p>
+          </div>
+          
           <BeehiivSubscribe
             variant="card"
-            title="Join the AskDoGood Newsletter"
-            description="Get weekly insights on healing, thyroid health, mindset, and real-life strategies delivered straight to your inbox. No fluff, just real talk."
+            title=""
+            description=""
           />
+          
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            Join 1,000+ warriors already healing
+          </p>
         </div>
       </section>
 
