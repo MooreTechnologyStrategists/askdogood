@@ -143,7 +143,6 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="text-4xl mb-2">🥗</div>
                   <h3 className="text-xl font-bold text-white">Thyroid-Healing Recipes</h3>
                 </div>
               </div>
@@ -164,13 +163,12 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" 
-                  alt="Warrior community"
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800" 
+                  alt="Diverse warrior community"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="text-4xl mb-2">💪</div>
                   <h3 className="text-xl font-bold text-white">Warrior Community</h3>
                 </div>
               </div>
@@ -191,13 +189,12 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800" 
-                  alt="One-on-one consultation"
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800" 
+                  alt="One-on-one consultation with diverse clients"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="text-4xl mb-2">📅</div>
                   <h3 className="text-xl font-bold text-white">Book a Session</h3>
                 </div>
               </div>
@@ -218,13 +215,12 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=800" 
-                  alt="Wellness challenges"
+                  src="https://images.unsplash.com/photo-1594745561149-2211ca8c5d98?w=800" 
+                  alt="Diverse people wellness challenges"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="text-4xl mb-2">🎯</div>
                   <h3 className="text-xl font-bold text-white">Wellness Challenges</h3>
                 </div>
               </div>
@@ -257,7 +253,6 @@ export default function Home() {
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-4">
-              <Sparkles className="h-4 w-4 text-white" />
               <span className="text-sm font-bold text-white">DMV METRO AREA SUCCESS STORY</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
@@ -392,7 +387,6 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full mb-4 animate-pulse shadow-xl">
-              <Gift className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white">LIMITED TIME OFFERS</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
@@ -438,7 +432,6 @@ export default function Home() {
                   <Link href="/shop">
                     <Button className="w-full gap-2 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 group">
                       Enroll Now 
-                      <Zap className="h-4 w-4 group-hover:rotate-12 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -463,7 +456,6 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
               <CardHeader>
-                <div className="text-4xl mb-3">🥗</div>
                 <CardTitle className="text-2xl">Clinical Food RX</CardTitle>
                 <CardDescription>Personalized meal plans for YOUR symptoms</CardDescription>
               </CardHeader>
@@ -491,8 +483,19 @@ export default function Home() {
               <div className="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg shadow-lg">
                 NEW
               </div>
+              {/* Chyna White Cover Image */}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                <img 
+                  src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp" 
+                  alt="Chyna White Series Cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800";
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
               <CardHeader>
-                <div className="text-4xl mb-3">📚</div>
                 <CardTitle className="text-2xl">Chyna White Series</CardTitle>
                 <CardDescription>Fiction with attitude & real talk</CardDescription>
               </CardHeader>
@@ -552,7 +555,6 @@ export default function Home() {
               {/* RIGHT: Story */}
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-2">
-                  <Sparkles className="h-4 w-4 text-primary" />
                   <span className="text-sm font-medium text-primary">My Story</span>
                 </div>
                 
@@ -766,7 +768,6 @@ export default function Home() {
             {/* Header */}
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full mb-4">
-                <BookOpen className="h-4 w-4 text-orange-600 dark:text-orange-400" />
                 <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Real Talk</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
@@ -1003,19 +1004,19 @@ export default function Home() {
                   <div className="absolute inset-0 grid grid-cols-2 gap-1 p-2">
                     <div 
                       className="relative rounded-lg overflow-hidden"
-                      style={{ backgroundImage: "url(/images/stories/chyna-white-1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent" />
                     </div>
                     <div 
                       className="relative rounded-lg overflow-hidden"
-                      style={{ backgroundImage: "url(/images/stories/chyna-white-2.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-transparent" />
                     </div>
                     <div 
                       className="relative rounded-lg overflow-hidden col-span-2"
-                      style={{ backgroundImage: "url(/images/stories/chyna-white-3.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-3.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30" />
                     </div>
@@ -1024,7 +1025,6 @@ export default function Home() {
                   {/* New Badge */}
                   <div className="absolute top-6 left-6 z-10">
                     <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-bold text-white shadow-lg animate-pulse">
-                      <Sparkles className="h-4 w-4" />
                       NEW SERIES
                     </div>
                   </div>
@@ -1068,7 +1068,7 @@ export default function Home() {
                       </Link>
                       <Link href="/stories">
                         <Button size="lg" className="gap-2 border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
-                          Explore the Series <BookOpen className="h-5 w-5" />
+                          Explore the Series
                         </Button>
                       </Link>
                     </div>
@@ -1143,7 +1143,6 @@ export default function Home() {
             <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Sparkles className="h-5 w-5 text-primary" />
                   Challenges
                 </CardTitle>
                 <CardDescription>Small wins that compound.</CardDescription>
@@ -1156,7 +1155,6 @@ export default function Home() {
             <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <BookOpen className="h-5 w-5 text-primary" />
                   Blog
                 </CardTitle>
                 <CardDescription>Truth, strategy, and encouragement.</CardDescription>
@@ -1209,7 +1207,6 @@ export default function Home() {
                 {/* Content */}
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <div className="inline-flex items-center gap-2 rounded-full border bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 w-fit">
-                    <Sparkles className="h-4 w-4" />
                     Coming Soon
                   </div>
                   

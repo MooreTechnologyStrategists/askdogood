@@ -168,7 +168,6 @@ export default function ThyroidCourse() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 text-lg px-4 py-2">
-              <Sparkles className="w-4 h-4 mr-2" />
               Limited Time Launch Offer
             </Badge>
             
@@ -214,7 +213,6 @@ export default function ThyroidCourse() {
                     className="flex-1 px-4 py-2 border rounded-lg"
                   />
                   <Button onClick={applyPromoCode}>
-                    <Gift className="w-4 h-4 mr-2" />
                     Apply
                   </Button>
                 </div>
@@ -232,7 +230,6 @@ export default function ThyroidCourse() {
                 asChild
               >
                 <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">
-                  <Sparkles className="w-5 h-5 mr-2" />
                   Enroll Now - ${finalPrice}
                 </a>
               </Button>
@@ -369,7 +366,6 @@ export default function ThyroidCourse() {
               asChild
             >
               <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">
-                <Sparkles className="w-5 h-5 mr-2" />
                 Enroll Now - ${finalPrice}
               </a>
             </Button>
