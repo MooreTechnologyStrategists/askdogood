@@ -212,7 +212,7 @@ export default function ThyroidCourse() {
                     onChange={(e) => setPromoCode(e.target.value)}
                     className="flex-1 px-4 py-2 border rounded-lg"
                   />
-                  <Button onClick={applyPromoCode}>
+                  <Button onClick={applyPromoCode} className="rounded-3xl">
                     Apply
                   </Button>
                 </div>
@@ -226,14 +226,14 @@ export default function ThyroidCourse() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6"
+                className="rounded-3xl text-lg px-8 py-6"
                 asChild
               >
                 <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">
                   Enroll Now - ${finalPrice}
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="rounded-3xl" asChild>
                 <a href="#curriculum">View Curriculum</a>
               </Button>
             </div>
@@ -362,7 +362,7 @@ export default function ThyroidCourse() {
             <Button 
               size="lg" 
               variant="secondary"
-              className="text-lg px-8 py-6"
+              className="rounded-3xl text-lg px-8 py-6"
               asChild
             >
               <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">

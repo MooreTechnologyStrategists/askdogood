@@ -151,7 +151,7 @@ export default function Home() {
                   Curated meals designed for real conditions. Low sodium, allergen-friendly, and actually delicious.
                 </p>
                 <Link href="/clinical-recipes">
-                  <Button className="w-full gap-2 group/btn">
+                  <Button className="w-full gap-2 rounded-3xl group/btn">
                     Explore Recipes
                     <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
@@ -177,7 +177,7 @@ export default function Home() {
                   Connect with 1,000+ thyroid warriors. Share wins, ask questions, find your tribe.
                 </p>
                 <Link href="/contact">
-                  <Button className="w-full gap-2 group/btn">
+                  <Button className="w-full gap-2 rounded-3xl group/btn">
                     Join the Tribe
                     <Users className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
                   </Button>
@@ -203,7 +203,7 @@ export default function Home() {
                   1:1 consultations for meal planning, health coaching, or custom meal prep services.
                 </p>
                 <Link href="/contact">
-                  <Button className="w-full gap-2 group/btn">
+                  <Button className="w-full gap-2 rounded-3xl group/btn">
                     Schedule Now
                     <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
@@ -229,7 +229,7 @@ export default function Home() {
                   Small wins that compound. Weekly challenges to build structure and track progress.
                 </p>
                 <Link href="/shop">
-                  <Button className="w-full gap-2 group/btn">
+                  <Button className="w-full gap-2 rounded-3xl group/btn">
                     Start a Challenge
                     <TrendingUp className="h-4 w-4 group-hover/btn:translate-y-[-2px] transition-transform" />
                   </Button>
@@ -355,13 +355,13 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/clinical-recipes">
-                    <Button size="lg" className="gap-2 w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 hover:from-primary/90 hover:to-pink-600/90 group">
+                    <Button size="lg" className="gap-2 w-full sm:w-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 hover:from-primary/90 hover:to-pink-600/90 group">
                       Get Custom Meal Plans 
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 group">
+                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 group">
                       Book Consultation 
                       <Users className="h-5 w-5 group-hover:scale-110 transition-transform" />
                     </Button>
@@ -430,7 +430,7 @@ export default function Home() {
                     Code: <span className="font-mono bg-primary/10 px-2 py-1 rounded">MLKLEGACY</span>
                   </p>
                   <Link href="/shop">
-                    <Button className="w-full gap-2 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 group">
+                    <Button className="w-full gap-2 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 group">
                       Enroll Now 
                     </Button>
                   </Link>
@@ -469,7 +469,7 @@ export default function Home() {
                     Input your conditions, get instant meal recommendations
                   </p>
                   <Link href="/clinical-recipes">
-                    <Button variant="outline" className="w-full gap-2 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-green-500/50 hover:border-green-500 group">
+                    <Button variant="outline" className="w-full gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-green-500/50 hover:border-green-500 group">
                       Try It Now 
                       <TrendingUp className="h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
                     </Button>
@@ -509,7 +509,7 @@ export default function Home() {
                     BB girl meets corporate boss. Unapologetically Black.
                   </p>
                   <Link href="/stories">
-                    <Button variant="outline" className="w-full gap-2 group-hover:scale-105 transition-transform bg-gradient-to-r from-purple-600/10 to-pink-600/10">
+                    <Button variant="outline" className="w-full gap-2 rounded-3xl group-hover:scale-105 transition-transform bg-gradient-to-r from-purple-600/10 to-pink-600/10">
                       Read Episode 1 <BookOpen className="h-4 w-4" />
                     </Button>
                   </Link>
@@ -585,13 +585,13 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Link href="/about">
-                    <Button size="lg" className="gap-2 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 group">
+                    <Button size="lg" className="gap-2 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 group">
                       Read My Full Story 
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/journey">
-                    <Button size="lg" variant="outline" className="gap-2 shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button size="lg" variant="outline" className="gap-2 rounded-3xl shadow-md hover:shadow-xl transition-all transform hover:scale-105">
                       Start Your Journey
                     </Button>
                   </Link>
@@ -654,7 +654,7 @@ export default function Home() {
                 the real reward is the wisdom you pick up along the way."
               </p>
               <Link href="/garden">
-                <Button size="lg" variant="outline" className="gap-2 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
+                <Button size="lg" variant="outline" className="gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
                   Explore All Seasons 
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -980,7 +980,7 @@ export default function Home() {
                   </div>
                   
                   <Link href="/shop">
-                    <Button size="lg" className="gap-2 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 w-full md:w-auto group">
+                    <Button size="lg" className="gap-2 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 w-full md:w-auto group">
                       Learn More About the Course 
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -1062,12 +1062,12 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
                       <Link href="/stories">
-                        <Button size="lg" className="gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
+                        <Button size="lg" className="gap-2 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
                           Read Episode 1 <ArrowRight className="h-5 w-5" />
                         </Button>
                       </Link>
                       <Link href="/stories">
-                        <Button size="lg" className="gap-2 border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
+                        <Button size="lg" className="gap-2 rounded-3xl border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
                           Explore the Series
                         </Button>
                       </Link>
@@ -1168,19 +1168,19 @@ export default function Home() {
           {/* CTA Row */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <Link href="/about">
-              <Button className="gap-2 border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
+              <Button className="gap-2 rounded-3xl border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
                 Meet RoSeé 
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/blog">
-              <Button className="gap-2 border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
+              <Button className="gap-2 rounded-3xl border border-border/70 bg-background/60 shadow-md hover:shadow-xl transition-all transform hover:scale-105 group">
                 Read the Blog 
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button className="gap-2 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
+              <Button className="gap-2 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
                 Contact <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -1225,10 +1225,10 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button className="gap-2 px-6 py-3 text-lg">
+                    <Button className="gap-2 rounded-3xl px-6 py-3 text-lg">
                       Get Notified <ArrowRight className="h-4 w-4" />
                     </Button>
-                    <Button className="gap-2 border border-border/70 bg-background/60 px-6 py-3 text-lg">
+                    <Button className="gap-2 rounded-3xl border border-border/70 bg-background/60 px-6 py-3 text-lg">
                       Learn More <ArrowRight className="h-4 w-4" />
                     </Button>
                   </div>

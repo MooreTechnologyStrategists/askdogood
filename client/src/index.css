@@ -57,7 +57,7 @@
   --chart-3: oklch(0.45 0.14 45);
   --chart-4: oklch(0.60 0.08 120);
   --chart-5: oklch(0.50 0.10 120);
-  --radius: 0.5rem;
+  --radius: 1rem;
   --background: oklch(0.98 0.005 45); /* Warm off-white */
   --foreground: oklch(0.25 0.02 45); /* Deep warm brown */
   --card: oklch(1 0 0);
@@ -112,6 +112,16 @@
 }
 
 @layer components {
+  /* Modern button styles with trendy rounded corners */
+  button, .btn {
+    @apply rounded-2xl transition-all duration-300;
+  }
+
+  /* Card styles with enhanced rounded corners */
+  [class*="card"], .card {
+    @apply rounded-3xl;
+  }
+
   .container {
     width: 100%;
     margin-left: auto;

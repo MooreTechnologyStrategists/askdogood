@@ -748,7 +748,7 @@ export default function Shop() {
             <Button 
               size="lg"
               variant="secondary"
-              className="bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
+              className="rounded-3xl bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
               asChild
             >
               <Link href="/course/thyroid-health-mastery">
@@ -957,7 +957,7 @@ export default function Shop() {
                     {product.id === 1 ? (
                       <Button 
                         size="lg" 
-                        className="w-full text-lg font-semibold group-hover:scale-105 transition-transform"
+                        className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
                         asChild
                       >
                         <Link href="/course/thyroid-health-mastery">
@@ -968,7 +968,7 @@ export default function Shop() {
                     ) : (
                       <Button 
                         size="lg" 
-                        className="w-full text-lg font-semibold group-hover:scale-105 transition-transform"
+                        className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
                         onClick={() => setSelectedProduct(product)}
                       >
                         {product.recurring ? 'Start Membership' : 'Get Instant Access'}
@@ -1168,7 +1168,7 @@ export default function Shop() {
 
           <div className="text-center">
             <Link href="/merch">
-              <Button size="lg" className="gap-2 text-lg">
+              <Button size="lg" className="gap-2 rounded-3xl text-lg">
                 Shop All Merch <ShoppingBag className="h-5 w-5" />
               </Button>
             </Link>
@@ -1256,10 +1256,10 @@ export default function Shop() {
               designed for real life—not perfection. Your healing journey starts with a single step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 font-semibold">
+              <Button size="lg" variant="secondary" className="rounded-3xl text-lg px-8 font-semibold">
                 View All Products
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
+              <Button size="lg" variant="outline" className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
                 Join Wellness Circle - $19/mo
               </Button>
             </div>
