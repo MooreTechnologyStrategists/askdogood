@@ -182,7 +182,7 @@ export default function Journey() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">The Timeline</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Four phases that shaped who I am — and where I'm going next.
+              Phases that shaped who I am — and where I'm going next.
             </p>
           </div>
 
