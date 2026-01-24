@@ -69,7 +69,7 @@ export default function GardenSeasonPost() {
         <img
           src={heroImg}
           alt={season.heroAlt ?? `${label} garden`}
-          className="mt-8 w-full rounded-2xl object-cover"
+          className="mt-8 w-full rounded-3xl object-cover shadow-xl"
           loading="lazy"
         />
 
@@ -101,9 +101,9 @@ export default function GardenSeasonPost() {
           )}
         </div>
 
-        <div className="mt-10 rounded-2xl border p-6">
-          <h2 className="text-lg font-semibold">Your reflection (quick prompt)</h2>
-          <p className="text-muted-foreground mt-2">
+        <div className="mt-10 rounded-3xl border-2 p-8 bg-gradient-to-br from-primary/5 to-secondary/5 shadow-lg">
+          <h2 className="text-xl font-bold">Your reflection (quick prompt)</h2>
+          <p className="text-muted-foreground mt-3">
             What “golden gem” have you learned lately that you can use now… and what gem might be slow-moving
             but still valuable?
           </p>

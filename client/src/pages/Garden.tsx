@@ -43,17 +43,17 @@ export default function Garden() {
 
           return (
             <Link key={s.slug} href={`/garden/${s.slug}`}>
-              <a className="group relative overflow-hidden rounded-2xl shadow-sm border">
+              <a className="group relative overflow-hidden rounded-3xl shadow-lg border-2 hover:border-primary/50 transition-all hover:shadow-2xl hover:-translate-y-2 duration-300 block">
                 <img
                   src={heroImg}
                   alt={s.heroAlt ?? `${label} garden`}
-                  className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <div className="text-white text-xl font-semibold">{label}</div>
-                  <div className="text-white/80 text-sm">Read the blog →</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <div className="text-white text-2xl font-bold mb-1">{label}</div>
+                  <div className="text-white/90 text-sm font-medium">{s.subtitle}</div>
                 </div>
               </a>
             </Link>
