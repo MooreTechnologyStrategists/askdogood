@@ -172,19 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful */}
-      <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
-            <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-              "Miss RoSeé's food isn't salty, but it's SO tasty!"
-            </blockquote>
-            <p className="text-muted-foreground">— Muhammad Family</p>
-          </div>
-        </div>
-      </section>
-
       {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
@@ -197,6 +184,19 @@ export default function Home() {
             </p>
           </div>
           <PersonalSlideshow />
+        </div>
+      </section>
+
+      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful */}
+      <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
+            <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              "Miss RoSeé's food isn't salty, but it's SO tasty!"
+            </blockquote>
+            <p className="text-muted-foreground">— Muhammad Family</p>
+          </div>
         </div>
       </section>
 

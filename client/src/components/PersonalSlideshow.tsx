@@ -19,9 +19,9 @@ const personalImages = [
 
 export default function PersonalSlideshow() {
   return (
-    <div className="flex flex-col gap-6 max-w-md mx-auto">
+    <div className="flex flex-row gap-6 max-w-5xl mx-auto justify-center">
       {personalImages.map((image, index) => (
-        <div key={index} className="relative w-full aspect-square">
+        <div key={index} className="relative w-32 h-32 md:w-40 md:h-40">
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
           <img
             src={image.src}
