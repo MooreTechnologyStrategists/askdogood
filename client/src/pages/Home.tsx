@@ -172,6 +172,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CENTRAL PERSONAL IMAGE */}
+      <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container">
+          <div className="flex justify-center">
+            <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-2xl"></div>
+              <img 
+                src="/images/personal/professional/rosee-professional-suit.jpg"
+                alt="RoSeé Muhammad - Your Thyroid Chef"
+                className="relative w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
