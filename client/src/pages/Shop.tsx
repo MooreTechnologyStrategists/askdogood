@@ -11,7 +11,7 @@ const products = [
     id: 1,
     name: "Thyroid Health Mastery Course",
     price: 97,
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200",
+    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200",
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
@@ -369,7 +369,7 @@ This bundle combines gardening wisdom with culinary expertise, giving you everyt
     id: 4,
     name: "Autoimmune Recovery Guide",
     price: 27,
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1200",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200",
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "The exact protocol I used to heal 5 autoimmune diseases naturally",
@@ -470,7 +470,7 @@ If you're exhausted from being exhausted, this is your starting point.`,
     id: 5,
     name: "Black Women's Health Advocacy Toolkit",
     price: 27,
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200",
     category: "Digital Toolkit",
     icon: Download,
     tagline: "Get the healthcare you deserve—advocate like a pro",
@@ -587,7 +587,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
     price: 27,
     recurring: "monthly",
     foundingPrice: 19,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200",
+    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200",
     category: "Monthly Membership",
     icon: Users,
     tagline: "Your community for healing, growth, and sustainable wellness",
@@ -954,27 +954,16 @@ export default function Shop() {
                   </CardContent>
 
                   <CardFooter className="flex-col gap-2 pt-4">
-                    {product.id === 1 ? (
-                      <Button 
-                        size="lg" 
-                        className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
-                        asChild
-                      >
-                        <Link href="/course/thyroid-health-mastery">
-                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
-                          <TrendingUp className="ml-2 h-5 w-5" />
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button 
-                        size="lg" 
-                        className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
-                        onClick={() => setSelectedProduct(product)}
-                      >
+                    <Button 
+                      size="lg" 
+                      className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
+                      asChild
+                    >
+                      <Link href={`/contact?product=${encodeURIComponent(product.name)}&price=${product.foundingPrice || product.price}`}>
                         {product.recurring ? 'Start Membership' : 'Get Instant Access'}
                         <TrendingUp className="ml-2 h-5 w-5" />
-                      </Button>
-                    )}
+                      </Link>
+                    </Button>
                     <p className="text-xs text-center text-muted-foreground">
                       <Shield className="h-3 w-3 inline mr-1" />
                       30-day money-back guarantee • Instant access
