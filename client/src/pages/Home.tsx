@@ -197,6 +197,8 @@ export default function Home() {
             </p>
           </div>
           <PersonalSlideshow />
+        </div>
+      </section>
 
       {/* 4-CARD FEATURE GRID - Everything You Need */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
