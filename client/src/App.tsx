@@ -26,6 +26,7 @@ import Shop from "./pages/Shop";
 import Merch from "./pages/Merch";
 import Interests from "./pages/Interests";
 import ThyroidCourse from "./pages/ThyroidCourse";
+import ThyroidMasteryCourse from "./pages/products/ThyroidMasteryCourse";
 import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
 import ShortStories from "./pages/ShortStories";
@@ -99,9 +100,12 @@ function Router() {
     <Route path="/label-scanner" component={LabelScanner} />
 
     {/* Commerce */}
-    <Route path="/shop" component={ ShopRedirect} />
+    <Route path="/shop" component={Shop} />
     <Route path="/merch" component={Merch} />
     <Route path="/course/thyroid-health-mastery" component={ThyroidCourse} />
+    
+    {/* Product Pages with Gumroad Integration */}
+    <Route path="/product/thyroid-mastery-course" component={ThyroidMasteryCourse} />
 
     {/* Stories */}
     <Route path="/stories" component={ShortStories} />
