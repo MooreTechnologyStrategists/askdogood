@@ -128,11 +128,47 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
               Meet Your <span className="text-primary">Thyroid Chef</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Where healing meets flavor in every dish
             </p>
           </div>
           <PersonalSlideshow />
+          
+          {/* Personal Health Journey Story */}
+          <div className="max-w-4xl mx-auto mt-12 p-8 bg-card rounded-3xl shadow-xl border-2 border-primary/20">
+            <div className="prose prose-lg dark:prose-invert mx-auto">
+              <p className="text-lg leading-relaxed mb-4">
+                I don't just teach thyroid health—I've walked through my own fire. For <strong>seven years</strong>, I couldn't eat. I'm talking about surviving on Italian ice, water, and Pepto Bismol like it was my lifeline. 
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-4">
+                They had me on <strong>pantoprazole</strong> (maxed out the dose) for my GERD, but nothing changed. The monstrous burps. The palpitations that became so normal I stopped noticing them. My IBS symptoms mirrored my husband's Crohn's disease—same meal, different day, completely different reaction. You never knew what would keep you doubled over in pain.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-4">
+                Then one day, my doctor introduced me to <strong>dicyclomine</strong>. Game. Changer. But I didn't stop there. I started taking pre and probiotics, digestive enzymes. I committed to working out for at least an hour every day—P90X, gym sessions, running. I went from taking dicyclomine 4 times a day to actually <em>eating real food again</em>.
+              </p>
+              
+              <p className="text-lg leading-relaxed font-semibold text-primary">
+                That journey from survival to thriving? That's why I cook the way I do. That's why every recipe I create is tested, real, and built for bodies that have been through it. Because I've been there. And I know the way out.
+              </p>
+            </div>
+            
+            <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
+              <div className="p-4 bg-primary/10 rounded-2xl">
+                <p className="text-2xl font-bold text-primary mb-1">7 Years</p>
+                <p className="text-sm text-muted-foreground">Of chronic GERD & IBS</p>
+              </div>
+              <div className="p-4 bg-secondary/10 rounded-2xl">
+                <p className="text-2xl font-bold text-secondary mb-1">Daily Workouts</p>
+                <p className="text-sm text-muted-foreground">P90X, gym, running</p>
+              </div>
+              <div className="p-4 bg-primary/10 rounded-2xl">
+                <p className="text-2xl font-bold text-primary mb-1">Real Recovery</p>
+                <p className="text-sm text-muted-foreground">From barely eating to thriving</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
