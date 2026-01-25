@@ -90,7 +90,7 @@ export default function Home() {
             </h2>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Join 1,000+ thyroid warriors who've taken control of their health with real food, real talk, and real results. No BS, just healing.
+              Thyroid health. Weight loss. Healthy work-life balance. Join 1,000+ people who've transformed their health with real food, real talk, and real results. No BS, just healing.
             </p>
 
             {/* Trust Indicators */}

@@ -45,8 +45,8 @@ export default function FoodSlideshow() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto">
-      <div className="relative h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
         {foodImages.map((image, index) => (
           <div
             key={index}
