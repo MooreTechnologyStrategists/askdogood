@@ -17,6 +17,7 @@ import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import BlogRSS from "./pages/BlogRSS";
 import Journey from "./pages/Journey";
 import Contact from "./pages/Contact";
 import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
@@ -76,6 +77,8 @@ function Router() {
     <Route path="/about" component={About} />
     <Route path="/blog" component={Blog} />
     <Route path="/blog/:slug" component={BlogPost} />
+    <Route path="/rss" component={BlogRSS} />
+    <Route path="/feed" component={BlogRSS} />
     <Route path="/journey" component={Journey} />
     <Route path="/interests" component={Interests} />
     <Route path="/garden" component={Garden} />

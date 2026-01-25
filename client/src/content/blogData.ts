@@ -1792,7 +1792,7 @@ So, how can you observe your child's motor skills to determine their athletic ab
 By paying close attention to your child's motor skills, you can gain valuable insights into their athletic potential and help guide them toward activities where they can thrive. This observation is not about pressuring them, but about providing the right support for their natural development and interests.`,
     date: "2023-05-09",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/healthy-tips-for-daily-workouts.webp",
+    image: "/assets/img/blog/assigned/unlocking-potential-observing-your-child-s-motor-skills-to-determine-athletic-abilities.webp",
     tags: ["Wellness", "Health"],
   },
   {

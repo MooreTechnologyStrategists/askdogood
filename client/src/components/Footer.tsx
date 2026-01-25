@@ -1,4 +1,4 @@
-import { Heart, Mail, ShoppingBag, BookOpen, Shield } from "lucide-react";
+import { Heart, Mail, ShoppingBag, BookOpen, Shield, Rss } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -63,6 +63,12 @@ export default function Footer() {
                 <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
                   <BookOpen className="h-3 w-3" />
                   Blog & Articles
+                </Link>
+              </li>
+              <li>
+                <Link href="/rss" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                  <Rss className="h-3 w-3" />
+                  RSS Feed
                 </Link>
               </li>
               <li>

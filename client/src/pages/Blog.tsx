@@ -17,6 +17,7 @@ import {
   Bookmark,
   Flame,
   BookOpen,
+  Rss,
 } from "lucide-react";
 
 import { safeBlogPosts } from "@/content/blogData";
@@ -115,10 +116,14 @@ export default function Blog() {
         <div className="container relative py-14 md:py-20">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* Left */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground">
+            <div className="space-y-6 relative">
+              {/* Floating decorative emojis */}
+              <div className="absolute -top-10 -left-6 text-4xl animate-float">📖</div>
+              <div className="absolute top-20 -right-8 text-3xl animate-float-slow">✨</div>
+              
+              <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground shadow-cartoon">
                 <Sparkles className="h-4 w-4 text-primary" />
-                The Ask DoGood Blog
+                The Ask DoGood Blog 🌟
               </div>
 
               <h1
@@ -150,6 +155,13 @@ export default function Blog() {
                 <Link href="/journey">
                   <Button className="gap-2 shadow-sm hover:shadow-md transition-shadow">
                     Start With My Journey <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+                
+                <Link href="/rss">
+                  <Button variant="outline" className="gap-2">
+                    <Rss className="h-4 w-4" />
+                    RSS Feed
                   </Button>
                 </Link>
               </div>
@@ -222,16 +234,16 @@ export default function Blog() {
                   className="text-2xl md:text-3xl font-bold"
                   style={{ fontFamily: "var(--font-serif)" }}
                 >
-                  Featured reads
+                  Featured reads 🔥
                 </h2>
                 <p className="text-muted-foreground mt-1">
-                  Strong starters if you're overwhelmed.
+                  Strong starters if you're overwhelmed. 💪
                 </p>
               </div>
 
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-primary/10 px-3 py-2 rounded-full shadow-cartoon animate-pulse">
                 <Flame className="h-4 w-4 text-primary" />
-                Curated
+                Curated ⭐
               </div>
             </div>
 
@@ -239,7 +251,7 @@ export default function Blog() {
               {featured.map((post) => (
                 <Card
                   key={post.id}
-                  className="hover:shadow-lg transition-shadow overflow-hidden"
+                  className="hover:shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 overflow-hidden hover-wiggle"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img

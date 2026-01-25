@@ -54,11 +54,18 @@ const featuredProducts: Product[] = [
 
 export default function AffiliateProductRecommendations() {
   return (
-    <div className="py-12 bg-secondary/20">
+    <div className="py-12 bg-secondary/20 relative overflow-hidden">
+      {/* Decorative floating elements */}
+      <div className="absolute top-10 left-10 text-5xl opacity-20 animate-float">💜</div>
+      <div className="absolute bottom-10 right-10 text-5xl opacity-20 animate-float-slow">✨</div>
+      
       <div className="container">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 relative">
+          <div className="absolute -top-8 left-1/4 text-3xl animate-bounce-fun">🛒</div>
+          <div className="absolute -top-8 right-1/4 text-3xl animate-bounce-fun" style={{animationDelay: '0.3s'}}>💖</div>
+          
           <h2 className="text-3xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-            Rosee's Personal Favorites
+            Rosee's Personal Favorites 💝
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             These are the products I actually use and swear by - no BS, just real results from things that work for me. 
@@ -71,13 +78,13 @@ export default function AffiliateProductRecommendations() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map((product, index) => (
-            <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
+            <Card key={index} className="flex flex-col hover:shadow-xl hover:shadow-primary/20 transition-all hover:-translate-y-2 hover-wiggle group">
               <CardHeader className="pb-3">
-                <div className="aspect-square bg-secondary/50 rounded-lg mb-3 flex items-center justify-center">
+                <div className="aspect-square bg-secondary/50 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-300"
                     onError={(e) => {
                       // Use Amazon logo as fallback for better brand consistency
                       e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg';

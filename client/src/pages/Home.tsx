@@ -61,10 +61,10 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Images Grid */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 opacity-20">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
         </div>
         
         {/* Gradient Overlay */}
@@ -72,7 +72,7 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Masked Circle Hero Image */}
+            {/* Masked Circle Hero Image with Floating Badges */}
             <div className="flex justify-center mb-8">
               <div className="relative w-40 h-40 md:w-48 md:h-48">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
@@ -81,6 +81,14 @@ export default function Home() {
                   alt="RoSeé Murphy - Thyroid Health Specialist"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                 />
+                
+                {/* Floating Cartoon Badges */}
+                <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon animate-float sticker-badge">
+                  ✨ 7 Years
+                </div>
+                <div className="absolute -bottom-2 -left-2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon animate-float-slow" style={{animationDelay: '0.5s'}}>
+                  💪 Warrior
+                </div>
               </div>
             </div>
 
@@ -93,19 +101,19 @@ export default function Home() {
               Thyroid health. Weight loss. Healthy work-life balance. Join 1,000+ people who've transformed their health with real food, real talk, and real results. No BS, just healing.
             </p>
 
-            {/* Trust Indicators */}
+            {/* Trust Indicators with Cartoon Effects */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 hover-wiggle cursor-pointer bg-gradient-to-r from-primary/10 to-transparent px-4 py-2 rounded-full">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="font-semibold">1,000+ Warriors</span>
+                <span className="font-semibold">1,000+ Warriors 🎯</span>
               </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 text-primary" />
-                <span className="font-semibold">7+ Years Experience</span>
+              <div className="flex items-center gap-2 hover-bounce cursor-pointer bg-gradient-to-r from-green-500/10 to-transparent px-4 py-2 rounded-full">
+                <ShieldCheck className="h-5 w-5 text-green-600" />
+                <span className="font-semibold">7+ Years Experience ⭐</span>
               </div>
-              <div className="flex items-center gap-2">
-                <HeartPulse className="h-5 w-5 text-primary" />
-                <span className="font-semibold">100% Real Talk</span>
+              <div className="flex items-center gap-2 hover-float cursor-pointer bg-gradient-to-r from-red-500/10 to-transparent px-4 py-2 rounded-full">
+                <HeartPulse className="h-5 w-5 text-red-500" />
+                <span className="font-semibold">100% Real Talk 💯</span>
               </div>
             </div>
 
@@ -114,9 +122,13 @@ export default function Home() {
               <BeehiivSubscribe variant="inline" />
             </div>
             
-            <p className="text-sm text-muted-foreground">
-              📧 Free Thyroid Symptom Checklist + 3-Day Meal Plan
-            </p>
+            <div className="flex items-center justify-center gap-2 animate-pop-in">
+              <span className="text-2xl animate-bounce-fun" style={{animationDelay: '0s'}}>📧</span>
+              <p className="text-sm text-muted-foreground font-medium">
+                Free Thyroid Symptom Checklist + 3-Day Meal Plan
+              </p>
+              <span className="text-2xl animate-bounce-fun" style={{animationDelay: '0.2s'}}>🎁</span>
+            </div>
           </div>
         </div>
       </section>
@@ -124,12 +136,16 @@ export default function Home() {
       {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 relative">
+            {/* Floating Decorative Elements */}
+            <div className="absolute -top-8 left-1/4 text-4xl animate-float">🥗</div>
+            <div className="absolute -top-8 right-1/4 text-4xl animate-float-slow">🍳</div>
+            
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Real Food. <span className="text-primary">Real Healing.</span>
+              Real Food. <span className="text-primary">Real Healing.</span> ✨
             </h2>
             <p className="text-lg text-muted-foreground">
-              Thyroid-friendly meals that actually taste good
+              Thyroid-friendly meals that actually taste good 😋
             </p>
           </div>
           <FoodSlideshow />
@@ -191,12 +207,16 @@ export default function Home() {
       {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 relative">
+            {/* Decorative floating emojis */}
+            <div className="absolute -top-6 left-1/4 text-3xl animate-float">👩‍🍳</div>
+            <div className="absolute -top-6 right-1/4 text-3xl animate-float-slow">❤️</div>
+            
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Meet Your <span className="text-primary">Thyroid Chef</span>
+              Meet Your <span className="text-primary">Thyroid Chef</span> 🍳
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Where healing meets flavor in every dish
+              Where healing meets flavor in every dish ✨
             </p>
           </div>
           <PersonalSlideshow />
@@ -207,11 +227,11 @@ export default function Home() {
       <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
+            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4 animate-pulse-glow" />
             <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-              "Miss RoSeé's food isn't salty, but it's SO tasty!"
+              "Miss RoSeé's food isn't salty, but it's SO tasty!" 😋👌
             </blockquote>
-            <p className="text-muted-foreground">— Muhammad Family</p>
+            <p className="text-muted-foreground">— Muhammad Family 👨‍👩‍👧‍👦</p>
           </div>
         </div>
       </section>
@@ -230,8 +250,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Card 1: Thyroid-Healing Recipes */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
+            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden hover-wiggle">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
+                {/* Floating badge */}
+                <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon z-10 animate-bounce-fun">
+                  🍴 NEW
+                </div>
                 <img 
                   src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=800" 
                   alt="Black woman preparing healthy thyroid-healing meals"
@@ -239,7 +263,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-xl font-bold text-white">Thyroid-Healing Recipes</h3>
+                  <h3 className="text-xl font-bold text-white">🥗 Thyroid-Healing Recipes</h3>
                 </div>
               </div>
               <CardContent className="p-6">
@@ -256,8 +280,12 @@ export default function Home() {
             </Card>
 
             {/* Card 2: Warrior Community */}
-            <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
+            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-purple-500/50 rounded-3xl overflow-hidden hover-bounce">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+                {/* Floating badge */}
+                <div className="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon z-10 animate-float">
+                  💜 1K+
+                </div>
                 <img 
                   src="/images/personal/professional/clay-banks-hands-together.jpg" 
                   alt="Diverse community hands together - supporting each other"
@@ -265,7 +293,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-xl font-bold text-white">Warrior Community</h3>
+                  <h3 className="text-xl font-bold text-white">👯 Warrior Community</h3>
                 </div>
               </div>
               <CardContent className="p-6">
@@ -588,7 +616,7 @@ export default function Home() {
                       src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-1.webp" 
                       alt="Lentil and chickpea burgers" 
                       className="w-full h-full object-cover" 
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400"; }} 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400"; }} 
                     />
                   </div>
                   <div className="rounded-lg overflow-hidden">
@@ -596,7 +624,7 @@ export default function Home() {
                       src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-2.webp" 
                       alt="Quinoa and rice varieties" 
                       className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400"; }} 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400"; }} 
                     />
                   </div>
                   <div className="rounded-lg overflow-hidden">
@@ -604,7 +632,7 @@ export default function Home() {
                       src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-3.webp" 
                       alt="Fresh vegetables and salad jars" 
                       className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400"; }} 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400"; }} 
                     />
                   </div>
                   <div className="rounded-lg overflow-hidden">
@@ -612,7 +640,7 @@ export default function Home() {
                       src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-4.webp" 
                       alt="Salmon and vegan chili" 
                       className="w-full h-full object-cover"
-                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400"; }} 
+                      onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400"; }} 
                     />
                   </div>
                 </div>
@@ -1525,25 +1553,25 @@ export default function Home() {
                     Coming Soon
                   </div>
                   
-                  <h2 className="text-4xl font-bold mb-4">The AskDoGood Show</h2>
+                  <h2 className="text-4xl font-bold mb-4">🎧 The AskDoGood Show</h2>
                   <p className="text-xl text-muted-foreground mb-6">
-                    Real conversations about health, healing, and thriving in Black & Brown communities.
+                    Real conversations about health, healing, and thriving in Black & Brown communities. 🎉
                   </p>
                   
                   <div className="space-y-3 text-muted-foreground mb-8">
                     <p>
-                      From thyroid health to mental wellness, from navigating healthcare to building resilience—this is where we talk about what matters.
+                      From thyroid health to mental wellness, from navigating healthcare to building resilience—this is where we talk about what matters. 💜
                     </p>
                     <p className="font-medium text-foreground">
-                      Podcast. Radio. Real talk. No filters.
+                      Podcast. Radio. Real talk. No filters. 💯
                     </p>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button className="gap-2 rounded-3xl px-6 py-3 text-lg">
-                      Get Notified <ArrowRight className="h-4 w-4" />
+                    <Button className="gap-2 rounded-3xl px-6 py-3 text-lg shadow-cartoon-primary hover-bounce">
+                      Get Notified 🔔 <ArrowRight className="h-4 w-4" />
                     </Button>
-                    <Button className="gap-2 rounded-3xl border border-border/70 bg-background/60 px-6 py-3 text-lg">
+                    <Button className="gap-2 rounded-3xl border border-border/70 bg-background/60 px-6 py-3 text-lg hover-wiggle">
                       Learn More <ArrowRight className="h-4 w-4" />
                     </Button>
                   </div>
@@ -1570,15 +1598,15 @@ export default function Home() {
         
         <div className="container max-w-4xl relative z-10">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4 shadow-cartoon-lg animate-bounce-fun hover-wiggle">
               <Gift className="h-5 w-5 text-white" />
-              <span className="text-sm font-bold text-white">FREE RESOURCE</span>
+              <span className="text-sm font-bold text-white">FREE RESOURCE 🎁</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-              Ready to Start Your <span className="text-primary">Healing Journey?</span>
+              Ready to Start Your <span className="text-primary">Healing Journey?</span> ✨
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real talk and real food.
+              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real talk and real food. 🙌
             </p>
           </div>
           
@@ -1588,8 +1616,10 @@ export default function Home() {
             description=""
           />
           
-          <p className="text-center text-sm text-muted-foreground mt-6">
-            Join 1,000+ warriors already healing
+          <p className="text-center text-sm text-muted-foreground mt-6 flex items-center justify-center gap-2">
+            <span className="animate-pulse">💚</span>
+            <span>Join 1,000+ warriors already healing</span>
+            <span className="animate-pulse">💚</span>
           </p>
         </div>
       </section>
