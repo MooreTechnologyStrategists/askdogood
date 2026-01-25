@@ -21,6 +21,7 @@ import BlogRSS from "./pages/BlogRSS";
 import Journey from "./pages/Journey";
 import Contact from "./pages/Contact";
 import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
+import LabelScanner from "./pages/LabelScanner";
 import Shop from "./pages/Shop";
 import Merch from "./pages/Merch";
 import Interests from "./pages/Interests";
@@ -95,6 +96,7 @@ function Router() {
       path="/clinical-recipes"
       component={ClinicalRecipesPageComponent}
     />
+    <Route path="/label-scanner" component={LabelScanner} />
 
     {/* Commerce */}
     <Route path="/shop" component={ ShopRedirect} />

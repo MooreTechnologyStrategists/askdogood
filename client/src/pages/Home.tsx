@@ -72,22 +72,19 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Masked Circle Hero Image with Floating Badges */}
+            {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">
-              <div className="relative w-40 h-40 md:w-48 md:h-48">
+              <div className="relative w-64 h-64 md:w-96 md:h-96">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
                 <img 
-                  src="/images/personal/professional/hero-circle.jpg"
-                  alt="RoSeé Murphy - Thyroid Health Specialist"
+                  src="/images/personal/rosee-hero-1.jpg"
+                  alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                 />
                 
-                {/* Floating Cartoon Badges */}
-                <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon animate-float sticker-badge">
-                  ✨ 7 Years
-                </div>
-                <div className="absolute -bottom-2 -left-2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon animate-float-slow" style={{animationDelay: '0.5s'}}>
-                  💪 Warrior
+                {/* Professional Badge */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-zinc-900 text-foreground px-6 py-3 rounded-full shadow-xl border-2 border-primary/20">
+                  <span className="text-sm font-semibold">7+ Years Experience</span>
                 </div>
               </div>
             </div>
@@ -101,19 +98,19 @@ export default function Home() {
               Thyroid health. Weight loss. Healthy work-life balance. Join 1,000+ people who've transformed their health with real food, real talk, and real results. No BS, just healing.
             </p>
 
-            {/* Trust Indicators with Cartoon Effects */}
+            {/* Trust Indicators - Professional */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2 hover-wiggle cursor-pointer bg-gradient-to-r from-primary/10 to-transparent px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-transparent px-4 py-2 rounded-full">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="font-semibold">1,000+ Warriors 🎯</span>
+                <span className="font-semibold">1,000+ Active Members</span>
               </div>
-              <div className="flex items-center gap-2 hover-bounce cursor-pointer bg-gradient-to-r from-green-500/10 to-transparent px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-transparent px-4 py-2 rounded-full">
                 <ShieldCheck className="h-5 w-5 text-green-600" />
-                <span className="font-semibold">7+ Years Experience ⭐</span>
+                <span className="font-semibold">7+ Years Experience</span>
               </div>
-              <div className="flex items-center gap-2 hover-float cursor-pointer bg-gradient-to-r from-red-500/10 to-transparent px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-red-500/10 to-transparent px-4 py-2 rounded-full">
                 <HeartPulse className="h-5 w-5 text-red-500" />
-                <span className="font-semibold">100% Real Talk 💯</span>
+                <span className="font-semibold">Evidence-Based Approach</span>
               </div>
             </div>
 
@@ -122,12 +119,10 @@ export default function Home() {
               <BeehiivSubscribe variant="inline" />
             </div>
             
-            <div className="flex items-center justify-center gap-2 animate-pop-in">
-              <span className="text-2xl animate-bounce-fun" style={{animationDelay: '0s'}}>📧</span>
+            <div className="flex items-center justify-center gap-2">
               <p className="text-sm text-muted-foreground font-medium">
                 Free Thyroid Symptom Checklist + 3-Day Meal Plan
               </p>
-              <span className="text-2xl animate-bounce-fun" style={{animationDelay: '0.2s'}}>🎁</span>
             </div>
           </div>
         </div>
@@ -136,16 +131,12 @@ export default function Home() {
       {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
-          <div className="text-center mb-8 relative">
-            {/* Floating Decorative Elements */}
-            <div className="absolute -top-8 left-1/4 text-4xl animate-float">🥗</div>
-            <div className="absolute -top-8 right-1/4 text-4xl animate-float-slow">🍳</div>
-            
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Real Food. <span className="text-primary">Real Healing.</span> ✨
+              Real Food. <span className="text-primary">Real Healing.</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Thyroid-friendly meals that actually taste good 😋
+              Thyroid-friendly meals that support your health goals
             </p>
           </div>
           <FoodSlideshow />
@@ -207,19 +198,105 @@ export default function Home() {
       {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
-          <div className="text-center mb-8 relative">
-            {/* Decorative floating emojis */}
-            <div className="absolute -top-6 left-1/4 text-3xl animate-float">👩‍🍳</div>
-            <div className="absolute -top-6 right-1/4 text-3xl animate-float-slow">❤️</div>
-            
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Meet Your <span className="text-primary">Thyroid Chef</span> 🍳
+              Meet Your <span className="text-primary">Thyroid Chef</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Where healing meets flavor in every dish ✨
+              Where healing meets flavor in every dish
             </p>
           </div>
           <PersonalSlideshow />
+        </div>
+      </section>
+
+      {/* FEATURED RECIPES - Health Benefits */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+                Signature <span className="text-primary">DoGood Recipes</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Low-fat, low-sodium, low-sugar recipes designed for optimal thyroid health
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Recipe 1: Roasted Carrots, Onions & Peppers */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1566393028730-, 38c8f8d80089?w=600" 
+                    alt="Roasted Carrots, Onions and Peppers"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Roasted Carrots, Onions & Peppers</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center text-sm leading-relaxed mb-4">
+                    This vibrant trio delivers powerful antioxidants including beta-carotene, vitamin C, and quercetin. 
+                    Roasting enhances their natural sweetness while preserving nutrients that support thyroid function, 
+                    reduce inflammation, and boost immune health. Perfect as a side dish or mixed into grain bowls.
+                  </p>
+                  <Link href="/recipe/roasted-vegetables-trio">
+                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Recipe 2: Purple Cabbage & Broccoli Slaw */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" 
+                    alt="Purple Cabbage and Broccoli Slaw"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Purple Cabbage & Broccoli Slaw</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center text-sm leading-relaxed mb-4">
+                    Packed with cruciferous vegetables rich in sulforaphane and anthocyanins, this colorful slaw supports 
+                    detoxification pathways and provides essential vitamins K and C. The fiber content aids digestion while 
+                    the phytonutrients help regulate hormone balance—critical for thyroid patients.
+                  </p>
+                  <Link href="/recipe/purple-cabbage-broccoli-slaw">
+                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Recipe 3: DoGood's Lentil Burgers */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600" 
+                    alt="DoGood's Famous Lentil Burgers"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>DoGood's Lentil Burgers</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center text-sm leading-relaxed mb-4">
+                    These protein-rich patties provide 18g of plant-based protein per serving plus iron, folate, and selenium—
+                    essential minerals for thyroid hormone production. The fiber keeps you satisfied while supporting gut health, 
+                    and the savory blend of spices makes them irresistible even to non-vegans.
+                  </p>
+                  <Link href="/recipe/dogood-lentil-burgers">
+                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -227,11 +304,11 @@ export default function Home() {
       <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4 animate-pulse-glow" />
+            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
             <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-              "Miss RoSeé's food isn't salty, but it's SO tasty!" 😋👌
+              "Miss RoSeé's food isn't salty, but it's SO tasty!"
             </blockquote>
-            <p className="text-muted-foreground">— Muhammad Family 👨‍👩‍👧‍👦</p>
+            <p className="text-muted-foreground">— Muhammad Family</p>
           </div>
         </div>
       </section>
@@ -250,11 +327,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Card 1: Thyroid-Healing Recipes */}
-            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden hover-wiggle">
+            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30">
-                {/* Floating badge */}
-                <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon z-10 animate-bounce-fun">
-                  🍴 NEW
+                <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-10">
+                  NEW
                 </div>
                 <img 
                   src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=800" 
@@ -263,7 +339,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-xl font-bold text-white">🥗 Thyroid-Healing Recipes</h3>
+                  <h3 className="text-xl font-bold text-white">Thyroid-Healing Recipes</h3>
                 </div>
               </div>
               <CardContent className="p-6">
@@ -280,11 +356,10 @@ export default function Home() {
             </Card>
 
             {/* Card 2: Warrior Community */}
-            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-purple-500/50 rounded-3xl overflow-hidden hover-bounce">
+            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 border-2 hover:border-purple-500/50 rounded-3xl overflow-hidden">
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
-                {/* Floating badge */}
-                <div className="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-cartoon z-10 animate-float">
-                  💜 1K+
+                <div className="absolute top-3 right-3 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-10">
+                  1,000+ Members
                 </div>
                 <img 
                   src="/images/personal/professional/clay-banks-hands-together.jpg" 
@@ -293,7 +368,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-xl font-bold text-white">👯 Warrior Community</h3>
+                  <h3 className="text-xl font-bold text-white">Community Support</h3>
                 </div>
               </div>
               <CardContent className="p-6">
@@ -1105,26 +1180,38 @@ export default function Home() {
       </section>
 
       {/* READ LABELS - Education Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20 border-y">
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20 border-y relative overflow-hidden">
+        {/* Floating decorative elements */}
+        <div className="absolute top-10 left-10 text-5xl opacity-20 animate-float">🏷️</div>
+        <div className="absolute bottom-10 right-10 text-5xl opacity-20 animate-float-slow">🥗</div>
+        
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full mb-4">
-                <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Real Talk</span>
+              <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full mb-4 shadow-cartoon animate-bounce-fun">
+                <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Real Talk 💬</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
-                I Teach My Clients to <span className="text-primary">READ LABELS!</span>
+                I Teach My Clients to <span className="text-primary">READ LABELS!</span> 📖
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Because labels tell you everything—and hide just as much. Let's break down what you need to know.
+                Because labels tell you everything—and hide just as much. Let's break down what you need to know. ✨
               </p>
+              <div className="mt-6">
+                <Link href="/label-scanner">
+                  <Button size="lg" className="gap-2 rounded-full shadow-cartoon-primary hover-bounce">
+                    🔍 Try Our Smart Label Scanner (New!)
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* Main Content */}
             <div className="space-y-8">
               {/* The Organic Trap */}
-              <Card className="border-l-4 border-l-orange-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+              <Card className="border-l-4 border-l-orange-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all hover-wiggle group">
                 {/* Background Image */}
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 dark:opacity-10">
                   <img 
@@ -1155,7 +1242,7 @@ export default function Home() {
               </Card>
 
               {/* Sodium Reality Check */}
-              <Card className="border-l-4 border-l-pink-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+              <Card className="border-l-4 border-l-pink-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all hover-wiggle group">
                 {/* Background Image - Salt Shaker on Fries */}
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 dark:opacity-10">
                   <img 
@@ -1195,7 +1282,7 @@ export default function Home() {
               </Card>
 
               {/* Change Your Taste Buds */}
-              <Card className="border-l-4 border-l-purple-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden">
+              <Card className="border-l-4 border-l-purple-500 bg-white/70 dark:bg-zinc-900/70 backdrop-blur relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all hover-wiggle group">
                 {/* Side-by-side Vegetable Images */}
                 <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-15 dark:opacity-10 flex">
                   <div className="w-1/3 h-full">
@@ -1245,7 +1332,7 @@ export default function Home() {
               </Card>
 
               {/* What Else Labels Reveal */}
-              <Card className="border-l-4 border-l-teal-500 bg-gradient-to-br from-teal-50/50 to-white dark:from-teal-950/20 dark:to-zinc-900">
+              <Card className="border-l-4 border-l-teal-500 bg-gradient-to-br from-teal-50/50 to-white dark:from-teal-950/20 dark:to-zinc-900 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all hover-bounce group">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-2">
                     <span>🔍</span> What Else Labels Tell You
