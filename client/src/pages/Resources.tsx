@@ -403,7 +403,7 @@ const Resources = () => {
               I'm always looking to collaborate with organizations that share my commitment to wellness, education, and community empowerment.
             </p>
             <a
-              href="mailto:rosee@askdogood.com"
+              href="mailto:askdogood@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-pink-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-bold text-lg"
             >
               <Mail className="w-6 h-6" />

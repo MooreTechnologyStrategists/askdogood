@@ -1198,7 +1198,7 @@ export default function Shop() {
                 <h3 className="font-bold mb-2 text-lg">Is there a money-back guarantee?</h3>
                 <p className="text-muted-foreground">
                   Yes! All digital products come with a 30-day money-back guarantee. If you're not satisfied with your 
-                  purchase, email me at rosee@askdogood.com for a full refund—no questions asked, no hard feelings.
+                  purchase, email me at askdogood@gmail.com for a full refund—no questions asked, no hard feelings.
                 </p>
               </div>
               
@@ -1206,7 +1206,7 @@ export default function Shop() {
                 <h3 className="font-bold mb-2 text-lg">Can I purchase multiple products?</h3>
                 <p className="text-muted-foreground">
                   Absolutely! Wellness Circle members automatically get 20% off all digital products. We also offer custom 
-                  bundles—email rosee@askdogood.com to tell me your health goals and I'll recommend the best combination 
+                  bundles—email askdogood@gmail.com to tell me your health goals and I'll recommend the best combination 
                   of resources for you.
                 </p>
               </div>
@@ -1224,7 +1224,7 @@ export default function Shop() {
                 <h3 className="font-bold mb-2 text-lg">Do you offer payment plans?</h3>
                 <p className="text-muted-foreground">
                   For the Thyroid Health Mastery Course ($97), I offer a 3-payment plan of $35/month. Email me at 
-                  rosee@askdogood.com to set this up. The Wellness Circle membership is already affordable at $19-27/month 
+                  askdogood@gmail.com to set this up. The Wellness Circle membership is already affordable at $19-27/month 
                   with no long-term commitment.
                 </p>
               </div>
@@ -1248,12 +1248,14 @@ export default function Shop() {
               <Button size="lg" variant="secondary" className="rounded-3xl text-lg px-8 font-semibold">
                 View All Products
               </Button>
-              <Button size="lg" variant="outline" className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
-                Join Wellness Circle - $19/mo
-              </Button>
+              <Link href="/contact?product=DoGood%20Wellness%20Circle&price=19">
+                <Button size="lg" variant="outline" className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
+                  Join Wellness Circle - $19/mo
+                </Button>
+              </Link>
             </div>
             <p className="text-sm mt-6 opacity-75">
-              Questions? Email rosee@askdogood.com • 30-Day Money-Back Guarantee on All Products
+              Questions? Email askdogood@gmail.com • 30-Day Money-Back Guarantee on All Products
             </p>
           </div>
         </div>
