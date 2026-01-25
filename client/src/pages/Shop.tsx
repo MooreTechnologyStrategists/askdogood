@@ -709,6 +709,365 @@ This is the community I wish I had when I was in the thick of it. Now it's here 
       avgEngagement: "4.3 logins/week",
       rating: "4.9/5.0"
     }
+  },
+
+  // MERCHANDISE COLLECTION
+  {
+    id: 7,
+    name: "\"Thyroid Thriver\" Premium Tee",
+    price: 32,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Wear your victory. Rep your resilience.",
+    shortDescription: "Ultra-soft premium cotton tee featuring bold, empowering design celebrating thyroid warriors. Available in 6 vibrant colorways.",
+    fullDescription: `This isn't just a shirt—it's a statement. The "Thyroid Thriver" tee features a stunning anatomical thyroid butterfly graphic with the words "I Don't Just Survive, I THRIVE" in bold, holographic-effect lettering.
+
+Premium ring-spun cotton, ethically sourced, designed to last through countless washes while maintaining its vivid colors and soft feel. Each purchase supports thyroid health education in underserved communities.`,
+    
+    features: [
+      "100% premium ring-spun cotton (pre-shrunk)",
+      "Unisex fit, true to size",
+      "Vibrant DTG (Direct-to-Garment) printing",
+      "Holographic foil accent on key text",
+      "Available in 6 colors: Black, Navy, Forest Green, Burgundy, Charcoal, Vintage White",
+      "Sizes: XS - 4XL (inclusive sizing)",
+      "Machine washable, colors won't fade",
+      "Ethically manufactured",
+      "Proceeds support thyroid health education"
+    ],
+    
+    colors: ["Black", "Navy", "Forest Green", "Burgundy", "Charcoal", "Vintage White"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+  },
+
+  {
+    id: 8,
+    name: "\"Ask DoGood\" Vintage Washed Hoodie",
+    price: 58,
+    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Cozy vibes. Bold mission. Maximum comfort.",
+    shortDescription: "Oversized vintage-washed hoodie with embroidered 'Ask DoGood' logo and powerful back graphic. Perfect for healing season energy.",
+    fullDescription: `The ultimate comfort piece for your wellness journey. This vintage-washed hoodie features our signature "Ask DoGood" embroidered logo on the chest, with a massive back graphic showing a radiant Black woman surrounded by healing herbs, vegetables, and the phrase "Healing is My Birthright."
+
+Intentionally oversized for maximum coziness. The vintage wash gives each hoodie a unique, lived-in feel. Hood drawstrings feature custom wooden bead details with the DoGood logo.`,
+    
+    features: [
+      "80% cotton / 20% recycled polyester blend",
+      "Vintage enzyme wash for soft, worn-in feel",
+      "Oversized fit (order true to size for oversized, size down for fitted)",
+      "Embroidered chest logo (won't crack or peel)",
+      "Full-color back graphic (13\" x 17\")",
+      "Kangaroo pocket with reinforced stitching",
+      "Custom wooden bead drawstring details",
+      "Double-lined hood for extra warmth",
+      "Available in 4 colors: Vintage Black, Sage Green, Dusty Rose, Oatmeal",
+      "Sizes: S - 3XL"
+    ],
+    
+    colors: ["Vintage Black", "Sage Green", "Dusty Rose", "Oatmeal"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 9,
+    name: "\"Real Food, Real Healing\" Dad Cap",
+    price: 28,
+    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=1200",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Low-profile style. High-vibration energy.",
+    shortDescription: "Classic dad cap with embroidered slogan and adjustable strap. Perfect for market runs, garden days, and casual healing vibes.",
+    fullDescription: `Your go-to cap for farmer's market Saturdays, garden workdays, and everywhere in between. Features the iconic "Real Food, Real Healing" embroidered on the front in a custom serif font, with a tiny vegetable medley embroidered on the side.
+
+Unstructured crown, curved brim, vintage brass buckle closure. This cap molds to your head for that perfect broken-in feel from day one.`,
+    
+    features: [
+      "100% organic cotton twill",
+      "Unstructured 6-panel design",
+      "Pre-curved brim",
+      "Embroidered front text and side graphic",
+      "Adjustable brass buckle closure",
+      "Moisture-wicking sweatband",
+      "Low-profile fit",
+      "Available in 5 colors: Olive, Black, Tan, Navy, Terracotta",
+      "One size fits most (adjustable)",
+      "Breathable and lightweight"
+    ],
+    
+    colors: ["Olive", "Black", "Tan", "Navy", "Terracotta"]
+  },
+
+  {
+    id: 10,
+    name: "\"Autoimmune Warrior\" Crewneck Sweatshirt",
+    price: 48,
+    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Soft armor for your healing journey.",
+    shortDescription: "Premium heavyweight crewneck with bold typography and warrior-inspired design. Cozy enough for rest days, powerful enough to remind you of your strength.",
+    fullDescription: `This sweatshirt is your soft armor. Featuring striking typography that reads "Autoimmune WARRIOR: Fighting Battles You Can't See, Winning Wars You Can't Imagine" alongside a powerful graphic of raised fists surrounded by healing plants and immune cells.
+
+The heavyweight fleece keeps you warm during those days when autoimmune flares make you cold. The reminder keeps you strong when you need it most.`,
+    
+    features: [
+      "12 oz heavyweight fleece (extra thick and cozy)",
+      "80% cotton / 20% polyester blend",
+      "Ribbed collar, cuffs, and waistband (holds shape)",
+      "Full-color screen print graphic (chest and sleeve)",
+      "Oversized fit for maximum comfort",
+      "Pre-shrunk fabric",
+      "Available in 5 colors: Ash Grey, Brick Red, Forest, Black, Cream",
+      "Sizes: S - 3XL",
+      "Perfect for chronic illness rest days",
+      "$5 from each purchase supports autoimmune research"
+    ],
+    
+    colors: ["Ash Grey", "Brick Red", "Forest", "Black", "Cream"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 11,
+    name: "\"Garden to Table\" Organic Tote Bag",
+    price: 24,
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=1200",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Sustainable. Spacious. Statement-making.",
+    shortDescription: "Heavy-duty organic canvas tote with vibrant veggie illustration. Perfect for farmer's market hauls, groceries, or everyday use.",
+    fullDescription: `Ditch the plastic and carry your healing foods in style. This oversized tote features a gorgeous hand-drawn illustration of heirloom vegetables, herbs, and fruits in vivid colors wrapping around the entire bag.
+
+The phrase "Garden to Table, Seed to Soul" is printed on both sides. Interior pocket keeps your phone and keys secure while you shop.`,
+    
+    features: [
+      "100% organic cotton canvas (GOTS certified)",
+      "Extra-large capacity (16\" W x 16\" H x 6\" D)",
+      "Reinforced bottom and stress points",
+      "Long handles (10\" drop) for shoulder carry",
+      "Interior zippered pocket",
+      "Full-color wrap-around illustration",
+      "Double-sided printing",
+      "Holds 30+ lbs comfortably",
+      "Machine washable",
+      "Plastic-free, reusable, sustainable"
+    ],
+    
+    colors: ["Natural Canvas"]
+  },
+
+  {
+    id: 12,
+    name: "\"Black Girl Magic Healing\" Crop Hoodie",
+    price: 52,
+    image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Cropped comfort meets unapologetic power.",
+    shortDescription: "Trendy cropped hoodie celebrating Black women's healing journey. Soft French terry with celestial-inspired graphics.",
+    fullDescription: `A celebration of Black Girl Magic in healing spaces. This cropped hoodie features a stunning celestial design: a melanated goddess with a crown of stars, surrounded by medicinal herbs, crystals, and the words "My Ancestors Survived So I Could THRIVE."
+
+French terry fabric is breathable yet warm. The cropped length hits right at the waist—perfect with high-waisted jeans or leggings. Pairs perfectly with confidence.`,
+    
+    features: [
+      "Premium French terry (soft inside, smooth outside)",
+      "Cropped length (hits at natural waist)",
+      "Drawstring hood with metal eyelets",
+      "Dropped shoulder for relaxed fit",
+      "Full-color chest graphic with metallic gold accents",
+      "Ribbed hem and cuffs",
+      "Available in 4 colors: Black, Lavender, Sage, Ivory",
+      "Sizes: XS - 2XL",
+      "Designed by Black female artist",
+      "Portion of proceeds supports Black women's health initiatives"
+    ],
+    
+    colors: ["Black", "Lavender", "Sage", "Ivory"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"]
+  },
+
+  {
+    id: 13,
+    name: "\"Normalize Rest\" Oversized Sleep Tee",
+    price: 38,
+    image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Sleep is productive. Rest is revolutionary.",
+    shortDescription: "Ultra-soft oversized sleep shirt with dreamy cloud typography. Because chronic illness warriors deserve luxury rest.",
+    fullDescription: `Chronic illness means rest isn't lazy—it's necessary. This oversized sleep tee celebrates that truth with gorgeous cloud-style lettering that reads "Normalize Rest" across the front, with "My Body is Healing While I Sleep" in smaller text underneath.
+
+Made from the softest modal blend you've ever felt. Long enough to be a dress, cozy enough to never want to take off. Perfect for flare days, recovery days, and every day in between.`,
+    
+    features: [
+      "95% modal / 5% spandex (incredibly soft and stretchy)",
+      "Oversized boyfriend fit (very roomy)",
+      "Dropped shoulders and curved hem",
+      "Length: 32\" (dress-length on most)",
+      "Cloud-style puff print text",
+      "Breathable and moisture-wicking",
+      "Available in 4 colors: Soft Pink, Sky Blue, Lavender, Mint",
+      "Sizes: One Size (fits XS-2XL) & Plus Size (fits 2XL-5XL)",
+      "Machine washable, gets softer with every wash",
+      "Perfect for chronic illness rest days"
+    ],
+    
+    colors: ["Soft Pink", "Sky Blue", "Lavender", "Mint"],
+    sizes: ["One Size", "Plus Size"]
+  },
+
+  {
+    id: 14,
+    name: "\"Good Energy Only\" Tie-Dye Sweatpants",
+    price: 44,
+    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Manifestation meets maximum comfort.",
+    shortDescription: "Hand-dyed fleece sweatpants with embroidered mantra. Each pair is one-of-a-kind with healing color therapy in mind.",
+    fullDescription: `Wellness meets streetwear. These aren't your average sweatpants. Each pair is hand-dyed using healing color therapy principles (warm tones for grounding, cool tones for calming) and features "Good Energy Only" embroidered down the left leg.
+
+High-waisted with a drawstring tie and deep pockets (phone-friendly). The tie-dye pattern is unique to each pair—no two are exactly alike. Matching set available with our tie-dye hoodie.`,
+    
+    features: [
+      "Hand-dyed using non-toxic, eco-friendly dyes",
+      "80% cotton / 20% polyester fleece",
+      "High-waisted fit with drawstring waistband",
+      "Embroidered text down left leg",
+      "Deep side pockets (fits smartphone)",
+      "Relaxed tapered leg",
+      "Elastic ankle cuffs",
+      "Each piece is unique (no two identical)",
+      "Available in 3 color themes: Sunset (warm tones), Ocean (cool tones), Earth (neutral tones)",
+      "Sizes: XS - 3XL",
+      "Matching hoodie available"
+    ],
+    
+    colorThemes: ["Sunset", "Ocean", "Earth"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 15,
+    name: "\"Plant-Powered\" Mesh Snapback",
+    price: 32,
+    image: "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=1200",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Breathable. Bold. Unapologetically plant-based.",
+    shortDescription: "Trucker-style mesh snapback with 3D embroidered logo. Perfect for workouts, outdoor adventures, and summer vibes.",
+    fullDescription: `Rep the plant-based lifestyle in style. This mesh snapback features bold 3D puff embroidery that reads "Plant-Powered" on the front, with a small vegetable medley embroidered on the side. The back mesh panels keep you cool during workouts, garden work, or hot summer days.
+
+Structured front panels give the cap shape while the mesh back provides breathability. Snapback closure ensures perfect fit every time.`,
+    
+    features: [
+      "65% cotton / 35% polyester front panels",
+      "100% polyester mesh back panels",
+      "Structured 6-panel design",
+      "3D puff embroidery (raised, textured)",
+      "Flat brim (can be curved to preference)",
+      "Snapback closure (adjustable)",
+      "Moisture-wicking sweatband",
+      "Available in 5 colorways: Black/White, Navy/Gold, Forest/Tan, Pink/White, Charcoal/Neon",
+      "One size fits most",
+      "Perfect for active lifestyles"
+    ],
+    
+    colors: ["Black/White", "Navy/Gold", "Forest/Tan", "Pink/White", "Charcoal/Neon"]
+  },
+
+  {
+    id: 16,
+    name: "\"Healing Happens Here\" Embroidered Joggers",
+    price: 54,
+    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Luxury loungewear for your wellness journey.",
+    shortDescription: "Premium fleece joggers with subtle embroidered mantra. Where comfort meets intentional healing.",
+    fullDescription: `These aren't just joggers—they're a gentle reminder that healing is happening in every moment of rest. "Healing Happens Here" is subtly embroidered near the ankle, alongside a small lotus flower symbol.
+
+Premium heavyweight fleece with a buttery-soft interior. High-waisted with a flattering tapered leg. Deep pockets hold everything. These joggers are so comfortable, you'll want to live in them.`,
+    
+    features: [
+      "Premium heavyweight fleece (400 GSM)",
+      "85% cotton / 15% polyester blend",
+      "High-waisted with wide elastic waistband and drawstring",
+      "Tapered leg with ribbed ankle cuffs",
+      "Deep side pockets + back pocket",
+      "Subtle ankle embroidery",
+      "Flattering fit (not baggy)",
+      "Pre-shrunk fabric",
+      "Available in 5 colors: Black, Charcoal, Mauve, Sage, Oatmeal",
+      "Sizes: XS - 3XL",
+      "Pairs perfectly with our hoodies"
+    ],
+    
+    colors: ["Black", "Charcoal", "Mauve", "Sage", "Oatmeal"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 17,
+    name: "\"Bloom Where You're Planted\" Bucket Hat",
+    price: 30,
+    image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=1200",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Garden vibes. Festival ready. Sun protected.",
+    shortDescription: "Reversible bucket hat with floral embroidery and sun protection. Two looks in one versatile piece.",
+    fullDescription: `Your garden-to-festival essential. This reversible bucket hat features an embroidered wildflower design on one side with "Bloom Where You're Planted" text, and a solid color on the reverse—giving you two complete looks in one hat.
+
+Wide brim provides UPF 50+ sun protection. Interior moisture-wicking band keeps you cool. Packable and travel-friendly—stuffs into its own pocket.`,
+    
+    features: [
+      "100% cotton canvas with UPF 50+ protection",
+      "Reversible design (2 hats in 1)",
+      "Wide brim for maximum sun coverage (2.75\")",
+      "Embroidered floral design on printed side",
+      "Solid color on reverse side",
+      "Moisture-wicking interior sweatband",
+      "Unisex fit",
+      "Packable (includes stuff pocket)",
+      "Available in 4 colorways: Floral/Black, Floral/Cream, Floral/Sage, Floral/Terracotta",
+      "One size fits most (23\" circumference)",
+      "Perfect for gardening, festivals, beach days"
+    ],
+    
+    colors: ["Floral/Black", "Floral/Cream", "Floral/Sage", "Floral/Terracotta"]
+  },
+
+  {
+    id: 18,
+    name: "\"Wellness Warrior\" Ringer Tee",
+    price: 34,
+    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=1200",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Vintage vibes. Modern mission. Timeless message.",
+    shortDescription: "Classic ringer tee with retro-inspired typography celebrating your wellness journey. Soft, lightweight, and effortlessly cool.",
+    fullDescription: `Channel vintage athletic vibes with a wellness twist. This ringer tee features retro-inspired typography reading "Wellness Warrior Since [Year]" (customizable to your wellness journey start year) with a vintage sunset graphic and silhouette of a woman in a yoga pose.
+
+The contrasting ringer trim on the collar and sleeves adds that perfect throwback touch. Lightweight and breathable—perfect for workouts, casual days, or layering.`,
+    
+    features: [
+      "100% combed ring-spun cotton",
+      "Lightweight and breathable (4.3 oz)",
+      "Contrasting ringer trim on collar and sleeves",
+      "Vintage-inspired screen print graphic",
+      "Customizable year option (specify at checkout)",
+      "Relaxed unisex fit",
+      "Available in 5 colorways: White/Black, White/Burgundy, Heather/Navy, Cream/Forest, Pink/Black",
+      "Sizes: XS - 2XL",
+      "Perfect for layering or wearing solo",
+      "Retro-athletic aesthetic"
+    ],
+    
+    colors: ["White/Black", "White/Burgundy", "Heather/Navy", "Cream/Forest", "Pink/Black"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"]
   }
 ];
 
