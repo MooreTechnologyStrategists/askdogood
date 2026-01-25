@@ -363,20 +363,29 @@ export default function Home() {
               {/* Blog 1: Healthcare */}
               <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <CardHeader className="relative z-10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                      <HeartPulse className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-white group-hover:text-primary transition-colors mb-2">
-                        World Peace Starts With Healthcare
-                      </CardTitle>
-                      <CardDescription className="text-gray-400 text-sm">
-                        Why free healthcare isn't radical—it's necessary. Black and brown communities deserve better.
-                      </CardDescription>
+                
+                {/* Blog Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/personal/blog-graphics/world-peace-starts-with-healthcare.png"
+                    alt="World Peace Starts With Healthcare"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center shadow-lg">
+                      <HeartPulse className="h-6 w-6 text-white" />
                     </div>
                   </div>
+                </div>
+                
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-white group-hover:text-primary transition-colors mb-2">
+                    World Peace Starts With Healthcare
+                  </CardTitle>
+                  <CardDescription className="text-gray-400 text-sm">
+                    Why free healthcare isn't radical—it's necessary. Black and brown communities deserve better.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
@@ -396,20 +405,29 @@ export default function Home() {
               {/* Blog 2: Credit Card Debt */}
               <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <CardHeader className="relative z-10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                      <TrendingUp className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-white group-hover:text-secondary transition-colors mb-2">
-                        The Credit Card Trap
-                      </CardTitle>
-                      <CardDescription className="text-gray-400 text-sm">
-                        How America set us up to stay broke—and how we break free from the debt cycle.
-                      </CardDescription>
+                
+                {/* Blog Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/personal/blog-graphics/the-credit-card-trap.png"
+                    alt="The Credit Card Trap"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center shadow-lg">
+                      <TrendingUp className="h-6 w-6 text-white" />
                     </div>
                   </div>
+                </div>
+                
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-white group-hover:text-secondary transition-colors mb-2">
+                    The Credit Card Trap
+                  </CardTitle>
+                  <CardDescription className="text-gray-400 text-sm">
+                    How America set us up to stay broke—and how we break free from the debt cycle.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
@@ -429,20 +447,29 @@ export default function Home() {
               {/* Blog 3: Student Loans */}
               <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <CardHeader className="relative z-10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                      <BookOpen className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-white group-hover:text-purple-400 transition-colors mb-2">
-                        The Student Loan Crisis
-                      </CardTitle>
-                      <CardDescription className="text-gray-400 text-sm">
-                        How higher education became a lifetime sentence. The HBCU tax is real.
-                      </CardDescription>
+                
+                {/* Blog Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/personal/blog-graphics/the-student-loan-crisis.png"
+                    alt="The Student Loan Crisis"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg">
+                      <BookOpen className="h-6 w-6 text-white" />
                     </div>
                   </div>
+                </div>
+                
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-white group-hover:text-purple-400 transition-colors mb-2">
+                    The Student Loan Crisis
+                  </CardTitle>
+                  <CardDescription className="text-gray-400 text-sm">
+                    How higher education became a lifetime sentence. The HBCU tax is real.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
@@ -462,20 +489,29 @@ export default function Home() {
               {/* Blog 4: Building Villages */}
               <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <CardHeader className="relative z-10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                      <Users className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-white group-hover:text-emerald-400 transition-colors mb-2">
-                        Building Back Our Villages
-                      </CardTitle>
-                      <CardDescription className="text-gray-400 text-sm">
-                        Community, technology, and the future we deserve. Nobody gets left behind in the AI revolution.
-                      </CardDescription>
+                
+                {/* Blog Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/personal/blog-graphics/building-back-our-villages.png"
+                    alt="Building Back Our Villages"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg">
+                      <Users className="h-6 w-6 text-white" />
                     </div>
                   </div>
+                </div>
+                
+                <CardHeader className="relative z-10">
+                  <CardTitle className="text-white group-hover:text-emerald-400 transition-colors mb-2">
+                    Building Back Our Villages
+                  </CardTitle>
+                  <CardDescription className="text-gray-400 text-sm">
+                    Community, technology, and the future we deserve. Nobody gets left behind in the AI revolution.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
