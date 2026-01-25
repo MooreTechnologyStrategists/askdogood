@@ -121,18 +121,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
+      {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Meet Your <span className="text-primary">Thyroid Chef</span>
+              Real Food. <span className="text-primary">Real Healing.</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Where healing meets flavor in every dish
+            <p className="text-lg text-muted-foreground">
+              Thyroid-friendly meals that actually taste good
             </p>
           </div>
-          <PersonalSlideshow />
+          <FoodSlideshow />
           
           {/* Personal Health Journey Story */}
           <div className="max-w-4xl mx-auto mt-12 p-8 bg-card rounded-3xl shadow-xl border-2 border-primary/20">
@@ -185,20 +185,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
+      {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
-              Real Food. <span className="text-primary">Real Healing.</span>
+              Meet Your <span className="text-primary">Thyroid Chef</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Thyroid-friendly meals that actually taste good
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Where healing meets flavor in every dish
             </p>
           </div>
-          <FoodSlideshow />
-        </div>
-      </section>
+          <PersonalSlideshow />
 
       {/* 4-CARD FEATURE GRID - Everything You Need */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">

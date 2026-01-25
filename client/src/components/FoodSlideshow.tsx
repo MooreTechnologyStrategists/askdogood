@@ -4,32 +4,32 @@ const foodImages = [
   {
     src: '/images/personal/food/smoothie-green-goddess.jpg',
     alt: 'Green Goddess Thyroid Smoothie',
-    caption: 'Green Goddess Smoothie'
+    caption: ''
   },
   {
     src: '/images/personal/food/smoothie-purple.jpg',
     alt: 'Purple Berry Power Smoothie',
-    caption: 'Berry Power Smoothie'
+    caption: ''
   },
   {
     src: '/images/personal/food/burgers-plated.jpg',
     alt: 'Black Bean & Quinoa Power Burgers',
-    caption: 'Plant-Powered Burgers'
+    caption: ''
   },
   {
     src: '/images/personal/food/vegetables-roasted.jpg',
     alt: 'Roasted vegetables with anti-inflammatory spices',
-    caption: 'Anti-Inflammatory Veggies'
+    caption: ''
   },
   {
     src: '/images/personal/food/meal-complete.jpg',
     alt: 'Complete thyroid-friendly balanced meal',
-    caption: 'Complete Healing Meal'
+    caption: ''
   },
   {
     src: '/images/personal/food/veggies-bowl.jpg',
     alt: 'Colorful veggie bowl with healing ingredients',
-    caption: 'Rainbow Veggie Bowl'
+    caption: ''
   }
 ];
 
