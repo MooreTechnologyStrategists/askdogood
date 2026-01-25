@@ -2,7 +2,7 @@
 title: "The Student Loan Crisis: How Higher Education Became a Lifetime Sentence"
 slug: "student-loan-crisis-lifetime-sentence"
 date: "2026-01-24"
-author: "RoSeé Muhammad"
+author: "RoSeé Murphy"
 excerpt: "They told us college was the key to success. They didn't mention the $1.77 trillion debt crisis waiting on the other side. Let's unpack how the American Dream became a financial nightmare."
 category: "Education & Economics"
 tags: ["Student Loans", "Higher Education", "Economic Justice", "Black Students", "HBCU", "Financial Freedom"]

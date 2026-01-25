@@ -2,7 +2,7 @@
 title: "The Credit Card Trap: How America Set Us Up to Stay Broke"
 slug: "credit-card-debt-trap-america"
 date: "2026-01-24"
-author: "RoSeé Muhammad"
+author: "RoSeé Murphy"
 excerpt: "From predatory interest rates to systemic debt cycles, let's unpack how the American financial system was designed to keep Black and brown folks in perpetual debt—and how we break free."
 category: "Financial Wellness"
 tags: ["Financial Freedom", "Credit Card Debt", "Economic Justice", "Black Wealth", "Financial Literacy"]

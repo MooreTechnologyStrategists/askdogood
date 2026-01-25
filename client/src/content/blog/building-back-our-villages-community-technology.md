@@ -2,7 +2,7 @@
 title: "Building Back Our Villages: Community, Technology, and the Future We Deserve"
 slug: "building-back-our-villages-community-technology"
 date: "2026-01-24"
-author: "RoSeé Muhammad"
+author: "RoSeé Murphy"
 excerpt: "They say it takes a village to raise a child, but what happens when the village is gone? Let's talk about rebuilding our community foundations, making sure nobody gets left behind in the AI revolution, and creating the future our ancestors dreamed of."
 category: "Community & Technology"
 tags: ["Community Building", "Technology Access", "AI", "Black Communities", "Digital Divide", "Economic Justice"]

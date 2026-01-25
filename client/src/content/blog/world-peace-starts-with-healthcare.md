@@ -2,7 +2,7 @@
 title: "World Peace Starts With Healthcare: Why Free Healthcare Isn't Radical—It's Necessary"
 slug: "world-peace-starts-with-healthcare"
 date: "2026-01-24"
-author: "RoSeé Muhammad"
+author: "RoSeé Murphy"
 excerpt: "Real talk: We can't build a peaceful world when people are choosing between insulin and rent. Let's break down why free healthcare isn't just a policy—it's a pathway to peace, and why Black and brown communities need it most."
 category: "Social Justice"
 tags: ["Healthcare Reform", "World Peace", "Social Justice", "Black Health", "Healthcare Equity"]

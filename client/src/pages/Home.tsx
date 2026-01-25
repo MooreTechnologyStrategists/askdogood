@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
                 <img 
                   src="/images/personal/professional/hero-circle.jpg"
-                  alt="RoSeé Muhammad - Thyroid Health Specialist"
+                  alt="RoSeé Murphy - Thyroid Health Specialist"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                 />
               </div>
@@ -180,7 +180,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-2xl"></div>
               <img 
                 src="/images/personal/professional/rosee-professional-suit.jpg"
-                alt="RoSeé Muhammad - Your Thyroid Chef"
+                alt="RoSeé Murphy - Your Thyroid Chef"
                 className="relative w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>

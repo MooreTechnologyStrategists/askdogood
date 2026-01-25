@@ -1,7 +1,7 @@
 const personalImages = [
   {
     src: '/images/personal/food/muhammad-dishes-1.jpg',
-    alt: 'RoSeé Muhammad preparing healthy meals'
+    alt: 'RoSeé Murphy preparing healthy meals'
   },
   {
     src: '/images/personal/food/muhammad-dishes-2.jpg',
@@ -9,7 +9,7 @@ const personalImages = [
   },
   {
     src: '/images/personal/food/muhammad-dishes-3.jpg',
-    alt: 'RoSeé Muhammad cooking nutritious dishes'
+    alt: 'RoSeé Murphy cooking nutritious dishes'
   },
   {
     src: '/images/personal/food/muhammad-dishes-4.jpg',
