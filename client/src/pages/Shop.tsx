@@ -12,9 +12,9 @@ const products = [
   {
     id: 1,
     name: "Thyroid Health Mastery Course",
-    productUrl: "https://gumroad.com/l/thyroid-health-mastery", // Example URL
+    productUrl: "https://gumroad.com/l/thyroid-health-mastery",
     price: 97,
-    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200",
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/thyroid-health-mastery.webp",
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
@@ -136,19 +136,19 @@ This course combines medical science with lived experience, giving you both the 
   {
     id: 2,
     name: "21-Day Plant-Based Reset",
-    productUrl: "https://gumroad.com/l/21-day-plant-based-reset", // Example URL
+    productUrl: "https://gumroad.com/l/21-day-plant-based-reset",
     price: 47,
-    image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1200",
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/21-day-plant-based-reset.webp",
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
     shortDescription: "A complete 21-day program with meal plans, recipes, shopping lists, and daily support to help you lose weight, reduce inflammation, and feel amazing.",
     fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.
-
-I designed this program after my own plant-based transformation helped me heal from 5 autoimmune diseases and lose 40 pounds. Every meal is tested, approved, and loved by real people (including picky kids!).
-
-No deprivation. No boring salads. Just real food that tastes amazing and makes you feel even better.`,
-    
+  {
+    name: "Garden to Table Wellness Bundle",
+    productUrl: "https://gumroad.com/l/garden-to-table-bundle",
+    price: 37,
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/garden-to-table-bundle.webp",
     features: [
       "21 complete days of meal plans (breakfast, lunch, dinner, snacks)",
       "60+ delicious plant-based recipes with photos",
@@ -162,11 +162,11 @@ No deprivation. No boring salads. Just real food that tastes amazing and makes y
       "Access to private Facebook support group",
       "Bonus: 7-day post-reset maintenance plan"
     ],
-    
-    weekBreakdown: [
-      {
-        week: "Week 1: Foundation",
-        focus: "Gentle transition & detox",
+    {
+      name: "Autoimmune Recovery Guide",
+      productUrl: "https://gumroad.com/l/autoimmune-recovery-guide",
+      price: 27,
+      image: "https://askdogoodassets.blob.core.windows.net/images/products/autoimmune-recovery-guide.webp",
         meals: [
           "Green smoothies for easy digestion",
           "Simple Buddha bowls with whole grains",
