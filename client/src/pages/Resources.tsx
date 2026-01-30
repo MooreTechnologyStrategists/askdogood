@@ -69,14 +69,99 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Health Apps & Tools Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-teal-100/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center mb-12">
+            <div className="inline-block bg-primary/20 px-4 py-2 rounded-full text-sm font-medium mb-4 text-primary">
+              Digital Health Apps & Tools
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Empower Your Healing Journey</h2>
+            <p className="text-xl text-gray-700 mb-6">
+              Free and premium digital tools designed for real-life healing, habit change, and wellness tracking. Built by a thyroid cancer survivor for women who want results, not just inspiration.
+            </p>
+            <div className="flex flex-wrap justify-center gap-8">
+              {/* LabelScanner App */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xs w-full flex flex-col items-center">
+                <img src="/images/apps/labelscanner.png" alt="LabelScanner App" className="w-20 h-20 mb-3" />
+                <h3 className="font-bold text-lg mb-1">LabelScanner</h3>
+                <p className="text-sm text-gray-600 mb-3">Scan food labels, spot hidden ingredients, and make smarter choices in seconds.</p>
+                <a href="/labelscanner" className="w-full">
+                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Try Now</button>
+                </a>
+              </div>
+              {/* MealPrep App */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xs w-full flex flex-col items-center">
+                <img src="/images/apps/mealprep.png" alt="MealPrep App" className="w-20 h-20 mb-3" />
+                <h3 className="font-bold text-lg mb-1">MealPrep</h3>
+                <p className="text-sm text-gray-600 mb-3">Plan, prep, and track thyroid-friendly meals with ease. Includes shopping lists and batch cooking tips.</p>
+                <a href="/mealprep" className="w-full">
+                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Try Now</button>
+                </a>
+              </div>
+              {/* Add more tools as needed */}
+            </div>
+            {/* Trust Badges & Social Proof */}
+            <div className="flex flex-wrap justify-center gap-6 mt-10">
+              <div className="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold text-sm">
+                <span>4.9/5 User Rating</span>
+              </div>
+              <div className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold text-sm">
+                <span>3,500+ Women Helped</span>
+              </div>
+              <div className="flex items-center gap-2 bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold text-sm">
+                <span>Evidence-Based & Tested</span>
+              </div>
+            </div>
+            {/* Why AskDoGood Tools? */}
+            <div className="mt-10 max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-teal-100/10 rounded-xl p-6">
+              <h4 className="font-bold text-lg mb-2 text-primary">Why AskDoGood vs. Generic Apps?</h4>
+              <ul className="text-left text-gray-700 text-sm space-y-2">
+                <li>• Built for Black women, by a thyroid cancer survivor who’s lived it</li>
+                <li>• Focused on real results, not just tracking</li>
+                <li>• Integrates with your healing journey and community</li>
+                <li>• 100% privacy—your data is never sold</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shop Wellness Tools Bar */}
+      <section className="py-12 bg-gradient-to-r from-teal-100/30 to-pink-100/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center text-primary">Shop Wellness Tools</h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
+                <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl transition">
+                  <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400" alt="Thyroid Health Mastery Course" className="w-full h-32 object-cover rounded-lg mb-2" />
+                  <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
+                  <p className="text-sm mb-2">$97</p>
+                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Buy Now</button>
+                </div>
+              </a>
+              <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
+                <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl transition">
+                  <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400" alt="21-Day Plant-Based Reset" className="w-full h-32 object-cover rounded-lg mb-2" />
+                  <h4 className="font-bold text-lg mb-1">21-Day Plant-Based Reset</h4>
+                  <p className="text-sm mb-2">$47</p>
+                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Buy Now</button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section 
         className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
-        style={{
+        style={{{
           backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-        }}
+        }}}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-teal-900/70"></div>
