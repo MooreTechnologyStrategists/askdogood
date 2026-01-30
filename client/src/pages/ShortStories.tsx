@@ -313,18 +313,66 @@ export default function ShortStories() {
                 </Card>
               ))}
             </div>
+
+            {/* Lead Magnet CTA */}
+            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-purple-700/80 via-pink-600/80 to-purple-700/80 rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Get the Real-Life Healing Guide Behind These Stories</h3>
+              <p className="text-lg text-pink-100 mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
+              <a href="https://gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="rounded-3xl text-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
+                  Download Free Guide
+                </Button>
+              </a>
+            </div>
+
+            {/* Shop the Story Bar */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Shop the Story</h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                {/* Example featured products */}
+                <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
+                  <Card className="bg-white/90 text-black hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400" alt="Thyroid Health Mastery Course" className="w-full h-40 object-cover rounded-t-lg" />
+                    <CardContent className="p-4">
+                      <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
+                      <p className="text-sm mb-2">$97</p>
+                      <Button size="sm" className="w-full bg-primary text-white rounded-2xl">Buy Now</Button>
+                    </CardContent>
+                  </Card>
+                </a>
+                <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
+                  <Card className="bg-white/90 text-black hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400" alt="21-Day Plant-Based Reset" className="w-full h-40 object-cover rounded-t-lg" />
+                    <CardContent className="p-4">
+                      <h4 className="font-bold text-lg mb-1">21-Day Plant-Based Reset</h4>
+                      <p className="text-sm mb-2">$47</p>
+                      <Button size="sm" className="w-full bg-primary text-white rounded-2xl">Buy Now</Button>
+                    </CardContent>
+                  </Card>
+                </a>
+              </div>
+            </div>
+
+            {/* Testimonial Carousel */}
+            <div className="mb-20 max-w-2xl mx-auto">
+              <h3 className="text-xl font-bold mb-4 text-center text-white">Real Results</h3>
+              <div className="bg-black/60 rounded-2xl p-6 text-center text-white shadow-lg">
+                <p className="italic mb-2">“This course changed everything. I finally understand my body and how to advocate for myself. Within 3 months, my energy returned and I feel like ME again.”</p>
+                <p className="text-sm text-pink-200">— Maya T., Washington, DC</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20">
+      {/* Newsletter CTA - Improved */}
+      <section className="py-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20 sticky bottom-0 z-50">
         <div className="container max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Never Miss a Chapter
+            Unlock New Episodes + Healing Tools
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Get new episodes delivered straight to your inbox every week.
+            Get new stories, exclusive healing resources, and special offers delivered straight to your inbox.
           </p>
           <div className="max-w-md mx-auto">
             <div className="flex gap-2">
@@ -333,8 +381,8 @@ export default function ShortStories() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-black/40 border border-purple-500/30 text-white placeholder:text-gray-500"
               />
-              <Button size="lg">
-                Subscribe
+              <Button size="lg" className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold">
+                Subscribe Free
               </Button>
             </div>
             <p className="text-xs text-gray-400 mt-3">

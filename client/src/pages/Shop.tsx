@@ -7,9 +7,12 @@ import { useState } from "react";
 import { Link } from "wouter";
 
 const products = [
+  // Add your real product URLs here (Gumroad, Stripe, or internal detail pages)
+  // Example: productUrl: "https://gumroad.com/l/thyroid-health-mastery"
   {
     id: 1,
     name: "Thyroid Health Mastery Course",
+    productUrl: "https://gumroad.com/l/thyroid-health-mastery", // Example URL
     price: 97,
     image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200",
     category: "Online Course",
@@ -133,6 +136,7 @@ This course combines medical science with lived experience, giving you both the 
   {
     id: 2,
     name: "21-Day Plant-Based Reset",
+    productUrl: "https://gumroad.com/l/21-day-plant-based-reset", // Example URL
     price: 47,
     image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1200",
     category: "Transformation Program",
@@ -251,6 +255,7 @@ No deprivation. No boring salads. Just real food that tastes amazing and makes y
   {
     id: 3,
     name: "Garden to Table Wellness Bundle",
+    productUrl: "https://gumroad.com/l/garden-to-table-bundle", // Example URL
     price: 37,
     image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200",
     category: "Digital Bundle",
@@ -368,6 +373,7 @@ This bundle combines gardening wisdom with culinary expertise, giving you everyt
   {
     id: 4,
     name: "Autoimmune Recovery Guide",
+    productUrl: "https://gumroad.com/l/autoimmune-recovery-guide", // Example URL
     price: 27,
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200",
     category: "Digital Guide",
@@ -1318,10 +1324,17 @@ export default function Shop() {
                       className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
                       asChild
                     >
-                      <Link href={`/contact?product=${encodeURIComponent(product.name)}&price=${product.foundingPrice || product.price}`}>
-                        {product.recurring ? 'Start Membership' : 'Get Instant Access'}
-                        <TrendingUp className="ml-2 h-5 w-5" />
-                      </Link>
+                      {product.productUrl ? (
+                        <a href={product.productUrl} target="_blank" rel="noopener noreferrer">
+                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                          <TrendingUp className="ml-2 h-5 w-5" />
+                        </a>
+                      ) : (
+                        <Link href={`/contact?product=${encodeURIComponent(product.name)}&price=${product.foundingPrice || product.price}`}>
+                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                          <TrendingUp className="ml-2 h-5 w-5" />
+                        </Link>
+                      )}
                     </Button>
                     <p className="text-xs text-center text-muted-foreground">
                       <Shield className="h-3 w-3 inline mr-1" />

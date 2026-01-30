@@ -427,21 +427,26 @@ export default function Home() {
                 <p className="text-muted-foreground mb-4">
                   Small wins that compound. Weekly challenges to build structure and track progress.
                 </p>
-                <Link href="/shop">
+                <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full gap-2 rounded-3xl group/btn">
                     Start a Challenge
                     <TrendingUp className="h-4 w-4 group-hover/btn:translate-y-[-2px] transition-transform" />
                   </Button>
-                </Link>
+                </a>
               </CardContent>
             </Card>
           </div>
 
-          {/* Trust Badge */}
-          <div className="text-center mt-12">
+          {/* Trust Badge & Shop All CTA */}
+          <div className="text-center mt-12 flex flex-col items-center gap-4">
             <p className="text-sm text-muted-foreground font-medium">
               Trusted by 1,000+ Warriors
             </p>
+            <a href="/shop">
+              <Button size="lg" className="rounded-3xl text-lg font-semibold">
+                Shop All Products
+              </Button>
+            </a>
           </div>
         </div>
       </section>
