@@ -1,3 +1,59 @@
+// Resource Ads Section - partners & grants
+const resourceAds = [
+  {
+    name: 'Local Wellness Grant',
+    url: 'https://example.com/grant',
+    img: '', // No logo, will use text fallback
+    alt: 'Local Wellness Grant',
+    description: 'Apply for local wellness and nutrition grants.'
+  },
+  {
+    name: 'Partner: DMV Health',
+    url: 'https://dmvhealth.org',
+    img: '/images/memberships/nsbe.svg',
+    alt: 'DMV Health Logo',
+    description: 'Trusted DMV health partner for community wellness.'
+  },
+  {
+    name: 'Nonprofit Resource Center',
+    url: 'https://nonprofitresources.org',
+    img: '/assets/img/brand/rosee-hero.jpg',
+    alt: 'Nonprofit Resource Center Logo',
+    description: 'Support and resources for nonprofit organizations.'
+  }
+];
+
+function ResourceAdsSection() {
+  return (
+    <section className="mt-16 mb-12 px-4 py-8 bg-blue-50 rounded-xl shadow-md">
+      <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Resource Ads &amp; Partners</h2>
+      <div className="flex flex-wrap justify-center gap-8">
+        {resourceAds.map((ad) => (
+          <a
+            key={ad.name}
+            href={ad.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center w-64 p-4 bg-white rounded-lg shadow hover:shadow-lg transition"
+          >
+            {ad.img ? (
+              <img
+                src={ad.img}
+                alt={ad.alt}
+                className="h-20 mb-3 object-contain"
+                style={{ background: 'transparent' }}
+              />
+            ) : (
+              <div className="h-20 mb-3 flex items-center justify-center text-4xl text-blue-400">🏆</div>
+            )}
+            <div className="font-semibold text-lg text-blue-800 mb-1">{ad.name}</div>
+            <div className="text-sm text-gray-600 text-center">{ad.description}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -46,7 +102,7 @@ export default function Home() {
               loading="eager"
             />
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">
                 Ask DoGood
               </h1>
               <p className="text-sm md:text-base text-primary font-medium mt-1">
@@ -89,7 +145,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-tight" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
               Healing.Structure.<br />
               <span className="text-primary">Real-life Growth.</span>
             </h2>
@@ -132,7 +188,7 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 font-serif">
               Real Food. <span className="text-primary">Real Healing.</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -199,7 +255,7 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 font-serif">
               Meet Your <span className="text-primary">Thyroid Chef</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -215,7 +271,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 font-serif">
                 Signature <span className="text-primary">DoGood Recipes</span>
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -243,7 +299,7 @@ export default function Home() {
                     reduce inflammation, and boost immune health. Perfect as a side dish or mixed into grain bowls.
                   </p>
                   <Link href="/recipe/roasted-vegetables-trio">
-                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                    <Button className="w-full">View Full Recipe</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -267,7 +323,7 @@ export default function Home() {
                     the phytonutrients help regulate hormone balance—critical for thyroid patients.
                   </p>
                   <Link href="/recipe/purple-cabbage-broccoli-slaw">
-                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                    <Button className="w-full">View Full Recipe</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -291,7 +347,7 @@ export default function Home() {
                     and the savory blend of spices makes them irresistible even to non-vegans.
                   </p>
                   <Link href="/recipe/dogood-lentil-burgers">
-                    <Button variant="outline" className="w-full">View Full Recipe</Button>
+                    <Button className="w-full">View Full Recipe</Button>
                   </Link>
                 </CardContent>
               </Card>
@@ -305,7 +361,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
-            <blockquote className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <blockquote className="text-2xl md:text-3xl font-bold mb-4 font-serif">
               "Miss RoSeé's food isn't salty, but it's SO tasty!"
             </blockquote>
             <p className="text-muted-foreground">— Muhammad Family</p>
@@ -317,7 +373,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="container max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
               Everything You Need to <span className="text-primary">Heal & Thrive</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -443,7 +499,7 @@ export default function Home() {
               Trusted by 1,000+ Warriors
             </p>
             <a href="/shop">
-              <Button size="lg" className="rounded-3xl text-lg font-semibold">
+              <Button className="rounded-3xl text-lg font-semibold text-base md:text-lg py-3 px-6">
                 Shop All Products
               </Button>
             </a>
@@ -469,7 +525,7 @@ export default function Home() {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif">
                 Real Talk. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">Real Change.</span>
               </h2>
               
@@ -518,7 +574,7 @@ export default function Home() {
                     <span>9 min read</span>
                   </div>
                   <Link href="/blog/world-peace-starts-with-healthcare">
-                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -560,7 +616,7 @@ export default function Home() {
                     <span>10 min read</span>
                   </div>
                   <Link href="/blog/credit-card-debt-trap-america">
-                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -602,7 +658,7 @@ export default function Home() {
                     <span>11 min read</span>
                   </div>
                   <Link href="/blog/student-loan-crisis-lifetime-sentence">
-                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -644,7 +700,7 @@ export default function Home() {
                     <span>12 min read</span>
                   </div>
                   <Link href="/blog/building-back-our-villages-community-technology">
-                    <Button variant="secondary" className="w-full group/btn rounded-3xl">
+                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -656,7 +712,7 @@ export default function Home() {
             {/* Bottom CTA */}
             <div className="text-center">
               <Link href="/blog">
-                <Button size="lg" className="gap-3 rounded-3xl bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all text-lg px-8 py-6">
+                <Button className="gap-3 rounded-3xl bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all text-lg px-8 py-6">
                   <Zap className="h-6 w-6" />
                   Read All NEW 2026 Articles
                   <ArrowRight className="h-6 w-6" />
@@ -678,7 +734,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-4">
               <span className="text-sm font-bold text-white">DMV METRO AREA SUCCESS STORY</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
               The Muhammad Family: <span className="text-primary">5 Months of Transformation</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -741,7 +797,7 @@ export default function Home() {
                 
                 <Quote className="h-10 w-10 text-primary/30 mb-4" />
                 
-                <blockquote className="text-xl md:text-2xl font-bold mb-6 leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
+                <blockquote className="text-xl md:text-2xl font-bold mb-6 leading-relaxed font-serif">
                   "My 11-year-old son said it best: 'Miss RoSeé's food isn't salty, but it's SO tasty — even my baby sister loves it!'"
                 </blockquote>
 
@@ -778,13 +834,13 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/clinical-recipes">
-                    <Button size="lg" className="gap-2 w-full sm:w-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 hover:from-primary/90 hover:to-pink-600/90 group">
+                    <Button className="gap-2 w-full sm:w-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 bg-gradient-to-r from-primary to-pink-600 hover:from-primary/90 hover:to-pink-600/90 group">
                       Get Custom Meal Plans 
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 group">
+                    <Button className="gap-2 w-full sm:w-auto rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-300 group bg-white text-blue-900">
                       Book Consultation 
                       <Users className="h-5 w-5 group-hover:scale-110 transition-transform" />
                     </Button>
@@ -812,7 +868,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full mb-4 animate-pulse shadow-xl">
               <span className="text-sm font-bold text-white">LIMITED TIME OFFERS</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
               Start Healing <span className="text-primary">Today</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -892,7 +948,7 @@ export default function Home() {
                     Input your conditions, get instant meal recommendations
                   </p>
                   <Link href="/clinical-recipes">
-                    <Button variant="outline" className="w-full gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-green-500/50 hover:border-green-500 group">
+                    <Button className="w-full gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-green-500/50 hover:border-green-500 group bg-white text-green-700">
                       Try It Now 
                       <TrendingUp className="h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
                     </Button>
@@ -932,7 +988,7 @@ export default function Home() {
                     BB girl meets corporate boss. Unapologetically Black.
                   </p>
                   <Link href="/stories">
-                    <Button variant="outline" className="w-full gap-2 rounded-3xl group-hover:scale-105 transition-transform bg-gradient-to-r from-purple-600/10 to-pink-600/10">
+                    <Button className="w-full gap-2 rounded-3xl group-hover:scale-105 transition-transform bg-gradient-to-r from-purple-600/10 to-pink-600/10 text-purple-700">
                       Read Episode 1 <BookOpen className="h-4 w-4" />
                     </Button>
                   </Link>
@@ -981,7 +1037,7 @@ export default function Home() {
                   <span className="text-sm font-medium text-primary">My Story</span>
                 </div>
                 
-                <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'var(--font-serif)' }}>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif">
                   From Misdiagnosed to Mission-Driven
                 </h2>
                 
@@ -1008,13 +1064,13 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Link href="/about">
-                    <Button size="lg" className="gap-2 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 group">
+                    <Button className="gap-2 rounded-3xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1 group">
                       Read My Full Story 
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <Link href="/journey">
-                    <Button size="lg" variant="outline" className="gap-2 rounded-3xl shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="gap-2 rounded-3xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-300 bg-white text-blue-900">
                       Start Your Journey
                     </Button>
                   </Link>
@@ -1034,7 +1090,7 @@ export default function Home() {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Finding Peace in Growth</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
                 Seasons of Growth: My Garden Journey
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -1077,7 +1133,7 @@ export default function Home() {
                 the real reward is the wisdom you pick up along the way."
               </p>
               <Link href="/garden">
-                <Button size="lg" variant="outline" className="gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
+                <Button className="gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
                   Explore All Seasons 
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -1094,7 +1150,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="container max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
               Real People, <span className="text-primary">Real Results</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -1197,7 +1253,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full mb-4 shadow-cartoon animate-bounce-fun">
                 <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Real Talk 💬</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
                 I Teach My Clients to <span className="text-primary">READ LABELS!</span> 📖
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -1205,7 +1261,7 @@ export default function Home() {
               </p>
               <div className="mt-6">
                 <Link href="/label-scanner">
-                  <Button size="lg" className="gap-2 rounded-full shadow-cartoon-primary hover-bounce">
+                  <Button className="gap-2 rounded-full shadow-cartoon-primary hover-bounce">
                     🔍 Try Our Smart Label Scanner (New!)
                     <ArrowRight className="h-5 w-5" />
                   </Button>
@@ -1371,7 +1427,7 @@ export default function Home() {
               {/* 3D Background Elements */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-primary rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl animate-pulse animate-delay-1s"></div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12 relative z-10">
@@ -1393,7 +1449,7 @@ export default function Home() {
                 
                 {/* Content Side */}
                 <div className="flex flex-col justify-center text-center md:text-left">
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
                     Want to Master Your Nutrition?
                   </h3>
                   <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
@@ -1415,7 +1471,7 @@ export default function Home() {
                   </div>
                   
                   <Link href="/shop">
-                    <Button size="lg" className="gap-2 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 w-full md:w-auto group">
+                    <Button className="gap-2 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 w-full md:w-auto group">
                       Learn More About the Course 
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -1497,12 +1553,12 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
                       <Link href="/stories">
-                        <Button size="lg" className="gap-2 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
+                        <Button className="gap-2 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
                           Read Episode 1 <ArrowRight className="h-5 w-5" />
                         </Button>
                       </Link>
                       <Link href="/stories">
-                        <Button size="lg" className="gap-2 rounded-3xl border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
+                        <Button className="gap-2 rounded-3xl border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
                           Explore the Series
                         </Button>
                       </Link>
@@ -1524,15 +1580,14 @@ export default function Home() {
         {/* 3D Floating Background Elements */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-500 rounded-full blur-3xl animate-pulse animate-delay-1500ms"></div>
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse animate-delay-3s"></div>
         </div>
         
         <div className="container relative z-10">
           <div className="max-w-2xl mb-10">
             <h2
-              className="text-3xl md:text-4xl font-bold"
-              style={{ fontFamily: "var(--font-serif)" }}
+              className="text-3xl md:text-4xl font-bold font-serif"
             >
               What you'll find here
             </h2>
@@ -1694,7 +1749,7 @@ export default function Home() {
               <Gift className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white">FREE RESOURCE 🎁</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
               Ready to Start Your <span className="text-primary">Healing Journey?</span> ✨
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -1715,6 +1770,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* RESOURCE ADS & PARTNERS SECTION */}
+      <ResourceAdsSection />
 
       {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
       <AffiliateProductRecommendations />

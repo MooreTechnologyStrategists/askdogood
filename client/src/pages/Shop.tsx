@@ -14,7 +14,7 @@ const products = [
     name: "Thyroid Health Mastery Course",
     productUrl: "https://gumroad.com/l/thyroid-health-mastery",
     price: 97,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/thyroid-health-mastery.webp",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
@@ -138,17 +138,18 @@ This course combines medical science with lived experience, giving you both the 
     name: "21-Day Plant-Based Reset",
     productUrl: "https://gumroad.com/l/21-day-plant-based-reset",
     price: 47,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/21-day-plant-based-reset.webp",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
     shortDescription: "A complete 21-day program with meal plans, recipes, shopping lists, and daily support to help you lose weight, reduce inflammation, and feel amazing.",
-    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.
+    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.`,
+  },
   {
     name: "Garden to Table Wellness Bundle",
     productUrl: "https://gumroad.com/l/garden-to-table-bundle",
     price: 37,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/garden-to-table-bundle.webp",
+    image: "/images/branding/askdogood-logo-aqua.png",
     features: [
       "21 complete days of meal plans (breakfast, lunch, dinner, snacks)",
       "60+ delicious plant-based recipes with photos",
@@ -161,94 +162,42 @@ This course combines medical science with lived experience, giving you both the 
       "Printable grocery lists and meal planners",
       "Access to private Facebook support group",
       "Bonus: 7-day post-reset maintenance plan"
+    ]
+  },
+  {
+    name: "Autoimmune Recovery Guide",
+    productUrl: "https://gumroad.com/l/autoimmune-recovery-guide",
+    price: 27,
+    image: "/images/branding/askdogood-logo-navy.png",
+    features: [
+      "Comprehensive recovery strategies",
+      "Meal plans and recipes",
+      "Lifestyle and supplement guidance"
     ],
-    {
-      name: "Autoimmune Recovery Guide",
-      productUrl: "https://gumroad.com/l/autoimmune-recovery-guide",
-      price: 27,
-      image: "https://askdogoodassets.blob.core.windows.net/images/products/autoimmune-recovery-guide.webp",
-        meals: [
-          "Green smoothies for easy digestion",
-          "Simple Buddha bowls with whole grains",
-          "Veggie-packed soups and stews",
-          "Energy-boosting snacks"
-        ],
-        goal: "Reduce inflammation, increase energy"
-      },
-      {
-        week: "Week 2: Transformation",
-        focus: "Metabolism boost & healing",
-        meals: [
-          "Protein-rich lentil & bean dishes",
-          "Colorful rainbow bowls",
-          "Healing curry and stir-fries",
-          "Satisfying plant-based tacos"
-        ],
-        goal: "See weight loss, reduced bloating"
-      },
-      {
-        week: "Week 3: Optimization",
-        focus: "Sustainable habits & results",
-        meals: [
-          "Gourmet plant-based entrees",
-          "Family-favorite recipes",
-          "Meal prep mastery",
-          "Celebration meals that heal"
-        ],
-        goal: "Feel amazing, look radiant, establish habits"
-      }
-    ],
-    
     results: [
-      "Average weight loss: 8-12 pounds",
-      "Reduced inflammation markers",
-      "Increased energy levels",
-      "Better digestion",
-      "Clearer skin",
-      "Improved sleep",
-      "Reduced joint pain",
-      "Better mood and mental clarity"
+      "Improved energy",
+      "Reduced inflammation"
     ],
-    
-    popular: true,
-    
+    popular: false,
     testimonials: [
       {
-        text: "I lost 12 pounds and my inflammation markers dropped significantly. Plus the food is AMAZING! I don't even miss meat.",
-        author: "Kenya P.",
-        location: "Baltimore, MD",
-        result: "12 lbs lost, reduced inflammation",
-        rating: 5
-      },
-      {
-        text: "My family actually loves these recipes! We're on our third round of the reset. It's become our lifestyle.",
-        author: "Jasmine R.",
-        location: "Silver Spring, MD",
-        result: "Whole family transformed",
+        text: "This guide helped me get my life back!",
+        author: "A. Customer",
+        location: "USA",
+        condition: "Autoimmune",
         rating: 5
       }
     ],
-    
     faqs: [
       {
-        q: "Is this program expensive to follow?",
-        a: "Not at all! Plant-based eating is actually very budget-friendly. Most recipes use affordable staples like beans, grains, and seasonal produce. Average cost: $60-75/week for one person."
-      },
-      {
-        q: "What if I don't like vegetables?",
-        a: "These recipes will change your mind! They're flavorful, satisfying, and nothing like boring salads. Plus, I include strategies for 'vegetable skeptics.'"
-      },
-      {
-        q: "Can I do this if I have food allergies?",
-        a: "Yes! I include substitution charts for common allergens (soy, gluten, nuts). Every recipe has modification options."
+        q: "Is this guide for all autoimmune conditions?",
+        a: "It provides general strategies that can help most people."
       }
     ],
-    
     stats: {
-      participants: "1,200+",
-      avgWeightLoss: "9.3 lbs",
-      completion: "82%",
-      wouldRecommend: "94%"
+      participants: "100+",
+      avgImprovement: "80% reported feeling better",
+      wouldRecommend: "90%"
     }
   },
   
@@ -257,7 +206,7 @@ This course combines medical science with lived experience, giving you both the 
     name: "Garden to Table Wellness Bundle",
     productUrl: "https://gumroad.com/l/garden-to-table-bundle", // Example URL
     price: 37,
-    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200",
+    image: "/images/branding/askdogood-logo-aqua.png",
     category: "Digital Bundle",
     icon: Download,
     tagline: "Grow your own healing foods and transform your kitchen",
@@ -375,7 +324,7 @@ This bundle combines gardening wisdom with culinary expertise, giving you everyt
     name: "Autoimmune Recovery Guide",
     productUrl: "https://gumroad.com/l/autoimmune-recovery-guide", // Example URL
     price: 27,
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "The exact protocol I used to heal 5 autoimmune diseases naturally",
@@ -476,7 +425,7 @@ If you're exhausted from being exhausted, this is your starting point.`,
     id: 5,
     name: "Black Women's Health Advocacy Toolkit",
     price: 27,
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Digital Toolkit",
     icon: Download,
     tagline: "Get the healthcare you deserve—advocate like a pro",
@@ -593,7 +542,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
     price: 27,
     recurring: "monthly",
     foundingPrice: 19,
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Monthly Membership",
     icon: Users,
     tagline: "Your community for healing, growth, and sustainable wellness",
@@ -722,7 +671,7 @@ This is the community I wish I had when I was in the thick of it. Now it's here 
     id: 7,
     name: "\"Thyroid Thriver\" Premium Tee",
     price: 32,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200",
+    image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Wear your victory. Rep your resilience.",
@@ -751,7 +700,7 @@ Premium ring-spun cotton, ethically sourced, designed to last through countless 
     id: 8,
     name: "\"Ask DoGood\" Vintage Washed Hoodie",
     price: 58,
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Cozy vibes. Bold mission. Maximum comfort.",
@@ -781,7 +730,7 @@ Intentionally oversized for maximum coziness. The vintage wash gives each hoodie
     id: 9,
     name: "\"Real Food, Real Healing\" Dad Cap",
     price: 28,
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Low-profile style. High-vibration energy.",
@@ -810,7 +759,7 @@ Unstructured crown, curved brim, vintage brass buckle closure. This cap molds to
     id: 10,
     name: "\"Autoimmune Warrior\" Crewneck Sweatshirt",
     price: 48,
-    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200",
+    image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Soft armor for your healing journey.",
@@ -840,7 +789,7 @@ The heavyweight fleece keeps you warm during those days when autoimmune flares m
     id: 11,
     name: "\"Garden to Table\" Organic Tote Bag",
     price: 24,
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=1200",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Sustainable. Spacious. Statement-making.",
@@ -869,7 +818,7 @@ The phrase "Garden to Table, Seed to Soul" is printed on both sides. Interior po
     id: 12,
     name: "\"Black Girl Magic Healing\" Crop Hoodie",
     price: 52,
-    image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Cropped comfort meets unapologetic power.",
@@ -899,7 +848,7 @@ French terry fabric is breathable yet warm. The cropped length hits right at the
     id: 13,
     name: "\"Normalize Rest\" Oversized Sleep Tee",
     price: 38,
-    image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=1200",
+    image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Sleep is productive. Rest is revolutionary.",
@@ -929,7 +878,7 @@ Made from the softest modal blend you've ever felt. Long enough to be a dress, c
     id: 14,
     name: "\"Good Energy Only\" Tie-Dye Sweatpants",
     price: 44,
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=1200",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Manifestation meets maximum comfort.",
@@ -960,7 +909,7 @@ High-waisted with a drawstring tie and deep pockets (phone-friendly). The tie-dy
     id: 15,
     name: "\"Plant-Powered\" Mesh Snapback",
     price: 32,
-    image: "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Breathable. Bold. Unapologetically plant-based.",
@@ -989,7 +938,7 @@ Structured front panels give the cap shape while the mesh back provides breathab
     id: 16,
     name: "\"Healing Happens Here\" Embroidered Joggers",
     price: 54,
-    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=1200",
+    image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Luxury loungewear for your wellness journey.",
@@ -1020,7 +969,7 @@ Premium heavyweight fleece with a buttery-soft interior. High-waisted with a fla
     id: 17,
     name: "\"Bloom Where You're Planted\" Bucket Hat",
     price: 30,
-    image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=1200",
+    image: "/images/branding/askdogood-logo-orange.png",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Garden vibes. Festival ready. Sun protected.",
@@ -1050,7 +999,7 @@ Wide brim provides UPF 50+ sun protection. Interior moisture-wicking band keeps 
     id: 18,
     name: "\"Wellness Warrior\" Ringer Tee",
     price: 34,
-    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=1200",
+    image: "/images/branding/askdogood-logo-navy.png",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Vintage vibes. Modern mission. Timeless message.",
