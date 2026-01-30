@@ -9,7 +9,7 @@ export default function ChinaWhiteEpisode1() {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white font-sans">
       {/* Header */}
       <div className="border-b border-purple-500/30 bg-black/40 backdrop-blur sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
@@ -19,7 +19,6 @@ export default function ChinaWhiteEpisode1() {
               Back to Series
             </Link>
           </Button>
-          
           <div className="flex items-center gap-4">
             <Button 
               variant="ghost" 
@@ -37,23 +36,27 @@ export default function ChinaWhiteEpisode1() {
         </div>
       </div>
 
-      {/* Episode Hero */}
-      <section className="py-16 bg-gradient-to-br from-purple-600/20 to-pink-600/20">
-        <div className="container max-w-4xl">
-          <Badge className="mb-4 bg-purple-600/30 border-purple-500/50">
+      {/* Hero Image & Character Intro */}
+      <section className="relative py-16 bg-gradient-to-br from-purple-600/30 to-pink-600/20 flex flex-col items-center">
+        <img
+          src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp"
+          alt="Chyna White Hero"
+          className="rounded-2xl shadow-2xl w-full max-w-2xl object-cover mb-8 border-4 border-purple-700/40"
+          style={{ maxHeight: 420 }}
+        />
+        <div className="container max-w-3xl text-center">
+          <Badge className="mb-4 bg-purple-700/40 border-purple-500/60 text-lg px-4 py-2">
             Chyna White • Episode 1
           </Badge>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-white drop-shadow-lg">
             The Setup
           </h1>
-          
-          <p className="text-xl text-gray-300 mb-6">
-            Meet Chyna White. Former rapper. Ex-street pharmacist. Reformed corporate drone. Current boss. 
-            And she's about to blow up your assumptions.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+          <div className="mb-6">
+            <span className="inline-block bg-black/40 rounded-full px-4 py-2 text-pink-200 font-semibold text-lg shadow-lg">
+              Meet <span className="text-purple-300 font-bold">Chyna White</span>: former rapper, ex-street pharmacist, reformed corporate drone, and current boss. Smart, gorgeous, tattooed, and unapologetically herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-300 justify-center mb-2">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
               <span>12 min read</span>
@@ -78,9 +81,17 @@ export default function ChinaWhiteEpisode1() {
       <article className="py-16">
         <div className="container max-w-3xl">
           <div className="prose prose-lg prose-invert max-w-none">
+            {/* In-article visual break */}
+            <div className="flex justify-center my-10">
+              <img
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg"
+                alt="Chyna White in the boardroom"
+                className="rounded-xl shadow-xl border-2 border-purple-700/30 max-h-72 object-cover"
+              />
+            </div>
             {/* Story Text */}
-            <div className="space-y-6 text-gray-200 leading-relaxed">
-              <p className="text-xl first-letter:text-7xl first-letter:font-bold first-letter:text-purple-400 first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-2">
+            <div className="space-y-8 text-gray-200 leading-relaxed text-lg">
+              <p className="text-2xl font-serif first-letter:text-7xl first-letter:font-extrabold first-letter:text-purple-400 first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-2">
                 The conference room smelled like expensive cologne and desperation. Chyna leaned back in her Eames chair, her tattooed fingers drumming a beat on the mahogany table that probably cost more than her first car. The three men across from her—crisp suits, carefully maintained five o'clock shadows, the kind of confidence that comes from never being told "no"—were still talking.
               </p>
 
@@ -124,7 +135,7 @@ export default function ChinaWhiteEpisode1() {
                 "It's just Chyna. And you can keep your respect. I bought my own." She was already walking toward the door. "Y'all have a blessed day."
               </p>
 
-              <div className="my-8 border-l-4 border-purple-500 pl-6 italic text-gray-400">
+              <div className="my-10 border-l-4 border-purple-500/70 pl-8 italic text-gray-400 text-xl bg-black/20 rounded-r-lg">
                 "See, that's the thing about Chyna. She moved through the world like she owned it, because in the ways that mattered, she did."
               </div>
 
@@ -136,7 +147,7 @@ export default function ChinaWhiteEpisode1() {
                 Her phone buzzed. A text from Simone, her business partner and the only person alive who could tell her about herself without catching hands.
               </p>
 
-              <p className="font-mono text-sm bg-black/40 p-4 rounded">
+              <p className="font-mono text-base bg-black/40 p-4 rounded-lg border border-purple-700/30">
                 <span className="text-purple-400">SIMONE:</span> How'd it go?<br/>
                 <span className="text-pink-400">CHYNA:</span> Told them to kick rocks in flip flops<br/>
                 <span className="text-purple-400">SIMONE:</span> 😂 That's my girl. Come to the office. We need to talk about the NYC contract<br/>
@@ -200,7 +211,7 @@ export default function ChinaWhiteEpisode1() {
                 The walk to her office was only three blocks, but in that distance, Chyna slipped through three different versions of herself. Past the barbershop where old heads still remembered her from the block—quick nod, keep it moving. Through the renovated arts district where gallery owners waved like they'd always believed in her—smile, wave back, don't stop. Into the building where her company, White Enterprises, occupied the entire third floor.
               </p>
 
-              <p className="italic">
+              <p className="italic text-pink-300 text-xl">
                 From the streets to the suites, and she'd earned every damn step.
               </p>
 
@@ -264,7 +275,7 @@ export default function ChinaWhiteEpisode1() {
                 "Besides," Chyna added, pulling up the contract on her laptop, "I want him to see exactly who I am now. Let him choke on it."
               </p>
 
-              <p className="text-center text-gray-500 italic mt-12">
+              <p className="text-center text-gray-500 italic mt-12 text-lg">
                 [To be continued...]
               </p>
             </div>
@@ -280,7 +291,6 @@ export default function ChinaWhiteEpisode1() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Previous Episode
             </Button>
-            
             <Button asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
               <Link href="/stories/chyna-white">
                 <ArrowRight className="w-4 h-4 mr-2" />
