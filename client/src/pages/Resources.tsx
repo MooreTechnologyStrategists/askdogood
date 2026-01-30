@@ -157,11 +157,11 @@ const Resources = () => {
       {/* Hero Section */}
       <section 
         className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
-        style={{{
+        style={{
           backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-        }}}
+        }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-teal-900/70"></div>
