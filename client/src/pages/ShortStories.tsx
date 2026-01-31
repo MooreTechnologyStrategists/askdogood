@@ -14,7 +14,7 @@ export default function ShortStories() {
       title: 'Chyna White',
       tagline: 'The Chronicles of a Beautiful Contradiction',
       description: 'Follow Chyna as she navigates the impossibilities of being a former rapper, street pharmacist, corporate escapee, and current business owner. Smart, gorgeous, tattooed, and unapologetically herself—she\'s the kind of Black woman who makes you rethink everything you thought you knew.',
-      coverImage: 'https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp',
+      coverImage: 'https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg',
       spiceLevel: 4,
       episodes: 8,
       status: 'ongoing',
