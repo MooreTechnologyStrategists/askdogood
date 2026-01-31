@@ -84,11 +84,21 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4">Wellness Topics</h4>
             <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground">🦋 Thyroid Health</li>
-              <li className="text-sm text-muted-foreground">💪 Chronic Illness Recovery</li>
-              <li className="text-sm text-muted-foreground">🥗 Nutrition & Superfoods</li>
-              <li className="text-sm text-muted-foreground">🧘‍♀️ Mental Wellness</li>
-              <li className="text-sm text-muted-foreground">☁️ Tech & Azure Career</li>
+              <li>
+                <Link href="/wellness/thyroid-health" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🦋 Thyroid Health</Link>
+              </li>
+              <li>
+                <Link href="/wellness/chronic-illness" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">💪 Chronic Illness Recovery</Link>
+              </li>
+              <li>
+                <Link href="/wellness/nutrition" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🥗 Nutrition & Superfoods</Link>
+              </li>
+              <li>
+                <Link href="/wellness/mental" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🧘‍♀️ Mental Wellness</Link>
+              </li>
+              <li>
+                <Link href="/wellness/tech-azure-career" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">☁️ Tech & Azure Career</Link>
+              </li>
             </ul>
           </div>
         </div>
