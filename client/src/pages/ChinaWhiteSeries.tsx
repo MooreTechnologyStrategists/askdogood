@@ -68,7 +68,7 @@ export default function ChinaWhiteSeries() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
               <img
-                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.webp"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg"
                 alt="Chyna White - Boss Mode"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
@@ -91,7 +91,7 @@ export default function ChinaWhiteSeries() {
 
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group">
               <img
-                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.webp"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.jpg"
                 alt="Chyna White - Corporate"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
@@ -139,7 +139,7 @@ export default function ChinaWhiteSeries() {
             <div>
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/10 to-pink-600/10 border-2 border-purple-500/30">
                 <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp"
+                  src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg"
                   alt="Chyna White"
                   className="w-full h-full object-cover opacity-90"
                   onError={(e) => {
