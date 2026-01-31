@@ -69,7 +69,7 @@ export default function ChinaWhiteSeries() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group shadow-lg">
               <img
-                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/boss_chyna.png"
                 alt="Chyna White - Boss Mode"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
@@ -77,7 +77,7 @@ export default function ChinaWhiteSeries() {
                   e.currentTarget.parentElement!.innerHTML = `
                     <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
                       <div class="text-center p-6">
-                        <div class="text-6xl mb-3 animate-bounce">👑</div>
+                        <div class="text-6xl mb-3 animate-bounce"></div>
                         <p class="text-white font-bold">Boss Mode</p>
                         <p class="text-white/60 text-xs mt-2">Coming Soon</p>
                       </div>
@@ -92,7 +92,7 @@ export default function ChinaWhiteSeries() {
 
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group shadow-lg">
               <img
-                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/corporate_chyna.png"
                 alt="Chyna White - Corporate"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
@@ -100,7 +100,7 @@ export default function ChinaWhiteSeries() {
                   e.currentTarget.parentElement!.innerHTML = `
                     <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
                       <div class="text-center p-6">
-                        <div class="text-4xl mb-2">💼</div>
+                        <div class="text-4xl mb-2"></div>
                         <p class="text-sm text-white">Corporate</p>
                       </div>
                     </div>
@@ -114,7 +114,7 @@ export default function ChinaWhiteSeries() {
 
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group col-span-2 md:col-span-1 shadow-lg">
               <img
-                src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-3.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/stories/artistic_chyna.png"
                 alt="Chyna White - Artistic"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
@@ -122,7 +122,7 @@ export default function ChinaWhiteSeries() {
                   e.currentTarget.parentElement!.innerHTML = `
                     <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
                       <div class="text-center p-4">
-                        <div class="text-4xl mb-2">🎨</div>
+                        <div class="text-4xl mb-2"></div>
                         <p class="text-sm text-white">Artistic Vision</p>
                       </div>
                     </div>
@@ -140,7 +140,7 @@ export default function ChinaWhiteSeries() {
             <div>
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-black via-red-900/80 to-black border-2 border-red-700/40 shadow-xl">
                 <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg"
+                  src="https://askdogoodassets.blob.core.windows.net/images/stories/main_shot_chyna.png"
                   alt="Chyna White"
                   className="w-full h-full object-cover opacity-90"
                   onError={(e) => {
