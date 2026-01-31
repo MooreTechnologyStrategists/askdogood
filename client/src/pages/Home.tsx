@@ -356,18 +356,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful */}
-      <section className="py-12 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
-            <blockquote className="text-2xl md:text-3xl font-bold mb-4 font-serif">
-              "Miss RoSeé's food isn't salty, but it's SO tasty!"
-            </blockquote>
-            <p className="text-muted-foreground">— Muhammad Family</p>
-          </div>
-        </div>
-      </section>
+      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful (moved below Meet Your Thyroid Chef) */}
 
       {/* 4-CARD FEATURE GRID - Everything You Need */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
@@ -1772,7 +1761,7 @@ export default function Home() {
       </section>
 
       {/* RESOURCE ADS & PARTNERS SECTION */}
-      <ResourceAdsSection />
+      {/* ResourceAdsSection removed */}
 
       {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
       <AffiliateProductRecommendations />
