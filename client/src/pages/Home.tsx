@@ -117,10 +117,10 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Images Grid */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 opacity-20">
-          <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-1.jpgw=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-2.jpgw=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-3.jpgw=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-4.jpgw=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" />
         </div>
         
         {/* Gradient Overlay */}
@@ -133,7 +133,7 @@ export default function Home() {
               <div className="relative w-64 h-64 md:w-96 md:h-96">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"></div>
                 <img 
-                  src="/images/personal/rosee-hero-1.jpg"
+                  src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-hero-1.jpg"
                   alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                 />
@@ -242,7 +242,7 @@ export default function Home() {
             <div className="relative w-48 h-48 md:w-64 md:h-64">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-2xl"></div>
               <img 
-                src="/images/personal/professional/rosee-professional-suit.jpg"
+                src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
                 alt="RoSeé Murphy - Your Thyroid Chef"
                 className="relative w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl hover:scale-105 transition-transform duration-300"
               />
@@ -284,7 +284,7 @@ export default function Home() {
               <Card className="overflow-hidden hover:shadow-xl transition-all">
                 <div className="relative h-64 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1566393028730-, 38c8f8d80089?w=600" 
+                    src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-1.jpg" 
                     alt="Roasted Carrots, Onions and Peppers"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -308,7 +308,7 @@ export default function Home() {
               <Card className="overflow-hidden hover:shadow-xl transition-all">
                 <div className="relative h-64 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" 
+                    src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-3.jpg" 
                     alt="Purple Cabbage and Broccoli Slaw"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -332,7 +332,7 @@ export default function Home() {
               <Card className="overflow-hidden hover:shadow-xl transition-all">
                 <div className="relative h-64 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600" 
+                    src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-4.jpg" 
                     alt="DoGood's Famous Lentil Burgers"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />

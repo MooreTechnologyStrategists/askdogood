@@ -142,7 +142,7 @@ export default function ChinaWhiteSeries() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Character Description */}
             <div>
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-black via-red-900/80 to-black border-2 border-red-700/40 shadow-xl">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-black via-red-900/80 to-black border-2 border-red-700/40 shadow-xl relative">
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png"
                   alt="Chyna White"
@@ -160,6 +160,9 @@ export default function ChinaWhiteSeries() {
                     `;
                   }}
                 />
+                <div className="absolute bottom-4 left-0 right-0 text-center z-10">
+                  <span className="inline-block bg-black/70 text-pink-200 px-6 py-3 rounded-full text-3xl font-extrabold shadow-lg mx-auto tracking-widest" style={{letterSpacing:'0.1em'}}>Chyna White</span>
+                </div>
               </div>
             </div>
 
@@ -232,53 +235,54 @@ export default function ChinaWhiteSeries() {
             {episodes.map((episode) => (
               <Card 
                 key={episode.id}
-                className="bg-black/70 backdrop-blur border-red-700/40 hover:border-red-700/70 transition-all shadow-lg"
+                className="bg-black/70 backdrop-blur border-red-700/40 hover:border-red-700/70 transition-all shadow-lg relative overflow-hidden"
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex gap-4 items-start">
-                      {episode.image && (
-                        <img
-                          src={episode.image}
-                          alt={episode.title}
-                          className="w-20 h-28 object-cover object-top rounded-lg border border-red-700/60 shadow"
-                        />
-                      )}
+                {/* Full-size background image */}
+                {episode.image && (
+                  <img
+                    src={episode.image}
+                    alt={episode.title}
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-60 z-0"
+                  />
+                )}
+                <div className="relative z-10">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-4">
                       <div>
                         <Badge variant="outline" className="border-purple-500/50 text-purple-300 mb-2">
                           Episode {episode.id}
                         </Badge>
-                        <CardTitle className="text-2xl">{episode.title}</CardTitle>
+                        <CardTitle className="text-2xl text-white drop-shadow-lg">{episode.title}</CardTitle>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-red-400" />
+                        <span className="text-sm text-red-300">{episode.readTime} min</span>
+                        <div className="flex ml-2">
+                          {[...Array(episode.spiceLevel)].map((_, i) => (
+                            <Flame key={i} className="w-4 h-4 text-red-600 fill-red-600" />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-red-400" />
-                      <span className="text-sm text-red-300">{episode.readTime} min</span>
-                      <div className="flex ml-2">
-                        {[...Array(episode.spiceLevel)].map((_, i) => (
-                          <Flame key={i} className="w-4 h-4 text-red-600 fill-red-600" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-red-100 mb-4">{episode.description}</p>
-                  <p className="text-sm text-red-400 italic mb-6">
-                    "{episode.excerpt}"
-                  </p>
-                  {episode.published ? (
-                    <Button asChild className="w-full sm:w-auto bg-yellow-400 text-black hover:bg-yellow-300 font-bold py-3 px-8 rounded-2xl">
-                      <Link href={`/stories/chyna-white/episode-${episode.id}`}>
-                        Read Now
-                      </Link>
-                    </Button>
-                  ) : (
-                    <Button disabled className="w-full sm:w-auto bg-black/60 border-red-700 text-red-400 font-bold py-3 px-8 rounded-2xl">
-                      Coming Soon
-                    </Button>
-                  )}
-                </CardContent>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-red-100 mb-4 text-lg drop-shadow-md">{episode.description}</p>
+                    <p className="text-sm text-red-200 italic mb-6 drop-shadow-md">
+                      "{episode.excerpt}"
+                    </p>
+                    {episode.published ? (
+                      <Button asChild className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700 font-bold py-3 px-8 rounded-2xl shadow-lg">
+                        <Link href={`/stories/chyna-white/episode-${episode.id}`}>
+                          Read Now
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button disabled className="w-full sm:w-auto bg-black/60 border-red-700 text-red-400 font-bold py-3 px-8 rounded-2xl">
+                        Coming Soon
+                      </Button>
+                    )}
+                  </CardContent>
+                </div>
               </Card>
             ))}
           </div>

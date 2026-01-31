@@ -38,9 +38,9 @@ export default function ChinaWhiteEpisode1() {
       <section className="relative py-20 bg-gradient-to-br from-black via-red-900/80 to-black flex flex-col items-center shadow-xl">
         <div className="relative w-full max-w-2xl mb-10">
           <img
-            src="https://askdogoodassets.blob.core.windows.net/images/stories/main_shot_chyna.png"
+            src="https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png"
             alt="Chyna White Hero"
-            className="rounded-2xl shadow-2xl w-full object-cover border-4 border-red-700/40"
+            className="rounded-2xl shadow-2xl w-full object-cover object-top border-4 border-red-700/40"
             style={{ maxHeight: 420 }}
           />
           {/* Soft overlay for text readability */}
