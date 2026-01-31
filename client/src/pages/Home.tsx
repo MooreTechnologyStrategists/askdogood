@@ -1529,7 +1529,7 @@ export default function Home() {
                     alt="Healthy nutrition and meal planning"
                     className="w-full h-full object-cover min-h-[300px]"
                     onError={(e) => {
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600";
+                      e.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dishes-1.jpg";
                     }}
                   />
                   {/* Overlay Badge */}
@@ -1589,7 +1589,7 @@ export default function Home() {
                 <div className="relative flex items-center justify-center p-8">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-black/80 to-zinc-900 border-2 border-white/10 shadow-2xl w-72 h-96">
                     <img
-                      src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg"
+                      src="https://askdogoodassets.blob.core.windows.net/images/stories/main_shot_chyna.png"
                       alt="Chyna White Series Cover"
                       className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity drop-shadow-glitter"
                     />
@@ -1623,9 +1623,9 @@ export default function Home() {
                     </p>
                     <div className="bg-black/60 border border-white/10 rounded-lg p-4">
                       <p className="text-white/80 font-medium">
-                        🔥 Fiction that feels like real life<br />
-                        💼 Corporate drama meets street wisdom<br />
-                        👑 A heroine who plays by her own rules
+                        Fiction that feels like real life<br />
+                        Corporate drama meets street wisdom<br />
+                        A heroine who plays by her own rules
                       </p>
                     </div>
                   </div>
@@ -1823,13 +1823,13 @@ export default function Home() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4 shadow-cartoon-lg animate-bounce-fun hover-wiggle">
               <Gift className="h-5 w-5 text-white" />
-              <span className="text-sm font-bold text-white">FREE RESOURCE 🎁</span>
+              <span className="text-sm font-bold text-white">FREE RESOURCE </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
-              Ready to Start Your <span className="text-primary">Healing Journey?</span> ✨
+              Ready to Start Your <span className="text-primary">Healing Journey?</span> 
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real talk and real food. 🙌
+              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real talk and real food. 
             </p>
           </div>
           
