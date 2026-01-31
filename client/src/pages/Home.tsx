@@ -53,14 +53,14 @@ function ResourceAdsSection() {
     </section>
   );
 }
-// Resource Ads Section - partners & grants
+// Resource Ads Section - partners & grants (fixed, single definition)
 const resourceAds = [
   {
     name: 'Local Wellness Grant',
     url: 'https://grants.gov/',
-    img: '', // No logo, will use text fallback
-    alt: 'Local Wellness Grant',
-    description: 'Apply for local wellness and nutrition grants.'
+    img: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Grants.gov_logo.png',
+    alt: 'Grants.gov Logo',
+    description: 'Find and apply for federal wellness and nutrition grants at Grants.gov. The official source for U.S. government grant information.'
   },
   {
     name: 'Partner: DMV Health',
@@ -96,6 +96,7 @@ function ResourceAdsSection() {
                 src={ad.img}
                 alt={ad.alt}
                 className="h-20 mb-3 object-contain bg-transparent"
+                style={{ maxHeight: 60 }}
               />
             ) : (
               <div className="h-20 mb-3 flex items-center justify-center text-4xl text-blue-400">🏆</div>
