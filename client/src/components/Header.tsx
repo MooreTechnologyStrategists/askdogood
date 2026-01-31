@@ -26,14 +26,6 @@ export default function Header() {
     { href: "/journey", label: "Journey", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/stories/chyna-white", label: "Stories", icon: BookOpen },
-    { 
-      label: "Health Apps 🏥", 
-      isGroup: true,
-      items: [
-        { href: "/clinical-recipes", label: "Recipe App", icon: UtensilsCrossed },
-        { href: "/label-scanner", label: "Label Scanner", icon: Scan, badge: "NEW" },
-      ]
-    },
     { href: "/resources", label: "Resources", icon: Library },
     { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
     { href: "/about", label: "About", icon: User },
@@ -55,65 +47,14 @@ export default function Header() {
 
         {/* CENTER: Nav (desktop) */}
         <nav className="hidden lg:flex items-center gap-0.5">
-          {navItems.map((item, index) => {
-            // Handle grouped items
-            if (item.isGroup) {
-              return (
-                <div key={index} className="relative group">
-                  <button className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all">
-                    <HeartPulse className="h-3.5 w-3.5" />
-                    {item.label}
-                  </button>
-                  <div className="absolute top-full left-0 mt-1 hidden group-hover:block">
-                    <div className="bg-background border rounded-2xl shadow-xl p-2 min-w-[200px] animate-pop-in">
-                      {item.items?.map((subItem) => {
-                        const SubIcon = subItem.icon;
-                        const isActive = location === subItem.href;
-                        return (
-                          <Link
-                            key={subItem.href}
-                            href={subItem.href}
-                            className={[
-                              "flex items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-sm font-medium transition-all cursor-pointer",
-                              "hover:bg-accent hover:text-accent-foreground",
-                              isActive ? "bg-accent text-accent-foreground" : "text-muted-foreground",
-                            ].join(" ")}
-                          >
-                            <div className="flex items-center gap-2">
-                              <SubIcon className="h-4 w-4" />
-                              {subItem.label}
-                            </div>
-                            {subItem.badge && (
-                              <span className="bg-primary text-white text-xs px-2 py-0.5 rounded-full font-bold animate-pulse">
-                                {subItem.badge}
-                              </span>
-                            )}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              );
-            }
-
-            // Regular nav items
+          {navItems.map((item) => {
             const isActive = location === item.href;
             const Icon = item.icon;
-
             return (
               <Link 
                 key={item.href} 
                 href={item.href}
-                className={[
-                  "flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all cursor-pointer",
-                  "hover:bg-accent hover:text-accent-foreground hover:shadow-sm",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-                  isActive
-                    ? "bg-accent text-accent-foreground shadow-sm"
-                    : "text-muted-foreground",
-                  item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
-                ].join(" ")}
+                className={["flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent hover:text-accent-foreground hover:shadow-sm","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",isActive? "bg-accent text-accent-foreground shadow-sm": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",].join(" ")}
               >
                 <Icon className="h-3.5 w-3.5" />
                 {item.label}
@@ -150,61 +91,15 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t bg-background">
           <nav className="container py-4 flex flex-col gap-2">
-            {navItems.map((item, index) => {
-              // Handle grouped items in mobile
-              if (item.isGroup) {
-                return (
-                  <div key={index} className="space-y-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                      {item.label}
-                    </div>
-                    {item.items?.map((subItem) => {
-                      const SubIcon = subItem.icon;
-                      const isActive = location === subItem.href;
-                      return (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={[
-                            "flex items-center justify-between gap-3 rounded-md px-6 py-3 text-base font-medium transition-all cursor-pointer",
-                            "hover:bg-accent hover:text-accent-foreground",
-                            isActive ? "bg-accent text-accent-foreground" : "text-muted-foreground",
-                          ].join(" ")}
-                        >
-                          <div className="flex items-center gap-3">
-                            <SubIcon className="h-5 w-5" />
-                            {subItem.label}
-                          </div>
-                          {subItem.badge && (
-                            <span className="bg-primary text-white text-xs px-2 py-1 rounded-full font-bold">
-                              {subItem.badge}
-                            </span>
-                          )}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                );
-              }
-
-              // Regular items in mobile
+            {navItems.map((item) => {
               const isActive = location === item.href;
               const Icon = item.icon;
-
               return (
                 <Link 
                   key={item.href} 
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={[
-                    "flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium transition-all cursor-pointer",
-                    "hover:bg-accent hover:text-accent-foreground",
-                    isActive
-                      ? "bg-accent text-accent-foreground"
-                      : "text-muted-foreground",
-                    item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
-                  ].join(" ")}
+                  className={["flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium transition-all cursor-pointer","hover:bg-accent hover:text-accent-foreground",isActive? "bg-accent text-accent-foreground": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",].join(" ")}
                 >
                   <Icon className="h-5 w-5" />
                   {item.label}
