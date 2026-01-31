@@ -53,6 +53,61 @@ function ResourceAdsSection() {
     </section>
   );
 }
+// Resource Ads Section - partners & grants
+const resourceAds = [
+  {
+    name: 'Local Wellness Grant',
+    url: 'https://example.com/grant',
+    img: '', // No logo, will use text fallback
+    alt: 'Local Wellness Grant',
+    description: 'Apply for local wellness and nutrition grants.'
+  },
+  {
+    name: 'Partner: DMV Health',
+    url: 'https://dmvhealth.org',
+    img: '/images/memberships/nsbe.svg',
+    alt: 'DMV Health Logo',
+    description: 'Trusted DMV health partner for community wellness.'
+  },
+  {
+    name: 'Nonprofit Resource Center',
+    url: 'https://nonprofitresources.org',
+    img: '/assets/img/brand/rosee-hero.jpg',
+    alt: 'Nonprofit Resource Center Logo',
+    description: 'Support and resources for nonprofit organizations.'
+  }
+];
+
+function ResourceAdsSection() {
+  return (
+    <section className="mt-16 mb-12 px-4 py-8 bg-blue-50 rounded-xl shadow-md">
+      <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Resource Ads &amp; Partners</h2>
+      <div className="flex flex-wrap justify-center gap-8">
+        {resourceAds.map((ad) => (
+          <a
+            key={ad.name}
+            href={ad.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center w-64 p-4 bg-white rounded-lg shadow hover:shadow-lg transition"
+          >
+            {ad.img ? (
+              <img
+                src={ad.img}
+                alt={ad.alt}
+                className="h-20 mb-3 object-contain bg-transparent"
+              />
+            ) : (
+              <div className="h-20 mb-3 flex items-center justify-center text-4xl text-blue-400">🏆</div>
+            )}
+            <div className="font-semibold text-lg text-blue-800 mb-1">{ad.name}</div>
+            <div className="text-sm text-gray-600 text-center">{ad.description}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
 // ...existing code...
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -251,6 +306,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* PERSONAL SLIDESHOW - Meet Your Thyroid Chef */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
@@ -265,6 +321,9 @@ export default function Home() {
           <PersonalSlideshow />
         </div>
       </section>
+
+      {/* RESOURCE ADS & PARTNERS SECTION (DO NOT REMOVE unless user requests) */}
+      <ResourceAdsSection />
 
       {/* RESOURCE ADS & PARTNERS SECTION */}
       <ResourceAdsSection />
