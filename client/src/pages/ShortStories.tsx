@@ -1,4 +1,31 @@
 import { Link } from 'wouter';
+
+// Glitter effect global styles
+if (typeof document !== 'undefined' && !document.getElementById('glitter-global-style')) {
+  const style = document.createElement('style');
+  style.id = 'glitter-global-style';
+  style.innerHTML = `
+    .glitter-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: repeating-linear-gradient(135deg,rgba(255,255,255,0.04) 0 2px,transparent 2px 8px),
+        repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0 1px,transparent 1px 7px),
+        radial-gradient(circle at 20% 40%,rgba(255,255,255,0.08) 0 2px,transparent 2px 100%),
+        radial-gradient(circle at 80% 60%,rgba(255,255,255,0.06) 0 2px,transparent 2px 100%);
+      animation: glitter-move 8s linear infinite;
+    }
+    @keyframes glitter-move {
+      0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+      100% { background-position: 100px 100px, 80px 120px, 60px 40px, 120px 80px; }
+    }
+    .drop-shadow-glitter {
+      filter: drop-shadow(0 0 6px #fff8) drop-shadow(0 0 2px #fff4);
+    }
+  `;
+  document.head.appendChild(style);
+}
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -99,22 +126,24 @@ export default function ShortStories() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-200/30 via-red-900/60 to-black text-white">
+    <div className="min-h-screen relative bg-black text-white overflow-x-hidden">
+      {/* Glitter overlay */}
+      <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+        <div className="w-full h-full glitter-bg" />
+      </div>
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/40 via-red-900/30 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-900/80 to-black/90"></div>
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-yellow-400/30 border-yellow-400/60 text-yellow-100 hover:bg-yellow-400/40">
-              <Flame className="w-4 h-4 mr-2 text-yellow-200" />
+            <Badge className="mb-6 text-lg px-6 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
+              <Flame className="w-4 h-4 mr-2 text-white/70" />
               Short Stories
             </Badge>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-red-500 to-black bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zinc-300 to-white bg-clip-text text-transparent drop-shadow-glitter">
               Raw. Real. Unapologetic.
             </h1>
-            
-            <p className="text-xl md:text-2xl text-yellow-100 mb-8">
+            <p className="text-xl md:text-2xl text-white/80 mb-8">
               Fiction that feels like truth. Stories about Black women who refuse to fit in anyone's box.
             </p>
             
@@ -140,19 +169,19 @@ export default function ShortStories() {
       <section className="py-20">
         <div className="container max-w-6xl">
           <div className="mb-16 text-center">
-            <Badge className="mb-4 text-base px-4 py-2 bg-pink-600/30 border-pink-500/50">
-              <Star className="w-4 h-4 mr-2" />
+            <Badge className="mb-4 text-base px-4 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
+              <Star className="w-4 h-4 mr-2 text-white/70" />
               Featured Series
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">Introducing: Chyna White</h2>
-            <p className="text-xl text-gray-400">The Chronicles of a Beautiful Contradiction</p>
+            <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-glitter">Introducing: Chyna White</h2>
+            <p className="text-xl text-white/60">The Chronicles of a Beautiful Contradiction</p>
           </div>
 
           {series.map((s) => (
             <div key={s.id} className="grid md:grid-cols-2 gap-12 items-center mb-20">
               {/* Character Image */}
               <div className="relative group">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900/50 to-purple-900 border-2 border-purple-500/50 shadow-2xl">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-black/80 to-zinc-900 border-2 border-white/10 shadow-2xl">
                   <img
                     src={s.coverImage}
                     alt={s.title}
@@ -185,13 +214,13 @@ export default function ShortStories() {
                 </div>
                 
                 {/* Spice Level Indicator */}
-                <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 rounded-full border border-red-500/50">
+                <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-semibold text-red-400">SPICE</span>
+                    <span className="text-xs font-semibold text-white/60">SPICE</span>
                     {[...Array(5)].map((_, i) => (
                       <Flame 
                         key={i} 
-                        className={`w-3 h-3 ${i < s.spiceLevel ? 'text-red-500 fill-red-500' : 'text-gray-600'}`}
+                        className={`w-3 h-3 ${i < s.spiceLevel ? 'text-pink-400 fill-pink-400 drop-shadow-glitter' : 'text-gray-700'}`}
                       />
                     ))}
                   </div>
@@ -266,7 +295,7 @@ export default function ShortStories() {
               {episodes.map((episode) => (
                 <Card 
                   key={episode.id}
-                  className="bg-black/40 backdrop-blur border-purple-500/30 hover:border-purple-500/60 transition-all group"
+                  className="bg-black/60 backdrop-blur border-white/10 hover:border-white/30 transition-all group drop-shadow-glitter"
                 >
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
@@ -282,27 +311,27 @@ export default function ShortStories() {
                         ))}
                       </div>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-purple-400 transition-colors">
+                    <CardTitle className="text-xl group-hover:text-white transition-colors drop-shadow-glitter">
                       {episode.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-400">
+                    <CardDescription className="text-gray-300">
                       <Clock className="w-3 h-3 inline mr-1" />
                       {episode.readTime} min read
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-gray-300 mb-4">{episode.description}</p>
-                    <p className="text-sm text-gray-500 italic mb-4">
+                    <p className="text-sm text-gray-200 mb-4">{episode.description}</p>
+                    <p className="text-sm text-gray-400 italic mb-4">
                       "{episode.excerpt}"
                     </p>
                     {episode.published ? (
-                      <Button asChild className="w-full border-purple-500/50 hover:bg-purple-500/20 py-2 text-sm font-semibold bg-transparent border rounded-xl">
+                      <Button asChild className="w-full border-white/20 hover:bg-white/10 py-2 text-sm font-semibold bg-transparent border rounded-xl">
                         <Link href={`/stories/chyna-white/episode-${episode.id}`}>
                           Read Now
                         </Link>
                       </Button>
                     ) : (
-                      <Button disabled className="w-full py-2 text-sm font-semibold bg-transparent border border-gray-400 rounded-xl">
+                      <Button disabled className="w-full py-2 text-sm font-semibold bg-transparent border border-white/20 rounded-xl">
                         Coming Soon
                       </Button>
                     )}
@@ -312,11 +341,11 @@ export default function ShortStories() {
             </div>
 
             {/* Lead Magnet CTA */}
-            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-purple-700/80 via-pink-600/80 to-purple-700/80 rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Get the Real-Life Healing Guide Behind These Stories</h3>
-              <p className="text-lg text-pink-100 mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
+            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-white/10 via-zinc-800/80 to-white/10 rounded-2xl p-8 shadow-xl drop-shadow-glitter">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white drop-shadow-glitter">Get the Real-Life Healing Guide Behind These Stories</h3>
+              <p className="text-lg text-white/80 mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
               <a href="https://gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-3xl text-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300 py-3 px-8">
+                <Button className="rounded-3xl text-lg font-semibold bg-white/80 text-black hover:bg-white py-3 px-8 drop-shadow-glitter">
                   Download Free Guide
                 </Button>
               </a>
@@ -352,10 +381,10 @@ export default function ShortStories() {
 
             {/* Testimonial Carousel */}
             <div className="mb-20 max-w-2xl mx-auto">
-              <h3 className="text-xl font-bold mb-4 text-center text-white">Real Results</h3>
-              <div className="bg-black/60 rounded-2xl p-6 text-center text-white shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-center text-white drop-shadow-glitter">Real Results</h3>
+              <div className="bg-black/80 rounded-2xl p-6 text-center text-white shadow-lg drop-shadow-glitter">
                 <p className="italic mb-2">“This course changed everything. I finally understand my body and how to advocate for myself. Within 3 months, my energy returned and I feel like ME again.”</p>
-                <p className="text-sm text-pink-200">— Maya T., Washington, DC</p>
+                <p className="text-sm text-white/60">— Maya T., Washington, DC</p>
               </div>
             </div>
           </div>
@@ -363,12 +392,12 @@ export default function ShortStories() {
       </section>
 
       {/* Newsletter CTA - Improved */}
-      <section className="py-20 bg-gradient-to-br from-purple-600/20 to-pink-600/20 sticky bottom-0 z-50">
+      <section className="py-20 bg-gradient-to-br from-black/90 via-zinc-900/80 to-black/90 sticky bottom-0 z-50">
         <div className="container max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-glitter">
             Unlock New Episodes + Healing Tools
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-white/80 mb-8">
             Get new stories, exclusive healing resources, and special offers delivered straight to your inbox.
           </p>
           <div className="max-w-md mx-auto">
@@ -376,13 +405,13 @@ export default function ShortStories() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-black/40 border border-purple-500/30 text-white placeholder:text-gray-500"
+                className="flex-1 px-4 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder:text-gray-500 drop-shadow-glitter"
               />
-              <Button className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold py-3 px-8 text-lg rounded-2xl">
+              <Button className="bg-white/80 text-black hover:bg-white font-bold py-3 px-8 text-lg rounded-2xl drop-shadow-glitter">
                 Subscribe Free
               </Button>
             </div>
-            <p className="text-xs text-gray-400 mt-3">
+            <p className="text-xs text-white/60 mt-3">
               We respect your privacy. Unsubscribe anytime.
             </p>
           </div>
@@ -392,12 +421,12 @@ export default function ShortStories() {
       {/* About the Author */}
       <section className="py-20">
         <div className="container max-w-4xl">
-          <Card className="bg-black/40 backdrop-blur border-purple-500/30 overflow-hidden">
+          <Card className="bg-black/80 backdrop-blur border-white/10 overflow-hidden drop-shadow-glitter">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl">From the Author</CardTitle>
+              <CardTitle className="text-3xl drop-shadow-glitter">From the Author</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-purple-500/50">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/20">
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-author.webp"
                   alt="RoSeé Murphy"
@@ -407,16 +436,17 @@ export default function ShortStories() {
                   }}
                 />
               </div>
-              <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+              <p className="text-lg text-white/80 mb-4 leading-relaxed">
                 "I've lived a thousand lives in one. These stories are fiction, but they're built on truths I've witnessed, experienced, and survived. 
                 Chyna White is every Black woman I've known who refused to choose just one identity. 
                 She's the parts of us we hide at work, unleash at home, and pray about at night."
               </p>
-              <p className="text-gray-400 font-semibold">— RoSeé Murphy</p>
+              <p className="text-white/60 font-semibold">— RoSeé Murphy</p>
             </CardContent>
           </Card>
         </div>
       </section>
+
     </div>
   );
 }
