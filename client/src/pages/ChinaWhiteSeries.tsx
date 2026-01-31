@@ -207,10 +207,10 @@ export default function ChinaWhiteSeries() {
                 </div>
               </div>
 
-              <Button className="w-full md:w-auto text-lg px-8 bg-gradient-to-br from-red-700 to-black border-red-700 text-red-100 hover:text-white" asChild>
-                <Link href="/stories/chyna-white/episode-1">
-                  Start Reading Episode 1
-                  <BookOpen className="ml-2 w-5 h-5" />
+              <Button className="w-full py-4 px-8 text-xl font-bold bg-gradient-to-br from-red-700 to-black border-red-700 text-red-100 hover:text-white flex items-center justify-center" asChild>
+                <Link href="/stories/chyna-white/episode-1" className="w-full flex items-center justify-center">
+                  <span className="w-full text-center">Start Reading Episode 1</span>
+                  <BookOpen className="ml-3 w-7 h-7" />
                 </Link>
               </Button>
             </div>

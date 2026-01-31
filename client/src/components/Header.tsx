@@ -25,7 +25,7 @@ export default function Header() {
     { href: "/", label: "Home", icon: Home },
     { href: "/journey", label: "Journey", icon: Sparkles },
     { href: "/blog", label: "Blog", icon: BookOpen },
-    { href: "/stories", label: "Stories", icon: BookOpen },
+    { href: "/stories/chyna-white", label: "Stories", icon: BookOpen },
     { 
       label: "Health Apps 🏥", 
       isGroup: true,
