@@ -114,7 +114,6 @@ export default function ChinaWhiteSeries() {
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-purple-500/30 group col-span-2 md:col-span-1">
               <img
                 src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-3.jpg"
-"
                 alt="Chyna White - Artistic"
                 className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 onError={(e) => {
