@@ -81,15 +81,12 @@ export default function ShortStories() {
             <div className="flex flex-col gap-2">
               <Button 
                 onClick={() => setIsOver18(true)}
-                size="lg"
-                className="w-full"
+                className="w-full py-3 text-lg font-semibold"
               >
                 I am 18 or older
               </Button>
               <Button 
-                variant="outline"
-                size="lg"
-                className="w-full"
+                className="w-full py-3 text-lg font-semibold border border-gray-400 bg-transparent hover:bg-gray-800"
                 asChild
               >
                 <Link href="/">Go Back</Link>
@@ -102,22 +99,22 @@ export default function ShortStories() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-200/30 via-red-900/60 to-black text-white">
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-pink-500/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/40 via-red-900/30 to-black/60"></div>
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-purple-600/30 border-purple-500/50 hover:bg-purple-600/40">
-              <Flame className="w-4 h-4 mr-2" />
+            <Badge className="mb-6 text-lg px-6 py-2 bg-yellow-400/30 border-yellow-400/60 text-yellow-100 hover:bg-yellow-400/40">
+              <Flame className="w-4 h-4 mr-2 text-yellow-200" />
               Short Stories
             </Badge>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-red-500 to-black bg-clip-text text-transparent">
               Raw. Real. Unapologetic.
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-xl md:text-2xl text-yellow-100 mb-8">
               Fiction that feels like truth. Stories about Black women who refuse to fit in anyone's box.
             </p>
             
@@ -252,7 +249,7 @@ export default function ShortStories() {
                   </div>
                 </div>
 
-                <Button size="lg" className="w-full md:w-auto text-lg px-8" asChild>
+                <Button className="w-full md:w-auto text-lg px-8 py-3 font-semibold bg-yellow-400 text-black hover:bg-yellow-300 rounded-2xl" asChild>
                   <Link href={`/stories/chyna-white`}>
                     Start Reading
                     <BookOpen className="ml-2 w-5 h-5" />
@@ -299,13 +296,13 @@ export default function ShortStories() {
                       "{episode.excerpt}"
                     </p>
                     {episode.published ? (
-                      <Button variant="outline" size="sm" asChild className="w-full border-purple-500/50 hover:bg-purple-500/20">
+                      <Button asChild className="w-full border-purple-500/50 hover:bg-purple-500/20 py-2 text-sm font-semibold bg-transparent border rounded-xl">
                         <Link href={`/stories/chyna-white/episode-${episode.id}`}>
                           Read Now
                         </Link>
                       </Button>
                     ) : (
-                      <Button variant="outline" size="sm" disabled className="w-full">
+                      <Button disabled className="w-full py-2 text-sm font-semibold bg-transparent border border-gray-400 rounded-xl">
                         Coming Soon
                       </Button>
                     )}
@@ -319,7 +316,7 @@ export default function ShortStories() {
               <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Get the Real-Life Healing Guide Behind These Stories</h3>
               <p className="text-lg text-pink-100 mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
               <a href="https://gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="rounded-3xl text-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
+                <Button className="rounded-3xl text-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300 py-3 px-8">
                   Download Free Guide
                 </Button>
               </a>
@@ -332,11 +329,11 @@ export default function ShortStories() {
                 {/* Example featured products */}
                 <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
                   <Card className="bg-white/90 text-black hover:shadow-2xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400" alt="Thyroid Health Mastery Course" className="w-full h-40 object-cover rounded-t-lg" />
+                    <img src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png" alt="Thyroid Health Mastery Course" className="w-full h-40 object-cover rounded-t-lg" />
                     <CardContent className="p-4">
                       <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
                       <p className="text-sm mb-2">$97</p>
-                      <Button size="sm" className="w-full bg-primary text-white rounded-2xl">Buy Now</Button>
+                      <Button className="w-full bg-primary text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
@@ -346,7 +343,7 @@ export default function ShortStories() {
                     <CardContent className="p-4">
                       <h4 className="font-bold text-lg mb-1">21-Day Plant-Based Reset</h4>
                       <p className="text-sm mb-2">$47</p>
-                      <Button size="sm" className="w-full bg-primary text-white rounded-2xl">Buy Now</Button>
+                      <Button className="w-full bg-primary text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
@@ -381,7 +378,7 @@ export default function ShortStories() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-black/40 border border-purple-500/30 text-white placeholder:text-gray-500"
               />
-              <Button size="lg" className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold">
+              <Button className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold py-3 px-8 text-lg rounded-2xl">
                 Subscribe Free
               </Button>
             </div>
