@@ -1575,90 +1575,75 @@ export default function Home() {
       </section>
 
       {/* CHYNA WHITE STORY SERIES - NEW! */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-background" />
-        <div className="container relative">
+      <section className="py-20 relative overflow-hidden bg-black text-white">
+        {/* Glitter overlay for visual match */}
+        <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+          <div className="w-full h-full glitter-bg" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-900/80 to-black/90" />
+        <div className="container relative z-10">
           <div className="max-w-6xl mx-auto">
-            <Card className="overflow-hidden border-2 border-purple-500/30 bg-gradient-to-br from-purple-950/40 via-pink-950/30 to-zinc-900/40 backdrop-blur">
+            <Card className="overflow-hidden border-2 border-white/10 bg-gradient-to-br from-zinc-900 via-black/80 to-zinc-900 shadow-2xl drop-shadow-glitter">
               <div className="grid lg:grid-cols-2 gap-0">
-                {/* Image Gallery Side */}
-                <div className="relative h-[500px] lg:h-auto">
-                  <div className="absolute inset-0 grid grid-cols-2 gap-1 p-2">
-                    <div 
-                      className="relative rounded-lg overflow-hidden"
-                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent" />
-                    </div>
-                    <div 
-                      className="relative rounded-lg overflow-hidden"
-                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-transparent" />
-                    </div>
-                    <div 
-                      className="relative rounded-lg overflow-hidden col-span-2"
-                      style={{ backgroundImage: "url(https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-3.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30" />
-                    </div>
+                {/* Image Side - Chyna White Cover */}
+                <div className="relative flex items-center justify-center p-8">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-black/80 to-zinc-900 border-2 border-white/10 shadow-2xl w-72 h-96">
+                    <img
+                      src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg"
+                      alt="Chyna White Series Cover"
+                      className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity drop-shadow-glitter"
+                    />
                   </div>
-                  
-                  {/* New Badge */}
-                  <div className="absolute top-6 left-6 z-10">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-bold text-white shadow-lg animate-pulse">
-                      NEW SERIES
+                  {/* Spice Level Indicator */}
+                  <div className="absolute bottom-8 right-8 bg-black/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold text-white/60">SPICE</span>
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className={`inline-block w-3 h-3 rounded-full ${i < 4 ? 'bg-pink-400 drop-shadow-glitter' : 'bg-gray-700'}`}></span>
+                      ))}
                     </div>
                   </div>
                 </div>
-
                 {/* Content Side */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-zinc-900/60 to-purple-950/40">
-                  <div className="space-y-6">
-                    <div>
-                      <h2 className="text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                        Chyna White
-                      </h2>
-                      <p className="text-xl text-purple-300 font-semibold tracking-wide">
-                        A Story Series
-                      </p>
-                    </div>
-
-                    <div className="space-y-4 text-lg text-gray-200">
-                      <p className="leading-relaxed">
-                        Meet <strong className="text-purple-300">Chyna White</strong>—a brown-skinned powerhouse navigating 
-                        corporate America, street politics, and her own truth in a world that wants her to choose sides.
-                      </p>
-                      <p className="leading-relaxed">
-                        She's professional AF with that <em className="text-pink-300">perfectly undone</em> edge. 
-                        BB girl energy meets boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and unapologetic.
-                      </p>
-                      <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-4">
-                        <p className="text-purple-200 font-medium">
-                          🔥 Fiction that feels like real life<br />
-                          💼 Corporate drama meets street wisdom<br />
-                          👑 A heroine who plays by her own rules
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                      <Link href="/stories">
-                        <Button className="gap-2 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-none shadow-lg w-full sm:w-auto">
-                          Read Episode 1 <ArrowRight className="h-5 w-5" />
-                        </Button>
-                      </Link>
-                      <Link href="/stories">
-                        <Button className="gap-2 rounded-3xl border-2 border-purple-500/50 bg-transparent hover:bg-purple-900/30 text-purple-200 w-full sm:w-auto">
-                          Explore the Series
-                        </Button>
-                      </Link>
-                    </div>
-
-                    <p className="text-sm text-gray-400 italic pt-2">
-                      ⚠️ 18+ Content | Mature themes, language, and real talk
-                    </p>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <Badge className="mb-4 text-base px-4 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
+                      <Star className="w-4 h-4 mr-2 text-white/70" />
+                      Featured Series
+                    </Badge>
+                    <h2 className="text-4xl font-bold mb-2 text-white drop-shadow-glitter">Introducing: Chyna White</h2>
+                    <p className="text-xl text-white/60 mb-4">The Chronicles of a Beautiful Contradiction</p>
                   </div>
+                  <div className="space-y-4 text-lg text-gray-200">
+                    <p className="leading-relaxed">
+                      Meet <strong className="text-purple-300">Chyna White</strong>—a brown-skinned powerhouse navigating corporate America, street politics, and her own truth in a world that wants her to choose sides.
+                    </p>
+                    <p className="leading-relaxed">
+                      She's professional AF with that <em className="text-pink-300">perfectly undone</em> edge. BB girl energy meets boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and unapologetic.
+                    </p>
+                    <div className="bg-black/60 border border-white/10 rounded-lg p-4">
+                      <p className="text-white/80 font-medium">
+                        🔥 Fiction that feels like real life<br />
+                        💼 Corporate drama meets street wisdom<br />
+                        👑 A heroine who plays by her own rules
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <Link href="/stories">
+                      <Button className="gap-2 rounded-3xl bg-white/80 text-black hover:bg-white py-3 px-8 drop-shadow-glitter w-full sm:w-auto">
+                        Read Episode 1 <ArrowRight className="h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <Link href="/stories">
+                      <Button className="gap-2 rounded-3xl border-2 border-white/20 bg-transparent hover:bg-white/10 text-white w-full sm:w-auto">
+                        Explore the Series
+                      </Button>
+                    </Link>
+                  </div>
+                  <p className="text-sm text-white/60 italic pt-2">
+                    ⚠️ 18+ Content | Mature themes, language, and real talk
+                  </p>
                 </div>
               </div>
             </Card>
