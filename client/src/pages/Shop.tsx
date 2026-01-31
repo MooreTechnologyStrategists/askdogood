@@ -12,9 +12,9 @@ const products = [
   {
     id: 1,
     name: "Thyroid Health Mastery Course",
-    productUrl: "https://gumroad.com/l/thyroid-health-mastery",
+    productUrl: "https://roosecraft.gumroad.com/l/thyroid-health-mastery",
     price: 97,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
@@ -136,9 +136,9 @@ This course combines medical science with lived experience, giving you both the 
   {
     id: 2,
     name: "21-Day Plant-Based Reset",
-    productUrl: "https://gumroad.com/l/21-day-plant-based-reset",
+    productUrl: "https://roosecraft.gumroad.com/l/clinical-food-rx",
     price: 47,
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png",
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
@@ -146,59 +146,26 @@ This course combines medical science with lived experience, giving you both the 
     fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.`,
   },
   {
-    name: "Garden to Table Wellness Bundle",
-    productUrl: "https://gumroad.com/l/garden-to-table-bundle",
-    price: 37,
-    image: "/images/branding/askdogood-logo-aqua.png",
+    name: "Thyroid Lab Interpretation Guide",
+    productUrl: "https://roosecraft.gumroad.com/l/thyroid-lab-guide",
+    price: 27,
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
     features: [
-      "21 complete days of meal plans (breakfast, lunch, dinner, snacks)",
-      "60+ delicious plant-based recipes with photos",
-      "Weekly shopping lists organized by store section",
-      "Daily email check-ins and motivation",
-      "Meal prep guides to save you time",
-      "Before/after photo guide and body measurements tracker",
-      "Anti-inflammatory food guide and substitution chart",
-      "Restaurant dining guide for eating out",
-      "Printable grocery lists and meal planners",
-      "Access to private Facebook support group",
-      "Bonus: 7-day post-reset maintenance plan"
+      "Comprehensive lab interpretation for thyroid health",
+      "Understand your results and what they mean",
+      "Optimal ranges and what to ask your doctor"
     ]
   },
   {
-    name: "Autoimmune Recovery Guide",
-    productUrl: "https://gumroad.com/l/autoimmune-recovery-guide",
-    price: 27,
-    image: "/images/branding/askdogood-logo-navy.png",
+    name: "Thyroid Supplement Protocol Templates",
+    productUrl: "https://roosecraft.gumroad.com/l/adioal",
+    price: 17,
+    image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     features: [
-      "Comprehensive recovery strategies",
-      "Meal plans and recipes",
-      "Lifestyle and supplement guidance"
-    ],
-    results: [
-      "Improved energy",
-      "Reduced inflammation"
-    ],
-    popular: false,
-    testimonials: [
-      {
-        text: "This guide helped me get my life back!",
-        author: "A. Customer",
-        location: "USA",
-        condition: "Autoimmune",
-        rating: 5
-      }
-    ],
-    faqs: [
-      {
-        q: "Is this guide for all autoimmune conditions?",
-        a: "It provides general strategies that can help most people."
-      }
-    ],
-    stats: {
-      participants: "100+",
-      avgImprovement: "80% reported feeling better",
-      wouldRecommend: "90%"
-    }
+      "Downloadable supplement protocol templates",
+      "Personalize your thyroid support plan",
+      "Easy to use and doctor-friendly"
+    ]
   },
   
   {
