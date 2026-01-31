@@ -57,7 +57,7 @@ function ResourceAdsSection() {
 const resourceAds = [
   {
     name: 'Local Wellness Grant',
-    url: 'https://example.com/grant',
+    url: 'https://grants.gov/',
     img: '', // No logo, will use text fallback
     alt: 'Local Wellness Grant',
     description: 'Apply for local wellness and nutrition grants.'
