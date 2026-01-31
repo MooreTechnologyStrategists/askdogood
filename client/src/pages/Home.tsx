@@ -40,8 +40,7 @@ function ResourceAdsSection() {
               <img
                 src={ad.img}
                 alt={ad.alt}
-                className="h-20 mb-3 object-contain"
-                style={{ background: 'transparent' }}
+                className="h-20 mb-3 object-contain bg-transparent"
               />
             ) : (
               <div className="h-20 mb-3 flex items-center justify-center text-4xl text-blue-400">🏆</div>
@@ -54,6 +53,7 @@ function ResourceAdsSection() {
     </section>
   );
 }
+// ...existing code...
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -263,6 +263,63 @@ export default function Home() {
             </p>
           </div>
           <PersonalSlideshow />
+        </div>
+      </section>
+
+      {/* RESOURCE ADS & PARTNERS SECTION */}
+      <ResourceAdsSection />
+
+      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful (moved below Meet Your Thyroid Chef) */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        <div className="container max-w-4xl">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-primary px-4 py-2 rounded-full mb-4">
+              <span className="text-sm font-bold text-white">DMV METRO AREA SUCCESS STORY</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
+              The Muhammad Family: <span className="text-primary">5 Months of Transformation</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Upper Marlboro, MD • Found via Nextdoor App • May-September 2025
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-0 items-center">
+            {/* Image Side - Meal Prep Dishes */}
+            <div className="relative h-[300px] md:h-[350px] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-2 gap-2 p-2 h-full">
+                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-1.webp" alt="Lentil and chickpea burgers" className="w-full h-full object-cover rounded-lg" />
+                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-2.webp" alt="Quinoa and rice varieties" className="w-full h-full object-cover rounded-lg" />
+                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-3.webp" alt="Fresh vegetables and salad jars" className="w-full h-full object-cover rounded-lg" />
+                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-4.webp" alt="Salmon and vegan chili" className="w-full h-full object-cover rounded-lg" />
+              </div>
+              <div className="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur p-2 rounded-lg">
+                <p className="text-white text-xs font-semibold">
+                  📦 Weekly Meal Prep • 🚫 No Pork • 🌽 Corn Allergy-Friendly • 🧂 Low Sodium
+                </p>
+              </div>
+            </div>
+            {/* Content Side */}
+            <div className="p-4 md:p-8 flex flex-col justify-center bg-gradient-to-br from-background to-primary/5 rounded-xl">
+              <div className="flex gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="h-8 w-8 text-primary/30 mb-2" />
+              <blockquote className="text-lg md:text-xl font-bold mb-4 leading-relaxed font-serif">
+                "My 11-year-old son said it best: 'Miss RoSeé's food isn't salty, but it's SO tasty — even my baby sister loves it!'"
+              </blockquote>
+              <div className="space-y-2 text-muted-foreground mb-2 text-sm">
+                <p>
+                  <strong className="text-foreground">The Muhammad family of 6</strong> — two government employees working sedentary desk jobs, 4 beautiful, disciplined children, and a Muslim household committed to healthy living — reached out via <strong className="text-foreground">Nextdoor</strong> with one goal: <em>learn to cook healthier meals for their family</em>.
+                </p>
+                <p>
+                  In just 5 months, they went from takeout and sodium overload to prepping fresh, allergy-friendly meals every week. Their kids now ask for veggies, and the whole family feels more energized and connected at the dinner table.
+                </p>
+              </div>
+              <div className="font-semibold text-primary text-sm">Transformation is possible. Start your journey today.</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -513,183 +570,169 @@ export default function Home() {
                 <span className="text-sm font-bold text-white uppercase tracking-wider">NEW 2026 Series</span>
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
-              
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif drop-shadow-lg">
                 Real Talk. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">Real Change.</span>
               </h2>
-              
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+              <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-4 font-semibold">
                 The conversations we need to have about health, wealth, and community in 2026
               </p>
-              
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-300 italic">
                 Professional but hip-hop Black chic. No BS, just facts + receipts.
               </p>
             </div>
 
             {/* 4 Blog Cards in Grid */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Blog 1: Healthcare */}
-              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Blog Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
                   <img 
                     src="/images/personal/blog-graphics/world-peace-starts-with-healthcare.png"
                     alt="World Peace Starts With Healthcare"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent rounded-t-2xl"></div>
                   <div className="absolute top-4 left-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center shadow-lg">
                       <HeartPulse className="h-6 w-6 text-white" />
                     </div>
                   </div>
                 </div>
-                
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-white group-hover:text-primary transition-colors mb-2">
                     World Peace Starts With Healthcare
                   </CardTitle>
-                  <CardDescription className="text-gray-400 text-sm">
+                  <CardDescription className="text-gray-300 text-sm">
                     Why free healthcare isn't radical—it's necessary. Black and brown communities deserve better.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-300 mb-3">
                     <span className="px-3 py-1 rounded-full bg-primary/20 text-primary font-medium">Social Justice</span>
                     <span>•</span>
                     <span>9 min read</span>
                   </div>
                   <Link href="/blog/world-peace-starts-with-healthcare">
-                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
+                    <Button className="w-full group/btn rounded-3xl bg-gradient-to-r from-primary to-secondary text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
-
               {/* Blog 2: Credit Card Debt */}
-              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20 rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Blog Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
                   <img 
                     src="/images/personal/blog-graphics/the-credit-card-trap.png"
                     alt="The Credit Card Trap"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent rounded-t-2xl"></div>
                   <div className="absolute top-4 left-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center shadow-lg">
                       <TrendingUp className="h-6 w-6 text-white" />
                     </div>
                   </div>
                 </div>
-                
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-white group-hover:text-secondary transition-colors mb-2">
                     The Credit Card Trap
                   </CardTitle>
-                  <CardDescription className="text-gray-400 text-sm">
+                  <CardDescription className="text-gray-300 text-sm">
                     How America set us up to stay broke—and how we break free from the debt cycle.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-300 mb-3">
                     <span className="px-3 py-1 rounded-full bg-secondary/20 text-secondary font-medium">Financial Wellness</span>
                     <span>•</span>
                     <span>10 min read</span>
                   </div>
                   <Link href="/blog/credit-card-debt-trap-america">
-                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
+                    <Button className="w-full group/btn rounded-3xl bg-gradient-to-r from-secondary to-primary text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
-
               {/* Blog 3: Student Loans */}
-              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Blog Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
                   <img 
                     src="/images/personal/blog-graphics/the-student-loan-crisis.png"
                     alt="The Student Loan Crisis"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent rounded-t-2xl"></div>
                   <div className="absolute top-4 left-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg">
                       <BookOpen className="h-6 w-6 text-white" />
                     </div>
                   </div>
                 </div>
-                
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-white group-hover:text-purple-400 transition-colors mb-2">
                     The Student Loan Crisis
                   </CardTitle>
-                  <CardDescription className="text-gray-400 text-sm">
+                  <CardDescription className="text-gray-300 text-sm">
                     How higher education became a lifetime sentence. The HBCU tax is real.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-300 mb-3">
                     <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 font-medium">Education & Economics</span>
                     <span>•</span>
                     <span>11 min read</span>
                   </div>
                   <Link href="/blog/student-loan-crisis-lifetime-sentence">
-                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
+                    <Button className="w-full group/btn rounded-3xl bg-gradient-to-r from-purple-500 to-secondary text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
-
               {/* Blog 4: Building Villages */}
-              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20">
+              <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-secondary/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/20 rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Blog Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
                   <img 
                     src="/images/personal/blog-graphics/building-back-our-villages.png"
                     alt="Building Back Our Villages"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent rounded-t-2xl"></div>
                   <div className="absolute top-4 left-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg">
                       <Users className="h-6 w-6 text-white" />
                     </div>
                   </div>
                 </div>
-                
                 <CardHeader className="relative z-10">
                   <CardTitle className="text-white group-hover:text-emerald-400 transition-colors mb-2">
                     Building Back Our Villages
                   </CardTitle>
-                  <CardDescription className="text-gray-400 text-sm">
+                  <CardDescription className="text-gray-300 text-sm">
                     Community, technology, and the future we deserve. Nobody gets left behind in the AI revolution.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-300 mb-3">
                     <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-medium">Community & Tech</span>
                     <span>•</span>
                     <span>12 min read</span>
                   </div>
                   <Link href="/blog/building-back-our-villages-community-technology">
-                    <Button className="w-full group/btn rounded-3xl bg-secondary text-white">
+                    <Button className="w-full group/btn rounded-3xl bg-gradient-to-r from-emerald-500 to-secondary text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
                       Read Now
                       <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -697,17 +740,16 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-
             {/* Bottom CTA */}
             <div className="text-center">
               <Link href="/blog">
-                <Button className="gap-3 rounded-3xl bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all text-lg px-8 py-6">
+                <Button className="gap-3 rounded-3xl bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all text-lg px-8 py-6 font-bold">
                   <Zap className="h-6 w-6" />
                   Read All NEW 2026 Articles
                   <ArrowRight className="h-6 w-6" />
                 </Button>
               </Link>
-              <p className="text-gray-400 text-sm mt-4">
+              <p className="text-gray-300 text-sm mt-4">
                 Credible sources • Professional analysis • Hip-hop Black chic energy
               </p>
             </div>
@@ -1760,8 +1802,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RESOURCE ADS & PARTNERS SECTION */}
-      {/* ResourceAdsSection removed */}
+      {/* RESOURCE ADS & PARTNERS SECTION REMOVED */}
 
       {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
       <AffiliateProductRecommendations />
