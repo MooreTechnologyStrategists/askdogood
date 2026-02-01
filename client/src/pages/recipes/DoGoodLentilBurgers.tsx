@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Clock, Users, Flame, Printer } from "lucide-react";
 
-export default function DoGood's Lentil Burgers() {
+export default function DoGoodLentilBurgers() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white relative">
       {/* Dimmer overlay for better readability */}
