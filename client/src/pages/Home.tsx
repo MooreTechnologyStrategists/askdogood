@@ -1,82 +1,4 @@
-// Resource Ads Section - partners & grants
-const resourceAds = [
-  {
-    name: 'Local Wellness Grant',
-    url: 'https://example.com/grant',
-    img: '', // No logo, will use text fallback
-    alt: 'Local Wellness Grant',
-    description: 'Apply for local wellness and nutrition grants.'
-  },
-  {
-    name: 'Partner: DMV Health',
-    url: 'https://dmvhealth.org',
-    img: '/images/memberships/nsbe.svg',
-    alt: 'DMV Health Logo',
-    description: 'Trusted DMV health partner for community wellness.'
-  },
-  {
-    name: 'Nonprofit Resource Center',
-    url: 'https://nonprofitresources.org',
-    img: '/assets/img/brand/rosee-hero.jpg',
-    alt: 'Nonprofit Resource Center Logo',
-    description: 'Support and resources for nonprofit organizations.'
-  }
-];
 
-function ResourceAdsSection() {
-  return (
-    <section className="mt-16 mb-12 px-4 py-8 bg-blue-50 rounded-xl shadow-md">
-      <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Resource Ads &amp; Partners</h2>
-      <div className="flex flex-wrap justify-center gap-8">
-        {resourceAds.map((ad) => (
-          <a
-            key={ad.name}
-            href={ad.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center w-64 p-4 bg-white rounded-lg shadow hover:shadow-lg transition"
-          >
-            {ad.img ? (
-              <img
-                src={ad.img}
-                alt={ad.alt}
-                className="h-20 mb-3 object-contain bg-transparent"
-              />
-            ) : (
-              <div className="h-20 mb-3 flex items-center justify-center text-4xl text-blue-400">🏆</div>
-            )}
-            <div className="font-semibold text-lg text-blue-800 mb-1">{ad.name}</div>
-            <div className="text-sm text-gray-600 text-center">{ad.description}</div>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-// Resource Ads Section - partners & grants (fixed, single definition)
-const resourceAds = [
-  {
-    name: 'Local Wellness Grant',
-    url: 'https://grants.gov/',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Grants.gov_logo.png',
-    alt: 'Grants.gov Logo',
-    description: 'Find and apply for federal wellness and nutrition grants at Grants.gov. The official source for U.S. government grant information.'
-  },
-  {
-    name: 'Partner: DMV Health',
-    url: 'https://dmvhealth.org',
-    img: '/images/memberships/nsbe.svg',
-    alt: 'DMV Health Logo',
-    description: 'Trusted DMV health partner for community wellness.'
-  },
-  {
-    name: 'Nonprofit Resource Center',
-    url: 'https://nonprofitresources.org',
-    img: '/assets/img/brand/rosee-hero.jpg',
-    alt: 'Nonprofit Resource Center Logo',
-    description: 'Support and resources for nonprofit organizations.'
-  }
-];
 
 // ...existing code...
 import { Link } from "wouter";
@@ -143,10 +65,10 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Images Grid */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 opacity-20">
-          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-1.jpg?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-1.jpg"; }} />
-          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-2.jpg?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-2.jpg"; }} />
-          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-3.jpg?w=400&h=300&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-3.jpg"; }} />
-          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-4.jpg?w=400&h=400&fit=crop" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-4.jpg"; }} />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-1.jpg" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-1.jpg"; }} />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-2.jpg" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-2.jpg"; }} />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-3.jpg" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-3.jpg"; }} />
+          <img src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-4.jpg" alt="" className="w-full h-48 object-cover rounded-lg" onError={(e) => { e.currentTarget.src = "/images/personal/food/muhammad-dishes-4.jpg"; }} />
         </div>
         
         {/* Gradient Overlay */}
@@ -295,11 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RESOURCE ADS & PARTNERS SECTION (DO NOT REMOVE unless user requests) */}
-      <ResourceAdsSection />
 
-      {/* RESOURCE ADS & PARTNERS SECTION */}
-      <ResourceAdsSection />
 
       {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful (moved below Meet Your Thyroid Chef) */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
