@@ -84,7 +84,8 @@ export default function Home() {
                   src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-hero-1.jpg"
                   alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
-                  onError={(e) => { e.currentTarget.src = "/images/personal/rosee-hero-1.jpg"; }}
+                  loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Professional Badge */}
