@@ -238,10 +238,22 @@ export default function Home() {
             {/* Image Side - Meal Prep Dishes */}
             <div className="relative h-[300px] md:h-[350px] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl overflow-hidden">
               <div className="grid grid-cols-2 gap-2 p-2 h-full">
-                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-1.webp" alt="Lentil and chickpea burgers" className="w-full h-full object-cover rounded-lg" />
-                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-2.webp" alt="Quinoa and rice varieties" className="w-full h-full object-cover rounded-lg" />
-                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-3.webp" alt="Fresh vegetables and salad jars" className="w-full h-full object-cover rounded-lg" />
-                <img src="https://askdogoodassets.blob.core.windows.net/images/testimonials/muhammad-dish-4.webp" alt="Salmon and vegan chili" className="w-full h-full object-cover rounded-lg" />
+                <Link href="/recipe/roasted-vegetables-trio" className="relative group">
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-1.jpg" alt="Roasted Vegetables" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Roasted Veggies</div>
+                </Link>
+                <Link href="/recipe/quinoa-rice-medley" className="relative group">
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-2.jpg" alt="Quinoa & Rice" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Quinoa & Rice</div>
+                </Link>
+                <Link href="/recipe/purple-cabbage-broccoli-slaw" className="relative group">
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-3.jpg" alt="Purple Cabbage Slaw" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Cabbage Slaw</div>
+                </Link>
+                <Link href="/recipe/dogood-lentil-burgers" className="relative group">
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-4.jpg" alt="Lentil Burgers" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Lentil Burgers</div>
+                </Link>
               </div>
               <div className="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur p-2 rounded-lg">
                 <p className="text-white text-xs font-semibold">
@@ -366,8 +378,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* MUHAMMAD FAMILY QUOTE - Simple & Impactful (moved below Meet Your Thyroid Chef) */}
 
       {/* 4-CARD FEATURE GRID - Everything You Need */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
