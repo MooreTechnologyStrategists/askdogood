@@ -94,27 +94,28 @@ export default function ShortStories() {
 
   if (!isOver18) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white flex items-center justify-center">
-        <Card className="max-w-md mx-4 bg-black/50 backdrop-blur border-purple-500/30">
+      <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white flex items-center justify-center relative">
+        <div className="absolute inset-0 bg-black/60 pointer-events-none" />
+        <Card className="max-w-md mx-4 bg-black/80 backdrop-blur border-red-700/40 text-white relative z-10 shadow-2xl">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Age Verification</CardTitle>
-            <CardDescription className="text-gray-300">
+            <CardTitle className="text-2xl text-red-200">Age Verification</CardTitle>
+            <CardDescription className="text-red-100/80">
               Our stories contain mature themes, language, and situations.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-red-100/70">
               You must be 18 or older to access this content.
             </p>
             <div className="flex flex-col gap-2">
-              <Button 
+              <Button
                 onClick={() => setIsOver18(true)}
-                className="w-full py-3 text-lg font-semibold"
+                className="w-full py-3 text-lg font-semibold bg-red-700 hover:bg-red-600 text-white"
               >
                 I am 18 or older
               </Button>
-              <Button 
-                className="w-full py-3 text-lg font-semibold border border-gray-400 bg-transparent hover:bg-gray-800"
+              <Button
+                className="w-full py-3 text-lg font-semibold border border-red-700/40 bg-transparent text-red-200 hover:bg-red-900/40"
                 asChild
               >
                 <Link href="/">Go Back</Link>
