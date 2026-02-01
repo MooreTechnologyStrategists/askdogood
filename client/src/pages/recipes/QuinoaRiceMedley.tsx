@@ -98,7 +98,7 @@ export default function QuinoaRiceMedley() {
           <aside className="md:col-span-1">
             <div className="sticky top-4 bg-card rounded-xl p-6 shadow-lg">
               <img 
-                src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-2.jpg"
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop"
                 alt="Quinoa & Rice Medley"
                 className="w-full rounded-lg mb-4 object-cover h-48"
               />

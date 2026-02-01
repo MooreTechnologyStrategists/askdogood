@@ -239,19 +239,19 @@ export default function Home() {
             <div className="relative h-[300px] md:h-[350px] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl overflow-hidden">
               <div className="grid grid-cols-2 gap-2 p-2 h-full">
                 <Link href="/recipe/roasted-vegetables-trio" className="relative group">
-                  <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Roasted Vegetables" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-1.jpg" alt="Roasted Vegetables" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Roasted Veggies</div>
                 </Link>
                 <Link href="/recipe/quinoa-rice-medley" className="relative group">
-                  <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Quinoa & Rice" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-2.jpg" alt="Quinoa & Rice" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Quinoa & Rice</div>
                 </Link>
                 <Link href="/recipe/purple-cabbage-broccoli-slaw" className="relative group">
-                  <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Purple Cabbage Slaw" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-3.jpg" alt="Purple Cabbage Slaw" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Cabbage Slaw</div>
                 </Link>
                 <Link href="/recipe/dogood-lentil-burgers" className="relative group">
-                  <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=400&fit=crop" alt="Lentil Burgers" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
+                  <img src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-4.jpg" alt="Lentil Burgers" className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform" />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs font-semibold p-1 text-center">Lentil Burgers</div>
                 </Link>
               </div>

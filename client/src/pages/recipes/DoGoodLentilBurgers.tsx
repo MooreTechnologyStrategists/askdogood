@@ -102,7 +102,7 @@ export default function DoGoodLentilBurgers() {
           <aside className="md:col-span-1">
             <div className="sticky top-4 bg-card rounded-xl p-6 shadow-lg">
               <img 
-                src="https://askdogoodassets.blob.core.windows.net/images/personal/food/muhammad-dishes-4.jpg"
+                src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=400&fit=crop"
                 alt="DoGood Lentil Burgers"
                 className="w-full rounded-lg mb-4 object-cover h-48"
               />
