@@ -29,6 +29,7 @@ if (typeof document !== 'undefined' && !document.getElementById('glitter-global-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import BeehiivSubscribe from '@/components/BeehiivSubscribe';
 import { BookOpen, Flame, Clock, TrendingUp, Star, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
@@ -353,26 +354,37 @@ export default function ShortStories() {
 
             {/* Shop the Story Bar */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Shop the Story</h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {/* Example featured products */}
-                <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
-                  <Card className="bg-white/90 text-black hover:shadow-2xl transition-all">
-                    <img src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png" alt="Thyroid Health Mastery Course" className="w-full h-40 object-cover rounded-t-lg" />
-                    <CardContent className="p-4">
-                      <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
-                      <p className="text-sm mb-2">$97</p>
-                      <Button className="w-full bg-primary text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
+              <h3 className="text-2xl font-bold mb-6 text-center text-white">Shop the Story</h3>
+              <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6 mx-auto">
+                <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Card className="h-full bg-black/70 border border-red-700/40 text-white hover:shadow-2xl transition-all">
+                    <div className="flex items-center justify-center h-48 bg-black/60 rounded-t-lg">
+                      <img
+                        src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
+                        alt="Thyroid Health Mastery Course"
+                        className="max-h-40 w-auto object-contain"
+                      />
+                    </div>
+                    <CardContent className="p-4 flex flex-col gap-2">
+                      <h4 className="font-bold text-lg">Thyroid Health Mastery Course</h4>
+                      <p className="text-sm text-red-100/80">$97</p>
+                      <Button className="w-full bg-red-700 hover:bg-red-600 text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
-                <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
-                  <Card className="bg-white/90 text-black hover:shadow-2xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400" alt="21-Day Plant-Based Reset" className="w-full h-40 object-cover rounded-t-lg" />
-                    <CardContent className="p-4">
-                      <h4 className="font-bold text-lg mb-1">21-Day Plant-Based Reset</h4>
-                      <p className="text-sm mb-2">$47</p>
-                      <Button className="w-full bg-primary text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
+                <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Card className="h-full bg-black/70 border border-red-700/40 text-white hover:shadow-2xl transition-all">
+                    <div className="flex items-center justify-center h-48 bg-black/60 rounded-t-lg">
+                      <img
+                        src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&h=800&fit=crop"
+                        alt="21-Day Plant-Based Reset"
+                        className="max-h-40 w-auto object-contain"
+                      />
+                    </div>
+                    <CardContent className="p-4 flex flex-col gap-2">
+                      <h4 className="font-bold text-lg">21-Day Plant-Based Reset</h4>
+                      <p className="text-sm text-red-100/80">$47</p>
+                      <Button className="w-full bg-red-700 hover:bg-red-600 text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
@@ -401,16 +413,11 @@ export default function ShortStories() {
             Get new stories, exclusive healing resources, and special offers delivered straight to your inbox.
           </p>
           <div className="max-w-md mx-auto">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder:text-gray-500 drop-shadow-glitter"
-              />
-              <Button className="bg-white/80 text-black hover:bg-white font-bold py-3 px-8 text-lg rounded-2xl drop-shadow-glitter">
-                Subscribe Free
-              </Button>
-            </div>
+            <BeehiivSubscribe
+              variant="minimal"
+              buttonText="Subscribe Free"
+              className="drop-shadow-glitter"
+            />
             <p className="text-xs text-white/60 mt-3">
               We respect your privacy. Unsubscribe anytime.
             </p>

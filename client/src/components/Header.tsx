@@ -36,6 +36,7 @@ export default function Header() {
         { href: "/MealPrep", label: "MealPrep", icon: UtensilsCrossed },
       ],
     },
+    { href: "/dashboard", label: "Dashboard", icon: Users },
     { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
     { href: "/about", label: "About", icon: User },
     { href: "/contact", label: "Contact", icon: Mail },
@@ -100,6 +101,16 @@ export default function Header() {
 
         {/* RIGHT: CTA + Mobile Menu Button */}
         <div className="flex items-center gap-2">
+          <Link href="/login">
+            <Button className="hidden md:flex bg-transparent border border-border text-foreground hover:bg-accent">
+              Sign In
+            </Button>
+          </Link>
+          <Link href="/signup">
+            <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
+              Join
+            </Button>
+          </Link>
           <Link href="/shop">
             <Button className="gap-2 hidden md:flex">
               <ShoppingBag className="h-4 w-4" />
@@ -166,6 +177,18 @@ export default function Header() {
               }
             })}
           </nav>
+          <div className="container pb-4 flex flex-col gap-2">
+            <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-transparent border border-border text-foreground hover:bg-accent">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                Join
+              </Button>
+            </Link>
+          </div>
         </div>
       )}
     </header>
