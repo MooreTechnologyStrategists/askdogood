@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Clock, Users, Flame, Printer } from "lucide-react";
 
-export default function DoGoodLentilBurgers() {
+export default function DoGood's Lentil Burgers() {
   return (
     <div className="min-h-screen">
       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 py-8">
@@ -41,18 +41,18 @@ export default function DoGoodLentilBurgers() {
             <section>
               <h2 className="text-3xl font-bold mb-4 font-serif">Ingredients</h2>
               <ul className="space-y-2 text-lg">
-                <li>🌱 2 cups cooked lentils (red or green)</li>
-                <li>🥕 ½ cup grated carrot</li>
-                <li>🧅 ¼ cup finely diced onion</li>
-                <li>🫒 3 tablespoons olive oil</li>
-                <li>🧄 3 cloves garlic, minced</li>
-                <li>🌿 1 teaspoon dried thyme</li>
-                <li>🌿 1 teaspoon dried oregano</li>
-                <li>🌰 ½ cup walnuts, finely chopped (optional)</li>
-                <li>🥄 ½ cup almond flour or whole wheat breadcrumbs</li>
-                <li>🧂 1 teaspoon sea salt</li>
-                <li>⚫ ½ teaspoon black pepper</li>
-                <li>🍋 1 tablespoon lemon juice</li>
+                <li> 2 cups cooked lentils (red or green)</li>
+                <li> ½ cup grated carrot</li>
+                <li> ¼ cup finely diced onion</li>
+                <li> 3 tablespoons olive oil</li>
+                <li> 3 cloves garlic, minced</li>
+                <li> 1 teaspoon dried thyme</li>
+                <li> 1 teaspoon dried oregano</li>
+                <li> ½ cup walnuts, finely chopped (optional)</li>
+                <li> ½ cup almond flour or whole wheat breadcrumbs</li>
+                <li> 1 teaspoon sea salt</li>
+                <li> ½ teaspoon black pepper</li>
+                <li> 1 tablespoon lemon juice</li>
               </ul>
             </section>
 
@@ -102,7 +102,7 @@ export default function DoGoodLentilBurgers() {
           <aside className="md:col-span-1">
             <div className="sticky top-4 bg-card rounded-xl p-6 shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=400&fit=crop"
+                src="https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-4.jpg?w=400&h=400&fit=crop"
                 alt="DoGood Lentil Burgers"
                 className="w-full rounded-lg mb-4 object-cover h-48"
               />
