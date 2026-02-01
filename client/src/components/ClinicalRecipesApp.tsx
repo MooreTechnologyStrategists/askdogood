@@ -789,7 +789,7 @@ export default function ClinicalRecipesApp() {
                 <CardDescription>Track your favorite recipes' nutrition stats</CardDescription>
               </CardHeader>
               <CardContent>
-                {nutritionStats.count === 0 ? (
+                {!nutritionStats || nutritionStats.count === 0 ? (
                   <p className="text-center py-8 text-muted-foreground">
                     Mark recipes as favorites to track their nutrition
                   </p>
