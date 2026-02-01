@@ -396,7 +396,7 @@ export default function Home() {
                   aria-hidden="true"
                 />
                 <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp?w=600&h=600&fit=crop"
+                  src="https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop"
                   alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                   loading="eager"
