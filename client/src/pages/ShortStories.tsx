@@ -61,7 +61,8 @@ export default function ShortStories() {
       readTime: 12,
       spiceLevel: 2,
       published: true,
-      excerpt: 'The conference room smelled like expensive cologne and desperation. Chyna leaned back in her Eames chair, her tattooed fingers drumming a beat on the mahogany table...'
+      excerpt: 'The conference room smelled like expensive cologne and desperation. Chyna leaned back in her Eames chair, her tattooed fingers drumming a beat on the mahogany table...',
+      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png'
     },
     {
       id: 2,
@@ -70,7 +71,8 @@ export default function ShortStories() {
       readTime: 15,
       spiceLevel: 3,
       published: false,
-      excerpt: 'Coming soon...'
+      excerpt: 'Coming soon...',
+      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode2_verse_one.webp'
     },
     {
       id: 3,
@@ -79,7 +81,8 @@ export default function ShortStories() {
       readTime: 14,
       spiceLevel: 2,
       published: false,
-      excerpt: 'Coming soon...'
+      excerpt: 'Coming soon...',
+      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode3_corporate_chyna.webp'
     },
     {
       id: 4,
@@ -88,7 +91,8 @@ export default function ShortStories() {
       readTime: 16,
       spiceLevel: 3,
       published: false,
-      excerpt: 'Coming soon...'
+      excerpt: 'Coming soon...',
+      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode4_the_business.webp'
     }
   ];
 
@@ -297,13 +301,25 @@ export default function ShortStories() {
               {episodes.map((episode) => (
                 <Card 
                   key={episode.id}
-                  className="bg-black/60 backdrop-blur border-white/10 hover:border-white/30 transition-all group drop-shadow-glitter"
+                  className="relative overflow-hidden bg-black/60 backdrop-blur border-red-700/40 hover:border-red-500/60 transition-all group drop-shadow-glitter"
                 >
-                  <CardHeader>
+                  {/* Background Image */}
+                  {episode.image && (
+                    <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
+                      <img
+                        src={episode.image}
+                        alt={episode.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                    </div>
+                  )}
+                  
+                  <CardHeader className="relative z-10">
                     <div className="flex items-start justify-between mb-2">
                       <Badge 
                         variant="outline" 
-                        className="border-purple-500/50 text-purple-300"
+                        className="border-red-700/50 text-red-300 bg-black/50"
                       >
                         Episode {episode.id}
                       </Badge>
@@ -313,27 +329,27 @@ export default function ShortStories() {
                         ))}
                       </div>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-white transition-colors drop-shadow-glitter">
+                    <CardTitle className="text-xl text-red-100 group-hover:text-white transition-colors drop-shadow-glitter">
                       {episode.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-300">
+                    <CardDescription className="text-red-200/80">
                       <Clock className="w-3 h-3 inline mr-1" />
                       {episode.readTime} min read
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-200 mb-4">{episode.description}</p>
-                    <p className="text-sm text-gray-400 italic mb-4">
+                  <CardContent className="relative z-10">
+                    <p className="text-sm text-red-100/90 mb-4">{episode.description}</p>
+                    <p className="text-sm text-red-200/70 italic mb-4">
                       "{episode.excerpt}"
                     </p>
                     {episode.published ? (
-                      <Button asChild className="w-full border-white/20 hover:bg-white/10 py-2 text-sm font-semibold bg-transparent border rounded-xl">
+                      <Button asChild className="w-full border-red-700/40 hover:bg-red-700/40 py-2 text-sm font-semibold bg-red-900/40 text-red-100 border rounded-xl">
                         <Link href={`/stories/chyna-white/episode-${episode.id}`}>
                           Read Now
                         </Link>
                       </Button>
                     ) : (
-                      <Button disabled className="w-full py-2 text-sm font-semibold bg-transparent border border-white/20 rounded-xl">
+                      <Button disabled className="w-full py-2 text-sm font-semibold bg-black/60 border border-red-700/40 text-red-300/50 rounded-xl">
                         Coming Soon
                       </Button>
                     )}

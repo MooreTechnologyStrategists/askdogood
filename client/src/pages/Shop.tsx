@@ -990,6 +990,188 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
     
     colors: ["White/Black", "White/Burgundy", "Heather/Navy", "Cream/Forest", "Pink/Black"],
     sizes: ["XS", "S", "M", "L", "XL", "2XL"]
+  },
+
+  // NEW PRODUCTS - PENDING IMAGE EDITING
+  {
+    id: 17,
+    name: "DMV Discernment T-Shirt",
+    price: 32,
+    image: "/mockups/tshirt-dmv-discernment.png",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "DMV energy, refined palate, elevated standards",
+    shortDescription: "Bold statement tee celebrating the DMV's unique culture of knowing what's real.",
+    fullDescription: `The DMV knows quality when we see it—in food, in style, in people. This tee celebrates that refined discernment with bold typography and unapologetic energy.`,
+    features: [
+      "100% premium ring-spun cotton",
+      "Unisex fit, true to size",
+      "Screen-printed graphic",
+      "Ask DoGood logo on left sleeve",
+      "Available in Black, White, Charcoal",
+      "Sizes: S - 3XL"
+    ],
+    colors: ["Black", "White", "Charcoal"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 18,
+    name: "NC Version DMV Tee",
+    price: 32,
+    image: "/mockups/tshirt-nc-version.png",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "NC vibes with that same energy",
+    shortDescription: "A playful North Carolina take on discernment culture.",
+    fullDescription: `Because NC has its own flavor of knowing what's good. This variation celebrates the Carolinas with style.`,
+    features: [
+      "100% premium ring-spun cotton",
+      "Unisex fit, true to size",
+      "Screen-printed graphic",
+      "Ask DoGood logo on left sleeve",
+      "Available in Black, White, Heather Grey",
+      "Sizes: S - 3XL"
+    ],
+    colors: ["Black", "White", "Heather Grey"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 19,
+    name: "\"Not Loud, Just Heard\" Tee",
+    price: 32,
+    image: "/mockups/tshirt-not-loud.png",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Quiet confidence, undeniable presence",
+    shortDescription: "Statement tee for those who command attention without raising their voice.",
+    fullDescription: `You don't need volume to have impact. This tee celebrates quiet power and intentional presence.`,
+    features: [
+      "100% premium ring-spun cotton",
+      "Unisex fit, true to size",
+      "Screen-printed graphic",
+      "Ask DoGood logo placement",
+      "Available in Black, White, Sage Green",
+      "Sizes: S - 3XL"
+    ],
+    colors: ["Black", "White", "Sage Green"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 20,
+    name: "\"Peace is Non-Negotiable\" Tee",
+    price: 32,
+    image: "/mockups/tshirt-peace-non-negotiable.png",
+    category: "Apparel",
+    icon: ShoppingBag,
+    tagline: "Boundaries. Healing. Non-negotiable peace.",
+    shortDescription: "Bold reminder that your peace comes first—always.",
+    fullDescription: `Set the boundary. Protect your energy. This tee is a daily reminder that peace isn't optional—it's essential.`,
+    features: [
+      "100% premium ring-spun cotton",
+      "Unisex fit, true to size",
+      "Screen-printed graphic",
+      "Ask DoGood logo on left sleeve",
+      "Available in Black, White, Navy",
+      "Sizes: S - 3XL"
+    ],
+    colors: ["Black", "White", "Navy"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"]
+  },
+
+  {
+    id: 21,
+    name: "Hydrate & Heal Tumbler",
+    price: 28,
+    image: "/mockups/tumbler-hydrate.png",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Stay hydrated, stay healing, stay thriving",
+    shortDescription: "Insulated 20oz tumbler with motivational hydration reminders.",
+    fullDescription: `Because hydration is healing. This tumbler keeps your water cold for 24 hours and features the Ask DoGood logo with "Mind ya business" slogan.`,
+    features: [
+      "20oz stainless steel tumbler",
+      "Double-wall vacuum insulation",
+      "Keeps cold 24 hours / hot 12 hours",
+      "Leak-proof sliding lid",
+      "Ask DoGood logo and slogan",
+      "Available in 4 colors: Black, Rose Gold, Mint, Navy",
+      "BPA-free, dishwasher safe"
+    ],
+    colors: ["Black", "Rose Gold", "Mint", "Navy"]
+  },
+
+  {
+    id: 22,
+    name: "Protect Your Peace Water Bottle",
+    price: 32,
+    image: "/mockups/water-bottle-protect-peace.png",
+    category: "Accessories",
+    icon: ShoppingBag,
+    tagline: "Hydration meets intention-setting",
+    shortDescription: "32oz motivational water bottle with time markers and affirmations.",
+    fullDescription: `Track your hydration while protecting your energy. Features hourly markers and affirmations down the side, with the Ask DoGood logo.`,
+    features: [
+      "32oz BPA-free Tritan plastic",
+      "Time markers for hydration tracking",
+      "Motivational quotes down the side",
+      "Wide-mouth opening (ice cube friendly)",
+      "Leakproof flip-top lid",
+      "Ask DoGood logo",
+      "Available in 3 colors: Clear, Smoke, Blush",
+      "Dishwasher safe (top rack)"
+    ],
+    colors: ["Clear", "Smoke", "Blush"]
+  },
+
+  {
+    id: 23,
+    name: "Alignment Yoga Mat",
+    price: 68,
+    image: "/mockups/yoga-mat-alignment.png",
+    category: "Wellness",
+    icon: ShoppingBag,
+    tagline: "Find your center, honor your alignment",
+    shortDescription: "Premium eco-friendly yoga mat with alignment guides and Ask DoGood branding.",
+    fullDescription: `More than a mat—it's your sacred space. Features subtle alignment markers, beautiful design, and the Ask DoGood logo for daily inspiration.`,
+    features: [
+      "Premium TPE eco-friendly material",
+      "6mm thickness (cushioned but stable)",
+      "72\" x 24\" (standard size)",
+      "Non-slip textured surface",
+      "Alignment markers for proper form",
+      "Ask DoGood logo placement",
+      "Available in 3 designs: Mandala, Gradient, Minimalist",
+      "Includes carrying strap",
+      "Latex-free, odor-free"
+    ],
+    designs: ["Mandala", "Gradient", "Minimalist"]
+  },
+
+  {
+    id: 24,
+    name: "Return to Yourself Yoga Mat",
+    price: 68,
+    image: "/mockups/yoga-mat-return-to-yourself.png",
+    category: "Wellness",
+    icon: ShoppingBag,
+    tagline: "Every practice is a homecoming",
+    shortDescription: "Inspirational yoga mat featuring 'Return to Yourself' mantra and Ask DoGood logo.",
+    fullDescription: `Your mat is where you return to yourself. This design features the powerful reminder "Return to Yourself" with the Ask DoGood logo.`,
+    features: [
+      "Premium TPE eco-friendly material",
+      "6mm thickness (cushioned but stable)",
+      "72\" x 24\" (standard size)",
+      "Non-slip textured surface",
+      "Inspirational text and logo",
+      "Ask DoGood branding",
+      "Available in 3 colorways: Sage, Lavender, Ocean",
+      "Includes carrying strap",
+      "Latex-free, odor-free"
+    ],
+    colors: ["Sage", "Lavender", "Ocean"]
   }
 ];
 
