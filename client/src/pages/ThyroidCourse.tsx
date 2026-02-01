@@ -155,11 +155,11 @@ export default function ThyroidCourse() {
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://askdogoodassets.blob.core.windows.net/images/courses/thyroid-course-hero.webp"
+            src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
             alt="Thyroid Health"
             className="w-full h-full object-cover opacity-20"
             onError={(e) => {
-              e.currentTarget.src = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600";
+              e.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/products/Thumbnail_Thyroid_Health_Mastery_Ebook.png";
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-background/90" />
