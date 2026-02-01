@@ -35,6 +35,10 @@ import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
 import GardenSeasonPost from "@/pages/GardenSeasonPost";
+import RoastedVegetablesTrio from "@/pages/recipes/RoastedVegetablesTrio";
+import QuinoaRiceMedley from "@/pages/recipes/QuinoaRiceMedley";
+import PurpleCabbageBroccoliSlaw from "@/pages/recipes/PurpleCabbageBroccoliSlaw";
+import DoGoodLentilBurgers from "@/pages/recipes/DoGoodLentilBurgers";
 
 import {
   Card,
@@ -98,6 +102,12 @@ function Router() {
       component={ClinicalRecipesPageComponent}
     />
     <Route path="/label-scanner" component={LabelScanner} />
+
+    {/* Recipe Pages */}
+    <Route path="/recipe/roasted-vegetables-trio" component={RoastedVegetablesTrio} />
+    <Route path="/recipe/quinoa-rice-medley" component={QuinoaRiceMedley} />
+    <Route path="/recipe/purple-cabbage-broccoli-slaw" component={PurpleCabbageBroccoliSlaw} />
+    <Route path="/recipe/dogood-lentil-burgers" component={DoGoodLentilBurgers} />
 
     {/* Commerce */}
     <Route path="/shop" component={Shop} />
