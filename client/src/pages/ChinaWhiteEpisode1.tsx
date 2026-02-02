@@ -151,7 +151,7 @@ export default function ChinaWhiteEpisode1() {
                 "It's just Chyna. And you can keep your respect. I bought my own." She was already walking toward the door. "Y'all have a blessed day."
               </p>
 
-              <div className="my-14 border-l-4 border-red-700/80 pl-10 italic text-red-200 text-2xl bg-black/30 rounded-r-2xl shadow-lg font-serif">
+              <div className="my-14 border-l-4 border-primary/60 pl-10 italic text-primary text-2xl bg-primary/5 rounded-r-2xl shadow-lg font-serif">
                 "See, that's the thing about Chyna. She moved through the world like she owned it, because in the ways that mattered, she did."
               </div>
 
@@ -163,12 +163,12 @@ export default function ChinaWhiteEpisode1() {
                 Her phone buzzed. A text from Simone, her business partner and the only person alive who could tell her about herself without catching hands.
               </p>
 
-              <p className="font-mono text-base bg-black/60 p-5 rounded-xl border border-purple-700/40 shadow-inner">
-                <span className="text-purple-400">SIMONE:</span> How'd it go?<br/>
-                <span className="text-pink-400">CHYNA:</span> Told them to kick rocks in flip flops<br/>
-                <span className="text-purple-400">SIMONE:</span> 😂 That's my girl. Come to the office. We need to talk about the NYC contract<br/>
-                <span className="text-pink-400">CHYNA:</span> On my way. Lemme grab coffee first<br/>
-                <span className="text-purple-400">SIMONE:</span> Make it a double. This one's complicated
+              <p className="font-mono text-base bg-muted/40 p-5 rounded-xl border border-primary/20 shadow-inner">
+                <span className="text-primary">SIMONE:</span> How'd it go?<br/>
+                <span className="text-secondary">CHYNA:</span> Told them to kick rocks in flip flops<br/>
+                <span className="text-primary">SIMONE:</span> 😂 That's my girl. Come to the office. We need to talk about the NYC contract<br/>
+                <span className="text-secondary">CHYNA:</span> On my way. Lemme grab coffee first<br/>
+                <span className="text-primary">SIMONE:</span> Make it a double. This one's complicated
               </p>
 
               <p>
@@ -227,7 +227,7 @@ export default function ChinaWhiteEpisode1() {
                 The walk to her office was only three blocks, but in that distance, Chyna slipped through three different versions of herself. Past the barbershop where old heads still remembered her from the block—quick nod, keep it moving. Through the renovated arts district where gallery owners waved like they'd always believed in her—smile, wave back, don't stop. Into the building where her company, White Enterprises, occupied the entire third floor.
               </p>
 
-              <p className="italic text-red-300 text-2xl font-serif">
+              <p className="italic text-primary text-2xl font-serif">
                 From the streets to the suites, and she'd earned every damn step.
               </p>
 
@@ -291,7 +291,7 @@ export default function ChinaWhiteEpisode1() {
                 "Besides," Chyna added, pulling up the contract on her laptop, "I want him to see exactly who I am now. Let him choke on it."
               </p>
 
-              <p className="text-center text-red-400 italic mt-16 text-xl font-serif">
+              <p className="text-center text-primary italic mt-16 text-xl font-serif">
                 [To be continued...]
               </p>
             </div>
@@ -300,14 +300,14 @@ export default function ChinaWhiteEpisode1() {
       </article>
 
       {/* Episode Nav */}
-      <section className="py-12 bg-gradient-to-br from-black via-red-900/80 to-black border-t border-red-700/40">
+      <section className="py-12 bg-gradient-to-br from-primary/5 via-secondary/5 to-background border-t border-primary/20">
         <div className="container max-w-4xl">
           <div className="flex items-center justify-between">
-            <Button disabled className="border-red-700/40 bg-black/60 text-red-400">
+            <Button disabled className="border border-border bg-muted/40 text-muted-foreground">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Previous Episode
             </Button>
-            <Button asChild className="bg-gradient-to-r from-red-700 to-black hover:from-red-800 hover:to-black border-red-700 text-red-100">
+            <Button asChild>
               <Link href="/stories/chyna-white">
                 <ArrowRight className="w-4 h-4 mr-2" />
                 Next Episode (Coming Soon)
@@ -320,12 +320,12 @@ export default function ChinaWhiteEpisode1() {
       {/* Comments Section */}
       <section className="py-16">
         <div className="container max-w-3xl">
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-red-200">
-            <MessageCircle className="w-6 h-6 text-red-400" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-primary">
+            <MessageCircle className="w-6 h-6 text-primary" />
             Reader Comments
           </h2>
-          <Card className="bg-black/40 backdrop-blur border-red-700/40 p-6">
-            <p className="text-red-400 text-center">
+          <Card className="bg-card/80 backdrop-blur border-primary/20 p-6">
+            <p className="text-muted-foreground text-center">
               Comments coming soon! For now, share your thoughts via email or social media.
             </p>
           </Card>

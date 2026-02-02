@@ -133,8 +133,8 @@ const BlogCard = ({
   imagePath,
   icon,
 }: BlogCardProps) => (
-  <Card className="group relative overflow-hidden border-2 border-white/10 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm hover:border-primary/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 rounded-2xl">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  <Card className="group relative overflow-hidden border-2 border-border bg-card hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 rounded-2xl">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     <div className="relative h-48 overflow-hidden rounded-t-2xl">
       <img
         src={imagePath}
@@ -144,7 +144,7 @@ const BlogCard = ({
         width="400"
         height="192"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent rounded-t-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent rounded-t-2xl" />
       <div className="absolute top-4 left-4">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center shadow-lg">
           {icon}
@@ -152,13 +152,13 @@ const BlogCard = ({
       </div>
     </div>
     <CardHeader className="relative z-10">
-      <CardTitle className="text-white group-hover:text-primary transition-colors mb-2">
+      <CardTitle className="text-foreground group-hover:text-primary transition-colors mb-2">
         {title}
       </CardTitle>
-      <CardDescription className="text-gray-300 text-sm">{description}</CardDescription>
+      <CardDescription className="text-muted-foreground text-sm">{description}</CardDescription>
     </CardHeader>
     <CardContent className="relative z-10">
-      <div className="flex items-center gap-2 text-sm text-gray-300 mb-3">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
         <span className="px-3 py-1 rounded-full bg-primary/20 text-primary font-medium">
           {category}
         </span>
@@ -166,7 +166,7 @@ const BlogCard = ({
         <span>{readTime}</span>
       </div>
       <Link href={`/blog/${slug}`}>
-        <Button className="w-full group/btn rounded-3xl bg-gradient-to-r from-primary to-secondary text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
+        <Button className="w-full group/btn rounded-3xl text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
           Read Now
           <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
         </Button>

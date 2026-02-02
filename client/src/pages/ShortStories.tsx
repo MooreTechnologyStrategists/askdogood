@@ -342,7 +342,7 @@ export default function ShortStories() {
                         </Link>
                       </Button>
                     ) : (
-                      <Button disabled className="w-full py-2 text-sm font-semibold bg-black/60 border border-red-700/40 text-red-300/50 rounded-xl">
+                      <Button disabled className="w-full py-2 text-sm font-semibold bg-muted/40 border border-border text-muted-foreground rounded-xl">
                         Coming Soon
                       </Button>
                     )}
@@ -352,11 +352,11 @@ export default function ShortStories() {
             </div>
 
             {/* Lead Magnet CTA */}
-            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-white/10 via-zinc-800/80 to-white/10 rounded-2xl p-8 shadow-xl drop-shadow-glitter">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white drop-shadow-glitter">Get the Real-Life Healing Guide Behind These Stories</h3>
-              <p className="text-lg text-white/80 mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
+            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-background rounded-2xl p-8 shadow-xl drop-shadow-glitter">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground drop-shadow-glitter">Get the Real-Life Healing Guide Behind These Stories</h3>
+              <p className="text-lg text-muted-foreground mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
               <a href="https://gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-3xl text-lg font-semibold bg-white/80 text-black hover:bg-white py-3 px-8 drop-shadow-glitter">
+                <Button className="rounded-3xl text-lg font-semibold py-3 px-8 drop-shadow-glitter">
                   Download Free Guide
                 </Button>
               </a>
@@ -364,11 +364,11 @@ export default function ShortStories() {
 
             {/* Shop the Story Bar */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-6 text-center text-white">Shop the Story</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Shop the Story</h3>
               <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6 mx-auto">
                 <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Card className="h-full bg-black/70 border border-red-700/40 text-white hover:shadow-2xl transition-all">
-                    <div className="flex items-center justify-center h-48 bg-black/60 rounded-t-lg">
+                  <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
+                    <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
                       <img
                         src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
                         alt="Thyroid Health Mastery Course"
@@ -377,14 +377,14 @@ export default function ShortStories() {
                     </div>
                     <CardContent className="p-4 flex flex-col gap-2">
                       <h4 className="font-bold text-lg">Thyroid Health Mastery Course</h4>
-                      <p className="text-sm text-red-100/80">$97</p>
-                      <Button className="w-full bg-red-700 hover:bg-red-600 text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
+                      <p className="text-sm text-muted-foreground">$97</p>
+                      <Button className="w-full rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
                 <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Card className="h-full bg-black/70 border border-red-700/40 text-white hover:shadow-2xl transition-all">
-                    <div className="flex items-center justify-center h-48 bg-black/60 rounded-t-lg">
+                  <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
+                    <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
                       <img
                         src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&h=800&fit=crop"
                         alt="21-Day Plant-Based Reset"
@@ -393,8 +393,8 @@ export default function ShortStories() {
                     </div>
                     <CardContent className="p-4 flex flex-col gap-2">
                       <h4 className="font-bold text-lg">21-Day Plant-Based Reset</h4>
-                      <p className="text-sm text-red-100/80">$47</p>
-                      <Button className="w-full bg-red-700 hover:bg-red-600 text-white rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
+                      <p className="text-sm text-muted-foreground">$47</p>
+                      <Button className="w-full rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
                     </CardContent>
                   </Card>
                 </a>
@@ -403,10 +403,10 @@ export default function ShortStories() {
 
             {/* Testimonial Carousel */}
             <div className="mb-20 max-w-2xl mx-auto">
-              <h3 className="text-xl font-bold mb-4 text-center text-white drop-shadow-glitter">Real Results</h3>
-              <div className="bg-black/80 rounded-2xl p-6 text-center text-white shadow-lg drop-shadow-glitter">
+              <h3 className="text-xl font-bold mb-4 text-center text-foreground drop-shadow-glitter">Real Results</h3>
+              <div className="bg-card rounded-2xl p-6 text-center text-foreground shadow-lg drop-shadow-glitter">
                 <p className="italic mb-2">“This course changed everything. I finally understand my body and how to advocate for myself. Within 3 months, my energy returned and I feel like ME again.”</p>
-                <p className="text-sm text-white/60">— Maya T., Washington, DC</p>
+                <p className="text-sm text-muted-foreground">— Maya T., Washington, DC</p>
               </div>
             </div>
           </div>

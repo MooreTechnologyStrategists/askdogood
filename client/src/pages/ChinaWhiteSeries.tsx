@@ -77,11 +77,11 @@ export default function ChinaWhiteSeries() {
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                    <div class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                       <div class="text-center p-6">
                         <div class="text-6xl mb-3 animate-bounce"></div>
-                        <p class="text-white font-bold">Boss Mode</p>
-                        <p class="text-white/60 text-xs mt-2">Coming Soon</p>
+                        <p class="text-foreground font-bold">Boss Mode</p>
+                        <p class="text-muted-foreground text-xs mt-2">Coming Soon</p>
                       </div>
                     </div>
                   `;
@@ -100,10 +100,10 @@ export default function ChinaWhiteSeries() {
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                    <div class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                       <div class="text-center p-6">
                         <div class="text-4xl mb-2"></div>
-                        <p class="text-sm text-white">Corporate</p>
+                        <p class="text-sm text-foreground">Corporate</p>
                       </div>
                     </div>
                   `;
@@ -122,10 +122,10 @@ export default function ChinaWhiteSeries() {
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                    <div class="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                       <div class="text-center p-4">
                         <div class="text-4xl mb-2"></div>
-                        <p class="text-sm text-white">Artistic Vision</p>
+                        <p class="text-sm text-foreground">Artistic Vision</p>
                       </div>
                     </div>
                   `;
@@ -228,12 +228,12 @@ export default function ChinaWhiteSeries() {
         {/* AI Chatbot */}
         <Chatbot />
         <div className="container max-w-5xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-red-200 tracking-wide">All Episodes</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-primary tracking-wide">All Episodes</h2>
           <div className="space-y-6">
             {episodes.map((episode) => (
               <Card 
                 key={episode.id}
-                className="bg-black/70 backdrop-blur border-red-700/40 hover:border-red-700/70 transition-all shadow-lg relative overflow-hidden"
+                className="bg-card/80 backdrop-blur border-primary/20 hover:border-primary/50 transition-all shadow-lg relative overflow-hidden"
               >
                 {/* Full-size background image */}
                 {episode.image && (
@@ -247,35 +247,35 @@ export default function ChinaWhiteSeries() {
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-300 mb-2">
+                        <Badge variant="outline" className="border-primary/30 text-primary mb-2">
                           Episode {episode.id}
                         </Badge>
-                        <CardTitle className="text-2xl text-white drop-shadow-lg">{episode.title}</CardTitle>
+                        <CardTitle className="text-2xl text-foreground drop-shadow-lg">{episode.title}</CardTitle>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-red-400" />
-                        <span className="text-sm text-red-300">{episode.readTime} min</span>
+                        <Clock className="w-4 h-4 text-primary" />
+                        <span className="text-sm text-muted-foreground">{episode.readTime} min</span>
                         <div className="flex ml-2">
                           {[...Array(episode.spiceLevel)].map((_, i) => (
-                            <Flame key={i} className="w-4 h-4 text-red-600 fill-red-600" />
+                            <Flame key={i} className="w-4 h-4 text-primary fill-primary" />
                           ))}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-red-100 mb-4 text-lg drop-shadow-md">{episode.description}</p>
-                    <p className="text-sm text-red-200 italic mb-6 drop-shadow-md">
+                    <p className="text-muted-foreground mb-4 text-lg drop-shadow-md">{episode.description}</p>
+                    <p className="text-sm text-muted-foreground italic mb-6 drop-shadow-md">
                       "{episode.excerpt}"
                     </p>
                     {episode.published ? (
-                      <Button asChild className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700 font-bold py-3 px-8 rounded-2xl shadow-lg">
+                      <Button asChild className="w-full sm:w-auto font-bold py-3 px-8 rounded-2xl shadow-lg">
                         <Link href={`/stories/chyna-white/episode-${episode.id}`}>
                           Read Now
                         </Link>
                       </Button>
                     ) : (
-                      <Button disabled className="w-full sm:w-auto bg-black/60 border-red-700 text-red-400 font-bold py-3 px-8 rounded-2xl">
+                      <Button disabled className="w-full sm:w-auto bg-muted/40 border border-border text-muted-foreground font-bold py-3 px-8 rounded-2xl">
                         Coming Soon
                       </Button>
                     )}
@@ -288,18 +288,18 @@ export default function ChinaWhiteSeries() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-gradient-to-br from-black via-red-900/80 to-black relative z-10">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-background relative z-10">
         <div className="container max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-4 text-red-200">Get New Episodes First</h2>
-          <p className="text-xl text-red-100 mb-8">Subscribe to get notified when new Chyna White episodes drop.</p>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Get New Episodes First</h2>
+          <p className="text-xl text-muted-foreground mb-8">Subscribe to get notified when new Chyna White episodes drop.</p>
           <div className="max-w-md mx-auto">
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-black/60 border border-red-700 text-red-100 placeholder:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-700"
+                className="flex-1 px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Button className="bg-gradient-to-br from-red-700 to-black border-red-700 text-red-100 hover:text-white">
+              <Button>
                 Subscribe
               </Button>
             </div>
