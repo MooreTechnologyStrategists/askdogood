@@ -538,7 +538,7 @@ export default function Home() {
               Behind the Scenes
             </h2>
             <p className="text-lg text-muted-foreground">
-              Real moments from my healing journey
+              Before, during, and after finding peace—real moments from every chapter
             </p>
           </div>
           <div className="max-w-3xl mx-auto">

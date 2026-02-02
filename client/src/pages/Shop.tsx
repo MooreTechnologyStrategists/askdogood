@@ -142,8 +142,15 @@ This course combines medical science with lived experience, giving you both the 
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
-    shortDescription: "A complete 21-day program with meal plans, recipes, shopping lists, and daily support to help you lose weight, reduce inflammation, and feel amazing.",
-    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.`,
+    shortDescription: "A 21-day plant-based reset with anti-inflammatory recipes, meal plans, and shopping lists to support thyroid health, weight balance, and sustained energy.",
+    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions. You'll get daily guidance, easy prep strategies, and real-life meal plans designed for busy women who want results without perfection.`,
+    features: [
+      "21-day meal plan with thyroid-friendly recipes",
+      "Weekly grocery lists and prep guides",
+      "Anti-inflammatory nutrition framework",
+      "Easy swaps for real-life eating",
+      "Support for energy, digestion, and hormone balance"
+    ],
   },
   {
     id: 2,
@@ -154,8 +161,8 @@ This course combines medical science with lived experience, giving you both the 
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "Master your thyroid lab results",
-    shortDescription: "Learn to interpret your thyroid labs like a pro and advocate effectively with your doctor.",
-    fullDescription: "Understand what your TSH, Free T3, Free T4, and antibodies really mean. This guide breaks down thyroid labs in plain language so you can work more effectively with your healthcare providers.",
+    shortDescription: "Decode thyroid labs with confidence—TSH, Free T3, Free T4, antibodies, and optimal ranges explained in plain language.",
+    fullDescription: "Understand what your TSH, Free T3, Free T4, and antibodies really mean. This guide breaks down thyroid labs in plain language, includes optimal ranges, and gives you exact questions to ask your doctor so you can advocate for better care.",
     features: [
       "Comprehensive lab interpretation for thyroid health",
       "Understand your results and what they mean",
@@ -171,8 +178,8 @@ This course combines medical science with lived experience, giving you both the 
     category: "Digital Templates",
     icon: Download,
     tagline: "Personalize your thyroid supplement plan",
-    shortDescription: "Ready-to-use templates for building your thyroid supplement protocol.",
-    fullDescription: "Create a customized supplement plan that works for your unique needs. These templates guide you through choosing the right supplements, dosages, and timing.",
+    shortDescription: "Build a thyroid-supporting supplement plan with ready-to-use templates, dosage prompts, and tracking built for real life.",
+    fullDescription: "Create a customized supplement plan that works for your unique needs. These templates guide you through choosing the right supplements, dosages, and timing, with space to track symptoms and lab changes over time.",
     features: [
       "Downloadable supplement protocol templates",
       "Personalize your thyroid support plan",
@@ -186,6 +193,7 @@ This course combines medical science with lived experience, giving you both the 
     productUrl: "https://gumroad.com/l/garden-to-table-bundle", // Example URL
     price: 37,
     image: "/images/branding/askdogood-logo-aqua.png",
+    hidden: true,
     category: "Digital Bundle",
     icon: Download,
     tagline: "Grow your own healing foods and transform your kitchen",
@@ -304,6 +312,7 @@ This bundle combines gardening wisdom with culinary expertise, giving you everyt
     productUrl: "https://gumroad.com/l/autoimmune-recovery-guide", // Example URL
     price: 27,
     image: "/images/branding/askdogood-logo-navy.png",
+    hidden: true,
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "The exact protocol I used to heal 5 autoimmune diseases naturally",
@@ -405,6 +414,7 @@ If you're exhausted from being exhausted, this is your starting point.`,
     name: "Black Women's Health Advocacy Toolkit",
     price: 27,
     image: "/images/branding/askdogood-logo-orange.png",
+    hidden: true,
     category: "Digital Toolkit",
     icon: Download,
     tagline: "Get the healthcare you deserve—advocate like a pro",
@@ -518,6 +528,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
   {
     id: 6,
     name: "DoGood Wellness Circle",
+    productUrl: "https://roosecraft.gumroad.com/l/wellness-circle",
     price: 27,
     recurring: "monthly",
     foundingPrice: 19,
@@ -525,7 +536,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
     category: "Monthly Membership",
     icon: Users,
     tagline: "Your community for healing, growth, and sustainable wellness",
-    shortDescription: "Monthly membership with live coaching, exclusive content, meal prep videos, and a supportive community of women on similar healing journeys.",
+    shortDescription: "Monthly wellness membership with live coaching, thyroid-friendly meal prep, and a supportive community for Black women navigating healing and growth.",
     fullDescription: `Healing alone is hard. Healing together changes everything.
 
 The DoGood Wellness Circle is more than a membership—it's a sisterhood. A safe space where Black women support each other through thyroid journeys, autoimmune challenges, wellness transformations, and life's ups and downs.
@@ -1193,6 +1204,8 @@ export default function Shop() {
   const [promoApplied, setPromoApplied] = useState(false);
   const [promoError, setPromoError] = useState("");
 
+  const visibleProducts = products.filter((product) => !product.hidden && product.image);
+
   const applyPromoCode = () => {
     if (promoCode.toUpperCase() === "MLKLEGACY") {
       setPromoApplied(true);
@@ -1274,7 +1287,7 @@ export default function Shop() {
       <section className="py-20">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => {
+            {visibleProducts.map((product) => {
               const IconComponent = product.icon;
               return (
                 <Card 
@@ -1554,7 +1567,7 @@ export default function Shop() {
             <Card className="hover:shadow-xl transition-all group">
               <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-amber-100 to-orange-100">
                 <img 
-                  src="/images/merch/mockup_mug_gratitude.webp" 
+                  src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=900" 
                   alt="Gratitude Mug"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400"; }}
@@ -1575,7 +1588,7 @@ export default function Shop() {
             <Card className="hover:shadow-xl transition-all group">
               <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-cream-100 to-beige-100">
                 <img 
-                  src="/images/merch/mockup_tshirt_progress.webp" 
+                  src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900" 
                   alt="Progress Tee"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400"; }}
@@ -1596,7 +1609,7 @@ export default function Shop() {
             <Card className="hover:shadow-xl transition-all group">
               <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-slate-100">
                 <img 
-                  src="/images/merch/mockup_hoodie_healing.webp" 
+                  src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=900" 
                   alt="Healing Hoodie"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400"; }}
@@ -1610,27 +1623,6 @@ export default function Shop() {
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold">$52</span>
                   <Badge variant="secondary">Hoodies</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-xl transition-all group">
-              <div className="aspect-square overflow-hidden rounded-t-lg bg-gradient-to-br from-green-100 to-teal-100">
-                <img 
-                  src="/images/merch/mockup_tote_thriving.webp" 
-                  alt="Thriving Tote"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400"; }}
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">The "Thriving" Tote</CardTitle>
-                <CardDescription>Carry your wellness essentials in style</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold">$22</span>
-                  <Badge variant="secondary">Totes</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -1726,14 +1718,16 @@ export default function Shop() {
               designed for real life—not perfection. Your healing journey starts with a single step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="rounded-3xl text-lg px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90">
-                View All Products
-              </Button>
-              <Link href="/contact?product=DoGood%20Wellness%20Circle&price=19">
+              <Link href="#thyroid-course">
+                <Button className="rounded-3xl text-lg px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90">
+                  View All Products
+                </Button>
+              </Link>
+              <a href="https://roosecraft.gumroad.com/l/wellness-circle" target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
                   Join Wellness Circle - $19/mo
                 </Button>
-              </Link>
+              </a>
             </div>
             <p className="text-sm mt-6 opacity-75">
               Questions? Email askdogood@gmail.com • 30-Day Money-Back Guarantee on All Products

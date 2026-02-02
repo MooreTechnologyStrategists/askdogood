@@ -27,10 +27,10 @@ const foodImages = [
     link: '/recipe/homemade-pizza'
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalad2.JPEG',
-    alt: 'Mason Jar Salad',
-    caption: 'Mason Jar Salad',
-    link: '/recipe/mason-jar-salad'
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/muhammad-dishes-4.jpg',
+    alt: 'DoGood Lentil Burgers',
+    caption: 'DoGood Lentil Burgers',
+    link: '/recipe/dogood-lentil-burgers'
   },
   {
     src: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalads.JPEG',

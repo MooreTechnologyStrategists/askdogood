@@ -1,19 +1,19 @@
 const personalImages = [
   {
-    src: '/images/personal/food/muhammad-dishes-1.jpg',
-    alt: 'RoSeé Murphy preparing healthy meals'
+    src: 'https://askdogoodassets.blob.core.windows.net/images/zays40th.jpeg',
+    alt: 'Before finding peace — early season of rebuilding'
   },
   {
-    src: '/images/personal/food/muhammad-dishes-2.jpg',
-    alt: 'RoSeé with fresh prepared meals'
+    src: 'https://photos.google.com/photo/AF1QipN7wRX1MXUeaoFKWtakJgGqk7xUh4CRJeCLo1mo',
+    alt: 'During the rebuild — learning to slow down and heal'
   },
   {
-    src: '/images/personal/food/muhammad-dishes-3.jpg',
-    alt: 'RoSeé Murphy cooking nutritious dishes'
+    src: 'https://photos.google.com/photo/AF1QipMcpNmmdGNymFhkzevg2Q_0Lm7a3UyYmMlyWY_-',
+    alt: 'After finding peace — a steadier, lighter chapter'
   },
   {
-    src: '/images/personal/food/muhammad-dishes-4.jpg',
-    alt: 'RoSeé showing healthy meal preparation'
+    src: 'https://photos.google.com/photo/AF1QipMUou_cixQkcJuEwVHRr8oBUvZl6DrRtqOl-4y1',
+    alt: 'New beginnings — grounded, grateful, and growing'
   }
 ];
 

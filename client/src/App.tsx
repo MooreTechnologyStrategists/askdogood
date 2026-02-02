@@ -7,6 +7,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AnnouncementBar from "./components/AnnouncementBar";
+import BookTeaser from "./components/BookTeaser";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -152,6 +153,7 @@ function App() {
             <main className="flex-1">
               <Router />
             </main>
+            <BookTeaser />
             <Footer />
           </div>
         </TooltipProvider>
