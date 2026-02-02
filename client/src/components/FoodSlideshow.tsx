@@ -55,12 +55,13 @@ export default function FoodSlideshow() {
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="relative h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
         {foodImages.map((image, index) => (
-          <Link key={index} href={image.link}>
-            <div
-              className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer group ${
-                index === currentIndex ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentIndex ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            }`}
+          >
+            <Link href={image.link} className="block w-full h-full cursor-pointer group">
               <img
                 src={image.src}
                 alt={image.alt}
@@ -76,8 +77,8 @@ export default function FoodSlideshow() {
                   Click to view recipe →
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
 
