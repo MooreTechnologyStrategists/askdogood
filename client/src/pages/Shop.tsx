@@ -18,12 +18,12 @@ const products = [
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
-    shortDescription: "Everything you need to understand, manage, and optimize your thyroid health—whether you have hypothyroidism, hyperthyroidism, Hashimoto's, or you're post-thyroidectomy.",
-    fullDescription: `After years of misdiagnosis and struggling with thyroid disease, I created the comprehensive course I wish I'd had. This isn't just information—it's transformation.
+    shortDescription: "Everything you need to understand, manage, and optimize your thyroid health—whether you have hypothyroidism, hyperthyroidism, Hashimoto's, or you're post-thyroidectomy. Built by someone who's lived through misdiagnosis, stress-induced flare-ups, and found peace on the other side.",
+    fullDescription: `After years of misdiagnosis, stress-induced flare-ups, and struggling with thyroid disease alongside GERD and IBS, I created the comprehensive course I wish I'd had. This isn't just information—it's transformation.
 
-You'll learn how to read your labs like a pro, advocate effectively with your doctors, optimize your medication, support your thyroid with nutrition, and finally feel like yourself again.
+You'll learn how to read your labs like a pro, advocate effectively with your doctors, optimize your medication, support your thyroid with nutrition that also supports digestion, manage stress-induced thyroid crashes, and finally feel like yourself again.
 
-This course combines medical science with lived experience, giving you both the knowledge and confidence to take control of your thyroid health journey.`,
+This course combines medical science with lived experience across multiple health conditions, giving you both the knowledge and confidence to take control of your thyroid health journey—even when you're juggling other chronic conditions.`,
     
     features: [
       "6 comprehensive video modules (3+ hours of expert content)",
@@ -63,7 +63,7 @@ This course combines medical science with lived experience, giving you both the 
       {
         title: "Module 5: Lifestyle Optimization",
         duration: "35 min",
-        topics: ["Sleep and thyroid connection", "Exercise dos and don'ts", "Stress management", "Environmental toxins", "Building resilience"]
+        topics: ["Sleep and thyroid connection", "Exercise dos and don'ts", "Stress management (especially for high blood pressure)", "Environmental toxins", "Building resilience through chronic illness", "Relationships & sex when you have thyroid disease"]
       },
       {
         title: "Module 6: Advocacy & Healthcare Navigation",
@@ -142,8 +142,8 @@ This course combines medical science with lived experience, giving you both the 
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
-    shortDescription: "A 21-day plant-based reset with anti-inflammatory recipes, meal plans, and shopping lists to support thyroid health, weight balance, and sustained energy.",
-    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions. You'll get daily guidance, easy prep strategies, and real-life meal plans designed for busy women who want results without perfection.`,
+    shortDescription: "A 21-day plant-based reset with anti-inflammatory recipes, meal plans, and shopping lists to support thyroid health, IBS/GERD symptom management, weight balance, and sustained energy.",
+    fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, soothes digestive issues (IBS, GERD, sensitivity), supports weight loss, boosts energy, and helps manage autoimmune conditions. You'll get daily guidance, easy prep strategies, and real-life meal plans designed for busy women who want results without perfection.`,
     features: [
       "21-day meal plan with thyroid-friendly recipes",
       "Weekly grocery lists and prep guides",
@@ -161,12 +161,22 @@ This course combines medical science with lived experience, giving you both the 
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "Master your thyroid lab results",
-    shortDescription: "Decode thyroid labs with confidence—TSH, Free T3, Free T4, antibodies, and optimal ranges explained in plain language.",
-    fullDescription: "Understand what your TSH, Free T3, Free T4, and antibodies really mean. This guide breaks down thyroid labs in plain language, includes optimal ranges, and gives you exact questions to ask your doctor so you can advocate for better care.",
+    shortDescription: "Decode thyroid labs with confidence—TSH, Free T3, Free T4, antibodies, reverse T3, and optimal ranges explained in plain language. Your complete guide to understanding comprehensive health testing.",
+    fullDescription: `Understand what your TSH, Free T3, Free T4, reverse T3, and antibodies really mean. This guide breaks down thyroid labs AND comprehensive health testing in plain language, includes optimal ranges, and gives you exact questions to ask your doctor so you can advocate for better care.
+
+Because thyroid health doesn't exist in isolation. Your labs tell the story of your whole system—how stress affects your hormones, how gut health (IBS, GERD) impacts absorption, how blood pressure and hearing health connect to thyroid function, and more. Learn to read the full picture, not just one number.
+
+You'll get exact lab interpretation guidance, understand why "normal" ranges aren't optimal for feeling great, know which tests to request, and gain confidence in your healthcare conversations.`,
     features: [
-      "Comprehensive lab interpretation for thyroid health",
-      "Understand your results and what they mean",
-      "Optimal ranges and what to ask your doctor"
+      "Comprehensive thyroid AND general health lab interpretation",
+      "TSH, Free T3, Free T4, Reverse T3, and antibody explanations",
+      "Optimal ranges vs. 'normal' lab ranges",
+      "Connection between thyroid health and digestion (IBS/GERD)",
+      "Stress hormone interactions with thyroid function",
+      "Blood pressure and cardiovascular markers explained",
+      "Exact questions to ask your doctor",
+      "Printable lab reference guide",
+      "Doctor-friendly format for bringing to appointments"
     ]
   },
   {
@@ -178,12 +188,22 @@ This course combines medical science with lived experience, giving you both the 
     category: "Digital Templates",
     icon: Download,
     tagline: "Personalize your thyroid supplement plan",
-    shortDescription: "Build a thyroid-supporting supplement plan with ready-to-use templates, dosage prompts, and tracking built for real life.",
-    fullDescription: "Create a customized supplement plan that works for your unique needs. These templates guide you through choosing the right supplements, dosages, and timing, with space to track symptoms and lab changes over time.",
+    shortDescription: "Build a comprehensive supplement and wellness protocol with ready-to-use templates, dosage guidance, and tracking for thyroid health, digestive healing, stress management, and overall wellness.",
+    fullDescription: `Create a customized supplement and wellness plan that works for your unique needs. These templates guide you through choosing the right supplements, dosages, timing, and lifestyle supports—because managing thyroid health means supporting your whole system.
+
+Whether you're managing thyroid conditions, supporting gut healing (IBS/GERD), reducing stress and blood pressure, or navigating multiple health challenges simultaneously, these templates help you build a protocol that's actually sustainable and doctor-friendly.
+
+Includes space to track symptoms, lab changes, energy levels, digestion, stress markers, and overall wellbeing over time so you can see what's actually working for YOUR body.`,
     features: [
       "Downloadable supplement protocol templates",
-      "Personalize your thyroid support plan",
-      "Easy to use and doctor-friendly"
+      "Personalize your multi-condition wellness plan",
+      "Digestive support (IBS/GERD) supplement guidance",
+      "Stress and blood pressure management supplements",
+      "Thyroid-specific protocol templates",
+      "Dosage recommendations and timing",
+      "Symptom and lab tracking sheets",
+      "Doctor-friendly format for sharing",
+      "Easy to update as your needs change"
     ]
   },
   
@@ -535,13 +555,13 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Monthly Membership",
     icon: Users,
-    tagline: "Your community for healing, growth, and sustainable wellness",
-    shortDescription: "Monthly wellness membership with live coaching, thyroid-friendly meal prep, and a supportive community for Black women navigating healing and growth.",
+    tagline: "Your community for healing, growth, and thriving through any health challenge",
+    shortDescription: "Monthly wellness membership with live coaching, healing-focused meal prep, and a supportive community for Black women navigating thyroid disease, autoimmune conditions, IBS, GERD, high blood pressure, hearing loss, and the real talk around relationships and wellness.",
     fullDescription: `Healing alone is hard. Healing together changes everything.
 
-The DoGood Wellness Circle is more than a membership—it's a sisterhood. A safe space where Black women support each other through thyroid journeys, autoimmune challenges, wellness transformations, and life's ups and downs.
+The DoGood Wellness Circle is more than a membership—it's a sisterhood. A safe space where Black women support each other through thyroid journeys, autoimmune challenges, digestive healing, stress and blood pressure management, hearing loss navigation, relationship dynamics, and life's ups and downs. Because your healing isn't just about one condition—it's about your WHOLE life.
 
-Every month, you get live access to me, exclusive content you won't find anywhere else, and connection with women who truly understand what you're going through.
+Every month, you get live access to me, exclusive content you won't find anywhere else, and connection with women who truly understand what you're going through—the messy, real parts too.
 
 This is the community I wish I had when I was in the thick of it. Now it's here for you.`,
     
@@ -1152,13 +1172,13 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 23,
     name: "Alignment Yoga Mat",
-    price: 68,
+    price: 28,
     image: "/mockups/yoga-mat-alignment.png",
     category: "Wellness",
     icon: ShoppingBag,
     tagline: "Find your center, honor your alignment",
-    shortDescription: "Premium eco-friendly yoga mat with alignment guides and Ask DoGood branding.",
-    fullDescription: `More than a mat—it's your sacred space. Features subtle alignment markers, beautiful design, and the Ask DoGood logo for daily inspiration.`,
+    shortDescription: "Premium eco-friendly yoga mat with alignment guides and Ask DoGood branding. Perfect for daily practice, stretching, and returning to yourself.",
+    fullDescription: `More than a mat—it's your sacred space. Features subtle alignment markers, beautiful design, and the Ask DoGood logo for daily inspiration. Whether you're managing thyroid health, healing from autoimmune conditions, reducing stress and high blood pressure, or simply honoring your body, this mat supports your practice. The alignment guides help you maintain proper form while you breathe, stretch, and reconnect with yourself.`,
     features: [
       "Premium TPE eco-friendly material",
       "6mm thickness (cushioned but stable)",
@@ -1176,13 +1196,13 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 24,
     name: "Return to Yourself Yoga Mat",
-    price: 68,
+    price: 28,
     image: "/mockups/yoga-mat-return-to-yourself.png",
     category: "Wellness",
     icon: ShoppingBag,
     tagline: "Every practice is a homecoming",
-    shortDescription: "Inspirational yoga mat featuring 'Return to Yourself' mantra and Ask DoGood logo.",
-    fullDescription: `Your mat is where you return to yourself. This design features the powerful reminder "Return to Yourself" with the Ask DoGood logo.`,
+    shortDescription: "Inspirational yoga mat featuring 'Return to Yourself' mantra and Ask DoGood logo. Your reminder that healing is about reconnecting with yourself.",
+    fullDescription: `Your mat is where you return to yourself. This design features the powerful reminder "Return to Yourself" with the Ask DoGood logo. Every time you step on this mat, you're making a commitment to yourself—whether that's managing thyroid symptoms, healing your gut (IBS/GERD), lowering blood pressure and stress, adapting to hearing loss, or simply honoring your body through chronic illness. This mantra reminds you that self-care isn't selfish; it's revolutionary. Yoga is where you show up for yourself, every single day.`,
     features: [
       "Premium TPE eco-friendly material",
       "6mm thickness (cushioned but stable)",

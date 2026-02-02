@@ -537,8 +537,11 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-3 font-serif">
               Behind the Scenes
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-2">
               Before, during, and after finding peace—real moments from every chapter
+            </p>
+            <p className="text-md text-primary/80 italic font-medium">
+              So many phases, so little time...
             </p>
           </div>
           <div className="max-w-3xl mx-auto">

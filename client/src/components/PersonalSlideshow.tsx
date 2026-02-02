@@ -1,19 +1,27 @@
 const personalImages = [
   {
+    src: 'https://askdogoodassets.blob.core.windows.net/images/Zay-and-KRock.jpg',
+    alt: 'Navigating heartbreak, stress, and relationship challenges'
+  },
+  {
+    src: 'https://askdogoodassets.blob.core.windows.net/images/MGMCurlsAndTits.JPG',
+    alt: 'Finding confidence while managing thyroid, GERD, and IBS'
+  },
+  {
+    src: 'https://askdogoodassets.blob.core.windows.net/images/NCAT1997ZAYWallabees.jpeg',
+    alt: 'Young, navigating heredity hearing loss and self-discovery'
+  },
+  {
+    src: 'https://askdogoodassets.blob.core.windows.net/images/sillyPoseNYC.jpg',
+    alt: 'Learning joy despite high blood pressure and chronic stress'
+  },
+  {
+    src: 'https://askdogoodassets.blob.core.windows.net/images/skiinnyBrownDressZay.jpg',
+    alt: 'After finding peace — grounded, grateful, and growing'
+  },
+  {
     src: 'https://askdogoodassets.blob.core.windows.net/images/zays40th.jpeg',
-    alt: 'Before finding peace — early season of rebuilding'
-  },
-  {
-    src: 'https://photos.google.com/photo/AF1QipN7wRX1MXUeaoFKWtakJgGqk7xUh4CRJeCLo1mo',
-    alt: 'During the rebuild — learning to slow down and heal'
-  },
-  {
-    src: 'https://photos.google.com/photo/AF1QipMcpNmmdGNymFhkzevg2Q_0Lm7a3UyYmMlyWY_-',
-    alt: 'After finding peace — a steadier, lighter chapter'
-  },
-  {
-    src: 'https://photos.google.com/photo/AF1QipMUou_cixQkcJuEwVHRr8oBUvZl6DrRtqOl-4y1',
-    alt: 'New beginnings — grounded, grateful, and growing'
+    alt: 'New beginnings — thriving through it all'
   }
 ];
 
