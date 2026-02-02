@@ -1298,13 +1298,13 @@ export default function Shop() {
                   )}
 
                   {/* Product Image */}
-                  <div 
-                    className="w-full h-56 bg-cover bg-center rounded-t-lg relative overflow-hidden"
-                    style={{ 
-                      backgroundImage: `url(${product.image})`,
-                      backgroundColor: '#f0f0f0' // fallback
-                    }}
-                  >
+                  <div className="w-full h-56 rounded-t-lg relative overflow-hidden bg-muted">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <Badge variant="secondary" className="mb-2 font-semibold">
