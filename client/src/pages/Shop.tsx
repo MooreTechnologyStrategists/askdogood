@@ -146,10 +146,16 @@ This course combines medical science with lived experience, giving you both the 
     fullDescription: `Ready to feel better in just 3 weeks? This isn't a restrictive diet—it's a delicious, nourishing reset that reduces inflammation, supports weight loss, boosts energy, and helps manage autoimmune conditions.`,
   },
   {
+    id: 2,
     name: "Thyroid Lab Interpretation Guide",
     productUrl: "https://roosecraft.gumroad.com/l/thyroid-lab-guide",
     price: 27,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
+    category: "Digital Guide",
+    icon: BookOpen,
+    tagline: "Master your thyroid lab results",
+    shortDescription: "Learn to interpret your thyroid labs like a pro and advocate effectively with your doctor.",
+    fullDescription: "Understand what your TSH, Free T3, Free T4, and antibodies really mean. This guide breaks down thyroid labs in plain language so you can work more effectively with your healthcare providers.",
     features: [
       "Comprehensive lab interpretation for thyroid health",
       "Understand your results and what they mean",
@@ -157,10 +163,16 @@ This course combines medical science with lived experience, giving you both the 
     ]
   },
   {
+    id: 2.5,
     name: "Thyroid Supplement Protocol Templates",
     productUrl: "https://roosecraft.gumroad.com/l/adioal",
     price: 17,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
+    category: "Digital Templates",
+    icon: Download,
+    tagline: "Personalize your thyroid supplement plan",
+    shortDescription: "Ready-to-use templates for building your thyroid supplement protocol.",
+    fullDescription: "Create a customized supplement plan that works for your unique needs. These templates guide you through choosing the right supplements, dosages, and timing.",
     features: [
       "Downloadable supplement protocol templates",
       "Personalize your thyroid support plan",
@@ -1381,22 +1393,24 @@ export default function Shop() {
                     )}
 
                     {/* Top Features */}
-                    <div>
-                      <p className="font-semibold text-sm mb-2">What's Included:</p>
-                      <ul className="space-y-1.5">
-                        {product.features.slice(0, 5).map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm">
-                            <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      {product.features.length > 5 && (
-                        <p className="text-sm text-primary font-semibold mt-2">
-                          + {product.features.length - 5} more features
-                        </p>
-                      )}
-                    </div>
+                    {product.features && (
+                      <div>
+                        <p className="font-semibold text-sm mb-2">What's Included:</p>
+                        <ul className="space-y-1.5">
+                          {product.features.slice(0, 5).map((feature, index) => (
+                            <li key={index} className="flex items-start gap-2 text-sm">
+                              <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                              <span className="text-muted-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        {product.features.length > 5 && (
+                          <p className="text-sm text-primary font-semibold mt-2">
+                            + {product.features.length - 5} more features
+                          </p>
+                        )}
+                      </div>
+                    )}
 
                     {/* Single Testimonial */}
                     {product.testimonials && product.testimonials[0] && (
