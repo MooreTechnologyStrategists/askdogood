@@ -126,7 +126,7 @@ export default function Contact() {
                       <div>
                         <CardTitle className="text-lg">Call or Text</CardTitle>
                         <CardDescription>
-                          <a href="tel:+1234567890" className="text-primary hover:underline">(234) 567-890</a>
+                          <a href="tel:+1234567890" className="text-primary hover:underline">(202) 420-0682</a>
                         </CardDescription>
                       </div>
                     </div>

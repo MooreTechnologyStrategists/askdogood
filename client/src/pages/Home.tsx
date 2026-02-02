@@ -353,8 +353,8 @@ export default function Home() {
                 Ask DoGood
               </h1>
               <p className="text-sm md:text-base text-primary font-medium mt-1">
-                <Card className="group relative overflow-hidden border-2 border-border bg-card hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 rounded-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                Healing guides for Black women navigating health, food, and life.
+              </p>
             </div>
           </div>
         </div>
@@ -364,7 +364,7 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Images Grid */}
         <div
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent rounded-t-2xl" />
+          className="absolute inset-0 opacity-30 grid grid-cols-2 gap-4 p-8"
           aria-hidden="true"
         >
           {[1, 2, 3, 4].map((num) => (
@@ -372,21 +372,19 @@ export default function Home() {
               key={`bg-dish-${num}`}
               src={`${ASSET_BASE_URL}/foods/muhammad-dishes-${num}.jpg`}
               alt=""
-                    <CardTitle className="text-foreground group-hover:text-primary transition-colors mb-2">
+              className="w-full h-full object-cover rounded-lg"
               loading="lazy"
-              width="300"
-                    <CardDescription className="text-muted-foreground text-sm">{description}</CardDescription>
               onError={(e) =>
                 handleImageError(e, `/images/personal/food/muhammad-dishes-${num}.jpg`)
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+              }
             />
           ))}
         </div>
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-
-                      <Button className="w-full group/btn rounded-3xl text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
+        
+        <div className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">

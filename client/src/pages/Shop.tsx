@@ -1221,9 +1221,7 @@ export default function Shop() {
               </p>
             </div>
             <Button 
-              size="lg"
-              variant="secondary"
-              className="rounded-3xl bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0"
+              className="rounded-3xl bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0 px-8 py-3 text-lg"
               asChild
             >
               <Link href="/course/thyroid-health-mastery">
@@ -1283,25 +1281,25 @@ export default function Shop() {
                   key={product.id} 
                   id={product.id === 1 ? "thyroid-course" : undefined}
                   className={`hover:shadow-2xl transition-all duration-300 flex flex-col relative group ${
-                    product.bestseller || product.popular ? 'border-2 border-primary' : ''
+                    (product as any).bestseller || (product as any).popular ? 'border-2 border-primary' : ''
                   }`}
                 >
                   {/* Badge for bestseller/popular/special */}
-                  {product.bestseller && (
+                  {(product as any).bestseller && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                       <Badge className="bg-yellow-500 text-black font-bold px-4 py-1.5 text-sm">
                         ⭐ BEST SELLER
                       </Badge>
                     </div>
                   )}
-                  {product.popular && !product.bestseller && (
+                  {(product as any).popular && !(product as any).bestseller && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                       <Badge className="bg-primary font-bold px-4 py-1.5 text-sm">
                         🔥 MOST POPULAR
                       </Badge>
                     </div>
                   )}
-                  {product.special && !product.bestseller && !product.popular && (
+                  {(product as any).special && !(product as any).bestseller && !(product as any).popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                       <Badge className="bg-green-600 text-white font-bold px-4 py-1.5 text-sm">
                         💚 SPECIAL OFFER
@@ -1432,8 +1430,7 @@ export default function Shop() {
 
                   <CardFooter className="flex-col gap-2 pt-4">
                     <Button 
-                      size="lg" 
-                      className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform"
+                      className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform px-6 py-3"
                       asChild
                     >
                       {product.productUrl ? (
@@ -1641,7 +1638,7 @@ export default function Shop() {
 
           <div className="text-center">
             <Link href="/merch">
-              <Button size="lg" className="gap-2 rounded-3xl text-lg">
+              <Button className="gap-2 rounded-3xl text-lg px-6 py-3 font-semibold">
                 Shop All Merch <ShoppingBag className="h-5 w-5" />
               </Button>
             </Link>
@@ -1729,11 +1726,11 @@ export default function Shop() {
               designed for real life—not perfection. Your healing journey starts with a single step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="secondary" className="rounded-3xl text-lg px-8 font-semibold">
+              <Button className="rounded-3xl text-lg px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90">
                 View All Products
               </Button>
               <Link href="/contact?product=DoGood%20Wellness%20Circle&price=19">
-                <Button size="lg" variant="outline" className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
+                <Button className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
                   Join Wellness Circle - $19/mo
                 </Button>
               </Link>
