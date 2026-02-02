@@ -191,17 +191,17 @@ export default function ShortStories() {
                       e.currentTarget.parentElement!.innerHTML = `
                         <div class="w-full h-full flex items-center justify-center relative overflow-hidden">
                           <!-- Animated background -->
-                          <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 via-pink-600/20 to-purple-600/30 animate-pulse"></div>
+                          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 animate-pulse"></div>
                           <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzljMjdmMCIgc3Ryb2tlLW9wYWNpdHk9Ii4xIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-20"></div>
                           
                           <!-- Content -->
                           <div class="text-center relative z-10 px-8">
                             <div class="text-8xl mb-6 animate-bounce">👑</div>
-                            <div class="bg-black/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
-                              <p class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">${s.title}</p>
-                              <p class="text-base text-purple-300 mb-4">Character Reveal Coming Soon</p>
-                              <div class="flex items-center justify-center gap-2 text-xs text-gray-400">
-                                <span class="inline-block w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                            <div class="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-primary/30">
+                              <p class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-3">${s.title}</p>
+                              <p class="text-base text-primary mb-4">Character Reveal Coming Soon</p>
+                              <div class="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                                <span class="inline-block w-2 h-2 bg-primary rounded-full animate-pulse"></span>
                                 <span>Art in Development</span>
                               </div>
                             </div>
@@ -236,10 +236,10 @@ export default function ShortStories() {
 
                 <div className="space-y-4 mb-8">
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">GENRES</h4>
+                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">GENRES</h4>
                     <div className="flex flex-wrap gap-2">
                       {s.genre.map((g) => (
-                        <Badge key={g} variant="outline" className="border-purple-500/50 text-purple-300">
+                        <Badge key={g} variant="outline" className="border-primary/30 text-primary">
                           {g}
                         </Badge>
                       ))}
@@ -247,10 +247,10 @@ export default function ShortStories() {
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">THEMES</h4>
+                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">THEMES</h4>
                     <div className="flex flex-wrap gap-2">
                       {s.themes.map((t) => (
-                        <Badge key={t} variant="outline" className="border-pink-500/50 text-pink-300">
+                        <Badge key={t} variant="outline" className="border-secondary/30 text-secondary">
                           {t}
                         </Badge>
                       ))}
@@ -259,25 +259,25 @@ export default function ShortStories() {
 
                   <div className="grid grid-cols-3 gap-4 pt-4">
                     <div>
-                      <p className="text-2xl font-bold text-purple-400">{s.episodes}</p>
-                      <p className="text-xs text-gray-400">Episodes</p>
+                      <p className="text-2xl font-bold text-primary">{s.episodes}</p>
+                      <p className="text-xs text-muted-foreground">Episodes</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-pink-400">{s.status}</p>
-                      <p className="text-xs text-gray-400">Status</p>
+                      <p className="text-2xl font-bold text-secondary">{s.status}</p>
+                      <p className="text-xs text-muted-foreground">Status</p>
                     </div>
                     <div>
                       <div className="flex">
                         {[...Array(s.spiceLevel)].map((_, i) => (
-                          <Flame key={i} className="w-5 h-5 text-red-500 fill-red-500" />
+                          <Flame key={i} className="w-5 h-5 text-primary fill-primary" />
                         ))}
                       </div>
-                      <p className="text-xs text-gray-400">Heat Level</p>
+                      <p className="text-xs text-muted-foreground">Heat Level</p>
                     </div>
                   </div>
                 </div>
 
-                <Button className="w-full md:w-auto text-lg px-8 py-3 font-semibold bg-yellow-400 text-black hover:bg-yellow-300 rounded-2xl" asChild>
+                <Button className="w-full md:w-auto text-lg px-8 py-3 font-semibold rounded-2xl" asChild>
                   <Link href={`/stories/chyna-white`}>
                     Start Reading
                     <BookOpen className="ml-2 w-5 h-5" />
@@ -294,7 +294,7 @@ export default function ShortStories() {
               {episodes.map((episode) => (
                 <Card 
                   key={episode.id}
-                  className="relative overflow-hidden bg-black/60 backdrop-blur border-red-700/40 hover:border-red-500/60 transition-all group drop-shadow-glitter"
+                  className="relative overflow-hidden bg-card/80 backdrop-blur border-primary/20 hover:border-primary/50 transition-all group drop-shadow-glitter"
                 >
                   {/* Background Image */}
                   {episode.image && (
@@ -304,7 +304,7 @@ export default function ShortStories() {
                         alt={episode.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
                     </div>
                   )}
                   
@@ -312,31 +312,31 @@ export default function ShortStories() {
                     <div className="flex items-start justify-between mb-2">
                       <Badge 
                         variant="outline" 
-                        className="border-red-700/50 text-red-300 bg-black/50"
+                        className="border-primary/30 text-primary bg-background/60"
                       >
                         Episode {episode.id}
                       </Badge>
                       <div className="flex items-center gap-1">
                         {[...Array(episode.spiceLevel)].map((_, i) => (
-                          <Flame key={i} className="w-3 h-3 text-red-500 fill-red-500" />
+                          <Flame key={i} className="w-3 h-3 text-primary fill-primary" />
                         ))}
                       </div>
                     </div>
-                    <CardTitle className="text-xl text-red-100 group-hover:text-white transition-colors drop-shadow-glitter">
+                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors drop-shadow-glitter">
                       {episode.title}
                     </CardTitle>
-                    <CardDescription className="text-red-200/80">
+                    <CardDescription className="text-muted-foreground">
                       <Clock className="w-3 h-3 inline mr-1" />
                       {episode.readTime} min read
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="relative z-10">
-                    <p className="text-sm text-red-100/90 mb-4">{episode.description}</p>
-                    <p className="text-sm text-red-200/70 italic mb-4">
+                    <p className="text-sm text-muted-foreground mb-4">{episode.description}</p>
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       "{episode.excerpt}"
                     </p>
                     {episode.published ? (
-                      <Button asChild className="w-full border-red-700/40 hover:bg-red-700/40 py-2 text-sm font-semibold bg-red-900/40 text-red-100 border rounded-xl">
+                      <Button asChild className="w-full py-2 text-sm font-semibold rounded-xl">
                         <Link href={`/stories/chyna-white/episode-${episode.id}`}>
                           Read Now
                         </Link>

@@ -4,33 +4,31 @@ import { Clock, Users, Flame } from "lucide-react";
 
 export default function ChickpeaBurgers() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white relative">
-      <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
-      
-      <div className="relative z-10 bg-black/80 backdrop-blur border-b border-red-700/40 py-8">
+    <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground relative">
+      <div className="relative z-10 bg-background/80 backdrop-blur border-b border-primary/20 py-8">
         <div className="container max-w-4xl">
           <Link href="/">
-            <Button variant="outline" className="mb-4 text-red-300 hover:text-white border-red-700/40">← Back Home</Button>
+            <Button variant="outline" className="mb-4">← Back Home</Button>
           </Link>
           
-          <h1 className="text-5xl md:text-6xl font-bold font-serif mb-4 text-red-200">
+          <h1 className="text-5xl md:text-6xl font-bold font-serif mb-4 text-primary">
             Chickpea Burgers
           </h1>
-          <p className="text-xl text-red-100/80 mb-8">
+          <p className="text-xl text-muted-foreground mb-8">
             Crispy, flavorful plant-based burgers packed with protein
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <div className="flex items-center gap-2 text-red-100">
-              <Clock className="h-5 w-5 text-red-400" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Clock className="h-5 w-5 text-primary" />
               <span>Prep: 15 min | Cook: 20 min</span>
             </div>
-            <div className="flex items-center gap-2 text-red-100">
-              <Users className="h-5 w-5 text-red-400" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Users className="h-5 w-5 text-primary" />
               <span>Makes: 6 burgers</span>
             </div>
-            <div className="flex items-center gap-2 text-red-100">
-              <Flame className="h-5 w-5 text-red-400" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Flame className="h-5 w-5 text-primary" />
               <span>180 calories per burger</span>
             </div>
           </div>
@@ -49,8 +47,8 @@ export default function ChickpeaBurgers() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-8">
             <section>
-              <h2 className="text-3xl font-bold mb-4 font-serif text-red-200">Ingredients</h2>
-              <ul className="space-y-2 text-lg text-red-50/90">
+              <h2 className="text-3xl font-bold mb-4 font-serif text-primary">Ingredients</h2>
+              <ul className="space-y-2 text-lg text-muted-foreground">
                 <li>✓ 2 cans (15 oz each) chickpeas, drained and rinsed</li>
                 <li>✓ ½ cup rolled oats</li>
                 <li>✓ ⅓ cup diced onion</li>
@@ -67,8 +65,8 @@ export default function ChickpeaBurgers() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold mb-4 font-serif text-red-200">Instructions</h2>
-              <ol className="space-y-3 text-lg text-red-50/90">
+              <h2 className="text-3xl font-bold mb-4 font-serif text-primary">Instructions</h2>
+              <ol className="space-y-3 text-lg text-muted-foreground">
                 <li><strong>1. Prepare:</strong> Add chickpeas to food processor and pulse until coarsely chopped (not smooth).</li>
                 <li><strong>2. Mix:</strong> Transfer to bowl and add oats, onion, garlic, tahini, lemon juice, and spices. Mix well.</li>
                 <li><strong>3. Form patties:</strong> Shape mixture into 6 patties. Refrigerate for 15 minutes to firm up.</li>
@@ -79,9 +77,9 @@ export default function ChickpeaBurgers() {
           </div>
 
           <div className="space-y-6">
-            <section className="bg-red-900/20 border border-red-700/40 p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-3 text-red-200">Thyroid Benefits</h3>
-              <p className="text-red-100/80">High in protein and fiber, chickpeas support stable blood sugar and sustained energy—essential for thyroid health.</p>
+            <section className="bg-primary/5 border border-primary/20 p-6 rounded-xl">
+              <h3 className="text-xl font-bold mb-3 text-primary">Thyroid Benefits</h3>
+              <p className="text-muted-foreground">High in protein and fiber, chickpeas support stable blood sugar and sustained energy—essential for thyroid health.</p>
             </section>
           </div>
         </div>
