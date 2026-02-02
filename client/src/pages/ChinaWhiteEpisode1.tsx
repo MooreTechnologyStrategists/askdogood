@@ -9,24 +9,24 @@ export default function ChinaWhiteEpisode1() {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground font-serif relative tracking-wide overflow-x-hidden">
       {/* Subtle background pattern overlay */}
       {/* No extra pattern overlay, keep it clean for the red/black theme */}
       {/* Header */}
-      <div className="border-b border-red-700/40 bg-black/80 backdrop-blur sticky top-0 z-50">
+      <div className="border-b border-primary/20 bg-background/80 backdrop-blur sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
-          <Button asChild className="text-red-300 hover:text-white text-sm font-medium">
+          <Button asChild className="text-primary hover:text-primary/80 text-sm font-medium">
             <Link href="/stories/chyna-white">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Series
             </Link>
           </Button>
           <div className="flex items-center gap-4">
-            <Button className="text-red-400 hover:text-white text-sm font-medium bg-transparent border-none shadow-none" onClick={() => setLiked(!liked)}>
-              <Heart className={`w-4 h-4 mr-2 ${liked ? 'fill-red-500 text-red-500' : ''}`} />
+            <Button className="text-primary hover:text-primary/80 text-sm font-medium bg-transparent border-none shadow-none" onClick={() => setLiked(!liked)}>
+              <Heart className={`w-4 h-4 mr-2 ${liked ? 'fill-primary text-primary' : ''}`} />
               {liked ? 'Liked' : 'Like'}
             </Button>
-            <Button className="text-red-400 hover:text-white text-sm font-medium bg-transparent border-none shadow-none">
+            <Button className="text-primary hover:text-primary/80 text-sm font-medium bg-transparent border-none shadow-none">
               <Share2 className="w-4 h-4 mr-2" />
               Share
             </Button>
@@ -35,79 +35,79 @@ export default function ChinaWhiteEpisode1() {
       </div>
 
       {/* Hero Image & Character Intro */}
-      <section className="relative py-20 bg-gradient-to-br from-black via-red-900/80 to-black flex flex-col items-center shadow-xl">
+      <section className="relative py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-background flex flex-col items-center shadow-xl">
         <div className="relative w-full max-w-2xl mb-10">
           <img
             src="https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png"
             alt="Chyna White Hero"
-            className="rounded-2xl shadow-2xl w-full object-cover object-top border-4 border-red-700/40"
+            className="rounded-2xl shadow-2xl w-full object-cover object-top border-4 border-primary/20"
             style={{ maxHeight: 420 }}
           />
           {/* Soft overlay for text readability */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-background/70 to-transparent" />
           {/* Caption */}
           <div className="absolute bottom-4 left-0 right-0 text-center">
-            <span className="inline-block bg-black/60 text-red-100 px-4 py-2 rounded-full text-base font-medium shadow-lg mx-auto">
+            <span className="inline-block bg-background/80 text-primary px-4 py-2 rounded-full text-base font-medium shadow-lg mx-auto">
               Chyna White, the legend in the making
             </span>
           </div>
         </div>
         <div className="container max-w-3xl text-center">
-          <Badge className="mb-4 bg-red-900/60 border-red-700/70 text-lg px-4 py-2 text-red-200 shadow-md">
+          <Badge className="mb-4 bg-primary/10 border-primary/30 text-lg px-4 py-2 text-primary shadow-md">
             Chyna White • Episode 1
           </Badge>
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight text-red-200 drop-shadow-2xl font-serif">
+          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight text-foreground drop-shadow-2xl font-serif">
             The Setup
           </h1>
           {/* Character intro highlight card */}
           <div className="mb-8 flex justify-center">
-            <div className="bg-gradient-to-br from-black via-red-900/80 to-black border border-red-700/40 rounded-2xl px-8 py-6 shadow-2xl max-w-2xl">
-              <span className="block text-red-200 font-semibold text-xl md:text-2xl leading-relaxed">
-                Meet <span className="text-red-400 font-bold">Chyna White</span>: former rapper, ex-street pharmacist, reformed corporate drone, and current boss. Smart, gorgeous, tattooed, and unapologetically herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
+            <div className="bg-card border border-primary/20 rounded-2xl px-8 py-6 shadow-2xl max-w-2xl">
+              <span className="block text-foreground font-semibold text-xl md:text-2xl leading-relaxed">
+                Meet <span className="text-primary font-bold">Chyna White</span>: former rapper, ex-street pharmacist, reformed corporate drone, and current boss. Smart, gorgeous, tattooed, and unapologetically herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
               </span>
             </div>
           </div>
-          <div className="flex flex-wrap gap-4 text-sm text-red-100 justify-center mb-2">
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground justify-center mb-2">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-red-400" />
+              <Clock className="w-4 h-4 text-primary" />
               <span>12 min read</span>
             </div>
             <div className="flex items-center gap-2">
-              <Flame className="w-4 h-4 text-red-600" />
-              <Flame className="w-4 h-4 text-red-600 fill-red-600" />
-              <Flame className="w-4 h-4 text-red-600 fill-red-600" />
-              <Flame className="w-4 h-4 text-red-900" />
-              <Flame className="w-4 h-4 text-red-900" />
+              <Flame className="w-4 h-4 text-primary" />
+              <Flame className="w-4 h-4 text-primary fill-primary" />
+              <Flame className="w-4 h-4 text-primary fill-primary" />
+              <Flame className="w-4 h-4 text-muted" />
+              <Flame className="w-4 h-4 text-muted" />
               <span className="ml-1">Moderate Heat</span>
             </div>
             <div className="flex items-center gap-2">
-              <MessageCircle className="w-4 h-4 text-red-400" />
+              <MessageCircle className="w-4 h-4 text-primary" />
               <span>24 comments</span>
             </div>
           </div>
         </div>
         {/* Accent divider */}
-        <div className="w-24 h-2 rounded-full bg-gradient-to-r from-red-700 via-red-400 to-red-900 opacity-70 mt-10 mb-2 mx-auto shadow-lg" />
+        <div className="w-24 h-2 rounded-full bg-gradient-to-r from-primary via-secondary to-primary opacity-70 mt-10 mb-2 mx-auto shadow-lg" />
       </section>
 
       {/* Story Content */}
       <article className="py-16">
         <div className="container max-w-3xl">
-          <div className="prose prose-lg prose-invert max-w-none font-serif">
+          <div className="prose prose-lg max-w-none font-serif">
             {/* In-article visual break with overlay and caption */}
             <div className="flex justify-center my-14 relative">
               <img
                 src="https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.jpg"
                 alt="Chyna White in the boardroom"
-                className="rounded-xl shadow-2xl border-2 border-red-700/40 max-h-72 object-cover w-full max-w-2xl"
+                className="rounded-xl shadow-2xl border-2 border-primary/20 max-h-72 object-cover w-full max-w-2xl"
               />
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-red-100 px-4 py-2 rounded-full text-base font-medium shadow-lg">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-background/80 text-primary px-4 py-2 rounded-full text-base font-medium shadow-lg">
                 "She moved through the world like she owned it."
               </div>
             </div>
             {/* Story Text */}
-            <div className="space-y-10 text-gray-200 leading-relaxed text-xl">
-              <p className="text-3xl font-serif first-letter:text-8xl first-letter:font-extrabold first-letter:text-purple-400 first-letter:float-left first-letter:mr-4 first-letter:leading-none first-letter:mt-2 drop-shadow-xl">
+            <div className="space-y-10 text-muted-foreground leading-relaxed text-xl">
+              <p className="text-3xl font-serif first-letter:text-8xl first-letter:font-extrabold first-letter:text-primary first-letter:float-left first-letter:mr-4 first-letter:leading-none first-letter:mt-2 drop-shadow-xl">
                 The conference room smelled like expensive cologne and desperation. Chyna leaned back in her Eames chair, her tattooed fingers drumming a beat on the mahogany table that probably cost more than her first car. The three men across from her—crisp suits, carefully maintained five o'clock shadows, the kind of confidence that comes from never being told "no"—were still talking.
               </p>
 

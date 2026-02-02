@@ -39,6 +39,11 @@ import RoastedVegetablesTrio from "@/pages/recipes/RoastedVegetablesTrio";
 import QuinoaRiceMedley from "@/pages/recipes/QuinoaRiceMedley";
 import PurpleCabbageBroccoliSlaw from "@/pages/recipes/PurpleCabbageBroccoliSlaw";
 import DoGoodLentilBurgers from "@/pages/recipes/DoGoodLentilBurgers";
+import ChickpeaBurgers from "@/pages/recipes/ChickpeaBurgers";
+import GreenSmoothieBowl from "@/pages/recipes/GreenSmoothieBowl";
+import GrowingFreshMint from "@/pages/recipes/GrowingFreshMint";
+import HomemadePizza from "@/pages/recipes/HomemadePizza";
+import MasonJarSalad from "@/pages/recipes/MasonJarSalad";
 
 import {
   Card,
@@ -108,6 +113,11 @@ function Router() {
     <Route path="/recipe/quinoa-rice-medley" component={QuinoaRiceMedley} />
     <Route path="/recipe/purple-cabbage-broccoli-slaw" component={PurpleCabbageBroccoliSlaw} />
     <Route path="/recipe/dogood-lentil-burgers" component={DoGoodLentilBurgers} />
+    <Route path="/recipe/chickpea-burgers" component={ChickpeaBurgers} />
+    <Route path="/recipe/green-smoothie-bowl" component={GreenSmoothieBowl} />
+    <Route path="/recipe/growing-fresh-mint" component={GrowingFreshMint} />
+    <Route path="/recipe/homemade-pizza" component={HomemadePizza} />
+    <Route path="/recipe/mason-jar-salad" component={MasonJarSalad} />
 
     {/* Commerce */}
     <Route path="/shop" component={Shop} />

@@ -214,14 +214,14 @@ export default function Home() {
       colorClass: "from-primary/10 to-transparent",
     },
     {
-      icon: <ShieldCheck className="h-5 w-5 text-green-600" />,
+      icon: <ShieldCheck className="h-5 w-5 text-secondary" />,
       text: "7+ Years Experience",
-      colorClass: "from-green-500/10 to-transparent",
+      colorClass: "from-secondary/10 to-transparent",
     },
     {
-      icon: <HeartPulse className="h-5 w-5 text-red-500" />,
+      icon: <HeartPulse className="h-5 w-5 text-primary" />,
       text: "Evidence-Based Approach",
-      colorClass: "from-red-500/10 to-transparent",
+      colorClass: "from-primary/10 to-transparent",
     },
   ];
 
@@ -235,7 +235,7 @@ export default function Home() {
         "I finally have energy again. The meal plans are simple, realistic, and actually work. No more guessing what to eat.",
       stars: 5,
       gradientFrom: "from-primary",
-      gradientTo: "to-pink-600",
+      gradientTo: "to-secondary",
     },
     {
       initial: "J",
@@ -245,8 +245,8 @@ export default function Home() {
       quote:
         "RoSeé gets it. She's been through it. Her recipes helped me gain my life back after surgery.",
       stars: 5,
-      gradientFrom: "from-purple-600",
-      gradientTo: "to-blue-600",
+      gradientFrom: "from-primary",
+      gradientTo: "to-secondary",
     },
     {
       initial: "T",
@@ -256,8 +256,8 @@ export default function Home() {
       quote:
         "This isn't just another wellness blog. It's a lifeline. Real food, real support, real results.",
       stars: 5,
-      gradientFrom: "from-green-600",
-      gradientTo: "to-teal-600",
+      gradientFrom: "from-primary",
+      gradientTo: "to-secondary",
     },
   ];
 
@@ -353,8 +353,8 @@ export default function Home() {
                 Ask DoGood
               </h1>
               <p className="text-sm md:text-base text-primary font-medium mt-1">
-                Healing. Structure. Real-life growth.
-              </p>
+                <Card className="group relative overflow-hidden border-2 border-border bg-card hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
         </div>
@@ -364,7 +364,7 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Images Grid */}
         <div
-          className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 opacity-20"
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent rounded-t-2xl" />
           aria-hidden="true"
         >
           {[1, 2, 3, 4].map((num) => (
@@ -372,13 +372,13 @@ export default function Home() {
               key={`bg-dish-${num}`}
               src={`${ASSET_BASE_URL}/foods/muhammad-dishes-${num}.jpg`}
               alt=""
-              className="w-full h-48 object-cover rounded-lg"
+                    <CardTitle className="text-foreground group-hover:text-primary transition-colors mb-2">
               loading="lazy"
               width="300"
-              height="192"
+                    <CardDescription className="text-muted-foreground text-sm">{description}</CardDescription>
               onError={(e) =>
                 handleImageError(e, `/images/personal/food/muhammad-dishes-${num}.jpg`)
-              }
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
             />
           ))}
         </div>
@@ -386,7 +386,7 @@ export default function Home() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-        <div className="container relative z-10">
+                      <Button className="w-full group/btn rounded-3xl text-white font-bold shadow-lg hover:scale-105 transition-transform py-3 text-lg">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">
@@ -708,7 +708,7 @@ export default function Home() {
       </section>
 
       {/* NEW 2026 BLOG SERIES TEASER - 3D Style */}
-      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950">
+      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/5 to-background">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse" />
@@ -726,16 +726,16 @@ export default function Home() {
                 </span>
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif drop-shadow-lg">
+              <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-serif drop-shadow-lg">
                 Real Talk.{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">
                   Real Change.
                 </span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-4 font-semibold">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-semibold">
                 The conversations we need to have about health, wealth, and community in 2026
               </p>
-              <p className="text-sm text-gray-300 italic">
+              <p className="text-sm text-muted-foreground italic">
                 Professional but hip-hop Black chic. No BS, just facts + receipts.
               </p>
             </div>
@@ -750,7 +750,7 @@ export default function Home() {
             {/* CTA */}
             <div className="text-center">
               <Link href="/blog">
-                <Button className="gap-2 rounded-3xl bg-white text-slate-900 hover:bg-gray-100 font-bold text-lg px-8 py-4 shadow-2xl hover:scale-105 transition-all group">
+                <Button className="gap-2 rounded-3xl font-bold text-lg px-8 py-4 shadow-2xl hover:scale-105 transition-all group">
                   Read All Posts
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -951,21 +951,21 @@ export default function Home() {
       </section>
 
       {/* CHYNA WHITE FICTION SERIES TEASER */}
-      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-pink-900 via-purple-900 to-slate-900">
+      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         {/* Glitter Effect Background */}
-        <div className="absolute inset-0 opacity-30" aria-hidden="true">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-pink-400 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-white rounded-full blur-2xl animate-pulse" />
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-primary/40 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/40 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary/20 rounded-full blur-2xl animate-pulse" />
         </div>
 
         <div className="container relative z-10">
           <div className="max-w-6xl mx-auto">
-            <Card className="overflow-hidden bg-black/40 backdrop-blur-lg border-2 border-white/20 shadow-2xl">
+            <Card className="overflow-hidden bg-card/80 backdrop-blur-lg border-2 border-primary/20 shadow-2xl">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image Side */}
                 <div className="relative h-[500px] lg:h-auto">
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500/30 to-purple-600/30" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -983,14 +983,14 @@ export default function Home() {
                     />
                   </div>
                   {/* Spice Level Indicator */}
-                  <div className="absolute bottom-8 right-8 bg-black/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
+                  <div className="absolute bottom-8 right-8 bg-background/80 backdrop-blur px-4 py-2 rounded-full border border-border">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-semibold text-white/60">SPICE</span>
+                      <span className="text-xs font-semibold text-muted-foreground">SPICE</span>
                       {[...Array(5)].map((_, i) => (
                         <span
                           key={`spice-${i}`}
                           className={`inline-block w-3 h-3 rounded-full ${
-                            i < 4 ? "bg-pink-400" : "bg-gray-700"
+                            i < 4 ? "bg-primary" : "bg-muted"
                           }`}
                         />
                       ))}
@@ -1000,31 +1000,31 @@ export default function Home() {
                 {/* Content Side */}
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <div className="mb-6">
-                    <Badge className="mb-4 text-base px-4 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
-                      <Star className="w-4 h-4 mr-2 text-white/70" />
+                    <Badge className="mb-4 text-base px-4 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
+                      <Star className="w-4 h-4 mr-2 text-primary" />
                       Featured Series
                     </Badge>
-                    <h2 className="text-4xl font-bold mb-2 text-white">
+                    <h2 className="text-4xl font-bold mb-2 text-foreground">
                       Introducing: Chyna White
                     </h2>
-                    <p className="text-xl text-white/60 mb-4">
+                    <p className="text-xl text-muted-foreground mb-4">
                       The Chronicles of a Beautiful Contradiction
                     </p>
                   </div>
-                  <div className="space-y-4 text-lg text-gray-200">
+                  <div className="space-y-4 text-lg text-muted-foreground">
                     <p className="leading-relaxed">
-                      Meet <strong className="text-purple-300">Chyna White</strong>—a brown-skinned
+                      Meet <strong className="text-primary">Chyna White</strong>—a brown-skinned
                       powerhouse navigating corporate America, street politics, and her own truth in
                       a world that wants her to choose sides.
                     </p>
                     <p className="leading-relaxed">
                       She's professional AF with that{" "}
-                      <em className="text-pink-300">perfectly undone</em> edge. BB girl energy meets
+                      <em className="text-secondary">perfectly undone</em> edge. BB girl energy meets
                       boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and
                       unapologetic.
                     </p>
-                    <div className="bg-black/60 border border-white/10 rounded-lg p-4">
-                      <p className="text-white/80 font-medium">
+                    <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
+                      <p className="text-foreground font-medium">
                         Fiction that feels like real life
                         <br />
                         Corporate drama meets street wisdom
@@ -1034,20 +1034,20 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 pt-4">
                     <Link href="/stories">
-                      <Button className="gap-2 rounded-3xl bg-white/80 text-black hover:bg-white py-3 px-8 w-full sm:w-auto">
+                      <Button className="gap-2 rounded-3xl py-3 px-8 w-full sm:w-auto">
                         Read Episode 1 <ArrowRight className="h-5 w-5" />
                       </Button>
                     </Link>
                     <Link href="/stories">
                       <Button
                         variant="outline"
-                        className="gap-2 rounded-3xl border-2 border-white/20 bg-transparent hover:bg-white/10 text-white w-full sm:w-auto"
+                        className="gap-2 rounded-3xl w-full sm:w-auto"
                       >
                         Explore the Series
                       </Button>
                     </Link>
                   </div>
-                  <p className="text-sm text-white/60 italic pt-2">
+                  <p className="text-sm text-muted-foreground italic pt-2">
                     ⚠️ 18+ Content | Mature themes, language, and real talk
                   </p>
                 </div>
@@ -1062,8 +1062,8 @@ export default function Home() {
         {/* 3D Floating Background Elements */}
         <div className="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
           <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-500 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/70 rounded-full blur-3xl animate-pulse" />
         </div>
 
         <div className="container relative z-10">

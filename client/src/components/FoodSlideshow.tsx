@@ -1,35 +1,42 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'wouter';
 
 const foodImages = [
   {
-    src: '/images/personal/food/smoothie-green-goddess.jpg',
-    alt: 'Green Goddess Thyroid Smoothie',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/chickpea%20burgers.JPEG',
+    alt: 'Chickpea Burgers',
+    caption: 'Chickpea Burgers',
+    link: '/recipe/chickpea-burgers'
   },
   {
-    src: '/images/personal/food/smoothie-purple.jpg',
-    alt: 'Purple Berry Power Smoothie',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/green-smoothie-avocado-oatmeal.JPG',
+    alt: 'Green Smoothie with Avocado & Oatmeal',
+    caption: 'Green Smoothie with Avocado & Oatmeal',
+    link: '/recipe/green-smoothie-bowl'
   },
   {
-    src: '/images/personal/food/burgers-plated.jpg',
-    alt: 'Black Bean & Quinoa Power Burgers',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/growingMintInGrowBags.JPEG',
+    alt: 'Growing Fresh Mint in Grow Bags',
+    caption: 'Growing Fresh Mint',
+    link: '/recipe/growing-fresh-mint'
   },
   {
-    src: '/images/personal/food/vegetables-roasted.jpg',
-    alt: 'Roasted vegetables with anti-inflammatory spices',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/homemade%20pizza.JPEG',
+    alt: 'Homemade Pizza',
+    caption: 'Homemade Pizza',
+    link: '/recipe/homemade-pizza'
   },
   {
-    src: '/images/personal/food/meal-complete.jpg',
-    alt: 'Complete thyroid-friendly balanced meal',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalad2.JPEG',
+    alt: 'Mason Jar Salad',
+    caption: 'Mason Jar Salad',
+    link: '/recipe/mason-jar-salad'
   },
   {
-    src: '/images/personal/food/veggies-bowl.jpg',
-    alt: 'Colorful veggie bowl with healing ingredients',
-    caption: ''
+    src: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalads.JPEG',
+    alt: 'Mason Jar Salads',
+    caption: 'Mason Jar Salads',
+    link: '/recipe/mason-jar-salad'
   }
 ];
 
@@ -48,25 +55,29 @@ export default function FoodSlideshow() {
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="relative h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
         {foodImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover"
-              loading={index === 0 ? 'eager' : 'lazy'}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-xl md:text-2xl font-bold drop-shadow-lg">
-                {image.caption}
-              </p>
+          <Link key={index} href={image.link}>
+            <div
+              className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer group ${
+                index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading={index === 0 ? 'eager' : 'lazy'}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <p className="text-2xl md:text-3xl font-bold drop-shadow-lg mb-2">
+                  {image.caption}
+                </p>
+                <p className="text-sm md:text-base text-white/90 drop-shadow-lg group-hover:text-primary transition-colors">
+                  Click to view recipe →
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

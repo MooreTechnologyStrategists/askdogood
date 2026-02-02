@@ -98,30 +98,23 @@ export default function ShortStories() {
 
   if (!isOver18) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white flex items-center justify-center relative">
-        <div className="absolute inset-0 bg-black/60 pointer-events-none" />
-        <Card className="max-w-md mx-4 bg-black/80 backdrop-blur border-red-700/40 text-white relative z-10 shadow-2xl">
+      <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground flex items-center justify-center relative">
+        <Card className="max-w-md mx-4 bg-card border border-primary/20 text-foreground relative z-10 shadow-2xl">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-red-200">Age Verification</CardTitle>
-            <CardDescription className="text-red-100/80">
+            <CardTitle className="text-2xl text-primary">Age Verification</CardTitle>
+            <CardDescription className="text-muted-foreground">
               Our stories contain mature themes, language, and situations.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
-            <p className="text-sm text-red-100/70">
+            <p className="text-sm text-muted-foreground">
               You must be 18 or older to access this content.
             </p>
             <div className="flex flex-col gap-2">
-              <Button
-                onClick={() => setIsOver18(true)}
-                className="w-full py-3 text-lg font-semibold bg-red-700 hover:bg-red-600 text-white"
-              >
+              <Button onClick={() => setIsOver18(true)} className="w-full py-3 text-lg font-semibold">
                 I am 18 or older
               </Button>
-              <Button
-                className="w-full py-3 text-lg font-semibold border border-red-700/40 bg-transparent text-red-200 hover:bg-red-900/40"
-                asChild
-              >
+              <Button className="w-full py-3 text-lg font-semibold" variant="outline" asChild>
                 <Link href="/">Go Back</Link>
               </Button>
             </div>
@@ -132,28 +125,28 @@ export default function ShortStories() {
   }
 
   return (
-    <div className="min-h-screen relative bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen relative bg-background text-foreground overflow-x-hidden">
       {/* Glitter overlay */}
       <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
         <div className="w-full h-full glitter-bg" />
       </div>
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-900/80 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-background"></div>
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
-              <Flame className="w-4 h-4 mr-2 text-white/70" />
+            <Badge className="mb-6 text-lg px-6 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
+              <Flame className="w-4 h-4 mr-2 text-primary" />
               Short Stories
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zinc-300 to-white bg-clip-text text-transparent drop-shadow-glitter">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground/70 to-foreground bg-clip-text text-transparent drop-shadow-glitter">
               Raw. Real. Unapologetic.
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Fiction that feels like truth. Stories about Black women who refuse to fit in anyone's box.
             </p>
             
-            <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-400">
+            <div className="flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-4 h-4" />
                 <span>Multiple Series</span>
@@ -175,19 +168,19 @@ export default function ShortStories() {
       <section className="py-20">
         <div className="container max-w-6xl">
           <div className="mb-16 text-center">
-            <Badge className="mb-4 text-base px-4 py-2 bg-white/10 border border-white/20 text-white/80 shadow-lg backdrop-blur">
-              <Star className="w-4 h-4 mr-2 text-white/70" />
+            <Badge className="mb-4 text-base px-4 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
+              <Star className="w-4 h-4 mr-2 text-primary" />
               Featured Series
             </Badge>
-            <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-glitter">Introducing: Chyna White</h2>
-            <p className="text-xl text-white/60">The Chronicles of a Beautiful Contradiction</p>
+            <h2 className="text-4xl font-bold mb-4 text-foreground drop-shadow-glitter">Introducing: Chyna White</h2>
+            <p className="text-xl text-muted-foreground">The Chronicles of a Beautiful Contradiction</p>
           </div>
 
           {series.map((s) => (
             <div key={s.id} className="grid md:grid-cols-2 gap-12 items-center mb-20">
               {/* Character Image */}
               <div className="relative group">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 via-black/80 to-zinc-900 border-2 border-white/10 shadow-2xl">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background border-2 border-primary/20 shadow-2xl">
                   <img
                     src={s.coverImage}
                     alt={s.title}
@@ -220,13 +213,13 @@ export default function ShortStories() {
                 </div>
                 
                 {/* Spice Level Indicator */}
-                <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 rounded-full border border-white/20">
+                <div className="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-4 py-2 rounded-full border border-border">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-semibold text-white/60">SPICE</span>
+                    <span className="text-xs font-semibold text-muted-foreground">SPICE</span>
                     {[...Array(5)].map((_, i) => (
                       <Flame 
                         key={i} 
-                        className={`w-3 h-3 ${i < s.spiceLevel ? 'text-pink-400 fill-pink-400 drop-shadow-glitter' : 'text-gray-700'}`}
+                        className={`w-3 h-3 ${i < s.spiceLevel ? 'text-primary fill-primary drop-shadow-glitter' : 'text-muted'}`}
                       />
                     ))}
                   </div>
@@ -236,8 +229,8 @@ export default function ShortStories() {
               {/* Series Info */}
               <div>
                 <h3 className="text-4xl font-bold mb-4">{s.title}</h3>
-                <p className="text-xl text-purple-400 mb-6 italic">{s.tagline}</p>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                <p className="text-xl text-primary mb-6 italic">{s.tagline}</p>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   {s.description}
                 </p>
 

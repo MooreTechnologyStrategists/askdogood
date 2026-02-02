@@ -50,14 +50,12 @@ export default function ChinaWhiteSeries() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide">
-      {/* Dimmer overlay for better readability */}
-      <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+    <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground font-serif relative tracking-wide">
       
       {/* Header */}
-      <div className="border-b border-red-700/40 bg-black/80 backdrop-blur relative z-10">
+      <div className="border-b border-primary/20 bg-background/80 backdrop-blur relative z-10">
         <div className="container py-4">
-          <Button asChild className="text-red-300 hover:text-white text-sm font-medium">
+          <Button asChild className="text-primary hover:text-primary/80 text-sm font-medium">
             <Link href="/stories">
               <ArrowLeft className="w-4 h-4 mr-2" />
               All Stories
@@ -67,11 +65,11 @@ export default function ChinaWhiteSeries() {
       </div>
 
       {/* Series Hero */}
-      <section className="py-20 bg-gradient-to-br from-black via-red-900/80 to-black relative z-10 shadow-2xl">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-background relative z-10 shadow-2xl">
         <div className="container max-w-6xl">
           {/* Character Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group shadow-lg">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-primary/20 group shadow-lg">
               <img
                 src="https://askdogoodassets.blob.core.windows.net/images/stories/boss_chyna.png"
                 alt="Chyna White - Boss Mode"
@@ -89,12 +87,12 @@ export default function ChinaWhiteSeries() {
                   `;
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-red-200 font-bold text-sm">Boss Mode</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-primary font-bold text-sm">Boss Mode</p>
               </div>
             </div>
 
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group shadow-lg">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-primary/20 group shadow-lg">
               <img
                 src="https://askdogoodassets.blob.core.windows.net/images/stories/corporate_chyna.png"
                 alt="Chyna White - Corporate"
@@ -111,12 +109,12 @@ export default function ChinaWhiteSeries() {
                   `;
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-red-200 font-bold text-sm">Corporate</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-primary font-bold text-sm">Corporate</p>
               </div>
             </div>
 
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-red-700/40 group col-span-2 md:col-span-1 shadow-lg">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-primary/20 group col-span-2 md:col-span-1 shadow-lg">
               <img
                 src="https://askdogoodassets.blob.core.windows.net/images/stories/artistic_chyna.png"
                 alt="Chyna White - Artistic"
@@ -133,8 +131,8 @@ export default function ChinaWhiteSeries() {
                   `;
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-red-200 font-bold text-sm">Artistic Vision</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-primary font-bold text-sm">Artistic Vision</p>
               </div>
             </div>
           </div>
@@ -142,7 +140,7 @@ export default function ChinaWhiteSeries() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Character Description */}
             <div>
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-black via-red-900/80 to-black border-2 border-red-700/40 shadow-xl relative">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background border-2 border-primary/20 shadow-xl relative">
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png"
                   alt="Chyna White"
@@ -153,68 +151,68 @@ export default function ChinaWhiteSeries() {
                       <div class=\"w-full h-full flex items-center justify-center\">
                         <div class=\"text-center p-8\">
                           <div class=\"text-6xl mb-4\">👑</div>
-                          <p class=\"text-2xl font-bold text-red-200\">Chyna White</p>
-                          <p class=\"text-sm text-gray-400 mt-2\">Character art coming soon</p>
+                          <p class="text-2xl font-bold text-primary">Chyna White</p>
+                          <p class="text-sm text-muted-foreground mt-2">Character art coming soon</p>
                         </div>
                       </div>
                     `;
                   }}
                 />
                 <div className="absolute bottom-4 left-0 right-0 text-center z-10">
-                  <span className="inline-block bg-black/70 text-pink-200 px-6 py-3 rounded-full text-3xl font-extrabold shadow-lg mx-auto tracking-widest" style={{letterSpacing:'0.1em'}}>Chyna White</span>
+                  <span className="inline-block bg-background/80 text-primary px-6 py-3 rounded-full text-3xl font-extrabold shadow-lg mx-auto tracking-widest" style={{letterSpacing:'0.1em'}}>Chyna White</span>
                 </div>
               </div>
             </div>
 
             {/* Series Info */}
             <div>
-              <Badge className="mb-4 bg-red-900/60 border-red-700/70 text-lg px-4 py-2 text-red-200">
-                <Flame className="w-4 h-4 mr-2 text-red-400" />
+              <Badge className="mb-4 bg-primary/10 border-primary/30 text-lg px-4 py-2 text-primary">
+                <Flame className="w-4 h-4 mr-2 text-primary" />
                 Featured Series
               </Badge>
               
-              <h1 className="text-5xl font-bold mb-4 text-red-200 tracking-wide">Chyna White</h1>
-              <p className="text-2xl text-red-400 mb-6 italic">
+              <h1 className="text-5xl font-bold mb-4 text-foreground tracking-wide">Chyna White</h1>
+              <p className="text-2xl text-primary mb-6 italic">
                 The Chronicles of a Beautiful Contradiction
               </p>
-              <p className="text-lg text-red-100 mb-8 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Follow Chyna as she navigates the impossibilities of being a former rapper, street pharmacist, 
                 corporate escapee, and current business owner. Smart, gorgeous, tattooed, and unapologetically 
                 herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
-                <Badge variant="outline" className="border-red-700/70 text-red-300">
+                <Badge variant="outline" className="border-primary/30 text-primary">
                   Contemporary Fiction
                 </Badge>
-                <Badge variant="outline" className="border-red-700/70 text-red-400">
+                <Badge variant="outline" className="border-primary/30 text-primary">
                   Drama
                 </Badge>
-                <Badge variant="outline" className="border-red-700/70 text-red-200">
+                <Badge variant="outline" className="border-primary/30 text-primary">
                   Romance
                 </Badge>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-black/70 rounded-lg border border-red-700/40">
+              <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-card rounded-lg border border-primary/20">
                 <div>
-                  <p className="text-2xl font-bold text-red-400">4</p>
-                  <p className="text-xs text-gray-400">Episodes Planned</p>
+                  <p className="text-2xl font-bold text-primary">4</p>
+                  <p className="text-xs text-muted-foreground">Episodes Planned</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-red-200">1</p>
-                  <p className="text-xs text-gray-400">Published</p>
+                  <p className="text-2xl font-bold text-primary">1</p>
+                  <p className="text-xs text-muted-foreground">Published</p>
                 </div>
                 <div>
                   <div className="flex">
                     {[...Array(4)].map((_, i) => (
-                      <Flame key={i} className="w-4 h-4 text-red-600 fill-red-600" />
+                      <Flame key={i} className="w-4 h-4 text-primary fill-primary" />
                     ))}
                   </div>
-                  <p className="text-xs text-red-400">Max Heat</p>
+                  <p className="text-xs text-muted-foreground">Max Heat</p>
                 </div>
               </div>
 
-              <Button className="w-full py-4 px-8 text-xl font-bold bg-gradient-to-br from-red-700 to-black border-red-700 text-red-100 hover:text-white flex items-center justify-center" asChild>
+              <Button className="w-full py-4 px-8 text-xl font-bold flex items-center justify-center" asChild>
                 <Link href="/stories/chyna-white/episode-1" className="w-full flex items-center justify-center">
                   <span className="w-full text-center">Start Reading Episode 1</span>
                   <BookOpen className="ml-3 w-7 h-7" />
