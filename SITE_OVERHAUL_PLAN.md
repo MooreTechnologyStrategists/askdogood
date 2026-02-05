@@ -1,3 +1,12 @@
+# ---
+# title: "AskDoGood Site Overhaul - Implementation Plan"
+# tags: ["site","seo","ux"]
+# area: "product"
+# owner: "RoSeé Murphy"
+# effort: "large"
+# status: "planned"
+# ---
+
 # 🚀 ASKDOGOOD COMPLETE OVERHAUL - IMPLEMENTATION PLAN
 
 ## Project Scope

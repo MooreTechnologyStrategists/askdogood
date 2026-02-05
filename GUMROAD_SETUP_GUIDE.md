@@ -1,3 +1,12 @@
+# ---
+# title: "Gumroad Setup Guide"
+# tags: ["commerce","gumroad","products"]
+# area: "business"
+# owner: "RoSeé Murphy"
+# effort: "small"
+# status: "ready"
+# ---
+
 # 🚀 GUMROAD SETUP GUIDE - STEP-BY-STEP WALKTHROUGH
 
 **Complete instructions for setting up your AskDoGood Gumroad store**

@@ -2,21 +2,16 @@
 
 Complete guide for tracking newsletter performance, website traffic, and conversions.
 
----
-
 ## ✅ Already Integrated
 
 Your site already has Google Analytics tracking for newsletter signups:
 
-```javascript
+javascript
 // In BeehiivSubscribe.tsx - Already working!
 window.gtag("event", "newsletter_subscribe", {
   event_category: "engagement",
   event_label: "beehiiv_newsletter",
 });
-```
-
----
 
 ## 📊 Beehiiv Built-in Analytics
 

@@ -1,3 +1,12 @@
+# ---
+# title: "Thyroid Health Mastery Course Workbook"
+# tags: ["course","workbook","thyroid"]
+# area: "products"
+# owner: "RoSeé Murphy"
+# effort: "large"
+# status: "ready"
+# ---
+
 # THYROID HEALTH MASTERY COURSE
 ## Complete Workbook & Study Guide
 

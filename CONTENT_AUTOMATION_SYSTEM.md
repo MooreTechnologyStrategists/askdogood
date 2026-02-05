@@ -1,3 +1,12 @@
+# ---
+# title: "Content Automation System"
+# tags: ["automation","content","ai"]
+# area: "marketing"
+# owner: "RoSeé Murphy"
+# effort: "large"
+# status: "draft"
+# ---
+
 # 🚀 Complete Content Automation System
 
 ## Overview

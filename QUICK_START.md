@@ -1,3 +1,12 @@
+# ---
+# title: "Quick Start Guide"
+# tags: ["quickstart","ops","deploy"]
+# area: "ops"
+# owner: "RoSeé Murphy"
+# effort: "small"
+# status: "active"
+# ---
+
 # 🚀 QUICK START GUIDE - Next Actions
 
 ## Immediate (Today - Within 1 Hour)

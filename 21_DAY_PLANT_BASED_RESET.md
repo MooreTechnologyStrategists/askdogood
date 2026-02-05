@@ -1,3 +1,12 @@
+# ---
+# title: "21-Day Plant-Based Reset Program"
+# tags: ["nutrition","program","lead-magnet"]
+# area: "products"
+# owner: "RoSeé Murphy"
+# effort: "medium"
+# status: "draft"
+# ---
+
 # 21-Day Plant-Based Reset Program
 ## Transform Your Health in 3 Weeks with Clean, Delicious Plant-Based Meals
 

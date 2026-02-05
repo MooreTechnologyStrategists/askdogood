@@ -1,3 +1,12 @@
+# ---
+# title: "SEO Implementation Guide"
+# tags: ["seo","technical","marketing"]
+# area: "growth"
+# owner: "RoSeé Murphy"
+# effort: "medium"
+# status: "in-progress"
+# ---
+
 # SEO Implementation Guide
 
 ## Overview

@@ -1,3 +1,12 @@
+# ---
+# title: "Email Blast Templates"
+# tags: ["email","marketing","launch"]
+# area: "growth"
+# owner: "RoSeé Murphy"
+# effort: "small"
+# status: "ready"
+# ---
+
 # 📧 BLAST EMAIL TEMPLATES FOR 1500+ SUBSCRIBERS
 
 ## � HOW TO SEND TO YOUR AZURE ENTRA ID SUBSCRIBERS

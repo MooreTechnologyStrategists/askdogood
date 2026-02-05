@@ -1,3 +1,12 @@
+# ---
+# title: "AskDoGood Blog Post Standards"
+# tags: ["content","standards","blog"]
+# area: "content"
+# owner: "RoSeé Murphy"
+# effort: "small"
+# status: "active"
+# ---
+
 # AskDoGood Blog Post Standards
 
 ## ✅ Standardized Structure
