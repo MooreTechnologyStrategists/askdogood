@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import {
   ArrowRight,
   Sparkles,
@@ -310,6 +311,17 @@ export default function About() {
               No spam. No shame. Just practical wins and steady progress.
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Join the Wellness Community"
+            description="Get weekly insights on thyroid health, holistic living, and personal growth delivered to your inbox."
+          />
         </div>
       </section>
     </main>

@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import {
   Card,
   CardContent,
@@ -391,6 +392,17 @@ export default function Blog() {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Never Miss a Post"
+            description="Get the latest wellness articles, recipes, and health tips delivered straight to your inbox."
+          />
         </div>
       </section>
     </main>

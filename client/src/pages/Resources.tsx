@@ -1,5 +1,6 @@
 import { ExternalLink, Mail, Globe } from 'lucide-react';
 import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 const Resources = () => {
   const partners = [
@@ -503,6 +504,17 @@ const Resources = () => {
               Let's Connect
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Stay Connected with Our Community"
+            description="Get updates on wellness resources, partnerships, and educational opportunities."
+          />
         </div>
       </section>
     </div>
