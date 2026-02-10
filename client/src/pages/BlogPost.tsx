@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import SEO from "@/components/SEO";
 
 type BlogRouteParams = {
   slug?: string;
@@ -153,7 +154,18 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title={safeTitle}
+        description={typeof post.excerpt === "string" && post.excerpt.trim() ? post.excerpt.trim() : "Read the latest wellness article from Ask DoGood about thyroid health, holistic healing, and living your best life."}
+        keywords={['blog', 'wellness', 'thyroid health', 'holistic healing', safeCategory.toLowerCase()]}
+        url={`/blog/${slug}`}
+        type="article"
+        image={heroSrc}
+        publishedTime={typeof post.date === "string" ? new Date(post.date).toISOString() : undefined}
+        section={safeCategory}
+      />
+      <div className="min-h-screen">
       {/* Hero Section with Featured Image */}
       <section
         className="relative py-32 bg-cover bg-center"
@@ -254,6 +266,7 @@ export default function BlogPost() {
           </div>
         </div>
       </article>
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, TrendingUp, GraduationCap, Shield, Heart, Rocket } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function Journey() {
   const phases = [
@@ -112,7 +113,14 @@ export default function Journey() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="My Journey - RoSeé Murphy's Story"
+        description="From military service to thyroid cancer survivor to Microsoft Azure professional. Follow RoSeé 'DoGood' Murphy's 20+ year journey through resilience, reinvention, healing, and building a legacy with purpose in tech and wellness."
+        keywords={['thyroid cancer survivor', 'wellness journey', 'tech career', 'Microsoft Azure', 'military veteran', 'thyroid health advocate', 'holistic healing journey', 'career transformation']}
+        url="/journey"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <div
@@ -465,6 +473,7 @@ export default function Journey() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

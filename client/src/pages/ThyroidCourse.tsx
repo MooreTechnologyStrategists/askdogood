@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Check, X, Gift, Star, Users, Clock, Download, Video, BookOpen, Heart, TrendingUp, Sparkles } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
+import SEO from '@/components/SEO';
 
 export default function ThyroidCourse() {
   const [promoCode, setPromoCode] = useState('');
@@ -149,7 +150,15 @@ export default function ThyroidCourse() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEO
+        title="Thyroid Health Mastery Course - Natural Healing Protocol"
+        description="Transform your thyroid health with the clinical approach to natural healing. 7+ years of research and proven results in a comprehensive online course. Learn about thyroid dysfunction, anti-inflammatory nutrition, lifestyle optimization, and long-term success strategies."
+        keywords={['thyroid health course', 'thyroid healing', 'hypothyroid treatment', 'hashimotos course', 'thyroid nutrition', 'natural thyroid healing', 'thyroid protocol', 'thyroid recovery']}
+        url="/thyroid-course"
+        type="product"
+      />
+      <div className="min-h-screen bg-background">
       {/* Hero Section with Background Image */}
       <section className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-background py-20 overflow-hidden">
         {/* Hero Background Image */}
@@ -375,6 +384,7 @@ export default function ThyroidCourse() {
           </p>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

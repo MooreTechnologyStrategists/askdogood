@@ -22,6 +22,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { Link } from "wouter";
+import SEO from "@/components/SEO";
 
 interface HealthProfile {
   conditions: string[];
@@ -207,7 +208,14 @@ export default function LabelScanner() {
   };
 
   return (
-    <div className="min-h-screen py-12 bg-gradient-fun">
+    <>
+      <SEO
+        title="Smart Label Scanner - AI-Powered Food Analysis"
+        description="Scan any food label and get instant personalized health insights based on YOUR conditions and goals. Make informed choices with our AI-powered label scanner that analyzes nutrition, ingredients, and health impacts."
+        keywords={['food label scanner', 'nutrition analyzer', 'food health checker', 'ingredient scanner', 'dietary analysis', 'food safety', 'holistic nutrition', 'thyroid-friendly foods']}
+        url="/label-scanner"
+      />
+      <div className="min-h-screen py-12 bg-gradient-fun">
       <div className="container max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12 relative">
@@ -617,6 +625,7 @@ export default function LabelScanner() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
