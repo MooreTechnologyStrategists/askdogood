@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -44,6 +46,13 @@ export default function Contact() {
   };
 
   return (
+    <>
+      <SEO
+        title="Contact Us - Get in Touch"
+        description="Have questions about thyroid health or wellness? Get in touch with RoSeé Murphy. We'd love to hear from you and support your healing journey."
+        keywords={['contact', 'get in touch', 'wellness questions', 'thyroid support', 'health coaching']}
+        url="/contact"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 bg-secondary/30">
@@ -244,6 +253,18 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Stay Connected"
+            description="Get wellness tips, thyroid health insights, and updates delivered to your inbox."
+          />
+        </div>
+      </section>
     </div>
+    </>
   );
 }

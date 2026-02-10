@@ -57,6 +57,7 @@ function ResourceAdsSection() {
 // ...existing code...
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import {
   Card,
   CardContent,
@@ -91,6 +92,14 @@ import { gardenSeasons } from "@/content/gardenSeasons";
 
 export default function Home() {
   return (
+    <>
+      <SEO
+        title="Ask DoGood - Holistic Health & Thyroid Wellness"
+        description="Expert guidance on thyroid health, holistic wellness, and living your best life. Founded by RoSeé Murphy, thyroid warrior and wellness advocate."
+        keywords={['thyroid health', 'holistic wellness', 'Black women health', 'Hashimoto\'s', 'hypothyroidism', 'natural healing', 'wellness coaching', 'healthy living', 'plant-based diet']}
+        url="/"
+        image="https://askdogoodassets.blob.core.windows.net/images/hero-home.webp"
+      />
     <div className="min-h-screen">
       {/* LOGO HEADER - Clean and Professional */}
       <section className="py-8 border-b bg-gradient-to-r from-background via-primary/5 to-background">
@@ -1794,5 +1803,6 @@ export default function Home() {
       {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
       <AffiliateProductRecommendations />
     </div>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import {
   Card,
   CardContent,
@@ -108,6 +109,14 @@ export default function Blog() {
   }, [posts, query, activeTag]);
 
   return (
+    <>
+      <SEO
+        title="Blog - Wellness & Thyroid Health Insights"
+        description="Read the latest articles on thyroid health, holistic wellness, plant-based living, and personal growth. Real stories and expert guidance from RoSeé Murphy."
+        keywords={['wellness blog', 'thyroid health articles', 'holistic living', 'plant-based recipes', 'health tips', 'personal growth']}
+        url="/blog"
+        image="https://askdogoodassets.blob.core.windows.net/images/blog_icon.png"
+      />
     <main className="min-h-screen bg-background">
       {/* HERO / INTRO */}
       <section className="relative overflow-hidden border-b">
@@ -385,5 +394,6 @@ export default function Blog() {
         </div>
       </section>
     </main>
+    </>
   );
 }

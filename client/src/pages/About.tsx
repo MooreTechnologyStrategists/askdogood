@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import {
   ArrowRight,
   Sparkles,
@@ -22,6 +23,14 @@ const ABOUT_STORY_IMAGE =
 
 export default function About() {
   return (
+    <>
+      <SEO
+        title="About RoSeé Murphy - Thyroid Warrior & Wellness Advocate"
+        description="Learn about RoSeé Murphy's journey from thyroid crisis to wellness advocate. Helping people rebuild when life feels unstable through health, structure, and faith."
+        keywords={['RoSeé Murphy', 'thyroid warrior', 'Black women health', 'wellness journey', 'Hashimoto\'s story', 'holistic health advocate']}
+        url="/about"
+        image="https://askdogoodassets.blob.core.windows.net/images/about-hero.webp"
+      />
     <main className="min-h-screen bg-background">
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -304,5 +313,6 @@ export default function About() {
         </div>
       </section>
     </main>
+    </>
   );
 }
