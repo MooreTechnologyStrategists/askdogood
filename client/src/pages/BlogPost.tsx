@@ -153,11 +153,15 @@ export default function BlogPost() {
     }
   };
 
+  const seoDescription = typeof post.excerpt === "string" && post.excerpt.trim()
+    ? post.excerpt.trim()
+    : "Read the latest wellness article from Ask DoGood about thyroid health, holistic healing, and living your best life.";
+
   return (
     <>
       <SEO
         title={safeTitle}
-        description={typeof post.excerpt === "string" && post.excerpt.trim() ? post.excerpt.trim() : "Read the latest wellness article from Ask DoGood about thyroid health, holistic healing, and living your best life."}
+        description={seoDescription}
         keywords={['blog', 'wellness', 'thyroid health', 'holistic healing', safeCategory.toLowerCase()]}
         url={`/blog/${slug}`}
         type="article"

@@ -1,6 +1,5 @@
 import { ExternalLink, Mail, Globe } from 'lucide-react';
 import SEO from "@/components/SEO";
-import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 const Resources = () => {
   const partners = [
