@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import { gardenSeasons } from "@/content/gardenSeasons";
+import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 
 /**
@@ -11,6 +13,13 @@ import { gardenSeasons } from "@/content/gardenSeasons";
  */
 export default function Garden() {
   return (
+    <>
+      <SEO
+        title="Garden - Seasons of Growth"
+        description="Explore the seasons of personal growth and wellness journey. Find wisdom, insights, and lessons from the garden of life experiences."
+        keywords={['personal growth', 'wellness journey', 'life lessons', 'seasons of growth', 'holistic wisdom']}
+        url="/garden"
+      />
     <main className="container mx-auto px-4 py-12">
       <header className="max-w-3xl space-y-3">
         <h1 className="text-3xl md:text-4xl font-bold">Seasons of Growth</h1>
@@ -89,6 +98,18 @@ export default function Garden() {
 
       {/* Optional: small debug hint during development */}
       {/* <pre className="mt-10 text-xs text-muted-foreground">{JSON.stringify(gardenSeasons, null, 2)}</pre> */}
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Join Our Growing Community"
+            description="Get insights on personal growth, wellness wisdom, and life lessons delivered to your inbox."
+          />
+        </div>
+      </section>
     </main>
+    </>
   );
 }

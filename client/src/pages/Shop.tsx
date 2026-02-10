@@ -5,6 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Star, Download, Video, BookOpen, Users, Award, Shield, Clock, TrendingUp, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 const products = [
   // Add your real product URLs here (Gumroad, Stripe, or internal detail pages)
@@ -1010,6 +1012,14 @@ export default function Shop() {
   };
 
   return (
+    <>
+      <SEO
+        title="Shop - Wellness Courses & Resources"
+        description="Explore premium wellness courses, thyroid health mastery programs, meal plans, and wellness bundles designed by RoSeé Murphy. Transform your health journey today."
+        keywords={['wellness courses', 'thyroid health course', 'meal plans', 'health programs', 'wellness products', 'holistic health resources']}
+        url="/shop"
+        image="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
+      />
     <div className="min-h-screen">
       {/* MLK Legacy Promo Banner */}
       <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-white">
@@ -1548,6 +1558,18 @@ export default function Shop() {
           </div>
         </div>
       </section>
+
+      {/* Email Newsletter Signup */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container max-w-4xl">
+          <BeehiivSubscribe
+            variant="card"
+            title="Stay Updated on New Products"
+            description="Get notified about new courses, wellness resources, and exclusive offers."
+          />
+        </div>
+      </section>
     </div>
+    </>
   );
 }

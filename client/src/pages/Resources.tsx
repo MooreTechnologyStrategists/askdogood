@@ -1,4 +1,6 @@
 import { ExternalLink, Mail, Globe } from 'lucide-react';
+import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 const Resources = () => {
   const partners = [
@@ -68,6 +70,13 @@ const Resources = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Resources & Partners - Wellness Education & Community"
+        description="Discover our partnerships with PG Parks & Planning, Microsoft, Johns Hopkins, and UMGC. Explore wellness education, technology training, and community resources."
+        keywords={['wellness resources', 'community partners', 'PG Parks', 'wellness education', 'technology training', 'health partnerships']}
+        url="/resources"
+      />
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Health Apps & Tools Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-teal-100/10">
@@ -498,6 +507,7 @@ const Resources = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
