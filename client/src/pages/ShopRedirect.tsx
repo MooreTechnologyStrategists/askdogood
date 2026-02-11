@@ -7,10 +7,10 @@ export default function ShopRedirect() {
   return (
     <>
       <SEO
-        title="Shop | Ask DoGood"
-        description="Browse wellness courses, meal plans, and resources"
+        title="Shop - Wellness Courses & Resources | Ask DoGood"
+        description="Browse wellness courses, thyroid health programs, meal plans, and holistic resources designed by RoSeé Murphy."
+        keywords={['wellness shop', 'thyroid courses', 'health programs', 'meal plans', 'wellness resources']}
         url="/shop"
-        noindex={true}
       />
       <Shop />
     </>
