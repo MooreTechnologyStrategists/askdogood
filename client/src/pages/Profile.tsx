@@ -11,6 +11,7 @@ import ShareButton from "@/components/ShareButton";
 import { User, Star, Award, Flame, Calendar } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
+import SEO from "@/components/SEO";
 
 export default function Profile() {
   const { user } = useUser();
@@ -80,7 +81,14 @@ export default function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-background py-12">
+    <>
+      <SEO
+        title="My Profile | Ask DoGood"
+        description="Customize your wellness profile and track your journey"
+        url="/profile"
+        noindex={true}
+      />
+      <div className="min-h-screen bg-background py-12">
       <div className="container max-w-5xl">
         {/* Header */}
         <div className="mb-8">
@@ -278,5 +286,6 @@ export default function Profile() {
         </div>
       </div>
     </div>
+    </>
   );
 }

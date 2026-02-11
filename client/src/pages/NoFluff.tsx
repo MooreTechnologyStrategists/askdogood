@@ -8,10 +8,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ShieldCheck, CheckCircle2, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function NoFluff() {
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="No Fluff Promise | Ask DoGood"
+        description="Evidence-based wellness guidance with no gimmicks. Learn about RoSeé's transparent approach to health recommendations, affiliate products, and real-world results."
+        keywords={['evidence-based wellness', 'honest health advice', 'transparent affiliates', 'real health results', 'no-fluff approach']}
+        url="/no-fluff"
+      />
+      <div className="min-h-screen">
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background">
         <div className="container py-16 md:py-24">
@@ -282,5 +290,6 @@ export default function NoFluff() {
         </div>
       </section>
     </div>
+    </>
   );
 }

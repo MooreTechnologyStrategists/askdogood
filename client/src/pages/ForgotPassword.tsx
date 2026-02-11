@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Mail, AlertCircle, CheckCircle, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function ForgotPassword() {
   const [, setLocation] = useLocation();
@@ -58,7 +59,14 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO
+        title="Reset Password | Ask DoGood"
+        description="Reset your Ask DoGood account password"
+        url="/forgot-password"
+        noindex={true}
+      />
+      <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-6">
         <div className="text-center">
           <h1 className="font-serif text-4xl font-bold text-foreground mb-2">
@@ -225,5 +233,6 @@ export default function ForgotPassword() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -34,6 +34,7 @@ import {
   PlayCircle,
 } from "lucide-react";
 import { thyroidHealthMasteryCourse } from "@/content/courses/thyroid-health-mastery";
+import SEO from "@/components/SEO";
 
 const iconMap: Record<string, any> = {
   brain: Brain,
@@ -65,7 +66,14 @@ export default function ThyroidHealthMasteryCourse() {
   }, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-primary/5">
+    <>
+      <SEO
+        title={`${course.title} | Ask DoGood`}
+        description={course.subtitle}
+        keywords={['thyroid health', 'thyroid course', 'Hashimoto\'s', 'hypothyroidism', 'autoimmune thyroid', 'thyroid healing']}
+        url="/courses/thyroid-health-mastery"
+      />
+      <div className="min-h-screen bg-gradient-to-b from-background to-primary/5">
       {/* Hero Section with Cover Image */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div
@@ -405,5 +413,6 @@ export default function ThyroidHealthMasteryCourse() {
         </div>
       </section>
     </div>
+    </>
   );
 }

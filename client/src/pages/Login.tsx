@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CheckCircle, AlertCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 type AuthMeResponse = {
   clientPrincipal: null | {
@@ -51,7 +52,14 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO
+        title="Sign In | Ask DoGood"
+        description="Sign in to your Ask DoGood account"
+        url="/login"
+        noindex={true}
+      />
+      <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-6">
         <div className="text-center">
           <h1 className="font-serif text-4xl font-bold text-foreground mb-2">
@@ -139,5 +147,6 @@ export default function Login() {
         </Card>
       </div>
     </div>
+    </>
   );
 }

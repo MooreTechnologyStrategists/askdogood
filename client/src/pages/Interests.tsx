@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Flower2, Music, Laptop, Scissors, Sprout, Sun, Droplets } from "lucide-react";
 import { useState } from "react";
+import SEO from "@/components/SEO";
 
 export default function Interests() {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -48,7 +49,14 @@ export default function Interests() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Interests & Hobbies | Ask DoGood"
+        description="Explore RoSeé's passions beyond wellness: gardening, music, technology, and self-care. Healing isn't one-dimensional—it's creating a life you love."
+        keywords={['gardening', 'urban gardening', 'music', 'technology', 'self-care', 'hobbies', 'holistic wellness']}
+        url="/interests"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         <div className="container">
@@ -215,5 +223,6 @@ export default function Interests() {
         </div>
       </section>
     </div>
+    </>
   );
 }

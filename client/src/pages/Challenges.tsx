@@ -8,6 +8,7 @@ import { Award, Calendar, CheckCircle2, Clock, Star, Trophy } from "lucide-react
 import ShareButton from "@/components/ShareButton";
 import { toast } from "sonner";
 import { useState } from "react";
+import SEO from "@/components/SEO";
 
 export default function Challenges() {
   const { user } = useUser();
@@ -101,7 +102,14 @@ export default function Challenges() {
   };
 
   return (
-    <div className="min-h-screen bg-background py-12">
+    <>
+      <SEO
+        title="Health Challenges | Ask DoGood"
+        description="Complete wellness challenges to earn points and level up your health journey. Daily, weekly, and monthly challenges for thyroid health and chronic illness recovery."
+        keywords={['health challenges', 'wellness goals', 'thyroid health', 'autoimmune challenges', 'healing journey']}
+        url="/challenges"
+      />
+      <div className="min-h-screen bg-background py-12">
       <div className="container max-w-7xl">
         {/* Header */}
         <div className="mb-8">
@@ -267,5 +275,6 @@ export default function Challenges() {
           )}
       </div>
     </div>
+    </>
   );
 }

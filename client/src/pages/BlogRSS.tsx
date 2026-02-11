@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { blogPosts } from '@/content/blogData';
+import SEO from "@/components/SEO";
 
 export default function BlogRSS() {
   useEffect(() => {
@@ -18,7 +19,14 @@ export default function BlogRSS() {
   }, []);
 
   return (
-    <div className="container py-20 text-center">
+    <>
+      <SEO
+        title="Blog RSS Feed | Ask DoGood"
+        description="RSS feed for AskDoGood wellness and thyroid health blog"
+        url="/blog/rss"
+        noindex={true}
+      />
+      <div className="container py-20 text-center">
       <h1 className="text-3xl font-bold mb-4">Generating RSS Feed...</h1>
       <p className="text-muted-foreground">
         Your RSS feed is being generated. If download doesn't start automatically,{' '}
@@ -39,6 +47,7 @@ export default function BlogRSS() {
         </button>.
       </p>
     </div>
+    </>
   );
 }
 

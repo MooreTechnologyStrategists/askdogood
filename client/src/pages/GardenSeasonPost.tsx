@@ -1,5 +1,6 @@
 import { Link, useRoute } from "wouter";
 import { gardenSeasons, getSeason } from "@/content/gardenSeasons";
+import SEO from "@/components/SEO";
 
 /**
  * Garden season detail page
@@ -47,7 +48,14 @@ export default function GardenSeasonPost() {
   const body = Array.isArray(season.body) ? season.body : [];
 
   return (
-    <main className="container mx-auto px-4 py-12">
+    <>
+      <SEO
+        title={`${label} | Garden to Table | Ask DoGood`}
+        description={season.subtitle || `Garden season guide: ${label}`}
+        keywords={['garden', 'seasonal gardening', 'wellness', 'plant-based', 'growing food']}
+        url={`/garden/${season.slug}`}
+      />
+      <main className="container mx-auto px-4 py-12">
       <nav className="text-sm text-muted-foreground mb-6">
         <Link href="/">
           <a className="underline">Home</a>
@@ -110,5 +118,6 @@ export default function GardenSeasonPost() {
         </div>
       </article>
     </main>
+    </>
   );
 }

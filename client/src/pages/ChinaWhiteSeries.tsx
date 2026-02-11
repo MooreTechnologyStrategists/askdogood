@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, BookOpen, Flame, Clock } from 'lucide-react';
 import Chatbot from '@/components/Chatbot';
+import SEO from "@/components/SEO";
 
 export default function ChinaWhiteSeries() {
   const episodes = [
@@ -50,7 +51,14 @@ export default function ChinaWhiteSeries() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide">
+    <>
+      <SEO
+        title="Chyna White Series | Ask DoGood Stories"
+        description="The Chronicles of a Beautiful Contradiction. Follow Chyna White through her journey from rapper to street pharmacist to business owner. Contemporary fiction exploring identity, success, and redemption."
+        keywords={['Chyna White', 'short story series', 'Black women fiction', 'contemporary drama', 'episodic fiction']}
+        url="/stories/chyna-white"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide">
       {/* Dimmer overlay for better readability */}
       <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
       
@@ -309,5 +317,6 @@ export default function ChinaWhiteSeries() {
         </div>
       </section>
     </div>
+    </>
   );
 }

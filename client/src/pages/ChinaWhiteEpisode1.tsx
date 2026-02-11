@@ -4,12 +4,20 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, ArrowRight, Flame, Clock, MessageCircle, Heart, Share2 } from 'lucide-react';
 import { useState } from 'react';
+import SEO from "@/components/SEO";
 
 export default function ChinaWhiteEpisode1() {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide overflow-x-hidden">
+    <>
+      <SEO
+        title="Chyna White Episode 1: The Setup | Ask DoGood Stories"
+        description="Meet Chyna White: former rapper, ex-street pharmacist, reformed corporate drone, and current boss. A compelling short story about identity, redemption, and success."
+        keywords={['Chyna White', 'short stories', 'Black women fiction', 'contemporary fiction', 'redemption story']}
+        url="/stories/chyna-white/episode-1"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-black via-red-900/80 to-black text-white font-serif relative tracking-wide overflow-x-hidden">
       {/* Subtle background pattern overlay */}
       {/* No extra pattern overlay, keep it clean for the red/black theme */}
       {/* Header */}
@@ -332,5 +340,6 @@ export default function ChinaWhiteEpisode1() {
         </div>
       </section>
     </div>
+    </>
   );
 }

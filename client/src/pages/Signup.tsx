@@ -2,6 +2,7 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, ShieldCheck } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function Signup() {
   const [, setLocation] = useLocation();
@@ -12,7 +13,14 @@ export default function Signup() {
   // const GOOGLE_LOGIN = "/.auth/login/google";
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO
+        title="Sign Up | Ask DoGood"
+        description="Join Ask DoGood - A healing ecosystem for habits, mindset, meals, and momentum. Start your wellness journey today."
+        url="/signup"
+        noindex={true}
+      />
+      <div className="min-h-screen flex items-center justify-center bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl w-full space-y-6">
         <div className="text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2">
@@ -131,5 +139,6 @@ export default function Signup() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Filter, Sparkles } from "lucide-react";
 import { products as shopProducts } from "@/data/products";
+import SEO from "@/components/SEO";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -27,7 +28,14 @@ export default function Merch() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEO
+        title="Merch Store | Ask DoGood"
+        description="Wear your healing journey with pride. Motivational, inspirational wellness merchandise celebrating holistic health, self-care, and authentic growth."
+        keywords={['wellness merch', 'healing apparel', 'motivational clothing', 'holistic health merchandise', 'self-care products']}
+        url="/merch"
+      />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/20 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -262,5 +270,6 @@ export default function Merch() {
         </div>
       </section>
     </div>
+    </>
   );
 }

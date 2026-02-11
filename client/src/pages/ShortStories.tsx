@@ -31,6 +31,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Flame, Clock, TrendingUp, Star, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
+import SEO from "@/components/SEO";
 
 export default function ShortStories() {
   const [isOver18, setIsOver18] = useState(false);
@@ -93,7 +94,15 @@ export default function ShortStories() {
 
   if (!isOver18) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white flex items-center justify-center">
+      <>
+        <SEO
+          title="Short Stories | Ask DoGood"
+          description="Raw, real, unapologetic fiction about Black women who refuse to fit in anyone's box. Age verification required."
+          keywords={['short stories', 'Black women fiction', 'contemporary fiction', 'mature content']}
+          url="/stories"
+          noindex={true}
+        />
+        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-purple-900/20 to-zinc-900 text-white flex items-center justify-center">
         <Card className="max-w-md mx-4 bg-black/50 backdrop-blur border-purple-500/30">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Age Verification</CardTitle>
@@ -122,11 +131,19 @@ export default function ShortStories() {
           </CardContent>
         </Card>
       </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen relative bg-black text-white overflow-x-hidden">
+    <>
+      <SEO
+        title="Short Stories | Ask DoGood"
+        description="Raw, real, unapologetic fiction about Black women who refuse to fit in anyone's box. Featuring the Chyna White series."
+        keywords={['short stories', 'Black women fiction', 'contemporary fiction', 'Chyna White', 'episodic series']}
+        url="/stories"
+      />
+      <div className="min-h-screen relative bg-black text-white overflow-x-hidden">
       {/* Glitter overlay */}
       <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
         <div className="w-full h-full glitter-bg" />
@@ -448,5 +465,6 @@ export default function ShortStories() {
       </section>
 
     </div>
+    </>
   );
 }

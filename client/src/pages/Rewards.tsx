@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Gift, Star, ShoppingBag, BookOpen, Calendar, Tag } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
+import SEO from "@/components/SEO";
 
 export default function Rewards() {
   const { user } = useUser();
@@ -84,7 +85,14 @@ export default function Rewards() {
   };
 
   return (
-    <div className="min-h-screen bg-background py-12">
+    <>
+      <SEO
+        title="Rewards Store | Ask DoGood"
+        description="Redeem your wellness points for exclusive rewards, courses, meal plans, and consultations"
+        url="/rewards"
+        noindex={true}
+      />
+      <div className="min-h-screen bg-background py-12">
       <div className="container max-w-7xl">
         {/* Header */}
         <div className="mb-8">
@@ -208,5 +216,6 @@ export default function Rewards() {
         )}
       </div>
     </div>
+    </>
   );
 }

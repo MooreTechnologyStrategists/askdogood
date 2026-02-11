@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BookOpen, HeartPulse, Sparkles, UtensilsCrossed } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function Dashboard() {
   const quickLinks = [
@@ -36,7 +37,14 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Dashboard | Ask DoGood"
+        description="Your personal wellness dashboard"
+        url="/dashboard"
+        noindex={true}
+      />
+      <div className="min-h-screen">
       <section className="py-12 md:py-16">
         <div className="container">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -163,5 +171,6 @@ export default function Dashboard() {
         </div>
       </section>
     </div>
+    </>
   );
 }

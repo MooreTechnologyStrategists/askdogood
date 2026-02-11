@@ -16,6 +16,7 @@ import {
 import { recipes } from "@/data/recipes";
 import RecipeModal from "@/components/RecipeModal";
 import type { Recipe } from "@/data/recipes";
+import SEO from "@/components/SEO";
 
 
 
@@ -104,7 +105,14 @@ export default function MealPrepResources() {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Meal Prep Resources | Ask DoGood"
+        description="Plant-based, anti-inflammatory recipes and meal plans for thyroid health and autoimmune conditions. Complete meal prep guides, DMV shopping tips, and healing recipes."
+        keywords={['meal prep', 'plant-based recipes', 'anti-inflammatory meals', 'thyroid diet', 'autoimmune recipes', 'DMV shopping']}
+        url="/meal-prep"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
         <div className="container">
@@ -544,5 +552,6 @@ export default function MealPrepResources() {
         </div>
       </section>
     </div>
+    </>
   );
 }
