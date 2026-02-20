@@ -11,6 +11,7 @@ import { apiClient } from '@/lib/api';
 import MealPlanningCalendar from './MealPlanningCalendar';
 import ShoppingListGenerator from './ShoppingListGenerator';
 import CookingMode from './CookingMode';
+import { toast } from 'sonner';
 
 interface Recipe {
   id: number;
@@ -92,6 +93,14 @@ export default function ClinicalRecipesApp() {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
       resetForm();
       setShowCreateForm(false);
+      toast.success('Recipe added successfully! 🎉', {
+        description: 'Your recipe has been saved to your collection.'
+      });
+    },
+    onError: (error: any) => {
+      toast.error('Failed to add recipe', {
+        description: error.message || 'Please try again later.'
+      });
     }
   });
 
@@ -102,6 +111,14 @@ export default function ClinicalRecipesApp() {
       resetForm();
       setShowCreateForm(false);
       setEditingRecipe(null);
+      toast.success('Recipe updated successfully! ✨', {
+        description: 'Your changes have been saved.'
+      });
+    },
+    onError: (error: any) => {
+      toast.error('Failed to update recipe', {
+        description: error.message || 'Please try again later.'
+      });
     }
   });
 
@@ -111,6 +128,14 @@ export default function ClinicalRecipesApp() {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
       setShowDetailView(false);
       setSelectedRecipe(null);
+      toast.success('Recipe deleted', {
+        description: 'The recipe has been removed from your collection.'
+      });
+    },
+    onError: (error: any) => {
+      toast.error('Failed to delete recipe', {
+        description: error.message || 'Please try again later.'
+      });
     }
   });
 
@@ -118,6 +143,11 @@ export default function ClinicalRecipesApp() {
     mutationFn: (id: number) => apiClient.recipes.toggleFavorite(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['recipes'] });
+    },
+    onError: (error: any) => {
+      toast.error('Failed to update favorite', {
+        description: error.message || 'Please try again later.'
+      });
     }
   });
 
