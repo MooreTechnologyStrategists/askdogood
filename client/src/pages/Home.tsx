@@ -573,7 +573,7 @@ export default function Home() {
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={`${ASSET_BASE_URL}/products/thyroid-symptom-tracker.webp`}
+                  src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600"
                   alt="Thyroid Symptom Tracker - Digital Download"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -635,7 +635,7 @@ export default function Home() {
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={`${ASSET_BASE_URL}/products/30-day-meal-plan.webp`}
+                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"
                   alt="30-Day Thyroid-Friendly Meal Plan"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -1106,73 +1106,6 @@ export default function Home() {
                 Contact <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ASKDOGOOD SHOW TEASER */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <Card className="overflow-hidden">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Image */}
-                <div className="relative h-[400px] md:h-auto">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url(${ASSET_BASE_URL}/personal/askdogood-show-teaser.webp)`,
-                    }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-                    <img
-                      src={`${ASSET_BASE_URL}/personal/askdogood-show-teaser.webp`}
-                      alt="The AskDoGood Show - Coming Soon"
-                      className="w-full h-full object-cover opacity-0"
-                      loading="lazy"
-                      width="600"
-                      height="400"
-                      onError={(e) => handleImageError(e)}
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 rounded-full border bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 w-fit">
-                    Coming Soon
-                  </div>
-
-                  <h2 className="text-4xl font-bold mb-4">🎧 The AskDoGood Show</h2>
-                  <p className="text-xl text-muted-foreground mb-6">
-                    Real conversations about health, healing, and thriving in Black & Brown
-                    communities. 🎉
-                  </p>
-
-                  <div className="space-y-3 text-muted-foreground mb-8">
-                    <p>
-                      From thyroid health to mental wellness, from navigating healthcare to building
-                      resilience—this is where we talk about what matters. 💜
-                    </p>
-                    <p className="font-medium text-foreground">
-                      Podcast. Radio. Real talk. No filters. 💯
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button className="gap-2 rounded-3xl px-6 py-3 text-lg shadow-lg hover:shadow-xl transition-all">
-                      Get Notified 🔔 <ArrowRight className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="gap-2 rounded-3xl px-6 py-3 text-lg hover:shadow-md transition-all"
-                    >
-                      Learn More <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Card>
           </div>
         </div>
       </section>

@@ -6,12 +6,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, url: "https://instagram.com/askdogood", color: "hover:text-pink-600" },
+    { name: "Instagram", icon: Instagram, url: "https://instagram.com/the_real_dogood", color: "hover:text-pink-600" },
     { name: "TikTok", icon: "🎵", url: "https://tiktok.com/@askdogood", color: "hover:text-gray-900" },
     { name: "Pinterest", icon: "📌", url: "https://pinterest.com/askdogood", color: "hover:text-red-600" },
-    { name: "YouTube", icon: Youtube, url: "https://youtube.com/@askdogood", color: "hover:text-red-600" },
+    { name: "YouTube", icon: Youtube, url: "https://youtube.com/@roseecm", color: "hover:text-red-600" },
     { name: "Facebook", icon: Facebook, url: "https://facebook.com/askdogood", color: "hover:text-blue-600" },
-    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/rosee-murphy", color: "hover:text-blue-700" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/askdogood", color: "hover:text-blue-700" },
   ];
 
   const handleSocialClick = (platform: string) => {
