@@ -353,7 +353,7 @@ export default function Home() {
                 Ask DoGood
               </h1>
               <p className="text-sm md:text-base text-primary font-medium mt-1">
-                Healing, structure, and real-life growth for Black and Brown communities.
+                Empowering Black and Brown communities through wellness, practical tools, and transformative growth.
               </p>
             </div>
           </div>
