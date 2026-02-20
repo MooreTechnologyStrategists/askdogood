@@ -12,7 +12,7 @@ const products = [
   {
     id: 1,
     name: "Thyroid Health Mastery Course",
-    productUrl: "https://roosecraft.gumroad.com/l/thyroid-health-mastery",
+    productUrl: "https://askdogood.gumroad.com/l/thyroid-health-mastery",
     price: 97,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     category: "Online Course",
@@ -136,7 +136,7 @@ This course combines medical science with lived experience across multiple healt
   {
     id: 2,
     name: "21-Day Plant-Based Reset",
-    productUrl: "https://roosecraft.gumroad.com/l/clinical-food-rx",
+    productUrl: "https://askdogood.gumroad.com/l/clinical-food-rx",
     price: 47,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png",
     category: "Transformation Program",
@@ -155,7 +155,7 @@ This course combines medical science with lived experience across multiple healt
   {
     id: 2,
     name: "Thyroid Lab Interpretation Guide",
-    productUrl: "https://roosecraft.gumroad.com/l/thyroid-lab-guide",
+    productUrl: "https://askdogood.gumroad.com/l/thyroid-lab-guide",
     price: 27,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
     category: "Digital Guide",
@@ -182,7 +182,7 @@ You'll get exact lab interpretation guidance, understand why "normal" ranges are
   {
     id: 2.5,
     name: "Thyroid Supplement Protocol Templates",
-    productUrl: "https://roosecraft.gumroad.com/l/adioal",
+    productUrl: "https://askdogood.gumroad.com/l/adioal",
     price: 17,
     image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     category: "Digital Templates",
@@ -210,7 +210,7 @@ Includes space to track symptoms, lab changes, energy levels, digestion, stress 
   {
     id: 3,
     name: "Garden to Table Wellness Bundle",
-    productUrl: "https://gumroad.com/l/garden-to-table-bundle", // Example URL
+    productUrl: "https://askdogood.gumroad.com/l/garden-to-table-bundle",
     price: 37,
     image: "/images/branding/askdogood-logo-aqua.png",
     hidden: true,
@@ -329,7 +329,7 @@ This bundle combines gardening wisdom with culinary expertise, giving you everyt
   {
     id: 4,
     name: "Autoimmune Recovery Guide",
-    productUrl: "https://gumroad.com/l/autoimmune-recovery-guide", // Example URL
+    productUrl: "https://askdogood.gumroad.com/l/autoimmune-recovery-guide",
     price: 27,
     image: "/images/branding/askdogood-logo-navy.png",
     hidden: true,
@@ -548,7 +548,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
   {
     id: 6,
     name: "DoGood Wellness Circle",
-    productUrl: "https://roosecraft.gumroad.com/l/wellness-circle",
+    productUrl: "https://askdogood.gumroad.com/l/wellness-circle",
     price: 27,
     recurring: "monthly",
     foundingPrice: 19,
@@ -1743,7 +1743,7 @@ export default function Shop() {
                   View All Products
                 </Button>
               </Link>
-              <a href="https://roosecraft.gumroad.com/l/wellness-circle" target="_blank" rel="noopener noreferrer">
+              <a href="https://askdogood.gumroad.com/l/wellness-circle" target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-3xl text-lg px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
                   Join Wellness Circle - $19/mo
                 </Button>

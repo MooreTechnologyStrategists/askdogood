@@ -355,7 +355,7 @@ export default function ShortStories() {
             <div className="mt-16 mb-12 text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-background rounded-2xl p-8 shadow-xl drop-shadow-glitter">
               <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground drop-shadow-glitter">Get the Real-Life Healing Guide Behind These Stories</h3>
               <p className="text-lg text-muted-foreground mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
-              <a href="https://gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
+              <a href="https://askdogood.gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-3xl text-lg font-semibold py-3 px-8 drop-shadow-glitter">
                   Download Free Guide
                 </Button>
@@ -366,7 +366,7 @@ export default function ShortStories() {
             <div className="mb-16">
               <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Shop the Story</h3>
               <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6 mx-auto">
-                <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="w-full">
+                <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="w-full">
                   <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
                     <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
                       <img
@@ -382,7 +382,7 @@ export default function ShortStories() {
                     </CardContent>
                   </Card>
                 </a>
-                <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="w-full">
+                <a href="https://askdogood.gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="w-full">
                   <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
                     <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
                       <img

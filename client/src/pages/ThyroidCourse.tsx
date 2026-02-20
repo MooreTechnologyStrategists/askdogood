@@ -26,7 +26,7 @@ export default function ThyroidCourse() {
   };
 
   const finalPrice = promoApplied ? promoPrice : launchPrice;
-  const gumroadUrl = `https://gumroad.com/l/thyroid-health-mastery${promoApplied ? '?wanted=true&code=MLKLEGACY' : ''}`;
+  const gumroadUrl = `https://askdogood.gumroad.com/l/thyroid-health-mastery${promoApplied ? '?wanted=true&code=MLKLEGACY' : ''}`;
 
   const modules = [
     {

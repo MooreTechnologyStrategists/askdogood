@@ -386,7 +386,7 @@ const Resources = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Thyroid Health Mastery Course */}
-              <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="group">
+              <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="group">
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
                   <div className="relative">
                     <img 
@@ -430,7 +430,7 @@ const Resources = () => {
               </a>
 
               {/* 21-Day Plant-Based Reset */}
-              <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="group">
+              <a href="https://askdogood.gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="group">
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
                   <div className="relative">
                     <img 
