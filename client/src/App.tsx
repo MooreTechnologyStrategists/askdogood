@@ -46,6 +46,14 @@ import GrowingFreshMint from "@/pages/recipes/GrowingFreshMint";
 import HomemadePizza from "@/pages/recipes/HomemadePizza";
 import MasonJarSalad from "@/pages/recipes/MasonJarSalad";
 
+// Lead Magnet Pages
+import FreeThyroidLabGuide from "./pages/FreethyroidLabGuide";
+import FreeMealPlan from "./pages/FreeMealPlan";
+import SymptomTracker from "./pages/SymptomTracker";
+import SupplementGuide from "./pages/SupplementGuide";
+import DoctorChecklist from "./pages/DoctorChecklist";
+import Coaching from "./pages/Coaching";
+
 import {
   Card,
   CardContent,
@@ -127,6 +135,16 @@ function Router() {
     
     {/* Product Pages with Gumroad Integration */}
     <Route path="/product/thyroid-mastery-course" component={ThyroidMasteryCourse} />
+
+    {/* Lead Magnet Pages */}
+    <Route path="/free-thyroid-lab-guide" component={FreeThyroidLabGuide} />
+    <Route path="/free-meal-plan" component={FreeMealPlan} />
+    <Route path="/symptom-tracker" component={SymptomTracker} />
+    <Route path="/supplement-guide" component={SupplementGuide} />
+    <Route path="/doctor-checklist" component={DoctorChecklist} />
+
+    {/* Coaching */}
+    <Route path="/coaching" component={Coaching} />
 
     {/* Stories */}
     <Route path="/stories" component={ShortStories} />

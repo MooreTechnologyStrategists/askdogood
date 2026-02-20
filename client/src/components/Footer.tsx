@@ -1,8 +1,22 @@
-import { Heart, Mail, ShoppingBag, BookOpen, Shield, Rss } from "lucide-react";
+import { Heart, Mail, ShoppingBag, BookOpen, Shield, Rss, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
 import { Link } from "wouter";
+import { trackSocialClick } from "@/lib/analytics";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { name: "Instagram", icon: Instagram, url: "https://instagram.com/askdogood", color: "hover:text-pink-600" },
+    { name: "TikTok", icon: "🎵", url: "https://tiktok.com/@askdogood", color: "hover:text-gray-900" },
+    { name: "Pinterest", icon: "📌", url: "https://pinterest.com/askdogood", color: "hover:text-red-600" },
+    { name: "YouTube", icon: Youtube, url: "https://youtube.com/@askdogood", color: "hover:text-red-600" },
+    { name: "Facebook", icon: Facebook, url: "https://facebook.com/askdogood", color: "hover:text-blue-600" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/rosee-murphy", color: "hover:text-blue-700" },
+  ];
+
+  const handleSocialClick = (platform: string) => {
+    trackSocialClick(platform.toLowerCase(), 'footer');
+  };
 
   return (
     <footer className="w-full border-t border-border/40 bg-secondary/30">
@@ -16,9 +30,34 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground mb-4">
               Healing. Structure. Real-life growth for thyroid warriors and wellness seekers.
             </p>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-primary/10 px-3 py-2 rounded-lg">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-primary/10 px-3 py-2 rounded-lg mb-4">
               <Shield className="h-4 w-4 text-primary" />
               <span className="font-medium">30-Day Money-Back Guarantee</span>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="mt-4">
+              <h4 className="text-xs font-semibold mb-3 text-muted-foreground uppercase tracking-wide">Connect With Me</h4>
+              <div className="flex items-center gap-3 flex-wrap">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-muted-foreground transition-colors ${social.color}`}
+                    aria-label={social.name}
+                    title={social.name}
+                    onClick={() => handleSocialClick(social.name)}
+                  >
+                    {typeof social.icon === 'string' ? (
+                      <span className="text-xl">{social.icon}</span>
+                    ) : (
+                      <social.icon className="h-5 w-5" />
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -97,7 +136,7 @@ export default function Footer() {
                 <Link href="/wellness/mental" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🧘‍♀️ Mental Wellness</Link>
               </li>
               <li>
-                <Link href="/wellness/tech-azure-career" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">☁️ Tech & Azure Career</Link>
+                <a href="https://thedopecloudteacher.org" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">☁️ Tech & Azure Career</a>
               </li>
             </ul>
           </div>

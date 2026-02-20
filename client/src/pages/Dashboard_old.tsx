@@ -209,12 +209,24 @@ export default function Dashboard() {
                 <CardDescription>Micro-moves that compound.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3 text-sm">
-                {quickWins.map((win, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">{win}</p>
-                  </div>
-                ))}
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
+                  <p className="text-muted-foreground">
+                    10-minute walk after one meal (blood sugar loves this).
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
+                  <p className="text-muted-foreground">
+                    One “swap”: soda → sparkling water, fries → air-fried.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
+                  <p className="text-muted-foreground">
+                    Write one sentence in your Journey page tonight. One.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>

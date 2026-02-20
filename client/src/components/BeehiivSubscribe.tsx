@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, CheckCircle2, AlertCircle } from "lucide-react";
+import { trackNewsletterSignup, trackNewsletterSignupSuccess, trackLeadMagnetDownload } from "@/lib/analytics";
 
 interface BeehiivSubscribeProps {
   variant?: "inline" | "card" | "minimal";
@@ -10,6 +11,8 @@ interface BeehiivSubscribeProps {
   placeholder?: string;
   buttonText?: string;
   className?: string;
+  source?: string; // Track where the signup came from
+  magnetType?: string; // Track which lead magnet triggered signup
 }
 
 export default function BeehiivSubscribe({
@@ -19,6 +22,8 @@ export default function BeehiivSubscribe({
   placeholder = "Enter your email",
   buttonText = "Subscribe",
   className = "",
+  source = "generic",
+  magnetType,
 }: BeehiivSubscribeProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -34,6 +39,9 @@ export default function BeehiivSubscribe({
     }
 
     setStatus("loading");
+
+    // Track the signup attempt
+    trackNewsletterSignup(source, magnetType);
 
     try {
       // Submit to Beehiiv
@@ -58,11 +66,21 @@ export default function BeehiivSubscribe({
       setMessage("🎉 Welcome! Check your email to confirm your subscription.");
       setEmail("");
 
-      // Track with Google Analytics
+      // Track successful signup
+      trackNewsletterSignupSuccess(source, magnetType);
+
+      // If this was for a lead magnet, track the download
+      if (magnetType) {
+        trackLeadMagnetDownload(magnetType, source);
+      }
+
+      // Track with Google Analytics (legacy)
       if (window.gtag) {
         window.gtag("event", "newsletter_subscribe", {
           event_category: "engagement",
           event_label: "beehiiv_newsletter",
+          source: source,
+          magnet_type: magnetType || 'none',
         });
       }
 
