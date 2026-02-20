@@ -269,7 +269,7 @@ export default function Home() {
       category: "Social Justice",
       readTime: "9 min read",
       slug: "world-peace-starts-with-healthcare",
-      imagePath: "/images/personal/blog-graphics/world-peace-starts-with-healthcare.png",
+      imagePath: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600",
       icon: <HeartPulse className="h-6 w-6 text-white" />,
     },
     {
@@ -279,7 +279,7 @@ export default function Home() {
       category: "Financial Wellness",
       readTime: "7 min read",
       slug: "investing-in-yourself",
-      imagePath: "/images/personal/blog-graphics/investing-in-yourself.png",
+      imagePath: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600",
       icon: <TrendingUp className="h-6 w-6 text-white" />,
     },
     {
@@ -289,7 +289,7 @@ export default function Home() {
       category: "Community",
       readTime: "6 min read",
       slug: "community-over-competition",
-      imagePath: "/images/personal/blog-graphics/community-over-competition.png",
+      imagePath: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600",
       icon: <Users className="h-6 w-6 text-white" />,
     },
     {
@@ -299,7 +299,7 @@ export default function Home() {
       category: "Mental Health",
       readTime: "8 min read",
       slug: "the-power-of-saying-no",
-      imagePath: "/images/personal/blog-graphics/the-power-of-saying-no.png",
+      imagePath: "https://images.unsplash.com/photo-1499728603263-13726abce5fd?w=600",
       icon: <ShieldCheck className="h-6 w-6 text-white" />,
     },
   ];
@@ -922,36 +922,7 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <Testimonials />
 
-      {/* REAL PEOPLE, REAL RESULTS - Enhanced Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
-        <div className="container max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
-              Real People, <span className="text-primary">Real Results</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Join thousands who've taken control of their thyroid health
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={`testimonial-${index}`} {...testimonial} />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/testimonials">
-              <Button className="gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
-                Read More Success Stories
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CHYNA WHITE FICTION SERIES TEASER */}
+      {/* CHYNA WHITE FICTION SERIES TEASER */}}
       <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         {/* Glitter Effect Background */}
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
@@ -965,24 +936,18 @@ export default function Home() {
             <Card className="overflow-hidden bg-card/80 backdrop-blur-lg border-2 border-primary/20 shadow-2xl">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image Side */}
-                <div className="relative h-[500px] lg:h-auto">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url(${ASSET_BASE_URL}/personal/chyna-white-hero.webp)`,
+                <div className="relative h-[500px] lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+                    alt="Chyna White - Fiction Series Hero"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="600"
+                    height="500"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600';
                     }}
-                  >
-                    <img
-                      src={`${ASSET_BASE_URL}/personal/chyna-white-hero.webp`}
-                      alt="Chyna White - Fiction Series Hero"
-                      className="w-full h-full object-cover opacity-0"
-                      loading="lazy"
-                      width="600"
-                      height="500"
-                      onError={(e) => handleImageError(e)}
-                    />
-                  </div>
+                  />
                   {/* Spice Level Indicator */}
                   <div className="absolute bottom-8 right-8 bg-background/80 backdrop-blur px-4 py-2 rounded-full border border-border">
                     <div className="flex items-center gap-2">
