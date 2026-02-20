@@ -630,22 +630,42 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🏛️</span> Washington, DC
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Goodwill of Greater Washington:</strong> Multiple locations, great for professional pieces and hidden gems</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=100" alt="Goodwill" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.dcgoodwill.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Goodwill of Greater Washington
+                      </a>
+                      <p className="text-sm">Multiple locations, great for professional pieces and hidden gems</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Value Village (Wheaton):</strong> Huge selection, organized by color—makes thrifting easy</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=100" alt="Value Village" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://stores.savers.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Value Village (Wheaton)
+                      </a>
+                      <p className="text-sm">Huge selection, organized by color—makes thrifting easy</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Friendship Thrift (multiple locations):</strong> Supports community programs, clean and curated</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea2f1d12?w=100" alt="Friendship Thrift" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.friendshipplace.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Friendship Thrift (multiple locations)
+                      </a>
+                      <p className="text-sm">Supports community programs, clean and curated</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Annie's Boutique (Capitol Hill):</strong> Designer consignment, when you want to splurge smart</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=100" alt="Annie's Boutique" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.google.com/maps/search/Annie's+Boutique+Capitol+Hill" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Annie's Boutique (Capitol Hill)
+                      </a>
+                      <p className="text-sm">Designer consignment, when you want to splurge smart</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -655,22 +675,46 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🦀</span> Maryland
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Unique Thrift Store (Hyattsville, Laurel):</strong> My go-to for everyday finds</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=100" alt="Unique Thrift" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.uniquethriftstore.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Unique Thrift Store (Hyattsville, Laurel)
+                      </a>
+                      <p className="text-sm">My go-to for everyday finds</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Plato's Closet (multiple locations):</strong> Name brands at thrift prices, perfect for streetwear</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=100" alt="Plato's Closet" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.platoscloset.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Plato's Closet (multiple locations)
+                      </a>
+                      <p className="text-sm">Name brands at thrift prices, perfect for streetwear</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Second Chance (Baltimore):</strong> Not just clothes—furniture, home goods, creative finds</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=100" alt="Second Chance" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.secondchanceinc.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Second Chance (Baltimore)
+                      </a>
+                      <p className="text-sm">Not just clothes—furniture, home goods, creative finds</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Poshmark/Mercari:</strong> Online thrifting from Maryland sellers—shop from the couch</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=100" alt="Online Thrifting" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.poshmark.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Poshmark
+                      </a>
+                      <span className="text-sm"> / </span>
+                      <a href="https://www.mercari.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Mercari
+                      </a>
+                      <p className="text-sm">Online thrifting from Maryland sellers—shop from the couch</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -680,18 +724,33 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🌳</span> Virginia
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Goodwill of Greater Washington (Alexandria, Arlington):</strong> Professional wear heaven</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=100" alt="Goodwill Virginia" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.dcgoodwill.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Goodwill of Greater Washington (Alexandria, Arlington)
+                      </a>
+                      <p className="text-sm">Professional wear heaven</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Clarendon Poshmark Boutique:</strong> Curated secondhand, Instagram-worthy finds</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=100" alt="Boutique" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.google.com/maps/search/Clarendon+Poshmark+Boutique" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Clarendon Poshmark Boutique
+                      </a>
+                      <p className="text-sm">Curated secondhand, Instagram-worthy finds</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Unique Thrift (Fairfax):</strong> Large selection, organized racks</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=100" alt="Unique Thrift Fairfax" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.uniquethriftstore.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Unique Thrift (Fairfax)
+                      </a>
+                      <p className="text-sm">Large selection, organized racks</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -701,18 +760,33 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🌲</span> North Carolina
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Buffalo Exchange (Durham, Chapel Hill):</strong> Buy-sell-trade, great for trendy pieces</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=100" alt="Buffalo Exchange" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.buffaloexchange.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Buffalo Exchange (Durham, Chapel Hill)
+                      </a>
+                      <p className="text-sm">Buy-sell-trade, great for trendy pieces</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Father & Son Antiques (Asheville):</strong> Vintage clothing and unique statement pieces</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=100" alt="Vintage Antiques" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.google.com/maps/search/Father+Son+Antiques+Asheville" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Father & Son Antiques (Asheville)
+                      </a>
+                      <p className="text-sm">Vintage clothing and unique statement pieces</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Goodwill (Charlotte, Raleigh):</strong> Multiple locations with rotating stock</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=100" alt="Goodwill NC" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.goodwillnc.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Goodwill (Charlotte, Raleigh)
+                      </a>
+                      <p className="text-sm">Multiple locations with rotating stock</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -722,18 +796,33 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🌊</span> South Carolina
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Palmetto Goodwill (Charleston, Columbia):</strong> Southern style meets thrift prices</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=100" alt="Palmetto Goodwill" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.palmettogoodwill.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Palmetto Goodwill (Charleston, Columbia)
+                      </a>
+                      <p className="text-sm">Southern style meets thrift prices</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>It's a New Beginning Thrift (Myrtle Beach):</strong> Beach vibes, affordable finds</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1488632276898-8d3f0c0b1c6c?w=100" alt="Beach Thrift" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.google.com/maps/search/Its+a+New+Beginning+Thrift+Myrtle+Beach" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        It's a New Beginning Thrift (Myrtle Beach)
+                      </a>
+                      <p className="text-sm">Beach vibes, affordable finds</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Southern Thrift (Greenville):</strong> Family-friendly, great for basics</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=100" alt="Southern Thrift" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.google.com/maps/search/Southern+Thrift+Greenville" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Southern Thrift (Greenville)
+                      </a>
+                      <p className="text-sm">Family-friendly, great for basics</p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -743,22 +832,42 @@ const Resources = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-teal-600">🗽</span> New York
                 </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Housing Works (Manhattan, Brooklyn):</strong> Designer pieces, supports housing + HIV/AIDS services</span>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=100" alt="Housing Works" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.housingworks.org" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Housing Works (Manhattan, Brooklyn)
+                      </a>
+                      <p className="text-sm">Designer pieces, supports housing + HIV/AIDS services</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Beacon's Closet (Brooklyn, Queens):</strong> Trendsetter central, curated vintage</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=100" alt="Beacon's Closet" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.beaconscloset.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Beacon's Closet (Brooklyn, Queens)
+                      </a>
+                      <p className="text-sm">Trendsetter central, curated vintage</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>L Train Vintage (Brooklyn):</strong> Instagram-famous for a reason</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=100" alt="L Train Vintage" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.ltrainvintage.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        L Train Vintage (Brooklyn)
+                      </a>
+                      <p className="text-sm">Instagram-famous for a reason</p>
+                    </div>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-500 font-bold">•</span>
-                    <span><strong>Buffalo Exchange (Manhattan):</strong> Affordable, always rotating stock</span>
+                  <li className="flex items-start gap-3">
+                    <img src="https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?w=100" alt="Buffalo Exchange NYC" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                    <div>
+                      <a href="https://www.buffaloexchange.com" target="_blank" rel="noopener noreferrer" className="font-bold text-teal-600 hover:text-teal-700 underline">
+                        Buffalo Exchange (Manhattan)
+                      </a>
+                      <p className="text-sm">Affordable, always rotating stock</p>
+                    </div>
                   </li>
                 </ul>
               </div>
