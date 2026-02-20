@@ -1,6 +1,30 @@
-import { ExternalLink, Mail, Globe } from 'lucide-react';
+import { ExternalLink, Mail, Globe, Download, Smartphone, Camera, UtensilsCrossed, ClipboardList, Leaf, Brain, Zap } from 'lucide-react';
 
 const Resources = () => {
+  const freeResources = [
+    {
+      title: '21-Day Plant-Based Reset Guide',
+      description: 'Kickstart your healing journey with a comprehensive meal plan, shopping lists, and daily wellness tips.',
+      downloadLink: '/downloads/21-day-reset-guide.pdf',
+      image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
+      badge: 'Most Popular'
+    },
+    {
+      title: 'Thyroid Lab Reference Sheet',
+      description: 'Understand your thyroid labs like a pro. Print-friendly guide to TSH, T3, T4, and antibodies.',
+      downloadLink: '/downloads/thyroid-lab-reference.pdf',
+      image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400',
+      badge: 'Essential'
+    },
+    {
+      title: 'Anti-Inflammatory Foods Cheat Sheet',
+      description: 'Quick-reference guide to the best foods for reducing inflammation and supporting thyroid health.',
+      downloadLink: '/downloads/anti-inflammatory-foods.pdf',
+      image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400',
+      badge: 'Free'
+    }
+  ];
+
   const partners = [
     {
       name: 'PG Parks & Planning',
@@ -69,40 +93,237 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Health Apps & Tools Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-teal-100/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center mb-12">
-            <div className="inline-block bg-primary/20 px-4 py-2 rounded-full text-sm font-medium mb-4 text-primary">
-              Digital Health Apps & Tools
+      {/* Hero Section */}
+      <section 
+        className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
+        style={{
+          backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-teal-900/70"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Free Resources & Tools
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Empower Your Healing Journey</h2>
-            <p className="text-xl text-gray-700 mb-6">
-              Free and premium digital tools designed for real-life healing, habit change, and wellness tracking. Built by a thyroid cancer survivor for women who want results, not just inspiration.
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Everything You Need to Heal
+            </h1>
+            <p className="text-xl md:text-2xl text-teal-50 leading-relaxed">
+              Free downloads, powerful health apps, and wellness products to support your journey
             </p>
-            <div className="flex flex-wrap justify-center gap-8">
-              {/* LabelScanner App */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xs w-full flex flex-col items-center">
-                <img src="/images/apps/labelscanner.png" alt="LabelScanner App" className="w-20 h-20 mb-3" />
-                <h3 className="font-bold text-lg mb-1">LabelScanner</h3>
-                <p className="text-sm text-gray-600 mb-3">Scan food labels, spot hidden ingredients, and make smarter choices in seconds.</p>
-                <a href="/labelscanner" className="w-full">
-                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Try Now</button>
-                </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Lead Magnets Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-teal-100 px-4 py-2 rounded-full text-sm font-medium text-teal-700 mb-4">
+                100% Free Downloads
               </div>
-              {/* MealPrep App */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xs w-full flex flex-col items-center">
-                <img src="/images/apps/mealprep.png" alt="MealPrep App" className="w-20 h-20 mb-3" />
-                <h3 className="font-bold text-lg mb-1">MealPrep</h3>
-                <p className="text-sm text-gray-600 mb-3">Plan, prep, and track thyroid-friendly meals with ease. Includes shopping lists and batch cooking tips.</p>
-                <a href="/mealprep" className="w-full">
-                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Try Now</button>
-                </a>
-              </div>
-              {/* Add more tools as needed */}
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Start Your Healing Today
+              </h2>
+              <p className="text-xl text-gray-600">
+                Evidence-based guides created from my personal journey through thyroid cancer recovery
+              </p>
             </div>
-            {/* Trust Badges & Social Proof */}
-            <div className="flex flex-wrap justify-center gap-6 mt-10">
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {freeResources.map((resource, index) => (
+                <div key={index} className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                  <div className="relative">
+                    <img 
+                      src={resource.image} 
+                      alt={resource.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {resource.badge}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {resource.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {resource.description}
+                    </p>
+                    <a 
+                      href={resource.downloadLink}
+                      download
+                      className="flex items-center justify-center gap-2 w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors font-semibold"
+                    >
+                      <Download className="w-5 h-5" />
+                      Download Free
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-gray-600 mb-4">
+                📧 <strong>Want more free resources?</strong> Join my email list for weekly healing tips and exclusive downloads.
+              </p>
+              <a 
+                href="mailto:askdogood@gmail.com?subject=Free Resources"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors font-semibold"
+              >
+                <Mail className="w-5 h-5" />
+                Get Weekly Tips
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Health Apps & Tools Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-primary/20 px-4 py-2 rounded-full text-sm font-medium mb-4 text-primary">
+                <Smartphone className="w-4 h-4 inline mr-2" />
+                Digital Health Apps
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Healing Tools in Your Pocket</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Free and accessible web apps designed for real-life healing. Built by a thyroid cancer survivor for Black and Brown communities who want results, not just inspiration.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* LabelScanner App */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-8 text-white text-center">
+                  <Camera className="w-16 h-16 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">LabelScanner</h3>
+                  <p className="text-teal-100 text-sm">AI-Powered Food Analysis</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Scan food labels and instantly identify hidden ingredients that could be harming your thyroid health.
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-teal-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Instant ingredient analysis</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-teal-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Flags inflammatory ingredients</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-teal-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Thyroid-safe alternatives</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-teal-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Works in-store, no app needed</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-4 italic">
+                    Perfect for: Grocery shopping, meal planning, avoiding hidden triggers
+                  </p>
+                  <a href="/labelscanner" className="block">
+                    <button className="w-full bg-teal-600 text-white rounded-xl py-3 font-semibold hover:bg-teal-700 transition">
+                      Try Now - It's Free
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              {/* MealPrep App */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                <div className="bg-gradient-to-br from-pink-500 to-pink-600 p-8 text-white text-center">
+                  <UtensilsCrossed className="w-16 h-16 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">MealPrep</h3>
+                  <p className="text-pink-100 text-sm">Smart Meal Planning</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Plan and prep thyroid-friendly meals with ease. Takes the guesswork out of what to eat.
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-pink-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Weekly meal plans</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-pink-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Auto-generated shopping lists</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-pink-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Batch cooking tips</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-pink-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Budget-friendly options</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-4 italic">
+                    Perfect for: Busy schedules, meal prepping, family cooking
+                  </p>
+                  <a href="/mealprep" className="block">
+                    <button className="w-full bg-pink-600 text-white rounded-xl py-3 font-semibold hover:bg-pink-700 transition">
+                      Try Now - It's Free
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Clinical Recipes App */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border-2 border-orange-400">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white text-center">
+                  <Leaf className="w-16 h-16 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Clinical Recipes</h3>
+                  <p className="text-orange-100 text-sm">Food as Medicine</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Evidence-based recipes designed to support thyroid function, reduce inflammation, and heal your body.
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">100+ anti-inflammatory recipes</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Nutrition breakdown per serving</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Filter by health condition</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Save your favorites</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-4 italic">
+                    Perfect for: Chronic illness, thyroid support, autoimmune healing
+                  </p>
+                  <a href="/clinical-recipes" className="block">
+                    <button className="w-full bg-orange-600 text-white rounded-xl py-3 font-semibold hover:bg-orange-700 transition">
+                      Explore Recipes
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-6 mb-10">
               <div className="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold text-sm">
                 <span>4.9/5 User Rating</span>
               </div>
@@ -113,168 +334,264 @@ const Resources = () => {
                 <span>Evidence-Based & Tested</span>
               </div>
             </div>
+
             {/* Why AskDoGood Tools? */}
-            <div className="mt-10 max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-teal-100/10 rounded-xl p-6">
-              <h4 className="font-bold text-lg mb-2 text-primary">Why AskDoGood vs. Generic Apps?</h4>
-              <ul className="text-left text-gray-700 text-sm space-y-2">
-                <li>• Built for Black women, by a thyroid cancer survivor who’s lived it</li>
-                <li>• Focused on real results, not just tracking</li>
-                <li>• Integrates with your healing journey and community</li>
-                <li>• 100% privacy—your data is never sold</li>
+            <div className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-teal-100/10 rounded-xl p-8">
+              <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
+                <Brain className="w-6 h-6" />
+                Why AskDoGood vs. Generic Apps?
+              </h4>
+              <ul className="text-gray-700 space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-teal-600 text-xl">•</span>
+                  <span>Built for Black and Brown communities, by a thyroid cancer survivor who's lived it</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-teal-600 text-xl">•</span>
+                  <span>Focused on real results and healing, not just tracking numbers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-teal-600 text-xl">•</span>
+                  <span>Integrates with your personal journey and community</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-teal-600 text-xl">•</span>
+                  <span>100% privacy—your data is never sold or shared</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-teal-600 text-xl">•</span>
+                  <span>No downloads, no app stores—works instantly in your browser</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Shop Wellness Tools Bar */}
-      <section className="py-12 bg-gradient-to-r from-teal-100/30 to-pink-100/30">
+      {/* Shop Wellness Products Section */}
+      <section className="py-20 bg-gradient-to-br from-pink-50 via-orange-50 to-teal-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center text-primary">Shop Wellness Tools</h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
-                <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl transition">
-                  <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400" alt="Thyroid Health Mastery Course" className="w-full h-32 object-cover rounded-lg mb-2" />
-                  <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
-                  <p className="text-sm mb-2">$97</p>
-                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Buy Now</button>
-                </div>
-              </a>
-              <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
-                <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl transition">
-                  <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=400" alt="21-Day Plant-Based Reset" className="w-full h-32 object-cover rounded-lg mb-2" />
-                  <h4 className="font-bold text-lg mb-1">21-Day Plant-Based Reset</h4>
-                  <p className="text-sm mb-2">$47</p>
-                  <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Buy Now</button>
-                </div>
-              </a>
+            <div className="text-center mb-12">
+              <div className="inline-block bg-orange-100 px-4 py-2 rounded-full text-sm font-medium text-orange-700 mb-4">
+                Premium Wellness Products
+              </div>
+              <h3 className="text-4xl font-bold mb-4 text-gray-900">
+                Deep-Dive Healing Programs
+              </h3>
+              <p className="text-xl text-gray-600">
+                Comprehensive courses and programs for those ready to transform their health
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
-        style={{
-          backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-teal-900/70"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Community & Collaboration
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Thyroid Health Mastery Course */}
+              <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
+                  <div className="relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600" 
+                      alt="Thyroid Health Mastery Course" 
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        Bestseller
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">Thyroid Health Mastery Course</h4>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      8-week comprehensive program covering labs, nutrition, supplements, stress management, and lifestyle changes for optimal thyroid function.
+                    </p>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-teal-600" />
+                        <span>40+ video lessons</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-teal-600" />
+                        <span>Downloadable workbook & meal plans</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-teal-600" />
+                        <span>Lifetime access + updates</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                      <span className="text-3xl font-bold text-teal-600">$97</span>
+                      <button className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">
+                        Get Course
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              {/* 21-Day Plant-Based Reset */}
+              <a href="https://gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
+                  <div className="relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" 
+                      alt="21-Day Plant-Based Reset" 
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        Quick Start
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">21-Day Plant-Based Reset</h4>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      Reduce inflammation, boost energy, and reset your system with 21 days of guided plant-based eating designed for thyroid health.
+                    </p>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-pink-600" />
+                        <span>21 complete meal plans</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-pink-600" />
+                        <span>Shopping lists & prep guides</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-700">
+                        <ClipboardList className="w-4 h-4 text-pink-600" />
+                        <span>Daily wellness check-ins</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                      <span className="text-3xl font-bold text-pink-600">$47</span>
+                      <button className="bg-pink-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-pink-700 transition">
+                        Start Reset
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Resources & Partners
-            </h1>
-            <p className="text-xl md:text-2xl text-teal-50 leading-relaxed">
-              Building wellness together through education, technology, and community support
-            </p>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-600">
+                💯 <strong>30-Day Money-Back Guarantee</strong> · All products include lifetime access and updates
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Partners Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto space-y-12">
-            {partners.map((partner, index) => (
-              <div
-                key={partner.name}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } flex flex-col md:flex`}
-              >
-                {/* Image Section - Community in Action */}
-                {partner.image && (
-                  <div className="md:w-1/3 relative h-64 md:h-auto">
-                    <img
-                      src={partner.image}
-                      alt={`${partner.name} community`}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-teal-100 px-4 py-2 rounded-full text-sm font-medium text-teal-700 mb-4">
+                Community & Collaboration
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Partners & Organizations
+              </h2>
+              <p className="text-xl text-gray-600">
+                Building wellness together through education, technology, and community support
+              </p>
+            </div>
+
+            <div className="space-y-12">
+              {partners.map((partner, index) => (
+                <div
+                  key={partner.name}
+                  className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
+                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  } flex flex-col md:flex`}
+                >
+                  {/* Image Section */}
+                  {partner.image && (
+                    <div className="md:w-1/3 relative h-64 md:h-auto">
+                      <img
+                        src={partner.image}
+                        alt={`${partner.name} community`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="max-w-[120px] h-auto bg-white/90 p-2 rounded"
+                        />
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Fallback Logo Section */}
+                  {!partner.image && (
+                    <div className="md:w-1/3 bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center">
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        className="max-w-[120px] h-auto bg-white/90 p-2 rounded"
+                        className="max-w-full h-auto max-h-40 object-contain"
                       />
                     </div>
-                  </div>
-                )}
-                
-                {/* Fallback Logo Section if no image */}
-                {!partner.image && (
-                  <div className="md:w-1/3 bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center">
-                    <img
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="max-w-full h-auto max-h-40 object-contain"
-                    />
-                  </div>
-                )}
+                  )}
 
-                {/* Content Section */}
-                <div className="md:w-2/3 p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    {partner.name}
-                  </h2>
+                  {/* Content Section */}
+                  <div className="md:w-2/3 p-8">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      {partner.name}
+                    </h2>
 
-                  {/* Mission */}
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-2">
-                      Their Mission
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {partner.mission}
-                    </p>
-                  </div>
+                    {/* Mission */}
+                    <div className="mb-6">
+                      <h3 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-2">
+                        Their Mission
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {partner.mission}
+                      </p>
+                    </div>
 
-                  {/* My Connection */}
-                  <div className="mb-6 bg-gradient-to-r from-teal-50 to-pink-50 p-4 rounded-lg border-l-4 border-teal-500">
-                    <h3 className="text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
-                      My Connection
-                    </h3>
-                    <p className="text-gray-800 leading-relaxed italic">
-                      {partner.myConnection}
-                    </p>
-                  </div>
+                    {/* My Connection */}
+                    <div className="mb-6 bg-gradient-to-r from-teal-50 to-pink-50 p-4 rounded-lg border-l-4 border-teal-500">
+                      <h3 className="text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
+                        My Connection
+                      </h3>
+                      <p className="text-gray-800 leading-relaxed italic">
+                        {partner.myConnection}
+                      </p>
+                    </div>
 
-                  {/* Links */}
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href={partner.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 font-medium"
-                    >
-                      <Globe className="w-5 h-5" />
-                      Visit Website
-                    </a>
-                    <a
-                      href={partner.contact}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-600 border-2 border-teal-600 rounded-lg hover:bg-teal-50 transition-colors duration-200 font-medium"
-                    >
-                      {partner.contact.startsWith('mailto:') ? (
-                        <Mail className="w-5 h-5" />
-                      ) : (
-                        <ExternalLink className="w-5 h-5" />
-                      )}
-                      Contact
-                    </a>
+                    {/* Links */}
+                    <div className="flex flex-wrap gap-4">
+                      <a
+                        href={partner.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 font-medium"
+                      >
+                        <Globe className="w-5 h-5" />
+                        Visit Website
+                      </a>
+                      <a
+                        href={partner.contact}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-white text-teal-600 border-2 border-teal-600 rounded-lg hover:bg-teal-50 transition-colors duration-200 font-medium"
+                      >
+                        {partner.contact.startsWith('mailto:') ? (
+                          <Mail className="w-5 h-5" />
+                        ) : (
+                          <ExternalLink className="w-5 h-5" />
+                        )}
+                        Contact
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
