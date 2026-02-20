@@ -112,49 +112,60 @@ export default function SpicyCarousel() {
   const currentFact = funFacts[currentSlide];
 
   return (
-    <section className="py-12 bg-gradient-to-br from-secondary/20 to-background">
-      <div className="container">
+    <section className="py-20 bg-gradient-to-br from-secondary/20 via-primary/5 to-background relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-10" aria-hidden="true">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl animate-pulse" />
+      </div>
+
+      <div className="container relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <Sparkles className="w-6 h-6 text-primary animate-pulse" />
-              <h2 className="text-3xl font-bold">Daily Dose of Realness</h2>
-              <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full mb-6 shadow-xl">
+              <Sparkles className="h-5 w-5 text-white animate-pulse" />
+              <span className="text-sm font-bold text-white uppercase tracking-wider">
+                Did You Know?
+              </span>
+              <Sparkles className="h-5 w-5 text-white animate-pulse" />
             </div>
-            <p className="text-muted-foreground">
-              Random facts, tips, and tea you actually need to know
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
+              Daily Dose of <span className="text-primary">Realness</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Random facts, tips, and tea you actually need to know — served fresh daily
             </p>
           </div>
 
           {/* Carousel */}
-          <Card className="relative overflow-hidden border-2 shadow-xl">
+          <Card className="relative overflow-hidden border-2 shadow-2xl hover:shadow-3xl transition-all duration-300">
             <div className={`absolute inset-0 bg-gradient-to-br ${currentFact.color} opacity-10`}></div>
             
-            <CardContent className="relative z-10 p-8 md:p-12">
+            <CardContent className="relative z-10 p-10 md:p-14">
               <div className="text-center">
                 {/* Icon */}
-                <div className="text-6xl mb-4 animate-bounce">
+                <div className="text-7xl mb-6 animate-bounce drop-shadow-lg">
                   {currentFact.icon}
                 </div>
 
                 {/* Category Badge */}
-                <div className={`inline-block px-4 py-1 rounded-full bg-gradient-to-r ${currentFact.color} text-white font-semibold text-sm mb-4`}>
+                <div className={`inline-block px-6 py-2 rounded-full bg-gradient-to-r ${currentFact.color} text-white font-bold text-sm mb-6 shadow-lg`}>
                   {currentFact.category}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                   {currentFact.title}
                 </h3>
 
                 {/* Content */}
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
                   {currentFact.content}
                 </p>
 
                 {/* Slide Indicators */}
-                <div className="flex justify-center gap-2 mb-6">
+                <div className="flex justify-center gap-2 mb-8">
                   {funFacts.map((_, index) => (
                     <button
                       key={index}
@@ -162,10 +173,10 @@ export default function SpicyCarousel() {
                         setCurrentSlide(index);
                         setIsAutoPlay(false);
                       }}
-                      className={`h-2 rounded-full transition-all ${
+                      className={`h-3 rounded-full transition-all ${
                         index === currentSlide
-                          ? 'w-8 bg-primary'
-                          : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                          ? 'w-10 bg-primary shadow-lg'
+                          : 'w-3 bg-muted-foreground/30 hover:bg-muted-foreground/50'
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
@@ -173,21 +184,22 @@ export default function SpicyCarousel() {
                 </div>
 
                 {/* Navigation */}
-                <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-4 flex-wrap">
                   <Button
                     variant="outline"
-                    size="sm"
+                    size="lg"
                     onClick={prevSlide}
+                    className="rounded-3xl shadow-md hover:shadow-xl transition-all"
                     aria-label="Previous slide"
                   >
-                    ← Prev
+                    ← Previous
                   </Button>
                   
                   <Button
                     variant="ghost"
-                    size="sm"
+                    size="lg"
                     onClick={() => setIsAutoPlay(!isAutoPlay)}
-                    className="gap-2"
+                    className="gap-2 rounded-3xl"
                   >
                     <RefreshCw className={`w-4 h-4 ${isAutoPlay ? 'animate-spin' : ''}`} />
                     {isAutoPlay ? 'Pause' : 'Auto Play'}
@@ -195,8 +207,9 @@ export default function SpicyCarousel() {
                   
                   <Button
                     variant="outline"
-                    size="sm"
+                    size="lg"
                     onClick={nextSlide}
+                    className="rounded-3xl shadow-md hover:shadow-xl transition-all"
                     aria-label="Next slide"
                   >
                     Next →
@@ -207,15 +220,17 @@ export default function SpicyCarousel() {
           </Card>
 
           {/* CTA */}
-          <div className="text-center mt-6">
-            <p className="text-sm text-muted-foreground mb-3">
-              Want more tips like this? Subscribe to our newsletter!
-            </p>
-            <Button asChild>
-              <Link href="/blog">
-                Read More on the Blog
-              </Link>
-            </Button>
+          <div className="text-center mt-10">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-base text-muted-foreground mb-4">
+                <strong className="text-foreground">💡 Want more tips like this?</strong> Get daily wellness wisdom, recipes, and real talk delivered to your inbox.
+              </p>
+              <Button asChild size="lg" className="rounded-3xl shadow-lg hover:shadow-xl transition-all">
+                <Link href="/blog">
+                  Explore All Tips & Articles
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
