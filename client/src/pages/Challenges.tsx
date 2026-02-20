@@ -11,12 +11,12 @@ import { useState } from "react";
 
 export default function Challenges() {
   const { user } = useUser();
-  const { data: challenges } = trpc.challenges.getActive.useQuery();
-  const { data: completions } = trpc.challenges.getMyCompletions.useQuery();
-  const { data: pointsBalance } = trpc.points.getBalance.useQuery();
+  const { data: challenges, isLoading: challengesLoading, error: challengesError } = trpc.challenges?.getActive?.useQuery() ?? { data: undefined, isLoading: false, error: null };
+  const { data: completions, isLoading: completionsLoading } = trpc.challenges?.getMyCompletions?.useQuery() ?? { data: undefined, isLoading: false };
+  const { data: pointsBalance } = trpc.points?.getBalance?.useQuery() ?? { data: undefined };
   const [selectedType, setSelectedType] = useState<string>("all");
 
-  const completeMutation = trpc.challenges.complete.useMutation({
+  const completeMutation = trpc.challenges?.complete?.useMutation({
     onSuccess: (data) => {
       toast.success(`Challenge completed! You earned ${data.pointsEarned} points! 🎉`);
       window.location.reload();
@@ -24,7 +24,44 @@ export default function Challenges() {
     onError: (error) => {
       toast.error(error.message || "Failed to complete challenge. Please try again.");
     },
-  });
+  }) ?? { mutate: () => {}, isPending: false };
+
+  // Handle tRPC not being available
+  if (!trpc.challenges) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle>Challenges Unavailable</CardTitle>
+            <CardDescription>The challenges system is currently being set up. Please check back soon!</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button asChild className="w-full">
+              <a href="/">Return Home</a>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (challengesError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle>Error Loading Challenges</CardTitle>
+            <CardDescription>{challengesError.message || "Failed to load challenges"}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button asChild className="w-full">
+              <a href="/">Return Home</a>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   if (!user) {
     return (
@@ -51,6 +88,20 @@ export default function Challenges() {
     { value: "monthly", label: "Monthly" },
     { value: "one_time", label: "One-Time" },
   ];
+
+  // Show loading state
+  if (challengesLoading || completionsLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Card className="max-w-md">
+          <CardHeader>
+            <CardTitle>Loading Challenges...</CardTitle>
+            <CardDescription>Please wait while we load your challenges.</CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
+    );
+  }
 
   const completedChallengeIds = new Set(completions?.map((c) => c.challengeId) || []);
 
