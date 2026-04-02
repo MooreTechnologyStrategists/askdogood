@@ -16,6 +16,7 @@ import {
   X,
   Scan,
   Heart,
+  Leaf,
 } from "lucide-react";
 
 export default function Header() {
@@ -28,6 +29,7 @@ export default function Header() {
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/stories/chyna-white", label: "Stories", icon: BookOpen },
     { href: "/resources", label: "Resources", icon: Library },
+    { href: "/herbs", label: "Herbs", icon: Leaf },
     {
       label: "Health Apps",
       icon: Heart,

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -53,6 +53,13 @@ interface ScanResult {
   minerals: string[];
 }
 
+interface ScanHistoryItem {
+  scannedAt: string;
+  productName: string;
+  healthScore: number;
+  sodium: number;
+}
+
 export default function LabelScanner() {
   const [healthProfile, setHealthProfile] = useState<HealthProfile>({
     conditions: [],
@@ -60,9 +67,42 @@ export default function LabelScanner() {
     restrictions: []
   });
   const [scanResult, setScanResult] = useState<ScanResult | null>(null);
+  const [scanHistory, setScanHistory] = useState<ScanHistoryItem[]>([]);
   const [isScanning, setIsScanning] = useState(false);
   const [manualInput, setManualInput] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedProfile = localStorage.getItem("adg-labelscanner-profile");
+    const savedHistory = localStorage.getItem("adg-labelscanner-history");
+
+    if (savedProfile) {
+      try {
+        setHealthProfile(JSON.parse(savedProfile) as HealthProfile);
+      } catch {
+        // Keep defaults when local data is malformed.
+      }
+    }
+
+    if (savedHistory) {
+      try {
+        const parsed = JSON.parse(savedHistory) as ScanHistoryItem[];
+        if (Array.isArray(parsed)) {
+          setScanHistory(parsed.slice(0, 8));
+        }
+      } catch {
+        // Keep history empty when local data is malformed.
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("adg-labelscanner-profile", JSON.stringify(healthProfile));
+  }, [healthProfile]);
+
+  useEffect(() => {
+    localStorage.setItem("adg-labelscanner-history", JSON.stringify(scanHistory));
+  }, [scanHistory]);
 
   const commonConditions = [
     "High Blood Pressure", "Diabetes", "Thyroid Issues", "Heart Disease",
@@ -192,6 +232,15 @@ export default function LabelScanner() {
     }
 
     setScanResult(result);
+    setScanHistory((prev) => [
+      {
+        scannedAt: new Date().toISOString(),
+        productName,
+        healthScore: result.healthScore,
+        sodium: result.nutritionFacts.sodium,
+      },
+      ...prev,
+    ].slice(0, 8));
   };
 
   const getHealthScoreColor = (score: number) => {
@@ -369,6 +418,46 @@ export default function LabelScanner() {
                 )}
               </CardContent>
             </Card>
+
+            {/* Scan History */}
+            {scanHistory.length > 0 && (
+              <Card className="rounded-3xl shadow-xl border-2 border-primary/20">
+                <CardHeader>
+                  <CardTitle className="text-lg">Recent Scans</CardTitle>
+                  <CardDescription>Re-run any recent product in one click</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  {scanHistory.map((item, idx) => (
+                    <button
+                      key={`${item.scannedAt}-${idx}`}
+                      type="button"
+                      onClick={() => simulateScan(item.productName)}
+                      className="w-full text-left p-3 rounded-2xl border hover:border-primary/50 hover:bg-primary/5 transition-colors"
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="font-medium text-sm truncate">{item.productName}</p>
+                        <span className={`text-sm font-semibold ${getHealthScoreColor(item.healthScore)}`}>
+                          {item.healthScore}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Sodium: {item.sodium}mg • {new Date(item.scannedAt).toLocaleDateString()}
+                      </p>
+                    </button>
+                  ))}
+                  <Button
+                    variant="outline"
+                    className="w-full rounded-full"
+                    onClick={() => {
+                      setScanHistory([]);
+                      localStorage.removeItem("adg-labelscanner-history");
+                    }}
+                  >
+                    Clear History
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Results */}
             {scanResult && !isScanning && (

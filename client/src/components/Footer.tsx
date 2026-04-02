@@ -93,6 +93,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4">Learn More</h4>
             <ul className="space-y-2">
+                  <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                    🌿 A-Z Herb Dictionary
+                  </Link>
+                </li>
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
                   About RoSeé
@@ -124,16 +128,19 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4">Wellness Topics</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/wellness/thyroid-health" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🦋 Thyroid Health</Link>
+                <Link href="/course/thyroid-health-mastery" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🦋 Thyroid Health</Link>
               </li>
               <li>
-                <Link href="/wellness/chronic-illness" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">💪 Chronic Illness Recovery</Link>
+                <Link href="/journey" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">💪 Chronic Illness Recovery</Link>
               </li>
               <li>
-                <Link href="/wellness/nutrition" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🥗 Nutrition & Superfoods</Link>
+                <Link href="/clinical-recipes" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🥗 Nutrition & Superfoods</Link>
               </li>
               <li>
-                <Link href="/wellness/mental" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🧘‍♀️ Mental Wellness</Link>
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🧘‍♀️ Mental Wellness</Link>
+                </li>
+                <li>
+                  <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🌿 Herb Dictionary</Link>
               </li>
               <li>
                 <a href="https://thedopecloudteacher.org" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">☁️ Tech & Azure Career</a>

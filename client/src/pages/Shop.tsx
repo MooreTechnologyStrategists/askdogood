@@ -1227,7 +1227,7 @@ export default function Shop() {
   const visibleProducts = products.filter((product) => !product.hidden && product.image);
 
   const applyPromoCode = () => {
-    if (promoCode.toUpperCase() === "MLKLEGACY") {
+    if (promoCode.toUpperCase() === "APRIL2026") {
       setPromoApplied(true);
       setPromoError("");
     } else {
@@ -1238,29 +1238,40 @@ export default function Shop() {
 
   return (
     <div className="min-h-screen">
-      {/* MLK Legacy Promo Banner */}
-      <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-white">
+      {/* April Wellness Launch Banner */}
+      <div className="bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-primary-foreground">
         <div className="container py-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm font-semibold uppercase tracking-wide mb-1">
-                🕊️ Honoring Dr. King's Legacy
+                🌿 April Wellness Launch — Limited Time
               </p>
               <p className="text-lg md:text-xl font-bold">
-                50% OFF Thyroid Health Mastery Course This Week
+                Thyroid Health Mastery Course — $97 <span className="line-through opacity-70">$197</span> · Save $100
               </p>
               <p className="text-sm opacity-90 mt-1">
-                Use code <span className="font-mono bg-white/20 px-2 py-0.5 rounded">MLKLEGACY</span> at checkout • Valid through January 27, 2026
+                Use code <span className="font-mono bg-white/20 px-2 py-0.5 rounded">APRIL2026</span> at checkout • April only — don't miss it
               </p>
             </div>
-            <Button 
-              className="rounded-3xl bg-white text-amber-700 hover:bg-gray-100 font-bold shrink-0 px-8 py-3 text-lg"
-              asChild
-            >
-              <Link href="/course/thyroid-health-mastery">
-                Get Course Now →
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+              <Button
+                className="rounded-3xl bg-white text-primary hover:bg-gray-100 font-bold px-8 py-3 text-lg"
+                asChild
+              >
+                <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer">
+                  Get Course Now →
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                className="rounded-3xl border-primary-foreground/50 text-primary-foreground hover:bg-white/10 font-bold px-6 py-3"
+                asChild
+              >
+                <Link href="/herbs">
+                  Free Herb Dictionary →
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -1274,7 +1285,7 @@ export default function Shop() {
               30-Day Money-Back Guarantee
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
-              Your Healing Journey Starts Here
+              April Wellness Launch 🌿
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Evidence-based programs and resources designed specifically for Black women

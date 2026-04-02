@@ -1,15 +1,88 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CheckCircle2, Download, ClipboardList, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import SEO from "@/components/SEO";
 import { trackLeadMagnetView } from "@/lib/analytics";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 
+type SymptomEntry = {
+  date: string;
+  energy: number;
+  mood: number;
+  stress: number;
+  sleepHours: number;
+  notes: string;
+};
+
 export default function SymptomTracker() {
+  const [entry, setEntry] = useState<SymptomEntry>({
+    date: new Date().toISOString().slice(0, 10),
+    energy: 5,
+    mood: 5,
+    stress: 5,
+    sleepHours: 7,
+    notes: "",
+  });
+  const [entries, setEntries] = useState<SymptomEntry[]>([]);
+
   useEffect(() => {
     trackLeadMagnetView('symptom-tracker', '/symptom-tracker');
   }, []);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("adg-symptom-tracker-entries");
+    if (!saved) return;
+
+    try {
+      const parsed = JSON.parse(saved) as SymptomEntry[];
+      if (Array.isArray(parsed)) {
+        setEntries(parsed);
+      }
+    } catch {
+      // Ignore malformed local data and keep the tracker usable.
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("adg-symptom-tracker-entries", JSON.stringify(entries));
+  }, [entries]);
+
+  const latestEntries = useMemo(() => entries.slice(0, 7), [entries]);
+
+  const averages = useMemo(() => {
+    if (entries.length === 0) {
+      return { energy: 0, mood: 0, stress: 0, sleepHours: 0 };
+    }
+
+    const total = entries.reduce(
+      (acc, item) => {
+        acc.energy += item.energy;
+        acc.mood += item.mood;
+        acc.stress += item.stress;
+        acc.sleepHours += item.sleepHours;
+        return acc;
+      },
+      { energy: 0, mood: 0, stress: 0, sleepHours: 0 },
+    );
+
+    return {
+      energy: total.energy / entries.length,
+      mood: total.mood / entries.length,
+      stress: total.stress / entries.length,
+      sleepHours: total.sleepHours / entries.length,
+    };
+  }, [entries]);
+
+  const saveEntry = () => {
+    if (!entry.date) return;
+
+    setEntries((prev) => {
+      const withoutSameDay = prev.filter((item) => item.date !== entry.date);
+      return [entry, ...withoutSameDay].sort((a, b) => b.date.localeCompare(a.date));
+    });
+  };
 
   useScrollDepthTracking('Lead Magnet: Symptom Tracker');
 
@@ -201,6 +274,151 @@ export default function SymptomTracker() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Tracker */}
+      <section className="py-16 bg-background border-y">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold mb-3">Track Inside the App</h2>
+              <p className="text-muted-foreground">
+                Save daily check-ins right in your browser. Your entries stay on your device.
+              </p>
+            </div>
+
+            <Card className="border-primary/20 mb-8">
+              <CardContent className="p-6 space-y-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <label className="text-sm font-medium">
+                    Date
+                    <input
+                      type="date"
+                      value={entry.date}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, date: e.target.value }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2"
+                    />
+                  </label>
+
+                  <label className="text-sm font-medium">
+                    Energy (1-10)
+                    <input
+                      type="number"
+                      min={1}
+                      max={10}
+                      value={entry.energy}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, energy: Number(e.target.value) || 1 }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2"
+                    />
+                  </label>
+
+                  <label className="text-sm font-medium">
+                    Mood (1-10)
+                    <input
+                      type="number"
+                      min={1}
+                      max={10}
+                      value={entry.mood}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, mood: Number(e.target.value) || 1 }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2"
+                    />
+                  </label>
+
+                  <label className="text-sm font-medium">
+                    Stress (1-10)
+                    <input
+                      type="number"
+                      min={1}
+                      max={10}
+                      value={entry.stress}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, stress: Number(e.target.value) || 1 }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2"
+                    />
+                  </label>
+
+                  <label className="text-sm font-medium">
+                    Sleep Hours
+                    <input
+                      type="number"
+                      min={0}
+                      max={14}
+                      step={0.5}
+                      value={entry.sleepHours}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, sleepHours: Number(e.target.value) || 0 }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2"
+                    />
+                  </label>
+
+                  <label className="text-sm font-medium md:col-span-2 lg:col-span-1">
+                    Notes
+                    <textarea
+                      value={entry.notes}
+                      onChange={(e) => setEntry((prev) => ({ ...prev, notes: e.target.value }))}
+                      className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 min-h-10"
+                      placeholder="Medication changes, stressor, cycle day, foods, etc."
+                    />
+                  </label>
+                </div>
+
+                <div className="flex gap-3 flex-wrap">
+                  <Button onClick={saveEntry}>Save Today&apos;s Entry</Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => {
+                      setEntries([]);
+                      localStorage.removeItem("adg-symptom-tracker-entries");
+                    }}
+                  >
+                    Clear Saved Data
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-8">
+              <Card className="border-primary/20"><CardContent className="p-4"><p className="text-xs text-muted-foreground">Avg Energy</p><p className="text-2xl font-bold">{averages.energy.toFixed(1)}</p></CardContent></Card>
+              <Card className="border-primary/20"><CardContent className="p-4"><p className="text-xs text-muted-foreground">Avg Mood</p><p className="text-2xl font-bold">{averages.mood.toFixed(1)}</p></CardContent></Card>
+              <Card className="border-primary/20"><CardContent className="p-4"><p className="text-xs text-muted-foreground">Avg Stress</p><p className="text-2xl font-bold">{averages.stress.toFixed(1)}</p></CardContent></Card>
+              <Card className="border-primary/20"><CardContent className="p-4"><p className="text-xs text-muted-foreground">Avg Sleep</p><p className="text-2xl font-bold">{averages.sleepHours.toFixed(1)}h</p></CardContent></Card>
+            </div>
+
+            <Card className="border-primary/20">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-lg mb-4">Recent Entries</h3>
+                {latestEntries.length === 0 ? (
+                  <p className="text-muted-foreground text-sm">No entries yet. Save your first daily check-in above.</p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left border-b">
+                          <th className="py-2 pr-3">Date</th>
+                          <th className="py-2 pr-3">Energy</th>
+                          <th className="py-2 pr-3">Mood</th>
+                          <th className="py-2 pr-3">Stress</th>
+                          <th className="py-2 pr-3">Sleep</th>
+                          <th className="py-2">Notes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {latestEntries.map((item) => (
+                          <tr key={item.date} className="border-b last:border-b-0">
+                            <td className="py-2 pr-3 font-medium">{item.date}</td>
+                            <td className="py-2 pr-3">{item.energy}</td>
+                            <td className="py-2 pr-3">{item.mood}</td>
+                            <td className="py-2 pr-3">{item.stress}</td>
+                            <td className="py-2 pr-3">{item.sleepHours}h</td>
+                            <td className="py-2">{item.notes || "-"}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

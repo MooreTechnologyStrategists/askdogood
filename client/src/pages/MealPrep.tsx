@@ -97,6 +97,13 @@ const dmvStores = [
 export default function MealPrepResources() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedStoreType, setSelectedStoreType] = useState("All");
+
+  const storeTypes = ["All", ...Array.from(new Set(dmvStores.map((store) => store.type)))];
+  const filteredStores =
+    selectedStoreType === "All"
+      ? dmvStores
+      : dmvStores.filter((store) => store.type === selectedStoreType);
 
   const handleViewRecipe = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
@@ -296,7 +303,11 @@ export default function MealPrepResources() {
                         </div>
                       </div>
 
-                      <Button className="w-full">Download Meal Plan</Button>
+                      <Button className="w-full" asChild>
+                        <a href="https://askdogood.gumroad.com/l/clinical-food-rx" target="_blank" rel="noopener noreferrer">
+                          Get Meal Plan Bundle
+                        </a>
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -337,8 +348,10 @@ export default function MealPrepResources() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <Button size="lg" className="text-lg">
-                    Get the 21-Day Plant-Based Reset - $47
+                  <Button size="lg" className="text-lg" asChild>
+                    <a href="https://askdogood.gumroad.com/l/clinical-food-rx" target="_blank" rel="noopener noreferrer">
+                      Get the 21-Day Plant-Based Reset - $47
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -356,8 +369,21 @@ export default function MealPrepResources() {
                 </p>
               </div>
 
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {storeTypes.map((type) => (
+                  <Button
+                    key={type}
+                    size="sm"
+                    variant={selectedStoreType === type ? "default" : "outline"}
+                    onClick={() => setSelectedStoreType(type)}
+                  >
+                    {type}
+                  </Button>
+                ))}
+              </div>
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {dmvStores.map((store) => (
+                {filteredStores.map((store) => (
                   <Card key={store.name} className="hover:shadow-lg transition-all">
                     <CardHeader>
                       <div className="flex items-start justify-between">
@@ -479,7 +505,11 @@ export default function MealPrepResources() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button className="w-full">Download Free PDF</Button>
+                    <Button className="w-full" asChild>
+                      <a href="https://askdogoodassets.blob.core.windows.net/downloads/21-day-reset-guide.pdf" target="_blank" rel="noopener noreferrer">
+                        Download Free PDF
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -492,7 +522,11 @@ export default function MealPrepResources() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button className="w-full">Download Free PDF</Button>
+                    <Button className="w-full" asChild>
+                      <a href="https://askdogoodassets.blob.core.windows.net/downloads/anti-inflammatory-foods.pdf" target="_blank" rel="noopener noreferrer">
+                        Download Free PDF
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -505,7 +539,11 @@ export default function MealPrepResources() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button className="w-full">Download Free PDF</Button>
+                    <Button className="w-full" asChild>
+                      <a href="https://askdogoodassets.blob.core.windows.net/downloads/budget-grocery-checklist.pdf" target="_blank" rel="noopener noreferrer">
+                        Download Free PDF
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -518,7 +556,11 @@ export default function MealPrepResources() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button className="w-full">Download Free PDF</Button>
+                    <Button className="w-full" asChild>
+                      <a href="https://askdogoodassets.blob.core.windows.net/downloads/meal-prep-container-guide.pdf" target="_blank" rel="noopener noreferrer">
+                        Download Free PDF
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               </div>

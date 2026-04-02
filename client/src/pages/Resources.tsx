@@ -1,25 +1,26 @@
 import { ExternalLink, Mail, Globe, Download, Smartphone, Camera, UtensilsCrossed, ClipboardList, Leaf, Brain, Zap } from 'lucide-react';
+import { Link } from 'wouter';
 
 const Resources = () => {
   const freeResources = [
     {
       title: '21-Day Plant-Based Reset Guide',
       description: 'Kickstart your healing journey with a comprehensive meal plan, shopping lists, and daily wellness tips.',
-      downloadLink: '/downloads/21-day-reset-guide.pdf',
+      downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/21-day-reset-guide.pdf',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
       badge: 'Most Popular'
     },
     {
       title: 'Thyroid Lab Reference Sheet',
       description: 'Understand your thyroid labs like a pro. Print-friendly guide to TSH, T3, T4, and antibodies.',
-      downloadLink: '/downloads/thyroid-lab-reference.pdf',
+      downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/thyroid-lab-reference.pdf',
       image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400',
       badge: 'Essential'
     },
     {
       title: 'Anti-Inflammatory Foods Cheat Sheet',
       description: 'Quick-reference guide to the best foods for reducing inflammation and supporting thyroid health.',
-      downloadLink: '/downloads/anti-inflammatory-foods.pdf',
+      downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/anti-inflammatory-foods.pdf',
       image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400',
       badge: 'Free'
     }
@@ -200,7 +201,7 @@ const Resources = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               {/* LabelScanner App */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
                 <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-8 text-white text-center">
@@ -233,11 +234,11 @@ const Resources = () => {
                   <p className="text-xs text-gray-500 mb-4 italic">
                     Perfect for: Grocery shopping, meal planning, avoiding hidden triggers
                   </p>
-                  <a href="/labelscanner" className="block">
+                  <Link href="/labelscanner" className="block">
                     <button className="w-full bg-teal-600 text-white rounded-xl py-3 font-semibold hover:bg-teal-700 transition">
                       Try Now - It's Free
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -273,11 +274,11 @@ const Resources = () => {
                   <p className="text-xs text-gray-500 mb-4 italic">
                     Perfect for: Busy schedules, meal prepping, family cooking
                   </p>
-                  <a href="/mealprep" className="block">
+                  <Link href="/mealprep" className="block">
                     <button className="w-full bg-pink-600 text-white rounded-xl py-3 font-semibold hover:bg-pink-700 transition">
                       Try Now - It's Free
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -313,11 +314,51 @@ const Resources = () => {
                   <p className="text-xs text-gray-500 mb-4 italic">
                     Perfect for: Chronic illness, thyroid support, autoimmune healing
                   </p>
-                  <a href="/clinical-recipes" className="block">
+                  <Link href="/clinical-recipes" className="block">
                     <button className="w-full bg-orange-600 text-white rounded-xl py-3 font-semibold hover:bg-orange-700 transition">
                       Explore Recipes
                     </button>
-                  </a>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Symptom Tracker + Herbs */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border-2 border-primary/20">
+                <div className="bg-gradient-to-br from-primary to-primary/80 p-8 text-primary-foreground text-center">
+                  <ClipboardList className="w-16 h-16 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Symptom Tracker + Herbs</h3>
+                  <p className="text-primary-foreground/80 text-sm">Track + Learn</p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Log daily energy, mood, stress, and sleep. Then cross-check your supplement ideas with the A-Z Herb Dictionary before adding anything new.
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Interactive in-browser symptom log</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Average trend snapshots for doctor visits</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">A-Z herb safety + interaction guidance</span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link href="/symptom-tracker" className="block">
+                      <button className="w-full bg-primary text-primary-foreground rounded-xl py-3 font-semibold hover:bg-primary/90 transition">
+                        Track Now
+                      </button>
+                    </Link>
+                    <Link href="/herbs" className="block">
+                      <button className="w-full bg-secondary text-foreground rounded-xl py-3 font-semibold hover:bg-secondary/80 transition border border-border">
+                        Browse Herbs
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

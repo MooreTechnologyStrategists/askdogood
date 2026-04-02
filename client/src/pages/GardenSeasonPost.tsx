@@ -1,5 +1,7 @@
 import { Link, useRoute } from "wouter";
+import SEO from "@/components/SEO";
 import { gardenSeasons, getSeason } from "@/content/gardenSeasons";
+import { truncateDescription } from "@/lib/seo";
 
 /**
  * Garden season detail page
@@ -17,6 +19,12 @@ export default function GardenSeasonPost() {
   if (!season) {
     return (
       <main className="container mx-auto px-4 py-12">
+        <SEO
+          title="Garden Page Not Found"
+          description="That garden season is not available yet."
+          url={slug ? `/garden/${slug}` : "/garden"}
+          noindex
+        />
         <h1 className="text-2xl font-bold">Not found</h1>
         <p className="mt-2 text-muted-foreground">That season isn’t planted yet.</p>
         <Link href="/garden">
@@ -45,9 +53,31 @@ export default function GardenSeasonPost() {
       : season.heroImg;
 
   const body = Array.isArray(season.body) ? season.body : [];
+  const description = truncateDescription(
+    [season.subtitle, body[0]].filter(Boolean).join(" "),
+  );
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${season.title} Garden Reflection`,
+    description,
+    image: heroImg,
+    articleSection: "Garden",
+    mainEntityOfPage: `https://askdogood.com/garden/${season.slug}`,
+  };
 
   return (
     <main className="container mx-auto px-4 py-12">
+      <SEO
+        title={`${season.title} Garden Reflection`}
+        description={description}
+        keywords={["garden reflection", season.title, "seasonal living", "Ask DoGood garden"]}
+        image={heroImg}
+        imageAlt={season.heroAlt ?? `${label} garden`}
+        url={`/garden/${season.slug}`}
+        type="article"
+        schema={schema}
+      />
       <nav className="text-sm text-muted-foreground mb-6">
         <Link href="/">
           <a className="underline">Home</a>

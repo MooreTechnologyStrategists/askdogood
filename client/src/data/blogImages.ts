@@ -69,6 +69,7 @@ export const blogImages: Record<string, string> = {
   "stop-hiding-and-embrace-mental-illness": "/assets/img/blog/assigned/stop-hiding-and-embrace-mental-illness.webp",
   "strength-in-sisterhood-how-to-show-and-give-love-and-support-to-black-women": "/assets/img/blog/assigned/strength-in-sisterhood-how-to-show-and-give-love-and-support-to-black-women.webp",
   "superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer": "/assets/img/blog/assigned/superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer.webp",
+  "superbeets-the-superfood-your-heart-has-been-waiting-for": "/assets/img/blog/assigned/superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer.webp",
   "take-charge-of-your-health-and-well-being-with-naturopathy": "/assets/img/blog/assigned/take-charge-of-your-health-and-well-being-with-naturopathy.webp",
   "teen-mental-health-understanding-and-addressing-the-challenges": "/assets/img/blog/assigned/teen-mental-health-understanding-and-addressing-the-challenges.webp",
   "the-aging-population-crisis-exploring-the-consequences-of-the-decline-in-elder-care": "/assets/img/blog/assigned/the-aging-population-crisis-exploring-the-consequences-of-the-decline-in-elder-care.webp",

@@ -119,12 +119,12 @@ My overall approach to skin health now includes three key pillars: *   **Daily C
 If you are struggling with aging skin, joint discomfort, or weak nails, I highly recommend giving a high-quality collagen supplement a try. Your body will thank you for providing it with the building blocks it needs to thrive.`,
     date: "2024-09-20",
     readTime: "4 min read",
-    image: "/assets/img/blog/assigned/collagen.webp",
+    image: "/assets/img/blog/assigned/how-collagen-saved-my-skin-a-personal-journey-to-radiance.webp",
     tags: ["Skincare", "Anti-Aging", "Supplements"],
     featured: false,
   },
   {
-    id: "superbe ets-the-superfood-your-heart-has-been-waiting-for",
+    id: "superbeets-the-superfood-your-heart-has-been-waiting-for",
     title: "SuperBeets: The Superfood Your Heart Has Been Waiting For",
     excerpt: "Learn how this nitric oxide-boosting superfood can support heart health, energy, and circulation...",
     content: `When it comes to heart health and natural energy, SuperBeets has become my go-to supplement. Here's why this beet root powder deserves a place in your wellness routine.
@@ -157,7 +157,7 @@ Start with one scoop daily, mixed into water or your favorite beverage. Some peo
 Remember, supplements work best as part of a holistic approach to health that includes good nutrition, regular exercise, and stress management.`,
     date: "2024-08-10",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/superbeets.webp",
+    image: "/assets/img/blog/assigned/superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer.webp",
     tags: ["Heart Health", "Energy", "Superfoods"],
     featured: true,
   },

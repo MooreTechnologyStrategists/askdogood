@@ -1,5 +1,5 @@
 import { useParams, Link, useLocation } from "wouter";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
 import { blogImages } from "@/data/blogImages";
@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import SEO from "@/components/SEO";
+import { SITE_AUTHOR, SITE_NAME, truncateDescription } from "@/lib/seo";
 
 type BlogRouteParams = {
   slug?: string;
@@ -67,31 +69,16 @@ export default function BlogPost() {
     (typeof post?.image === "string" && post.image.trim() ? post.image : "") ||
     BLOG_DEFAULT_HERO;
 
-  // Update page title and meta tags safely
-  useEffect(() => {
-    if (!post) return;
-
-    const title =
-      typeof post.title === "string" && post.title.trim()
-        ? post.title.trim()
-        : "Blog Post";
-
-    document.title = `${title} | Ask DoGood`;
-
-    // meta description can throw if excerpt is undefined/null
-    const desc =
-      typeof post.excerpt === "string" && post.excerpt.trim()
-        ? post.excerpt.trim()
-        : "Read the latest article from Ask DoGood.";
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) metaDescription.setAttribute("content", desc);
-  }, [post]);
-
   if (!post) {
     return (
       <div className="container py-16">
         <div className="max-w-3xl mx-auto text-center">
+          <SEO
+            title="Blog Post Not Found"
+            description="The blog post you requested could not be found."
+            url={slug ? `/blog/${slug}` : "/blog"}
+            noindex
+          />
           <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
           <p className="text-muted-foreground mb-8">
             The blog post you're looking for doesn't exist.
@@ -119,6 +106,32 @@ export default function BlogPost() {
     typeof post.readTime === "string" && post.readTime.trim()
       ? post.readTime.trim()
       : "5 min";
+
+  const safeDescription =
+    typeof post.excerpt === "string" && post.excerpt.trim()
+      ? truncateDescription(post.excerpt)
+      : `Read ${safeTitle} on ${SITE_NAME}.`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: safeTitle,
+    description: safeDescription,
+    image: heroSrc,
+    author: {
+      "@type": "Person",
+      name: post.author?.trim() || SITE_AUTHOR,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+    datePublished: post.date || undefined,
+    dateModified: post.date || undefined,
+    mainEntityOfPage: `https://askdogood.com/blog/${slug}`,
+    keywords: post.tags,
+    articleSection: safeCategory,
+  };
 
   const safeHtml = useMemo(() => {
     if (typeof post.content === "string" && post.content.trim()) {
@@ -154,6 +167,21 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={safeTitle}
+        description={safeDescription}
+        keywords={post.tags.length ? post.tags : [safeCategory, "Ask DoGood blog"]}
+        image={heroSrc}
+        imageAlt={safeTitle}
+        url={`/blog/${slug}`}
+        type="article"
+        author={post.author?.trim() || SITE_AUTHOR}
+        publishedTime={post.date || undefined}
+        modifiedTime={post.date || undefined}
+        section={safeCategory}
+        tags={post.tags}
+        schema={articleSchema}
+      />
       {/* Hero Section with Featured Image */}
       <section
         className="relative py-32 bg-cover bg-center"

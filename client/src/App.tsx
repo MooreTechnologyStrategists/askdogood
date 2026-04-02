@@ -65,9 +65,12 @@ import { Button } from "@/components/ui/button";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import RouteSeo from "./components/RouteSeo";
+import Chatbot from "./components/Chatbot";
 import { GA_MEASUREMENT_ID } from "./config/analytics";
 import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
 import ShopRedirect from "./pages/ShopRedirect";
+import HerbDictionary from "./pages/HerbDictionary";
 
 
 
@@ -82,10 +85,12 @@ function Router() {
   }, [location]);
   
   return (
-  <Switch>
-    <Route path="/" component={Home} />
-    <Route path="/login" component={Login} />
-    <Route path="/signup" component={Signup} />
+  <>
+    <RouteSeo location={location} />
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
 
     {/* Auth */}
     <Route path="/dashboard" component={Dashboard} />
@@ -105,7 +110,7 @@ function Router() {
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
     <Route path="/contact" component={Contact} />
-    <Route path="/garden" component={Garden} />
+    <Route path="/herbs" component={HerbDictionary} />
     <Route path="/garden/:season" component={GardenSeasonPost} />
 
 
@@ -151,10 +156,11 @@ function Router() {
     <Route path="/stories/chyna-white" component={ChinaWhiteSeries} />
     <Route path="/stories/chyna-white/episode-1" component={ChinaWhiteEpisode1} />
 
-    {/* Errors */}
-    <Route path="/404" component={NotFound} />
-    <Route component={NotFound} />
-  </Switch>
+      {/* Errors */}
+      <Route path="/404" component={NotFound} />
+      <Route component={NotFound} />
+    </Switch>
+  </>
 );
 }
 
@@ -172,6 +178,7 @@ function App() {
               <Router />
             </main>
             <BookTeaser />
+            <Chatbot />
             <Footer />
           </div>
         </TooltipProvider>
