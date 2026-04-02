@@ -234,7 +234,7 @@ const Resources = () => {
                   <p className="text-xs text-gray-500 mb-4 italic">
                     Perfect for: Grocery shopping, meal planning, avoiding hidden triggers
                   </p>
-                  <Link href="/labelscanner" className="block">
+                  <Link href="/label-scanner" className="block">
                     <button className="w-full bg-teal-600 text-white rounded-xl py-3 font-semibold hover:bg-teal-700 transition">
                       Try Now - It's Free
                     </button>
@@ -274,7 +274,7 @@ const Resources = () => {
                   <p className="text-xs text-gray-500 mb-4 italic">
                     Perfect for: Busy schedules, meal prepping, family cooking
                   </p>
-                  <Link href="/mealprep" className="block">
+                  <Link href="/meal-prep" className="block">
                     <button className="w-full bg-pink-600 text-white rounded-xl py-3 font-semibold hover:bg-pink-700 transition">
                       Try Now - It's Free
                     </button>

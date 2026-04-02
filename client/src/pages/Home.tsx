@@ -51,14 +51,13 @@ interface TrustIndicatorProps {
 }
 
 interface TestimonialCardProps {
-  interface FeatureCardProps {
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-    content: string;
-    href?: string;
-    image?: string;
-  }
+  initial: string;
+  name: string;
+  location: string;
+  condition: string;
+  quote: string;
+  stars: number;
+  gradientFrom: string;
   gradientTo: string;
 }
 
@@ -398,51 +397,30 @@ export default function Home() {
                   src="https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop"
                   alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
                   className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
-              const FeatureCard = ({ icon, title, description, content, href, image }: FeatureCardProps) => {
-                const cardContent = (
-                  <Card className="hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 duration-300 h-full overflow-hidden">
-                    {image && (
-                      <div className="relative h-44 overflow-hidden">
-                        <img
-                          src={image}
-                          alt={title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                          loading="lazy"
-                          width="400"
-                          height="176"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                        <div className="absolute bottom-3 left-3">
-                          <div className="w-10 h-10 rounded-xl bg-primary/90 backdrop-blur flex items-center justify-center shadow-lg">
-                            {icon}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    <CardHeader className={image ? "pt-3" : ""}>
-                      {!image && (
-                        <CardTitle className="flex items-center gap-2">
-                          {icon}
-                          {title}
-                        </CardTitle>
-                      )}
-                      {image && <CardTitle>{title}</CardTitle>}
-                      <CardDescription>{description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="text-sm text-muted-foreground leading-relaxed">
-                      {content}
-                      {href && (
-                        <div className="mt-3 flex items-center gap-1 text-primary font-medium text-sm group">
-                          Try it now{" "}
-                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                );
+                  loading="eager"
+                  width="384"
+                  height="384"
+                />
 
-                return href ? <Link href={href} className="group">{cardContent}</Link> : <div className="group">{cardContent}</div>;
-              };
+                {/* Professional Badge */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-zinc-900 text-foreground px-6 py-3 rounded-full shadow-xl border-2 border-primary/20">
+                  <span className="text-sm font-semibold">7+ Years Experience</span>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
+              Healing.Structure.
+              <br />
+              <span className="text-primary">Real-life Growth.</span>
+            </h2>
+
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              Thyroid health. Weight loss. Healthy work-life balance. Join 1,000+ people who've
+              transformed their health with real food, real talk, and real results. No BS, just
+              healing.
+            </p>
+
             {/* Trust Indicators - Professional */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
               {trustIndicators.map((indicator, index) => (
@@ -730,113 +708,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CHYNA WHITE FICTION SERIES TEASER */}
-      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
-        {/* Glitter Effect Background */}
-        <div className="absolute inset-0 opacity-20" aria-hidden="true">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-primary/40 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/40 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary/20 rounded-full blur-2xl animate-pulse" />
-        </div>
-
-        <div className="container relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <Card className="overflow-hidden bg-card/80 backdrop-blur-lg border-2 border-primary/20 shadow-2xl">
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Image Side */}
-                <div className="relative h-[500px] lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
-                    alt="Chyna White - Fiction Series Hero"
-                    className="w-full h-full object-cover"
-            const features: FeatureCardProps[] = [
-              {
-                icon: <HeartPulse className="h-5 w-5 text-white" />,
-                title: "Healing Paths",
-                description: "Mind, body, and soul support that actually applies.",
-                content:
-                  "Guided focus areas (thyroid, stress, habits) that help you build momentum without burnout.",
-                image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&q=80",
-              },
-              {
-                icon: <UtensilsCrossed className="h-5 w-5 text-white" />,
-                title: "Clinical Food RX",
-                description: "Meals tailored to real conditions.",
-                content: "Turn symptoms, goals, and reality into meals you can actually stick to.",
-                href: "/clinical-recipes",
-                image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
-              },
-              {
-                icon: <Zap className="h-5 w-5 text-white" />,
-                title: "Herb Dictionary",
-                description: "A-Z guide to medicinal herbs with thyroid safety ratings.",
-                content: "Research herbs before you take them. Every herb includes drug interactions, thyroid notes, and how to use it safely.",
-                href: "/herbs",
-                image: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=600&q=80",
-              },
-              {
-                icon: <BookOpen className="h-5 w-5 text-white" />,
-                title: "Blog",
-                description: "Truth, strategy, and encouragement.",
-                content:
-                  "The honest conversations people avoid — delivered with compassion and receipts.",
-                href: "/blog",
-                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
-              },
-            ];
-                    <h2 className="text-4xl font-bold mb-2 text-foreground">
-                      Introducing: Chyna White
-                    </h2>
-                    <p className="text-xl text-muted-foreground mb-4">
-                      The Chronicles of a Beautiful Contradiction
-                    </p>
-                  </div>
-                  <div className="space-y-4 text-lg text-muted-foreground">
-                    <p className="leading-relaxed">
-                      Meet <strong className="text-primary">Chyna White</strong>—a brown-skinned
-                      powerhouse navigating corporate America, street politics, and her own truth in
-                      a world that wants her to choose sides.
-                    </p>
-                    <p className="leading-relaxed">
-                      She's professional AF with that{" "}
-                      <em className="text-secondary">perfectly undone</em> edge. BB girl energy meets
-                      boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and
-                      unapologetic.
-                    </p>
-                    <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
-                      <p className="text-foreground font-medium">
-                        Fiction that feels like real life
-                        <br />
-                        Corporate drama meets street wisdom
-                        <br />A heroine who plays by her own rules
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                    <Link href="/stories">
-                      <Button className="gap-2 rounded-3xl py-3 px-8 w-full sm:w-auto">
-                        Read Episode 1 <ArrowRight className="h-5 w-5" />
-                      </Button>
-                    </Link>
-                    <Link href="/stories">
-                      <Button
-                        variant="outline"
-                        className="gap-2 rounded-3xl w-full sm:w-auto"
-                      >
-                        Explore the Series
-                      </Button>
-                    </Link>
-                  </div>
-                  <p className="text-sm text-muted-foreground italic pt-2">
-                    ⚠️ 18+ Content | Mature themes, language, and real talk
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* NEW 2026 BLOG SERIES TEASER - 3D Style */}
       <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/5 to-background">
         {/* Animated Background Pattern */}
@@ -1050,6 +921,107 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <Testimonials />
+
+      {/* CHYNA WHITE FICTION SERIES TEASER */}
+      <section className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        {/* Glitter Effect Background */}
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-primary/40 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/40 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary/20 rounded-full blur-2xl animate-pulse" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <Card className="overflow-hidden bg-card/80 backdrop-blur-lg border-2 border-primary/20 shadow-2xl">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image Side */}
+                <div className="relative h-[500px] lg:h-auto bg-gradient-to-br from-primary/20 to-secondary/20">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+                    alt="Chyna White - Fiction Series Hero"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="600"
+                    height="500"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600';
+                    }}
+                  />
+                  {/* Spice Level Indicator */}
+                  <div className="absolute bottom-8 right-8 bg-background/80 backdrop-blur px-4 py-2 rounded-full border border-border">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold text-muted-foreground">SPICE</span>
+                      {[...Array(5)].map((_, i) => (
+                        <span
+                          key={`spice-${i}`}
+                          className={`inline-block w-3 h-3 rounded-full ${
+                            i < 4 ? "bg-primary" : "bg-muted"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                {/* Content Side */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <Badge className="mb-4 text-base px-4 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
+                      <Star className="w-4 h-4 mr-2 text-primary" />
+                      Featured Series
+                    </Badge>
+                    <h2 className="text-4xl font-bold mb-2 text-foreground">
+                      Introducing: Chyna White
+                    </h2>
+                    <p className="text-xl text-muted-foreground mb-4">
+                      The Chronicles of a Beautiful Contradiction
+                    </p>
+                  </div>
+                  <div className="space-y-4 text-lg text-muted-foreground">
+                    <p className="leading-relaxed">
+                      Meet <strong className="text-primary">Chyna White</strong>—a brown-skinned
+                      powerhouse navigating corporate America, street politics, and her own truth in
+                      a world that wants her to choose sides.
+                    </p>
+                    <p className="leading-relaxed">
+                      She's professional AF with that{" "}
+                      <em className="text-secondary">perfectly undone</em> edge. BB girl energy meets
+                      boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and
+                      unapologetic.
+                    </p>
+                    <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
+                      <p className="text-foreground font-medium">
+                        Fiction that feels like real life
+                        <br />
+                        Corporate drama meets street wisdom
+                        <br />A heroine who plays by her own rules
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <Link href="/stories">
+                      <Button className="gap-2 rounded-3xl py-3 px-8 w-full sm:w-auto">
+                        Read Episode 1 <ArrowRight className="h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <Link href="/stories">
+                      <Button
+                        variant="outline"
+                        className="gap-2 rounded-3xl w-full sm:w-auto"
+                      >
+                        Explore the Series
+                      </Button>
+                    </Link>
+                  </div>
+                  <p className="text-sm text-muted-foreground italic pt-2">
+                    ⚠️ 18+ Content | Mature themes, language, and real talk
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* FEATURES */}
       <section className="py-14 md:py-20 relative overflow-hidden">

@@ -55,6 +55,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://askdogood.com/herbs</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://askdogood.com/meal-prep</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://askdogood.com/label-scanner</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://askdogood.com/garden</loc>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
