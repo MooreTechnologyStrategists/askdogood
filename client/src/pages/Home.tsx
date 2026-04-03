@@ -388,23 +388,33 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">
-              <div className="relative w-64 h-64 md:w-96 md:h-96">
+              <div className="relative w-[18rem] h-[22rem] md:w-[28rem] md:h-[34rem]">
                 <div
-                  className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"
+                  className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"
                   aria-hidden="true"
                 />
+                <div className="absolute -inset-3 rounded-[2.5rem] border border-primary/15 bg-white/40 backdrop-blur-sm shadow-2xl" />
                 <img
                   src="https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop"
-                  alt="RoSeé 'DoGood' Murphy - Thyroid Health Specialist & Wellness Advocate"
-                  className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
+                  alt="RoSeé Murphy of Ask DoGood, thyroid wellness educator and community advocate"
+                  className="relative w-full h-full rounded-[2rem] object-cover border-4 border-white/70 shadow-2xl"
                   loading="eager"
+                  fetchPriority="high"
                   width="384"
                   height="384"
                 />
 
                 {/* Professional Badge */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-zinc-900 text-foreground px-6 py-3 rounded-full shadow-xl border-2 border-primary/20">
-                  <span className="text-sm font-semibold">7+ Years Experience</span>
+                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-white text-foreground px-6 py-3 rounded-full shadow-xl border-2 border-primary/20">
+                  <span className="text-sm font-semibold">Thyroid Wellness Educator</span>
+                </div>
+                <div className="absolute top-4 -left-8 hidden md:block rounded-2xl bg-background/95 px-4 py-3 shadow-xl border border-border text-left">
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">DMV Rooted</p>
+                  <p className="text-base font-semibold">Resources, recipes, real support</p>
+                </div>
+                <div className="absolute bottom-10 -right-10 hidden md:block rounded-2xl bg-primary text-primary-foreground px-4 py-3 shadow-xl text-left">
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">Built for</p>
+                  <p className="text-base font-semibold">Black and Brown wellness journeys</p>
                 </div>
               </div>
             </div>
@@ -415,10 +425,10 @@ export default function Home() {
               <span className="text-primary">Real-life Growth.</span>
             </h2>
 
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Thyroid health. Weight loss. Healthy work-life balance. Join 1,000+ people who've
-              transformed their health with real food, real talk, and real results. No BS, just
-              healing.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              Thyroid health, nourishing meals, smarter routines, and community-centered tools for
+              people who need something stronger than pretty wellness talk. This is practical,
+              professional support with receipts.
             </p>
 
             {/* Trust Indicators - Professional */}
@@ -431,12 +441,36 @@ export default function Home() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <BeehiivSubscribe variant="inline" />
+              <Link href="/resources">
+                <Button variant="outline" className="rounded-3xl px-6 py-6 text-base border-2 border-primary/30 bg-background/85 backdrop-blur-sm">
+                  Explore DMV Resources
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center gap-2">
               <p className="text-sm text-muted-foreground font-medium">
                 Free Thyroid Symptom Checklist + 3-Day Meal Plan
               </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto pt-4 text-left">
+              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">What visitors get</p>
+                <p className="font-semibold text-lg mb-2">Useful first-click experience</p>
+                <p className="text-sm text-muted-foreground">Free downloads, working wellness tools, herb guidance, and next-step offers that make sense.</p>
+              </div>
+              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Local relevance</p>
+                <p className="font-semibold text-lg mb-2">DMV community connection</p>
+                <p className="text-sm text-muted-foreground">Prince George's County resources, food access links, and community pathways that match the mission.</p>
+              </div>
+              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Why it converts</p>
+                <p className="font-semibold text-lg mb-2">Clarity with authority</p>
+                <p className="text-sm text-muted-foreground">The site now feels more like a trusted wellness brand and less like a scattered content hub.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -510,19 +544,42 @@ export default function Home() {
       {/* CENTRAL PERSONAL IMAGE */}
       <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="container">
-          <div className="flex justify-center">
-            <div className="relative w-48 h-48 md:w-64 md:h-64">
+          <div className="max-w-5xl mx-auto rounded-[2rem] border border-border/60 bg-card/90 backdrop-blur-sm shadow-2xl overflow-hidden md:grid md:grid-cols-[1.1fr_0.9fr]">
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <p className="text-sm uppercase tracking-[0.28em] text-primary mb-4 font-semibold">
+                The Face Behind Ask DoGood
+              </p>
+              <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
+                Professional guidance, personal story, community-first purpose.
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
+                Visitors should immediately understand who this brand serves, why the work is credible,
+                and where to go next. This section now reinforces that with a cleaner portrait treatment
+                and clearer positioning.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/about">
+                  <Button className="rounded-3xl px-6">Meet RoSeé</Button>
+                </Link>
+                <Link href="/shop">
+                  <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/30">
+                    See Signature Tools
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative min-h-[22rem] bg-gradient-to-br from-primary/10 via-background to-secondary/15 p-8 flex items-center justify-center">
               <div
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-2xl"
+                className="absolute inset-8 rounded-[2rem] bg-gradient-to-br from-primary/15 to-secondary/20 blur-2xl"
                 aria-hidden="true"
               />
               <img
                 src={`${ASSET_BASE_URL}/hero-home.webp`}
-                alt="RoSeé Murphy - Your Thyroid Chef"
-                className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
+                alt="RoSeé Murphy portrait for Ask DoGood wellness brand"
+                className="relative w-full max-w-sm rounded-[2rem] object-cover border border-white/70 shadow-2xl"
                 loading="lazy"
-                width="256"
-                height="256"
+                width="420"
+                height="520"
                 onError={(e) => handleImageError(e, "/images/personal/rosee-profile.webp")}
               />
             </div>

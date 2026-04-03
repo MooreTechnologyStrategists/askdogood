@@ -1,5 +1,6 @@
 import { ExternalLink, Mail, Globe, Download, Smartphone, Camera, UtensilsCrossed, ClipboardList, Leaf, Brain, Zap } from 'lucide-react';
 import { Link } from 'wouter';
+import { trackEvent, trackLeadMagnetDownload } from '@/lib/analytics';
 
 const Resources = () => {
   const freeResources = [
@@ -92,6 +93,57 @@ const Resources = () => {
     },
   ];
 
+  const dmvResources = [
+    {
+      title: 'PG Parks Classes and Community Programs',
+      description: 'Explore Prince George\'s County classes, recreation, family activities, nature programming, and community wellness opportunities.',
+      url: 'https://www.pgparks.com',
+      badge: 'Prince George\'s County',
+    },
+    {
+      title: 'Prince George\'s County Health Department',
+      description: 'Local health information, prevention resources, clinics, and public-health updates for county residents.',
+      url: 'https://www.princegeorgescountymd.gov/departments-offices/health',
+      badge: 'Health Access',
+    },
+    {
+      title: 'NBC4 Washington Find Help',
+      description: 'A practical NBC4 resource hub that points residents toward food, housing, legal, and family-support help across the DMV.',
+      url: 'https://www.nbcwashington.com/community/in-the-community/working-4-you-to-find-help/4057895/',
+      badge: 'NBC4 Community',
+    },
+    {
+      title: 'NBCUniversal Local Impact Grants',
+      description: 'Funding visibility for nonprofits and community builders doing meaningful work in DC, Maryland, and Virginia.',
+      url: 'https://www.nbcwashington.com/community/nbcuniversal-local-impact-grants/',
+      badge: 'Funding',
+    },
+    {
+      title: 'Food 4 Families',
+      description: 'Food-access support and hunger-relief work that lines up closely with Ask DoGood\'s food-as-healing mission.',
+      url: 'https://www.food4families.org/',
+      badge: 'Food Support',
+    },
+    {
+      title: 'Fort Washington Food Pantry',
+      description: 'Local pantry support and volunteer opportunities for families in and around Fort Washington and Prince George\'s County.',
+      url: 'https://fortwashingtonfoodpantry.net/',
+      badge: 'Local Pantry',
+    },
+  ];
+
+  const handleDownloadClick = (resourceTitle: string) => {
+    trackLeadMagnetDownload(resourceTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-'), '/resources');
+  };
+
+  const handleResourceClick = (resourceTitle: string, resourceUrl: string) => {
+    trackEvent('dmv_resource_click', {
+      resource_name: resourceTitle,
+      resource_url: resourceUrl,
+      page_path: '/resources',
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
@@ -160,6 +212,7 @@ const Resources = () => {
                     <a 
                       href={resource.downloadLink}
                       download
+                      onClick={() => handleDownloadClick(resource.title)}
                       className="flex items-center justify-center gap-2 w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors font-semibold"
                     >
                       <Download className="w-5 h-5" />
@@ -404,6 +457,85 @@ const Resources = () => {
                   <span>No downloads, no app stores—works instantly in your browser</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DMV Resource Hub */}
+      <section className="py-20 bg-gradient-to-b from-white to-teal-50/40">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-4">
+                DMV Community Resource Hub
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Useful Local Support, Not Just Content
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Inspired by NBC4 Washington coverage of local community builders, small businesses, food-access work, and public resources, this section gives visitors practical next steps in the DMV.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
+              {dmvResources.map((resource) => (
+                <a
+                  key={resource.title}
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleResourceClick(resource.title, resource.url)}
+                  className="group rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <span className="inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700">
+                      {resource.badge}
+                    </span>
+                    <ExternalLink className="w-5 h-5 text-gray-400 transition-colors group-hover:text-teal-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{resource.description}</p>
+                  <div className="mt-5 text-sm font-semibold text-teal-700">
+                    Open Resource
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            <div className="rounded-[2rem] border border-primary/10 bg-gradient-to-r from-primary/5 via-white to-secondary/10 p-8 md:p-10">
+              <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                    What NBC4 community coverage reinforced
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    The strongest local stories were not generic wellness stories. They were about food access, Prince George\'s County support systems, minority-owned businesses, grants, youth opportunity, and everyday people building healthier communities. That aligns directly with Ask DoGood's mission.
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>Food access and pantry support matter as much as inspiration.</li>
+                    <li>Community wellness includes economic opportunity and education.</li>
+                    <li>External resources should help visitors take a useful next step today.</li>
+                  </ul>
+                </div>
+                <div className="rounded-3xl bg-white p-6 shadow-lg border border-gray-100">
+                  <p className="text-sm uppercase tracking-[0.22em] text-teal-700 font-semibold mb-3">Suggested next clicks</p>
+                  <div className="space-y-3">
+                    <a href="https://www.nbcwashington.com/tag/community/" target="_blank" rel="noopener noreferrer" onClick={() => handleResourceClick('NBC4 Community Stories', 'https://www.nbcwashington.com/tag/community/')} className="flex items-center justify-between gap-3 rounded-2xl border border-gray-100 px-4 py-3 hover:border-teal-200 hover:bg-teal-50 transition-colors">
+                      <span className="font-medium text-gray-800">NBC4 Community Stories</span>
+                      <ExternalLink className="w-4 h-4 text-teal-700" />
+                    </a>
+                    <a href="https://www.nbcwashington.com/tag/small-business/" target="_blank" rel="noopener noreferrer" onClick={() => handleResourceClick('NBC4 Small Business Stories', 'https://www.nbcwashington.com/tag/small-business/')} className="flex items-center justify-between gap-3 rounded-2xl border border-gray-100 px-4 py-3 hover:border-teal-200 hover:bg-teal-50 transition-colors">
+                      <span className="font-medium text-gray-800">NBC4 Small Business Stories</span>
+                      <ExternalLink className="w-4 h-4 text-teal-700" />
+                    </a>
+                    <a href="https://www.nbcwashington.com/tag/prince-georges-county/" target="_blank" rel="noopener noreferrer" onClick={() => handleResourceClick('NBC4 Prince George\'s County Stories', 'https://www.nbcwashington.com/tag/prince-georges-county/')} className="flex items-center justify-between gap-3 rounded-2xl border border-gray-100 px-4 py-3 hover:border-teal-200 hover:bg-teal-50 transition-colors">
+                      <span className="font-medium text-gray-800">NBC4 Prince George's County Stories</span>
+                      <ExternalLink className="w-4 h-4 text-teal-700" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

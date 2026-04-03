@@ -93,10 +93,11 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4">Learn More</h4>
             <ul className="space-y-2">
+              <li>
                   <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
                     🌿 A-Z Herb Dictionary
                   </Link>
-                </li>
+              </li>
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
                   About RoSeé
