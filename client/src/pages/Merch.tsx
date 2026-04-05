@@ -2,27 +2,38 @@ import { useState, useEffect } from "react";
 import { merchProducts, merchCategories, type MerchProduct } from "@/data/merch-products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Filter, Sparkles } from "lucide-react";
-import { products as shopProducts } from "@/data/products";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ShoppingCart, Filter, Sparkles, Bell } from "lucide-react";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<MerchProduct | null>(null);
+  const [waitlistProduct, setWaitlistProduct] = useState<MerchProduct | null>(null);
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filteredProducts = selectedCategory === "all" 
-    ? merchProducts 
+  const filteredProducts = selectedCategory === "all"
+    ? merchProducts
     : merchProducts.filter(p => p.category === selectedCategory);
 
+  const isComingSoon = (product: MerchProduct) =>
+    !product.stripeLink || product.stripeLink.includes("PLACEHOLDER");
+
   const handleAddToCart = (product: MerchProduct) => {
-    if (product.stripeLink && !product.stripeLink.includes("PLACEHOLDER")) {
+    if (!isComingSoon(product)) {
       window.open(product.stripeLink, "_blank");
     } else {
-      alert(`Coming soon! ${product.name} will be available for purchase shortly.`);
+      setWaitlistProduct(product);
     }
   };
 
@@ -151,15 +162,27 @@ export default function Merch() {
                     </div>
                   )}
 
-                  <Button
-                    onClick={() => handleAddToCart(product)}
-                    disabled={!product.inStock}
-                    className="w-full"
-                    size="lg"
-                  >
-                    <ShoppingCart className="mr-2 h-4 w-4" />
-                    {product.inStock ? "Add to Cart" : "Notify Me"}
-                  </Button>
+                  {isComingSoon(product) ? (
+                    <Button
+                      onClick={() => handleAddToCart(product)}
+                      className="w-full"
+                      size="lg"
+                      variant="outline"
+                    >
+                      <Bell className="mr-2 h-4 w-4" />
+                      Notify Me When Available
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={() => handleAddToCart(product)}
+                      disabled={!product.inStock}
+                      className="w-full"
+                      size="lg"
+                    >
+                      <ShoppingCart className="mr-2 h-4 w-4" />
+                      {product.inStock ? "Buy Now" : "Out of Stock"}
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}
@@ -261,6 +284,38 @@ export default function Merch() {
           </div>
         </div>
       </section>
+      {/* Waitlist Dialog */}
+      <Dialog open={!!waitlistProduct} onOpenChange={(open) => { if (!open) setWaitlistProduct(null); }}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="flex items-center justify-center mb-2">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <Bell className="h-7 w-7 text-primary" />
+              </div>
+            </div>
+            <DialogTitle className="text-center text-xl">
+              Be First to Know!
+            </DialogTitle>
+            <DialogDescription className="text-center">
+              <span className="font-semibold text-foreground">{waitlistProduct?.name}</span>{" "}
+              is launching soon. Join the waitlist and we'll notify you the moment it drops—plus get an exclusive early-bird discount.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-2">
+            <BeehiivSubscribe
+              variant="inline"
+              title="Join the Merch Waitlist"
+              description="Get first access and a special launch discount."
+              buttonText="Join Waitlist"
+              source="merch-waitlist"
+              magnetType={waitlistProduct?.id}
+            />
+          </div>
+          <p className="text-center text-xs text-muted-foreground mt-2">
+            No spam. One email when it drops. Unsubscribe anytime.
+          </p>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
