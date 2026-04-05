@@ -165,24 +165,6 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "monthly",
   },
   {
-    path: "/resources",
-    title: "Resources | Ask DoGood",
-    description:
-      "Access Ask DoGood wellness resources, practical tools, guides, and recommendations built to support healing and day-to-day progress.",
-    keywords: ["wellness resources", "health tools", "thyroid resources"],
-    priority: 0.8,
-    changefreq: "weekly",
-  },
-  {
-    path: "/contact",
-    title: "Contact and Coaching | Ask DoGood",
-    description:
-      "Get in touch with Ask DoGood for collaboration, coaching inquiries, media requests, and support.",
-    keywords: ["contact Ask DoGood", "coaching", "wellness collaboration"],
-    priority: 0.7,
-    changefreq: "monthly",
-  },
-  {
     path: "/meal-prep",
     title: "Meal Prep for Healing | Ask DoGood",
     description:

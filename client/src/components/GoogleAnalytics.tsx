@@ -34,8 +34,6 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
       page_path: location,
       send_page_view: true,
     });
-
-    console.log('Google Analytics initialized:', measurementId);
   }, [measurementId]);
 
   // Track page views on route change
@@ -44,7 +42,6 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
       window.gtag('config', measurementId, {
         page_path: location,
       });
-      console.log('GA4 page view:', location);
     }
   }, [location, measurementId]);
 
@@ -72,7 +69,6 @@ export const trackEvent = (
 ) => {
   if (window.gtag) {
     window.gtag('event', eventName, eventParams);
-    console.log('GA4 event:', eventName, eventParams);
   }
 };
 
