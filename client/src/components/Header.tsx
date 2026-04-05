@@ -17,6 +17,7 @@ import {
   Scan,
   Heart,
   Leaf,
+  Gift,
 } from "lucide-react";
 
 export default function Header() {
@@ -40,6 +41,7 @@ export default function Header() {
     },
     { href: "/dashboard", label: "Dashboard", icon: Users },
     { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
+    { href: "/products", label: "All Products", icon: Gift },
     { href: "/about", label: "About", icon: User },
     { href: "/contact", label: "Contact", icon: Mail },
   ];

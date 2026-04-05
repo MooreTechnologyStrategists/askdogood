@@ -71,6 +71,7 @@ import { GA_MEASUREMENT_ID } from "./config/analytics";
 import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
 import ShopRedirect from "./pages/ShopRedirect";
 import HerbDictionary from "./pages/HerbDictionary";
+import Products from "./pages/Products";
 
 
 
@@ -136,6 +137,7 @@ function Router() {
     {/* Commerce */}
     <Route path="/shop" component={Shop} />
     <Route path="/merch" component={Merch} />
+    <Route path="/products" component={Products} />
     <Route path="/course/thyroid-health-mastery" component={ThyroidCourse} />
     
     {/* Product Pages with Gumroad Integration */}
