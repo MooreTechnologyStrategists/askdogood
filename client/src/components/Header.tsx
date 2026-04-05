@@ -34,8 +34,8 @@ export default function Header() {
       label: "Health Apps",
       icon: Heart,
       submenu: [
-        { href: "/LabelScanner", label: "Label Scanner", icon: Scan },
-        { href: "/MealPrep", label: "MealPrep", icon: UtensilsCrossed },
+        { href: "/label-scanner", label: "Label Scanner", icon: Scan },
+        { href: "/meal-prep", label: "MealPrep", icon: UtensilsCrossed },
       ],
     },
     { href: "/dashboard", label: "Dashboard", icon: Users },
