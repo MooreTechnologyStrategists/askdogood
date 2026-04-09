@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Late April PG Parks Neighborhood Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #103b2d;
+        --forest-soft: #1f5c47;
+        --gold: #c49a3a;
+        --cream: #faf6ec;
+        --ink: #1b1b1b;
+        --muted: #5f665f;
+        --card: #fffdf8;
+        --line: rgba(16, 59, 45, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 58, 0.18), transparent 28%),
+          linear-gradient(180deg, #f7f2e6 0%, #f4efe3 100%);
+        color: var(--ink);
+        font-family: "Manrope", sans-serif;
+        line-height: 1.45;
+      }
+
+      .page {
+        width: min(900px, calc(100vw - 24px));
+        margin: 24px auto;
+        padding: 28px;
+        background: var(--cream);
+        border: 1px solid rgba(16, 59, 45, 0.08);
+        box-shadow: 0 24px 60px rgba(16, 28, 20, 0.12);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 28px;
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(16, 59, 45, 0.98), rgba(34, 92, 70, 0.92)),
+          linear-gradient(135deg, rgba(196, 154, 58, 0.3), transparent 45%);
+        color: #fffaf0;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -60px -100px auto;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: rgba(196, 154, 58, 0.18);
+        filter: blur(8px);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f7e9bf;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "DM Serif Display", serif;
+        line-height: 1.05;
+      }
+
+      h1 {
+        max-width: 10ch;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+      }
+
+      .hero-copy {
+        max-width: 60ch;
+        margin-top: 16px;
+        font-size: 1.08rem;
+        color: rgba(255, 250, 240, 0.92);
+      }
+
+      .hook-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .hook {
+        padding: 16px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .hook strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+      }
+
+      .hook span {
+        font-size: 0.88rem;
+        color: rgba(255, 250, 240, 0.84);
+      }
+
+      .section {
+        margin-top: 24px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+        background: var(--card);
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        box-shadow: 0 10px 24px rgba(16, 59, 45, 0.05);
+      }
+
+      .tag {
+        width: fit-content;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(196, 154, 58, 0.14);
+        color: var(--forest);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        color: var(--forest);
+      }
+
+      .meta {
+        display: grid;
+        gap: 4px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .why {
+        margin: 0;
+        color: #2a2f2a;
+        font-size: 0.95rem;
+      }
+
+      .link {
+        margin-top: auto;
+        color: var(--forest-soft);
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      .bottom {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .panel {
+        padding: 20px;
+        border-radius: 24px;
+        background: #fffdf8;
+        border: 1px solid var(--line);
+      }
+
+      .panel ul,
+      .panel ol {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .panel li {
+        margin-bottom: 8px;
+      }
+
+      .stamp {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(16, 59, 45, 0.08);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--forest);
+      }
+
+      .footer-note {
+        margin-top: 18px;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .print-only {
+        display: none;
+      }
+
+      @media (max-width: 760px) {
+        .page {
+          padding: 16px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .hook-row,
+        .grid,
+        .bottom {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .page {
+          width: auto;
+          margin: 0;
+          border: none;
+          box-shadow: none;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .print-only {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Neighborhood Picks • Late April 2026</div>
+        <h1>Free, low-cost, actually worth leaving the house for.</h1>
+        <p class="hero-copy">
+          PG Parks has a strong late-April lineup. If you want easy neighborhood plans that feel
+          healthy, family-friendly, and community-centered, start here. Pick one event, text one
+          friend, and get out the house.
+        </p>
+        <div class="hook-row">
+          <div class="hook">
+            <strong>Best for families</strong>
+            <span>Farm tours, hikes, STEAM activities, reptiles, and toddler-friendly picks.</span>
+          </div>
+          <div class="hook">
+            <strong>Best for wellness</strong>
+            <span>Free Zumba, line dancing, Get Fit Mobile, screenings, and active outdoor events.</span>
+          </div>
+          <div class="hook">
+            <strong>Best for community</strong>
+            <span>Herbs festival, nature days, local culture, and public programs with real value.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Neighborhood Favorites</h2>
+            <p>These are the strongest late-April picks for a community flyer.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="tag">Free wellness</div>
+            <h3>Health Screenings & Educational Resources</h3>
+            <div class="meta">
+              <div>Thursday, April 23 • 12:00 PM - 2:00 PM</div>
+              <div>Price: Free</div>
+              <div>Why go: Free blood pressure, glucose, A1C, and cholesterol checks with health education.</div>
+            </div>
+            <p class="why">This is the kind of event people say they want more of: practical, local, and useful.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/health-screenings-educational-resources" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Family pick</div>
+            <h3>April Family Farm Tour</h3>
+            <div class="meta">
+              <div>Friday, April 24 • 1:00 PM - 2:00 PM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+              <div>Why go: Behind-the-scenes access to Old Maryland Farm and up-close animal learning.</div>
+            </div>
+            <p class="why">Low cost, easy for kids, and a good choice for families who want something different from the usual weekend routine.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/april-family-farm-tour" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Big community day</div>
+            <h3>Montpelier Festival of Herbs, Tea, and the Arts</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:00 AM - 4:00 PM</div>
+              <div>Price: Free</div>
+              <div>Why go: Herbs, art, live experiences, history, and family-friendly spring energy.</div>
+            </div>
+            <p class="why">This is flyer-headline material. It already sounds like a full day out, not just another event listing.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/annual-montpelier-festival-of-herbs-tea-and-the-arts" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Move together</div>
+            <h3>Fitness in the Parks: Family Zumba</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:30 AM - 11:30 AM</div>
+              <div>Price: Free</div>
+              <div>Why go: Easy-to-follow dance moves for all ages.</div>
+            </div>
+            <p class="why">Perfect for neighbors who want something active without the pressure of a hardcore workout class.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/fitness-in-the-parks-family-zumba/2026-04-25" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Nature + family</div>
+            <h3>Family Discovery Hike</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:00 AM - 11:30 AM</div>
+              <div>Price: $5 resident / $7 non-resident</div>
+              <div>Why go: Guided nature adventure with the whole family.</div>
+            </div>
+            <p class="why">Strong option for parents who want movement, fresh air, and something screen-free.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/family-discovery-hike/2026-04-25" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Free community</div>
+            <h3>Patuxent River Park Community Day</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 11:00 AM - 2:00 PM</div>
+              <div>Price: Free</div>
+              <div>Why go: Earth Month community programming that celebrates local natural spaces.</div>
+            </div>
+            <p class="why">Great for neighbors who want a broad community event instead of a formal class.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/patuxent-river-park-community-day" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Free movement</div>
+            <h3>Urban Line Dancing</h3>
+            <div class="meta">
+              <div>Monday, April 27 • 8:30 AM - 9:30 AM</div>
+              <div>Price: Free</div>
+              <div>Why go: Beginner-friendly dance fitness with real community energy.</div>
+            </div>
+            <p class="why">This is an easy sell on a flyer because it sounds fun before it sounds like exercise.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/fitness-in-the-parks-urban-line-dancing/2026-04-27" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Kid-friendly learning</div>
+            <h3>Growing in the Garden: 3-Part Learning Series</h3>
+            <div class="meta">
+              <div>Tuesday, April 28 • 1:00 PM - 2:00 PM</div>
+              <div>Price: $24 resident / $32 non-resident</div>
+              <div>Why go: Hands-on gardening and agriculture for kids.</div>
+            </div>
+            <p class="why">Best for families who want a deeper learning experience, not just a one-day drop-in.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/growing-in-the-garden/2026-04-28" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Quick Bonus Picks</h2>
+            <p>For neighbors who want more free and low-cost options before April ends.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="tag">Low-cost nature</div>
+            <h3>Animal Encounters: Herp Awakening</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 11:00 AM - 12:00 PM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+            </div>
+            <a class="link" href="https://www.pgparks.com/event_list/animal-encounters-herp-awakening" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Free family</div>
+            <h3>Riversdale Kitchen Guild: Spring Brunch</h3>
+            <div class="meta">
+              <div>Sunday, April 26 • 12:00 PM - 3:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <a class="link" href="https://www.pgparks.com/event_list/riversdale-kitchen-guild-spring-brunch" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Free fitness</div>
+            <h3>Get Fit Mobile: Fitness on the Fly</h3>
+            <div class="meta">
+              <div>Thursday, April 30 • 6:00 PM - 7:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <a class="link" href="https://www.pgparks.com/event_list/get-fit-mobile-fitness-on-the-fly/2026-04-30" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Toddler pick</div>
+            <h3>Toddler Time: Leafing Out!</h3>
+            <div class="meta">
+              <div>Thursday, April 30 • 11:00 AM - 11:45 AM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+            </div>
+            <a class="link" href="https://www.pgparks.com/event_list/toddler-time-leafing-out" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="panel">
+          <h2>How To Market This So People Actually Show Up</h2>
+          <ul>
+            <li>Lead with “Free and low-cost local plans” instead of “programs and recreation.”</li>
+            <li>Use lines like “Pick one event, text one friend, and pull up.”</li>
+            <li>Post this near mailboxes, community boards, laundromats, churches, salons, and neighborhood Facebook groups.</li>
+            <li>Highlight one anchor event when sharing digitally: Montpelier Festival of Herbs, Tea, and the Arts.</li>
+            <li>For parents, push the family angle. For adults, push stress relief, movement, and community.</li>
+          </ul>
+          <div class="stamp">Best digital hook: “Late-April plans in PG County that won’t wreck your wallet.”</div>
+        </div>
+
+        <div class="panel">
+          <h2>How To Register</h2>
+          <ol>
+            <li>Go to pgparks.com/events</li>
+            <li>Search the exact event title</li>
+            <li>Register early if the event is paid or capacity-limited</li>
+          </ol>
+          <p class="stamp">PG Parks main site: https://www.pgparks.com/</p>
+          <p class="footer-note print-only">
+            Event information pulled from public PG Parks listings on April 3, 2026. Verify times,
+            pricing, and availability before attending.
+          </p>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Community flyer draft curated for neighborhood promotion. Event information pulled from public PG Parks listings on April 3, 2026. Verify times, pricing, and availability before attending.
+      </p>
+    </main>
+  </body>
+</html>

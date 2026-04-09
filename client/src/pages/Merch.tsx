@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Filter, Sparkles } from "lucide-react";
 import { products as shopProducts } from "@/data/products";
+import { GUMROAD_URLS } from "@/config/gumroad";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -19,11 +20,12 @@ export default function Merch() {
     : merchProducts.filter(p => p.category === selectedCategory);
 
   const handleAddToCart = (product: MerchProduct) => {
-    if (product.stripeLink && !product.stripeLink.includes("PLACEHOLDER")) {
-      window.open(product.stripeLink, "_blank");
-    } else {
-      alert(`Coming soon! ${product.name} will be available for purchase shortly.`);
-    }
+    const purchaseUrl =
+      product.stripeLink && !product.stripeLink.includes("PLACEHOLDER")
+        ? product.stripeLink
+        : GUMROAD_URLS.storefront;
+
+    window.open(purchaseUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -158,7 +160,7 @@ export default function Merch() {
                     size="lg"
                   >
                     <ShoppingCart className="mr-2 h-4 w-4" />
-                    {product.inStock ? "Add to Cart" : "Notify Me"}
+                    {product.inStock ? "Shop on Gumroad" : "Notify Me"}
                   </Button>
                 </div>
               </div>

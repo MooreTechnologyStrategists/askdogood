@@ -15,6 +15,138 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
+    title: "DMV Meal Prep for Busy Women Who Want to Eat Clean Without Burning Out",
+    excerpt:
+      "If healthy eating keeps falling apart by Wednesday, the problem may not be discipline — it may be the system. Here is a practical DMV-friendly meal prep rhythm that saves time, protects your energy, and helps you eat clean without turning your whole life into a full-time kitchen job.",
+    content: `If healthy eating keeps falling apart by Wednesday, it does **not** automatically mean you are lazy, undisciplined, or unserious about your health. Most of the time, it means your system is too weak for the life you are actually living.
+
+And for busy women in the **DMV**, especially those juggling health issues, caregiving, work, stress, and recovery, that matters.
+
+## Why meal prep works better than “winging it”
+
+Meal prep is not about eating boring food from identical plastic containers for the rest of your life. It is about reducing decision fatigue, lowering impulse spending, and making sure your future self has support ready.
+
+When your body is already dealing with inflammation, thyroid issues, burnout, IBS, GERD, or simple exhaustion, daily food decisions can feel like one more burden. A light prep system creates breathing room.
+
+## My simple Monday-Friday approach
+
+Here is the type of rhythm I recommend for real life:
+
+- **Monday:** salmon cakes, mason jar salad, beet-apple juice
+- **Tuesday:** kale pasta with a lemon-ginger wellness drink
+- **Wednesday:** tuna salad with a cucumber-mint smoothie
+- **Thursday:** lentil bowl, roasted vegetables, pineapple-mint water
+- **Friday:** jerk salmon bites, quinoa salad, hibiscus lime tea
+
+That kind of lineup gives you variety, color, protein, fiber, and enough structure to avoid the “I’m starving, so let me just order whatever is closest” spiral.
+
+## How to make it cheaper without making it miserable
+
+Healthy eating does **not** have to mean premium everything.
+
+A few of the smartest cost-saving moves are:
+
+1. Buy your greens, grains, and beans with a plan.
+2. Repeat your base ingredients, but change the sauces and seasonings.
+3. Prep 2 proteins, 2 vegetables, and 1 drink instead of trying to cook seven different meals.
+4. Use local DMV options like farmers markets, MOM’s, H Mart, and Trader Joe’s strategically.
+5. Keep one “emergency win” in the fridge — even a solid salad jar can save your whole day.
+
+## If you are too tired to do it alone
+
+And let’s be real: sometimes the answer is **not** “try harder.” Sometimes the answer is support.
+
+That is why I built the Ask DoGood **meal prep request flow** for DMV locals. If you want examples, a done-for-you starting point, or a cleaner way to stay on track, you can now choose sample meals, select pickup or delivery, and send in a request without extra drama.
+
+## The bigger point
+
+Meal prep is not just about food. It is about **protecting your future energy**.
+
+When you plan your meals, you are also planning for steadier moods, better digestion, fewer chaotic purchases, and a smoother week overall. That is how healing becomes more practical.
+
+If you need a next step, start with one meal, one drink, and one grocery list. Then build from there.
+
+And if you want the shortcut, Ask DoGood now has a DMV meal prep path ready for you.
+
+→ Explore the meal prep page and choose what fits your life.`,
+    date: "2026-04-09",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=1200",
+    tags: ["Meal Prep", "DMV", "Holistic Wellness"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
+    id: "what-ders-means-diet-exercise-rest-spirituality-and-the-real-life-systems-that-change-everything",
+    title: "What DERS Means: Diet, Exercise, Rest, Spirituality, and the Real-Life Systems That Change Everything",
+    excerpt:
+      "DERS is the Ask DoGood framework for building a better life through diet, exercise, rest, and spirituality — not as vague inspiration, but as practical systems that support healing, stability, and growth.",
+    content: `People hear the word **wellness** and immediately think about expensive powders, polished routines, and unrealistic perfection. That is not what I mean.
+
+At Ask DoGood, I use the framework **DERS**:
+
+- **D**iet
+- **E**xercise
+- **R**est
+- **S**pirituality
+
+It is simple on purpose. Because when life feels unstable, complicated systems usually collapse.
+
+## D is for Diet
+
+Diet is not punishment. It is not starvation. It is not chasing aesthetics while ignoring health.
+
+Diet is the daily choice to give your body food that supports energy, digestion, hormone balance, focus, and healing. For some people that means more anti-inflammatory meals. For others it means just getting off the cycle of skipping meals and then bingeing whatever is fast.
+
+## E is for Exercise
+
+Exercise is not just about shrinking yourself. It is about circulation, confidence, emotional release, joint support, cardiovascular strength, and keeping your mind from drowning in stillness.
+
+Some days exercise looks like a gym session. Some days it looks like stretching, line dancing, walking, cleaning your home, or moving your body long enough to come back to yourself.
+
+And yes, for me, **E also connects to employment and economic stability**. A better life includes money, structure, discipline, and sustainable opportunity. That is one of the bridges between Ask DoGood and The Dope Cloud Teacher.
+
+## R is for Rest
+
+Rest is not laziness. It is a strategy.
+
+Too many people are trying to heal in a permanently overdrawn state. No nervous system can thrive like that. Rest is where repair happens. Rest is where clarity returns. Rest is where your body gets a chance to stop fighting for survival every single second.
+
+## S is for Spirituality
+
+Spirituality is where meaning, grounding, gratitude, and guidance live.
+
+For some people, that is prayer. For others it is meditation, journaling, worship, stillness, scripture, or simply learning how to get quiet enough to hear themselves again. I believe healing works better when people have something deeper than performance driving them.
+
+## Why DERS matters right now
+
+DERS is not a slogan. It is a decision-making filter.
+
+When a person feels lost, they can ask:
+
+- What am I eating?
+- How am I moving?
+- Am I rested?
+- What is grounding me spiritually?
+
+That is a much stronger starting point than shame.
+
+## The real goal
+
+The goal is not to look impressive online. The goal is to create a life that feels more stable, beautiful, honest, and sustainable in the real world.
+
+That is what Ask DoGood is building toward.
+
+If you need a reset, start with one DERS pillar this week. Then add the next one. Small consistency still changes lives.`,
+    date: "2026-04-09",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=1200",
+    tags: ["DERS", "Spirituality", "Wellness"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
     id: "pro-tips-for-giving-tuesday",
     title: "Pro Tips for Giving Tuesday",
     excerpt: "Giving Tuesday is a global movement that encourages people to give back to their communities...",

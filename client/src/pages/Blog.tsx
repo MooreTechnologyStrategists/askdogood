@@ -164,6 +164,13 @@ export default function Blog() {
                     RSS Feed
                   </Button>
                 </Link>
+
+                <Link href="/guest-contributors">
+                  <Button variant="outline" className="gap-2">
+                    <BookOpen className="h-4 w-4" />
+                    Pitch a Guest Post
+                  </Button>
+                </Link>
               </div>
 
               {/* Tag chips */}

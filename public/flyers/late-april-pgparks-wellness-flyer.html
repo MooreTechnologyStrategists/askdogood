@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Late April PG Parks Wellness Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #103b2d;
+        --forest-soft: #1f5c47;
+        --gold: #c49a3a;
+        --cream: #faf6ec;
+        --ink: #1b1b1b;
+        --muted: #5f665f;
+        --card: #fffdf8;
+        --line: rgba(16, 59, 45, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 58, 0.18), transparent 28%),
+          linear-gradient(180deg, #f7f2e6 0%, #f4efe3 100%);
+        color: var(--ink);
+        font-family: "Manrope", sans-serif;
+        line-height: 1.45;
+      }
+      .page {
+        width: min(900px, calc(100vw - 24px));
+        margin: 24px auto;
+        padding: 28px;
+        background: var(--cream);
+        border: 1px solid rgba(16, 59, 45, 0.08);
+        box-shadow: 0 24px 60px rgba(16, 28, 20, 0.12);
+      }
+      .hero {
+        padding: 28px;
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(16, 59, 45, 0.98), rgba(34, 92, 70, 0.92)),
+          linear-gradient(135deg, rgba(196, 154, 58, 0.3), transparent 45%);
+        color: #fffaf0;
+      }
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f7e9bf;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      h1, h2, h3 { margin: 0; font-family: "DM Serif Display", serif; line-height: 1.05; }
+      h1 { max-width: 11ch; font-size: clamp(2.5rem, 5vw, 4.3rem); }
+      .hero-copy { max-width: 62ch; margin-top: 16px; font-size: 1.06rem; color: rgba(255, 250, 240, 0.92); }
+      .hook-row, .grid, .bottom { display: grid; gap: 14px; }
+      .hook-row { grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bottom { grid-template-columns: 1.05fr 0.95fr; margin-top: 24px; }
+      .hook { padding: 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255,255,255,0.12); color: #fffaf0; }
+      .hook strong { display:block; margin-bottom: 6px; }
+      .hook span { font-size: 0.88rem; color: rgba(255,250,240,0.84); }
+      .section { margin-top: 24px; }
+      .section-head { margin-bottom: 14px; }
+      .section-head p { margin: 6px 0 0; color: var(--muted); }
+      .card, .panel {
+        background: var(--card);
+        border-radius: 24px;
+        border: 1px solid var(--line);
+      }
+      .card {
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        padding:18px;
+        box-shadow: 0 10px 24px rgba(16, 59, 45, 0.05);
+      }
+      .panel { padding: 20px; }
+      .tag {
+        width: fit-content;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(196, 154, 58, 0.14);
+        color: var(--forest);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .card h3 { font-size: 1.45rem; color: var(--forest); }
+      .meta { display: grid; gap: 4px; color: var(--muted); font-size: 0.92rem; }
+      .why { margin: 0; color: #2a2f2a; font-size: 0.95rem; }
+      .link { margin-top: auto; color: var(--forest-soft); font-size: 0.9rem; font-weight: 800; text-decoration: none; }
+      .link:hover { text-decoration: underline; }
+      .panel ul, .panel ol { margin: 12px 0 0; padding-left: 18px; }
+      .panel li { margin-bottom: 8px; }
+      .stamp {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(16, 59, 45, 0.08);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--forest);
+      }
+      .footer-note { margin-top: 18px; font-size: 0.82rem; color: var(--muted); }
+      @media (max-width: 760px) {
+        .page { padding: 16px; margin: 0 auto; width: 100%; }
+        .hook-row, .grid, .bottom { grid-template-columns: 1fr; }
+      }
+      @media print {
+        body { background: white; }
+        .page { width: auto; margin: 0; border: none; box-shadow: none; }
+        a { color: inherit; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Wellness Edition • Late April 2026</div>
+        <h1>Free and low-cost ways to move, reset, and feel human again.</h1>
+        <p class="hero-copy">
+          If you want something healthier than sitting in the house but less intense than a full fitness plan, these PG Parks events hit the sweet spot: movement, community, and practical wellness with very little cost.
+        </p>
+        <div class="hook-row">
+          <div class="hook">
+            <strong>Good for beginners</strong>
+            <span>Zumba, line dancing, and mobile fitness options that don’t feel intimidating.</span>
+          </div>
+          <div class="hook">
+            <strong>Actually useful</strong>
+            <span>Free screenings, health education, and garden-based learning you can use in real life.</span>
+          </div>
+          <div class="hook">
+            <strong>Easy social energy</strong>
+            <span>Perfect for texting a friend and saying “let’s go together.”</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Best Wellness Picks</h2>
+          <p>These are the easiest events to market around movement, health, and community.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="tag">Free health support</div>
+            <h3>Health Screenings & Educational Resources</h3>
+            <div class="meta">
+              <div>Thursday, April 23 • 12:00 PM - 2:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">This is practical and easy to promote because people instantly understand the value: blood pressure, glucose, A1C, cholesterol, and health info.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/health-screenings-educational-resources" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Free movement</div>
+            <h3>Fitness in the Parks: Family Zumba</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:30 AM - 11:30 AM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">A fun, low-pressure way to move your body without making it feel like punishment.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/fitness-in-the-parks-family-zumba/2026-04-25" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Community favorite</div>
+            <h3>Urban Line Dancing</h3>
+            <div class="meta">
+              <div>Monday, April 27 • 8:30 AM - 9:30 AM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">This is one of the strongest flyer hooks because it sounds social and fun before it sounds like exercise.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/fitness-in-the-parks-urban-line-dancing/2026-04-27" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">After-work reset</div>
+            <h3>Get Fit Mobile: Fitness on the Fly</h3>
+            <div class="meta">
+              <div>Thursday, April 30 • 6:00 PM - 7:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">Perfect for neighbors who want an easy evening workout without a gym commitment.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/get-fit-mobile-fitness-on-the-fly/2026-04-30" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Garden wellness</div>
+            <h3>Growing in the Garden: 3-Part Learning Series</h3>
+            <div class="meta">
+              <div>Tuesday, April 28 • 1:00 PM - 2:00 PM</div>
+              <div>Price: $24 resident / $32 non-resident</div>
+            </div>
+            <p class="why">A good fit for people who like wellness through food, gardening, and hands-on learning.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/growing-in-the-garden/2026-04-28" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Whole-day vibe</div>
+            <h3>Montpelier Festival of Herbs, Tea, and the Arts</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:00 AM - 4:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">This one works beautifully for a wellness-themed flyer because herbs, tea, and spring arts already sell the mood.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/annual-montpelier-festival-of-herbs-tea-and-the-arts" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="panel">
+          <h2>How To Market This So Adults Care</h2>
+          <ul>
+            <li>Lead with the feeling: “Need a cheap reset before May starts?”</li>
+            <li>Use words like movement, stress relief, community, and low-pressure wellness.</li>
+            <li>Post it where adults already stop: coffee shops, churches, community boards, apartment lobbies, beauty salons, and Facebook groups.</li>
+            <li>For digital sharing, highlight one anchor event: Urban Line Dancing or the Herbs, Tea, and Arts Festival.</li>
+            <li>Add a simple invitation: “I’m going — meet me there?”</li>
+          </ul>
+          <div class="stamp">Best share line: “Late-April wellness plans in PG County that won’t wreck your wallet.”</div>
+        </div>
+
+        <div class="panel">
+          <h2>Quick Register Steps</h2>
+          <ol>
+            <li>Go to `pgparks.com/events`.</li>
+            <li>Search the event title exactly as written.</li>
+            <li>Register early for any paid or limited-capacity class.</li>
+          </ol>
+          <p class="stamp">Main site: https://www.pgparks.com/</p>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Community flyer draft curated from public PG Parks listings. Verify times, pricing, and availability before attending.
+      </p>
+    </main>
+  </body>
+</html>

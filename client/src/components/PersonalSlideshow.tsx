@@ -1,33 +1,39 @@
 const personalImages = [
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/Zay-and-KRock.jpg',
-    alt: 'Partnership & Love',
-    title: 'Finding Love After Loss'
+    src: "/images/personal/rosee-hero-1.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/Zay-and-KRock.jpg",
+    alt: "RoSeé Murphy outdoors in nature",
+    title: "Grounded in nature"
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/MGMCurlsAndTits.JPG',
-    alt: 'Body Confidence & Self-Acceptance',
-    title: 'Loving My Body Through Chronic Illness'
+    src: "/images/personal/rosee-hero-2.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/MGMCurlsAndTits.JPG",
+    alt: "RoSeé Murphy in motion and on mission",
+    title: "On the move"
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/NCAT1997ZAYWallabees.jpeg',
-    alt: 'College Days & Identity',
-    title: 'HBCU Pride & Finding My Voice'
+    src: "/images/personal/rosee-hero-3.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/NCAT1997ZAYWallabees.jpeg",
+    alt: "RoSeé Murphy in a bold everyday look",
+    title: "Everyday confidence"
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/sillyPoseNYC.jpg',
-    alt: 'Joy & Resilience',
-    title: 'Choosing Joy Despite the Struggle'
+    src: "/images/personal/rosee-hero-4.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/sillyPoseNYC.jpg",
+    alt: "RoSeé Murphy in a bright red top",
+    title: "Healing with style"
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/skiinnyBrownDressZay.jpg',
-    alt: 'Transformation & Growth',
-    title: 'My Healing Journey: Before & After'
+    src: "/images/personal/rosee-hero-5.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/skiinnyBrownDressZay.jpg",
+    alt: "RoSeé Murphy with family and community",
+    title: "Community first"
   },
   {
-    src: 'https://askdogoodassets.blob.core.windows.net/images/zays40th.jpeg',
-    alt: 'Milestone & Celebration',
-    title: 'Turning 40: Thriving Not Just Surviving'
+    src: "/images/personal/rosee-hero-6.jpg",
+    fallback: "https://askdogoodassets.blob.core.windows.net/images/zays40th.jpeg",
+    alt: "RoSeé Murphy in a cap and relaxed fit",
+    title: "Real-life glow"
   }
 ];
 
@@ -44,6 +50,10 @@ export default function PersonalSlideshow() {
                 alt={image.alt}
                 className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl hover:scale-105 transition-transform duration-300"
                 loading={index === 0 ? 'eager' : 'lazy'}
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = image.fallback;
+                }}
               />
             </div>
             <p className="text-sm font-semibold text-center text-foreground max-w-[140px]">

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Late April PG Parks Family Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --forest: #103b2d;
+        --forest-soft: #1f5c47;
+        --gold: #c49a3a;
+        --cream: #faf6ec;
+        --ink: #1b1b1b;
+        --muted: #5f665f;
+        --card: #fffdf8;
+        --line: rgba(16, 59, 45, 0.12);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 58, 0.18), transparent 28%),
+          linear-gradient(180deg, #f7f2e6 0%, #f4efe3 100%);
+        color: var(--ink);
+        font-family: "Manrope", sans-serif;
+        line-height: 1.45;
+      }
+      .page {
+        width: min(900px, calc(100vw - 24px));
+        margin: 24px auto;
+        padding: 28px;
+        background: var(--cream);
+        border: 1px solid rgba(16, 59, 45, 0.08);
+        box-shadow: 0 24px 60px rgba(16, 28, 20, 0.12);
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 28px;
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(16, 59, 45, 0.98), rgba(34, 92, 70, 0.92)),
+          linear-gradient(135deg, rgba(196, 154, 58, 0.3), transparent 45%);
+        color: #fffaf0;
+      }
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #f7e9bf;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      h1, h2, h3 {
+        margin: 0;
+        font-family: "DM Serif Display", serif;
+        line-height: 1.05;
+      }
+      h1 { max-width: 10ch; font-size: clamp(2.5rem, 5vw, 4.3rem); }
+      .hero-copy { max-width: 60ch; margin-top: 16px; font-size: 1.06rem; color: rgba(255, 250, 240, 0.92); }
+      .hook-row, .grid, .bottom { display: grid; gap: 14px; }
+      .hook-row { grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bottom { grid-template-columns: 1.1fr 0.9fr; margin-top: 24px; }
+      .hook, .card, .panel {
+        border-radius: 22px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.08);
+      }
+      .hook { padding: 16px; color: #fffaf0; }
+      .hook strong { display: block; margin-bottom: 6px; }
+      .hook span { font-size: 0.88rem; color: rgba(255, 250, 240, 0.84); }
+      .section { margin-top: 24px; }
+      .section-head { margin-bottom: 14px; }
+      .section-head p { margin: 6px 0 0; color: var(--muted); }
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+        background: var(--card);
+        box-shadow: 0 10px 24px rgba(16, 59, 45, 0.05);
+      }
+      .tag {
+        width: fit-content;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(196, 154, 58, 0.14);
+        color: var(--forest);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .card h3 { font-size: 1.45rem; color: var(--forest); }
+      .meta { display: grid; gap: 4px; color: var(--muted); font-size: 0.92rem; }
+      .why { margin: 0; color: #2a2f2a; font-size: 0.95rem; }
+      .link { margin-top: auto; color: var(--forest-soft); font-size: 0.9rem; font-weight: 800; text-decoration: none; }
+      .link:hover { text-decoration: underline; }
+      .panel {
+        padding: 20px;
+        background: #fffdf8;
+      }
+      .panel ul, .panel ol { margin: 12px 0 0; padding-left: 18px; }
+      .panel li { margin-bottom: 8px; }
+      .stamp {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(16, 59, 45, 0.08);
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--forest);
+      }
+      .footer-note { margin-top: 18px; font-size: 0.82rem; color: var(--muted); }
+      @media (max-width: 760px) {
+        .page { padding: 16px; margin: 0 auto; width: 100%; }
+        .hook-row, .grid, .bottom { grid-template-columns: 1fr; }
+      }
+      @media print {
+        body { background: white; }
+        .page { width: auto; margin: 0; border: none; box-shadow: none; }
+        a { color: inherit; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Family Edition • Late April 2026</div>
+        <h1>Cheap family plans that beat another weekend inside.</h1>
+        <p class="hero-copy">
+          If you want screen-free options for kids, cousins, grandparents, and neighbors, these PG Parks picks give you fresh air, movement, and real community without a big spend.
+        </p>
+        <div class="hook-row">
+          <div class="hook">
+            <strong>Most picks are free or under $10</strong>
+            <span>Easy on the wallet and simple enough for a last-minute family plan.</span>
+          </div>
+          <div class="hook">
+            <strong>Kid-friendly without being corny</strong>
+            <span>Farm animals, hikes, toddler nature time, and hands-on community days.</span>
+          </div>
+          <div class="hook">
+            <strong>Easy group outing</strong>
+            <span>Perfect for neighborhood parents who want to say “meet us there” and go.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Best Family Picks</h2>
+          <p>These are the easiest events to promote to parents and caregivers.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="tag">Farm favorite</div>
+            <h3>April Family Farm Tour</h3>
+            <div class="meta">
+              <div>Friday, April 24 • 1:00 PM - 2:00 PM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+            </div>
+            <p class="why">Low-cost, easy for little ones, and a cute switch-up from the same old weekend routine.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/april-family-farm-tour" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Nature + movement</div>
+            <h3>Family Discovery Hike</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:00 AM - 11:30 AM</div>
+              <div>Price: $5 resident / $7 non-resident</div>
+            </div>
+            <p class="why">A strong pick for parents who want something active, screen-free, and actually affordable.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/family-discovery-hike/2026-04-25" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Big community day</div>
+            <h3>Patuxent River Park Community Day</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 11:00 AM - 2:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">Perfect if you want a family outing that feels open, social, and easy for mixed age groups.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/patuxent-river-park-community-day" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Spring favorite</div>
+            <h3>Montpelier Festival of Herbs, Tea, and the Arts</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 10:00 AM - 4:00 PM</div>
+              <div>Price: Free</div>
+            </div>
+            <p class="why">This is the strongest all-ages headline event: spring energy, herbs, art, and a full-day feel.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/annual-montpelier-festival-of-herbs-tea-and-the-arts" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Toddler pick</div>
+            <h3>Toddler Time: Leafing Out!</h3>
+            <div class="meta">
+              <div>Thursday, April 30 • 11:00 AM - 11:45 AM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+            </div>
+            <p class="why">Short, cute, and great for parents of younger kids who want an easy outing before nap time.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/toddler-time-leafing-out" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+
+          <article class="card">
+            <div class="tag">Animal fun</div>
+            <h3>Animal Encounters: Herp Awakening</h3>
+            <div class="meta">
+              <div>Saturday, April 25 • 11:00 AM - 12:00 PM</div>
+              <div>Price: $4 resident / $6 non-resident</div>
+            </div>
+            <p class="why">A fun add-on for kids who love reptiles, nature, and anything hands-on.</p>
+            <a class="link" href="https://www.pgparks.com/event_list/animal-encounters-herp-awakening" target="_blank" rel="noopener noreferrer">Open event details</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="panel">
+          <h2>How To Pitch This To Parents</h2>
+          <ul>
+            <li>Lead with the money saver: “Free and low-cost family plans in PG County.”</li>
+            <li>Post the flyer in neighborhood groups with one simple line: “Trying to get the kids out the house? Start here.”</li>
+            <li>Mention the exact age fit when you share it: toddlers, school-age kids, or all ages.</li>
+            <li>Make it easier by suggesting a meetup time: “We’re pulling up at 10:30 if anybody wants to join.”</li>
+            <li>Good places to post: apartment lobbies, libraries, churches, mailboxes, playground boards, and parent group chats.</li>
+          </ul>
+          <div class="stamp">Best share line: “Family fun in PG that doesn’t cost a fortune.”</div>
+        </div>
+
+        <div class="panel">
+          <h2>Quick Family Plan</h2>
+          <ol>
+            <li>Pick one event that fits your crew’s age and energy.</li>
+            <li>Text one other parent so it feels like a real outing.</li>
+            <li>Bring water, snacks, and a stroller if needed.</li>
+            <li>Register early if it’s a paid or small-group event.</li>
+          </ol>
+          <p class="stamp">Main site: https://www.pgparks.com/events</p>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Community flyer draft curated from public PG Parks listings. Verify times, pricing, and availability before attending.
+      </p>
+    </main>
+  </body>
+</html>

@@ -441,6 +441,30 @@ Because healing isn't just clinical — it's emotional and spiritual. Stories le
 → [Read Episode 1](/stories/chyna-white/episode-1)
 → [Explore the Full Series](/stories/chyna-white)`],
 
+  // HUMAN SUPPORT / ESCALATION
+  [['human', 'real person', 'agent', 'support', 'contact', 'email', 'phone', 'help me directly'],
+  `**Need a real person?**
+
+You can absolutely reach the Ask DoGood team directly.
+
+**Fastest options:**
+• [Open the Contact Page →](/contact)
+• [Pitch a Guest Post →](/guest-contributors)
+• Email: [askdogood@gmail.com](mailto:askdogood@gmail.com)
+• Call/Text: [(202) 420-0682](tel:+12024200682)
+
+If your question is about coaching, meal prep, collaboration, media, or a custom request, use the contact page or tap the **Email a Human** button below.`],
+
+  // GUEST POSTS / COLLABORATION
+  [['guest post', 'guest blogger', 'contribute', 'write for you', 'collab', 'collaborate', 'partnership'],
+  `**Guest posts + partnerships are open.**
+
+If you want to write for Ask DoGood or pitch a collaboration, use the contributor page here:
+
+→ [Guest Contributors Page](/guest-contributors)
+
+Great fits include holistic health, meal prep, rest, spirituality, movement, education, employment, and real-life growth content.`],
+
   // DEFAULT
 ];
 
@@ -464,7 +488,9 @@ function getResponse(input: string): string {
 • "What are the best foods for thyroid health?"
 • "Tell me about ashwagandha"
 • "How can I reduce inflammation naturally?"
-• "What products do you offer?"
+• "How do I talk to a real person?"
+
+Need human help? Use [the contact page](/contact) or the **Email a Human** option below.
 
 Or visit the **[A-Z Herb Dictionary →](/herbs)** for complete herb profiles.`;
 }
@@ -476,17 +502,48 @@ const SUGGESTIONS = [
   'Best foods for inflammation?',
   'How to lose weight with thyroid disease?',
   'Natural sleep remedies',
-  'What products does AskDoGood offer?',
+  'How do I talk to a real person?',
+  'How do I submit a guest post?',
 ];
 
 // ─── Message Renderer (supports **bold**, bullet points, links) ────────────
+function renderInline(text: string) {
+  const tokens = text.split(/(\*\*.*?\*\*|\[[^\]]+\]\([^\)]+\))/g).filter(Boolean);
+
+  return tokens.map((token, index) => {
+    const boldMatch = token.match(/^\*\*(.*)\*\*$/);
+    if (boldMatch) {
+      return <strong key={index}>{boldMatch[1]}</strong>;
+    }
+
+    const linkMatch = token.match(/^\[([^\]]+)\]\(([^\)]+)\)$/);
+    if (linkMatch) {
+      const [, label, href] = linkMatch;
+      const external = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+
+      return (
+        <a
+          key={index}
+          href={href}
+          target={external && href.startsWith('http') ? '_blank' : undefined}
+          rel={external && href.startsWith('http') ? 'noopener noreferrer' : undefined}
+          className="underline text-primary hover:text-primary/80"
+        >
+          {label}
+        </a>
+      );
+    }
+
+    return <span key={index}>{token}</span>;
+  });
+}
+
 function renderMessage(text: string) {
   const lines = text.split('\n');
   return lines.map((line, i) => {
-    // Convert **bold** markers
-    const parts = line.split(/\*\*(.*?)\*\*/g).map((part, j) =>
-      j % 2 === 1 ? <strong key={j}>{part}</strong> : part
-    );
+    const cleanLine = line.replace(/^•\s|^\*\s/, '');
+    const parts = renderInline(cleanLine);
+
     if (line.startsWith('• ') || line.startsWith('* ')) {
       return <li key={i} className="ml-4 list-disc">{parts}</li>;
     }
@@ -511,6 +568,20 @@ export default function Chatbot() {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, loading]);
+
+  const openHumanSupport = () => {
+    const transcript = messages
+      .slice(-6)
+      .map((message) => `${message.from === 'user' ? 'Visitor' : 'Bot'}: ${message.text}`)
+      .join('\n\n');
+
+    const subject = encodeURIComponent('Ask DoGood support request from chatbot');
+    const body = encodeURIComponent(
+      `Hi Ask DoGood,\n\nI would like help from a real person.\n\nRecent chatbot context:\n\n${transcript}`,
+    );
+
+    window.location.href = `mailto:askdogood@gmail.com?subject=${subject}&body=${body}`;
+  };
 
   const handleSend = (text?: string) => {
     const msg = (text ?? input).trim();
@@ -622,6 +693,21 @@ export default function Chatbot() {
                 {q}
               </button>
             ))}
+          </div>
+
+          <div className="px-3 pt-2 grid grid-cols-2 gap-2 shrink-0">
+            <button
+              onClick={openHumanSupport}
+              className="text-xs border border-border rounded-xl px-3 py-2 hover:bg-secondary transition-colors font-medium"
+            >
+              Email a Human
+            </button>
+            <a
+              href="/contact"
+              className="text-xs border border-border rounded-xl px-3 py-2 hover:bg-secondary transition-colors font-medium text-center"
+            >
+              Contact Page
+            </a>
           </div>
 
           {/* Input */}

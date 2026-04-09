@@ -263,24 +263,24 @@ export default function Home() {
 
   const blogPosts: BlogCardProps[] = [
     {
-      title: "The Thyroid: Why This Small Gland Is Such a Big Deal",
+      title: "DMV Meal Prep for Busy Women Who Want to Eat Clean Without Burning Out",
       description:
-        "Your thyroid is the remote control to your brain. Learn what it does, what happens when it fails, and how to protect it.",
-      category: "Thyroid Health",
+        "A practical DMV-friendly meal prep rhythm for saving time, lowering stress, and eating better without living in the kitchen.",
+      category: "Meal Prep",
       readTime: "6 min read",
-      slug: "the-thyroid-why-this-small-gland-is-such-a-big-deal",
-      imagePath: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600",
-      icon: <HeartPulse className="h-6 w-6 text-white" />,
+      slug: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
+      imagePath: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600",
+      icon: <UtensilsCrossed className="h-6 w-6 text-white" />,
     },
     {
-      title: "Eating Well on a Budget: Lifestyle Hacks for Nutritious Eating",
+      title: "What DERS Means: Diet, Exercise, Rest, Spirituality, and the Real-Life Systems That Change Everything",
       description:
-        "Healthy eating doesn't have to break the bank. Real strategies for nourishing your body without financial stress.",
-      category: "Nutrition",
-      readTime: "7 min read",
-      slug: "eating-well-on-a-budget-lifestyle-hacks-for-nutritious-eating",
-      imagePath: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
-      icon: <TrendingUp className="h-6 w-6 text-white" />,
+        "The Ask DoGood framework for building a better life through diet, exercise, rest, spirituality, and everyday stability.",
+      category: "DERS",
+      readTime: "5 min read",
+      slug: "what-ders-means-diet-exercise-rest-spirituality-and-the-real-life-systems-that-change-everything",
+      imagePath: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=600",
+      icon: <Sparkles className="h-6 w-6 text-white" />,
     },
     {
       title: "Strength in Sisterhood: How to Show and Give Love to Black Women",
@@ -307,30 +307,57 @@ export default function Home() {
   const features: FeatureCardProps[] = [
     {
       icon: <HeartPulse className="h-5 w-5 text-primary" />,
-      title: "Healing Paths",
-      description: "Mind, body, and soul support that actually applies.",
+      title: "DERS Wellness",
+      description: "Diet, exercise, rest, and spirituality in one flow.",
       content:
-        "Guided focus areas (thyroid, stress, habits) that help you build momentum without burnout.",
+        "A clearer wellness framework that helps visitors understand the mission fast and take the next right step.",
     },
     {
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
-      title: "Clinical Food RX",
-      description: "Meals tailored to real conditions.",
-      content: "Turn symptoms, goals, and reality into meals you can actually stick to.",
-      href: "/clinical-recipes",
+      title: "Meal Prep Concierge",
+      description: "DMV-friendly orders, menus, and healing meal support.",
+      content: "Book sample Monday-Friday menus, choose pickup or delivery, and move straight into a Gumroad-backed offer.",
+      href: "/meal-prep",
     },
     {
       icon: <Zap className="h-5 w-5 text-primary" />,
-      title: "Challenges",
-      description: "Small wins that compound.",
-      content: "Weekly challenges to create structure and track your progress without shame.",
+      title: "Label Scanner App",
+      description: "Make smarter shopping decisions in seconds.",
+      content: "A more competitive wellness tool experience for visitors who want practical help, not fluff.",
+      href: "/label-scanner",
     },
     {
       icon: <BookOpen className="h-5 w-5 text-primary" />,
-      title: "Blog",
-      description: "Truth, strategy, and encouragement.",
+      title: "Guest Blog + Partnerships",
+      description: "Grow reach, authority, and collaboration.",
       content:
-        "The honest conversations people avoid — delivered with compassion and receipts.",
+        "Invite aligned writers, community voices, and business partners to help the brand reach a larger, more lucrative audience.",
+      href: "/guest-contributors",
+    },
+  ];
+
+  const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
+  const founderPhotoSecondary = "/images/personal/rosee-hero-4.jpg";
+  const dersPillars = [
+    {
+      title: "D — Diet",
+      description: "Clean eating, anti-inflammatory tools, and Gumroad meal plans built for real schedules.",
+      icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "E — Exercise + Employment",
+      description: "Movement, accountability, and practical pathways that connect wellness with stability and earning power.",
+      icon: <TrendingUp className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "R — Rest",
+      description: "Recovery systems that respect burnout, autoimmune flares, and the need for softness.",
+      icon: <ShieldCheck className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "S — Spirituality",
+      description: "Faith-forward grounding, peace, and structure without shame or performance pressure.",
+      icon: <Sparkles className="h-5 w-5 text-primary" />,
     },
   ];
 
@@ -353,7 +380,7 @@ export default function Home() {
                 Ask DoGood
               </h1>
               <p className="text-sm md:text-base text-primary font-medium mt-1">
-                Empowering Black and Brown communities through wellness, practical tools, and transformative growth.
+                DERS-powered wellness for real life: diet, exercise, rest, spirituality, and the structure to grow.
               </p>
             </div>
           </div>
@@ -395,13 +422,19 @@ export default function Home() {
                 />
                 <div className="absolute -inset-3 rounded-[2.5rem] border border-primary/15 bg-white/40 backdrop-blur-sm shadow-2xl" />
                 <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop"
-                  alt="RoSeé Murphy of Ask DoGood, thyroid wellness educator and community advocate"
+                  src={founderPhotoPrimary}
+                  alt="RoSeé Murphy of Ask DoGood, wellness educator and community advocate"
                   className="relative w-full h-full rounded-[2rem] object-cover border-4 border-white/70 shadow-2xl"
                   loading="eager"
                   fetchPriority="high"
                   width="384"
                   height="384"
+                  onError={(e) =>
+                    handleImageError(
+                      e,
+                      "https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop",
+                    )
+                  }
                 />
 
                 {/* Professional Badge */}
@@ -420,15 +453,15 @@ export default function Home() {
             </div>
 
             <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
-              Healing.Structure.
+              Healing. DERS.
               <br />
               <span className="text-primary">Real-life Growth.</span>
             </h2>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Thyroid health, nourishing meals, smarter routines, and community-centered tools for
-              people who need something stronger than pretty wellness talk. This is practical,
-              professional support with receipts.
+              Ask DoGood helps people better their lives through holistic health, clean eating,
+              movement, rest, spirituality, and real-world stability. This is practical,
+              professional support for people who want results, beauty, and substance.
             </p>
 
             {/* Trust Indicators - Professional */}
@@ -441,9 +474,9 @@ export default function Home() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <BeehiivSubscribe variant="inline" />
-              <Link href="/resources">
+              <Link href="/meal-prep">
                 <Button variant="outline" className="rounded-3xl px-6 py-6 text-base border-2 border-primary/30 bg-background/85 backdrop-blur-sm">
-                  Explore DMV Resources
+                  Book DMV Meal Prep
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </Link>
@@ -471,6 +504,51 @@ export default function Home() {
                 <p className="font-semibold text-lg mb-2">Clarity with authority</p>
                 <p className="text-sm text-muted-foreground">The site now feels more like a trusted wellness brand and less like a scattered content hub.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gradient-to-b from-background to-primary/5">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-sm uppercase tracking-[0.25em] text-primary font-semibold mb-3">
+                The Ask DoGood mission, made clearer
+              </p>
+              <h2 className="text-3xl md:text-5xl font-bold font-serif mb-3">
+                DERS + real-life stability = a stronger brand promise
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Wellness here is bigger than food. It includes healing routines, movement, rest,
+                spiritual grounding, and practical next steps that support healthier lives and new opportunities.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {dersPillars.map((pillar) => (
+                <div key={pillar.title} className="rounded-3xl border border-border/70 bg-background/85 p-5 shadow-lg backdrop-blur-sm">
+                  <div className="mb-3 inline-flex rounded-2xl bg-primary/10 p-3">{pillar.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">{pillar.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/shop">
+                <Button className="rounded-3xl px-6">Shop on Gumroad</Button>
+              </Link>
+              <Link href="/label-scanner">
+                <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/30">
+                  Try the Label Scanner
+                </Button>
+              </Link>
+              <Link href="/guest-contributors">
+                <Button variant="ghost" className="rounded-3xl px-6">
+                  Invite Guest Bloggers or Partners
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -574,13 +652,13 @@ export default function Home() {
                 aria-hidden="true"
               />
               <img
-                src={`${ASSET_BASE_URL}/hero-home.webp`}
+                src={founderPhotoSecondary}
                 alt="RoSeé Murphy portrait for Ask DoGood wellness brand"
                 className="relative w-full max-w-sm rounded-[2rem] object-cover border border-white/70 shadow-2xl"
                 loading="lazy"
                 width="420"
                 height="520"
-                onError={(e) => handleImageError(e, "/images/personal/rosee-profile.webp")}
+                onError={(e) => handleImageError(e, `${ASSET_BASE_URL}/hero-home.webp`)}
               />
             </div>
           </div>

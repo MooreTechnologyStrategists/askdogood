@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Sparkles,
   HeartPulse,
@@ -23,6 +23,10 @@ export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
+
   const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/journey", label: "Journey", icon: Sparkles },
@@ -34,8 +38,9 @@ export default function Header() {
       label: "Health Apps",
       icon: Heart,
       submenu: [
-        { href: "/LabelScanner", label: "Label Scanner", icon: Scan },
-        { href: "/MealPrep", label: "MealPrep", icon: UtensilsCrossed },
+        { href: "/label-scanner", label: "Label Scanner", icon: Scan },
+        { href: "/meal-prep", label: "Meal Prep Concierge", icon: UtensilsCrossed },
+        { href: "/clinical-recipes", label: "Clinical Recipes", icon: HeartPulse },
       ],
     },
     { href: "/dashboard", label: "Dashboard", icon: Users },
@@ -125,6 +130,8 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 rounded-md hover:bg-accent transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-site-menu"
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -137,7 +144,7 @@ export default function Header() {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t bg-background">
+        <div id="mobile-site-menu" className="lg:hidden border-t bg-background/95 backdrop-blur animate-in slide-in-from-top-2 duration-200">
           <nav className="container py-4 flex flex-col gap-2">
             {navItems.map((item) => {
               if (item.submenu) {

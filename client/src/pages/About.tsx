@@ -15,10 +15,8 @@ import {
   UsersRound,
 } from "lucide-react";
 
-const ABOUT_HERO_IMAGE =
-  "https://askdogoodassets.blob.core.windows.net/images/about-hero.webp"; // city reflection
-const ABOUT_STORY_IMAGE =
-  "https://askdogoodassets.blob.core.windows.net/images/about-story.webp"; // looking up
+const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-7.jpg";
+const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-4.jpg";
 
 export default function About() {
   return (
@@ -72,13 +70,13 @@ export default function About() {
 
               {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/free-reset">
+                <Link href="/free-meal-plan">
                   <Button size="lg" className="gap-2 shadow-md hover:shadow-lg transition-shadow">
-                    Get the Free Reset <ArrowRight className="h-4 w-4" />
+                    Get the Free Meal Plan <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
 
-                <Link href="/consulting">
+                <Link href="/contact">
                   <Button
                     size="lg"
                     variant="outline"
@@ -91,9 +89,9 @@ export default function About() {
 
               {/* Secondary CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/newsletter">
+                <Link href="/blog">
                   <Button variant="secondary" className="gap-2">
-                    Get DoGood Notes <Mail className="h-4 w-4" />
+                    Read DoGood Notes <Mail className="h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="/shop">
@@ -101,9 +99,9 @@ export default function About() {
                     Shop DoGood Bundles <ShoppingBag className="h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="/community">
+                <Link href="/coaching">
                   <Button variant="outline" className="gap-2">
-                    Join DoGood Circle <UsersRound className="h-4 w-4" />
+                    Book Coaching <UsersRound className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -145,6 +143,10 @@ export default function About() {
                   className="h-full w-full object-cover"
                   style={{ objectPosition: "70% 35%" }}
                   loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.onerror = null;
+                    event.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/about-hero.webp";
+                  }}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-background/10 to-transparent" />
@@ -172,6 +174,10 @@ export default function About() {
                   className="h-full w-full object-cover"
                   style={{ objectPosition: "50% 15%" }}
                   loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.onerror = null;
+                    event.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/about-story.webp";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
               </div>

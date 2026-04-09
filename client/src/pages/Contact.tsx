@@ -241,6 +241,9 @@ export default function Contact() {
             <Button variant="outline" size="lg" asChild>
               <a href="/journey">View My Journey</a>
             </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/guest-contributors">Pitch a Guest Post</a>
+            </Button>
           </div>
         </div>
       </section>

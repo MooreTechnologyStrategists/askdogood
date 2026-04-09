@@ -55,7 +55,7 @@ function getSchemaForPath(path: string) {
           name: SITE_NAME,
           url: SITE_URL,
           description:
-            "Thyroid wellness, healing, practical resources, and real-life growth from Ask DoGood.",
+            "DERS-powered wellness, DMV meal prep, Gumroad tools, and real-life growth from Ask DoGood.",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
@@ -109,6 +109,34 @@ function getSchemaForPath(path: string) {
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",
         },
+      };
+    case "/meal-prep":
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Ask DoGood DMV Meal Prep",
+        serviceType: "Meal prep and wellness food support",
+        provider: {
+          "@type": "Organization",
+          name: SITE_NAME,
+        },
+        areaServed: "Washington DC, Maryland, Virginia",
+        url: `${SITE_URL}/meal-prep`,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          lowPrice: "16",
+          highPrice: "19",
+          availability: "https://schema.org/InStock",
+        },
+      };
+    case "/shop":
+      return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Ask DoGood Shop",
+        url: `${SITE_URL}/shop`,
+        description: "Digital wellness tools and healing bundles available through Gumroad.",
       };
     case "/coaching":
       return {

@@ -71,7 +71,7 @@ import { GA_MEASUREMENT_ID } from "./config/analytics";
 import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
 import ShopRedirect from "./pages/ShopRedirect";
 import HerbDictionary from "./pages/HerbDictionary";
-
+import GuestContributors from "./pages/GuestContributors";
 
 
 // Clinical Recipe System page - using standalone component from pages folder
@@ -110,6 +110,7 @@ function Router() {
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
     <Route path="/contact" component={Contact} />
+    <Route path="/guest-contributors" component={GuestContributors} />
     <Route path="/herbs" component={HerbDictionary} />
     <Route path="/garden/:season" component={GardenSeasonPost} />
 

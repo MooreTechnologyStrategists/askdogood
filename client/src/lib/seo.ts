@@ -2,7 +2,7 @@ export const SITE_NAME = "Ask DoGood";
 export const SITE_URL = "https://askdogood.com";
 export const SITE_AUTHOR = 'RoSeé Murphy';
 export const DEFAULT_DESCRIPTION =
-  "Healing, structure, and real-life growth for thyroid warriors and wellness seekers through practical resources, honest storytelling, and evidence-aware support.";
+  "DERS-powered wellness, thyroid support, DMV meal prep, and real-life growth for people pursuing holistic health, stability, and sustainable healing.";
 export const DEFAULT_OG_IMAGE =
   "https://askdogoodassets.blob.core.windows.net/images/AskDoGood_Logo_300x300.png";
 export const RSS_FEED_PATH = "/blog-rss.xml";
@@ -35,14 +35,16 @@ export type StaticSeoPage = {
 export const staticSeoPages: StaticSeoPage[] = [
   {
     path: "/",
-    title: "Ask DoGood | Thyroid Wellness, Healing, and Real-Life Growth",
+    title: "Ask DoGood | DERS Wellness, DMV Meal Prep, Healing, and Real-Life Growth",
     description:
-      "Ask DoGood helps thyroid warriors and wellness seekers build healing routines, practical structure, and sustainable growth through resources, recipes, courses, and honest storytelling.",
+      "Ask DoGood helps wellness seekers build better lives through DERS—diet, exercise, rest, and spirituality—plus thyroid support, DMV meal prep, practical tools, Gumroad products, and honest storytelling.",
     keywords: [
       "thyroid wellness",
-      "thyroid healing",
-      "wellness resources",
-      "holistic wellness",
+      "DMV meal prep",
+      "DERS wellness",
+      "holistic health",
+      "plant based meal prep",
+      "spiritual wellness",
       "Ask DoGood",
       "chronic illness support",
     ],
@@ -118,6 +120,20 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "monthly",
   },
   {
+    path: "/guest-contributors",
+    title: "Guest Contributors and Wellness Writers | Ask DoGood",
+    description:
+      "Pitch a guest post to Ask DoGood on holistic health, DERS living, clean eating, rest, spirituality, employment, and real-life growth.",
+    keywords: [
+      "guest post wellness",
+      "write for Ask DoGood",
+      "holistic health contributor",
+      "guest blogger submission",
+    ],
+    priority: 0.68,
+    changefreq: "monthly",
+  },
+  {
     path: "/journey",
     title: "My Journey | Ask DoGood",
     description:
@@ -184,12 +200,34 @@ export const staticSeoPages: StaticSeoPage[] = [
   },
   {
     path: "/meal-prep",
-    title: "Meal Prep for Healing | Ask DoGood",
+    title: "DMV Meal Prep for Healing | Ask DoGood",
     description:
-      "Build sustainable meal prep habits with practical ideas designed to support healing, energy, and consistency.",
-    keywords: ["meal prep", "healing meals", "wellness nutrition"],
-    priority: 0.7,
-    changefreq: "monthly",
+      "Order simple Monday-Friday meal prep combos, choose pickup or delivery in the DMV, and explore healing-friendly food support from Ask DoGood.",
+    keywords: [
+      "DMV meal prep",
+      "healthy meal prep near me",
+      "anti inflammatory meals",
+      "plant based meal prep",
+      "Ask DoGood meal prep",
+    ],
+    priority: 0.82,
+    changefreq: "weekly",
+  },
+  {
+    path: "/shop",
+    title: "Shop Wellness Bundles on Gumroad | Ask DoGood",
+    description:
+      "Browse Ask DoGood Gumroad wellness bundles, thyroid tools, meal plans, and practical digital products built for healing and sustainable growth.",
+    keywords: [
+      "Ask DoGood Gumroad",
+      "wellness bundles",
+      "thyroid course",
+      "meal plan download",
+      "holistic health products",
+    ],
+    type: "product",
+    priority: 0.9,
+    changefreq: "weekly",
   },
   {
     path: "/clinical-recipes",
