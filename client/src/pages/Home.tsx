@@ -33,6 +33,7 @@ import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import FoodSlideshow from "@/components/FoodSlideshow";
 import PersonalSlideshow from "@/components/PersonalSlideshow";
 import { gardenSeasons } from "@/content/gardenSeasons";
+import { GUMROAD_URLS } from "@/config/gumroad";
 
 // Constants
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
@@ -336,8 +337,8 @@ export default function Home() {
     },
   ];
 
-  const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
-  const founderPhotoSecondary = "/images/personal/rosee-hero-4.jpg";
+  const founderPhotoPrimary = "/images/personal/professional/rosee-professional-suit.jpg";
+  const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
   const dersPillars = [
     {
       title: "D — Diet",
@@ -363,91 +364,47 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* LOGO HEADER - Clean and Professional */}
-      <section className="py-8 border-b bg-gradient-to-r from-background via-primary/5 to-background">
-        <div className="container">
-          <div className="flex items-center justify-center gap-4">
-            <img
-              src={`${ASSET_BASE_URL}/brand/logo-flower-circle.webp`}
-              alt="Ask DoGood Logo"
-              className="h-24 w-24 object-contain drop-shadow-lg"
-              loading="eager"
-              width="96"
-              height="96"
-            />
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight font-serif">
-                Ask DoGood
-              </h1>
-              <p className="text-sm md:text-base text-primary font-medium mt-1">
-                DERS-powered wellness for real life: diet, exercise, rest, spirituality, and the structure to grow.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* HERO SECTION - Main Value Proposition */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Background Images Grid */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        {/* Clean gradient background — no clutter */}
         <div
-          className="absolute inset-0 opacity-30 grid grid-cols-2 gap-4 p-8"
+          className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background to-accent/5"
           aria-hidden="true"
-        >
-          {[1, 2, 3, 4].map((num) => (
-            <img
-              key={`bg-dish-${num}`}
-              src={`${ASSET_BASE_URL}/foods/muhammad-dishes-${num}.jpg`}
-              alt=""
-              className="w-full h-full object-cover rounded-lg"
-              loading="lazy"
-              onError={(e) =>
-                handleImageError(e, `/images/personal/food/muhammad-dishes-${num}.jpg`)
-              }
-            />
-          ))}
-        </div>
-
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        />
+        {/* Subtle decorative circles */}
+        <div className="absolute top-1/4 -right-24 w-96 h-96 bg-primary/6 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute bottom-1/4 -left-24 w-80 h-80 bg-accent/8 rounded-full blur-3xl" aria-hidden="true" />
         
         <div className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">
-              <div className="relative w-[18rem] h-[22rem] md:w-[28rem] md:h-[34rem]">
+              <div className="relative w-[16rem] h-[20rem] md:w-[22rem] md:h-[28rem]">
+                {/* Soft glow behind photo */}
                 <div
-                  className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary to-secondary opacity-20 blur-xl"
+                  className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/10 blur-2xl scale-110"
                   aria-hidden="true"
                 />
-                <div className="absolute -inset-3 rounded-[2.5rem] border border-primary/15 bg-white/40 backdrop-blur-sm shadow-2xl" />
+                {/* Photo frame */}
+                <div className="absolute -inset-1 rounded-3xl border border-primary/20 bg-white/60 backdrop-blur-sm shadow-2xl" />
                 <img
                   src={founderPhotoPrimary}
                   alt="RoSeé Murphy of Ask DoGood, wellness educator and community advocate"
-                  className="relative w-full h-full rounded-[2rem] object-cover border-4 border-white/70 shadow-2xl"
+                  className="relative w-full h-full rounded-3xl object-cover border-2 border-white/90 shadow-2xl"
                   loading="eager"
                   fetchPriority="high"
-                  width="384"
-                  height="384"
+                  width="352"
+                  height="448"
                   onError={(e) =>
                     handleImageError(
                       e,
-                      "https://askdogoodassets.blob.core.windows.net/images/curlsAndSpecs.jpg?w=600&h=600&fit=crop",
+                      "/images/personal/rosee-hero-1.jpg",
                     )
                   }
                 />
-
-                {/* Professional Badge */}
-                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-white text-foreground px-6 py-3 rounded-full shadow-xl border-2 border-primary/20">
-                  <span className="text-sm font-semibold">Thyroid Wellness Educator</span>
-                </div>
-                <div className="absolute top-4 -left-8 hidden md:block rounded-2xl bg-background/95 px-4 py-3 shadow-xl border border-border text-left">
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">DMV Rooted</p>
-                  <p className="text-base font-semibold">Resources, recipes, real support</p>
-                </div>
-                <div className="absolute bottom-10 -right-10 hidden md:block rounded-2xl bg-primary text-primary-foreground px-4 py-3 shadow-xl text-left">
-                  <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">Built for</p>
-                  <p className="text-base font-semibold">Black and Brown wellness journeys</p>
+                {/* Professional credential badge */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white text-foreground px-5 py-2.5 rounded-full shadow-xl border border-primary/25 whitespace-nowrap">
+                  <span className="text-sm font-semibold tracking-tight">Thyroid Wellness Educator</span>
                 </div>
               </div>
             </div>
@@ -475,17 +432,22 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <BeehiivSubscribe variant="inline" />
               <Link href="/meal-prep">
-                <Button variant="outline" className="rounded-3xl px-6 py-6 text-base border-2 border-primary/30 bg-background/85 backdrop-blur-sm">
-                  Book DMV Meal Prep
+                <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
+                  Book DMV Meal Prep Concierge
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </Link>
             </div>
 
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-3">
               <p className="text-sm text-muted-foreground font-medium">
                 Free Thyroid Symptom Checklist + 3-Day Meal Plan
               </p>
+              <a href={GUMROAD_URLS.freeChecklistMealPlan} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="rounded-3xl px-6 py-5 text-sm font-semibold border-2 border-primary/45 bg-background text-foreground shadow-lg hover:bg-primary/5">
+                  Get the Free Checklist + 3-Day Plan
+                </Button>
+              </a>
             </div>
 
             <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto pt-4 text-left">
@@ -536,16 +498,16 @@ export default function Home() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/shop">
-                <Button className="rounded-3xl px-6">Shop on Gumroad</Button>
-              </Link>
+              <a href={GUMROAD_URLS.storefront} target="_blank" rel="noopener noreferrer">
+                <Button className="rounded-3xl px-6 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl">Shop on Gumroad</Button>
+              </a>
               <Link href="/label-scanner">
-                <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/30">
+                <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/50 bg-white text-foreground font-semibold shadow-sm">
                   Try the Label Scanner
                 </Button>
               </Link>
               <Link href="/guest-contributors">
-                <Button variant="ghost" className="rounded-3xl px-6">
+                <Button variant="secondary" className="rounded-3xl px-6 font-semibold shadow-sm">
                   Invite Guest Bloggers or Partners
                 </Button>
               </Link>
@@ -588,10 +550,10 @@ export default function Home() {
 
               <p className="text-lg leading-relaxed mb-4">
                 Then one day, my doctor introduced me to <strong>dicyclomine</strong>. Game.
-                Changer. But I didn't stop there. I started taking pre and probiotics, digestive
-                enzymes. I committed to working out for at least an hour every day—P90X, gym
-                sessions, running. I went from taking dicyclomine 4 times a day to actually{" "}
-                <em>eating real food again</em>.
+                Changer. But I didn't stop there. I rebuilt my routine with clean,
+                <strong> plant-based eating</strong>, daily structure, workouts (P90X, gym,
+                running), and <strong>faith in God</strong>. I went from taking dicyclomine 4
+                times a day to <strong>none</strong>, and finally started <em>eating real food again</em>.
               </p>
 
               <p className="text-lg leading-relaxed font-semibold text-primary">
@@ -754,7 +716,7 @@ export default function Home() {
                   <span className="text-sm text-muted-foreground line-through">$19.99</span>
                 </div>
                 <a
-                  href="https://askdogood.gumroad.com/l/thyroid-symptom-tracker"
+                  href={GUMROAD_URLS.symptomTracker}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -816,7 +778,7 @@ export default function Home() {
                   <span className="text-sm text-muted-foreground line-through">$49.99</span>
                 </div>
                 <a
-                  href="https://askdogood.gumroad.com/l/30-day-meal-plan"
+                  href={GUMROAD_URLS.mealPlan}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

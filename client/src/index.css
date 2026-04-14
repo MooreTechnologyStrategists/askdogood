@@ -48,40 +48,40 @@
 }
 
 :root {
-  /* 2026 Forest Wellness — Deep Emerald + Warm Gold (professional, holistic, premium) */
-  --primary: oklch(0.38 0.13 158);           /* Deep forest green — healing, growth, nature */
-  --primary-foreground: oklch(0.97 0.008 158);
-  --sidebar-primary: oklch(0.34 0.12 158);
-  --sidebar-primary-foreground: oklch(0.97 0.008 158);
-  --chart-1: oklch(0.58 0.14 158);           /* Medium emerald */
-  --chart-2: oklch(0.38 0.13 158);           /* Deep emerald */
-  --chart-3: oklch(0.26 0.10 158);           /* Very dark emerald */
-  --chart-4: oklch(0.73 0.18 82);            /* Warm amber/gold */
-  --chart-5: oklch(0.58 0.14 82);            /* Deep gold */
-  --radius: 1rem;
-  --background: oklch(0.98 0.005 100);       /* Warm linen — never stark white */
-  --foreground: oklch(0.16 0.01 270);        /* Deep charcoal — sharp readability */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0.01 270);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.01 270);
-  --secondary: oklch(0.91 0.03 158);         /* Soft sage — light green tint */
-  --secondary-foreground: oklch(0.25 0.05 158);
-  --muted: oklch(0.94 0.015 158);            /* Near-white sage wash */
-  --muted-foreground: oklch(0.48 0.02 255);  /* Neutral gray for body text */
-  --accent: oklch(0.73 0.18 82);             /* Warm amber/gold — premium, cultural richness */
-  --accent-foreground: oklch(0.14 0.02 82);
+  /* 2026 Premium Wellness — Sage + Champagne Gold (refined, elegant, culturally rich) */
+  --primary: oklch(0.36 0.12 160);           /* Rich sage-forest green — calm authority */
+  --primary-foreground: oklch(0.98 0.006 160);
+  --sidebar-primary: oklch(0.32 0.11 160);
+  --sidebar-primary-foreground: oklch(0.98 0.006 160);
+  --chart-1: oklch(0.56 0.13 160);           /* Medium sage */
+  --chart-2: oklch(0.36 0.12 160);           /* Deep sage */
+  --chart-3: oklch(0.24 0.09 160);           /* Very dark sage */
+  --chart-4: oklch(0.76 0.17 84);            /* Champagne gold */
+  --chart-5: oklch(0.60 0.14 84);            /* Deep gold */
+  --radius: 0.875rem;
+  --background: oklch(0.987 0.006 90);       /* Warm ivory — premium, never stark */
+  --foreground: oklch(0.13 0.012 260);       /* Rich near-black — maximum readability */
+  --card: oklch(0.998 0.004 88);             /* Slightly warm white card */
+  --card-foreground: oklch(0.13 0.012 260);
+  --popover: oklch(0.998 0.004 88);
+  --popover-foreground: oklch(0.13 0.012 260);
+  --secondary: oklch(0.93 0.022 162);        /* Light sage — fresh, airy */
+  --secondary-foreground: oklch(0.23 0.06 160);
+  --muted: oklch(0.95 0.014 160);            /* Soft sage wash */
+  --muted-foreground: oklch(0.47 0.018 240); /* Balanced warm gray body text */
+  --accent: oklch(0.76 0.17 84);             /* Champagne gold — luxury, cultural richness */
+  --accent-foreground: oklch(0.12 0.022 84);
   --destructive: oklch(0.54 0.20 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.87 0.02 158);            /* Subtle sage border */
-  --input: oklch(0.87 0.02 158);
-  --ring: oklch(0.38 0.13 158);
-  --sidebar: oklch(0.97 0.005 100);
-  --sidebar-foreground: oklch(0.16 0.01 270);
-  --sidebar-accent: oklch(0.91 0.03 158);
-  --sidebar-accent-foreground: oklch(0.25 0.05 158);
-  --sidebar-border: oklch(0.87 0.02 158);
-  --sidebar-ring: oklch(0.38 0.13 158);
+  --border: oklch(0.89 0.016 160);           /* Refined sage border */
+  --input: oklch(0.89 0.016 160);
+  --ring: oklch(0.36 0.12 160);
+  --sidebar: oklch(0.975 0.006 90);
+  --sidebar-foreground: oklch(0.13 0.012 260);
+  --sidebar-accent: oklch(0.93 0.022 162);
+  --sidebar-accent-foreground: oklch(0.23 0.06 160);
+  --sidebar-border: oklch(0.89 0.016 160);
+  --sidebar-ring: oklch(0.36 0.12 160);
 }
 
 /* Utility for Playfair Display font */
