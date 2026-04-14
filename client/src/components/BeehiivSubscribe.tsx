@@ -44,6 +44,23 @@ export default function BeehiivSubscribe({
     trackNewsletterSignup(source, magnetType);
 
     try {
+      const leadResponse = await fetch("/api/newsletter-signups", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          source,
+          magnetType: magnetType || "none",
+        }),
+      });
+
+      const leadResult = await leadResponse.json().catch(() => null);
+      if (!leadResponse.ok || !leadResult?.success) {
+        throw new Error(leadResult?.message || "Newsletter signup capture failed");
+      }
+
       // Submit to Beehiiv
       const formData = new FormData();
       formData.append("email", email);
@@ -61,9 +78,10 @@ export default function BeehiivSubscribe({
         mode: "no-cors", // Beehiiv doesn't support CORS, so we use no-cors
       });
 
-      // With no-cors, we can't read the response, so assume success
+      // With no-cors, we can't read the response, so assume success.
+      // Beehiiv handles confirmation email delivery.
       setStatus("success");
-      setMessage("🎉 Welcome! Check your email to confirm your subscription.");
+      setMessage("🎉 Welcome! Check your inbox to confirm from our AskDoGood newsletter.");
       setEmail("");
 
       // Track successful signup
@@ -92,7 +110,7 @@ export default function BeehiivSubscribe({
 
     } catch (error) {
       setStatus("error");
-      setMessage("Something went wrong. Please try again.");
+      setMessage("Signup failed. Please try again or email askdogood@gmail.com.");
       console.error("Newsletter subscription error:", error);
     }
   };

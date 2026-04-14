@@ -18,4 +18,7 @@ export const GUMROAD_URLS = {
   labGuide:
     import.meta.env.VITE_GUMROAD_LAB_GUIDE_URL ||
     "https://askdogood.gumroad.com/l/thyroid-lab-guide",
+  freeChecklistMealPlan:
+    import.meta.env.VITE_GUMROAD_FREE_CHECKLIST_MEAL_PLAN_URL ||
+    "https://askdogood.gumroad.com/l/thyroid-checklist",
 } as const;

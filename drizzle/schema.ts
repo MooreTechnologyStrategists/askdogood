@@ -156,6 +156,28 @@ export type UserAchievement = typeof userAchievements.$inferSelect;
 export type InsertUserAchievement = typeof userAchievements.$inferInsert;
 
 /**
+ * Guest blogger, partner, and collaboration submissions
+ */
+export const collaborationSubmissions = mysqlTable("collaboration_submissions", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 120 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  collaborationType: varchar("collaborationType", { length: 100 }).notNull(),
+  expertise: text("expertise").notNull(),
+  website: varchar("website", { length: 500 }),
+  proposedTitle: varchar("proposedTitle", { length: 255 }).notNull(),
+  audience: text("audience").notNull(),
+  links: text("links"),
+  pitch: text("pitch").notNull(),
+  sourcePage: varchar("sourcePage", { length: 500 }),
+  status: mysqlEnum("status", ["new", "reviewing", "contacted", "closed"]).default("new").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type CollaborationSubmission = typeof collaborationSubmissions.$inferSelect;
+export type InsertCollaborationSubmission = typeof collaborationSubmissions.$inferInsert;
+
+/**
  * Meal prep recipes
  */
 export const recipes = mysqlTable("recipes", {

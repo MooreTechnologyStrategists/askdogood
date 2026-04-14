@@ -9,7 +9,7 @@ import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 
 export default function FreeMealPlan() {
   useEffect(() => {
-    trackLeadMagnetView('thyroid-meal-plan', '/free-meal-plan');
+    trackLeadMagnetView('thyroid-checklist-3day-plan', '/free-meal-plan');
   }, []);
 
   useScrollDepthTracking('Lead Magnet: Meal Plan');
@@ -17,9 +17,9 @@ export default function FreeMealPlan() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       <SEO
-        title="Free 7-Day Thyroid-Friendly Meal Plan"
-        description="Download your free 7-day meal plan designed for thyroid health. Includes recipes, shopping lists, and prep guides for Hashimoto's and hypothyroidism."
-        keywords={['thyroid meal plan', 'Hashimoto\'s diet', 'hypothyroidism recipes', 'anti-inflammatory meal plan', 'thyroid-friendly recipes']}
+        title="Free Thyroid Symptom Checklist + 3-Day Meal Plan"
+        description="Download your free thyroid symptom checklist and 3-day meal plan designed to help you track symptoms, eat cleaner, and build structure fast."
+        keywords={['thyroid symptom checklist', '3-day thyroid meal plan', 'hypothyroidism support', 'anti-inflammatory meal plan', 'thyroid-friendly recipes']}
         url="/free-meal-plan"
       />
 
@@ -33,12 +33,12 @@ export default function FreeMealPlan() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
-              7-Day Thyroid-Friendly Meal Plan
+              Free Thyroid Symptom Checklist + 3-Day Meal Plan
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Take the guesswork out of eating for thyroid health. Get a complete week of delicious, 
-              anti-inflammatory meals designed to support your thyroid, reduce symptoms, and boost energy.
+              Get a focused starter pack: the thyroid symptom checklist that helps you track what is
+              happening in your body, plus a practical 3-day meal plan to help you eat clean right away.
             </p>
 
             {/* Preview Image */}
@@ -64,18 +64,18 @@ export default function FreeMealPlan() {
               {[
                 {
                   icon: Calendar,
-                  title: "7 Days of Meals",
-                  description: "Breakfast, lunch, dinner, and snacks - all planned for you"
+                  title: "3-Day Structured Plan",
+                  description: "Breakfast, lunch, dinner, and snacks for 3 practical days"
                 },
                 {
                   icon: UtensilsCrossed,
-                  title: "21 Recipes",
-                  description: "Simple, delicious recipes you can make in 30 minutes or less"
+                  title: "Easy Thyroid-Friendly Meals",
+                  description: "Simple, delicious ideas you can actually repeat during busy weeks"
                 },
                 {
                   icon: CheckCircle2,
-                  title: "Shopping List",
-                  description: "Organized list by category so you can shop quickly"
+                  title: "Checklist + Shopping Guide",
+                  description: "Track symptoms and shop with less stress and more structure"
                 }
               ].map((item, idx) => (
                 <Card key={idx} className="text-center border-primary/20">
@@ -116,7 +116,7 @@ export default function FreeMealPlan() {
       <section className="py-16 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Sample Day from the Plan</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Sample Day from the 3-Day Plan</h2>
             
             <div className="space-y-6">
               <Card className="border-primary/20">
@@ -178,18 +178,20 @@ export default function FreeMealPlan() {
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-4">Get Your Free Meal Plan Now</h2>
+              <h2 className="text-3xl font-bold mb-4">Get Your Free Checklist + 3-Day Plan Now</h2>
               <p className="text-muted-foreground">
-                Enter your email and I'll send it straight to your inbox. You'll also get weekly 
-                thyroid-friendly recipes and wellness tips.
+                Enter your email and I will send it straight to your inbox. Then confirm your
+                subscription email to unlock the free download.
               </p>
             </div>
 
             <BeehiivSubscribe 
               variant="card"
-              title="Download Your Free 7-Day Meal Plan"
-              description="Get instant access + weekly recipes"
-              buttonText="Send Me The Meal Plan"
+              title="Download Your Free Thyroid Starter Pack"
+              description="Symptom checklist + 3-day meal plan + weekly support"
+              buttonText="Send Me The Free Pack"
+              source="free_meal_plan_page"
+              magnetType="thyroid-checklist-3day-plan"
             />
 
             <div className="mt-6 text-center space-y-2">

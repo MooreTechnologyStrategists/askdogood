@@ -17,6 +17,8 @@ import {
   achievements,
   userAchievements,
   InsertUserAchievement,
+  collaborationSubmissions,
+  InsertCollaborationSubmission,
   recipes,
   InsertRecipe,
   mealPlans
@@ -331,6 +333,22 @@ export async function getUserAchievements(userId: number) {
     .select()
     .from(userAchievements)
     .where(eq(userAchievements.userId, userId));
+}
+
+export async function createCollaborationSubmission(data: InsertCollaborationSubmission): Promise<{ id: number | null }> {
+  const db = await getDb();
+  if (!db) {
+    return { id: null };
+  }
+
+  try {
+    const result = await db.insert(collaborationSubmissions).values(data);
+    const insertId = Number((result as { insertId?: number }).insertId ?? 0);
+    return { id: Number.isFinite(insertId) && insertId > 0 ? insertId : null };
+  } catch (error) {
+    console.warn("[Database] Failed to save collaboration submission:", error);
+    return { id: null };
+  }
 }
 
 // Recipe Functions

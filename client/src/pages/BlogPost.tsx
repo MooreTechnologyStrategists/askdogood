@@ -16,6 +16,18 @@ type BlogRouteParams = {
 
 const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
 
+function normalizeBlogMarkdown(content: string): string {
+  const decoded = content
+    .replace(/\\r\\n/g, "\n")
+    .replace(/\\n/g, "\n")
+    .replace(/\r\n/g, "\n")
+    .replace(/\t/g, "  ");
+
+  const withParagraphBreaks = decoded.replace(/([^\n])\n(?!\n|[#>*\-]|\d+\.)/g, "$1\n\n");
+
+  return withParagraphBreaks.replace(/\n{3,}/g, "\n\n").trim();
+}
+
 // Map blog post slugs to recommended product IDs
 function getProductRecommendations(slug: string): string[] | null {
   const recommendations: Record<string, string[]> = {
@@ -135,8 +147,8 @@ export default function BlogPost() {
 
   const safeHtml = useMemo(() => {
     if (typeof post.content === "string" && post.content.trim()) {
-      // Convert Markdown to HTML
-      return marked.parse(post.content);
+      // Normalize imported content and convert Markdown to HTML.
+      return marked.parse(normalizeBlogMarkdown(post.content));
     }
     return "<p>Content coming soon.</p>";
   }, [post.content]);
@@ -233,7 +245,7 @@ export default function BlogPost() {
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:text-lg prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:mt-10 prose-h2:text-3xl prose-h3:mt-8 prose-h3:text-2xl prose-p:my-6 prose-p:text-lg prose-p:leading-relaxed prose-li:my-1 prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
               dangerouslySetInnerHTML={{ __html: safeHtml }}
             />
 

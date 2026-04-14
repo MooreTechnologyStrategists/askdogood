@@ -14,7 +14,7 @@ const products = [
     name: "Thyroid Health Mastery Course",
     productUrl: "https://askdogood.gumroad.com/l/thyroid-health-mastery",
     price: 97,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1400&auto=format&fit=crop",
     category: "Online Course",
     icon: Video,
     tagline: "Master your thyroid health with expert guidance and proven protocols",
@@ -138,7 +138,7 @@ This course combines medical science with lived experience across multiple healt
     name: "21-Day Plant-Based Reset",
     productUrl: "https://askdogood.gumroad.com/l/clinical-food-rx",
     price: 47,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1400&auto=format&fit=crop",
     category: "Transformation Program",
     icon: BookOpen,
     tagline: "Transform your health in 3 weeks with delicious plant-based meals",
@@ -157,7 +157,7 @@ This course combines medical science with lived experience across multiple healt
     name: "Thyroid Lab Interpretation Guide",
     productUrl: "https://askdogood.gumroad.com/l/thyroid-lab-guide",
     price: 27,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&auto=format&fit=crop",
     category: "Digital Guide",
     icon: BookOpen,
     tagline: "Master your thyroid lab results",
@@ -184,7 +184,7 @@ You'll get exact lab interpretation guidance, understand why "normal" ranges are
     name: "Thyroid Supplement Protocol Templates",
     productUrl: "https://askdogood.gumroad.com/l/adioal",
     price: 17,
-    image: "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1400&auto=format&fit=crop",
     category: "Digital Templates",
     icon: Download,
     tagline: "Personalize your thyroid supplement plan",
@@ -552,7 +552,7 @@ Your voice matters. Your health matters. You deserve better. This toolkit shows 
     price: 27,
     recurring: "monthly",
     foundingPrice: 19,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400&auto=format&fit=crop",
     category: "Monthly Membership",
     icon: Users,
     tagline: "Your community for healing, growth, and thriving through any health challenge",
@@ -680,8 +680,9 @@ This is the community I wish I had when I was in the thick of it. Now it's here 
   {
     id: 7,
     name: "\"Thyroid Thriver\" Premium Tee",
+    productUrl: "https://askdogood.gumroad.com/l/thyroid-thriver-tee",
     price: 32,
-    image: "/images/branding/askdogood-logo-aqua.png",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Wear your victory. Rep your resilience.",
@@ -709,8 +710,9 @@ Premium ring-spun cotton, ethically sourced, designed to last through countless 
   {
     id: 8,
     name: "\"Ask DoGood\" Vintage Washed Hoodie",
+    productUrl: "https://askdogood.gumroad.com/l/askdogood-vintage-washed-hoodie",
     price: 58,
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Cozy vibes. Bold mission. Maximum comfort.",
@@ -739,8 +741,9 @@ Intentionally oversized for maximum coziness. The vintage wash gives each hoodie
   {
     id: 9,
     name: "\"Real Food, Real Healing\" Dad Cap",
+    productUrl: "https://askdogood.gumroad.com/l/real-food-real-healing-dad-cap",
     price: 28,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Low-profile style. High-vibration energy.",
@@ -768,8 +771,9 @@ Unstructured crown, curved brim, vintage brass buckle closure. This cap molds to
   {
     id: 10,
     name: "\"Autoimmune Warrior\" Crewneck Sweatshirt",
+    productUrl: "https://askdogood.gumroad.com/l/autoimmune-warrior-crewneck",
     price: 48,
-    image: "/images/branding/askdogood-logo-aqua.png",
+    image: "https://images.unsplash.com/photo-1620799139834-6b8f844fbe53?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Soft armor for your healing journey.",
@@ -798,8 +802,9 @@ The heavyweight fleece keeps you warm during those days when autoimmune flares m
   {
     id: 11,
     name: "\"Garden to Table\" Organic Tote Bag",
+    productUrl: "https://askdogood.gumroad.com/l/garden-to-table-organic-tote",
     price: 24,
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Sustainable. Spacious. Statement-making.",
@@ -827,8 +832,9 @@ The phrase "Garden to Table, Seed to Soul" is printed on both sides. Interior po
   {
     id: 12,
     name: "\"Black Girl Magic Healing\" Crop Hoodie",
+    productUrl: "https://askdogood.gumroad.com/l/black-girl-magic-healing-crop-hoodie",
     price: 52,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Cropped comfort meets unapologetic power.",
@@ -857,8 +863,9 @@ French terry fabric is breathable yet warm. The cropped length hits right at the
   {
     id: 13,
     name: "\"Normalize Rest\" Oversized Sleep Tee",
+    productUrl: "https://askdogood.gumroad.com/l/normalize-rest-sleep-tee",
     price: 38,
-    image: "/images/branding/askdogood-logo-aqua.png",
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Sleep is productive. Rest is revolutionary.",
@@ -887,8 +894,9 @@ Made from the softest modal blend you've ever felt. Long enough to be a dress, c
   {
     id: 14,
     name: "\"Good Energy Only\" Tie-Dye Sweatpants",
+    productUrl: "https://askdogood.gumroad.com/l/good-energy-only-sweatpants",
     price: 44,
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://images.unsplash.com/photo-1506629905607-c69d58c95f67?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Manifestation meets maximum comfort.",
@@ -918,8 +926,9 @@ High-waisted with a drawstring tie and deep pockets (phone-friendly). The tie-dy
   {
     id: 15,
     name: "\"Plant-Powered\" Mesh Snapback",
+    productUrl: "https://askdogood.gumroad.com/l/plant-powered-snapback",
     price: 32,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Breathable. Bold. Unapologetically plant-based.",
@@ -947,8 +956,9 @@ Structured front panels give the cap shape while the mesh back provides breathab
   {
     id: 16,
     name: "\"Healing Happens Here\" Embroidered Joggers",
+    productUrl: "https://askdogood.gumroad.com/l/healing-happens-here-joggers",
     price: 54,
-    image: "/images/branding/askdogood-logo-aqua.png",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Luxury loungewear for your wellness journey.",
@@ -978,8 +988,9 @@ Premium heavyweight fleece with a buttery-soft interior. High-waisted with a fla
   {
     id: 17,
     name: "\"Bloom Where You're Planted\" Bucket Hat",
+    productUrl: "https://askdogood.gumroad.com/l/bloom-where-youre-planted-bucket-hat",
     price: 30,
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Garden vibes. Festival ready. Sun protected.",
@@ -1008,8 +1019,9 @@ Wide brim provides UPF 50+ sun protection. Interior moisture-wicking band keeps 
   {
     id: 18,
     name: "\"Wellness Warrior\" Ringer Tee",
+    productUrl: "https://askdogood.gumroad.com/l/wellness-warrior-ringer-tee",
     price: 34,
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Vintage vibes. Modern mission. Timeless message.",
@@ -1039,8 +1051,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 17,
     name: "DMV Discernment T-Shirt",
+    productUrl: "https://askdogood.gumroad.com/l/dmv-discernment-tee",
     price: 32,
-    image: "/mockups/tshirt-dmv-discernment.png",
+    image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "DMV energy, refined palate, elevated standards",
@@ -1061,8 +1074,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 18,
     name: "NC Version DMV Tee",
+    productUrl: "https://askdogood.gumroad.com/l/nc-version-dmv-tee",
     price: 32,
-    image: "/mockups/tshirt-nc-version.png",
+    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "NC vibes with that same energy",
@@ -1083,8 +1097,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 19,
     name: "\"Not Loud, Just Heard\" Tee",
+    productUrl: "https://askdogood.gumroad.com/l/not-loud-just-heard-tee",
     price: 32,
-    image: "/mockups/tshirt-not-loud.png",
+    image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Quiet confidence, undeniable presence",
@@ -1105,8 +1120,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 20,
     name: "\"Peace is Non-Negotiable\" Tee",
+    productUrl: "https://askdogood.gumroad.com/l/peace-is-non-negotiable-tee",
     price: 32,
-    image: "/mockups/tshirt-peace-non-negotiable.png",
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=1400&auto=format&fit=crop",
     category: "Apparel",
     icon: ShoppingBag,
     tagline: "Boundaries. Healing. Non-negotiable peace.",
@@ -1127,8 +1143,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 21,
     name: "Hydrate & Heal Tumbler",
+    productUrl: "https://askdogood.gumroad.com/l/hydrate-and-heal-tumbler",
     price: 28,
-    image: "/mockups/tumbler-hydrate.png",
+    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Stay hydrated, stay healing, stay thriving",
@@ -1149,8 +1166,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 22,
     name: "Protect Your Peace Water Bottle",
+    productUrl: "https://askdogood.gumroad.com/l/protect-your-peace-water-bottle",
     price: 32,
-    image: "/mockups/water-bottle-protect-peace.png",
+    image: "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=1400&auto=format&fit=crop",
     category: "Accessories",
     icon: ShoppingBag,
     tagline: "Hydration meets intention-setting",
@@ -1172,8 +1190,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 23,
     name: "Alignment Yoga Mat",
+    productUrl: "https://askdogood.gumroad.com/l/alignment-yoga-mat",
     price: 28,
-    image: "/mockups/yoga-mat-alignment.png",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&auto=format&fit=crop",
     category: "Wellness",
     icon: ShoppingBag,
     tagline: "Find your center, honor your alignment",
@@ -1196,8 +1215,9 @@ The contrasting ringer trim on the collar and sleeves adds that perfect throwbac
   {
     id: 24,
     name: "Return to Yourself Yoga Mat",
+    productUrl: "https://askdogood.gumroad.com/l/return-to-yourself-yoga-mat",
     price: 28,
-    image: "/mockups/yoga-mat-return-to-yourself.png",
+    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=1400&auto=format&fit=crop",
     category: "Wellness",
     icon: ShoppingBag,
     tagline: "Every practice is a homecoming",
@@ -1474,17 +1494,29 @@ export default function Shop() {
 
                   <CardFooter className="flex-col gap-2 pt-4">
                     <Button 
-                      className="w-full rounded-3xl text-lg font-semibold group-hover:scale-105 transition-transform px-6 py-3"
+                      className={`w-full rounded-3xl text-lg font-extrabold tracking-wide px-6 py-4 shadow-xl transition-all group-hover:scale-105 ${
+                        product.recurring
+                          ? "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-2xl"
+                          : "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-2xl"
+                      }`}
                       asChild
                     >
                       {product.productUrl ? (
                         <a href={product.productUrl} target="_blank" rel="noopener noreferrer">
-                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                          {product.recurring
+                            ? "Start Membership Now"
+                            : ["Apparel", "Accessories", "Wellness"].includes(product.category)
+                              ? "Shop This Merch"
+                              : "Get Instant Access"}
                           <TrendingUp className="ml-2 h-5 w-5" />
                         </a>
                       ) : (
                         <Link href={`/contact?product=${encodeURIComponent(product.name)}&price=${product.foundingPrice || product.price}`}>
-                          {product.recurring ? 'Start Membership' : 'Get Instant Access'}
+                          {product.recurring
+                            ? "Start Membership Now"
+                            : ["Apparel", "Accessories", "Wellness"].includes(product.category)
+                              ? "Shop This Merch"
+                              : "Get Instant Access"}
                           <TrendingUp className="ml-2 h-5 w-5" />
                         </Link>
                       )}
