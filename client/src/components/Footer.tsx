@@ -1,44 +1,86 @@
-import { Heart, Mail, ShoppingBag, BookOpen, Shield, Rss, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
+import {
+  BookOpen,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Rss,
+  Shield,
+  Youtube,
+} from "lucide-react";
 import { Link } from "wouter";
 import { trackSocialClick } from "@/lib/analytics";
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    icon: <Instagram className="h-5 w-5" />,
+    url: "https://instagram.com/the_real_dogood",
+    color: "hover:text-pink-600",
+  },
+  {
+    name: "TikTok",
+    icon: (
+      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border text-[10px] font-semibold">
+        TT
+      </span>
+    ),
+    url: "https://tiktok.com/@askdogood",
+    color: "hover:text-gray-900",
+  },
+  {
+    name: "Pinterest",
+    icon: (
+      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border text-[10px] font-semibold">
+        P
+      </span>
+    ),
+    url: "https://pinterest.com/askdogood",
+    color: "hover:text-red-600",
+  },
+  {
+    name: "YouTube",
+    icon: <Youtube className="h-5 w-5" />,
+    url: "https://youtube.com/@roseecm",
+    color: "hover:text-red-600",
+  },
+  {
+    name: "Facebook",
+    icon: <Facebook className="h-5 w-5" />,
+    url: "https://facebook.com/askdogood",
+    color: "hover:text-blue-600",
+  },
+  {
+    name: "LinkedIn",
+    icon: <Linkedin className="h-5 w-5" />,
+    url: "https://linkedin.com/in/askdogood",
+    color: "hover:text-blue-700",
+  },
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { name: "Instagram", icon: Instagram, url: "https://instagram.com/the_real_dogood", color: "hover:text-pink-600" },
-    { name: "TikTok", icon: "🎵", url: "https://tiktok.com/@askdogood", color: "hover:text-gray-900" },
-    { name: "Pinterest", icon: "📌", url: "https://pinterest.com/askdogood", color: "hover:text-red-600" },
-    { name: "YouTube", icon: Youtube, url: "https://youtube.com/@roseecm", color: "hover:text-red-600" },
-    { name: "Facebook", icon: Facebook, url: "https://facebook.com/askdogood", color: "hover:text-blue-600" },
-    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/askdogood", color: "hover:text-blue-700" },
-  ];
-
-  const handleSocialClick = (platform: string) => {
-    trackSocialClick(platform.toLowerCase(), 'footer');
-  };
-
   return (
     <footer className="w-full border-t border-border/40 bg-secondary/30">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h3 className="mb-4 text-xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
               Ask Do Good
             </h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Heal better. Live smarter. Earn stronger.
+            <p className="mb-4 text-sm text-muted-foreground">
+              Evidence-based wellness, practical healing tools, and stronger systems for real life.
             </p>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-primary/10 px-3 py-2 rounded-lg mb-4">
+            <div className="mb-4 flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs text-muted-foreground">
               <Shield className="h-4 w-4 text-primary" />
               <span className="font-medium">30-Day Money-Back Guarantee</span>
             </div>
-            
-            {/* Social Media Links */}
             <div className="mt-4">
-              <h4 className="text-xs font-semibold mb-3 text-muted-foreground uppercase tracking-wide">Connect With Me</h4>
-              <div className="flex items-center gap-3 flex-wrap">
+              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Connect
+              </h4>
+              <div className="flex flex-wrap items-center gap-3">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -48,122 +90,116 @@ export default function Footer() {
                     className={`text-muted-foreground transition-colors ${social.color}`}
                     aria-label={social.name}
                     title={social.name}
-                    onClick={() => handleSocialClick(social.name)}
+                    onClick={() => trackSocialClick(social.name.toLowerCase(), "footer")}
                   >
-                    {typeof social.icon === 'string' ? (
-                      <span className="text-xl">{social.icon}</span>
-                    ) : (
-                      <social.icon className="h-5 w-5" />
-                    )}
+                    {social.icon}
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Get Started */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Get Started</h4>
+            <h4 className="mb-4 text-sm font-semibold">Start here</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/journey" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
-                  Start Your Journey
+                <Link href="/journey" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Founder journey
                 </Link>
               </li>
               <li>
-                <Link href="/shop" className="text-sm text-primary hover:text-primary/80 font-medium transition-colors cursor-pointer flex items-center gap-1">
-                  <ShoppingBag className="h-3 w-3" />
-                  Shop Courses & Products
+                <Link href="/shop" className="block cursor-pointer text-sm font-medium text-primary transition-colors hover:text-primary/80">
+                  Shop courses and products
                 </Link>
               </li>
               <li>
-                <Link href="/clinical-recipes" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                <Link href="/clinical-recipes" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
                   Clinical Food RX
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
-                  Free Resources
+                <Link href="/resources" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Free resources
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Learn More */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Learn More</h4>
+            <h4 className="mb-4 text-sm font-semibold">Explore</h4>
             <ul className="space-y-2">
               <li>
-                  <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
-                    🌿 A-Z Herb Dictionary
-                  </Link>
-              </li>
-              <li>
-                <Link href="/work-with-askdogood" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
-                  Work With AskDoGood
+                <Link href="/herbs" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  A-Z herb dictionary
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
-                  About RoSeé
+                <Link href="/work-with-askdogood" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Work with AskDoGood
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                <Link href="/about" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  About Rosee
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="flex cursor-pointer items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary">
                   <BookOpen className="h-3 w-3" />
-                  Blog & Articles
+                  Blog and articles
                 </Link>
               </li>
               <li>
-                <Link href="/rss" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                <Link href="/rss" className="flex cursor-pointer items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary">
                   <Rss className="h-3 w-3" />
-                  RSS Feed
+                  RSS feed
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+                <Link href="/contact" className="flex cursor-pointer items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary">
                   <Mail className="h-3 w-3" />
-                  Contact & Coaching
+                  Contact and coaching
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Topics & Expertise */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Wellness Topics</h4>
+            <h4 className="mb-4 text-sm font-semibold">Topics</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/course/thyroid-health-mastery" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🦋 Thyroid Health</Link>
+                <Link href="/course/thyroid-health-mastery" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Thyroid health
+                </Link>
               </li>
               <li>
-                <Link href="/journey" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">💪 Chronic Illness Recovery</Link>
+                <Link href="/journey" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Chronic illness recovery
+                </Link>
               </li>
               <li>
-                <Link href="/clinical-recipes" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🥗 Nutrition & Superfoods</Link>
+                <Link href="/clinical-recipes" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Nutrition and superfoods
+                </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🧘‍♀️ Mental Wellness</Link>
-                </li>
-                <li>
-                  <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">🌿 Herb Dictionary</Link>
+                <Link href="/blog" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Mental wellness
+                </Link>
               </li>
               <li>
-                <a href="https://thedopecloudteacher.org" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">☁️ Tech & Azure Career</a>
+                <a href="https://thedopecloudteacher.org" target="_blank" rel="noopener noreferrer" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Tech and Azure career
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-border/40">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Ask Do Good. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Made with <Heart className="h-4 w-4 text-primary fill-primary" /> and transparency
-            </p>
+        <div className="mt-8 border-t border-border/40 pt-8">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-sm text-muted-foreground">© {currentYear} Ask Do Good. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">Built with clarity and transparency.</p>
           </div>
         </div>
       </div>

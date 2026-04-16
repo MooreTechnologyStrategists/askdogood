@@ -1,6 +1,7 @@
 import { ExternalLink, Mail, Globe, Download, Smartphone, Camera, UtensilsCrossed, ClipboardList, Leaf, Brain, Zap } from 'lucide-react';
 import { Link } from 'wouter';
 import { trackEvent, trackLeadMagnetDownload } from '@/lib/analytics';
+import { catalogById } from '@/data/catalog';
 
 const Resources = () => {
   const freeResources = [
@@ -92,6 +93,11 @@ const Resources = () => {
       contact: 'https://www.wabjdc.org/contact',
     },
   ];
+
+  const premiumProducts = [
+    catalogById['thyroid-health-mastery'],
+    catalogById['21-day-plant-based-reset'],
+  ].filter(Boolean);
 
   const dmvResources = [
     {
@@ -558,98 +564,53 @@ const Resources = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Thyroid Health Mastery Course */}
-              <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
-                  <div className="relative">
-                    <img 
-                      src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600" 
-                      alt="Thyroid Health Mastery Course" 
-                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        Bestseller
-                      </span>
+              {premiumProducts.map((product) => (
+                <a key={product.id} href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="group">
+                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
+                    <div className="relative">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-teal-700 text-white px-3 py-1 rounded-full text-sm font-bold">
+                          {product.status}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h4>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                          <ClipboardList className="w-4 h-4 text-teal-600" />
+                          <span>{product.shortSummary}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                          <ClipboardList className="w-4 h-4 text-teal-600" />
+                          <span>{product.category}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                          <ClipboardList className="w-4 h-4 text-teal-600" />
+                          <span>{product.cta}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                        <span className="text-3xl font-bold text-teal-600">{product.priceLabel}</span>
+                        <button className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">
+                          View offer
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-2">Thyroid Health Mastery Course</h4>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      8-week comprehensive program covering labs, nutrition, supplements, stress management, and lifestyle changes for optimal thyroid function.
-                    </p>
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-teal-600" />
-                        <span>40+ video lessons</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-teal-600" />
-                        <span>Downloadable workbook & meal plans</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-teal-600" />
-                        <span>Lifetime access + updates</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                      <span className="text-3xl font-bold text-teal-600">$97</span>
-                      <button className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">
-                        Get Course
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              {/* 21-Day Plant-Based Reset */}
-              <a href="https://askdogood.gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
-                  <div className="relative">
-                    <img 
-                      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" 
-                      alt="21-Day Plant-Based Reset" 
-                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        Quick Start
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-2">21-Day Plant-Based Reset</h4>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      Reduce inflammation, boost energy, and reset your system with 21 days of guided plant-based eating designed for thyroid health.
-                    </p>
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-pink-600" />
-                        <span>21 complete meal plans</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-pink-600" />
-                        <span>Shopping lists & prep guides</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <ClipboardList className="w-4 h-4 text-pink-600" />
-                        <span>Daily wellness check-ins</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                      <span className="text-3xl font-bold text-pink-600">$47</span>
-                      <button className="bg-pink-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-pink-700 transition">
-                        Start Reset
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </a>
+                </a>
+              ))}
             </div>
 
             <div className="mt-8 text-center">
               <p className="text-gray-600">
-                💯 <strong>30-Day Money-Back Guarantee</strong> · All products include lifetime access and updates
+                <strong>30-Day Money-Back Guarantee</strong> · Core digital products include clear checkout and ongoing access.
               </p>
             </div>
           </div>

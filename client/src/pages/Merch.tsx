@@ -1,23 +1,22 @@
-import { useState, useEffect } from "react";
-import { merchProducts, merchCategories, type MerchProduct } from "@/data/merch-products";
+import { useEffect, useState } from "react";
+import { Filter, ShoppingCart } from "lucide-react";
+import { merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
+import { comingSoonMerchItems } from "@/data/catalog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Filter, Sparkles } from "lucide-react";
-import { products as shopProducts } from "@/data/products";
 import { GUMROAD_URLS } from "@/config/gumroad";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedProduct, setSelectedProduct] = useState<MerchProduct | null>(null);
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filteredProducts = selectedCategory === "all" 
-    ? merchProducts 
-    : merchProducts.filter(p => p.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === "all"
+      ? merchProducts
+      : merchProducts.filter((product) => product.category === selectedCategory);
 
   const handleAddToCart = (product: MerchProduct) => {
     const purchaseUrl =
@@ -30,34 +29,27 @@ export default function Merch() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/20 py-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full border mb-6">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium">Real talk. Real healing. Real merch.</span>
+          <div className="inline-flex rounded-full border bg-background/80 px-4 py-2 text-sm font-medium backdrop-blur-sm">
+            AskDoGood merch
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            The AskDoGood Shop
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Wear your healing journey with pride. Our collection features motivational, inspirational, 
-            and real-talk designs that celebrate your commitment to growth, wellness, and showing up 
-            for yourself—every damn day.
+          <h1 className="mt-6 text-5xl font-bold md:text-6xl">Merch that supports the brand without cheapening it.</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
+            The merch experience now separates live products from concept inventory so the site can look cleaner and more intentional.
           </p>
-          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground flex-wrap">
-            <span>✓ Holistic Healing Vibes</span>
-            <span>✓ Culturally Authentic</span>
-            <span>✓ Premium Quality</span>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <span>Direct product previews</span>
+            <span>Cleaner category filters</span>
+            <span>Future drops clearly labeled</span>
           </div>
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
+      <section className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 overflow-x-auto">
-            <Filter className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+            <Filter className="h-5 w-5 flex-shrink-0 text-muted-foreground" />
             {merchCategories.map((category) => (
               <Button
                 key={category.id}
@@ -76,49 +68,40 @@ export default function Merch() {
         </div>
       </section>
 
-      {/* Products Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="group relative bg-card rounded-2xl border overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:shadow-lg"
               >
-                {/* Product Image */}
-                <div className="relative aspect-square bg-muted overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-muted">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  {!product.inStock && (
-                    <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
-                      <Badge variant="secondary" className="text-lg px-4 py-2">
-                        Coming Soon
+                  {!product.inStock ? (
+                    <div className="absolute inset-0 flex items-center justify-center bg-background/80">
+                      <Badge variant="secondary" className="px-4 py-2 text-lg">
+                        Coming soon
                       </Badge>
                     </div>
-                  )}
-                  {product.featured && (
-                    <Badge className="absolute top-4 left-4 bg-primary">
-                      Featured
-                    </Badge>
-                  )}
-                  <Badge 
-                    variant="outline" 
-                    className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm capitalize text-xs"
+                  ) : null}
+                  {product.featured ? <Badge className="absolute left-4 top-4 bg-primary">Featured</Badge> : null}
+                  <Badge
+                    variant="outline"
+                    className="absolute right-4 top-4 bg-background/90 text-xs capitalize backdrop-blur-sm"
                   >
                     {product.designStyle}
                   </Badge>
                 </div>
 
-                {/* Product Info */}
-                <div className="p-6 space-y-4">
+                <div className="space-y-4 p-6">
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {product.description}
-                    </p>
+                    <h3 className="mb-2 text-xl font-bold">{product.name}</h3>
+                    <p className="line-clamp-2 text-sm text-muted-foreground">{product.description}</p>
                   </div>
 
                   <div className="flex items-center justify-between">
@@ -128,22 +111,22 @@ export default function Merch() {
                     </Badge>
                   </div>
 
-                  {product.sizes && (
+                  {product.sizes ? (
                     <div className="flex flex-wrap gap-2">
                       {product.sizes.slice(0, 4).map((size) => (
                         <Badge key={size} variant="secondary" className="text-xs">
                           {size}
                         </Badge>
                       ))}
-                      {product.sizes.length > 4 && (
+                      {product.sizes.length > 4 ? (
                         <Badge variant="secondary" className="text-xs">
                           +{product.sizes.length - 4}
                         </Badge>
-                      )}
+                      ) : null}
                     </div>
-                  )}
+                  ) : null}
 
-                  {product.colors && (
+                  {product.colors ? (
                     <div className="flex flex-wrap gap-2">
                       {product.colors.map((color) => (
                         <Badge key={color} variant="secondary" className="text-xs">
@@ -151,7 +134,7 @@ export default function Merch() {
                         </Badge>
                       ))}
                     </div>
-                  )}
+                  ) : null}
 
                   <Button
                     onClick={() => handleAddToCart(product)}
@@ -160,105 +143,82 @@ export default function Merch() {
                     size="lg"
                   >
                     <ShoppingCart className="mr-2 h-4 w-4" />
-                    {product.inStock ? "Shop on Gumroad" : "Notify Me"}
+                    {product.inStock ? "View product" : "Join waitlist"}
                   </Button>
                 </div>
               </div>
             ))}
           </div>
 
-          {filteredProducts.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-xl text-muted-foreground">
-                No products found in this category.
-              </p>
+          {filteredProducts.length === 0 ? (
+            <div className="py-16 text-center">
+              <p className="text-xl text-muted-foreground">No products found in this category.</p>
             </div>
-          )}
+          ) : null}
         </div>
       </section>
 
-      {/* Brand Philosophy */}
-      <section className="py-16 bg-secondary/20">
+      <section className="bg-secondary/20 py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold">Healing. Structure. Real-Life Growth.</h2>
+          <div className="mx-auto max-w-3xl space-y-6 text-center">
+            <h2 className="text-3xl font-bold">A stronger merch standard</h2>
             <p className="text-lg text-muted-foreground">
-              Every piece celebrates holistic healing, ancestral wisdom, and authentic wellness. 
-              We believe in therapy, plant-based healing, community support, and the power of 
-              choosing yourself. No toxic positivity—just real talk and real healing.
+              Merch should extend the brand, not make it look unfinished. That means removing filler copy, keeping the presentation cleaner, and separating live items from concepts that still need real assets.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+            <div className="grid grid-cols-2 gap-4 pt-8 md:grid-cols-4">
               <div className="space-y-2">
                 <div className="text-2xl font-bold">{merchProducts.length}</div>
-                <div className="text-sm text-muted-foreground">Unique Designs</div>
+                <div className="text-sm text-muted-foreground">Live products</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold">{comingSoonMerchItems.length}</div>
+                <div className="text-sm text-muted-foreground">Future drops</div>
               </div>
               <div className="space-y-2">
                 <div className="text-2xl font-bold">5</div>
-                <div className="text-sm text-muted-foreground">Design Styles</div>
+                <div className="text-sm text-muted-foreground">Core categories</div>
               </div>
               <div className="space-y-2">
-                <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm text-muted-foreground">Holistic Vibes</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-bold">Premium</div>
-                <div className="text-sm text-muted-foreground">Quality</div>
+                <div className="text-2xl font-bold">Clean</div>
+                <div className="text-sm text-muted-foreground">Presentation</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Design Styles Showcase */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Diverse Design Styles</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              From clean minimalist to playful cartoon, artsy abstract to bold statements—
-              we've got something for every vibe.
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold">Upcoming drops</h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              These items are now tracked centrally and clearly marked as future launches until production assets and checkout are ready.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="text-center p-6 bg-card rounded-xl border">
-              <div className="text-3xl mb-2">✨</div>
-              <div className="font-semibold mb-1">Minimalist</div>
-              <div className="text-xs text-muted-foreground">Clean & Simple</div>
-            </div>
-            <div className="text-center p-6 bg-card rounded-xl border">
-              <div className="text-3xl mb-2">🎨</div>
-              <div className="font-semibold mb-1">Artsy</div>
-              <div className="text-xs text-muted-foreground">Abstract & Creative</div>
-            </div>
-            <div className="text-center p-6 bg-card rounded-xl border">
-              <div className="text-3xl mb-2">💫</div>
-              <div className="font-semibold mb-1">Cartoon</div>
-              <div className="text-xs text-muted-foreground">Playful & Fun</div>
-            </div>
-            <div className="text-center p-6 bg-card rounded-xl border">
-              <div className="text-3xl mb-2">💪</div>
-              <div className="font-semibold mb-1">Bold</div>
-              <div className="text-xs text-muted-foreground">Strong Statements</div>
-            </div>
-            <div className="text-center p-6 bg-card rounded-xl border">
-              <div className="text-3xl mb-2">🌿</div>
-              <div className="font-semibold mb-1">Holistic</div>
-              <div className="text-xs text-muted-foreground">Earth & Healing</div>
-            </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {comingSoonMerchItems.slice(1, 7).map((item) => (
+              <div key={item.id} className="rounded-2xl border bg-card p-6">
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">{item.category}</p>
+                <h3 className="mt-3 text-xl font-semibold">{item.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.shortSummary}</p>
+                <Badge variant="outline" className="mt-4">
+                  {item.status}
+                </Badge>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center space-y-6 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold">Get Early Access to New Drops</h2>
-            <p className="text-muted-foreground">
-              Join the AskDoGood Newsletter for exclusive first looks, limited editions, and wellness insights.
+          <div className="mx-auto max-w-2xl rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/20 p-12 text-center">
+            <h2 className="text-3xl font-bold">Get early access to new drops</h2>
+            <p className="mt-4 text-muted-foreground">
+              Join the AskDoGood newsletter for first access to future merch releases, new products, and wellness updates.
             </p>
-            <Button size="lg" asChild>
-              <a href="/#newsletter">Subscribe Now</a>
+            <Button size="lg" asChild className="mt-6">
+              <a href="/#newsletter">Subscribe now</a>
             </Button>
           </div>
         </div>

@@ -1,18 +1,8 @@
-﻿// Blog post data
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  date: string;
-  readTime: string;
-  image: string;
-  imageAlt?: string;
-  tags: string[];
-  featured?: boolean;
-  author?: string;
-  authorImage?: string;
-}
+﻿import { markdownBlogPosts } from "@/content/blogMarkdown";
+import type { BlogPost } from "@/content/blogTypes";
+
+// Blog post data
+export type { BlogPost } from "@/content/blogTypes";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -2978,5 +2968,12 @@ export function getPostsByTag(tag: string): BlogPost[] {
 }
 
 // Safe export for components that need validated blog posts
-export const safeBlogPosts = blogPosts.map((post) => sanitizeBlogPost(post));
+const markdownSlugs = new Set(markdownBlogPosts.map((post) => post.id));
+
+const mergedBlogPosts = [
+  ...blogPosts.filter((post) => !markdownSlugs.has(post.id)),
+  ...markdownBlogPosts,
+];
+
+export const safeBlogPosts = mergedBlogPosts.map((post) => sanitizeBlogPost(post));
 

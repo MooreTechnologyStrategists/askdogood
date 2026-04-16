@@ -12,15 +12,14 @@ import {
 import {
   ArrowRight,
   BriefcaseBusiness,
-  Sparkles,
   HeartPulse,
   BookOpen,
+  Sparkles,
   UtensilsCrossed,
   ShieldCheck,
   Users,
   Star,
   Quote,
-  Gift,
   TrendingUp,
   Zap,
 } from "lucide-react";
@@ -33,8 +32,10 @@ import SpicyCarousel from "@/components/SpicyCarousel";
 import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import FoodSlideshow from "@/components/FoodSlideshow";
 import PersonalSlideshow from "@/components/PersonalSlideshow";
+import { safeBlogPosts } from "@/content/blogData";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import { GUMROAD_URLS } from "@/config/gumroad";
+import { catalogById, homepageFeaturedProductIds } from "@/data/catalog";
 
 // Constants
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
@@ -70,7 +71,6 @@ interface BlogCardProps {
   readTime: string;
   slug: string;
   imagePath: string;
-  icon: React.ReactNode;
 }
 
 interface FeatureCardProps {
@@ -133,7 +133,6 @@ const BlogCard = ({
   readTime,
   slug,
   imagePath,
-  icon,
 }: BlogCardProps) => (
   <Card className="group relative overflow-hidden border-2 border-border bg-card hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 rounded-2xl">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -148,9 +147,9 @@ const BlogCard = ({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent rounded-t-2xl" />
       <div className="absolute top-4 left-4">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center shadow-lg">
-          {icon}
-        </div>
+        <span className="inline-flex rounded-full bg-background/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-foreground shadow-lg backdrop-blur">
+          {category}
+        </span>
       </div>
     </div>
     <CardHeader className="relative z-10">
@@ -161,10 +160,6 @@ const BlogCard = ({
     </CardHeader>
     <CardContent className="relative z-10">
       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-        <span className="px-3 py-1 rounded-full bg-primary/20 text-primary font-medium">
-          {category}
-        </span>
-        <span>•</span>
         <span>{readTime}</span>
       </div>
       <Link href={`/blog/${slug}`}>
@@ -263,48 +258,22 @@ export default function Home() {
     },
   ];
 
-  const blogPosts: BlogCardProps[] = [
-    {
-      title: "DMV Meal Prep for Busy Women Who Want to Eat Clean Without Burning Out",
-      description:
-        "A practical DMV-friendly meal prep rhythm for saving time, lowering stress, and eating better without living in the kitchen.",
-      category: "Meal Prep",
-      readTime: "6 min read",
-      slug: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
-      imagePath: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600",
-      icon: <UtensilsCrossed className="h-6 w-6 text-white" />,
-    },
-    {
-      title: "What DERS Means: Diet, Exercise, Rest, Spirituality, and the Real-Life Systems That Change Everything",
-      description:
-        "The Ask DoGood framework for building a better life through diet, exercise, rest, spirituality, and everyday stability.",
-      category: "DERS",
-      readTime: "5 min read",
-      slug: "what-ders-means-diet-exercise-rest-spirituality-and-the-real-life-systems-that-change-everything",
-      imagePath: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=600",
-      icon: <Sparkles className="h-6 w-6 text-white" />,
-    },
-    {
-      title: "Strength in Sisterhood: How to Show and Give Love to Black Women",
-      description:
-        "Black women carry the world. Here's how to show up for each other with real love, real support, and real solidarity.",
-      category: "Community",
-      readTime: "6 min read",
-      slug: "strength-in-sisterhood-how-to-show-and-give-love-and-support-to-black-women",
-      imagePath: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600",
-      icon: <Users className="h-6 w-6 text-white" />,
-    },
-    {
-      title: "Finding Peace in the Chaos: Mindfulness for Black Women",
-      description:
-        "Peace isn't accidental—it's an agenda item. Mindfulness practices designed for Black women navigating real life.",
-      category: "Mental Health",
-      readTime: "8 min read",
-      slug: "finding-peace-in-the-chaos-mindfulness-for-black-women",
-      imagePath: "https://images.unsplash.com/photo-1499728603263-13726abce5fd?w=600",
-      icon: <ShieldCheck className="h-6 w-6 text-white" />,
-    },
-  ];
+  const blogPosts: BlogCardProps[] = safeBlogPosts
+    .slice()
+    .sort((left, right) => Number(Boolean(right.featured)) - Number(Boolean(left.featured)))
+    .slice(0, 4)
+    .map((post) => ({
+      title: post.title,
+      description: post.excerpt,
+      category: post.category || post.tags[0] || "Journal",
+      readTime: post.readTime,
+      slug: post.id,
+      imagePath: post.image || FALLBACK_IMAGE,
+    }));
+
+  const featuredProducts = homepageFeaturedProductIds
+    .map((id) => catalogById[id])
+    .filter((item) => Boolean(item)) as Array<(typeof catalogById)[string]>;
 
   const features: FeatureCardProps[] = [
     {
@@ -437,13 +406,13 @@ export default function Home() {
               <BeehiivSubscribe variant="inline" />
               <Link href="/shop">
                 <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
-                  Start Your Reset
+                  Explore the catalog
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </Link>
               <Link href="/work-with-askdogood">
                 <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
-                  Explore Programs
+                  Explore services
                 </Button>
               </Link>
             </div>
@@ -463,17 +432,17 @@ export default function Home() {
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The problem</p>
                 <p className="font-semibold text-lg mb-2">Too many people are tired, sick, and stuck</p>
-                <p className="text-sm text-muted-foreground">Healthcare is expensive, information is confusing, and most platforms never connect health, lifestyle, and income in one place.</p>
+                <p className="text-sm text-muted-foreground">Healthcare is expensive, information is fragmented, and most platforms never connect health, lifestyle, and income in one place.</p>
               </div>
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The solution</p>
                 <p className="font-semibold text-lg mb-2">A holistic platform for rebuilding life from the inside out</p>
-                <p className="text-sm text-muted-foreground">AskDoGood focuses on natural healing, movement, emotional reset, financial growth through education, and more stable daily environments.</p>
+                <p className="text-sm text-muted-foreground">AskDoGood focuses on natural healing, movement, emotional recovery, financial growth through education, and more stable daily environments.</p>
               </div>
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The differentiator</p>
                 <p className="font-semibold text-lg mb-2">We do not just talk about healing</p>
-                <p className="text-sm text-muted-foreground">AskDoGood also connects health with skills, opportunity, and stability so people can rebuild more than symptoms.</p>
+                <p className="text-sm text-muted-foreground">AskDoGood also connects health with skills, opportunity, and stability so people can rebuild more than symptoms alone.</p>
               </div>
             </div>
           </div>
@@ -557,11 +526,11 @@ export default function Home() {
               </p>
 
               <p className="text-lg leading-relaxed mb-4">
-                Then one day, my doctor introduced me to <strong>dicyclomine</strong>. Game.
-                Changer. But I didn't stop there. I rebuilt my routine with clean,
-                <strong> plant-based eating</strong>, daily structure, workouts (P90X, gym,
-                running), and <strong>faith in God</strong>. I went from taking dicyclomine 4
-                times a day to <strong>none</strong>, and finally started <em>eating real food again</em>.
+                Then one day, my doctor introduced me to <strong>dicyclomine</strong>, and it
+                made a measurable difference. But I did not stop there. I rebuilt my routine with
+                clean, <strong>plant-based eating</strong>, daily structure, workouts (P90X, gym,
+                running), and <strong>faith in God</strong>. I went from taking dicyclomine four
+                times a day to <strong>none</strong>, and eventually started <em>eating real food again</em>.
               </p>
 
               <p className="text-lg leading-relaxed font-semibold text-primary">
@@ -643,10 +612,10 @@ export default function Home() {
               Behind the Scenes
             </h2>
             <p className="text-lg text-muted-foreground mb-2">
-              Before, during, and after finding peace—real moments from every chapter
+              A personal view of the seasons behind the work.
             </p>
             <p className="text-md text-primary/80 italic font-medium">
-              So many phases, so little time...
+              Before, during, and after the rebuilding process.
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
@@ -660,153 +629,79 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full mb-6 shadow-xl">
-              <Gift className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white uppercase tracking-wider">
                 Shop Tools
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-              Your Thyroid <span className="text-primary">Toolkit</span>
+              Core wellness <span className="text-primary">offers</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Practical resources designed to help you take control of your health journey
+              Structured products with clearer checkout paths and stronger presentation.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Product 1: Thyroid Symptom Tracker */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600"
-                  alt="Thyroid Symptom Tracker - Digital Download"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                  width="400"
-                  height="256"
-                  onError={(e) => handleImageError(e)}
-                />
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-green-500 text-white font-bold shadow-lg">
-                    Digital Download
-                  </Badge>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-2xl">Thyroid Symptom Tracker</CardTitle>
-                <CardDescription className="text-base">
-                  Track your symptoms, identify patterns, and take control of your health
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Daily symptom logging with severity tracking
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Medication and supplement tracker
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Printable PDF format for easy use
-                    </p>
+            {featuredProducts.map((product) => (
+              <Card
+                key={product.id}
+                className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="400"
+                    height="256"
+                    onError={(e) => handleImageError(e)}
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-primary text-white font-bold shadow-lg">
+                      {product.status}
+                    </Badge>
                   </div>
                 </div>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary">$9.99</span>
-                  <span className="text-sm text-muted-foreground line-through">$19.99</span>
-                </div>
-                <a
-                  href={GUMROAD_URLS.symptomTracker}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full group/btn rounded-3xl text-lg font-semibold py-3 shadow-lg hover:shadow-xl transition-all">
-                    Get Instant Access
-                    <TrendingUp className="h-4 w-4 ml-2 group-hover/btn:translate-y-[-2px] transition-transform" />
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            {/* Product 2: 30-Day Meal Plan */}
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"
-                  alt="30-Day Thyroid-Friendly Meal Plan"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                  width="400"
-                  height="256"
-                  onError={(e) => handleImageError(e)}
-                />
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-primary text-white font-bold shadow-lg">
-                    Best Seller
-                  </Badge>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-2xl">30-Day Thyroid Meal Plan</CardTitle>
-                <CardDescription className="text-base">
-                  Complete meal plan with recipes, shopping lists, and prep guides
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      30 days of thyroid-friendly recipes
-                    </p>
+                <CardHeader>
+                  <CardTitle className="text-2xl">{product.name}</CardTitle>
+                  <CardDescription className="text-base">{product.shortSummary}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-2">
+                      <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">{product.category}</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">{product.description}</p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">{product.cta}</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Weekly shopping lists included
-                    </p>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-3xl font-bold text-primary">{product.priceLabel}</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      Meal prep guides and tips
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary">$29.99</span>
-                  <span className="text-sm text-muted-foreground line-through">$49.99</span>
-                </div>
-                <a
-                  href={GUMROAD_URLS.mealPlan}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full group/btn rounded-3xl text-lg font-semibold py-3 shadow-lg hover:shadow-xl transition-all">
-                    Start Your Journey
-                    <TrendingUp className="h-4 w-4 ml-2 group-hover/btn:translate-y-[-2px] transition-transform" />
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
+                  <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full rounded-3xl text-lg font-semibold py-3 shadow-lg hover:shadow-xl transition-all">
+                      View offer
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
-          {/* Trust Badge & Shop All CTA */}
           <div className="text-center mt-12 flex flex-col items-center gap-4">
             <p className="text-sm text-muted-foreground font-medium">
-              Trusted by 1,000+ Warriors
+              Structured offers, direct checkout, and cleaner customer paths.
             </p>
             <Link href="/shop">
               <Button className="rounded-3xl text-base md:text-lg font-semibold py-3 px-6">
-                Shop All Products
+                View the full catalog
               </Button>
             </Link>
           </div>
@@ -828,21 +723,17 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full mb-6 shadow-2xl">
                 <Sparkles className="h-5 w-5 text-white" />
                 <span className="text-sm font-bold text-white uppercase tracking-wider">
-                  NEW 2026 Series
+                  From the journal
                 </span>
-                <Sparkles className="h-5 w-5 text-white" />
               </div>
               <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-serif drop-shadow-lg">
-                Real Talk.{" "}
+                Reporting from the{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">
-                  Real Change.
+                  AskDoGood desk.
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-semibold">
-                The conversations we need to have about health, wealth, and community in 2026
-              </p>
-              <p className="text-sm text-muted-foreground italic">
-                Professional but hip-hop Black chic. No BS, just facts + receipts.
+                Practical writing on thyroid health, meal prep, systems, culture, and the everyday work of rebuilding well.
               </p>
             </div>
 
@@ -857,7 +748,7 @@ export default function Home() {
             <div className="text-center">
               <Link href="/blog">
                 <Button className="gap-2 rounded-3xl font-bold text-lg px-8 py-4 shadow-2xl hover:scale-105 transition-all group">
-                  Read All Posts
+                  Visit the journal
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -936,8 +827,8 @@ export default function Home() {
                     and that you can thrive while being transparent about the struggle.
                   </p>
                   <p className="text-foreground font-medium">
-                    AskDoGood is everything I wish someone had given me on day one. Real guidance.
-                    Real empathy. Real results.
+                    AskDoGood is what I wish someone had given me on day one: clear guidance,
+                    real empathy, and practical results.
                   </p>
                 </div>
 
@@ -953,7 +844,7 @@ export default function Home() {
                       variant="outline"
                       className="gap-2 rounded-3xl shadow-md hover:shadow-xl transition-all transform hover:scale-105"
                     >
-                      Start Your Journey
+                      View the founder journey
                     </Button>
                   </Link>
                 </div>
@@ -976,8 +867,8 @@ export default function Home() {
                 Seasons of Growth: My Garden Journey
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Gardening saved me. It taught me patience, faith, and the beauty of slow growth.
-                Each season mirrors life—planting, tending, harvesting, and letting go.
+                Gardening taught me patience, faith, and the discipline of slow growth.
+                Each season mirrors life: planting, tending, harvesting, and letting go.
               </p>
             </div>
 
@@ -1010,8 +901,7 @@ export default function Home() {
 
             <div className="text-center mt-10">
               <p className="text-muted-foreground mb-4">
-                "I try to find joy in everything. Even when it's draining or thankless, the real
-                reward is the wisdom you pick up along the way."
+                "I try to find joy in the work, even when it is draining or thankless, because the deeper reward is the wisdom you gain along the way."
               </p>
               <Link href="/garden">
                 <Button className="gap-2 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 group">
@@ -1089,17 +979,16 @@ export default function Home() {
                       a world that wants her to choose sides.
                     </p>
                     <p className="leading-relaxed">
-                      She's professional AF with that{" "}
-                      <em className="text-secondary">perfectly undone</em> edge. BB girl energy meets
-                      boardroom boss. Golden locs, sharp mind, and a story that's raw, real, and
-                      unapologetic.
+                      She carries polished ambition with a disruptive edge. Sharp instincts,
+                      layered motives, and a story that refuses to flatten her into something easy
+                      to read.
                     </p>
                     <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
                       <p className="text-foreground font-medium">
-                        Fiction that feels like real life
+                        Fiction with real-world pressure
                         <br />
                         Corporate drama meets street wisdom
-                        <br />A heroine who plays by her own rules
+                        <br />A heroine who operates by her own rules
                       </p>
                     </div>
                   </div>
@@ -1119,7 +1008,7 @@ export default function Home() {
                     </Link>
                   </div>
                   <p className="text-sm text-muted-foreground italic pt-2">
-                    ⚠️ 18+ Content | Mature themes, language, and real talk
+                    Mature themes, language, and adult subject matter.
                   </p>
                 </div>
               </div>
@@ -1140,8 +1029,8 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-2xl mb-10">
             <h2 className="text-3xl md:text-4xl font-bold font-serif">What you'll find here</h2>
-            <p className="mt-2 text-muted-foreground text-lg">
-              Practical tools + real talk — designed to help you stabilize, rebuild, and level up.
+              <p className="mt-2 text-muted-foreground text-lg">
+              Practical tools and clear guidance designed to help you stabilize, rebuild, and move forward.
             </p>
           </div>
 
@@ -1197,24 +1086,20 @@ export default function Home() {
         <div className="container max-w-4xl relative z-10">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4 shadow-lg">
-              <Gift className="h-5 w-5 text-white" />
-              <span className="text-sm font-bold text-white">FREE RESOURCE</span>
+              <span className="text-sm font-bold text-white">Free resource</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
-              Ready to Start Your <span className="text-primary">Healing Journey?</span>
+              Start with a practical thyroid resource.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a free 3-day thyroid-friendly meal plan + symptom tracker. No spam, just real
-              talk and real food.
+              Get a free 3-day thyroid-friendly meal plan and symptom tracker. Clear value, no clutter.
             </p>
           </div>
 
           <BeehiivSubscribe variant="card" title="" description="" />
 
-          <p className="text-center text-sm text-muted-foreground mt-6 flex items-center justify-center gap-2">
-            <span className="animate-pulse">💚</span>
-            <span>Join 1,000+ warriors already healing</span>
-            <span className="animate-pulse">💚</span>
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            Join the readers already using AskDoGood for practical guidance and product updates.
           </p>
         </div>
       </section>
