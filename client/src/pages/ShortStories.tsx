@@ -1,469 +1,148 @@
 import { Link } from 'wouter';
-
-// Glitter effect global styles
-if (typeof document !== 'undefined' && !document.getElementById('glitter-global-style')) {
-  const style = document.createElement('style');
-  style.id = 'glitter-global-style';
-  style.innerHTML = `
-    .glitter-bg {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background: repeating-linear-gradient(135deg,rgba(255,255,255,0.04) 0 2px,transparent 2px 8px),
-        repeating-linear-gradient(45deg,rgba(255,255,255,0.03) 0 1px,transparent 1px 7px),
-        radial-gradient(circle at 20% 40%,rgba(255,255,255,0.08) 0 2px,transparent 2px 100%),
-        radial-gradient(circle at 80% 60%,rgba(255,255,255,0.06) 0 2px,transparent 2px 100%);
-      animation: glitter-move 8s linear infinite;
-    }
-    @keyframes glitter-move {
-      0% { background-position: 0 0, 0 0, 0 0, 0 0; }
-      100% { background-position: 100px 100px, 80px 120px, 60px 40px, 120px 80px; }
-    }
-    .drop-shadow-glitter {
-      filter: drop-shadow(0 0 6px #fff8) drop-shadow(0 0 2px #fff4);
-    }
-  `;
-  document.head.appendChild(style);
-}
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { ArrowRight, Clock, Flame } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import BeehiivSubscribe from '@/components/BeehiivSubscribe';
-import { BookOpen, Flame, Clock, TrendingUp, Star, MessageCircle } from 'lucide-react';
-import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+
+const featuredSeries = {
+  title: 'Chyna White',
+  subtitle: 'A sharp fiction lead with pressure, taste, strategy, and a long memory.',
+  description:
+    'Chyna White is built to land like a headline, not background noise. The story world blends boardroom tension, street memory, romance, and survival into a lead character who knows exactly how to command a room.',
+  image:
+    'https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png',
+};
+
+const launchPoints = [
+  'A lead character written with authority instead of apology',
+  'Modern serialized fiction that feels cinematic and current',
+  'Adult stakes, sharp dialogue, and a premium editorial presentation',
+];
+
+const storyStats = [
+  { label: 'Live episode', value: '01' },
+  { label: 'Planned arc', value: '04' },
+  { label: 'Tone', value: 'Bold' },
+];
 
 export default function ShortStories() {
-  const [isOver18, setIsOver18] = useState(false);
-
-  const series = [
-    {
-      id: 'chyna-white',
-      title: 'Chyna White',
-      tagline: 'The Chronicles of a Beautiful Contradiction',
-      description: 'Follow Chyna as she navigates the impossibilities of being a former rapper, street pharmacist, corporate escapee, and current business owner. Smart, gorgeous, tattooed, and unapologetically herself—she\'s the kind of Black woman who makes you rethink everything you thought you knew.',
-      coverImage: 'https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.jpg',
-      spiceLevel: 4,
-      episodes: 8,
-      status: 'ongoing',
-      genre: ['Contemporary Fiction', 'Drama', 'Romance'],
-      themes: ['Redemption', 'Identity', 'Success', 'Love', 'Hustle'],
-      featured: true,
-      comingSoon: false
-    }
-  ];
-
-  const episodes = [
-    {
-      id: 1,
-      title: 'The Setup',
-      description: 'Meet Chyna White. Former rapper. Ex-street pharmacist. Reformed corporate drone. Current boss. And she\'s about to blow up your assumptions.',
-      readTime: 12,
-      spiceLevel: 2,
-      published: true,
-      excerpt: 'The conference room smelled like expensive cologne and desperation. Chyna leaned back in her Eames chair, her tattooed fingers drumming a beat on the mahogany table...',
-      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode1_the_setup.png'
-    },
-    {
-      id: 2,
-      title: 'Verse One: The Rap Game',
-      description: 'Before the suits and boardrooms, there was a mic, a dream, and a girl who could spit fire. This is where it all started.',
-      readTime: 15,
-      spiceLevel: 3,
-      published: false,
-      excerpt: 'Coming soon...',
-      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode2_verse_one.webp'
-    },
-    {
-      id: 3,
-      title: 'Corporate Chyna',
-      description: 'She tried the 9-to-5. They tried to break her. One of them failed.',
-      readTime: 14,
-      spiceLevel: 2,
-      published: false,
-      excerpt: 'Coming soon...',
-      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode3_corporate_chyna.webp'
-    },
-    {
-      id: 4,
-      title: 'The Business',
-      description: 'When you\'ve been everywhere, done everything, what do you build? Everything.',
-      readTime: 16,
-      spiceLevel: 3,
-      published: false,
-      excerpt: 'Coming soon...',
-      image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode4_the_business.webp'
-    }
-  ];
-
-  if (!isOver18) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground flex items-center justify-center relative">
-        <Card className="max-w-md mx-4 bg-card border border-primary/20 text-foreground relative z-10 shadow-2xl">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-primary">Age Verification</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Our stories contain mature themes, language, and situations.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center space-y-4">
-            <p className="text-sm text-muted-foreground">
-              You must be 18 or older to access this content.
-            </p>
-            <div className="flex flex-col gap-2">
-              <Button onClick={() => setIsOver18(true)} className="w-full py-3 text-lg font-semibold">
-                I am 18 or older
-              </Button>
-              <Button className="w-full py-3 text-lg font-semibold" variant="outline" asChild>
-                <Link href="/">Go Back</Link>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen relative bg-background text-foreground overflow-x-hidden">
-      {/* Glitter overlay */}
-      <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-        <div className="w-full h-full glitter-bg" />
-      </div>
-      {/* Hero */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-background"></div>
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
-              <Flame className="w-4 h-4 mr-2 text-primary" />
-              Short Stories
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground/70 to-foreground bg-clip-text text-transparent drop-shadow-glitter">
-              Raw. Real. Unapologetic.
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Fiction that feels like truth. Stories about Black women who refuse to fit in anyone's box.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                <span>Multiple Series</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>New Episodes Weekly</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
-                <span>Community Discussion</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Series: Chyna White */}
-      <section className="py-20">
-        <div className="container max-w-6xl">
-          <div className="mb-16 text-center">
-            <Badge className="mb-4 text-base px-4 py-2 bg-primary/10 border border-primary/20 text-primary shadow-lg backdrop-blur">
-              <Star className="w-4 h-4 mr-2 text-primary" />
-              Featured Series
-            </Badge>
-            <h2 className="text-4xl font-bold mb-4 text-foreground drop-shadow-glitter">Introducing: Chyna White</h2>
-            <p className="text-xl text-muted-foreground">The Chronicles of a Beautiful Contradiction</p>
-          </div>
-
-          {series.map((s) => (
-            <div key={s.id} className="grid md:grid-cols-2 gap-12 items-center mb-20">
-              {/* Character Image */}
-              <div className="relative group">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-background border-2 border-primary/20 shadow-2xl">
-                  <img
-                    src={s.coverImage}
-                    alt={s.title}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                    onError={(e) => {
-                      // Professional fallback placeholder
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.parentElement!.innerHTML = `
-                        <div class="w-full h-full flex items-center justify-center relative overflow-hidden">
-                          <!-- Animated background -->
-                          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 animate-pulse"></div>
-                          <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzljMjdmMCIgc3Ryb2tlLW9wYWNpdHk9Ii4xIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-20"></div>
-                          
-                          <!-- Content -->
-                          <div class="text-center relative z-10 px-8">
-                            <div class="text-8xl mb-6 animate-bounce">👑</div>
-                            <div class="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-primary/30">
-                              <p class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-3">${s.title}</p>
-                              <p class="text-base text-primary mb-4">Character Reveal Coming Soon</p>
-                              <div class="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                                <span class="inline-block w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                                <span>Art in Development</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      `;
-                    }}
-                  />
-                </div>
-                
-                {/* Spice Level Indicator */}
-                <div className="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-4 py-2 rounded-full border border-border">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-semibold text-muted-foreground">SPICE</span>
-                    {[...Array(5)].map((_, i) => (
-                      <Flame 
-                        key={i} 
-                        className={`w-3 h-3 ${i < s.spiceLevel ? 'text-primary fill-primary drop-shadow-glitter' : 'text-muted'}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Series Info */}
-              <div>
-                <h3 className="text-4xl font-bold mb-4">{s.title}</h3>
-                <p className="text-xl text-primary mb-6 italic">{s.tagline}</p>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  {s.description}
+    <div className="min-h-screen bg-[linear-gradient(180deg,rgba(250,245,240,1)_0%,rgba(255,255,255,1)_45%,rgba(247,241,236,1)_100%)] text-foreground">
+      <section className="border-b border-border/70 bg-[radial-gradient(circle_at_top_left,rgba(191,87,47,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(98,59,41,0.12),transparent_24%)]">
+        <div className="container py-16 md:py-24">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-6">
+              <Badge className="rounded-full border border-primary/20 bg-background/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                Stories by Ask DoGood
+              </Badge>
+              <div className="space-y-4">
+                <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl">
+                  Fiction with impact, built around one name that can carry the room.
+                </h1>
+                <p className="max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
+                  The stories section is now centered on a cleaner launch: fewer distractions, stronger positioning, and a clearer reason to start with Chyna White.
                 </p>
+              </div>
 
-                <div className="space-y-4 mb-8">
-                  <div>
-                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">GENRES</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {s.genre.map((g) => (
-                        <Badge key={g} variant="outline" className="border-primary/30 text-primary">
-                          {g}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {storyStats.map((item) => (
+                  <Card key={item.label} className="border-border/70 bg-background/80 shadow-sm">
+                    <CardContent className="px-5 py-4">
+                      <p className="text-2xl font-semibold text-foreground">{item.value}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{item.label}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
 
-                  <div>
-                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">THEMES</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {s.themes.map((t) => (
-                        <Badge key={t} variant="outline" className="border-secondary/30 text-secondary">
-                          {t}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4 pt-4">
-                    <div>
-                      <p className="text-2xl font-bold text-primary">{s.episodes}</p>
-                      <p className="text-xs text-muted-foreground">Episodes</p>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-secondary">{s.status}</p>
-                      <p className="text-xs text-muted-foreground">Status</p>
-                    </div>
-                    <div>
-                      <div className="flex">
-                        {[...Array(s.spiceLevel)].map((_, i) => (
-                          <Flame key={i} className="w-5 h-5 text-primary fill-primary" />
-                        ))}
-                      </div>
-                      <p className="text-xs text-muted-foreground">Heat Level</p>
-                    </div>
-                  </div>
-                </div>
-
-                <Button className="w-full md:w-auto text-lg px-8 py-3 font-semibold rounded-2xl" asChild>
-                  <Link href={`/stories/chyna-white`}>
-                    Start Reading
-                    <BookOpen className="ml-2 w-5 h-5" />
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild className="rounded-full px-7 py-6 text-base">
+                  <Link href="/stories/chyna-white/episode-1">
+                    Read Episode 1 <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-              </div>
-            </div>
-          ))}
-
-          {/* Episodes Preview */}
-          <div className="mt-20">
-            <h3 className="text-3xl font-bold mb-8 text-center">Episode Guide</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {episodes.map((episode) => (
-                <Card 
-                  key={episode.id}
-                  className="relative overflow-hidden bg-card/80 backdrop-blur border-primary/20 hover:border-primary/50 transition-all group drop-shadow-glitter"
-                >
-                  {/* Background Image */}
-                  {episode.image && (
-                    <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                      <img
-                        src={episode.image}
-                        alt={episode.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
-                    </div>
-                  )}
-                  
-                  <CardHeader className="relative z-10">
-                    <div className="flex items-start justify-between mb-2">
-                      <Badge 
-                        variant="outline" 
-                        className="border-primary/30 text-primary bg-background/60"
-                      >
-                        Episode {episode.id}
-                      </Badge>
-                      <div className="flex items-center gap-1">
-                        {[...Array(episode.spiceLevel)].map((_, i) => (
-                          <Flame key={i} className="w-3 h-3 text-primary fill-primary" />
-                        ))}
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors drop-shadow-glitter">
-                      {episode.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
-                      <Clock className="w-3 h-3 inline mr-1" />
-                      {episode.readTime} min read
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
-                    <p className="text-sm text-muted-foreground mb-4">{episode.description}</p>
-                    <p className="text-sm text-muted-foreground italic mb-4">
-                      "{episode.excerpt}"
-                    </p>
-                    {episode.published ? (
-                      <Button asChild className="w-full py-2 text-sm font-semibold rounded-xl">
-                        <Link href={`/stories/chyna-white/episode-${episode.id}`}>
-                          Read Now
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button disabled className="w-full py-2 text-sm font-semibold bg-muted/40 border border-border text-muted-foreground rounded-xl">
-                        Coming Soon
-                      </Button>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Lead Magnet CTA */}
-            <div className="mt-16 mb-12 text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-background rounded-2xl p-8 shadow-xl drop-shadow-glitter">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground drop-shadow-glitter">Get the Real-Life Healing Guide Behind These Stories</h3>
-              <p className="text-lg text-muted-foreground mb-4">Download your free Thyroid Symptom Checklist & 3-Day Meal Plan—start your own transformation today.</p>
-              <a href="https://askdogood.gumroad.com/l/thyroid-checklist" target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-3xl text-lg font-semibold py-3 px-8 drop-shadow-glitter">
-                  Download Free Guide
+                <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base">
+                  <Link href="/stories/chyna-white">Explore Chyna White</Link>
                 </Button>
-              </a>
-            </div>
-
-            {/* Shop the Story Bar */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Shop the Story</h3>
-              <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6 mx-auto">
-                <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
-                    <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
-                      <img
-                        src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
-                        alt="Thyroid Health Mastery Course"
-                        className="max-h-40 w-auto object-contain"
-                      />
-                    </div>
-                    <CardContent className="p-4 flex flex-col gap-2">
-                      <h4 className="font-bold text-lg">Thyroid Health Mastery Course</h4>
-                      <p className="text-sm text-muted-foreground">$97</p>
-                      <Button className="w-full rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
-                    </CardContent>
-                  </Card>
-                </a>
-                <a href="https://askdogood.gumroad.com/l/21-day-plant-based-reset" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Card className="h-full bg-card border border-primary/20 text-foreground hover:shadow-2xl transition-all">
-                    <div className="flex items-center justify-center h-48 bg-muted/30 rounded-t-lg">
-                      <img
-                        src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&h=800&fit=crop"
-                        alt="21-Day Plant-Based Reset"
-                        className="max-h-40 w-auto object-contain"
-                      />
-                    </div>
-                    <CardContent className="p-4 flex flex-col gap-2">
-                      <h4 className="font-bold text-lg">21-Day Plant-Based Reset</h4>
-                      <p className="text-sm text-muted-foreground">$47</p>
-                      <Button className="w-full rounded-2xl py-2 text-sm font-semibold">Buy Now</Button>
-                    </CardContent>
-                  </Card>
-                </a>
               </div>
             </div>
 
-            {/* Testimonial Carousel */}
-            <div className="mb-20 max-w-2xl mx-auto">
-              <h3 className="text-xl font-bold mb-4 text-center text-foreground drop-shadow-glitter">Real Results</h3>
-              <div className="bg-card rounded-2xl p-6 text-center text-foreground shadow-lg drop-shadow-glitter">
-                <p className="italic mb-2">“This course changed everything. I finally understand my body and how to advocate for myself. Within 3 months, my energy returned and I feel like ME again.”</p>
-                <p className="text-sm text-muted-foreground">— Maya T., Washington, DC</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter CTA - Improved */}
-      <section className="py-20 bg-gradient-to-br from-black/90 via-zinc-900/80 to-black/90 sticky bottom-0 z-50">
-        <div className="container max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-glitter">
-            Unlock New Episodes + Healing Tools
-          </h2>
-          <p className="text-xl text-white/80 mb-8">
-            Get new stories, exclusive healing resources, and special offers delivered straight to your inbox.
-          </p>
-          <div className="max-w-md mx-auto">
-            <BeehiivSubscribe
-              variant="minimal"
-              buttonText="Subscribe Free"
-              className="drop-shadow-glitter"
-            />
-            <p className="text-xs text-white/60 mt-3">
-              We respect your privacy. Unsubscribe anytime.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About the Author */}
-      <section className="py-20">
-        <div className="container max-w-4xl">
-          <Card className="bg-black/80 backdrop-blur border-white/10 overflow-hidden drop-shadow-glitter">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl drop-shadow-glitter">From the Author</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/20">
+            <Card className="overflow-hidden border-border/70 bg-card/90 shadow-[0_20px_70px_rgba(68,42,31,0.12)]">
+              <div className="relative aspect-[4/5] bg-[linear-gradient(180deg,rgba(64,37,25,0.04),rgba(64,37,25,0.14))]">
                 <img
-                  src="https://askdogoodassets.blob.core.windows.net/images/personal/rosee-author.webp"
-                  alt="RoSeé Murphy"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://askdogoodassets.blob.core.windows.net/images/hero-home.webp';
-                  }}
+                  src={featuredSeries.image}
+                  alt="Chyna White featured story art"
+                  className="h-full w-full object-cover object-top"
+                  loading="eager"
+                  width="900"
+                  height="1125"
                 />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,10,8,0.02)_0%,rgba(14,10,8,0.62)_100%)]" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <p className="text-sm uppercase tracking-[0.28em] text-white/75">Featured Launch</p>
+                  <h2 className="mt-3 font-serif text-4xl font-semibold">{featuredSeries.title}</h2>
+                  <p className="mt-3 max-w-lg text-base leading-7 text-white/85">{featuredSeries.subtitle}</p>
+                </div>
               </div>
-              <p className="text-lg text-white/80 mb-4 leading-relaxed">
-                "I've lived a thousand lives in one. These stories are fiction, but they're built on truths I've witnessed, experienced, and survived. 
-                Chyna White is every Black woman I've known who refused to choose just one identity. 
-                She's the parts of us we hide at work, unleash at home, and pray about at night."
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20">
+        <div className="container grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <Card className="border-border/70 bg-background/90 shadow-sm">
+            <CardContent className="space-y-6 p-8 md:p-10">
+              <div className="space-y-3">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Why Chyna lands now</p>
+                <h2 className="font-serif text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+                  Fierce, current, and written like she already owns the conversation.
+                </h2>
+              </div>
+              <p className="text-base leading-8 text-muted-foreground md:text-lg">
+                {featuredSeries.description}
               </p>
-              <p className="text-white/60 font-semibold">— RoSeé Murphy</p>
+              <div className="grid gap-4">
+                {launchPoints.map((point) => (
+                  <div key={point} className="rounded-2xl border border-border/70 bg-muted/20 px-5 py-4 text-sm leading-7 text-foreground md:text-base">
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/70 bg-card/80 shadow-sm">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex items-center justify-between border-b border-border/70 pb-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Now Reading</p>
+                  <h3 className="mt-2 font-serif text-2xl font-semibold text-foreground">Episode 1: The Setup</h3>
+                </div>
+                <Badge variant="outline" className="border-primary/25 text-primary">
+                  Live
+                </Badge>
+              </div>
+              <div className="space-y-5 pt-6">
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Clock className="h-4 w-4 text-primary" />
+                  <span>12 minute read</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Flame className="h-4 w-4 text-primary" />
+                  <span>Boardroom pressure, old history, and a lead who refuses to fold</span>
+                </div>
+                <p className="border-l-2 border-primary/40 pl-4 text-base italic leading-8 text-foreground/85">
+                  "The conference room smelled like expensive cologne and desperation. Chyna leaned back in her chair like the room was already hers."
+                </p>
+                <Button asChild className="mt-4 w-full rounded-full py-6 text-base">
+                  <Link href="/stories/chyna-white/episode-1">Start the story</Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
       </section>
-
     </div>
   );
 }

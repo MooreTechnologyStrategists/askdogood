@@ -10,7 +10,7 @@ export default function ChinaWhiteSeries() {
     {
       id: 1,
       title: 'The Setup',
-      description: 'Meet Chyna White. Former rapper. Ex-street pharmacist. Reformed corporate drone. Current boss.',
+      description: 'Meet Chyna White: a strategic operator with taste, nerve, and a past that still changes the temperature of every room.',
       readTime: 12,
       spiceLevel: 2,
       published: true,
@@ -20,7 +20,7 @@ export default function ChinaWhiteSeries() {
     {
       id: 2,
       title: 'Verse One: The Rap Game',
-      description: 'Before the suits and boardrooms, there was a mic, a dream, and a girl who could spit fire.',
+      description: 'Before the boardrooms, there was a voice, an audience, and the first version of a woman built to be watched.',
       readTime: 15,
       spiceLevel: 3,
       published: false,
@@ -30,7 +30,7 @@ export default function ChinaWhiteSeries() {
     {
       id: 3,
       title: 'Corporate Chyna',
-      description: 'She tried the 9-to-5. They tried to break her. One of them failed.',
+      description: 'She learned the rules, read the room faster than everyone else, and left with leverage instead of permission.',
       readTime: 14,
       spiceLevel: 2,
       published: false,
@@ -40,7 +40,7 @@ export default function ChinaWhiteSeries() {
     {
       id: 4,
       title: 'The Business',
-      description: 'When you\'ve been everywhere, done everything, what do you build? Everything.',
+      description: 'When a woman survives every version of herself, the next move is not survival. It is ownership.',
       readTime: 16,
       spiceLevel: 3,
       published: false,
@@ -173,12 +173,11 @@ export default function ChinaWhiteSeries() {
               
               <h1 className="text-5xl font-bold mb-4 text-foreground tracking-wide">Chyna White</h1>
               <p className="text-2xl text-primary mb-6 italic">
-                The Chronicles of a Beautiful Contradiction
+                Fierce fiction for readers who want pressure, polish, and a lead worth following.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Follow Chyna as she navigates the impossibilities of being a former rapper, street pharmacist, 
-                corporate escapee, and current business owner. Smart, gorgeous, tattooed, and unapologetically 
-                herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
+                Chyna White is not written as a side character in her own life. She moves through power, memory,
+                business, desire, and risk with the kind of presence that makes everyone else adjust first.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
@@ -208,7 +207,7 @@ export default function ChinaWhiteSeries() {
                       <Flame key={i} className="w-4 h-4 text-primary fill-primary" />
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground">Max Heat</p>
+                  <p className="text-xs text-muted-foreground">Series energy</p>
                 </div>
               </div>
 

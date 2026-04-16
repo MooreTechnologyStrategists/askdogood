@@ -459,10 +459,10 @@ export const staticSeoPages: StaticSeoPage[] = [
   },
   {
     path: "/stories",
-    title: "Stories | Ask DoGood",
+    title: "Stories and Serialized Fiction | Ask DoGood",
     description:
-      "Read fiction and story-driven work from Ask DoGood exploring identity, reinvention, and resilience.",
-    keywords: ["short stories", "fiction", "Ask DoGood stories"],
+      "Read serialized fiction from Ask DoGood, led by Chyna White and built around sharp characters, modern tension, and premium storytelling.",
+    keywords: ["short stories", "serialized fiction", "Chyna White", "Ask DoGood stories"],
     priority: 0.7,
     changefreq: "weekly",
   },
@@ -470,8 +470,8 @@ export const staticSeoPages: StaticSeoPage[] = [
     path: "/stories/chyna-white",
     title: "Chyna White | Ask DoGood",
     description:
-      "Enter the Chyna White story world and follow a character shaped by reinvention, grit, and contradiction.",
-    keywords: ["Chyna White", "fiction series", "urban fiction"],
+      "Enter the Chyna White story world and follow a fierce, high-pressure lead built for readers who want tension, style, and authority.",
+    keywords: ["Chyna White", "fiction series", "serialized fiction", "contemporary drama"],
     type: "article",
     priority: 0.7,
     changefreq: "weekly",
@@ -480,8 +480,8 @@ export const staticSeoPages: StaticSeoPage[] = [
     path: "/stories/chyna-white/episode-1",
     title: "Chyna White Episode 1 | Ask DoGood",
     description:
-      "Read episode 1 of Chyna White and step into the opening chapter of a sharp, character-driven story.",
-    keywords: ["Chyna White episode 1", "fiction episode", "Ask DoGood fiction"],
+      "Read episode 1 of Chyna White and step into a sharp opening chapter filled with boardroom tension, old history, and a lead who does not shrink.",
+    keywords: ["Chyna White episode 1", "fiction episode", "serialized fiction", "Ask DoGood fiction"],
     type: "article",
     priority: 0.65,
     changefreq: "monthly",

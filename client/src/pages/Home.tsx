@@ -966,39 +966,38 @@ export default function Home() {
                       Featured Series
                     </Badge>
                     <h2 className="text-4xl font-bold mb-2 text-foreground">
-                      Introducing: Chyna White
+                      Chyna White Is Here
                     </h2>
                     <p className="text-xl text-muted-foreground mb-4">
-                      The Chronicles of a Beautiful Contradiction
+                      Fierce, current fiction with a lead built to hold attention.
                     </p>
                   </div>
                   <div className="space-y-4 text-lg text-muted-foreground">
                     <p className="leading-relaxed">
-                      Meet <strong className="text-primary">Chyna White</strong>—a brown-skinned
-                      powerhouse navigating corporate America, street politics, and her own truth in
-                      a world that wants her to choose sides.
+                      Meet <strong className="text-primary">Chyna White</strong> - a woman with
+                      leverage, style, and the kind of presence that makes every room recalculate.
                     </p>
                     <p className="leading-relaxed">
-                      She carries polished ambition with a disruptive edge. Sharp instincts,
-                      layered motives, and a story that refuses to flatten her into something easy
-                      to read.
+                      This series leads with pressure, taste, and strategy instead of cliches.
+                      Chyna reads as fierce, new, and fully capable of becoming the story readers
+                      talk about first.
                     </p>
                     <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
                       <p className="text-foreground font-medium">
-                        Fiction with real-world pressure
+                        Fiction with cultural heat
                         <br />
-                        Corporate drama meets street wisdom
-                        <br />A heroine who operates by her own rules
+                        Boardroom tension meets street memory
+                        <br />A lead who moves like the headline
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                    <Link href="/stories">
+                    <Link href="/stories/chyna-white/episode-1">
                       <Button className="gap-2 rounded-3xl py-3 px-8 w-full sm:w-auto">
                         Read Episode 1 <ArrowRight className="h-5 w-5" />
                       </Button>
                     </Link>
-                    <Link href="/stories">
+                    <Link href="/stories/chyna-white">
                       <Button
                         variant="outline"
                         className="gap-2 rounded-3xl w-full sm:w-auto"

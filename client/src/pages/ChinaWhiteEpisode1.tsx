@@ -48,7 +48,7 @@ export default function ChinaWhiteEpisode1() {
           {/* Caption */}
           <div className="absolute bottom-4 left-0 right-0 text-center">
             <span className="inline-block bg-background/80 text-primary px-4 py-2 rounded-full text-base font-medium shadow-lg mx-auto">
-              Chyna White, the legend in the making
+              Chyna White arrives like the subject, not the side note
             </span>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function ChinaWhiteEpisode1() {
           <div className="mb-8 flex justify-center">
             <div className="bg-card border border-primary/20 rounded-2xl px-8 py-6 shadow-2xl max-w-2xl">
               <span className="block text-foreground font-semibold text-xl md:text-2xl leading-relaxed">
-                Meet <span className="text-primary font-bold">Chyna White</span>: former rapper, ex-street pharmacist, reformed corporate drone, and current boss. Smart, gorgeous, tattooed, and unapologetically herself—she's the kind of Black woman who makes you rethink everything you thought you knew.
+                Meet <span className="text-primary font-bold">Chyna White</span>: sharp, stylish, strategic, and impossible to flatten into one label. She is the kind of lead who changes the air in a room before she says a word.
               </span>
             </div>
           </div>
