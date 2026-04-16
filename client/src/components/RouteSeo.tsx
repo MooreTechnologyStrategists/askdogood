@@ -76,6 +76,15 @@ function getSchemaForPath(path: string) {
         },
         sameAs: SOCIAL_PROFILES,
       };
+    case "/behind-the-scenes":
+      return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Behind the Scenes | Ask DoGood",
+        url: `${SITE_URL}/behind-the-scenes`,
+        description:
+          "Founder features and behind-the-scenes notes on cultural memories, community service, style, and wellness routines.",
+      };
     case "/course/thyroid-health-mastery":
       return {
         "@context": "https://schema.org",

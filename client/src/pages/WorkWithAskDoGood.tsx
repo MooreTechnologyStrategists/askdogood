@@ -57,24 +57,24 @@ const audiences = [
 
 const offers = [
   {
-    title: "AskDoGood 6-Week Reset",
+    title: "Personal Wellness Reset Coaching",
     description:
-      "A structured program covering awareness, nutrition, movement, mental reset, income activation, and long-term integration.",
+      "If you are tired of feeling off, low energy, or stuck in unhealthy habits, this is where the reset starts. We focus on nutrition, simple movement, stress reduction, and habits that actually stick.",
   },
   {
-    title: "Workshops And Talks",
+    title: "Custom Meal Prep & Nutrition Support",
     description:
-      "Live or virtual sessions on thyroid-friendly routines, food literacy, stress reduction, and rebuilding daily structure after burnout or diagnosis.",
+      "Food is one of the fastest ways to change how you feel. This support covers smoothies and juices, vegan, vegetarian, keto, or flexible plans, plus simple affordable meals that meet people where they are.",
   },
   {
-    title: "Community Toolkits",
+    title: "Community Health & Lifestyle Workshops",
     description:
-      "Meal guides, symptom trackers, self-advocacy resources, and culturally relevant practical tools that extend your program after the event ends.",
+      "These sessions are built for real people dealing with real life, with topics including reducing inflammation naturally, building energy through food and movement, managing stress, and introducing tech opportunities for income growth.",
   },
   {
-    title: "Health Plus Career Pathways",
+    title: "Health + Income Reset",
     description:
-      "A practical bridge between wellness education and economic mobility through technology, cloud, and workforce-facing support.",
+      "Healing is important, but so is stability. This offer connects better health habits, career pathways in tech, and opportunities to increase income so the work supports both wellness and financial footing.",
   },
 ] as const;
 
@@ -198,6 +198,9 @@ export default function WorkWithAskDoGood() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">What We Offer</p>
               <h2 className="mt-3 text-3xl font-bold md:text-5xl">Programming that moves from information to implementation</h2>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
+                Clear, direct offers built around practical change instead of abstract wellness language.
+              </p>
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {offers.map((offer) => (
                   <Card key={offer.title} className="rounded-[1.75rem] border border-border/70 bg-card shadow-sm">
@@ -220,7 +223,7 @@ export default function WorkWithAskDoGood() {
               <CardContent className="space-y-5 text-sm leading-7 text-muted-foreground">
                 <p>
                   Clinics give advice. Content brands give inspiration. AskDoGood translates healing into daily practice,
-                  with lived experience, cultural fluency, and a structure people can actually use.
+                  with lived experience, cultural fluency, and service offers people can actually understand and use.
                 </p>
                 <p>
                   The platform is especially strong where health, burnout, food access, community trust, and economic pressure overlap.

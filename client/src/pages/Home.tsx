@@ -612,10 +612,10 @@ export default function Home() {
               Behind the Scenes
             </h2>
             <p className="text-lg text-muted-foreground mb-2">
-              A personal view of the seasons behind the work.
+              A stronger look at the real moments, outreach, and personal standards behind the work.
             </p>
             <p className="text-md text-primary/80 italic font-medium">
-              Before, during, and after the rebuilding process.
+              Cultural memories, community service, healing with style, and the routines that stayed consistent.
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
@@ -625,54 +625,55 @@ export default function Home() {
       </section>
 
       {/* SHOP SECTION - Thyroid Toolkit */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+      <section className="py-20 bg-gradient-to-b from-background to-secondary/5">
         <div className="container">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full mb-6 shadow-xl">
-              <span className="text-sm font-bold text-white uppercase tracking-wider">
-                Shop Tools
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2.5 mb-6">
+              <span className="text-sm font-bold uppercase tracking-wider text-primary">
+                Live Offers
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-              Core wellness <span className="text-primary">offers</span>
+              Start with four <span className="text-primary">core tools</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Structured products with clearer checkout paths and stronger presentation.
+              The homepage now points to the live products that already matter most: the thyroid course, the 21-day reset, the symptom tracker, and the 30-day meal plan.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
             {featuredProducts.map((product) => (
               <Card
                 key={product.id}
-                className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50"
+                className="group overflow-hidden border border-border/70 bg-background/90 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-lg"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    width="400"
-                    height="256"
-                    onError={(e) => handleImageError(e)}
-                  />
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-primary text-white font-bold shadow-lg">
+                <div className="relative border-b border-border/70 bg-[linear-gradient(180deg,rgba(250,245,240,0.9),rgba(255,255,255,0.95))] px-6 py-5">
+                  <div className="flex items-start justify-between gap-4 mb-5">
+                    <Badge variant="outline" className="border-primary/20 bg-background/70 text-primary">
+                      {product.category}
+                    </Badge>
+                    <Badge className="bg-primary text-white font-bold shadow-sm">
                       {product.status}
                     </Badge>
                   </div>
+                  <div className="flex items-center justify-center rounded-2xl bg-white/70 p-4 shadow-[inset_0_0_0_1px_rgba(120,96,80,0.08)]">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-36 w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                      width="400"
+                      height="180"
+                      onError={(e) => handleImageError(e)}
+                    />
+                  </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl">{product.name}</CardTitle>
-                  <CardDescription className="text-base">{product.shortSummary}</CardDescription>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-xl leading-tight">{product.name}</CardTitle>
+                  <CardDescription className="text-sm leading-6">{product.shortSummary}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-2">
-                      <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">{product.category}</p>
-                    </div>
+                <CardContent className="pt-0">
+                  <div className="space-y-2.5 mb-5">
                     <div className="flex items-start gap-2">
                       <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">{product.description}</p>
@@ -682,11 +683,17 @@ export default function Home() {
                       <p className="text-sm text-muted-foreground">{product.cta}</p>
                     </div>
                   </div>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-primary">{product.priceLabel}</span>
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Price</p>
+                      <span className="text-2xl font-bold text-primary">{product.priceLabel}</span>
+                    </div>
+                    <p className="max-w-[12rem] text-right text-xs leading-5 text-muted-foreground">
+                      Direct checkout for the live version of this offer.
+                    </p>
                   </div>
                   <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full rounded-3xl text-lg font-semibold py-3 shadow-lg hover:shadow-xl transition-all">
+                    <Button className="w-full rounded-full text-base font-semibold py-3 shadow-sm hover:shadow-md transition-all">
                       View offer
                     </Button>
                   </a>
@@ -697,10 +704,10 @@ export default function Home() {
 
           <div className="text-center mt-12 flex flex-col items-center gap-4">
             <p className="text-sm text-muted-foreground font-medium">
-              Structured offers, direct checkout, and cleaner customer paths.
+              These are the four homepage offers with active pricing and current checkout paths.
             </p>
             <Link href="/shop">
-              <Button className="rounded-3xl text-base md:text-lg font-semibold py-3 px-6">
+              <Button className="rounded-full text-base md:text-lg font-semibold py-3 px-6">
                 View the full catalog
               </Button>
             </Link>

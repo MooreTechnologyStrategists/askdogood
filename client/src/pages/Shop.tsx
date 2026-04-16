@@ -96,6 +96,21 @@ function CatalogCard({ item }: { item: CatalogItem }) {
 }
 
 export default function Shop() {
+  const healthNutritionItems = [
+    catalogById["21-day-plant-based-reset"],
+    catalogById["30-day-thyroid-meal-plan"],
+  ].filter((item): item is CatalogItem => Boolean(item));
+
+  const educationItems = [
+    catalogById["thyroid-lab-interpretation-guide"],
+    catalogById["thyroid-checklist"],
+  ].filter((item): item is CatalogItem => Boolean(item));
+
+  const transformationItems = [
+    catalogById["dogood-wellness-circle"],
+    catalogById["transformation-package"],
+  ].filter((item): item is CatalogItem => Boolean(item));
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -111,10 +126,16 @@ export default function Shop() {
                 AskDoGood catalog
               </Badge>
               <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
-                A cleaner storefront for the products people actually need.
+                This is where knowledge turns into action.
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                This catalog centralizes the core offers, lead magnets, services, and upcoming merch so the site can present a stronger brand and a more professional buying path.
+                Every guide inside AskDoGood was created from real-life experience, research, and application, not theory.
+              </p>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
+                These resources are designed to help you improve your health naturally, understand your body, build sustainable habits, and take control of your lifestyle.
+              </p>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/85">
+                Start simple. Stay consistent. Transform over time.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href={readyNow[0].checkoutUrl} target="_blank" rel="noopener noreferrer">
@@ -151,6 +172,84 @@ export default function Shop() {
                 ))}
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 border-b border-border/40 bg-background/70">
+        <div className="container">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <Card className="border-border/60 bg-card/90 shadow-sm">
+              <CardHeader>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Health & Nutrition</p>
+                <CardTitle className="text-2xl">Food-first structure that supports healing</CardTitle>
+                <CardDescription className="text-base leading-7">
+                  Simple, effective strategies to reduce inflammation, improve energy, and support your body using real food.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm text-muted-foreground">
+                {healthNutritionItems.map((item) => (
+                  <div key={item.id} className="rounded-xl border border-border/50 bg-background px-4 py-3">
+                    <p className="font-medium text-foreground">{item.name}</p>
+                    <p className="mt-1 leading-6">{item.shortSummary}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/60 bg-card/90 shadow-sm">
+              <CardHeader>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Health Education</p>
+                <CardTitle className="text-2xl">Tools that help you understand your body</CardTitle>
+                <CardDescription className="text-base leading-7">
+                  Learn how to understand your body and your numbers so you are no longer dependent on guesswork.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm text-muted-foreground">
+                {educationItems.map((item) => (
+                  <div key={item.id} className="rounded-xl border border-border/50 bg-background px-4 py-3">
+                    <p className="font-medium text-foreground">{item.name}</p>
+                    <p className="mt-1 leading-6">{item.shortSummary}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/60 bg-card/90 shadow-sm">
+              <CardHeader>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Lifestyle Transformation</p>
+                <CardTitle className="text-2xl">Programs that push daily change into motion</CardTitle>
+                <CardDescription className="text-base leading-7">
+                  A structured system to reset your health, mindset, and daily habits, with room to go deeper when you are ready.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm text-muted-foreground">
+                {transformationItems.map((item) => (
+                  <div key={item.id} className="rounded-xl border border-border/50 bg-background px-4 py-3">
+                    <p className="font-medium text-foreground">{item.name}</p>
+                    <p className="mt-1 leading-6">{item.shortSummary}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-lg text-muted-foreground">Ready to go deeper? Explore the full programs and start your reset today.</p>
+            <div className="mt-5 flex justify-center gap-3 flex-wrap">
+              <a href={readyNow[0].checkoutUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="gap-2 rounded-full">
+                  Explore programs
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </a>
+              <Link href="/work-with-askdogood">
+                <Button size="lg" variant="outline" className="gap-2 rounded-full">
+                  View reset services
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

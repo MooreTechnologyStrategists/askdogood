@@ -164,6 +164,23 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "monthly",
   },
   {
+    path: "/behind-the-scenes",
+    title: "Behind the Scenes | Ask DoGood",
+    description:
+      "Read the behind-the-scenes features on Ask DoGood covering the CIAA birthday story, healing with style, community outreach, and personal wellness routines.",
+    keywords: [
+      "behind the scenes",
+      "MC Lyte birthday story",
+      "DJ K-Rock",
+      "community outreach",
+      "healing with style",
+      "Ask DoGood founder notes",
+    ],
+    type: "article",
+    priority: 0.72,
+    changefreq: "monthly",
+  },
+  {
     path: "/interests",
     title: "Interests and Inspiration | Ask DoGood",
     description:

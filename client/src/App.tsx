@@ -54,6 +54,7 @@ import SymptomTracker from "./pages/SymptomTracker";
 import SupplementGuide from "./pages/SupplementGuide";
 import DoctorChecklist from "./pages/DoctorChecklist";
 import Coaching from "./pages/Coaching";
+import BehindTheScenes from "./pages/BehindTheScenes";
 
 import {
   Card,
@@ -113,6 +114,7 @@ function Router() {
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
     <Route path="/contact" component={Contact} />
+    <Route path="/behind-the-scenes" component={BehindTheScenes} />
     <Route path="/work-with-askdogood" component={WorkWithAskDoGood} />
     <Route path="/guest-contributors" component={GuestContributors} />
     <Route path="/herbs" component={HerbDictionary} />
