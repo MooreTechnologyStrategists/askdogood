@@ -53,13 +53,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur-md shadow-sm">
       <div className="container flex h-14 items-center justify-between">
         {/* LEFT: Logo / Brand */}
-        <Link href="/" className="flex items-center gap-2.5 font-semibold tracking-tight cursor-pointer">
-          <img
-            src="https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp"
-            alt="Ask DoGood"
-            className="h-7 w-7 object-contain"
-          />
-          <span className="hidden sm:inline text-base font-bold tracking-tight">Ask DoGood</span>
+        <Link href="/" className="flex items-center font-semibold cursor-pointer">
+          <span className="text-[0.95rem] font-semibold tracking-[0.08em] uppercase text-foreground">Ask DoGood</span>
         </Link>
 
         {/* CENTER: Nav (desktop) */}

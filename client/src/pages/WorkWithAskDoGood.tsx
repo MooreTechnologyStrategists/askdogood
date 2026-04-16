@@ -130,12 +130,12 @@ export default function WorkWithAskDoGood() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="mailto:askdogood@gmail.com?subject=Partnership%20Inquiry%20for%20AskDoGood">
                 <Button className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Book A Partnership Conversation
+                  Work With AskDoGood
                 </Button>
               </a>
               <Link href="/contact">
                 <Button variant="outline" className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Send An Inquiry
+                  Bring A Workshop To Your Community
                 </Button>
               </Link>
             </div>
@@ -197,7 +197,7 @@ export default function WorkWithAskDoGood() {
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">What We Offer</p>
-              <h2 className="mt-3 text-3xl font-bold md:text-5xl">Programming that moves from information to implementation</h2>
+              <h2 className="mt-3 text-3xl font-bold md:text-5xl">Services for individuals and communities</h2>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
                 Clear, direct offers built around practical change instead of abstract wellness language.
               </p>
@@ -268,20 +268,20 @@ export default function WorkWithAskDoGood() {
         <div className="container">
           <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card px-8 py-10 text-center shadow-lg md:px-12 md:py-14">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Start Here</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-5xl">Let’s build something people can actually use</h2>
+            <h2 className="mt-3 text-3xl font-bold md:text-5xl">Start with what you need</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-muted-foreground">
               AskDoGood is available for workshops, community partnerships, wellness programming, and strategic collaborations that connect healing with everyday stability.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="mailto:askdogood@gmail.com?subject=Work%20With%20AskDoGood">
                 <Button className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Email AskDoGood
+                  Work With AskDoGood
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
               <Link href="/shop">
                 <Button variant="outline" className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Explore Programs And Tools
+                  Explore Programs
                 </Button>
               </Link>
             </div>

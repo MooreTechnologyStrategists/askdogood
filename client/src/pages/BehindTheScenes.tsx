@@ -108,8 +108,11 @@ export default function BehindTheScenes() {
           <div className="mb-8 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Daily practice</p>
             <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-foreground md:text-5xl">
-              Matched visuals, clearer context, and a page that reflects the work behind the brand.
+              Real life behind the brand.
             </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Each section now groups one kind of work with the right kind of visual so the page reads as organized, credible, and intentional.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -153,8 +156,8 @@ export default function BehindTheScenes() {
                 </p>
               </div>
               <Button asChild className="rounded-full px-6 py-6 text-base">
-                <Link href="/journey">
-                  Continue to Journey <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/work-with-askdogood">
+                  Work With AskDoGood <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </CardContent>

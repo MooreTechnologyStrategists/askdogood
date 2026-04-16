@@ -12,21 +12,21 @@ const mosaicImages = [
 
 const reflections = [
   {
-    title: "Free therapy. No copay.",
+    title: "Health & Nutrition",
     description:
-      "Walking has become one of the most honest forms of care in my life. It clears fear out of the room long enough for gratitude, breath, and perspective to get a turn.",
+      "Guides focused on energy, inflammation, food choices, and simple daily resets that support your body without overcomplicating the process.",
     icon: HeartPulse,
   },
   {
-    title: "The simple things hit different.",
+    title: "Body Awareness",
     description:
-      "A safe trail. A good meal. A body that can go a little farther than it could last season. Those are not small things anymore.",
+      "Resources that help you understand symptoms, basic lab markers, and what your body may be trying to tell you so you stop relying on guesswork.",
     icon: Footprints,
   },
   {
-    title: "It was already waiting for you.",
+    title: "Lifestyle Reset",
     description:
-      "Sometimes healing is not about inventing a whole new life. It is about noticing the creek, the park, the recipe, the rhythm that was there all along.",
+      "Programs and tools built to help you create healthier routines that fit real life and lead into stronger daily consistency over time.",
     icon: MapPinned,
   },
 ];
@@ -76,11 +76,13 @@ export default function KeepMoving() {
             </p>
             <div className="space-y-4">
               <h1 className="max-w-3xl text-5xl font-bold leading-none md:text-7xl">
-                Keep Moving
+                AskDoGood Digital Library
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
-                A new home for the stories I want to share more consistently: healing walks,
-                recovery milestones, public spaces worth protecting, and the foods that help me feel like myself again.
+                Practical guides to help you improve your health, understand your body, and build better daily habits.
+              </p>
+              <p className="max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
+                The AskDoGood Digital Library is a growing collection of practical guides designed to help you better understand your health, improve your daily habits, and take action with confidence.
               </p>
             </div>
 
@@ -89,36 +91,36 @@ export default function KeepMoving() {
                 href="/flipbooks/indian-creek-trail.html"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--accent-foreground)] transition-transform hover:-translate-y-0.5"
               >
-                Read Indian Creek
+                View Digital Library
               </a>
               <a
                 href="/flipbooks/keep-moving.html"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/14"
               >
-                Open The Original Spread
+                Start Your Reset
               </a>
-              <Link href="/journey">
+              <Link href="/shop">
                 <a className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/78 transition-colors hover:border-white/30 hover:text-white">
-                  Back To My Journey
+                  Shop Products
                 </a>
               </Link>
             </div>
 
             <div className="grid gap-4 pt-6 md:grid-cols-3">
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Proof</p>
-                <p className="mt-3 text-3xl font-bold">12,840</p>
-                <p className="mt-2 text-sm text-white/72">steps on a morning that felt vivid again</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Utility</p>
+                <p className="mt-3 text-3xl font-bold">Action</p>
+                <p className="mt-2 text-sm text-white/72">built for real progress instead of passive scrolling</p>
               </div>
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Distance</p>
-                <p className="mt-3 text-3xl font-bold">5.7 miles</p>
-                <p className="mt-2 text-sm text-white/72">walked with energy instead of depletion</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Focus</p>
+                <p className="mt-3 text-3xl font-bold">3 lanes</p>
+                <p className="mt-2 text-sm text-white/72">nutrition, body awareness, and lifestyle reset</p>
               </div>
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Direction</p>
-                <p className="mt-3 text-3xl font-bold">One rhythm</p>
-                <p className="mt-2 text-sm text-white/72">walk, reflect, nourish, share, repeat</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-white/55">Next step</p>
+                <p className="mt-3 text-3xl font-bold">Buy deeper</p>
+                <p className="mt-2 text-sm text-white/72">each guide should lead naturally into a fuller program</p>
               </div>
             </div>
           </div>
@@ -149,14 +151,14 @@ export default function KeepMoving() {
         <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="rounded-[2.25rem] border border-border bg-[linear-gradient(135deg,rgba(19,55,45,0.06),rgba(205,177,109,0.11))] p-8 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary/75">
-              The Series
+              What You Will Find Here
             </p>
             <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-              Shareable flipbooks, with room to grow.
+              Resources designed to be read and used.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-              I added the two attached flipbooks as live pages so they are immediately shareable on AskDoGood.
-              This page now acts as the front door for the series, which means future walks and healing-food stories can live under one consistent concept instead of getting lost as isolated exports.
+              These resources were created to make health information easier to understand and easier to apply in real life.
+              Each guide is designed to help you take action, not just collect information.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {flipbooks.map((item) => (
@@ -173,7 +175,7 @@ export default function KeepMoving() {
                     <h3 className="mt-3 text-2xl font-bold">{item.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.description}</p>
                     <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                      Open flipbook
+                      View guide
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
@@ -192,16 +194,15 @@ export default function KeepMoving() {
               <div className="p-7">
                 <div className="flex items-center gap-3 text-primary">
                   <Leaf className="h-5 w-5" />
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em]">Foods For Healing</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em]">Health & Nutrition</p>
                 </div>
-                <h3 className="mt-4 text-3xl font-bold">The food side belongs here too.</h3>
+                <h3 className="mt-4 text-3xl font-bold">Practical food support belongs in the library too.</h3>
                 <p className="mt-4 text-base leading-7 text-muted-foreground">
-                  This same series can hold the meals, drinks, prep rituals, and simple ingredients that support recovery.
-                  The walks are one half of the rhythm. The nourishment is the other.
+                  Guides focused on energy, inflammation, food choices, and daily resets should move people from reading into real nutrition action.
                 </p>
-                <Link href="/meal-prep">
+                <Link href="/shop">
                   <a className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    Explore meal prep
+                    Explore Programs
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </Link>
@@ -209,12 +210,17 @@ export default function KeepMoving() {
             </article>
 
             <article className="rounded-[2rem] border border-border bg-secondary/40 p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">Next Step</p>
-              <h3 className="mt-4 text-3xl font-bold">A repeatable publishing rhythm.</h3>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">What Happens Next</p>
+              <h3 className="mt-4 text-3xl font-bold">Ready to go deeper?</h3>
               <p className="mt-4 text-base leading-7 text-muted-foreground">
-                When you make another walk story or food story, the cleanest move is to add it here as another flipbook card,
-                then decide later whether it stays as a preserved export or gets rebuilt as a fully native page.
+                Explore the full AskDoGood programs and digital products for the next level of structure, support, and practical guidance.
               </p>
+              <Link href="/shop">
+                <a className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                  Start Your Reset
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Link>
             </article>
           </div>
         </div>
