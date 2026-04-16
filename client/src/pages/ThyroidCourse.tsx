@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Check, X, Gift, Star, Users, Clock, Download, Video, BookOpen, Heart, TrendingUp, Sparkles } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
+import { GUMROAD_URLS } from '@/config/gumroad';
 
 export default function ThyroidCourse() {
   const [promoCode, setPromoCode] = useState('');
@@ -26,7 +27,7 @@ export default function ThyroidCourse() {
   };
 
   const finalPrice = promoApplied ? promoPrice : launchPrice;
-  const gumroadUrl = `https://askdogood.gumroad.com/l/thyroid-health-mastery${promoApplied ? '?wanted=true&code=MLKLEGACY' : ''}`;
+  const gumroadUrl = `${GUMROAD_URLS.thyroidMastery}${promoApplied ? '?wanted=true&code=MLKLEGACY' : ''}`;
 
   const modules = [
     {

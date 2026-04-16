@@ -122,6 +122,11 @@ export default function Footer() {
                   Free resources
                 </Link>
               </li>
+              <li>
+                <Link href="/keep-moving" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  Digital library and flipbooks
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -147,6 +152,11 @@ export default function Footer() {
                 <Link href="/blog" className="flex cursor-pointer items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary">
                   <BookOpen className="h-3 w-3" />
                   Blog and articles
+                </Link>
+              </li>
+              <li>
+                <Link href="/keep-moving" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
+                  AskDoGood digital library
                 </Link>
               </li>
               <li>

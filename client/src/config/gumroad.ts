@@ -2,7 +2,7 @@ export const GUMROAD_URLS = {
   storefront: import.meta.env.VITE_GUMROAD_STOREFRONT_URL || "https://askdogood.gumroad.com",
   thyroidMastery:
     import.meta.env.VITE_GUMROAD_THYROID_MASTERY_URL ||
-    "https://askdogood.gumroad.com/l/thyroid-health-mastery",
+    "https://roseecraft.gumroad.com/l/thyroid-health-mastery",
   plantReset:
     import.meta.env.VITE_GUMROAD_PLANT_RESET_URL ||
     "https://askdogood.gumroad.com/l/21-day-plant-based-reset",

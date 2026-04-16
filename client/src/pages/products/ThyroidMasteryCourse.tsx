@@ -20,9 +20,12 @@ export default function ThyroidMasteryCourse() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
                   <img
-                    src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200"
+                    src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
                     alt="Thyroid Health Mastery Course"
                     className="w-full h-full object-cover"
+                    onError={(event) => {
+                      event.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/products/Thumbnail_Thyroid_Health_Mastery_Ebook.png";
+                    }}
                   />
                 </div>
                 {/* Badge */}

@@ -181,6 +181,42 @@ const Resources = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
+            <div className="mb-12 rounded-[2rem] border border-primary/15 bg-gradient-to-r from-primary/5 via-white to-secondary/10 p-8 md:p-10">
+              <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr] md:items-center">
+                <div>
+                  <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-4">
+                    AskDoGood Digital Library
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    The flipbooks are live. They were just not surfaced clearly enough.
+                  </h2>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                    The digital library holds your live flipbooks and supporting guide content so visitors can move from reading into programs, products, and practical next steps.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="/flipbooks/indian-creek-trail.html" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                      Open Indian Creek Trail
+                    </a>
+                    <Link href="/keep-moving" className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+                      View Digital Library Page
+                    </Link>
+                  </div>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <a href="/flipbooks/indian-creek-trail.html" className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-2">Walk story</p>
+                    <h3 className="text-xl font-bold text-gray-900">Indian Creek Trail</h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">A live flipbook about movement, recovery, and feeling stronger in your body again.</p>
+                  </a>
+                  <a href="/flipbooks/keep-moving.html" className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-2">Series cover</p>
+                    <h3 className="text-xl font-bold text-gray-900">Keep Moving</h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">The original spread that introduces the movement, healing, and food side of the series.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="text-center mb-12">
               <div className="inline-block bg-teal-100 px-4 py-2 rounded-full text-sm font-medium text-teal-700 mb-4">
                 100% Free Downloads
