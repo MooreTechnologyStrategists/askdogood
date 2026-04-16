@@ -36,6 +36,7 @@ import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
 import GardenSeasonPost from "@/pages/GardenSeasonPost";
+import KeepMoving from "@/pages/KeepMoving";
 import RoastedVegetablesTrio from "@/pages/recipes/RoastedVegetablesTrio";
 import QuinoaRiceMedley from "@/pages/recipes/QuinoaRiceMedley";
 import PurpleCabbageBroccoliSlaw from "@/pages/recipes/PurpleCabbageBroccoliSlaw";
@@ -72,6 +73,7 @@ import { CLINICAL_RECIPE_APP_URL } from "./config/clinicalRecipes";
 import ShopRedirect from "./pages/ShopRedirect";
 import HerbDictionary from "./pages/HerbDictionary";
 import GuestContributors from "./pages/GuestContributors";
+import WorkWithAskDoGood from "./pages/WorkWithAskDoGood";
 
 
 // Clinical Recipe System page - using standalone component from pages folder
@@ -105,11 +107,13 @@ function Router() {
     <Route path="/rss" component={BlogRSS} />
     <Route path="/feed" component={BlogRSS} />
     <Route path="/journey" component={Journey} />
+    <Route path="/keep-moving" component={KeepMoving} />
     <Route path="/interests" component={Interests} />
     <Route path="/garden" component={Garden} />
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
     <Route path="/contact" component={Contact} />
+    <Route path="/work-with-askdogood" component={WorkWithAskDoGood} />
     <Route path="/guest-contributors" component={GuestContributors} />
     <Route path="/herbs" component={HerbDictionary} />
     <Route path="/garden/:season" component={GardenSeasonPost} />

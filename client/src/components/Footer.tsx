@@ -28,7 +28,7 @@ export default function Footer() {
               Ask Do Good
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Healing. Structure. Real-life growth for thyroid warriors and wellness seekers.
+              Heal better. Live smarter. Earn stronger.
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground bg-primary/10 px-3 py-2 rounded-lg mb-4">
               <Shield className="h-4 w-4 text-primary" />
@@ -97,6 +97,11 @@ export default function Footer() {
                   <Link href="/herbs" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
                     🌿 A-Z Herb Dictionary
                   </Link>
+              </li>
+              <li>
+                <Link href="/work-with-askdogood" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">
+                  Work With AskDoGood
+                </Link>
               </li>
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer block">

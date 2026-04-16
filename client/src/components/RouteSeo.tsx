@@ -55,7 +55,7 @@ function getSchemaForPath(path: string) {
           name: SITE_NAME,
           url: SITE_URL,
           description:
-            "DERS-powered wellness, DMV meal prep, Gumroad tools, and real-life growth from Ask DoGood.",
+            "Practical wellness, thyroid support, DMV meal prep, and real-life healing guidance from Ask DoGood.",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,

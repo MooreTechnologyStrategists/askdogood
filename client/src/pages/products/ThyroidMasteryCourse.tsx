@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { GUMROAD_URLS } from "@/config/gumroad";
 import { Check, Star, Video, Clock, Users, Award } from "lucide-react";
 import { Link } from "wouter";
 
 export default function ThyroidMasteryCourse() {
   // Gumroad product link
-  const gumroadLink = "https://askdogood.gumroad.com/l/thyroid-mastery";
+  const gumroadLink = GUMROAD_URLS.thyroidMastery;
 
   return (
     <div className="min-h-screen">

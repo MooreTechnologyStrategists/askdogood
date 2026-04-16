@@ -2,7 +2,7 @@ export const SITE_NAME = "Ask DoGood";
 export const SITE_URL = "https://askdogood.com";
 export const SITE_AUTHOR = 'RoSeé Murphy';
 export const DEFAULT_DESCRIPTION =
-  "DERS-powered wellness, thyroid support, DMV meal prep, and real-life growth for people pursuing holistic health, stability, and sustainable healing.";
+  "AskDoGood helps people heal better, live smarter, and earn stronger through practical wellness, self-advocacy, and everyday stability.";
 export const DEFAULT_OG_IMAGE =
   "https://askdogoodassets.blob.core.windows.net/images/AskDoGood_Logo_300x300.png";
 export const RSS_FEED_PATH = "/blog-rss.xml";
@@ -35,16 +35,16 @@ export type StaticSeoPage = {
 export const staticSeoPages: StaticSeoPage[] = [
   {
     path: "/",
-    title: "Ask DoGood | DERS Wellness, DMV Meal Prep, Healing, and Real-Life Growth",
+    title: "Ask DoGood | Heal Better, Live Smarter, Earn Stronger",
     description:
-      "Ask DoGood helps wellness seekers build better lives through DERS—diet, exercise, rest, and spirituality—plus thyroid support, DMV meal prep, practical tools, Gumroad products, and honest storytelling.",
+      "AskDoGood is a holistic health and workforce empowerment platform helping people rebuild health, daily structure, and stability through practical wellness, tools, and community support.",
     keywords: [
       "thyroid wellness",
       "DMV meal prep",
-      "DERS wellness",
+      "AskDoGood framework",
       "holistic health",
       "plant based meal prep",
-      "spiritual wellness",
+      "workforce empowerment",
       "Ask DoGood",
       "chronic illness support",
     ],
@@ -117,6 +117,21 @@ export const staticSeoPages: StaticSeoPage[] = [
       "Get in touch with Ask DoGood for collaboration, coaching inquiries, media requests, and support.",
     keywords: ["contact Ask DoGood", "coaching", "wellness collaboration"],
     priority: 0.7,
+    changefreq: "monthly",
+  },
+  {
+    path: "/work-with-askdogood",
+    title: "Work With AskDoGood | Partnerships, Workshops, and Programs",
+    description:
+      "Partner with AskDoGood for workshops, community wellness programming, 6-week reset support, and practical health-plus-stability education.",
+    keywords: [
+      "work with AskDoGood",
+      "wellness partnerships",
+      "community wellness workshops",
+      "lifestyle education",
+      "health and workforce support",
+    ],
+    priority: 0.78,
     changefreq: "monthly",
   },
   {

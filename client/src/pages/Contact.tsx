@@ -239,6 +239,9 @@ export default function Contact() {
               <a href="/blog">Browse Blog Posts</a>
             </Button>
             <Button variant="outline" size="lg" asChild>
+              <a href="/work-with-askdogood">Work With AskDoGood</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
               <a href="/journey">View My Journey</a>
             </Button>
             <Button variant="outline" size="lg" asChild>

@@ -5,7 +5,7 @@ export const GUMROAD_URLS = {
     "https://askdogood.gumroad.com/l/thyroid-health-mastery",
   plantReset:
     import.meta.env.VITE_GUMROAD_PLANT_RESET_URL ||
-    "https://askdogood.gumroad.com/l/clinical-food-rx",
+    "https://askdogood.gumroad.com/l/21-day-plant-based-reset",
   mealPlan:
     import.meta.env.VITE_GUMROAD_MEAL_PLAN_URL ||
     "https://askdogood.gumroad.com/l/30-day-meal-plan",

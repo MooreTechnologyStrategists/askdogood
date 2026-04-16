@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import {
   ArrowRight,
+  BriefcaseBusiness,
   Sparkles,
   HeartPulse,
   BookOpen,
@@ -308,10 +309,10 @@ export default function Home() {
   const features: FeatureCardProps[] = [
     {
       icon: <HeartPulse className="h-5 w-5 text-primary" />,
-      title: "DERS Wellness",
-      description: "Diet, exercise, rest, and spirituality in one flow.",
+      title: "The AskDoGood Framework",
+      description: "Five pillars working together in one system.",
       content:
-        "A clearer wellness framework that helps visitors understand the mission fast and take the next right step.",
+        "Health, routines, mindset, income, and environment are treated as connected problems instead of separate topics.",
     },
     {
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
@@ -328,12 +329,12 @@ export default function Home() {
       href: "/label-scanner",
     },
     {
-      icon: <BookOpen className="h-5 w-5 text-primary" />,
-      title: "Guest Blog + Partnerships",
-      description: "Grow reach, authority, and collaboration.",
+      icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
+      title: "Work With AskDoGood",
+      description: "Programs, workshops, and strategic collaboration.",
       content:
-        "Invite aligned writers, community voices, and business partners to help the brand reach a larger, more lucrative audience.",
-      href: "/guest-contributors",
+        "A partner-ready offer for community centers, churches, schools, government programs, and wellness organizations.",
+      href: "/work-with-askdogood",
     },
   ];
 
@@ -341,24 +342,29 @@ export default function Home() {
   const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
   const dersPillars = [
     {
-      title: "D — Diet",
-      description: "Clean eating, anti-inflammatory tools, and Gumroad meal plans built for real schedules.",
+      title: "Nutrition",
+      description: "Eat to heal, not just survive.",
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
     },
     {
-      title: "E — Exercise + Employment",
-      description: "Movement, accountability, and practical pathways that connect wellness with stability and earning power.",
+      title: "Movement",
+      description: "Restore energy and circulation through practical movement.",
+      icon: <HeartPulse className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "Mindset",
+      description: "Reduce stress, gain clarity, and support emotional reset.",
+      icon: <Sparkles className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "Income",
+      description: "Learn skills that increase opportunity and long-term stability.",
       icon: <TrendingUp className="h-5 w-5 text-primary" />,
     },
     {
-      title: "R — Rest",
-      description: "Recovery systems that respect burnout, autoimmune flares, and the need for softness.",
-      icon: <ShieldCheck className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "S — Spirituality",
-      description: "Faith-forward grounding, peace, and structure without shame or performance pressure.",
-      icon: <Sparkles className="h-5 w-5 text-primary" />,
+      title: "Environment",
+      description: "Build a life, home, and routine that support your growth.",
+      icon: <Users className="h-5 w-5 text-primary" />,
     },
   ];
 
@@ -410,15 +416,13 @@ export default function Home() {
             </div>
 
             <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
-              Healing. DERS.
+              Heal Better.
               <br />
-              <span className="text-primary">Real-life Growth.</span>
+              <span className="text-primary">Live Smarter. Earn Stronger.</span>
             </h2>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Ask DoGood helps people better their lives through holistic health, clean eating,
-              movement, rest, spirituality, and real-world stability. This is practical,
-              professional support for people who want results, beauty, and substance.
+              Take control of your health, your income, and your future without depending on broken systems.
             </p>
 
             {/* Trust Indicators - Professional */}
@@ -431,10 +435,15 @@ export default function Home() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <BeehiivSubscribe variant="inline" />
-              <Link href="/meal-prep">
+              <Link href="/shop">
                 <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
-                  Book DMV Meal Prep Concierge
+                  Start Your Reset
                   <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/work-with-askdogood">
+                <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
+                  Explore Programs
                 </Button>
               </Link>
             </div>
@@ -452,19 +461,19 @@ export default function Home() {
 
             <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto pt-4 text-left">
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">What visitors get</p>
-                <p className="font-semibold text-lg mb-2">Useful first-click experience</p>
-                <p className="text-sm text-muted-foreground">Free downloads, working wellness tools, herb guidance, and next-step offers that make sense.</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The problem</p>
+                <p className="font-semibold text-lg mb-2">Too many people are tired, sick, and stuck</p>
+                <p className="text-sm text-muted-foreground">Healthcare is expensive, information is confusing, and most platforms never connect health, lifestyle, and income in one place.</p>
               </div>
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Local relevance</p>
-                <p className="font-semibold text-lg mb-2">DMV community connection</p>
-                <p className="text-sm text-muted-foreground">Prince George's County resources, food access links, and community pathways that match the mission.</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The solution</p>
+                <p className="font-semibold text-lg mb-2">A holistic platform for rebuilding life from the inside out</p>
+                <p className="text-sm text-muted-foreground">AskDoGood focuses on natural healing, movement, emotional reset, financial growth through education, and more stable daily environments.</p>
               </div>
               <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Why it converts</p>
-                <p className="font-semibold text-lg mb-2">Clarity with authority</p>
-                <p className="text-sm text-muted-foreground">The site now feels more like a trusted wellness brand and less like a scattered content hub.</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The differentiator</p>
+                <p className="font-semibold text-lg mb-2">We do not just talk about healing</p>
+                <p className="text-sm text-muted-foreground">AskDoGood also connects health with skills, opportunity, and stability so people can rebuild more than symptoms.</p>
               </div>
             </div>
           </div>
@@ -476,18 +485,17 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-sm uppercase tracking-[0.25em] text-primary font-semibold mb-3">
-                The Ask DoGood mission, made clearer
+                The 5 pillars
               </p>
               <h2 className="text-3xl md:text-5xl font-bold font-serif mb-3">
-                DERS + real-life stability = a stronger brand promise
+                The AskDoGood system for healing and stability
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Wellness here is bigger than food. It includes healing routines, movement, rest,
-                spiritual grounding, and practical next steps that support healthier lives and new opportunities.
+                AskDoGood is a holistic platform designed to help people rebuild their lives through food, movement, emotional alignment, financial growth, and healthier environments.
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
               {dersPillars.map((pillar) => (
                 <div key={pillar.title} className="rounded-3xl border border-border/70 bg-background/85 p-5 shadow-lg backdrop-blur-sm">
                   <div className="mb-3 inline-flex rounded-2xl bg-primary/10 p-3">{pillar.icon}</div>
@@ -501,9 +509,9 @@ export default function Home() {
               <a href={GUMROAD_URLS.storefront} target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-3xl px-6 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl">Shop on Gumroad</Button>
               </a>
-              <Link href="/label-scanner">
+              <Link href="/work-with-askdogood">
                 <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/50 bg-white text-foreground font-semibold shadow-sm">
-                  Try the Label Scanner
+                  Work With AskDoGood
                 </Button>
               </Link>
               <Link href="/guest-contributors">
@@ -590,12 +598,12 @@ export default function Home() {
                 The Face Behind Ask DoGood
               </p>
               <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
-                Professional guidance, personal story, community-first purpose.
+                Real-life experience, clearer mission, stronger public trust.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
-                Visitors should immediately understand who this brand serves, why the work is credible,
-                and where to go next. This section now reinforces that with a cleaner portrait treatment
-                and clearer positioning.
+                AskDoGood was created from lived experience, not theory. After navigating serious health
+                challenges, career shifts, and life transitions, RoSeé built a framework that treats healing
+                as physical, emotional, practical, and economic work all at once.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/about">
