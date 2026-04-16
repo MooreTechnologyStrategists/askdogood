@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { blogPosts } from '@/content/blogData';
+import { safeBlogPosts } from '@/content/blogData';
 
 export default function BlogRSS() {
   useEffect(() => {
@@ -47,7 +47,7 @@ function generateRSS(): string {
   const now = new Date().toUTCString();
   
   // Sort posts by date descending and take the most recent 100
-  const sortedPosts = [...blogPosts].sort((a, b) => {
+  const sortedPosts = [...safeBlogPosts].sort((a, b) => {
     const dateA = new Date(a.date || '2023-01-01');
     const dateB = new Date(b.date || '2023-01-01');
     return dateB.getTime() - dateA.getTime();

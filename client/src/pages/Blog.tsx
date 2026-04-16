@@ -11,13 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import {
-  ArrowRight,
-  Sparkles,
   Search,
-  Bookmark,
-  Flame,
-  BookOpen,
-  Rss,
 } from "lucide-react";
 
 import { safeBlogPosts } from "@/content/blogData";
@@ -116,28 +110,23 @@ export default function Blog() {
         <div className="container relative py-14 md:py-20">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* Left */}
-            <div className="space-y-6 relative">
-              {/* Floating decorative emojis */}
-              <div className="absolute -top-10 -left-6 text-4xl animate-float">📖</div>
-              <div className="absolute top-20 -right-8 text-3xl animate-float-slow">✨</div>
-              
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background/70 px-4 py-2 text-sm text-muted-foreground shadow-cartoon">
-                <Sparkles className="h-4 w-4 text-primary" />
-                The Ask DoGood Blog 🌟
+            <div className="space-y-6">
+              <div className="inline-flex items-center rounded-full border bg-background/80 px-4 py-2 text-sm font-medium text-muted-foreground">
+                Ask DoGood Journal
               </div>
 
               <h1
                 className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
-                Real healing. Real structure.
-                <span className="block text-primary">Real-life growth.</span>
+                Wellness guidance with structure.
+                <span className="block text-primary">Built from lived experience.</span>
               </h1>
 
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                This isn't "just post and pray." It's a library of wellness,
-                mindset, and recovery guidance — written with compassion, strategy,
-                and receipts. Pick a pillar, search a topic, and start where you are.
+                A growing library of thyroid health, meal prep, recovery, mindset,
+                and self-advocacy content. Search by topic, browse by tag, and use
+                the archive as a working resource rather than a stream of disposable posts.
               </p>
 
               {/* Search */}
@@ -153,21 +142,19 @@ export default function Blog() {
                 </div>
 
                 <Link href="/journey">
-                  <Button className="gap-2 shadow-sm hover:shadow-md transition-shadow">
-                    Start With My Journey <ArrowRight className="h-4 w-4" />
+                  <Button className="shadow-sm hover:shadow-md transition-shadow">
+                    Read the Journey
                   </Button>
                 </Link>
                 
                 <Link href="/rss">
-                  <Button variant="outline" className="gap-2">
-                    <Rss className="h-4 w-4" />
+                  <Button variant="outline">
                     RSS Feed
                   </Button>
                 </Link>
 
                 <Link href="/guest-contributors">
-                  <Button variant="outline" className="gap-2">
-                    <BookOpen className="h-4 w-4" />
+                  <Button variant="outline">
                     Pitch a Guest Post
                   </Button>
                 </Link>
@@ -194,7 +181,7 @@ export default function Blog() {
               </div>
 
               <div className="text-sm text-muted-foreground">
-                Tip: Use the search box when you're in "I don't even know what I need" mode.
+                Start with a topic, then narrow the archive by tag.
               </div>
             </div>
 
@@ -214,9 +201,8 @@ export default function Blog() {
                   <div className="absolute -top-16 -right-20 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
                 </div>
 
-                <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                  <Bookmark className="h-4 w-4 text-primary" />
-                  Start with what applies today — save the rest for later.
+                <div className="mt-4 text-center text-xs text-muted-foreground">
+                  A practical archive for health, healing, and personal structure.
                 </div>
               </div>
             </div>
@@ -241,16 +227,15 @@ export default function Blog() {
                   className="text-2xl md:text-3xl font-bold"
                   style={{ fontFamily: "var(--font-serif)" }}
                 >
-                  Featured reads 🔥
+                  Featured Articles
                 </h2>
                 <p className="text-muted-foreground mt-1">
-                  Strong starters if you're overwhelmed. 💪
+                  Editor-selected starting points across the archive.
                 </p>
               </div>
 
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-primary/10 px-3 py-2 rounded-full shadow-cartoon animate-pulse">
-                <Flame className="h-4 w-4 text-primary" />
-                Curated ⭐
+              <div className="inline-flex items-center text-sm text-muted-foreground bg-primary/10 px-3 py-2 rounded-full">
+                Curated selection
               </div>
             </div>
 
@@ -258,7 +243,7 @@ export default function Blog() {
               {featured.map((post) => (
                 <Card
                   key={post.id}
-                  className="hover:shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 overflow-hidden hover-wiggle"
+                  className="hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-1 overflow-hidden"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
@@ -289,8 +274,8 @@ export default function Blog() {
                     </div>
 
                     <Link href={`/blog/${post.id}`}>
-                      <Button className="w-full gap-2 border border-border/70 bg-background/60">
-                        Read now <ArrowRight className="h-4 w-4" />
+                      <Button className="w-full border border-border/70 bg-background/60">
+                        Read article
                       </Button>
                     </Link>
                   </CardContent>
@@ -358,8 +343,8 @@ export default function Blog() {
                   </div>
 
                   <Link href={`/blog/${post.id}`}>
-                    <Button className="w-full gap-2 shadow-sm hover:shadow-md transition-shadow">
-                      Read post <BookOpen className="h-4 w-4" />
+                    <Button className="w-full shadow-sm hover:shadow-md transition-shadow">
+                      Read article
                     </Button>
                   </Link>
                 </CardContent>

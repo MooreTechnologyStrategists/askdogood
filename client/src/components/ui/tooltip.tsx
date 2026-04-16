@@ -1,20 +1,29 @@
-// client/src/components/ui/tooltip.tsx
 import * as React from "react";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
-type Props = { children: React.ReactNode };
+import { cn } from "@/lib/utils";
 
-export function TooltipProvider({ children }: Props) {
-  return <>{children}</>;
-}
+const TooltipProvider = TooltipPrimitive.Provider;
+const Tooltip = TooltipPrimitive.Root;
+const TooltipTrigger = TooltipPrimitive.Trigger;
 
-export function Tooltip({ children }: Props) {
-  return <>{children}</>;
-}
+const TooltipContent = React.forwardRef<
+  React.ElementRef<typeof TooltipPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
+>(({ className, sideOffset = 4, ...props }, ref) => (
+  <TooltipPrimitive.Portal>
+    <TooltipPrimitive.Content
+      ref={ref}
+      sideOffset={sideOffset}
+      className={cn(
+        "z-50 overflow-hidden rounded-md bg-primary px-3 py-1.5 text-xs text-primary-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+        className
+      )}
+      {...props}
+    />
+  </TooltipPrimitive.Portal>
+));
 
-export function TooltipTrigger({ children }: Props) {
-  return <>{children}</>;
-}
+TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 
-export function TooltipContent({ children }: Props) {
-  return <>{children}</>;
-}
+export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger };

@@ -23,7 +23,7 @@ const QUOTES = [
 // Dynamic focus based on day of week
 const getDailyFocus = () => {
   const day = new Date().getDay();
-  const dayFocus = {
+  const dayFocus: Record<number, { title: string; description: string }> = {
     0: { // Sunday
       title: "Planning & Intention-Setting",
       description: "Set 2-3 simple goals for the week. Prep ingredients, meal plan, and decide what wellness wins you're claiming this week.",

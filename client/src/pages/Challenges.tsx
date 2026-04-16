@@ -9,6 +9,19 @@ import ShareButton from "@/components/ShareButton";
 import { toast } from "sonner";
 import { useState } from "react";
 
+type Challenge = {
+  id: number;
+  title: string;
+  description: string;
+  pointsReward: number;
+  type: string;
+};
+
+type ChallengeCompletion = {
+  challengeId: number;
+  completedAt: string | Date;
+};
+
 export default function Challenges() {
   const { user } = useUser();
   const { data: challenges, isLoading: challengesLoading, error: challengesError } = trpc.challenges?.getActive?.useQuery() ?? { data: undefined, isLoading: false, error: null };
@@ -17,11 +30,11 @@ export default function Challenges() {
   const [selectedType, setSelectedType] = useState<string>("all");
 
   const completeMutation = trpc.challenges?.complete?.useMutation({
-    onSuccess: (data) => {
+    onSuccess: (data: any) => {
       toast.success(`Challenge completed! You earned ${data.pointsEarned} points! 🎉`);
       window.location.reload();
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || "Failed to complete challenge. Please try again.");
     },
   }) ?? { mutate: () => {}, isPending: false };
@@ -103,17 +116,22 @@ export default function Challenges() {
     );
   }
 
-  const completedChallengeIds = new Set(completions?.map((c) => c.challengeId) || []);
+  const completedChallengeIds = new Set(
+    ((completions as ChallengeCompletion[] | undefined) ?? []).map(
+      (c: ChallengeCompletion) => c.challengeId
+    )
+  );
 
-  const filteredChallenges = challenges?.filter(
-    (challenge) => selectedType === "all" || challenge.type === selectedType
+  const filteredChallenges = (challenges as Challenge[] | undefined)?.filter(
+    (challenge: Challenge) =>
+      selectedType === "all" || challenge.type === selectedType
   );
 
   const availableChallenges = filteredChallenges?.filter(
-    (c) => !completedChallengeIds.has(c.id)
+    (c: Challenge) => !completedChallengeIds.has(c.id)
   );
 
-  const completedChallenges = filteredChallenges?.filter((c) =>
+  const completedChallenges = filteredChallenges?.filter((c: Challenge) =>
     completedChallengeIds.has(c.id)
   );
 
@@ -215,7 +233,7 @@ export default function Challenges() {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Available Challenges</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {availableChallenges.map((challenge) => (
+              {availableChallenges.map((challenge: Challenge) => (
                 <Card key={challenge.id} className="flex flex-col">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
@@ -252,8 +270,10 @@ export default function Challenges() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Completed Challenges</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {completedChallenges.map((challenge) => {
-                const completion = completions?.find((c) => c.challengeId === challenge.id);
+              {completedChallenges.map((challenge: Challenge) => {
+                const completion = (
+                  (completions as ChallengeCompletion[] | undefined) ?? []
+                ).find((c: ChallengeCompletion) => c.challengeId === challenge.id);
                 return (
                   <Card key={challenge.id} className="opacity-75">
                     <CardHeader>

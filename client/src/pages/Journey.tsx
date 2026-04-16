@@ -1,10 +1,13 @@
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, GraduationCap, Shield, Heart, Rocket } from "lucide-react";
 
 export default function Journey() {
   const phases = [
     {
-      phase: "Phase 1: Foundation",
+      phase: "Phase 1: Foundation & Fracture",
       years: "1997–2004",
       title: "Building the Base",
       description:
@@ -111,8 +114,66 @@ export default function Journey() {
     },
   ];
 
+  const platformSnapshot = [
+    {
+      label: "AskDoGood",
+      title: "Wellness education platform",
+      summary:
+        "A content and product ecosystem built around thyroid health, structured healing, practical food systems, and self-advocacy.",
+      currentWork:
+        "Expanding evergreen articles, digital guides, lead magnets, and commerce pathways that convert trust into clear offers.",
+    },
+    {
+      label: "Technical Leadership",
+      title: "Security and cloud execution",
+      summary:
+        "Enterprise work focused on Azure security, compliance, identity, threat modeling, and high-trust delivery across complex environments.",
+      currentWork:
+        "Deepening security architecture depth while pairing hands-on engineering with stronger platform storytelling.",
+    },
+    {
+      label: "Education",
+      title: "Teaching across multiple audiences",
+      summary:
+        "Instruction through PG Parks & Planning and TheDopeCloudTeacher, translating experience into practical lessons people can use.",
+      currentWork:
+        "Developing coursework and publishable educational material that serve both technical and wellness audiences.",
+    },
+    {
+      label: "Writing",
+      title: "Personal story with business intent",
+      summary:
+        "Long-form writing that connects lived experience, health advocacy, reinvention, and disciplined rebuilding.",
+      currentWork:
+        "Advancing Starting From Scratch in the Basement while sharpening the founder narrative behind AskDoGood.",
+    },
+  ];
+
+  const currentPriorities = [
+    {
+      title: "Health systems",
+      detail:
+        "Protect energy, maintain thyroid-supportive routines, and keep healing practical enough to survive real life.",
+    },
+    {
+      title: "Brand authority",
+      detail:
+        "Turn AskDoGood into a trusted destination through cleaner positioning, stronger products, and disciplined publishing.",
+    },
+    {
+      title: "Career depth",
+      detail:
+        "Continue advancing in cloud security and compliance while keeping the work aligned with long-term independence.",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="My Journey"
+        description="A structured look at RoSee Murphy's path across technology, military service, health advocacy, teaching, and the growth of AskDoGood."
+        url="/journey"
+      />
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <div
@@ -128,8 +189,45 @@ export default function Journey() {
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">My Journey</h1>
             <p className="text-xl md:text-2xl text-white/90">
-              A timeline of resilience, reinvention, healing, and building a legacy on purpose.
+              A record of technical growth, service, health advocacy, reinvention, and deliberate platform building.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Snapshot */}
+      <section className="py-20 border-b bg-background">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+              Platform Snapshot
+            </p>
+            <h2 className="text-4xl font-bold mb-4">What I am building now</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              This page is more than a personal timeline. It is also the operating context behind the work: wellness education, technical credibility, teaching, and long-form writing built to last.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {platformSnapshot.map((item) => (
+              <Card key={item.title} className="border-border/70 shadow-sm">
+                <CardContent className="pt-6 space-y-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    {item.label}
+                  </p>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.summary}</p>
+                  </div>
+                  <div className="border-t pt-4">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                      Current focus
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.currentWork}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -140,7 +238,7 @@ export default function Journey() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Key Milestones</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Not a highlight reel — a real-life rebuild with receipts.
+              A concise view of the credentials, turning points, and commitments behind the work.
             </p>
           </div>
 
@@ -182,7 +280,7 @@ export default function Journey() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">The Timeline</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Phases that shaped who I am — and where I'm going next.
+              The major phases that shaped the perspective, discipline, and mission behind the platform.
             </p>
           </div>
 
@@ -290,7 +388,7 @@ export default function Journey() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Career Highlights</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              20+ years building secure, scalable systems across government, finance, and enterprise tech.
+              More than two decades across government, finance, consulting, education, and enterprise technology.
             </p>
           </div>
 
@@ -433,35 +531,35 @@ export default function Journey() {
 
       {/* Current Focus Section */}
       <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">What's Next?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            The plan now: protect the health, elevate the career, build the legacy — and
-            keep the message rooted in positivity and encouragement.
-          </p>
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] opacity-80 mb-4">
+              Current Priorities
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Where the work is headed</h2>
+            <p className="text-xl max-w-2xl opacity-90 leading-relaxed">
+              The next chapter is about disciplined execution: stronger health systems, sharper authority, deeper technical work, and a platform that can compete at a national level.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
-            <div className="space-y-3">
-              <Heart className="h-12 w-12 mx-auto opacity-90" />
-              <h3 className="text-2xl font-bold">Health</h3>
-              <p className="opacity-90">
-                Consistency over chaos — habits that keep me grounded and energized.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <Rocket className="h-12 w-12 mx-auto opacity-90" />
-              <h3 className="text-2xl font-bold">Career</h3>
-              <p className="opacity-90">
-                Keep sharpening Azure security/compliance depth and delivering high-trust systems.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <TrendingUp className="h-12 w-12 mx-auto opacity-90" />
-              <h3 className="text-2xl font-bold">Legacy</h3>
-              <p className="opacity-90">
-                Build AskDoGood and finish "Starting From Scratch in the Basement" with purpose.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl">
+            {currentPriorities.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-6">
+                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                <p className="opacity-90 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-4 mt-10">
+            <Link href="/blog">
+              <Button variant="secondary">Read the journal</Button>
+            </Link>
+            <Link href="/contact">
+              <Button className="border border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
+                Start a conversation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -8,6 +8,22 @@ import { Gift, Star, ShoppingBag, BookOpen, Calendar, Tag } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
 
+type Reward = {
+  id: number;
+  name: string;
+  description: string;
+  pointsCost: number;
+  category: string;
+  stock: number | null;
+};
+
+type RewardRedemption = {
+  id: number;
+  rewardId: number;
+  redeemedAt: string | Date;
+  status: string;
+};
+
 export default function Rewards() {
   const { user } = useUser();
   const { data: rewards } = trpc.rewards.getAll.useQuery();
@@ -16,12 +32,12 @@ export default function Rewards() {
   
   // Get reward details for redemptions
   const getRewardName = (rewardId: number) => {
-    const reward = rewards?.find(r => r.id === rewardId);
+    const reward = (rewards as Reward[] | undefined)?.find((r: Reward) => r.id === rewardId);
     return reward?.name || 'Unknown Reward';
   };
   
   const getRewardCost = (rewardId: number) => {
-    const reward = rewards?.find(r => r.id === rewardId);
+    const reward = (rewards as Reward[] | undefined)?.find((r: Reward) => r.id === rewardId);
     return reward?.pointsCost || 0;
   };
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -31,7 +47,7 @@ export default function Rewards() {
       toast.success("Reward redeemed successfully! Check your email for details.");
       window.location.reload();
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || "Failed to redeem reward. Please try again.");
     },
   });
@@ -63,8 +79,8 @@ export default function Rewards() {
     { value: "discount", label: "Discounts", icon: Tag },
   ];
 
-  const filteredRewards = rewards?.filter(
-    (reward) => selectedCategory === "all" || reward.category === selectedCategory
+  const filteredRewards = (rewards as Reward[] | undefined)?.filter(
+    (reward: Reward) => selectedCategory === "all" || reward.category === selectedCategory
   );
 
   const canAfford = (cost: number) => (pointsBalance?.points || 0) >= cost;
@@ -129,7 +145,7 @@ export default function Rewards() {
 
         {/* Rewards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredRewards?.map((reward) => (
+          {filteredRewards?.map((reward: Reward) => (
             <Card key={reward.id} className="flex flex-col">
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
@@ -185,7 +201,7 @@ export default function Rewards() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {redemptions.map((redemption) => (
+                {((redemptions as RewardRedemption[] | undefined) ?? []).map((redemption: RewardRedemption) => (
                   <div
                     key={redemption.id}
                     className="flex items-center justify-between p-4 border rounded-lg"
