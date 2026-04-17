@@ -17,31 +17,31 @@ const pillars = [
   {
     title: "Nutritional Intelligence",
     description:
-      "Food-first education, symptom-aware meal planning, and practical guidance that helps people eat to heal instead of just eat to survive.",
+      "Food-first education, symptom-aware meal planning, and practical nutrition guidance that helps people use food to support healing, energy, and daily stability.",
     icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
   },
   {
     title: "Physical Activation",
     description:
-      "Movement as medicine through walking, routines, recovery-minded exercise, and energy-building habits that feel sustainable in real life.",
+      "Movement as medicine through walking, recovery-minded exercise, and realistic routines that rebuild strength, energy, and consistency over time.",
     icon: <HeartPulse className="h-5 w-5 text-primary" />,
   },
   {
     title: "Mental And Spiritual Alignment",
     description:
-      "Stress reduction, mindset support, faith-friendly grounding, and emotional reset tools for people living with pressure, grief, diagnosis, or burnout.",
+      "Stress reduction, mindset support, faith-friendly grounding, and emotional reset tools for people navigating pressure, grief, diagnosis, or burnout.",
     icon: <Sparkles className="h-5 w-5 text-primary" />,
   },
   {
     title: "Economic Stability",
     description:
-      "The differentiator: AskDoGood connects healing with skill-building, career direction, and income pathways through education and technology.",
+      "AskDoGood connects healing with skill-building, career direction, and income pathways so better health can be paired with stronger financial footing.",
     icon: <TrendingUp className="h-5 w-5 text-primary" />,
   },
   {
     title: "Environmental And Community Reset",
     description:
-      "Home routines, family systems, neighborhood support, and community-centered structures that make healthier choices easier to keep.",
+      "Home routines, family systems, and community-centered structures that make healthier choices easier to start, maintain, and protect.",
     icon: <Users className="h-5 w-5 text-primary" />,
   },
 ] as const;
@@ -176,11 +176,11 @@ export default function WorkWithAskDoGood() {
             <div className="grid gap-5 lg:grid-cols-5">
               {pillars.map((pillar) => (
                 <Card key={pillar.title} className="h-full rounded-[1.75rem] border border-border/70 bg-background/90 shadow-sm">
-                  <CardHeader>
+                  <CardHeader className="items-center text-center">
                     <div className="mb-3 inline-flex w-fit rounded-2xl bg-primary/10 p-3">{pillar.icon}</div>
                     <CardTitle className="text-xl leading-tight">{pillar.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="text-center">
                     <CardDescription className="text-sm leading-7 text-muted-foreground">
                       {pillar.description}
                     </CardDescription>
