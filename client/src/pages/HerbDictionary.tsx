@@ -11,6 +11,7 @@ interface Herb {
   latin: string;
   letter: string;
   emoji: string;
+  entryType?: "Herb" | "Essential Oil" | "Vitamin" | "Mineral";
   photo: string;
   origin: string[];
   categories: string[];
@@ -555,7 +556,7 @@ const herbs: Herb[] = [
     latin: "Curcuma longa",
     letter: "T",
     emoji: "🟡",
-    photo: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&h=250&fit=crop",
+    photo: "/recipe-turmeric-rice.png",
     origin: ["South Asia (India, Sri Lanka)", "Southeast Asia", "Tropical regions worldwide"],
     categories: ["Anti-Inflammatory", "Antioxidant", "Gut Health", "Brain Health", "Liver Support"],
     benefits: [
@@ -628,23 +629,298 @@ const herbs: Herb[] = [
       "Blood thinners — antiplatelet/anticoagulant activity. Blood pressure medications — mild interaction. Diuretics. Sedatives — mild CNS activity at higher doses. Lithium — may reduce clearance.",
     warnLevel: "caution",
   },
+  {
+    name: "Ginger",
+    latin: "Zingiber officinale",
+    letter: "G",
+    emoji: "🫚",
+    photo: "https://images.unsplash.com/photo-1573414405995-1d3b71118d5a?w=400&h=250&fit=crop",
+    origin: ["South Asia", "Southeast Asia", "Widely cultivated in tropical climates"],
+    categories: ["Anti-Inflammatory", "Digestion", "Gut Health", "Circulation"],
+    benefits: [
+      "Reduces nausea, motion sickness, and pregnancy-related morning sickness",
+      "Supports digestion and gastric emptying",
+      "Helps reduce inflammatory pain and soreness",
+      "May improve circulation and mild menstrual cramping",
+      "Provides antioxidant support during immune stress",
+    ],
+    compounds: "Gingerols, shogaols, zingerone, volatile oils",
+    howToUse:
+      "Fresh tea, grated into meals, capsules, or tincture. Ginger tea or food-based use is a strong starting point for digestion and daily inflammation support.",
+    cautions:
+      "Can aggravate reflux in some people. Higher doses may thin the blood slightly and can feel warming if you are already overheated or prone to heartburn.",
+    interactions:
+      "Blood thinners and antiplatelet medications — additive bleeding risk. Diabetes medications — may mildly lower blood sugar further. Blood pressure medications — possible additive effect.",
+    thyroidNote:
+      "Generally supportive for thyroid patients dealing with sluggish digestion, inflammation, or feeling cold. Monitor tolerance if reflux is part of your symptom pattern.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Moringa",
+    latin: "Moringa oleifera",
+    letter: "M",
+    emoji: "🌿",
+    photo: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=400&h=250&fit=crop",
+    origin: ["India", "East Africa", "Tropical and subtropical regions"],
+    categories: ["Nutrition", "Energy", "Antioxidant", "Blood Sugar"],
+    benefits: [
+      "Dense source of plant nutrients and antioxidants",
+      "Supports steady energy and recovery when overall intake is low",
+      "May help with blood sugar regulation",
+      "Provides polyphenols that support inflammation balance",
+      "Useful as a food-forward supplement for nutrient repletion",
+    ],
+    compounds: "Quercetin, chlorogenic acid, carotenoids, vitamin C, minerals",
+    howToUse:
+      "Powder in smoothies, soups, or capsules. Start with small amounts because the taste is strong and the fiber can be stimulating at first.",
+    cautions:
+      "Leaf is generally well tolerated, but concentrated products can be too much for sensitive digestion. Avoid root and bark preparations unless working with a qualified practitioner.",
+    interactions:
+      "Blood sugar medications — additive glucose lowering. Blood pressure medications — possible additive effect. Thyroid medications — separate by a few hours if using concentrated powders regularly.",
+    thyroidNote:
+      "Food-like and generally helpful when low energy overlaps with poor nutrition. Keep it separate from thyroid medication until you know how your body responds.",
+    warnLevel: "safe",
+  },
+  {
+    name: "Nettle",
+    latin: "Urtica dioica",
+    letter: "N",
+    emoji: "🌱",
+    photo: "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?w=400&h=250&fit=crop",
+    origin: ["Europe", "North America", "Asia", "Temperate climates worldwide"],
+    categories: ["Mineral Support", "Allergy Support", "Energy", "Kidney Support"],
+    benefits: [
+      "Provides iron, magnesium, calcium, and trace minerals in food form",
+      "May reduce seasonal allergy symptoms",
+      "Supports energy when mineral intake is low",
+      "Helps fluid balance and gentle kidney support",
+      "Traditionally used to strengthen hair and nails over time",
+    ],
+    compounds: "Chlorophyll, silica, carotenoids, minerals, flavonoids",
+    howToUse:
+      "Tea, infusion, capsules, or cooked greens. Long infusions are especially useful when you want food-like mineral support instead of a stimulant effect.",
+    cautions:
+      "May increase urination. Use care with severe kidney disease or if dehydration is already an issue. Fresh plant can sting before processing.",
+    interactions:
+      "Diuretics — additive effect. Blood pressure medications — may enhance lowering. Blood sugar medications — possible mild additive effect. Lithium — monitor closely.",
+    thyroidNote:
+      "Often a good support herb when thyroid issues overlap with fatigue and low mineral intake. It is supportive, but not a substitute for targeted iron or thyroid treatment when needed.",
+    warnLevel: "safe",
+  },
+  {
+    name: "Lavender Essential Oil",
+    latin: "Lavandula angustifolia",
+    letter: "L",
+    emoji: "💜",
+    entryType: "Essential Oil",
+    photo: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=250&fit=crop",
+    origin: ["Mediterranean", "France", "Widely distilled worldwide"],
+    categories: ["Sleep", "Anxiety", "Nervous System", "Skin"],
+    benefits: [
+      "Promotes calm and improves sleep quality",
+      "Can reduce mild anxiety and tension when inhaled",
+      "Supports topical skin soothing when properly diluted",
+      "Useful for bedtime routines, headaches, and stress decompression",
+    ],
+    compounds: "Linalool, linalyl acetate, terpinen-4-ol",
+    howToUse:
+      "Diffuse, inhale from hands, or dilute in a carrier oil for topical use. A few drops in a diffuser or on a pillow is often enough.",
+    cautions:
+      "Do not ingest casually. Undiluted use can irritate skin. Keep away from eyes and use carefully around very young children and pets.",
+    interactions:
+      "Sedatives, sleep medications, and alcohol — may add to drowsiness. Topical use may irritate highly sensitive skin or eczema-prone areas if not diluted.",
+    thyroidNote:
+      "Helpful as supportive nervous-system care when thyroid symptoms disturb sleep or increase anxiety. It supports stress regulation but does not replace thyroid treatment.",
+    warnLevel: "safe",
+  },
+  {
+    name: "Peppermint Essential Oil",
+    latin: "Mentha x piperita",
+    letter: "P",
+    emoji: "🌿",
+    entryType: "Essential Oil",
+    photo: "https://images.unsplash.com/photo-1628557044797-f21a177c37ec?w=400&h=250&fit=crop",
+    origin: ["Europe", "North America", "Widely cultivated worldwide"],
+    categories: ["Digestion", "Headache Support", "Focus", "Respiratory"],
+    benefits: [
+      "Can ease tension headaches when diluted and applied topically",
+      "Supports digestive comfort and nausea relief through aroma or diluted topical use",
+      "May improve alertness and mental clarity",
+      "Can help create an open breathing sensation",
+    ],
+    compounds: "Menthol, menthone, menthyl acetate",
+    howToUse:
+      "Dilute in carrier oil for temples or abdomen, or diffuse briefly for aroma support. Use lightly because it is potent.",
+    cautions:
+      "Can trigger reflux, feel too intense on sensitive skin, and should be kept away from infants' faces. Never apply undiluted near eyes.",
+    interactions:
+      "Antacids and reflux medications — may worsen reflux if overused. Sensitive skin treatments — may irritate. Certain breathing conditions may react to strong menthol exposure.",
+    thyroidNote:
+      "Useful for fatigue, headaches, and mental fog, but not ideal if your thyroid symptom pattern includes reflux, palpitations, or feeling overstimulated.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Tea Tree Essential Oil",
+    latin: "Melaleuca alternifolia",
+    letter: "T",
+    emoji: "🌲",
+    entryType: "Essential Oil",
+    photo: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=250&fit=crop",
+    origin: ["Australia", "Commercially distilled worldwide"],
+    categories: ["Skin", "Antimicrobial", "Scalp Care"],
+    benefits: [
+      "Supports topical care for acne-prone skin",
+      "May reduce fungal burden in minor skin or scalp issues",
+      "Useful for scalp hygiene and occasional blemish care",
+      "Provides strong cleansing support in diluted topical blends",
+    ],
+    compounds: "Terpinen-4-ol, gamma-terpinene, alpha-terpinene",
+    howToUse:
+      "Dilute in carrier oil, shampoo, or a spot-treatment blend. Patch test before broader use.",
+    cautions:
+      "For external use only. Toxic if swallowed. Strong enough to irritate broken skin or highly sensitive areas if not diluted.",
+    interactions:
+      "Topical acne acids, retinoids, benzoyl peroxide, or eczema-prone skin — can amplify irritation. Avoid use on pets unless directed by a veterinarian.",
+    thyroidNote:
+      "No direct thyroid interaction is known. It is most relevant for people managing skin or scalp issues that worsened during hormonal or metabolic stress.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Vitamin B12",
+    latin: "Cobalamin",
+    letter: "V",
+    emoji: "🔴",
+    entryType: "Vitamin",
+    photo: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=250&fit=crop",
+    origin: ["Animal foods", "Fortified foods", "Supplement forms such as methylcobalamin and cyanocobalamin"],
+    categories: ["Energy", "Nervous System", "Brain Health", "Nutrient Repletion"],
+    benefits: [
+      "Supports red blood cell production and oxygen delivery",
+      "Critical for nerve health and neurological function",
+      "Helps address fatigue related to deficiency",
+      "Important for mood, cognition, and methylation support",
+    ],
+    compounds: "Methylcobalamin, adenosylcobalamin, cyanocobalamin, hydroxocobalamin",
+    howToUse:
+      "Use food, oral supplements, or injections depending on deficiency severity and absorption status. Lab-guided dosing is best if symptoms are significant.",
+    cautions:
+      "Usually very safe, but a normal serum level does not always rule out functional deficiency. Investigate low stomach acid, pernicious anemia, or absorption problems if symptoms persist.",
+    interactions:
+      "Metformin and acid-suppressing medications can reduce absorption over time. Nitrous oxide exposure can inactivate B12. Certain antibiotics may affect lab interpretation.",
+    thyroidNote:
+      "B12 deficiency commonly overlaps with autoimmune thyroid disease and can mimic hypothyroid fatigue, neuropathy, and brain fog. It is worth checking when symptoms feel disproportionate.",
+    warnLevel: "safe",
+  },
+  {
+    name: "Magnesium",
+    latin: "Magnesium glycinate / citrate / malate",
+    letter: "M",
+    emoji: "⚪",
+    entryType: "Mineral",
+    photo: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop",
+    origin: ["Leafy greens", "Legumes", "Seeds", "Supplemental mineral salts"],
+    categories: ["Sleep", "Stress & Adrenal", "Muscle Recovery", "Nervous System"],
+    benefits: [
+      "Supports sleep quality and nervous-system regulation",
+      "Helps with muscle cramps, tension, and constipation depending on form",
+      "Useful for stress resilience and recovery",
+      "Participates in hundreds of enzymatic reactions tied to energy production",
+    ],
+    compounds: "Magnesium glycinate, citrate, malate, threonate, oxide",
+    howToUse:
+      "Choose form based on goal: glycinate for calm and sleep, citrate for constipation, malate for muscles and energy. Start low and increase slowly.",
+    cautions:
+      "Higher doses can loosen stools. Use care with significant kidney disease because excess magnesium may accumulate.",
+    interactions:
+      "Levothyroxine, iron, calcium, tetracycline antibiotics, and bisphosphonates — separate by at least 4 hours because magnesium can reduce absorption.",
+    thyroidNote:
+      "Very useful for thyroid patients dealing with poor sleep, constipation, tension, and stress. Just keep it well separated from thyroid medication.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Selenium",
+    latin: "Selenomethionine",
+    letter: "S",
+    emoji: "🟠",
+    entryType: "Mineral",
+    photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+    origin: ["Brazil nuts", "Seafood", "Eggs", "Supplement forms"],
+    categories: ["Thyroid Support", "Antioxidant", "Nutrient Repletion"],
+    benefits: [
+      "Supports thyroid hormone metabolism and antioxidant protection",
+      "May help reduce thyroid antibody activity in some Hashimoto's cases",
+      "Protects tissues from oxidative stress",
+      "Supports fertility and immune resilience",
+    ],
+    compounds: "Selenomethionine, selenium yeast, selenite",
+    howToUse:
+      "Food-first is ideal when possible. If supplementing, use modest doses and avoid stacking multiple selenium products without checking totals.",
+    cautions:
+      "Too much selenium is a real problem and can cause hair loss, nail changes, GI upset, and fatigue. More is not better.",
+    interactions:
+      "Chemotherapy plans and high-dose antioxidant protocols should be discussed with a clinician. Multiple multivitamins or thyroid blends can unintentionally double up selenium.",
+    thyroidNote:
+      "Relevant for thyroid health, especially Hashimoto's, but it needs measured dosing. This is a support mineral, not something to megadose.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Zinc",
+    latin: "Zinc picolinate / citrate / gluconate",
+    letter: "Z",
+    emoji: "🔹",
+    entryType: "Mineral",
+    photo: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=250&fit=crop",
+    origin: ["Shellfish", "Meat", "Pumpkin seeds", "Supplement forms"],
+    categories: ["Immune", "Skin", "Hormonal Balance", "Nutrient Repletion"],
+    benefits: [
+      "Supports immune defense and wound healing",
+      "Important for thyroid hormone conversion and receptor function",
+      "Helps skin repair and barrier support",
+      "Can support taste, smell, and recovery when deficient",
+    ],
+    compounds: "Zinc picolinate, zinc citrate, zinc gluconate, zinc carnosine",
+    howToUse:
+      "Take with food to avoid nausea. Daily use should stay balanced and not ignore copper intake if taken long term.",
+    cautions:
+      "High doses can cause nausea and long-term overuse can deplete copper. Lozenges and supplements are useful, but not as unlimited daily insurance.",
+    interactions:
+      "Thyroid medication, iron, calcium, magnesium, and antibiotics such as tetracyclines and quinolones — separate by several hours to protect absorption.",
+    thyroidNote:
+      "Useful for thyroid support when deficiency is present, but timing matters because it can interfere with levothyroxine absorption.",
+    warnLevel: "caution",
+  },
+  {
+    name: "Iron",
+    latin: "Ferrous bisglycinate / ferrous sulfate",
+    letter: "I",
+    emoji: "🩸",
+    entryType: "Mineral",
+    photo: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=250&fit=crop",
+    origin: ["Red meat", "Legumes", "Leafy greens", "Supplement forms"],
+    categories: ["Energy", "Mineral Support", "Hair Support", "Nutrient Repletion"],
+    benefits: [
+      "Supports oxygen transport and energy production",
+      "Can improve fatigue, hair shedding, and exercise tolerance when deficiency is present",
+      "Important for menstruating women and anyone with low ferritin",
+      "Works alongside thyroid care because low iron can worsen hypothyroid symptoms",
+    ],
+    compounds: "Heme iron, ferrous bisglycinate, ferrous sulfate, ferric citrate",
+    howToUse:
+      "Use based on labs, especially ferritin, hemoglobin, and iron saturation. Pair with vitamin C when appropriate and monitor response over time.",
+    cautions:
+      "Do not supplement blindly if you have not confirmed need. Iron overload is dangerous. Constipation and nausea are common with some forms.",
+    interactions:
+      "Levothyroxine — major absorption interference; separate by at least 4 hours. Calcium, magnesium, zinc, coffee, tea, and some medications reduce iron absorption.",
+    thyroidNote:
+      "Low ferritin can make thyroid recovery feel incomplete. If you are still exhausted, losing hair, or cold despite treatment, iron status is worth checking carefully.",
+    warnLevel: "warning",
+  },
 ];
 
 // ─── Category filters ─────────────────────────────────────────────────────
-const ALL_CATEGORIES = [
-  "All",
-  "Thyroid Support",
-  "Stress & Adrenal",
-  "Adaptogen",
-  "Anti-Inflammatory",
-  "Gut Health",
-  "Sleep",
-  "Anxiety",
-  "Immune",
-  "Liver Support",
-  "Hormonal Balance",
-  "Mental Health",
-];
+const ALL_CATEGORIES = ["All", ...Array.from(new Set(herbs.flatMap((entry) => entry.categories))).sort()];
+
+const ENTRY_TYPES = ["All", "Herb", "Essential Oil", "Vitamin", "Mineral"] as const;
 
 const LETTERS = ["All", ...Array.from(new Set(herbs.map((h) => h.letter))).sort()];
 
@@ -653,21 +929,26 @@ export default function HerbDictionary() {
   const [search, setSearch] = useState("");
   const [letter, setLetter] = useState("All");
   const [category, setCategory] = useState("All");
+  const [entryType, setEntryType] = useState<(typeof ENTRY_TYPES)[number]>("All");
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     return herbs.filter((h) => {
+      const normalizedEntryType = h.entryType ?? "Herb";
       const matchesSearch =
         !search ||
         h.name.toLowerCase().includes(search.toLowerCase()) ||
+        h.latin.toLowerCase().includes(search.toLowerCase()) ||
         h.benefits.some((b) => b.toLowerCase().includes(search.toLowerCase())) ||
-        h.origin.some((o) => o.toLowerCase().includes(search.toLowerCase()));
+        h.origin.some((o) => o.toLowerCase().includes(search.toLowerCase())) ||
+        h.categories.some((c) => c.toLowerCase().includes(search.toLowerCase()));
       const matchesLetter = letter === "All" || h.letter === letter;
       const matchesCategory =
         category === "All" || h.categories.includes(category);
-      return matchesSearch && matchesLetter && matchesCategory;
+      const matchesEntryType = entryType === "All" || normalizedEntryType === entryType;
+      return matchesSearch && matchesLetter && matchesCategory && matchesEntryType;
     });
-  }, [search, letter, category]);
+  }, [search, letter, category, entryType]);
 
   const warnColors = {
     safe: "bg-green-50 border-green-200 text-green-800",
@@ -684,9 +965,9 @@ export default function HerbDictionary() {
   return (
     <>
       <SEO
-        title="A-Z Herb Dictionary — Benefits, Interactions & Thyroid Safety"
-        description="Comprehensive guide to medicinal herbs: where they grow, proven benefits, active compounds, drug interactions, and thyroid-specific safety notes. Empowering you to heal with nature."
-        keywords={["herb dictionary", "medicinal herbs", "natural remedies", "herbal medicine", "ashwagandha", "turmeric", "thyroid herbs", "herb interactions", "holistic health"]}
+        title="A-Z Natural Wellness Reference — Herbs, Oils, Vitamins & Minerals"
+        description="Comprehensive guide to herbs, essential oils, vitamins, and minerals with benefits, cautions, drug interactions, and thyroid-specific safety notes."
+        keywords={["herb dictionary", "essential oils", "vitamins", "minerals", "natural remedies", "ashwagandha", "turmeric", "thyroid support", "holistic health"]}
         url="/herbs"
       />
 
@@ -702,14 +983,14 @@ export default function HerbDictionary() {
             <span className="text-sm font-medium text-primary">Holistic Wellness Library</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4">
-            A–Z Herb <span className="text-primary">Dictionary</span>
+            A–Z Natural Wellness <span className="text-primary">Reference</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
-            Real information about medicinal herbs — where they grow, what they heal, and{" "}
-            <strong>what you need to know before using them</strong>, including thyroid interactions.
+            Real information about herbs, essential oils, vitamins, and minerals, including{" "}
+            <strong>benefits, cautions, and thyroid-aware guidance before you use them</strong>.
           </p>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-            {herbs.length} herbs documented · Updated April 2026
+            {herbs.length} entries documented · Updated April 2026
           </p>
         </div>
       </section>
@@ -736,11 +1017,27 @@ export default function HerbDictionary() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search herbs, benefits, or region..."
+              placeholder="Search herbs, oils, vitamins, minerals, benefits, or region..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
+          </div>
+
+          <div className="flex flex-wrap gap-1.5 justify-center">
+            {ENTRY_TYPES.map((type) => (
+              <button
+                key={type}
+                onClick={() => setEntryType(type)}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  entryType === type
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-primary/10"
+                }`}
+              >
+                {type}
+              </button>
+            ))}
           </div>
 
           {/* A-Z letters */}
@@ -778,7 +1075,7 @@ export default function HerbDictionary() {
           </div>
 
           <p className="text-center text-sm text-muted-foreground">
-            {filtered.length} herb{filtered.length !== 1 ? "s" : ""} found
+            {filtered.length} entr{filtered.length !== 1 ? "ies" : "y"} found
           </p>
         </div>
       </section>
@@ -789,8 +1086,8 @@ export default function HerbDictionary() {
           {filtered.length === 0 ? (
             <div className="text-center py-20 text-muted-foreground">
               <Leaf className="h-12 w-12 mx-auto mb-4 opacity-30" />
-              <p className="text-lg">No herbs match your search.</p>
-              <Button variant="outline" className="mt-4" onClick={() => { setSearch(""); setLetter("All"); setCategory("All"); }}>
+              <p className="text-lg">No entries match your search.</p>
+              <Button variant="outline" className="mt-4" onClick={() => { setSearch(""); setLetter("All"); setCategory("All"); setEntryType("All"); }}>
                 Clear filters
               </Button>
             </div>
@@ -798,6 +1095,7 @@ export default function HerbDictionary() {
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {filtered.map((herb) => {
                 const isOpen = expanded === herb.name;
+                const normalizedEntryType = herb.entryType ?? "Herb";
                 return (
                   <Card
                     key={herb.name}
@@ -819,6 +1117,9 @@ export default function HerbDictionary() {
                       <div className="absolute bottom-3 left-3 right-3">
                         <div className="flex items-end justify-between">
                           <div>
+                            <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/80">
+                              {normalizedEntryType}
+                            </p>
                             <h2 className="text-white font-bold text-lg leading-tight drop-shadow">
                               {herb.emoji} {herb.name}
                             </h2>

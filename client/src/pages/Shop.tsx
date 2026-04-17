@@ -129,13 +129,13 @@ export default function Shop() {
                 This is where knowledge turns into action.
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                Every guide inside AskDoGood was created from real-life experience, research, and application, not theory.
+                Every guide inside AskDoGood was built from real-life experience, research, and lived application, not empty wellness talk.
               </p>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
-                These resources are designed to help you improve your health naturally, understand your body, build sustainable habits, and take control of your lifestyle.
+                These resources are here to help you support your health naturally, understand what your body is telling you, build sustainable habits, and make better daily decisions with confidence.
               </p>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/85">
-                Start simple. Stay consistent. Transform over time.
+                Start where you are. Stay consistent. Let the transformation compound.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href={readyNow[0].checkoutUrl} target="_blank" rel="noopener noreferrer">
@@ -155,9 +155,9 @@ export default function Shop() {
 
             <Card className="border-border/50 bg-background/85 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-xl">Current launch priorities</CardTitle>
+                <CardTitle className="text-xl">Start here</CardTitle>
                 <CardDescription>
-                  The catalog now reflects the live priority order instead of scattered page-level definitions.
+                  These are the core AskDoGood offers for people who want practical structure, stronger health habits, and a clearer next step.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -315,11 +315,11 @@ export default function Shop() {
         <div className="container">
           <div className="mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="mb-4 rounded-full px-4 py-1 uppercase tracking-[0.22em]">
-              Why this change matters
+              Why this storefront works
             </Badge>
-            <h2 className="text-3xl font-bold md:text-4xl">One source of truth is what makes the storefront look serious.</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">Everything is organized so you can find the right next step faster.</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The site had too many duplicated product definitions, promo strings, and URLs living in separate pages. This new structure makes future launches cleaner, reduces checkout drift, and gives the brand a better editorial standard.
+              Whether you need a reset, a guide, a resource, or deeper support, the shop is now built to move you from interest to action without confusion.
             </p>
           </div>
         </div>
@@ -335,7 +335,7 @@ export default function Shop() {
                 </Badge>
                 <h2 className="text-3xl font-bold md:text-4xl">The DoGood Wellness Circle stays visible as the retention offer.</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                  The membership should act as the bridge between one-time products and deeper support. It is now represented as a first-class offer in the catalog instead of getting buried under standalone promo blocks.
+                  If you want ongoing support instead of one-time information, the Wellness Circle is the bridge between a single download and a more consistent transformation process.
                 </p>
               </div>
               <Card className="border-border/50">
