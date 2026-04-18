@@ -298,6 +298,14 @@ export default function Home() {
       href: "/label-scanner",
     },
     {
+      icon: <BookOpen className="h-5 w-5 text-primary" />,
+      title: "Digital Library & Flipbooks",
+      description: "Visual guides that are already live on the site.",
+      content:
+        "Open the AskDoGood digital library to browse flipbooks like Indian Creek Trail and Keep Moving without hunting through the footer.",
+      href: "/keep-moving",
+    },
+    {
       icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
       title: "Work With AskDoGood",
       description: "Programs, workshops, and strategic collaboration.",
@@ -408,6 +416,11 @@ export default function Home() {
                 <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
                   Explore the catalog
                   <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/keep-moving">
+                <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
+                  Browse the digital library
                 </Button>
               </Link>
               <Link href="/work-with-askdogood">

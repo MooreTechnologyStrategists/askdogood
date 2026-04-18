@@ -33,6 +33,7 @@ export default function Header() {
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/stories", label: "Stories", icon: BookOpen },
     { href: "/resources", label: "Resources", icon: Library },
+    { href: "/keep-moving", label: "Digital Library", icon: BookOpen },
     { href: "/herbs", label: "Herbs", icon: Leaf },
     {
       label: "Health Apps",

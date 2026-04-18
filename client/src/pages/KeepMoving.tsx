@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { ArrowRight, Footprints, HeartPulse, Leaf, MapPinned } from "lucide-react";
+import { ArrowRight, Footprints, HeartPulse, MapPinned } from "lucide-react";
+import { featuredWalkResource, walkResources } from "@/content/walks";
 
 const mosaicImages = [
   "/images/personal/rosee-hero-1.jpg",
@@ -31,24 +32,58 @@ const reflections = [
   },
 ];
 
-const flipbooks = [
-  {
-    title: "Indian Creek Trail",
-    eyebrow: "Walk story",
-    description:
-      "A vivid 5.7-mile morning after thyroid surgery recovery: five cities, one trail, and proof that feeling good in your body is still possible.",
-    href: "/flipbooks/indian-creek-trail.html",
-    image: "/images/personal/rosee-hero-1.jpg",
-  },
-  {
-    title: "Keep Moving",
-    eyebrow: "Series cover",
-    description:
-      "The original editorial-style spread that frames this project: movement, public space, healing, and the kind of wealth that starts with being able to breathe and keep going.",
-    href: "/flipbooks/keep-moving.html",
-    image: "/images/personal/professional/rosee-professional-suit.jpg",
-  },
-];
+function RecoveredContentSection() {
+  return (
+    <section className="container pb-18 md:pb-24">
+      <div className="rounded-[2.25rem] border border-border bg-card p-8 shadow-[0_20px_60px_rgba(12,28,24,0.06)] md:p-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary/70">
+          Recovered Content
+        </p>
+        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+          The information and photos are already preserved locally.
+        </h2>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
+          These two flipbooks do not need the original Claude artifact to stay usable. The story copy, stats, and imagery are already stored in the site and can be previewed directly here.
+        </p>
+        <div className="mt-10 grid gap-8 xl:grid-cols-2">
+          {walkResources.map((item) => (
+            <article key={item.slug} className="rounded-[1.75rem] border border-border bg-background p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">{item.title}</p>
+              <h3 className="mt-3 text-3xl font-bold">{item.recoveredHeading}</h3>
+              <p className="mt-3 text-base leading-7 text-muted-foreground">{item.recoveredSummary}</p>
+
+              {item.stats.length > 0 ? (
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {item.stats.map((stat) => (
+                    <div key={`${item.slug}-${stat.label}`} className="rounded-2xl border border-border bg-secondary/35 p-4">
+                      <p className="text-xs uppercase tracking-[0.24em] text-primary/70">{stat.label}</p>
+                      <p className="mt-2 text-3xl font-bold">{stat.value}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+
+              <div className="mt-6 space-y-3">
+                {item.highlights.map((highlight) => (
+                  <p key={highlight} className="rounded-2xl border border-border bg-secondary/20 px-4 py-3 text-sm leading-6 text-muted-foreground">
+                    {highlight}
+                  </p>
+                ))}
+              </div>
+
+              <iframe
+                src={item.href}
+                title={`${item.title} preview`}
+                className="mt-6 h-[540px] w-full rounded-[1.5rem] border border-border bg-white"
+                loading="lazy"
+              />
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function KeepMoving() {
   return (
@@ -127,6 +162,8 @@ export default function KeepMoving() {
         </div>
       </section>
 
+      <RecoveredContentSection />
+
       <section className="container py-18 md:py-24">
         <div className="grid gap-6 md:grid-cols-3">
           {reflections.map((item) => {
@@ -161,51 +198,58 @@ export default function KeepMoving() {
               Each guide is designed to help you take action, not just collect information.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {flipbooks.map((item) => (
-                <a
-                  key={item.title}
-                  href={item.href}
+              {walkResources.map((item) => (
+                <article
+                  key={item.slug}
                   className="group overflow-hidden rounded-[1.75rem] border border-border bg-background shadow-sm transition-transform hover:-translate-y-1"
                 >
-                  <img src={item.image} alt={item.title} className="h-56 w-full object-cover" />
+                  <iframe
+                    src={item.href}
+                    title={`${item.title} card preview`}
+                    className="h-56 w-full border-b border-border bg-white"
+                    loading="lazy"
+                  />
                   <div className="p-5">
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">
                       {item.eyebrow}
                     </p>
                     <h3 className="mt-3 text-2xl font-bold">{item.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.description}</p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                    <a href={item.href} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                       View guide
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </span>
+                    </a>
                   </div>
-                </a>
+                </article>
               ))}
             </div>
           </div>
 
           <div className="space-y-6">
             <article className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm">
-              <img
-                src="/images/personal/food/meal-prep.jpg"
-                alt="Prepared healing food"
-                className="h-64 w-full object-cover"
+              <iframe
+                src={featuredWalkResource.href}
+                title={`${featuredWalkResource.title} feature preview`}
+                className="h-64 w-full bg-white"
+                loading="lazy"
               />
               <div className="p-7">
                 <div className="flex items-center gap-3 text-primary">
-                  <Leaf className="h-5 w-5" />
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em]">Health & Nutrition</p>
+                  <Footprints className="h-5 w-5" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em]">{featuredWalkResource.featureCard.badge}</p>
                 </div>
-                <h3 className="mt-4 text-3xl font-bold">Practical food support belongs in the library too.</h3>
+                <h3 className="mt-4 text-3xl font-bold">{featuredWalkResource.featureCard.title}</h3>
                 <p className="mt-4 text-base leading-7 text-muted-foreground">
-                  Guides focused on energy, inflammation, food choices, and daily resets should move people from reading into real nutrition action.
+                  {featuredWalkResource.featureCard.description}
                 </p>
-                <Link href="/shop">
-                  <a className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    Explore Programs
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Link>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {featuredWalkResource.featureCard.callouts.map((callout) => (
+                    <div key={`${featuredWalkResource.slug}-${callout.label}`} className="rounded-2xl border border-border bg-secondary/35 p-4">
+                      <p className="text-xs uppercase tracking-[0.24em] text-primary/70">{callout.label}</p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{callout.value}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </article>
 
@@ -225,6 +269,7 @@ export default function KeepMoving() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }

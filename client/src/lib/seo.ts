@@ -91,6 +91,15 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "weekly",
   },
   {
+    path: "/keep-moving",
+    title: "AskDoGood Digital Library | Flipbooks and Practical Guides",
+    description:
+      "Browse the AskDoGood digital library for live flipbooks and practical visual guides, including Indian Creek Trail and Keep Moving.",
+    keywords: ["AskDoGood digital library", "flipbooks", "Indian Creek Trail", "Keep Moving"],
+    priority: 0.78,
+    changefreq: "weekly",
+  },
+  {
     path: "/herbs",
     title: "A-Z Herb Dictionary — Benefits, Interactions & Thyroid Safety | Ask DoGood",
     description:
