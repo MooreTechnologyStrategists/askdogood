@@ -316,8 +316,8 @@ export default function Home() {
     },
   ];
 
-  const founderPhotoPrimary = "/images/personal/professional/rosee-professional-suit.jpg";
-  const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
+  const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
+  const founderPhotoSecondary = "/images/personal/professional/rosee-professional-suit.jpg";
   const featuredNatureWalk = walkResources[0];
   const dersPillars = [
     {
@@ -383,7 +383,7 @@ export default function Home() {
                   onError={(e) =>
                     handleImageError(
                       e,
-                      "/images/personal/rosee-hero-1.jpg",
+                      "/images/personal/professional/hero-circle.jpg",
                     )
                   }
                 />
