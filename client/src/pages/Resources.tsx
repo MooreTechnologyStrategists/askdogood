@@ -3,6 +3,15 @@ import { Link } from 'wouter';
 import { trackEvent, trackLeadMagnetDownload } from '@/lib/analytics';
 import { catalogById } from '@/data/catalog';
 
+type ResourceVisual = {
+  backgroundImage?: string;
+  logo?: string;
+  logoAlt?: string;
+  watermark?: string;
+  accentClass: string;
+  overlayClass: string;
+};
+
 const Resources = () => {
   const freeResources = [
     {
@@ -10,21 +19,36 @@ const Resources = () => {
       description: 'Kickstart your healing journey with a comprehensive meal plan, shopping lists, and daily wellness tips.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/21-day-reset-guide.pdf',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
-      badge: 'Most Popular'
+      badge: 'Most Popular',
+      visual: {
+        watermark: '21-Day Reset',
+        accentClass: 'from-emerald-600/18 via-emerald-500/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.2),_transparent_32%)]',
+      } as ResourceVisual,
     },
     {
       title: 'Thyroid Lab Reference Sheet',
       description: 'Understand your thyroid labs like a pro. Print-friendly guide to TSH, T3, T4, and antibodies.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/thyroid-lab-reference.pdf',
       image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400',
-      badge: 'Essential'
+      badge: 'Essential',
+      visual: {
+        watermark: 'Lab Guide',
+        accentClass: 'from-sky-600/18 via-sky-500/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.2),_transparent_32%)]',
+      } as ResourceVisual,
     },
     {
       title: 'Anti-Inflammatory Foods Cheat Sheet',
       description: 'Quick-reference guide to the best foods for reducing inflammation and supporting thyroid health.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/anti-inflammatory-foods.pdf',
       image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400',
-      badge: 'Free'
+      badge: 'Free',
+      visual: {
+        watermark: 'Food Cheat Sheet',
+        accentClass: 'from-orange-500/20 via-orange-400/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.2),_transparent_32%)]',
+      } as ResourceVisual,
     }
   ];
 
@@ -105,36 +129,68 @@ const Resources = () => {
       description: 'Explore Prince George\'s County classes, recreation, family activities, nature programming, and community wellness opportunities.',
       url: 'https://www.pgparks.com',
       badge: 'Prince George\'s County',
+      visual: {
+        logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/pg-parks.png',
+        logoAlt: 'PG Parks & Planning logo',
+        accentClass: 'from-emerald-700/18 via-emerald-600/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(5,150,105,0.22),_transparent_34%)]',
+      } as ResourceVisual,
     },
     {
       title: 'Prince George\'s County Health Department',
       description: 'Local health information, prevention resources, clinics, and public-health updates for county residents.',
       url: 'https://www.princegeorgescountymd.gov/departments-offices/health',
       badge: 'Health Access',
+      visual: {
+        watermark: 'PGC Health',
+        accentClass: 'from-cyan-700/18 via-cyan-500/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(8,145,178,0.2),_transparent_34%)]',
+      } as ResourceVisual,
     },
     {
       title: 'NBC4 Washington Find Help',
       description: 'A practical NBC4 resource hub that points residents toward food, housing, legal, and family-support help across the DMV.',
       url: 'https://www.nbcwashington.com/community/in-the-community/working-4-you-to-find-help/4057895/',
       badge: 'NBC4 Community',
+      visual: {
+        watermark: 'NBC4 Washington',
+        accentClass: 'from-amber-500/15 via-blue-600/10 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.16),_transparent_34%),radial-gradient(circle_at_top_right,_rgba(245,158,11,0.14),_transparent_28%)]',
+      } as ResourceVisual,
     },
     {
       title: 'NBCUniversal Local Impact Grants',
       description: 'Funding visibility for nonprofits and community builders doing meaningful work in DC, Maryland, and Virginia.',
       url: 'https://www.nbcwashington.com/community/nbcuniversal-local-impact-grants/',
       badge: 'Funding',
+      visual: {
+        watermark: 'Local Impact Grants',
+        accentClass: 'from-violet-600/16 via-sky-500/8 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.18),_transparent_36%)]',
+      } as ResourceVisual,
     },
     {
       title: 'Food 4 Families',
       description: 'Food-access support and hunger-relief work that lines up closely with Ask DoGood\'s food-as-healing mission.',
       url: 'https://www.food4families.org/',
       badge: 'Food Support',
+      visual: {
+        logo: 'https://askdogoodassets.blob.core.windows.net/images/partners/food4families.png',
+        logoAlt: 'Food 4 Families logo',
+        accentClass: 'from-orange-500/18 via-red-500/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.2),_transparent_34%)]',
+      } as ResourceVisual,
     },
     {
       title: 'Fort Washington Food Pantry',
       description: 'Local pantry support and volunteer opportunities for families in and around Fort Washington and Prince George\'s County.',
       url: 'https://fortwashingtonfoodpantry.net/',
       badge: 'Local Pantry',
+      visual: {
+        watermark: 'Fort Washington Pantry',
+        accentClass: 'from-rose-500/18 via-orange-500/6 to-transparent',
+        overlayClass: 'bg-[radial-gradient(circle_at_top_left,_rgba(244,63,94,0.18),_transparent_34%)]',
+      } as ResourceVisual,
     },
   ];
 
@@ -231,7 +287,14 @@ const Resources = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {freeResources.map((resource, index) => (
-                <div key={index} className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div key={index} className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-gradient-to-br from-white to-gray-50 shadow-lg transition-shadow hover:shadow-xl">
+                  <div className={`absolute inset-0 opacity-90 ${resource.visual.overlayClass}`} aria-hidden="true" />
+                  <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-br ${resource.visual.accentClass}`} aria-hidden="true" />
+                  {resource.visual.watermark ? (
+                    <div className="pointer-events-none absolute right-4 top-4 text-right text-[0.7rem] font-bold uppercase tracking-[0.32em] text-gray-300/80">
+                      {resource.visual.watermark}
+                    </div>
+                  ) : null}
                   <div className="relative">
                     <img 
                       src={resource.image} 
@@ -244,7 +307,7 @@ const Resources = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="relative p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {resource.title}
                     </h3>
@@ -298,13 +361,19 @@ const Resources = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               {/* LabelScanner App */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-                <div className="bg-gradient-to-br from-teal-500 to-teal-600 p-8 text-white text-center">
+              <div className="group relative overflow-hidden rounded-2xl border border-teal-100 bg-white shadow-lg transition-shadow hover:shadow-xl">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.16),_transparent_34%)]" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
+                  <img src="/images/personal/food/vegetables-fresh.jpg" alt="" className="h-28 w-24 object-cover" />
+                </div>
+                <div className="relative bg-gradient-to-br from-teal-500 to-teal-600 p-8 text-white text-center">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
+                  <div className="absolute right-4 top-4 text-[0.68rem] font-bold uppercase tracking-[0.28em] text-white/45">Scanner</div>
                   <Camera className="w-16 h-16 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">LabelScanner</h3>
                   <p className="text-teal-100 text-sm">AI-Powered Food Analysis</p>
                 </div>
-                <div className="p-6">
+                <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     Scan food labels and instantly identify hidden ingredients that could be harming your thyroid health.
                   </p>
@@ -338,13 +407,19 @@ const Resources = () => {
               </div>
 
               {/* MealPrep App */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-                <div className="bg-gradient-to-br from-pink-500 to-pink-600 p-8 text-white text-center">
+              <div className="group relative overflow-hidden rounded-2xl border border-pink-100 bg-white shadow-lg transition-shadow hover:shadow-xl">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.14),_transparent_34%)]" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
+                  <img src="/images/personal/food/meal-prep.jpg" alt="" className="h-28 w-24 object-cover" />
+                </div>
+                <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 p-8 text-white text-center">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
+                  <div className="absolute right-4 top-4 text-[0.68rem] font-bold uppercase tracking-[0.28em] text-white/45">Prep</div>
                   <UtensilsCrossed className="w-16 h-16 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">MealPrep</h3>
                   <p className="text-pink-100 text-sm">Smart Meal Planning</p>
                 </div>
-                <div className="p-6">
+                <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     Plan and prep thyroid-friendly meals with ease. Takes the guesswork out of what to eat.
                   </p>
@@ -378,13 +453,19 @@ const Resources = () => {
               </div>
 
               {/* Clinical Recipes App */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border-2 border-orange-400">
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white text-center">
+              <div className="group relative overflow-hidden rounded-2xl border-2 border-orange-300 bg-white shadow-lg transition-shadow hover:shadow-xl">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.16),_transparent_34%)]" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
+                  <img src="/images/personal/food/vegetables-roasted.jpg" alt="" className="h-28 w-24 object-cover" />
+                </div>
+                <div className="relative bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white text-center">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
+                  <div className="absolute right-4 top-4 text-[0.68rem] font-bold uppercase tracking-[0.28em] text-white/45">Recipes</div>
                   <Leaf className="w-16 h-16 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">Clinical Recipes</h3>
                   <p className="text-orange-100 text-sm">Food as Medicine</p>
                 </div>
-                <div className="p-6">
+                <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     Evidence-based recipes designed to support thyroid function, reduce inflammation, and heal your body.
                   </p>
@@ -418,13 +499,19 @@ const Resources = () => {
               </div>
 
               {/* Symptom Tracker + Herbs */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border-2 border-primary/20">
-                <div className="bg-gradient-to-br from-primary to-primary/80 p-8 text-primary-foreground text-center">
+              <div className="group relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-white shadow-lg transition-shadow hover:shadow-xl">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,83,45,0.15),_transparent_34%)]" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
+                  <img src="/images/personal/professional/clay-banks-hands-together.jpg" alt="" className="h-28 w-24 object-cover" />
+                </div>
+                <div className="relative bg-gradient-to-br from-primary to-primary/80 p-8 text-primary-foreground text-center">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.1),_transparent_55%)]" aria-hidden="true" />
+                  <div className="absolute right-4 top-4 text-[0.68rem] font-bold uppercase tracking-[0.28em] text-primary-foreground/40">Tracker</div>
                   <ClipboardList className="w-16 h-16 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">Symptom Tracker + Herbs</h3>
                   <p className="text-primary-foreground/80 text-sm">Track + Learn</p>
                 </div>
-                <div className="p-6">
+                <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     Log daily energy, mood, stress, and sleep. Then cross-check your supplement ideas with the A-Z Herb Dictionary before adding anything new.
                   </p>
@@ -528,17 +615,29 @@ const Resources = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleResourceClick(resource.title, resource.url)}
-                  className="group rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="flex items-center justify-between gap-4 mb-4">
+                  <div className={`absolute inset-0 ${resource.visual.overlayClass}`} aria-hidden="true" />
+                  <div className={`absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${resource.visual.accentClass}`} aria-hidden="true" />
+                  {resource.visual.logo ? (
+                    <div className="pointer-events-none absolute bottom-4 right-4 opacity-[0.16] transition-opacity duration-300 group-hover:opacity-[0.24]">
+                      <img src={resource.visual.logo} alt={resource.visual.logoAlt || `${resource.title} logo`} className="h-20 w-auto object-contain" />
+                    </div>
+                  ) : null}
+                  {resource.visual.watermark ? (
+                    <div className="pointer-events-none absolute bottom-5 right-5 max-w-[11rem] text-right text-[0.78rem] font-bold uppercase tracking-[0.28em] text-gray-300">
+                      {resource.visual.watermark}
+                    </div>
+                  ) : null}
+                  <div className="relative flex items-center justify-between gap-4 mb-4">
                     <span className="inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700">
                       {resource.badge}
                     </span>
                     <ExternalLink className="w-5 h-5 text-gray-400 transition-colors group-hover:text-teal-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{resource.description}</p>
-                  <div className="mt-5 text-sm font-semibold text-teal-700">
+                  <h3 className="relative text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
+                  <p className="relative text-gray-600 leading-relaxed">{resource.description}</p>
+                  <div className="relative mt-5 text-sm font-semibold text-teal-700">
                     Open Resource
                   </div>
                 </a>
@@ -602,7 +701,15 @@ const Resources = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {premiumProducts.map((product) => (
                 <a key={product.id} href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all overflow-hidden h-full">
+                  <div className="group relative overflow-hidden rounded-2xl border border-white/60 bg-white shadow-lg transition-all hover:shadow-2xl h-full">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.08),_transparent_34%)]" aria-hidden="true" />
+                    <div className="absolute bottom-4 right-4 opacity-[0.1] transition-opacity duration-300 group-hover:opacity-[0.18]" aria-hidden="true">
+                      <img
+                        src={product.image}
+                        alt=""
+                        className="h-28 w-28 rounded-3xl object-cover"
+                      />
+                    </div>
                     <div className="relative">
                       <img
                         src={product.image}
@@ -615,7 +722,10 @@ const Resources = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="p-6">
+                    <div className="relative p-6">
+                      <div className="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-teal-700">
+                        {product.category}
+                      </div>
                       <h4 className="text-2xl font-bold text-gray-900 mb-2">{product.name}</h4>
                       <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
                       <div className="space-y-2 mb-4">

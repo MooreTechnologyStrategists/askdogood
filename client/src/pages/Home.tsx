@@ -36,6 +36,7 @@ import { safeBlogPosts } from "@/content/blogData";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import { GUMROAD_URLS } from "@/config/gumroad";
 import { catalogById, homepageFeaturedProductIds } from "@/data/catalog";
+import { walkResources } from "@/content/walks";
 
 // Constants
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
@@ -317,6 +318,7 @@ export default function Home() {
 
   const founderPhotoPrimary = "/images/personal/professional/rosee-professional-suit.jpg";
   const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
+  const featuredNatureWalk = walkResources[0];
   const dersPillars = [
     {
       title: "Nutrition",
@@ -456,6 +458,75 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The differentiator</p>
                 <p className="font-semibold text-lg mb-2">We do not just talk about healing</p>
                 <p className="text-sm text-muted-foreground">AskDoGood also connects health with skills, opportunity, and stability so people can rebuild more than symptoms alone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.18),_transparent_32%),linear-gradient(180deg,_rgba(244,250,246,1)_0%,_rgba(255,255,255,1)_100%)]">
+        <div className="container">
+          <div className="mx-auto max-w-6xl overflow-hidden rounded-[2.25rem] border border-primary/15 bg-white shadow-[0_24px_80px_rgba(22,45,33,0.08)]">
+            <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
+              <div className="relative p-8 md:p-10 lg:p-12">
+                <div className="absolute inset-y-0 right-0 hidden w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent lg:block" aria-hidden="true" />
+                <span className="inline-flex rounded-full border border-primary/20 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+                  Nature Remedy
+                </span>
+                <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight text-foreground md:text-5xl font-serif">
+                  DoGood&apos;s Nature Remedy to lower cortisol, blood pressure and heighten senses, and spiritual connection.
+                </h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
+                  The flipbooks are not just pretty extras. They document movement as a practical reset: slower breathing, calmer nerves, sharper senses, and a more grounded connection to God, nature, and your own body.
+                </p>
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
+                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Regulate</p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Walking outdoors can interrupt stress loops and support lower cortisol patterns.</p>
+                  </div>
+                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
+                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Restore</p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Fresh air, steady pace, and visual quiet can help settle blood pressure and mental noise.</p>
+                  </div>
+                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
+                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Reconnect</p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Nature heightens awareness. That often opens the door to gratitude, prayer, and spiritual clarity.</p>
+                  </div>
+                </div>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Link href="/keep-moving">
+                    <Button className="rounded-3xl px-7 py-6 text-base font-bold shadow-lg">
+                      Explore the flipbooks
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <a href={featuredNatureWalk.href} className="inline-flex items-center justify-center rounded-3xl border-2 border-primary/25 px-7 py-6 text-base font-bold text-foreground transition-colors hover:bg-primary/5">
+                    Open Indian Creek Trail
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden bg-[linear-gradient(160deg,_rgba(12,43,29,0.96),_rgba(22,78,52,0.9))] p-8 md:p-10 lg:p-12 text-white">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.16),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.1),_transparent_34%)]" aria-hidden="true" />
+                <div className="relative z-10">
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">Featured walk</p>
+                  <h3 className="mt-4 text-3xl font-bold md:text-4xl">{featuredNatureWalk.title}</h3>
+                  <p className="mt-4 max-w-xl text-base leading-7 text-white/80">{featuredNatureWalk.description}</p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {featuredNatureWalk.stats.slice(0, 4).map((stat) => (
+                      <div key={stat.label} className="rounded-3xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                        <p className="text-xs uppercase tracking-[0.22em] text-white/65">{stat.label}</p>
+                        <p className="mt-2 text-2xl font-bold">{stat.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 rounded-[1.75rem] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                    <p className="text-sm uppercase tracking-[0.22em] text-white/60">Why it works</p>
+                    <p className="mt-3 text-base leading-7 text-white/85">
+                      {featuredNatureWalk.highlights[0]} {featuredNatureWalk.highlights[3]}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
