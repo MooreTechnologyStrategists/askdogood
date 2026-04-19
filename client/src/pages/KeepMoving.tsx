@@ -201,15 +201,18 @@ export default function KeepMoving() {
               {walkResources.map((item) => (
                 <article
                   key={item.slug}
-                  className="group overflow-hidden rounded-[1.75rem] border border-border bg-background shadow-sm transition-transform hover:-translate-y-1"
+                  className="group relative overflow-hidden rounded-[1.75rem] border border-border bg-background shadow-sm transition-transform hover:-translate-y-1"
                 >
-                  <iframe
-                    src={item.href}
-                    title={`${item.title} card preview`}
-                    className="h-56 w-full border-b border-border bg-white"
-                    loading="lazy"
-                  />
-                  <div className="p-5">
+                  <div className="relative h-56 overflow-hidden border-b border-border bg-white">
+                    <iframe
+                      src={item.href}
+                      title={`${item.title} card preview`}
+                      className="pointer-events-none absolute inset-0 h-full w-full scale-[1.05] opacity-50"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,19,20,0.14),rgba(11,19,20,0.5))]" aria-hidden="true" />
+                  </div>
+                  <div className="relative p-5">
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">
                       {item.eyebrow}
                     </p>
@@ -227,12 +230,15 @@ export default function KeepMoving() {
 
           <div className="space-y-6">
             <article className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm">
-              <iframe
-                src={featuredWalkResource.href}
-                title={`${featuredWalkResource.title} feature preview`}
-                className="h-64 w-full bg-white"
-                loading="lazy"
-              />
+              <div className="relative h-64 overflow-hidden bg-white">
+                <iframe
+                  src={featuredWalkResource.href}
+                  title={`${featuredWalkResource.title} feature preview`}
+                  className="pointer-events-none absolute inset-0 h-full w-full scale-[1.04] opacity-50"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,17,13,0.12),rgba(10,17,13,0.52))]" aria-hidden="true" />
+              </div>
               <div className="p-7">
                 <div className="flex items-center gap-3 text-primary">
                   <Footprints className="h-5 w-5" />

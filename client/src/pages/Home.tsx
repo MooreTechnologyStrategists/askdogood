@@ -36,7 +36,7 @@ import { safeBlogPosts } from "@/content/blogData";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import { GUMROAD_URLS } from "@/config/gumroad";
 import { catalogById, homepageFeaturedProductIds } from "@/data/catalog";
-import { walkResources } from "@/content/walks";
+import { featuredWalkResource, walkResources } from "@/content/walks";
 
 // Constants
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
@@ -318,7 +318,7 @@ export default function Home() {
 
   const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
   const founderPhotoSecondary = "/images/personal/professional/rosee-professional-suit.jpg";
-  const featuredNatureWalk = walkResources[0];
+  const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
       title: "Nutrition",
@@ -501,12 +501,19 @@ export default function Home() {
                     </Button>
                   </Link>
                   <a href={featuredNatureWalk.href} className="inline-flex items-center justify-center rounded-3xl border-2 border-primary/25 px-7 py-6 text-base font-bold text-foreground transition-colors hover:bg-primary/5">
-                    Open Indian Creek Trail
+                    Open {featuredNatureWalk.title}
                   </a>
                 </div>
               </div>
 
               <div className="relative overflow-hidden bg-[linear-gradient(160deg,_rgba(12,43,29,0.96),_rgba(22,78,52,0.9))] p-8 md:p-10 lg:p-12 text-white">
+                <iframe
+                  src={featuredNatureWalk.href}
+                  title={`${featuredNatureWalk.title} background preview`}
+                  className="pointer-events-none absolute inset-0 h-full w-full scale-[1.04] opacity-50"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(160deg,_rgba(12,43,29,0.62),_rgba(22,78,52,0.56))]" aria-hidden="true" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.16),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.1),_transparent_34%)]" aria-hidden="true" />
                 <div className="relative z-10">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">Featured walk</p>

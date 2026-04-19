@@ -16,7 +16,7 @@ const Resources = () => {
   const freeResources = [
     {
       title: '21-Day Plant-Based Reset Guide',
-      description: 'Kickstart your healing journey with a comprehensive meal plan, shopping lists, and daily wellness tips.',
+      description: 'A structured PDF guide with a 21-day plant-based meal plan, grocery lists, and daily prompts you can actually follow week by week.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/21-day-reset-guide.pdf',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400',
       badge: 'Most Popular',
@@ -28,7 +28,7 @@ const Resources = () => {
     },
     {
       title: 'Thyroid Lab Reference Sheet',
-      description: 'Understand your thyroid labs like a pro. Print-friendly guide to TSH, T3, T4, and antibodies.',
+      description: 'A print-friendly lab reference covering common thyroid markers like TSH, T3, T4, and antibodies so appointments are easier to follow.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/thyroid-lab-reference.pdf',
       image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=400',
       badge: 'Essential',
@@ -40,7 +40,7 @@ const Resources = () => {
     },
     {
       title: 'Anti-Inflammatory Foods Cheat Sheet',
-      description: 'Quick-reference guide to the best foods for reducing inflammation and supporting thyroid health.',
+      description: 'A quick food list focused on anti-inflammatory staples, simple swaps, and ingredient categories that support day-to-day meal planning.',
       downloadLink: 'https://askdogoodassets.blob.core.windows.net/downloads/anti-inflammatory-foods.pdf',
       image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400',
       badge: 'Free',
@@ -224,10 +224,10 @@ const Resources = () => {
               Free Resources & Tools
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Everything You Need to Heal
+              Resources You Can Use Right Now
             </h1>
             <p className="text-xl md:text-2xl text-teal-50 leading-relaxed">
-              Free downloads, powerful health apps, and wellness products to support your journey
+              Everything here has purpose. If it&apos;s listed, it works. These are tools, guides, and resources to help you move smarter, eat better, and take control of your life without overcomplicating it.
             </p>
           </div>
         </div>
@@ -244,14 +244,14 @@ const Resources = () => {
                     AskDoGood Digital Library
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    The flipbooks are live. They were just not surfaced clearly enough.
+                    The walking-trail flipbooks are part of the site now.
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                    The digital library holds your live flipbooks and supporting guide content so visitors can move from reading into programs, products, and practical next steps.
+                    The digital library now holds the live trail stories and editorial wellness pieces already published on AskDoGood, including Indian Creek, Keep Moving, and the new Patuxent River Blue Trail article.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <a href="/flipbooks/indian-creek-trail.html" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
-                      Open Indian Creek Trail
+                    <a href="/flipbooks/patuxent-river-blue-trail.html" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                      Open Patuxent River Blue Trail
                     </a>
                     <Link href="/keep-moving" className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
                       View Digital Library Page
@@ -259,15 +259,15 @@ const Resources = () => {
                   </div>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <a href="/flipbooks/indian-creek-trail.html" className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-2">Walk story</p>
-                    <h3 className="text-xl font-bold text-gray-900">Indian Creek Trail</h3>
-                    <p className="mt-2 text-sm leading-6 text-gray-600">A live flipbook about movement, recovery, and feeling stronger in your body again.</p>
+                  <a href="/flipbooks/patuxent-river-blue-trail.html" className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-2">New trail essay</p>
+                    <h3 className="text-xl font-bold text-gray-900">Patuxent River Blue Trail</h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">A longer article-style flipbook built from Blue Trail photos, river views, and grounded recovery language.</p>
                   </a>
                   <a href="/flipbooks/keep-moving.html" className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-2">Series cover</p>
                     <h3 className="text-xl font-bold text-gray-900">Keep Moving</h3>
-                    <p className="mt-2 text-sm leading-6 text-gray-600">The original spread that introduces the movement, healing, and food side of the series.</p>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">The editorial cover piece that frames why trails, movement, and public space matter inside this library.</p>
                   </a>
                 </div>
               </div>
@@ -278,10 +278,10 @@ const Resources = () => {
                 100% Free Downloads
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Start Your Healing Today
+                Free Guides Already Hosted Here
               </h2>
               <p className="text-xl text-gray-600">
-                Evidence-based guides created from my personal journey through thyroid cancer recovery
+                Downloadable PDFs focused on food, thyroid labs, and simple planning tools you can keep and print.
               </p>
             </div>
 
@@ -355,7 +355,7 @@ const Resources = () => {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Healing Tools in Your Pocket</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Free and accessible web apps designed for real-life healing. Built by a thyroid cancer survivor for Black and Brown communities who want results, not just inspiration.
+                Browser-based AskDoGood tools for label checks, meal planning, recipes, and symptom logging. These are working site features, not app-store downloads.
               </p>
             </div>
 
@@ -375,7 +375,7 @@ const Resources = () => {
                 </div>
                 <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Scan food labels and instantly identify hidden ingredients that could be harming your thyroid health.
+                    Use the site tool to review ingredient labels and flag additives or patterns you may want to avoid while shopping.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-start gap-2">
@@ -396,7 +396,7 @@ const Resources = () => {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 mb-4 italic">
-                    Perfect for: Grocery shopping, meal planning, avoiding hidden triggers
+                    Best for: Grocery store decisions, pantry checks, and comparing packaged foods.
                   </p>
                   <Link href="/label-scanner" className="block">
                     <button className="w-full bg-teal-600 text-white rounded-xl py-3 font-semibold hover:bg-teal-700 transition">
@@ -421,7 +421,7 @@ const Resources = () => {
                 </div>
                 <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Plan and prep thyroid-friendly meals with ease. Takes the guesswork out of what to eat.
+                    Build simple meal-prep plans from the browser with reusable weekly structure, shopping support, and batch-cooking prompts.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-start gap-2">
@@ -442,7 +442,7 @@ const Resources = () => {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 mb-4 italic">
-                    Perfect for: Busy schedules, meal prepping, family cooking
+                    Best for: Busy weeks, repeat grocery lists, and planning food before the week starts.
                   </p>
                   <Link href="/meal-prep" className="block">
                     <button className="w-full bg-pink-600 text-white rounded-xl py-3 font-semibold hover:bg-pink-700 transition">
@@ -467,7 +467,7 @@ const Resources = () => {
                 </div>
                 <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Evidence-based recipes designed to support thyroid function, reduce inflammation, and heal your body.
+                    Browse the recipe tool for food ideas organized around thyroid-friendly and anti-inflammatory eating patterns.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-start gap-2">
@@ -488,7 +488,7 @@ const Resources = () => {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 mb-4 italic">
-                    Perfect for: Chronic illness, thyroid support, autoimmune healing
+                    Best for: Finding meals to cook, browsing ingredients, and saving food ideas in one place.
                   </p>
                   <Link href="/clinical-recipes" className="block">
                     <button className="w-full bg-orange-600 text-white rounded-xl py-3 font-semibold hover:bg-orange-700 transition">
@@ -513,7 +513,7 @@ const Resources = () => {
                 </div>
                 <div className="relative p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    Log daily energy, mood, stress, and sleep. Then cross-check your supplement ideas with the A-Z Herb Dictionary before adding anything new.
+                    Track daily symptoms in the browser, then cross-check herb notes and safety guidance before trying something new.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-start gap-2">
@@ -548,13 +548,13 @@ const Resources = () => {
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-6 mb-10">
               <div className="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold text-sm">
-                <span>4.9/5 User Rating</span>
+                <span>Browser-based tools</span>
               </div>
               <div className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold text-sm">
-                <span>3,500+ Women Helped</span>
+                <span>Free to explore on site</span>
               </div>
               <div className="flex items-center gap-2 bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold text-sm">
-                <span>Evidence-Based & Tested</span>
+                <span>No app store required</span>
               </div>
             </div>
 
@@ -562,28 +562,28 @@ const Resources = () => {
             <div className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-teal-100/10 rounded-xl p-8">
               <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
                 <Brain className="w-6 h-6" />
-                Why AskDoGood vs. Generic Apps?
+                Why these tools fit the site
               </h4>
               <ul className="text-gray-700 space-y-3">
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 text-xl">•</span>
-                  <span>Built for Black and Brown communities, by a thyroid cancer survivor who's lived it</span>
+                  <span>They connect directly to the guides, flipbooks, and health topics already on AskDoGood.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 text-xl">•</span>
-                  <span>Focused on real results and healing, not just tracking numbers</span>
+                  <span>They are browser tools, so visitors can use them immediately without downloading anything first.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 text-xl">•</span>
-                  <span>Integrates with your personal journey and community</span>
+                  <span>They stay focused on practical food, symptom, and planning tasks instead of generic lifestyle prompts.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 text-xl">•</span>
-                  <span>100% privacy—your data is never sold or shared</span>
+                  <span>They extend the site's thyroid, food, and recovery content into something a visitor can actually use.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 text-xl">•</span>
-                  <span>No downloads, no app stores—works instantly in your browser</span>
+                  <span>No downloads, no app stores, and no extra platform switch just to get started.</span>
                 </li>
               </ul>
             </div>
@@ -691,10 +691,10 @@ const Resources = () => {
                 Premium Wellness Products
               </div>
               <h3 className="text-4xl font-bold mb-4 text-gray-900">
-                Deep-Dive Healing Programs
+                Paid Programs And Digital Products
               </h3>
               <p className="text-xl text-gray-600">
-                Comprehensive courses and programs for those ready to transform their health
+                The current paid offers linked from the site for visitors who want more structure than the free library and tools provide.
               </p>
             </div>
 

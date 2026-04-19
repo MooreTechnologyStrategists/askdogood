@@ -52,7 +52,7 @@ export const walkResources: WalkResource[] = [
       "Eight photo scenes, including the smile, the creek, the bridges, and the chalk message for survivors.",
       "Closing line: The world did not get more beautiful. I just got well enough to see it again.",
     ],
-    featured: true,
+    featured: false,
     featureCard: {
       badge: "Walk Recovery Story",
       title: "The walk story is part of the library, not buried under it.",
@@ -66,6 +66,46 @@ export const walkResources: WalkResource[] = [
         {
           label: "Proof point",
           value: "5.7 miles and 12,840 steps after a period when that kind of morning would have felt unreachable.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "patuxent-river-blue-trail",
+    title: "Patuxent River Blue Trail",
+    eyebrow: "Trail essay",
+    description:
+      "An editorial photo story from the Patuxent River Trail on the Blue Trail, framed around spring light, public land, and the practical calm that comes from walking near water.",
+    href: "/flipbooks/patuxent-river-blue-trail.html",
+    recoveredHeading: "A river walk that slows the day down.",
+    recoveredSummary:
+      "A longer trail essay built from Patuxent River images: boardwalk, wetland views, quiet pauses, and the argument that local public trails are still a real wellness resource.",
+    stats: [
+      { label: "Trail", value: "Blue Trail" },
+      { label: "Region", value: "Patuxent River" },
+      { label: "Season", value: "Spring" },
+      { label: "Format", value: "Article" },
+    ],
+    highlights: [
+      "A 1,200-word article framed around the Patuxent River Trail and the Blue Trail section of the Star-Spangled Banner route.",
+      "Balances landscape images with personal trail moments instead of treating the walk as generic stock wellness content.",
+      "Centers public trails as a practical form of healing, not a luxury add-on or aspirational brand story.",
+      "Uses direct hosted trail images so the piece can stay live and easy to update as more walks are added.",
+    ],
+    featured: true,
+    featureCard: {
+      badge: "New trail feature",
+      title: "Patuxent expands the walk library into a longer editorial trail story.",
+      description:
+        "This entry adds a more reflective river-based piece to the collection. It shows how future walks can mix landscape, local context, and personal recovery language without changing the underlying schema.",
+      callouts: [
+        {
+          label: "Story angle",
+          value: "Public trails as accessible healing spaces, especially when the route offers water, quiet, and room to slow down.",
+        },
+        {
+          label: "Template use",
+          value: "Built as a reusable article-style flipbook with direct blob images and structured sections for future trail uploads.",
         },
       ],
     },
