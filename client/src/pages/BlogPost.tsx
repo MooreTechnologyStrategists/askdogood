@@ -150,7 +150,7 @@ export default function BlogPost() {
       // Normalize imported content and convert Markdown to HTML.
       return marked.parse(normalizeBlogMarkdown(post.content));
     }
-    return "<p>Content coming soon.</p>";
+    return "<p>This article is temporarily offline while it is being updated.</p>";
   }, [post.content]);
 
   const handleShare = async () => {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Filter, ShoppingCart } from "lucide-react";
 import { merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
-import { comingSoonMerchItems } from "@/data/catalog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GUMROAD_URLS } from "@/config/gumroad";
@@ -36,12 +35,12 @@ export default function Merch() {
           </div>
           <h1 className="mt-6 text-5xl font-bold md:text-6xl">Merch that supports the brand without cheapening it.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            The merch experience now separates live products from concept inventory so the site can look cleaner and more intentional.
+            This page now works as a curated merch gallery that sends people to the AskDoGood storefront instead of pretending every mockup already has its own live product page.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span>Direct product previews</span>
+            <span>Curated product gallery</span>
             <span>Cleaner category filters</span>
-            <span>Future drops clearly labeled</span>
+            <span>Single storefront checkout</span>
           </div>
         </div>
       </section>
@@ -85,7 +84,7 @@ export default function Merch() {
                   {!product.inStock ? (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/80">
                       <Badge variant="secondary" className="px-4 py-2 text-lg">
-                        Coming soon
+                        Unavailable
                       </Badge>
                     </div>
                   ) : null}
@@ -143,7 +142,7 @@ export default function Merch() {
                     size="lg"
                   >
                     <ShoppingCart className="mr-2 h-4 w-4" />
-                    {product.inStock ? "View product" : "Join waitlist"}
+                    {product.inStock ? "Shop storefront" : "Unavailable"}
                   </Button>
                 </div>
               </div>
@@ -163,16 +162,16 @@ export default function Merch() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <h2 className="text-3xl font-bold">A stronger merch standard</h2>
             <p className="text-lg text-muted-foreground">
-              Merch should extend the brand, not make it look unfinished. That means removing filler copy, keeping the presentation cleaner, and separating live items from concepts that still need real assets.
+              Merch should extend the brand, not make it look unfinished. That means removing fake item-level checkout promises, keeping the presentation cleaner, and routing people to the storefront that is actually ready.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-8 md:grid-cols-4">
               <div className="space-y-2">
                 <div className="text-2xl font-bold">{merchProducts.length}</div>
-                <div className="text-sm text-muted-foreground">Live products</div>
+                <div className="text-sm text-muted-foreground">Designs in gallery</div>
               </div>
               <div className="space-y-2">
-                <div className="text-2xl font-bold">{comingSoonMerchItems.length}</div>
-                <div className="text-sm text-muted-foreground">Future drops</div>
+                <div className="text-2xl font-bold">1</div>
+                <div className="text-sm text-muted-foreground">Storefront destination</div>
               </div>
               <div className="space-y-2">
                 <div className="text-2xl font-bold">5</div>
@@ -183,29 +182,6 @@ export default function Merch() {
                 <div className="text-sm text-muted-foreground">Presentation</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">Upcoming drops</h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground">
-              These items are now tracked centrally and clearly marked as future launches until production assets and checkout are ready.
-            </p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {comingSoonMerchItems.slice(1, 7).map((item) => (
-              <div key={item.id} className="rounded-2xl border bg-card p-6">
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">{item.category}</p>
-                <h3 className="mt-3 text-xl font-semibold">{item.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{item.shortSummary}</p>
-                <Badge variant="outline" className="mt-4">
-                  {item.status}
-                </Badge>
-              </div>
-            ))}
           </div>
         </div>
       </section>

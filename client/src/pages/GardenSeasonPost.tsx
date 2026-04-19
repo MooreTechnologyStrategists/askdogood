@@ -108,7 +108,7 @@ export default function GardenSeasonPost() {
             body.map((p, i) => <p key={i}>{p}</p>)
           ) : (
             <p className="text-muted-foreground">
-              This season’s story is coming soon. (The soil is still doing its thing.)
+              This season does not have a written journal entry yet, but the garden archive and photo timeline are still available.
             </p>
           )}
         </div>

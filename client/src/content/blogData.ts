@@ -2940,17 +2940,91 @@ function repairMojibake(value: string): string {
 }
 
 export function cleanBlogText(value: string): string {
-  return repairMojibake(value);
+  return repairMojibake(value)
+    .replace(/\\"/g, '"')
+    .replace(/\\'/g, "'")
+    .replace(/^[\\"]+|[\\"]+$/g, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function isMeaningfulBlogText(value: string | undefined): value is string {
+  if (!value) {
+    return false;
+  }
+
+  const normalized = value.trim().toLowerCase();
+
+  return Boolean(
+    normalized &&
+      normalized !== "\\" &&
+      normalized !== '"' &&
+      normalized !== "coming soon..." &&
+      normalized !== "content coming soon."
+  );
+}
+
+function normalizeBlogDate(value: string): string {
+  const match = value.match(/\d{4}-\d{2}-\d{2}/);
+  return match ? match[0] : "";
+}
+
+function deriveTitle(post: BlogPost, cleanedContent: string): string {
+  if (isMeaningfulBlogText(post.title)) {
+    return cleanBlogText(post.title);
+  }
+
+  const candidateLine = cleanedContent
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .find((line) => line && !/^photo by:/i.test(line) && line.length > 12);
+
+  return candidateLine ? candidateLine.replace(/^#+\s*/, "") : "";
+}
+
+function deriveExcerpt(post: BlogPost, cleanedContent: string, cleanedTitle: string): string {
+  if (isMeaningfulBlogText(post.excerpt)) {
+    return cleanBlogText(post.excerpt);
+  }
+
+  const withoutTitle = cleanedContent.startsWith(cleanedTitle)
+    ? cleanedContent.slice(cleanedTitle.length).trim()
+    : cleanedContent;
+
+  const excerptSource = withoutTitle || cleanedContent;
+
+  if (!excerptSource) {
+    return "";
+  }
+
+  return `${excerptSource.replace(/\s+/g, " ").slice(0, 220).trim()}...`;
+}
+
+function shouldPublishBlogPost(post: BlogPost): boolean {
+  const normalizedDate = normalizeBlogDate(post.date);
+
+  return Boolean(
+    post.id &&
+      isMeaningfulBlogText(post.title) &&
+      isMeaningfulBlogText(post.excerpt) &&
+      isMeaningfulBlogText(post.content) &&
+      normalizedDate
+  );
 }
 
 function sanitizeBlogPost(post: BlogPost): BlogPost {
+  const cleanedContent = cleanBlogText(post.content);
+  const cleanedTitle = deriveTitle(post, cleanedContent);
+  const cleanedExcerpt = deriveExcerpt(post, cleanedContent, cleanedTitle);
+
   return {
     ...post,
-    title: cleanBlogText(post.title),
-    excerpt: cleanBlogText(post.excerpt),
-    content: cleanBlogText(post.content),
+    title: cleanedTitle,
+    excerpt: cleanedExcerpt,
+    content: cleanedContent,
+    date: normalizeBlogDate(post.date),
     imageAlt: post.imageAlt ? cleanBlogText(post.imageAlt) : undefined,
-    tags: post.tags.map((tag) => cleanBlogText(tag)),
+    tags: post.tags.map((tag) => cleanBlogText(tag)).filter(Boolean),
     author: post.author ? cleanBlogText(post.author) : undefined,
   };
 }
@@ -2975,5 +3049,7 @@ const mergedBlogPosts = [
   ...markdownBlogPosts,
 ];
 
-export const safeBlogPosts = mergedBlogPosts.map((post) => sanitizeBlogPost(post));
+export const safeBlogPosts = mergedBlogPosts
+  .map((post) => sanitizeBlogPost(post))
+  .filter((post) => shouldPublishBlogPost(post));
 

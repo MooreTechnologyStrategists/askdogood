@@ -278,7 +278,7 @@ export default function MealPrepResources() {
                       className={`text-left rounded-3xl border p-4 transition-all ${selected ? "border-primary shadow-lg bg-primary/5" : "border-border hover:border-primary/40 hover:shadow-md"}`}
                     >
                       <div className={`mb-4 h-28 rounded-2xl bg-gradient-to-br ${item.gradient} p-4 text-white shadow-inner`}>
-                        <p className="text-[11px] uppercase tracking-[0.28em] text-white/80">Thumbnail placeholder</p>
+                        <p className="text-[11px] uppercase tracking-[0.28em] text-white/80">Sample menu card</p>
                         <p className="mt-3 text-xl font-semibold">{item.day}</p>
                         <p className="text-sm text-white/90">Chef-prepped combo</p>
                       </div>

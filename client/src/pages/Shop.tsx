@@ -4,7 +4,6 @@ import {
   BriefcaseBusiness,
   Download,
   ExternalLink,
-  Layers3,
   ShoppingBag,
   Users,
 } from "lucide-react";
@@ -15,7 +14,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   catalogById,
-  comingSoonMerchItems,
   flagshipDigitalProducts,
   hasLiveCheckout,
   launchOrder,
@@ -271,10 +269,6 @@ export default function Shop() {
                 <BriefcaseBusiness className="mr-2 h-4 w-4" />
                 Services
               </TabsTrigger>
-              <TabsTrigger value="coming-soon" className="rounded-full border px-4 py-2 data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                <Layers3 className="mr-2 h-4 w-4" />
-                Coming soon
-              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="ready-now" className="space-y-10">
@@ -296,14 +290,6 @@ export default function Shop() {
             <TabsContent value="services" className="space-y-10">
               <div className="grid gap-8 lg:grid-cols-3">
                 {serviceCatalog.map((item) => (
-                  <CatalogCard key={item.id} item={item} />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="coming-soon" className="space-y-10">
-              <div className="grid gap-8 lg:grid-cols-3">
-                {comingSoonMerchItems.map((item) => (
                   <CatalogCard key={item.id} item={item} />
                 ))}
               </div>

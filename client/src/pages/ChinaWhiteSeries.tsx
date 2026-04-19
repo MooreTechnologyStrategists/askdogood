@@ -24,7 +24,7 @@ export default function ChinaWhiteSeries() {
       readTime: 15,
       spiceLevel: 3,
       published: false,
-      excerpt: 'Coming soon...',
+      excerpt: 'A pre-fame chapter about ambition, image, and the price of being seen too early.',
       image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode2_verse_one.webp'
     },
     {
@@ -34,7 +34,7 @@ export default function ChinaWhiteSeries() {
       readTime: 14,
       spiceLevel: 2,
       published: false,
-      excerpt: 'Coming soon...',
+      excerpt: 'The office chapter where survival, polish, and calculation start looking like strategy.',
       image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode3_corporate_chyna.webp'
     },
     {
@@ -44,10 +44,10 @@ export default function ChinaWhiteSeries() {
       readTime: 16,
       spiceLevel: 3,
       published: false,
-      excerpt: 'Coming soon...',
+      excerpt: 'A power chapter centered on ownership, reinvention, and the cost of control.',
       image: 'https://askdogoodassets.blob.core.windows.net/images/stories/episode4_the_business.webp'
     }
-  ];
+  ].filter((episode) => episode.published);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-primary/5 to-background text-foreground font-serif relative tracking-wide">
@@ -81,7 +81,7 @@ export default function ChinaWhiteSeries() {
                       <div class="text-center p-6">
                         <div class="text-6xl mb-3 animate-bounce"></div>
                         <p class="text-foreground font-bold">Boss Mode</p>
-                        <p class="text-muted-foreground text-xs mt-2">Coming Soon</p>
+                          <p class="text-muted-foreground text-xs mt-2">Portrait unavailable</p>
                       </div>
                     </div>
                   `;
@@ -152,7 +152,7 @@ export default function ChinaWhiteSeries() {
                         <div class=\"text-center p-8\">
                           <div class=\"text-6xl mb-4\">👑</div>
                           <p class="text-2xl font-bold text-primary">Chyna White</p>
-                          <p class="text-sm text-muted-foreground mt-2">Character art coming soon</p>
+                          <p class="text-sm text-muted-foreground mt-2">Character portrait unavailable</p>
                         </div>
                       </div>
                     `;
@@ -194,12 +194,12 @@ export default function ChinaWhiteSeries() {
 
               <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-card rounded-lg border border-primary/20">
                 <div>
-                  <p className="text-2xl font-bold text-primary">4</p>
-                  <p className="text-xs text-muted-foreground">Episodes Planned</p>
+                  <p className="text-2xl font-bold text-primary">{episodes.length}</p>
+                  <p className="text-xs text-muted-foreground">Episodes live</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-primary">1</p>
-                  <p className="text-xs text-muted-foreground">Published</p>
+                  <p className="text-2xl font-bold text-primary">Season 1</p>
+                  <p className="text-xs text-muted-foreground">Current release</p>
                 </div>
                 <div>
                   <div className="flex">
@@ -267,17 +267,11 @@ export default function ChinaWhiteSeries() {
                     <p className="text-sm text-muted-foreground italic mb-6 drop-shadow-md">
                       "{episode.excerpt}"
                     </p>
-                    {episode.published ? (
-                      <Button asChild className="w-full sm:w-auto font-bold py-3 px-8 rounded-2xl shadow-lg">
-                        <Link href={`/stories/chyna-white/episode-${episode.id}`}>
-                          Read Now
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button disabled className="w-full sm:w-auto bg-muted/40 border border-border text-muted-foreground font-bold py-3 px-8 rounded-2xl">
-                        Coming Soon
-                      </Button>
-                    )}
+                    <Button asChild className="w-full sm:w-auto font-bold py-3 px-8 rounded-2xl shadow-lg">
+                      <Link href={`/stories/chyna-white/episode-${episode.id}`}>
+                        Read Now
+                      </Link>
+                    </Button>
                   </CardContent>
                 </div>
               </Card>

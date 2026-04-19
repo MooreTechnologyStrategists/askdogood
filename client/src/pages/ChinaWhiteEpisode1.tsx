@@ -310,7 +310,7 @@ export default function ChinaWhiteEpisode1() {
             <Button asChild>
               <Link href="/stories/chyna-white">
                 <ArrowRight className="w-4 h-4 mr-2" />
-                Next Episode (Coming Soon)
+                Back to series
               </Link>
             </Button>
           </div>
@@ -326,7 +326,7 @@ export default function ChinaWhiteEpisode1() {
           </h2>
           <Card className="bg-card/80 backdrop-blur border-primary/20 p-6">
             <p className="text-muted-foreground text-center">
-              Comments coming soon! For now, share your thoughts via email or social media.
+              Share your thoughts by email or through AskDoGood social channels while reader discussion features are being handled off-platform.
             </p>
           </Card>
         </div>
