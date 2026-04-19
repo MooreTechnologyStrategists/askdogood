@@ -11,8 +11,8 @@ const sections = [
     eyebrow: 'Food practice',
     title: 'In the Kitchen',
     caption: 'Real meals. Real ingredients. This is where healing starts, one plate at a time.',
-    image: '/images/personal/food/meal-prep.jpg',
-    imageAlt: 'Meal prep and healing food prepared for AskDoGood',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalads.JPEG',
+    imageAlt: 'Mason jar salads and prepared food for the AskDoGood kitchen journal',
     href: '/behind-the-scenes/in-my-kitchen',
   },
   {
@@ -20,16 +20,16 @@ const sections = [
     eyebrow: 'Daily nourishment',
     title: 'Juices & Smoothies',
     caption: 'Simple blends designed to reduce inflammation and support stronger daily energy.',
-    image: '/images/personal/food/smoothie-green-goddess.jpg',
-    imageAlt: 'Green smoothie prepared for daily wellness support',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/foods/green-smoothie-avocado-oatmeal.JPG',
+    imageAlt: 'Green smoothie with avocado and oatmeal prepared for daily wellness support',
   },
   {
     id: 'staying-active',
     eyebrow: 'Movement',
     title: 'Staying Active',
     caption: 'Movement does not have to be extreme. Consistency is what creates change.',
-    image: '/images/personal/rosee-founder-snow-2026.jpg',
-    imageAlt: 'RoSee Murphy outdoors and staying active',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/walking-trails/DSC06410.JPG',
+    imageAlt: 'Wide overlook along the Patuxent River Blue Trail',
   },
   {
     id: 'building-the-platform',
@@ -42,6 +42,8 @@ const sections = [
     eyebrow: 'Education',
     title: 'Learning & Growing',
     caption: 'Growth is part of the process. The more you learn, the more you can help others.',
+    image: 'https://askdogoodassets.blob.core.windows.net/images/garden/seedlings-starting.webp',
+    imageAlt: 'Seedlings starting in trays as part of a hands-on growing practice',
   },
 ];
 

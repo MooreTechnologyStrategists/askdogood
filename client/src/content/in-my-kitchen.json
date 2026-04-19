@@ -2,12 +2,12 @@
   "id": "in-my-kitchen",
   "title": "In My Kitchen: Where Healing Meets Hustle",
   "excerpt": "This isn't just meal prep. This is how I stay disciplined, healthy, and in control of my life.",
-  "featuredImage": "/images/personal/food/meal-prep.jpg",
+  "featuredImage": "https://askdogoodassets.blob.core.windows.net/images/foods/jarSalads.JPEG",
   "sections": [
     {
       "type": "image",
       "images": [
-        "/images/personal/food/meal-prep.jpg"
+        "https://askdogoodassets.blob.core.windows.net/images/foods/chickpea%20burgers.JPEG"
       ]
     },
     {
@@ -18,8 +18,7 @@
     {
       "type": "image",
       "images": [
-        "/images/personal/food/meal-complete.jpg",
-        "/images/personal/food/veggies-bowl.jpg"
+        "https://askdogoodassets.blob.core.windows.net/images/foods/homemade%20pizza.JPEG"
       ]
     },
     {
