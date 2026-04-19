@@ -3,6 +3,7 @@ export const BLOG_DEFAULT_CARD = "/assets/img/blog/library/blog-list-hero.jpg";
 export const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
 
 export const blogImages: Record<string, string> = {
+  "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out": "/images/personal/food/meal-prep.jpg",
   "10-tips-to-boost-your-emotional-wellness": "/assets/img/blog/assigned/10-tips-to-boost-your-emotional-wellness.webp",
   "5-foods-you-need-to-include-in-a-vegan-diet": "/assets/img/blog/assigned/5-foods-you-need-to-include-in-a-vegan-diet.webp",
   "7-ways-to-boost-focus-and-productivity-while-working-from-home": "/assets/img/blog/assigned/7-ways-to-boost-focus-and-productivity-while-working-from-home.webp",
@@ -39,6 +40,7 @@ export const blogImages: Record<string, string> = {
   "from-revelation-to-reality-are-we-too-blind-to-see-the-signs": "/assets/img/blog/assigned/from-revelation-to-reality-are-we-too-blind-to-see-the-signs.webp",
   "from-the-streets-to-the-mainstream-how-hip-hop-dominates-pop-culture-today": "/assets/img/blog/assigned/from-the-streets-to-the-mainstream-how-hip-hop-dominates-pop-culture-today.webp",
   "healthy-tips-for-daily-workouts": "/assets/img/blog/assigned/healthy-tips-for-daily-workouts.webp",
+  "how-collagen-saved-my-skin-a-personal-journey-to-radiance": "/assets/img/blog/assigned/how-collagen-saved-my-skin-a-personal-journey-to-radiance.webp",
   "how-collagen-saved-my-skin-my-dad-s-mobility-and-maybe-even-my-life": "/assets/img/blog/assigned/how-collagen-saved-my-skin-my-dad-s-mobility-and-maybe-even-my-life.webp",
   "how-to-solve-trust-issues-in-a-relationship": "/assets/img/blog/assigned/how-to-solve-trust-issues-in-a-relationship.webp",
   "how-to-unlock-the-hidden-secret-of-squirting-a-stress-relieving-guide": "/assets/img/blog/assigned/how-to-unlock-the-hidden-secret-of-squirting-a-stress-relieving-guide.webp",
@@ -69,7 +71,7 @@ export const blogImages: Record<string, string> = {
   "stop-hiding-and-embrace-mental-illness": "/assets/img/blog/assigned/stop-hiding-and-embrace-mental-illness.webp",
   "strength-in-sisterhood-how-to-show-and-give-love-and-support-to-black-women": "/assets/img/blog/assigned/strength-in-sisterhood-how-to-show-and-give-love-and-support-to-black-women.webp",
   "superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer": "/assets/img/blog/assigned/superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer.webp",
-  "superbeets-the-superfood-your-heart-has-been-waiting-for": "/assets/img/blog/assigned/superbeets-the-superfood-that-helped-sustain-me-for-7-years-while-battling-thyroid-cancer.webp",
+  "superbeets-the-superfood-your-heart-has-been-waiting-for": "/assets/img/blog/assigned/superbe-ets-the-superfood-your-heart-has-been-waiting-for.webp",
   "take-charge-of-your-health-and-well-being-with-naturopathy": "/assets/img/blog/assigned/take-charge-of-your-health-and-well-being-with-naturopathy.webp",
   "teen-mental-health-understanding-and-addressing-the-challenges": "/assets/img/blog/assigned/teen-mental-health-understanding-and-addressing-the-challenges.webp",
   "the-aging-population-crisis-exploring-the-consequences-of-the-decline-in-elder-care": "/assets/img/blog/assigned/the-aging-population-crisis-exploring-the-consequences-of-the-decline-in-elder-care.webp",
@@ -96,6 +98,7 @@ export const blogImages: Record<string, string> = {
   "unlocking-the-potential-effective-strategies-for-living-with-adhd": "/assets/img/blog/assigned/unlocking-the-potential-effective-strategies-for-living-with-adhd.webp",
   "unlocking-the-world-the-benefits-of-teaching-a-toddler-multiple-languages": "/assets/img/blog/assigned/unlocking-the-world-the-benefits-of-teaching-a-toddler-multiple-languages.webp",
   "unlocking-potential-observing-your-child-s-motor-skills-to-determine-athletic-abilities": "/assets/img/blog/assigned/unlocking-potential-observing-your-child-s-motor-skills-to-determine-athletic-abilities.webp",
+  "what-ders-means-diet-exercise-rest-spirituality-and-the-real-life-systems-that-change-everything": "/images/personal/professional/rosee-professional-suit.jpg",
   "what-is-askdogood": "/assets/img/blog/assigned/what-is-askdogood.webp",
   "what-you-need-to-know-about-serotonin-and-weight-loss": "/assets/img/blog/assigned/what-you-need-to-know-about-serotonin-and-weight-loss.webp",
   "when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication": "/assets/img/blog/assigned/when-good-intentions-go-awry-how-to-handle-misunderstandings-in-communication.webp",

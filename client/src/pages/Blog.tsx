@@ -260,7 +260,7 @@ export default function Blog() {
 
                   <CardHeader>
                     <CardTitle className="leading-tight">{post.title}</CardTitle>
-                    <CardDescription className="line-clamp-2">
+                    <CardDescription className="line-clamp-3 leading-7">
                       {post.excerpt ??
                         "A grounded, real-life breakdown with tools you can apply."}
                     </CardDescription>
@@ -329,7 +329,7 @@ export default function Blog() {
 
                 <CardHeader>
                   <CardTitle className="leading-tight">{post.title}</CardTitle>
-                  <CardDescription className="line-clamp-3">
+                  <CardDescription className="line-clamp-4 leading-7">
                     {post.excerpt ??
                       "Practical, honest guidance — built for real people with real lives."}
                   </CardDescription>

@@ -245,7 +245,7 @@ export default function BlogPost() {
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:mt-10 prose-h2:text-3xl prose-h3:mt-8 prose-h3:text-2xl prose-p:my-6 prose-p:text-lg prose-p:leading-relaxed prose-li:my-1 prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:mt-12 prose-h2:text-3xl prose-h3:mt-8 prose-h3:text-2xl prose-p:my-7 prose-p:text-lg prose-p:leading-8 prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg blog-content-dropcap"
               dangerouslySetInnerHTML={{ __html: safeHtml }}
             />
 

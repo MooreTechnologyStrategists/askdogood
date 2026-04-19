@@ -19,13 +19,15 @@ export function BlogRenderer({ post }: { post: StructuredPost }) {
       {post.sections.map((section, index) => {
         if (section.type === "text") {
           return (
-            <div key={index}>
+            <div key={index} className="space-y-4">
               <h2 className="text-2xl font-semibold mb-2">
                 {section.heading}
               </h2>
-              <p className="text-gray-700 leading-8">
-                {section.content}
-              </p>
+              <div className="space-y-4 text-gray-700 leading-8">
+                {section.content.split("\n\n").map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
           );
         }

@@ -33,6 +33,7 @@ import ExternalNewsFeeds from "@/components/ExternalNewsFeeds";
 import FoodSlideshow from "@/components/FoodSlideshow";
 import PersonalSlideshow from "@/components/PersonalSlideshow";
 import { safeBlogPosts } from "@/content/blogData";
+import { blogImages } from "@/data/blogImages";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import { siteCopy } from "@/content/siteCopy";
 import { GUMROAD_URLS } from "@/config/gumroad";
@@ -45,7 +46,17 @@ const FALLBACK_IMAGE = "/assets/img/blog/_fallback/blog.webp";
 
 // Utility function for image error handling
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, fallback?: string) => {
-  e.currentTarget.src = fallback || FALLBACK_IMAGE;
+  const img = e.currentTarget;
+  const nextSrc = fallback || FALLBACK_IMAGE;
+
+  if (img.dataset.fallbackApplied === "true" || img.src.endsWith(nextSrc)) {
+    img.onerror = null;
+    return;
+  }
+
+  img.dataset.fallbackApplied = "true";
+  img.onerror = null;
+  img.src = nextSrc;
 };
 
 // Type definitions
@@ -146,6 +157,7 @@ const BlogCard = ({
         loading="lazy"
         width="400"
         height="192"
+        onError={(e) => handleImageError(e)}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent rounded-t-2xl" />
       <div className="absolute top-4 left-4">
@@ -158,7 +170,7 @@ const BlogCard = ({
       <CardTitle className="text-foreground group-hover:text-primary transition-colors mb-2">
         {title}
       </CardTitle>
-      <CardDescription className="text-muted-foreground text-sm">{description}</CardDescription>
+      <CardDescription className="text-muted-foreground text-sm leading-7 line-clamp-4">{description}</CardDescription>
     </CardHeader>
     <CardContent className="relative z-10">
       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
@@ -270,7 +282,7 @@ export default function Home() {
       category: post.category || post.tags[0] || "Journal",
       readTime: post.readTime,
       slug: post.id,
-      imagePath: post.image || FALLBACK_IMAGE,
+      imagePath: blogImages[post.id] || post.image || FALLBACK_IMAGE,
     }));
 
   const featuredProducts = homepageFeaturedProductIds
@@ -317,8 +329,8 @@ export default function Home() {
     },
   ];
 
-  const founderPhotoPrimary = "/assets/img/brand/rosee-hero.jpg";
-  const founderPhotoSecondary = "/assets/img/rosee-home.jpg";
+  const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
+  const founderPhotoSecondary = "/assets/img/brand/rosee-hero.jpg";
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -472,11 +484,8 @@ export default function Home() {
                 <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight text-foreground md:text-5xl font-serif">
                   DoGood&apos;s Nature Remedy to Lower Cortisol
                 </h2>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                  Start with the flipbooks. This is where the reset begins.
-                </p>
-                <p className="mt-4 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-                  Start with the flipbooks. They&apos;re not just something to read, they&apos;re something to apply. Movement, breath, food, awareness... this is where we begin lowering stress at the root instead of reacting to it. I don&apos;t believe in cutting doctors out, we need them, but we need a different relationship. One where you come informed, aware, and ready to have real conversations about your health. Nobody will care about your body more than you. In a world that&apos;s changing fast, we have to learn how to take care of ourselves beyond systems that may not always be there. AskDoGood is built on self-awareness, early adjustments, and real healing, not masking symptoms. Doctors can be wrong, they&apos;re human, and that&apos;s why your voice matters. I believe healing starts and ends with nature. If access changed tomorrow, what would you rely on? This is about building real health, better habits, and generational change.
+                <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
+                  Movement, breath, food, awareness... this is where we begin lowering stress at the root instead of reacting to it. I don&apos;t believe in cutting doctors out, we need them, but we need a different relationship. One where you come informed, aware, and ready to have real conversations about your health. Nobody will care about your body more than you. In a world that&apos;s changing fast, we have to learn how to take care of ourselves beyond systems that may not always be there. AskDoGood is built on self-awareness, early adjustments, and real healing, not masking symptoms. Doctors can be wrong, they&apos;re human, and that&apos;s why your voice matters. I believe healing starts and ends with nature. If access changed tomorrow, what would you rely on? This is about building real health, better habits, and generational change.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
