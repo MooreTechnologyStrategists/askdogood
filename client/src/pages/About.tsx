@@ -14,6 +14,7 @@ import {
   ShoppingBag,
   UsersRound,
 } from "lucide-react";
+import { siteCopy, splitCopy } from "@/content/siteCopy";
 
 const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-7.jpg";
 const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-4.jpg";
@@ -35,14 +36,16 @@ export default function About() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                I help people rebuild
-                <span className="block text-primary">when life feels unstable.</span>
+                {siteCopy.about.headline}
               </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Ask DoGood is where health, structure, and faith meet real life. No hype. No guilt.
-                Just systems that help you feel steady again.
-              </p>
+              <div className="max-w-xl space-y-4 text-lg md:text-xl text-muted-foreground">
+                {splitCopy(siteCopy.about.content).map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+
+              <p className="text-sm font-medium text-primary/80">{siteCopy.cta}</p>
 
               {/* Value anchor / trust block */}
               <div className="rounded-2xl border bg-background/60 p-5">

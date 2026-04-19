@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { siteCopy, splitCopy } from "@/content/siteCopy";
 import {
   catalogById,
   flagshipDigitalProducts,
@@ -125,16 +126,15 @@ export default function Shop() {
                 AskDoGood catalog
               </Badge>
               <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
-                This is where knowledge turns into action.
+                {siteCopy.shop.headline}
               </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                Every guide inside AskDoGood was built from real-life experience, research, and lived application, not empty wellness talk.
-              </p>
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
-                These resources are here to help you support your health naturally, understand what your body is telling you, build sustainable habits, and make better daily decisions with confidence.
-              </p>
+              <div className="mt-6 max-w-3xl space-y-4 text-lg leading-8 text-muted-foreground">
+                {splitCopy(siteCopy.shop.content).map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/85">
-                Start where you are. Stay consistent. Let the transformation compound.
+                {siteCopy.cta}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href={readyNow[0].checkoutUrl} target="_blank" rel="noopener noreferrer">
@@ -154,9 +154,9 @@ export default function Shop() {
 
             <Card className="border-border/50 bg-background/85 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-xl">Start here</CardTitle>
+                <CardTitle className="text-xl">Why Buy From Here</CardTitle>
                 <CardDescription>
-                  These are the core AskDoGood offers for people who want practical structure, stronger health habits, and a clearer next step.
+                  {siteCopy.shop.whyBuyFromHere}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">

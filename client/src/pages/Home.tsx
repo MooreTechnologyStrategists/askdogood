@@ -34,6 +34,7 @@ import FoodSlideshow from "@/components/FoodSlideshow";
 import PersonalSlideshow from "@/components/PersonalSlideshow";
 import { safeBlogPosts } from "@/content/blogData";
 import { gardenSeasons } from "@/content/gardenSeasons";
+import { siteCopy } from "@/content/siteCopy";
 import { GUMROAD_URLS } from "@/config/gumroad";
 import { catalogById, hasLiveCheckout, homepageFeaturedProductIds } from "@/data/catalog";
 import { featuredWalkResource, walkResources } from "@/content/walks";
@@ -395,13 +396,17 @@ export default function Home() {
             </div>
 
             <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
-              Heal Better.
+              Real Health.
               <br />
-              <span className="text-primary">Live Smarter. Earn Stronger.</span>
+              <span className="text-primary">Real Discipline. Real Life.</span>
             </h2>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Take control of your health, your income, and your future without depending on broken systems.
+              {siteCopy.home.subtext}
+            </p>
+
+            <p className="text-sm md:text-base font-medium text-primary/80 max-w-3xl mx-auto">
+              {siteCopy.cta}
             </p>
 
             {/* Trust Indicators - Professional */}
@@ -413,21 +418,15 @@ export default function Home() {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <BeehiivSubscribe variant="inline" />
-              <Link href="/shop">
+              <Link href="/free-meal-plan">
                 <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
-                  Explore the catalog
+                  Start Your Reset
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </Link>
-              <Link href="/keep-moving">
+              <Link href="/resources">
                 <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
-                  Browse the digital library
-                </Button>
-              </Link>
-              <Link href="/work-with-askdogood">
-                <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
-                  Explore services
+                  Explore Resources
                 </Button>
               </Link>
             </div>
@@ -443,21 +442,18 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto pt-4 text-left">
-              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The problem</p>
-                <p className="font-semibold text-lg mb-2">Too many people are tired, sick, and stuck</p>
-                <p className="text-sm text-muted-foreground">Healthcare is expensive, information is fragmented, and most platforms never connect health, lifestyle, and income in one place.</p>
-              </div>
-              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The solution</p>
-                <p className="font-semibold text-lg mb-2">A holistic platform for rebuilding life from the inside out</p>
-                <p className="text-sm text-muted-foreground">AskDoGood focuses on natural healing, movement, emotional recovery, financial growth through education, and more stable daily environments.</p>
-              </div>
-              <div className="rounded-3xl border border-border/70 bg-background/85 backdrop-blur-sm p-5 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">The differentiator</p>
-                <p className="font-semibold text-lg mb-2">We do not just talk about healing</p>
-                <p className="text-sm text-muted-foreground">AskDoGood also connects health with skills, opportunity, and stability so people can rebuild more than symptoms alone.</p>
+            <div className="max-w-4xl mx-auto pt-4 text-left">
+              <div className="rounded-[2rem] border border-border/70 bg-background/85 backdrop-blur-sm p-6 md:p-8 shadow-lg">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">What This Is</p>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-foreground leading-tight">
+                  This isn&apos;t about trends or perfection. This is about building habits that actually work in real life.
+                </h3>
+                <p className="mt-4 text-base md:text-lg leading-8 text-muted-foreground">
+                  You don&apos;t need a complete overhaul, you need consistency. You need awareness. You need a system that helps you make better decisions daily without thinking about it too hard.
+                </p>
+                <p className="mt-4 text-base md:text-lg leading-8 text-muted-foreground">
+                  That&apos;s what AskDoGood is here for.
+                </p>
               </div>
             </div>
           </div>

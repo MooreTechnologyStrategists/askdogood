@@ -7,10 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import {
   ShoppingCart,
   Clock,
-  DollarSign,
   Users,
-  Leaf,
-  ChefHat,
   Calendar,
   MapPin,
   CheckCircle2,
@@ -20,6 +17,7 @@ import {
 import { recipes } from "@/data/recipes";
 import RecipeModal from "@/components/RecipeModal";
 import type { Recipe } from "@/data/recipes";
+import { siteCopy, splitCopy } from "@/content/siteCopy";
 
 const mealPlans = [
   {
@@ -222,32 +220,56 @@ export default function MealPrepResources() {
       <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block mb-4">
-              <Badge className="text-lg px-4 py-2">
-                <ChefHat className="h-5 w-5 mr-2 inline" />
-                Meal Prep Made Simple
-              </Badge>
-            </div>
+            <Badge className="mb-4 text-base px-4 py-2">Meal Prep</Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
-              Heal Your Body, One Meal at a Time
+              {siteCopy.mealPrep.headline}
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Plant-based, anti-inflammatory recipes, plus a simple DMV meal prep request flow for
-              people who want healing support without spending all week in the kitchen.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-primary" />
-                <span>Save 5+ Hours Weekly</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <DollarSign className="h-5 w-5 text-primary" />
-                <span>Pickup or delivery +$7</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Leaf className="h-5 w-5 text-primary" />
-                <span>Healing-forward menu examples</span>
-              </div>
+            <div className="mb-8 space-y-4 text-xl text-muted-foreground leading-relaxed">
+              {splitCopy(siteCopy.mealPrep.content).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <p className="text-sm font-medium text-primary/80">{siteCopy.cta}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <Card className="rounded-3xl border-border/70 shadow-sm">
+              <CardHeader>
+                <CardTitle className="text-3xl font-serif">{siteCopy.mealPrep.whyItWorksTitle}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-base leading-8 text-muted-foreground">
+                {splitCopy(siteCopy.mealPrep.whyItWorks).map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </CardContent>
+            </Card>
+
+            <div className="grid gap-6">
+              <Card className="rounded-3xl border-border/70 shadow-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-serif">{siteCopy.mealPrep.kitchenHeader}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-base leading-8 text-muted-foreground">
+                  {splitCopy(siteCopy.mealPrep.kitchenIntro).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </CardContent>
+              </Card>
+
+              <Card className="rounded-3xl border-border/70 shadow-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-serif">{siteCopy.mealPrep.hydrationHeader}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-base leading-8 text-muted-foreground">
+                  {splitCopy(siteCopy.mealPrep.hydrationBody).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

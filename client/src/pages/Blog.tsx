@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { safeBlogPosts } from "@/content/blogData";
+import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { blogImages } from "@/data/blogImages";
 
 const BLOG_ICON_URL =
@@ -119,15 +120,16 @@ export default function Blog() {
                 className="text-4xl md:text-5xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
-                Wellness guidance with structure.
-                <span className="block text-primary">Built from lived experience.</span>
+                {siteCopy.blog.headline}
               </h1>
 
-              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                A growing library of thyroid health, meal prep, recovery, mindset,
-                and self-advocacy content. Search by topic, browse by tag, and use
-                the archive as a working resource rather than a stream of disposable posts.
-              </p>
+              <div className="max-w-xl space-y-4 text-lg text-muted-foreground leading-relaxed">
+                {splitCopy(siteCopy.blog.content).map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+
+              <p className="text-sm font-medium text-primary/80">{siteCopy.cta}</p>
 
               {/* Search */}
               <div className="flex flex-col sm:flex-row gap-3 max-w-xl">
