@@ -38,11 +38,25 @@ interface ApiClient {
 // Local storage key
 const RECIPES_STORAGE_KEY = 'clinicalRecipes';
 
+const DEFAULT_RECIPE_IMAGES: Record<number, string> = {
+  1: 'https://askdogoodassets.blob.core.windows.net/images/foods/green-smoothie-avocado-oatmeal.JPG',
+  2: '/images/personal/food/burgers-plated.jpg',
+  3: '/images/personal/food/muhammad-dishes-3.jpg',
+};
+
 // Helper functions for local storage
 const getRecipesFromStorage = (): Recipe[] => {
   try {
     const stored = localStorage.getItem(RECIPES_STORAGE_KEY);
-    return stored ? JSON.parse(stored) : getSampleRecipes();
+    if (!stored) {
+      return getSampleRecipes();
+    }
+
+    const parsed = JSON.parse(stored) as Recipe[];
+    return parsed.map((recipe) => ({
+      ...recipe,
+      imageUrl: recipe.imageUrl || DEFAULT_RECIPE_IMAGES[recipe.id] || null,
+    }));
   } catch (error) {
     console.error('Error reading from localStorage:', error);
     return getSampleRecipes();
@@ -75,7 +89,7 @@ const getSampleRecipes = (): Recipe[] => {
       fat: 15,
       fiber: 10,
       sodium: 120,
-      imageUrl: null,
+      imageUrl: DEFAULT_RECIPE_IMAGES[1],
       category: "Smoothies",
       tags: "thyroid-friendly,high-fiber,anti-inflammatory,quick",
       isPremium: false,
@@ -98,7 +112,7 @@ const getSampleRecipes = (): Recipe[] => {
       fat: 4,
       fiber: 9,
       sodium: 180,
-      imageUrl: null,
+      imageUrl: DEFAULT_RECIPE_IMAGES[2],
       category: "Main Dishes",
       tags: "plant-based,high-protein,low-sodium,meal-prep",
       isPremium: false,
@@ -121,7 +135,7 @@ const getSampleRecipes = (): Recipe[] => {
       fat: 7,
       fiber: 4,
       sodium: 85,
-      imageUrl: null,
+      imageUrl: DEFAULT_RECIPE_IMAGES[3],
       category: "Sides",
       tags: "anti-inflammatory,cruciferous,low-calorie,vegan",
       isPremium: false,

@@ -13,6 +13,30 @@ type ResourceVisual = {
   overlayClass: string;
 };
 
+type ToolVisual = {
+  image: string;
+  alt: string;
+};
+
+const toolVisuals: Record<string, ToolVisual> = {
+  labelScanner: {
+    image: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Packaged grocery products arranged on shelves for ingredient label review',
+  },
+  mealPrep: {
+    image: '/images/personal/food/meal-prep.jpg',
+    alt: 'Prepared meal containers arranged for weekly meal prep',
+  },
+  clinicalRecipes: {
+    image: '/images/personal/food/muhammad-dishes-3.jpg',
+    alt: 'Purple cabbage and broccoli recipe prepared for Clinical Food RX',
+  },
+  symptomTracker: {
+    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Herbs, notebook, and tea arranged for wellness tracking and botanical reference',
+  },
+};
+
 const Resources = () => {
   const freeResources = [
     {
@@ -223,13 +247,13 @@ const Resources = () => {
               <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr] md:items-center">
                 <div>
                   <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-4">
-                    AskDoGood Digital Library
+                    Start Here
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Tools that actually help you live better.
+                    Choose the part of the library you need first.
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                    This is where I put real tools I've used, built, or stand behind. No fluff-just resources to help you move better, eat better, and take control of your life in a way that actually works.
+                    Start with the tool, guide, or trail that matches what you need right now. This section is here to make the library easier to use, not to repeat the same pitch twice.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link href="/resources/start" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
@@ -345,8 +369,13 @@ const Resources = () => {
               {/* LabelScanner App */}
               <div className="group relative overflow-hidden rounded-2xl border border-teal-100 bg-white shadow-lg transition-shadow hover:shadow-xl">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.16),_transparent_34%)]" aria-hidden="true" />
-                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
-                  <img src="/images/personal/food/vegetables-fresh.jpg" alt="" className="h-28 w-24 object-cover" />
+                <div className="relative h-40 overflow-hidden">
+                  <img src={toolVisuals.labelScanner.image} alt={toolVisuals.labelScanner.alt} className="h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-950/70 via-teal-900/20 to-transparent" />
+                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-sm">
+                    <Camera className="h-3.5 w-3.5" />
+                    LabelScanner
+                  </div>
                 </div>
                 <div className="relative bg-gradient-to-br from-teal-500 to-teal-600 p-8 text-white text-center">
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
@@ -391,8 +420,9 @@ const Resources = () => {
               {/* MealPrep App */}
               <div className="group relative overflow-hidden rounded-2xl border border-pink-100 bg-white shadow-lg transition-shadow hover:shadow-xl">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.14),_transparent_34%)]" aria-hidden="true" />
-                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
-                  <img src="/images/personal/food/meal-prep.jpg" alt="" className="h-28 w-24 object-cover" />
+                <div className="relative h-40 overflow-hidden">
+                  <img src={toolVisuals.mealPrep.image} alt={toolVisuals.mealPrep.alt} className="h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-pink-950/70 via-pink-900/20 to-transparent" />
                 </div>
                 <div className="relative bg-gradient-to-br from-pink-500 to-pink-600 p-8 text-white text-center">
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
@@ -437,8 +467,9 @@ const Resources = () => {
               {/* Clinical Recipes App */}
               <div className="group relative overflow-hidden rounded-2xl border-2 border-orange-300 bg-white shadow-lg transition-shadow hover:shadow-xl">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.16),_transparent_34%)]" aria-hidden="true" />
-                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
-                  <img src="/images/personal/food/vegetables-roasted.jpg" alt="" className="h-28 w-24 object-cover" />
+                <div className="relative h-40 overflow-hidden">
+                  <img src={toolVisuals.clinicalRecipes.image} alt={toolVisuals.clinicalRecipes.alt} className="h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-950/70 via-orange-900/20 to-transparent" />
                 </div>
                 <div className="relative bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white text-center">
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden="true" />
@@ -483,8 +514,9 @@ const Resources = () => {
               {/* Symptom Tracker + Herbs */}
               <div className="group relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-white shadow-lg transition-shadow hover:shadow-xl">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,83,45,0.15),_transparent_34%)]" aria-hidden="true" />
-                <div className="absolute bottom-4 right-4 overflow-hidden rounded-3xl opacity-[0.14] transition-opacity duration-300 group-hover:opacity-[0.22]" aria-hidden="true">
-                  <img src="/images/personal/professional/clay-banks-hands-together.jpg" alt="" className="h-28 w-24 object-cover" />
+                <div className="relative h-40 overflow-hidden">
+                  <img src={toolVisuals.symptomTracker.image} alt={toolVisuals.symptomTracker.alt} className="h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/70 via-emerald-900/20 to-transparent" />
                 </div>
                 <div className="relative bg-gradient-to-br from-primary to-primary/80 p-8 text-primary-foreground text-center">
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.1),_transparent_55%)]" aria-hidden="true" />

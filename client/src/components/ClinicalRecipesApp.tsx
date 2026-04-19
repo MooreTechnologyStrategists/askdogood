@@ -509,60 +509,82 @@ export default function ClinicalRecipesApp() {
         {/* Recipe Detail View Modal */}
         {showDetailView && selectedRecipe && (
           <div className="fixed inset-0 z-50 bg-stone-950/50 backdrop-blur-sm flex items-center justify-center p-4">
-            <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto border-stone-300 shadow-2xl">
-              <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <CardTitle className="text-3xl mb-2 text-amber-950 font-serif">{selectedRecipe.title}</CardTitle>
-                    {selectedRecipe.description && (
-                      <CardDescription className="text-base text-stone-700">{selectedRecipe.description}</CardDescription>
-                    )}
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {selectedRecipe.category && (
-                        <Badge variant="outline" className="border-amber-900 text-amber-900">{selectedRecipe.category}</Badge>
-                      )}
-                      {selectedRecipe.isPremium && (
-                        <Badge className="bg-amber-900 text-amber-50">Premium</Badge>
-                      )}
+            <Card className="w-full max-w-5xl max-h-[92vh] overflow-y-auto border-stone-300 shadow-2xl">
+              {selectedRecipe.imageUrl ? (
+                <div className="relative h-72 overflow-hidden border-b border-amber-200">
+                  <img
+                    src={selectedRecipe.imageUrl}
+                    alt={selectedRecipe.title}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="max-w-3xl">
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          {selectedRecipe.category && (
+                            <Badge variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur-sm">{selectedRecipe.category}</Badge>
+                          )}
+                          {selectedRecipe.isPremium && (
+                            <Badge className="bg-amber-900 text-amber-50">Premium</Badge>
+                          )}
+                        </div>
+                        <CardTitle className="text-3xl md:text-4xl mb-2 text-white font-serif">{selectedRecipe.title}</CardTitle>
+                        {selectedRecipe.description && (
+                          <CardDescription className="text-base text-stone-100/90">{selectedRecipe.description}</CardDescription>
+                        )}
+                      </div>
+                      <div className="flex gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-white/30 bg-white/10 text-white hover:bg-white/20"
+                          onClick={() => handleEdit(selectedRecipe)}
+                        >
+                          <Edit className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-white hover:bg-white/15"
+                          onClick={() => {
+                            setShowDetailView(false);
+                            setSelectedRecipe(null);
+                          }}
+                        >
+                          <X className="w-4 h-4" />
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex gap-2">
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="border-stone-300 hover:bg-amber-100"
-                      onClick={() => handleEdit(selectedRecipe)}
-                    >
-                      <Edit className="w-4 h-4" />
-                    </Button>
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="hover:bg-amber-100"
-                      onClick={() => {
+                </div>
+              ) : (
+                <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <CardTitle className="text-3xl mb-2 text-amber-950 font-serif">{selectedRecipe.title}</CardTitle>
+                      {selectedRecipe.description && (
+                        <CardDescription className="text-base text-stone-700">{selectedRecipe.description}</CardDescription>
+                      )}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" className="border-stone-300 hover:bg-amber-100" onClick={() => handleEdit(selectedRecipe)}>
+                        <Edit className="w-4 h-4" />
+                      </Button>
+                      <Button variant="ghost" size="sm" className="hover:bg-amber-100" onClick={() => {
                         setShowDetailView(false);
                         setSelectedRecipe(null);
-                      }}
-                    >
-                      <X className="w-4 h-4" />
-                    </Button>
+                      }}>
+                        <X className="w-4 h-4" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </CardHeader>
-              
-              {selectedRecipe.imageUrl && (
-                <div className="px-6">
-                  <img 
-                    src={selectedRecipe.imageUrl} 
-                    alt={selectedRecipe.title}
-                    className="w-full h-64 object-cover rounded-lg border border-amber-200"
-                  />
-                </div>
+                </CardHeader>
               )}
 
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8 p-6 md:p-8">
                 {/* Recipe Info Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
                   {selectedRecipe.prepTime && (
                     <div className="text-center">
                       <Clock className="w-5 h-5 mx-auto mb-1 text-amber-900" />
@@ -594,22 +616,23 @@ export default function ClinicalRecipesApp() {
                 </div>
 
                 {/* Ingredients */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Ingredients</h3>
-                  <ul className="space-y-2">
+                <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+                  <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+                    <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Ingredients</h3>
+                    <ul className="space-y-2">
                     {selectedRecipe.ingredients.split('\n').filter(i => i.trim()).map((ingredient, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-amber-900 mt-1">•</span>
                         <span className="text-stone-700">{ingredient.trim()}</span>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                    </ul>
+                  </div>
 
                 {/* Instructions */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Instructions</h3>
-                  <ol className="space-y-3">
+                  <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+                    <h3 className="text-xl font-semibold mb-3 text-amber-950 font-serif">Instructions</h3>
+                    <ol className="space-y-3">
                     {selectedRecipe.instructions.split('\n').filter(i => i.trim()).map((instruction, idx) => (
                       <li key={idx} className="flex gap-3">
                         <span className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-900 text-amber-50 flex items-center justify-center text-sm font-semibold">
@@ -618,7 +641,8 @@ export default function ClinicalRecipesApp() {
                         <span className="flex-1 pt-0.5 text-stone-700">{instruction.replace(/^\d+\.\s*/, '').trim()}</span>
                       </li>
                     ))}
-                  </ol>
+                    </ol>
+                  </div>
                 </div>
 
                 {/* Tags */}

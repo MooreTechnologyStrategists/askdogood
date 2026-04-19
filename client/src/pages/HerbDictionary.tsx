@@ -24,6 +24,35 @@ interface Herb {
   warnLevel: "safe" | "caution" | "warning"; // green / yellow / red
 }
 
+const QUICK_REFERENCE_INDEX: Record<string, string[]> = {
+  A: ["Aloe Vera", "Ashwagandha", "Astragalus", "Alfalfa"],
+  B: ["Black Seed", "Burdock Root", "Bilberry", "Bacopa"],
+  C: ["Chamomile", "Calendula", "Catnip", "Cilantro"],
+  D: ["Dandelion", "Dong Quai", "Dill", "Devil's Claw"],
+  E: ["Echinacea", "Elderberry", "Evening Primrose", "Eleuthero"],
+  F: ["Fennel", "Fenugreek", "Feverfew", "Frankincense"],
+  G: ["Ginger", "Ginkgo", "Garlic", "Goldenseal"],
+  H: ["Holy Basil", "Hibiscus", "Horsetail", "Hawthorn"],
+  I: ["Irish Moss", "Inula", "Indian Gooseberry", "Indigo"],
+  J: ["Jasmine", "Jiaogulan", "Juniper", "Jatamansi"],
+  K: ["Kelp", "Kudzu", "Kava", "Kalmegh"],
+  L: ["Lemon Balm", "Licorice", "Lavender", "Linden"],
+  M: ["Milk Thistle", "Marshmallow Root", "Moringa", "Motherwort"],
+  N: ["Nettle", "Neem", "Nutmeg", "Noni"],
+  O: ["Oregano", "Olive Leaf", "Oatstraw", "Oregon Grape"],
+  P: ["Peppermint", "Pau d'Arco", "Plantain", "Parsley"],
+  Q: ["Quassia", "Queen Anne's Lace", "Quince Leaf", "Quercetin"],
+  R: ["Rhodiola", "Red Clover", "Rosemary", "Raspberry Leaf"],
+  S: ["Sea Moss", "Sage", "Schisandra", "Slippery Elm"],
+  T: ["Turmeric", "Thyme", "Tulsi", "Tribulus"],
+  U: ["Uva Ursi", "Usnea", "Umckaloabo", "Uncaria"],
+  V: ["Valerian", "Vervain", "Violet Leaf", "Vitex"],
+  W: ["White Willow", "Wormwood", "Wheatgrass", "Wild Yam"],
+  X: ["Ximenia", "Xylopia", "Xu Duan", "Xanthium"],
+  Y: ["Yarrow", "Yerba Mate", "Yellow Dock", "Ylang-Ylang"],
+  Z: ["Zinc", "Zedoary", "Ziziphus", "Zanthoxylum"],
+};
+
 // ─── Data ─────────────────────────────────────────────────────────────────
 const herbs: Herb[] = [
   {
@@ -1008,6 +1037,39 @@ export default function HerbDictionary() {
           </p>
         </div>
       </div>
+
+      <section className="py-10 bg-gradient-to-b from-background to-secondary/20 border-b">
+        <div className="container">
+          <div className="mx-auto max-w-5xl text-center mb-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">A-Z quick index</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold font-serif text-foreground">Four entries under every letter</h2>
+            <p className="mt-3 text-muted-foreground max-w-3xl mx-auto">
+              Use this as a fast browse table for common herbs, botanicals, oils, vitamins, minerals, and related wellness references while the full long-form profiles continue to expand.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {Object.entries(QUICK_REFERENCE_INDEX).map(([letterKey, items]) => (
+              <Card key={letterKey} className="border-border/70 shadow-sm">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-3 text-xl font-serif">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">{letterKey}</span>
+                    <span>{items.length} entries</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((item) => (
+                      <Badge key={item} variant="secondary" className="px-3 py-1 text-xs font-medium">
+                        {item}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Search + Filters */}
       <section className="py-8 bg-background border-b sticky top-0 z-20 shadow-sm">
