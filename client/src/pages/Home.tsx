@@ -316,8 +316,8 @@ export default function Home() {
     },
   ];
 
-  const founderPhotoPrimary = "/images/personal/rosee-founder-snow-2026.jpg";
-  const founderPhotoSecondary = "/images/personal/professional/rosee-professional-suit.jpg";
+  const founderPhotoPrimary = "/assets/img/brand/rosee-hero.jpg";
+  const founderPhotoSecondary = "/assets/img/rosee-home.jpg";
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -383,7 +383,7 @@ export default function Home() {
                   onError={(e) =>
                     handleImageError(
                       e,
-                      "/images/personal/professional/hero-circle.jpg",
+                      "/assets/img/rosee-home.jpg",
                     )
                   }
                 />
@@ -688,7 +688,7 @@ export default function Home() {
                 loading="lazy"
                 width="420"
                 height="520"
-                onError={(e) => handleImageError(e, `${ASSET_BASE_URL}/hero-home.webp`)}
+                onError={(e) => handleImageError(e, "/assets/img/brand/rosee-hero.jpg")}
               />
             </div>
           </div>
