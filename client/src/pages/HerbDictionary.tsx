@@ -1,8 +1,8 @@
-import { useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, ChevronDown, ChevronUp, AlertTriangle, Leaf, MapPin, Zap, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 
 // ─── Type ──────────────────────────────────────────────────────────────────
@@ -22,6 +22,10 @@ interface Herb {
   interactions: string;
   thyroidNote?: string;
   warnLevel: "safe" | "caution" | "warning"; // green / yellow / red
+}
+
+function toHerbAnchor(name: string): string {
+  return `herb-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────
@@ -931,23 +935,28 @@ export default function HerbDictionary() {
   const [category, setCategory] = useState("All");
   const [entryType, setEntryType] = useState<(typeof ENTRY_TYPES)[number]>("All");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [indexLetter, setIndexLetter] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
-    return herbs.filter((h) => {
-      const normalizedEntryType = h.entryType ?? "Herb";
-      const matchesSearch =
-        !search ||
-        h.name.toLowerCase().includes(search.toLowerCase()) ||
-        h.latin.toLowerCase().includes(search.toLowerCase()) ||
-        h.benefits.some((b) => b.toLowerCase().includes(search.toLowerCase())) ||
-        h.origin.some((o) => o.toLowerCase().includes(search.toLowerCase())) ||
-        h.categories.some((c) => c.toLowerCase().includes(search.toLowerCase()));
-      const matchesLetter = letter === "All" || h.letter === letter;
-      const matchesCategory =
-        category === "All" || h.categories.includes(category);
-      const matchesEntryType = entryType === "All" || normalizedEntryType === entryType;
-      return matchesSearch && matchesLetter && matchesCategory && matchesEntryType;
-    });
+    const normalizedSearch = search.toLowerCase();
+
+    return herbs
+      .filter((h) => {
+        const normalizedEntryType = h.entryType ?? "Herb";
+        const matchesSearch =
+          !search ||
+          h.name.toLowerCase().includes(normalizedSearch) ||
+          h.latin.toLowerCase().includes(normalizedSearch) ||
+          h.benefits.some((b) => b.toLowerCase().includes(normalizedSearch)) ||
+          h.origin.some((o) => o.toLowerCase().includes(normalizedSearch)) ||
+          h.categories.some((c) => c.toLowerCase().includes(normalizedSearch));
+        const matchesLetter = letter === "All" || h.letter === letter;
+        const matchesCategory =
+          category === "All" || h.categories.includes(category);
+        const matchesEntryType = entryType === "All" || normalizedEntryType === entryType;
+        return matchesSearch && matchesLetter && matchesCategory && matchesEntryType;
+      })
+      .sort((left, right) => left.name.localeCompare(right.name));
   }, [search, letter, category, entryType]);
 
   const documentedHerbIndex = useMemo(() => {
@@ -967,6 +976,49 @@ export default function HerbDictionary() {
         items: items.sort((left, right) => left.name.localeCompare(right.name)),
       }));
   }, []);
+
+  const activeIndexGroup = useMemo(() => {
+    if (!indexLetter) {
+      return null;
+    }
+
+    return documentedHerbIndex.find(({ letterKey }) => letterKey === indexLetter) ?? null;
+  }, [documentedHerbIndex, indexLetter]);
+
+  useEffect(() => {
+    if (expanded && !filtered.some((herb) => herb.name === expanded)) {
+      setExpanded(null);
+    }
+  }, [expanded, filtered]);
+
+  useEffect(() => {
+    if (!expanded) {
+      return;
+    }
+
+    const target = document.getElementById(toHerbAnchor(expanded));
+    if (!target) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [expanded, filtered]);
+
+  function handleIndexLetterSelect(selectedLetter: string) {
+    setIndexLetter((current) => (current === selectedLetter ? null : selectedLetter));
+    setLetter(selectedLetter);
+  }
+
+  function handleDirectoryJump(letterKey: string, herbName: string) {
+    setSearch("");
+    setCategory("All");
+    setEntryType("All");
+    setLetter(letterKey);
+    setIndexLetter(letterKey);
+    setExpanded(herbName);
+  }
 
   const warnColors = {
     safe: "bg-green-50 border-green-200 text-green-800",
@@ -1029,32 +1081,73 @@ export default function HerbDictionary() {
 
       <section className="py-10 bg-gradient-to-b from-background to-secondary/20 border-b">
         <div className="container">
-          <div className="mx-auto max-w-5xl text-center mb-8">
+          <div className="mx-auto max-w-5xl text-center mb-6">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Documented herb index</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold font-serif text-foreground">Browse the herbs that are actually documented here</h2>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold font-serif text-foreground">Browse the herbs without burying the results</h2>
             <p className="mt-3 text-muted-foreground max-w-3xl mx-auto">
-              This index is generated from the real profiles on this page. Use it to jump by letter and see what already has full cautions, interactions, and thyroid-aware notes.
+              Pick a letter to filter the directory, then jump straight to a documented herb. This index is generated from the real profiles on this page.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {documentedHerbIndex.map(({ letterKey, items }) => (
-              <Card key={letterKey} className="border-border/70 shadow-sm">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-3 text-xl font-serif">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">{letterKey}</span>
-                    <span>{items.length} documented</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="flex flex-wrap gap-2">
-                    {items.map((item) => (
+          <Card className="mx-auto max-w-6xl border-border/70 shadow-sm">
+            <CardContent className="p-4 md:p-5 space-y-4">
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLetter("All");
+                    setIndexLetter(null);
+                  }}
+                  className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+                    letter === "All"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground hover:bg-primary/10"
+                  }`}
+                >
+                  All entries
+                </button>
+                {documentedHerbIndex.map(({ letterKey, items }) => {
+                  const isActive = letter === letterKey;
+                  return (
+                    <button
+                      key={letterKey}
+                      type="button"
+                      onClick={() => handleIndexLetterSelect(letterKey)}
+                      className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
+                        isActive
+                          ? "border-primary bg-primary/10 text-primary"
+                          : "border-border bg-background text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                      }`}
+                    >
+                      <span>{letterKey}</span>
+                      <span className={`rounded-full px-1.5 py-0.5 text-[10px] ${isActive ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
+                        {items.length}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {activeIndexGroup ? (
+                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
+                  <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">
+                        {activeIndexGroup.letterKey} directory
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {activeIndexGroup.items.length} documented entr{activeIndexGroup.items.length === 1 ? "y" : "ies"} under this letter.
+                      </p>
+                    </div>
+                    <Button variant="ghost" size="sm" onClick={() => setIndexLetter(null)} className="text-xs">
+                      Collapse list
+                    </Button>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {activeIndexGroup.items.map((item) => (
                       <button
                         key={item.name}
                         type="button"
-                        onClick={() => {
-                          setLetter(letterKey);
-                          setExpanded(item.name);
-                        }}
+                        onClick={() => handleDirectoryJump(activeIndexGroup.letterKey, item.name)}
                         className="rounded-full"
                       >
                         <Badge variant="secondary" className="px-3 py-1 text-xs font-medium hover:bg-primary hover:text-primary-foreground transition-colors">
@@ -1063,10 +1156,14 @@ export default function HerbDictionary() {
                       </button>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              ) : (
+                <p className="text-center text-sm text-muted-foreground">
+                  Select a letter to see the documented herbs under it.
+                </p>
+              )}
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -1106,7 +1203,10 @@ export default function HerbDictionary() {
             {LETTERS.map((l) => (
               <button
                 key={l}
-                onClick={() => setLetter(l)}
+                onClick={() => {
+                  setLetter(l);
+                  setIndexLetter(l === "All" ? null : l);
+                }}
                 className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                   letter === l
                     ? "bg-primary text-primary-foreground"
@@ -1159,6 +1259,7 @@ export default function HerbDictionary() {
                 const normalizedEntryType = herb.entryType ?? "Herb";
                 return (
                   <Card
+                    id={toHerbAnchor(herb.name)}
                     key={herb.name}
                     className={`overflow-hidden border-2 transition-all duration-300 ${
                       isOpen ? "border-primary/50 shadow-xl" : "border-border hover:border-primary/30 hover:shadow-lg"
