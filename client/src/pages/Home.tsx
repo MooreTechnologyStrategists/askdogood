@@ -474,10 +474,13 @@ export default function Home() {
                   Nature Remedy
                 </span>
                 <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight text-foreground md:text-5xl font-serif">
-                  DoGood&apos;s Nature Remedy to lower cortisol, blood pressure and heighten senses, and spiritual connection.
+                  DoGood&apos;s Nature Remedy to Lower Cortisol
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                  The flipbooks are not just pretty extras. They document movement as a practical reset: slower breathing, calmer nerves, sharper senses, and a more grounded connection to God, nature, and your own body.
+                  Start with the flipbooks. This is where the reset begins.
+                </p>
+                <p className="mt-4 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
+                  Start with the flipbooks. They&apos;re not just something to read, they&apos;re something to apply. Movement, breath, food, awareness... this is where we begin lowering stress at the root instead of reacting to it. I don&apos;t believe in cutting doctors out, we need them, but we need a different relationship. One where you come informed, aware, and ready to have real conversations about your health. Nobody will care about your body more than you. In a world that&apos;s changing fast, we have to learn how to take care of ourselves beyond systems that may not always be there. AskDoGood is built on self-awareness, early adjustments, and real healing, not masking symptoms. Doctors can be wrong, they&apos;re human, and that&apos;s why your voice matters. I believe healing starts and ends with nature. If access changed tomorrow, what would you rely on? This is about building real health, better habits, and generational change.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
