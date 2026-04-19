@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Leaf, ExternalLink } from 'lucide-react';
+import { GUMROAD_URLS } from '@/config/gumroad';
 
 // ─── Health Knowledge Base ─────────────────────────────────────────────────
 // Each entry: [trigger keywords, response text]
@@ -210,7 +211,7 @@ Struggling with weight is one of the most frustrating parts of thyroid disease �
 **❌ What doesn't work:**
 Extreme caloric restriction — this LOWERS T3 and makes thyroid disease worse.
 
-📋 [30-Day Meal Plan ($29.99) →](https://askdogood.gumroad.com/l/30-day-meal-plan)`],
+📋 [30-Day Meal Plan ($29.99) →](${GUMROAD_URLS.mealPlan})`],
 
   // SLEEP
   [['sleep', 'insomnia', 'rest', 'tired', 'fatigue', 'can\'t sleep', 'wake up tired'],
@@ -389,11 +390,11 @@ Here's everything available right now:
 
 **📊 Thyroid Symptom Tracker — $9.99**
 Printable PDF to track symptoms, labs, and patterns over time.
-→ [Get Instant Access](https://askdogood.gumroad.com/l/thyroid-symptom-tracker)
+→ [Get Instant Access](${GUMROAD_URLS.symptomTracker})
 
 **🥗 30-Day Thyroid-Friendly Meal Plan — $29.99**
 Thyroid-optimized, anti-inflammatory meals. Shopping lists included.
-→ [Get the Meal Plan](https://askdogood.gumroad.com/l/30-day-meal-plan)
+→ [Get the Meal Plan](${GUMROAD_URLS.mealPlan})
 
 **🆓 Free Resources:**
 • Free Thyroid Lab Guide → [/free-thyroid-lab-guide](/free-thyroid-lab-guide)

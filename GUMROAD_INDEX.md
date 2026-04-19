@@ -22,6 +22,12 @@
 **See all my product details**
 → Check: [GUMROAD_PRODUCTS_CHECKLIST.md](GUMROAD_PRODUCTS_CHECKLIST.md)
 
+**Launch each product with one worksheet**
+→ Use: [GUMROAD_PRODUCT_LAUNCH_WORKSHEET.md](GUMROAD_PRODUCT_LAUNCH_WORKSHEET.md)
+
+**See which site links are live vs broken**
+→ Review: [GUMROAD_SITE_LINK_AUDIT_APRIL_2026.md](GUMROAD_SITE_LINK_AUDIT_APRIL_2026.md)
+
 **Get student workbook/guide content**
 → Review: [THYROID_COURSE_WORKBOOK.md](THYROID_COURSE_WORKBOOK.md)
 
@@ -51,7 +57,7 @@
 
 - **Product #2: Clinical Food RX ($47)** - In Development
 - **Product #3: Lab Interpretation Guide ($27)** - In Development  
-- **Product #4: Supplement Templates ($17)** - In Development
+- **Product #4: Thyroid Supplement Protocol Templates ($17)** - In Development
 - **Product #5: 1-on-1 Coaching ($200/hr)** - Future
 - **Product #6: Monthly Membership ($29/mo)** - Future
 
@@ -63,6 +69,26 @@
 - Success metrics
 
 **Size:** 100+ pages | **Use:** Reference for all products
+
+#### 1A. [GUMROAD_PRODUCT_LAUNCH_WORKSHEET.md](GUMROAD_PRODUCT_LAUNCH_WORKSHEET.md)
+**One-page per product launch tracker**
+
+- Canonical account and slug for each product
+- What is already live vs not created yet
+- Files and cover images needed before publishing
+- Final URL field to paste back into the site config
+
+**Use:** Work through each product in order without guessing
+
+#### 1B. [GUMROAD_SITE_LINK_AUDIT_APRIL_2026.md](GUMROAD_SITE_LINK_AUDIT_APRIL_2026.md)
+**Website Gumroad audit for April 2026**
+
+- Working vs broken public links
+- Pages/components currently affected
+- Code surfaces already using centralized config vs hardcoded links
+- Immediate cleanup priorities
+
+**Use:** Fix broken buy buttons and launch in the right order
 
 ---
 

@@ -13,6 +13,7 @@ const sections = [
     caption: 'Real meals. Real ingredients. This is where healing starts, one plate at a time.',
     image: '/images/personal/food/meal-prep.jpg',
     imageAlt: 'Meal prep and healing food prepared for AskDoGood',
+    href: '/behind-the-scenes/in-my-kitchen',
   },
   {
     id: 'juices-and-smoothies',
@@ -27,7 +28,7 @@ const sections = [
     eyebrow: 'Movement',
     title: 'Staying Active',
     caption: 'Movement does not have to be extreme. Consistency is what creates change.',
-    image: '/images/personal/rosee-hero-1.jpg',
+    image: '/images/personal/rosee-founder-snow-2026.jpg',
     imageAlt: 'RoSee Murphy outdoors and staying active',
   },
   {
@@ -138,6 +139,13 @@ export default function BehindTheScenes() {
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">{section.eyebrow}</p>
                   <h3 className="font-serif text-2xl font-semibold tracking-tight text-foreground">{section.title}</h3>
                   <p className="text-base leading-7 text-muted-foreground">{section.caption}</p>
+                  {'href' in section && section.href ? (
+                    <Button asChild variant="outline" className="rounded-full px-5">
+                      <Link href={section.href}>
+                        Read the article <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  ) : null}
                 </CardContent>
               </Card>
             ))}

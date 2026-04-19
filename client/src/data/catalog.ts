@@ -23,6 +23,7 @@ export interface CatalogItem {
   image: string;
   category: string;
   checkoutUrl?: string;
+  checkoutState?: "live" | "planned";
   internalPath?: string;
   notes?: string;
 }
@@ -45,6 +46,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     category: "Health / Wellness / Education",
     checkoutUrl: GUMROAD_URLS.thyroidMastery,
+    checkoutState: "live",
     internalPath: "/course/thyroid-health-mastery",
     notes:
       "Custom cover exists. Standard version only for now. Public listing should collect email and allow discount codes.",
@@ -66,6 +68,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png",
     category: "Nutrition / Wellness",
     checkoutUrl: GUMROAD_URLS.plantReset,
+    checkoutState: "planned",
+    internalPath: "/meal-prep",
     notes: "Use Gumroad as primary checkout and keep Stripe as optional mirror later.",
   },
   {
@@ -84,6 +88,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
     category: "Health education",
     checkoutUrl: GUMROAD_URLS.labGuide,
+    checkoutState: "planned",
+    internalPath: "/free-thyroid-lab-guide",
   },
   {
     id: "thyroid-supplement-protocol-templates",
@@ -102,6 +108,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.supplementTemplates,
+    checkoutState: "planned",
+    internalPath: "/supplement-guide",
     notes: "Current live Gumroad slug is legacy and should be renamed before a full public push.",
   },
   {
@@ -119,6 +127,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     image: "/bundle-garden-to-table-v2.png",
     category: "Gardening / Wellness / Food",
     checkoutUrl: GUMROAD_URLS.gardenBundle,
+    checkoutState: "planned",
+    internalPath: "/resources/library",
   },
   {
     id: "autoimmune-recovery-guide",
@@ -136,6 +146,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Health / Autoimmune wellness",
     checkoutUrl: GUMROAD_URLS.autoimmuneGuide,
+    checkoutState: "planned",
+    internalPath: "/resources/start",
   },
   {
     id: "black-womens-health-advocacy-toolkit",
@@ -171,6 +183,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600",
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.symptomTracker,
+    checkoutState: "planned",
+    internalPath: "/symptom-tracker",
   },
   {
     id: "30-day-thyroid-meal-plan",
@@ -187,6 +201,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
     category: "Nutrition / Thyroid health",
     checkoutUrl: GUMROAD_URLS.mealPlan,
+    checkoutState: "planned",
+    internalPath: "/free-meal-plan",
   },
 ];
 
@@ -207,6 +223,8 @@ export const membershipOffers: CatalogItem[] = [
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Membership / Wellness",
     checkoutUrl: GUMROAD_URLS.wellnessCircle,
+    checkoutState: "planned",
+    internalPath: "/contact",
   },
 ];
 
@@ -225,6 +243,8 @@ export const leadMagnets: CatalogItem[] = [
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Free thyroid resource",
     checkoutUrl: GUMROAD_URLS.thyroidChecklist,
+    checkoutState: "planned",
+    internalPath: "/doctor-checklist",
   },
   {
     id: "budget-grocery-checklist",
@@ -240,6 +260,7 @@ export const leadMagnets: CatalogItem[] = [
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600",
     category: "Free grocery resource",
     checkoutUrl: GUMROAD_URLS.budgetGroceryChecklist,
+    checkoutState: "live",
   },
   {
     id: "meal-prep-container-guide",
@@ -255,8 +276,13 @@ export const leadMagnets: CatalogItem[] = [
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600",
     category: "Free meal prep resource",
     checkoutUrl: GUMROAD_URLS.mealPrepContainerGuide,
+    checkoutState: "live",
   },
 ];
+
+export function hasLiveCheckout(item?: CatalogItem | null): boolean {
+  return Boolean(item?.checkoutUrl && item.checkoutState === "live");
+}
 
 export const serviceCatalog: CatalogItem[] = [
   {

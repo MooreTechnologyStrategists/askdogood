@@ -1,7 +1,8 @@
 import { ExternalLink, Mail, Globe, Download, Smartphone, Camera, UtensilsCrossed, ClipboardList, Leaf, Brain, Zap } from 'lucide-react';
 import { Link } from 'wouter';
 import { trackEvent, trackLeadMagnetDownload } from '@/lib/analytics';
-import { catalogById } from '@/data/catalog';
+import { catalogById, hasLiveCheckout } from '@/data/catalog';
+import ResourcesHeader from '@/components/ResourcesHeader';
 
 type ResourceVisual = {
   backgroundImage?: string;
@@ -208,28 +209,9 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-r from-teal-600 to-teal-700 text-white py-20"
-        style={{
-          backgroundImage: 'url(https://askdogoodassets.blob.core.windows.net/images/hero/resources-hero.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-teal-900/70"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Free Resources & Tools
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Resources You Can Use Right Now
-            </h1>
-            <p className="text-xl md:text-2xl text-teal-50 leading-relaxed">
-              Everything here has purpose. If it&apos;s listed, it works. These are tools, guides, and resources to help you move smarter, eat better, and take control of your life without overcomplicating it.
-            </p>
-          </div>
+      <section className="px-4 py-12 md:py-16">
+        <div className="container mx-auto">
+          <ResourcesHeader />
         </div>
       </section>
 
@@ -237,24 +219,24 @@ const Resources = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="mb-12 rounded-[2rem] border border-primary/15 bg-gradient-to-r from-primary/5 via-white to-secondary/10 p-8 md:p-10">
+            <div id="start-here" className="mb-12 rounded-[2rem] border border-primary/15 bg-gradient-to-r from-primary/5 via-white to-secondary/10 p-8 md:p-10">
               <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr] md:items-center">
                 <div>
                   <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-sm font-medium text-primary mb-4">
                     AskDoGood Digital Library
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    The walking-trail flipbooks are part of the site now.
+                    Tools that actually help you live better.
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                    The digital library now holds the live trail stories and editorial wellness pieces already published on AskDoGood, including Indian Creek, Keep Moving, and the new Patuxent River Blue Trail article.
+                    This is where I put real tools I've used, built, or stand behind. No fluff-just resources to help you move better, eat better, and take control of your life in a way that actually works.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <a href="/flipbooks/patuxent-river-blue-trail.html" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
-                      Open Patuxent River Blue Trail
-                    </a>
-                    <Link href="/keep-moving" className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
-                      View Digital Library Page
+                    <Link href="/resources/start" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                      Start Here
+                    </Link>
+                    <Link href="/resources/library" className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+                      Browse All
                     </Link>
                   </div>
                 </div>
@@ -700,8 +682,7 @@ const Resources = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {premiumProducts.map((product) => (
-                <a key={product.id} href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="group relative overflow-hidden rounded-2xl border border-white/60 bg-white shadow-lg transition-all hover:shadow-2xl h-full">
+                <div key={product.id} className="group relative overflow-hidden rounded-2xl border border-white/60 bg-white shadow-lg transition-all hover:shadow-2xl h-full">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(20,184,166,0.08),_transparent_34%)]" aria-hidden="true" />
                     <div className="absolute bottom-4 right-4 opacity-[0.1] transition-opacity duration-300 group-hover:opacity-[0.18]" aria-hidden="true">
                       <img
@@ -744,13 +725,18 @@ const Resources = () => {
                       </div>
                       <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                         <span className="text-3xl font-bold text-teal-600">{product.priceLabel}</span>
-                        <button className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">
-                          View offer
-                        </button>
+                        {hasLiveCheckout(product) ? (
+                          <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">
+                            View offer
+                          </a>
+                        ) : (
+                          <Link href={product.internalPath || '/shop'} className="border border-teal-200 px-6 py-3 rounded-xl font-semibold text-teal-800 hover:bg-teal-50 transition">
+                            Learn more
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
-                </a>
               ))}
             </div>
 

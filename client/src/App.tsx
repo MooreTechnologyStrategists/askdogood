@@ -30,6 +30,8 @@ import ThyroidCourse from "./pages/ThyroidCourse";
 import ThyroidMasteryCourse from "./pages/products/ThyroidMasteryCourse";
 import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
+import ResourcesStart from "./pages/ResourcesStart";
+import ResourcesLibrary from "./pages/ResourcesLibrary";
 import ShortStories from "./pages/ShortStories";
 import ChinaWhiteSeries from "./pages/ChinaWhiteSeries";
 import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
@@ -55,6 +57,7 @@ import SupplementGuide from "./pages/SupplementGuide";
 import DoctorChecklist from "./pages/DoctorChecklist";
 import Coaching from "./pages/Coaching";
 import BehindTheScenes from "./pages/BehindTheScenes";
+import InMyKitchen from "./pages/InMyKitchen";
 
 import {
   Card,
@@ -113,8 +116,11 @@ function Router() {
     <Route path="/garden" component={Garden} />
     <Route path="/no-fluff" component={NoFluff} />
     <Route path="/resources" component={Resources} />
+    <Route path="/resources/start" component={ResourcesStart} />
+    <Route path="/resources/library" component={ResourcesLibrary} />
     <Route path="/contact" component={Contact} />
     <Route path="/behind-the-scenes" component={BehindTheScenes} />
+    <Route path="/behind-the-scenes/in-my-kitchen" component={InMyKitchen} />
     <Route path="/work-with-askdogood" component={WorkWithAskDoGood} />
     <Route path="/guest-contributors" component={GuestContributors} />
     <Route path="/herbs" component={HerbDictionary} />

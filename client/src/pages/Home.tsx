@@ -35,7 +35,7 @@ import PersonalSlideshow from "@/components/PersonalSlideshow";
 import { safeBlogPosts } from "@/content/blogData";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import { GUMROAD_URLS } from "@/config/gumroad";
-import { catalogById, homepageFeaturedProductIds } from "@/data/catalog";
+import { catalogById, hasLiveCheckout, homepageFeaturedProductIds } from "@/data/catalog";
 import { featuredWalkResource, walkResources } from "@/content/walks";
 
 // Constants
@@ -316,7 +316,7 @@ export default function Home() {
     },
   ];
 
-  const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
+  const founderPhotoPrimary = "/images/personal/rosee-founder-snow-2026.jpg";
   const founderPhotoSecondary = "/images/personal/professional/rosee-professional-suit.jpg";
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
@@ -436,11 +436,11 @@ export default function Home() {
               <p className="text-sm text-muted-foreground font-medium">
                 Free Thyroid Symptom Checklist + 3-Day Meal Plan
               </p>
-              <a href={GUMROAD_URLS.freeChecklistMealPlan} target="_blank" rel="noopener noreferrer">
+              <Link href="/free-meal-plan">
                 <Button variant="outline" className="rounded-3xl px-6 py-5 text-sm font-semibold border-2 border-primary/45 bg-background text-foreground shadow-lg hover:bg-primary/5">
                   Get the Free Checklist + 3-Day Plan
                 </Button>
-              </a>
+              </Link>
             </div>
 
             <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto pt-4 text-left">
@@ -566,9 +566,9 @@ export default function Home() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href={GUMROAD_URLS.storefront} target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-3xl px-6 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl">Shop on Gumroad</Button>
-              </a>
+              <Link href="/shop">
+                <Button className="rounded-3xl px-6 bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-xl">Explore the catalog</Button>
+              </Link>
               <Link href="/work-with-askdogood">
                 <Button variant="outline" className="rounded-3xl px-6 border-2 border-primary/50 bg-white text-foreground font-semibold shadow-sm">
                   Work With AskDoGood
@@ -783,11 +783,19 @@ export default function Home() {
                       Direct checkout for the live version of this offer.
                     </p>
                   </div>
-                  <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full rounded-full text-base font-semibold py-3 shadow-sm hover:shadow-md transition-all">
-                      View offer
-                    </Button>
-                  </a>
+                  {hasLiveCheckout(product) ? (
+                    <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full rounded-full text-base font-semibold py-3 shadow-sm hover:shadow-md transition-all">
+                        View offer
+                      </Button>
+                    </a>
+                  ) : (
+                    <Link href={product.internalPath || "/shop"}>
+                      <Button variant="outline" className="w-full rounded-full text-base font-semibold py-3 shadow-sm hover:shadow-md transition-all">
+                        Learn more
+                      </Button>
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}

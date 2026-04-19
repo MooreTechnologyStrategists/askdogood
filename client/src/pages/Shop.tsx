@@ -17,6 +17,7 @@ import {
   catalogById,
   comingSoonMerchItems,
   flagshipDigitalProducts,
+  hasLiveCheckout,
   launchOrder,
   leadMagnets,
   membershipOffers,
@@ -31,7 +32,7 @@ const launchRoadmap = launchOrder
   .filter((item): item is CatalogItem => Boolean(item));
 
 function CatalogAction({ item }: { item: CatalogItem }) {
-  if (item.checkoutUrl) {
+  if (hasLiveCheckout(item)) {
     return (
       <a href={item.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
         <Button className="w-full gap-2">
@@ -46,7 +47,7 @@ function CatalogAction({ item }: { item: CatalogItem }) {
     return (
       <Link href={item.internalPath}>
         <Button variant="outline" className="w-full gap-2">
-          Learn more
+          {item.kind === "lead-magnet" ? "Open resource" : "Learn more"}
           <ArrowRight className="h-4 w-4" />
         </Button>
       </Link>

@@ -1,0 +1,70 @@
+{
+  "id": "in-my-kitchen",
+  "title": "In My Kitchen: Where Healing Meets Hustle",
+  "excerpt": "This isn't just meal prep. This is how I stay disciplined, healthy, and in control of my life.",
+  "featuredImage": "/images/personal/food/meal-prep.jpg",
+  "sections": [
+    {
+      "type": "image",
+      "images": [
+        "/images/personal/food/meal-prep.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "The Philosophy",
+      "content": "I don't cook just to eat-I cook to live better. Everything in my kitchen has purpose. Food is how I control my energy, my health, and my day. I eat to live, I don't live to eat."
+    },
+    {
+      "type": "image",
+      "images": [
+        "/images/personal/food/meal-complete.jpg",
+        "/images/personal/food/veggies-bowl.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "My Non-Negotiables",
+      "content": "No plain white salt-if I use salt, it's pink Himalayan. I balance everything. If I eat carbs, I adjust something else. If I eat meat, I limit sugar. I cook in bulk because eating at home is healthier and cheaper. And yes-clean as you go."
+    },
+    {
+      "type": "image",
+      "images": [
+        "/images/personal/food/greens-salad.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "The Science",
+      "content": "Meal prepping can reduce calorie intake by up to 30%. Eating leafy greens supports heart health and lowers disease risk. Drinking water supports metabolism. Cooking at home consistently lowers added sugar and unhealthy fat compared with relying on takeout."
+    },
+    {
+      "type": "image",
+      "images": [
+        "/images/personal/food/vegetables-fresh.jpg",
+        "/images/personal/food/vegetables-roasted.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "How I Cook",
+      "content": "A good cook can walk into a kitchen, look around, and make something out of what's there. I don't rely on recipes-I rely on instinct and understanding how foods work together."
+    },
+    {
+      "type": "text",
+      "heading": "Staples",
+      "content": "Kale, beets, and coconut water are part of my lifestyle. I also grow what I can. Fresh food around me keeps me creative and consistent."
+    },
+    {
+      "type": "image",
+      "images": [
+        "/images/personal/food/smoothie-green-goddess.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Final Word",
+      "content": "This kitchen is where I reset. Where I make decisions that protect my health and my future. Take control of your kitchen, and you take control of your life."
+    }
+  ]
+}

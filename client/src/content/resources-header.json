@@ -1,0 +1,13 @@
+{
+  "badge": "AskDoGood Digital Library",
+  "headline": "Tools that actually help you live better",
+  "subtext": "This is where I put real tools I've used, built, or stand behind. No fluff-just resources to help you move better, eat better, and take control of your life in a way that actually works.",
+  "primaryCTA": {
+    "text": "Start Here",
+    "link": "/resources/start"
+  },
+  "secondaryCTA": {
+    "text": "Browse All",
+    "link": "/resources/library"
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -19,7 +20,6 @@ import {
 import { recipes } from "@/data/recipes";
 import RecipeModal from "@/components/RecipeModal";
 import type { Recipe } from "@/data/recipes";
-import { GUMROAD_URLS } from "@/config/gumroad";
 
 const mealPlans = [
   {
@@ -209,7 +209,7 @@ export default function MealPrepResources() {
         "",
         `Notes: ${notes || "None"}`,
         "",
-        `After reviewing this request, I will complete checkout here: ${GUMROAD_URLS.mealPrepDeposit}`,
+        "After reviewing this request, I will send the next payment or booking step directly.",
       ].join("\n"),
     );
 
@@ -425,14 +425,14 @@ export default function MealPrepResources() {
                     <PhoneCall className="mr-2 h-4 w-4" /> Submit Meal Prep Request
                   </Button>
                   <Button variant="outline" className="w-full text-base border-2 border-primary/30" asChild>
-                    <a href={GUMROAD_URLS.mealPrepDeposit} target="_blank" rel="noopener noreferrer">
-                      Secure Checkout on Gumroad
-                    </a>
+                    <Link href="/contact">
+                      Request custom meal prep support
+                    </Link>
                   </Button>
                 </div>
 
                 <p className="text-xs text-muted-foreground">
-                  No extra software needed: submit the form and pay on Gumroad to lock in your spot.
+                  No extra software needed: submit the form and I will follow up with the next step directly.
                 </p>
               </CardContent>
             </Card>
@@ -536,9 +536,9 @@ export default function MealPrepResources() {
 
               <div className="text-center mt-12">
                 <Button size="lg" className="text-lg" asChild>
-                  <a href={GUMROAD_URLS.plantReset} target="_blank" rel="noopener noreferrer">
-                    Get the 21-Day Plant-Based Reset on Gumroad - $47
-                  </a>
+                  <Link href="/shop">
+                    See the 21-Day Reset details
+                  </Link>
                 </Button>
               </div>
 
@@ -595,9 +595,9 @@ export default function MealPrepResources() {
                       </div>
 
                       <Button className="w-full" asChild>
-                        <a href={GUMROAD_URLS.plantReset} target="_blank" rel="noopener noreferrer">
-                          Get Meal Plan Bundle
-                        </a>
+                        <Link href="/shop">
+                          Preview meal plan options
+                        </Link>
                       </Button>
                     </CardContent>
                   </Card>
@@ -640,9 +640,9 @@ export default function MealPrepResources() {
                 </div>
                 <div className="text-center">
                   <Button size="lg" className="text-lg" asChild>
-                    <a href={GUMROAD_URLS.plantReset} target="_blank" rel="noopener noreferrer">
-                      Get the 21-Day Plant-Based Reset - $47
-                    </a>
+                    <Link href="/shop">
+                      View the reset in the catalog
+                    </Link>
                   </Button>
                 </div>
               </div>
