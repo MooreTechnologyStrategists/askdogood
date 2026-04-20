@@ -35,7 +35,7 @@ const herbs: Herb[] = [
     latin: "Aloe barbadensis",
     letter: "A",
     emoji: "🌵",
-    photo: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/20345528/pexels-photo-20345528.jpeg?cs=srgb&dl=pexels-enginakyurt-20345528.jpg&fm=jpg",
     origin: ["Arabian Peninsula", "North Africa", "Widely cultivated worldwide"],
     categories: ["Gut Health", "Skin", "Anti-Inflammatory", "Digestion"],
     benefits: [
@@ -59,7 +59,7 @@ const herbs: Herb[] = [
     latin: "Withania somnifera",
     letter: "A",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1618176729938-6fd80fe21dba?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/17820710/pexels-photo-17820710.jpeg?cs=srgb&dl=pexels-jonathanborba-17820710.jpg&fm=jpg",
     origin: ["India", "North Africa", "Mediterranean", "Parts of the Middle East"],
     categories: ["Stress & Adrenal", "Thyroid Support", "Energy", "Sleep", "Adaptogen"],
     benefits: [
@@ -86,7 +86,7 @@ const herbs: Herb[] = [
     latin: "Astragalus membranaceus",
     letter: "A",
     emoji: "🌱",
-    photo: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/11001234/pexels-photo-11001234.jpeg?cs=srgb&dl=pexels-seyda-nur-yuce-70589496-11001234.jpg&fm=jpg",
     origin: ["Northern China", "Mongolia", "Korea"],
     categories: ["Immune", "Longevity", "Energy", "Antioxidant"],
     benefits: [
@@ -113,7 +113,7 @@ const herbs: Herb[] = [
     latin: "Nigella sativa",
     letter: "B",
     emoji: "🖤",
-    photo: "https://images.unsplash.com/photo-1609252924198-d4ed39261a60?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/35809380/pexels-photo-35809380.jpeg?cs=srgb&dl=pexels-marek-ruczaj-1534625-35809380.jpg&fm=jpg",
     origin: ["Southwest Asia", "Mediterranean", "South Asia"],
     categories: ["Immune", "Anti-Inflammatory", "Respiratory", "Blood Pressure"],
     benefits: [
@@ -140,7 +140,7 @@ const herbs: Herb[] = [
     latin: "Arctium lappa",
     letter: "B",
     emoji: "🌾",
-    photo: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/11942945/pexels-photo-11942945.jpeg?cs=srgb&dl=pexels-krista-221716063-11942945.jpg&fm=jpg",
     origin: ["Europe", "Northern Asia", "North America (naturalized)"],
     categories: ["Liver Support", "Skin", "Detox", "Digestion", "Lymphatic"],
     benefits: [
@@ -165,7 +165,7 @@ const herbs: Herb[] = [
     latin: "Matricaria chamomilla",
     letter: "C",
     emoji: "🌼",
-    photo: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/11235869/pexels-photo-11235869.jpeg?cs=srgb&dl=pexels-hermaion-11235869.jpg&fm=jpg",
     origin: ["Europe", "Western Asia", "Widely naturalized and cultivated"],
     categories: ["Sleep", "Anxiety", "Digestion", "Anti-Inflammatory", "Skin"],
     benefits: [
@@ -192,7 +192,7 @@ const herbs: Herb[] = [
     latin: "Taraxacum officinale",
     letter: "D",
     emoji: "🌻",
-    photo: "https://images.unsplash.com/photo-1558263756-22ba4de71e75?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/36472351/pexels-photo-36472351.jpeg?cs=srgb&dl=pexels-douglas-allen-42036-36472351.jpg&fm=jpg",
     origin: ["Europe", "Asia", "Now found on every continent"],
     categories: ["Liver Support", "Digestion", "Detox", "Urinary", "Nutrition"],
     benefits: [
@@ -219,7 +219,7 @@ const herbs: Herb[] = [
     latin: "Echinacea purpurea / angustifolia",
     letter: "E",
     emoji: "🌸",
-    photo: "https://images.unsplash.com/photo-1509600110300-21b9d5fedeb7?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/33561656/pexels-photo-33561656.jpeg?cs=srgb&dl=pexels-lorna-pauli-1320744316-33561656.jpg&fm=jpg",
     origin: ["North American prairies", "Great Plains (USA)", "Now cultivated worldwide"],
     categories: ["Immune", "Anti-Viral", "Cold & Flu"],
     benefits: [
@@ -245,7 +245,7 @@ const herbs: Herb[] = [
     latin: "Foeniculum vulgare",
     letter: "F",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/36248176/pexels-photo-36248176.jpeg?cs=srgb&dl=pexels-andromeda99-36248176.jpg&fm=jpg",
     origin: ["Mediterranean", "Southern Europe", "Western Asia"],
     categories: ["Digestion", "Hormonal Balance", "IBS", "Respiratory"],
     benefits: [
@@ -270,7 +270,7 @@ const herbs: Herb[] = [
     latin: "Zingiber officinale",
     letter: "G",
     emoji: "🫚",
-    photo: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/10112136/pexels-photo-10112136.jpeg?cs=srgb&dl=pexels-enginakyurt-10112136.jpg&fm=jpg",
     origin: ["Southeast Asia", "South Asia", "Tropical regions worldwide"],
     categories: ["Digestion", "Anti-Inflammatory", "Nausea", "Circulation", "Immunity"],
     benefits: [
@@ -297,7 +297,7 @@ const herbs: Herb[] = [
     latin: "Ocimum tenuiflorum",
     letter: "H",
     emoji: "🕉️",
-    photo: "https://images.unsplash.com/photo-1563791584609-11f1fae77dc4?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/32112349/pexels-photo-32112349.jpeg?cs=srgb&dl=pexels-alexander-mass-748453803-32112349.jpg&fm=jpg",
     origin: ["Indian subcontinent", "Southeast Asia"],
     categories: ["Stress & Adrenal", "Adaptogen", "Blood Sugar", "Immunity", "Anti-Inflammatory"],
     benefits: [
@@ -324,7 +324,7 @@ const herbs: Herb[] = [
     latin: "Chondrus crispus",
     letter: "I",
     emoji: "🌊",
-    photo: "https://images.unsplash.com/photo-1661956601349-f61c959a8fd3?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/10315896/pexels-photo-10315896.jpeg?cs=srgb&dl=pexels-mario-grijalva-97608614-10315896.jpg&fm=jpg",
     origin: ["Atlantic coasts of Ireland", "Caribbean", "North American Atlantic coast"],
     categories: ["Thyroid Support", "Gut Health", "Immunity", "Minerals", "Skin"],
     benefits: [
@@ -351,7 +351,7 @@ const herbs: Herb[] = [
     latin: "Melissa officinalis",
     letter: "L",
     emoji: "🍋",
-    photo: "https://images.unsplash.com/photo-1628689469838-524a4a973b8e?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/16757214/pexels-photo-16757214.jpeg?cs=srgb&dl=pexels-edgar-rodrigo-235374482-16757214.jpg&fm=jpg",
     origin: ["Southern Europe", "Central Asia", "Mediterranean", "Widely cultivated"],
     categories: ["Anxiety", "Sleep", "Antiviral", "Digestion", "Cognitive"],
     benefits: [
@@ -377,7 +377,7 @@ const herbs: Herb[] = [
     latin: "Glycyrrhiza glabra",
     letter: "L",
     emoji: "🍬",
-    photo: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/12809571/pexels-photo-12809571.jpeg?cs=srgb&dl=pexels-chinese-medicine-podcast-podcast-1290426-12809571.jpg&fm=jpg",
     origin: ["Mediterranean", "Central Asia", "Southern Europe", "China (G. uralensis)"],
     categories: ["Adrenal Support", "Gut Health", "Anti-Inflammatory", "Respiratory", "Hormonal"],
     benefits: [
@@ -404,7 +404,7 @@ const herbs: Herb[] = [
     latin: "Silybum marianum",
     letter: "M",
     emoji: "🫧",
-    photo: "https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/17400939/pexels-photo-17400939.jpeg?cs=srgb&dl=pexels-david-roberts-940521-17400939.jpg&fm=jpg",
     origin: ["Mediterranean", "Europe", "Parts of Asia", "Now cultivated worldwide"],
     categories: ["Liver Support", "Detox", "Antioxidant", "Blood Sugar"],
     benefits: [
@@ -431,7 +431,7 @@ const herbs: Herb[] = [
     latin: "Urtica dioica",
     letter: "N",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/33746042/pexels-photo-33746042.jpeg?cs=srgb&dl=pexels-wyxina-tresse-311038210-33746042.jpg&fm=jpg",
     origin: ["Europe", "North Africa", "Western Asia", "North America", "Widely naturalized"],
     categories: ["Allergies", "Inflammation", "Nutrition", "Hormonal", "Joint Health", "Urinary"],
     benefits: [
@@ -458,7 +458,7 @@ const herbs: Herb[] = [
     latin: "Passiflora incarnata",
     letter: "P",
     emoji: "🌺",
-    photo: "https://images.unsplash.com/photo-1597576043567-4f37de12ec79?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/14981842/pexels-photo-14981842.jpeg?cs=srgb&dl=pexels-lize-eckley-411135593-14981842.jpg&fm=jpg",
     origin: ["Southeastern United States", "Central America", "South America"],
     categories: ["Anxiety", "Sleep", "Nervous System", "Menopause"],
     benefits: [
@@ -482,7 +482,7 @@ const herbs: Herb[] = [
     latin: "Mentha × piperita",
     letter: "P",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1628202926206-c63a34b2807c?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/1072876/pexels-photo-1072876.jpeg?cs=srgb&dl=pexels-mukesh-bloger-406001-1072876.jpg&fm=jpg",
     origin: ["European hybrid (watermeint × spearmint)", "Middle East", "Now globally cultivated"],
     categories: ["Digestion", "IBS", "Headache", "Cognitive", "Antimicrobial", "Respiratory"],
     benefits: [
@@ -508,7 +508,7 @@ const herbs: Herb[] = [
     latin: "Salvia rosmarinus",
     letter: "R",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/31933729/pexels-photo-31933729.jpeg?cs=srgb&dl=pexels-jaralol-31933729.jpg&fm=jpg",
     origin: ["Mediterranean basin", "Western Europe", "Canary Islands"],
     categories: ["Cognitive", "Circulation", "Antioxidant", "Hair Growth", "Antimicrobial"],
     benefits: [
@@ -535,7 +535,7 @@ const herbs: Herb[] = [
     latin: "Hypericum perforatum",
     letter: "S",
     emoji: "🌟",
-    photo: "https://images.unsplash.com/photo-1605021890665-90d3dba3b76d?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/30208110/pexels-photo-30208110.jpeg?cs=srgb&dl=pexels-guzel-sadykova-3331480-30208110.jpg&fm=jpg",
     origin: ["Europe", "Western Asia", "North Africa", "Now naturalized globally"],
     categories: ["Mental Health", "Depression", "Anxiety", "Neuropathy"],
     benefits: [
@@ -560,7 +560,7 @@ const herbs: Herb[] = [
     latin: "Curcuma longa",
     letter: "T",
     emoji: "🟡",
-    photo: "/recipe-turmeric-rice.png",
+    photo: "https://images.pexels.com/photos/36075348/pexels-photo-36075348.jpeg?cs=srgb&dl=pexels-jonathan-cordova-r-2637981-36075348.jpg&fm=jpg",
     origin: ["South Asia (India, Sri Lanka)", "Southeast Asia", "Tropical regions worldwide"],
     categories: ["Anti-Inflammatory", "Antioxidant", "Gut Health", "Brain Health", "Liver Support"],
     benefits: [
@@ -587,7 +587,7 @@ const herbs: Herb[] = [
     latin: "Valeriana officinalis",
     letter: "V",
     emoji: "😴",
-    photo: "https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/17247500/pexels-photo-17247500.jpeg?cs=srgb&dl=pexels-sp7photography-17247500.jpg&fm=jpg",
     origin: ["Europe", "Asia", "Widely cultivated for medicinal use"],
     categories: ["Sleep", "Anxiety", "Nervous System", "Menopause"],
     benefits: [
@@ -613,7 +613,7 @@ const herbs: Herb[] = [
     latin: "Achillea millefolium",
     letter: "Y",
     emoji: "🌾",
-    photo: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/36559894/pexels-photo-36559894.jpeg?cs=srgb&dl=pexels-paola-tordoni-2152145178-36559894.jpg&fm=jpg",
     origin: ["Northern Hemisphere", "Europe", "Asia", "North America", "Now worldwide"],
     categories: ["Wound Healing", "Digestion", "Fever", "Menstrual", "Antimicrobial"],
     benefits: [
@@ -634,37 +634,11 @@ const herbs: Herb[] = [
     warnLevel: "caution",
   },
   {
-    name: "Ginger",
-    latin: "Zingiber officinale",
-    letter: "G",
-    emoji: "🫚",
-    photo: "https://images.unsplash.com/photo-1573414405995-1d3b71118d5a?w=400&h=250&fit=crop",
-    origin: ["South Asia", "Southeast Asia", "Widely cultivated in tropical climates"],
-    categories: ["Anti-Inflammatory", "Digestion", "Gut Health", "Circulation"],
-    benefits: [
-      "Reduces nausea, motion sickness, and pregnancy-related morning sickness",
-      "Supports digestion and gastric emptying",
-      "Helps reduce inflammatory pain and soreness",
-      "May improve circulation and mild menstrual cramping",
-      "Provides antioxidant support during immune stress",
-    ],
-    compounds: "Gingerols, shogaols, zingerone, volatile oils",
-    howToUse:
-      "Fresh tea, grated into meals, capsules, or tincture. Ginger tea or food-based use is a strong starting point for digestion and daily inflammation support.",
-    cautions:
-      "Can aggravate reflux in some people. Higher doses may thin the blood slightly and can feel warming if you are already overheated or prone to heartburn.",
-    interactions:
-      "Blood thinners and antiplatelet medications — additive bleeding risk. Diabetes medications — may mildly lower blood sugar further. Blood pressure medications — possible additive effect.",
-    thyroidNote:
-      "Generally supportive for thyroid patients dealing with sluggish digestion, inflammation, or feeling cold. Monitor tolerance if reflux is part of your symptom pattern.",
-    warnLevel: "caution",
-  },
-  {
     name: "Moringa",
     latin: "Moringa oleifera",
     letter: "M",
     emoji: "🌿",
-    photo: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/35343091/pexels-photo-35343091.jpeg?cs=srgb&dl=pexels-reyan-v-ratheesh-2153116498-35343091.jpg&fm=jpg",
     origin: ["India", "East Africa", "Tropical and subtropical regions"],
     categories: ["Nutrition", "Energy", "Antioxidant", "Blood Sugar"],
     benefits: [
@@ -690,7 +664,7 @@ const herbs: Herb[] = [
     latin: "Urtica dioica",
     letter: "N",
     emoji: "🌱",
-    photo: "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/14580613/pexels-photo-14580613.jpeg?cs=srgb&dl=pexels-eugene-golovesov-1810803-14580613.jpg&fm=jpg",
     origin: ["Europe", "North America", "Asia", "Temperate climates worldwide"],
     categories: ["Mineral Support", "Allergy Support", "Energy", "Kidney Support"],
     benefits: [
@@ -717,7 +691,7 @@ const herbs: Herb[] = [
     letter: "L",
     emoji: "💜",
     entryType: "Essential Oil",
-    photo: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/13295529/pexels-photo-13295529.jpeg?cs=srgb&dl=pexels-amine-nur-gulesen-70590199-13295529.jpg&fm=jpg",
     origin: ["Mediterranean", "France", "Widely distilled worldwide"],
     categories: ["Sleep", "Anxiety", "Nervous System", "Skin"],
     benefits: [
@@ -743,7 +717,7 @@ const herbs: Herb[] = [
     letter: "P",
     emoji: "🌿",
     entryType: "Essential Oil",
-    photo: "https://images.unsplash.com/photo-1628557044797-f21a177c37ec?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/28779355/pexels-photo-28779355.jpeg?cs=srgb&dl=pexels-aadrea-essentials-1928103839-28779355.jpg&fm=jpg",
     origin: ["Europe", "North America", "Widely cultivated worldwide"],
     categories: ["Digestion", "Headache Support", "Focus", "Respiratory"],
     benefits: [
@@ -769,7 +743,7 @@ const herbs: Herb[] = [
     letter: "T",
     emoji: "🌲",
     entryType: "Essential Oil",
-    photo: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/17602851/pexels-photo-17602851.jpeg?cs=srgb&dl=pexels-doterra-international-llc-2204678-17602851.jpg&fm=jpg",
     origin: ["Australia", "Commercially distilled worldwide"],
     categories: ["Skin", "Antimicrobial", "Scalp Care"],
     benefits: [
@@ -795,7 +769,7 @@ const herbs: Herb[] = [
     letter: "V",
     emoji: "🔴",
     entryType: "Vitamin",
-    photo: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/14027298/pexels-photo-14027298.jpeg?cs=srgb&dl=pexels-supliful-14027298.jpg&fm=jpg",
     origin: ["Animal foods", "Fortified foods", "Supplement forms such as methylcobalamin and cyanocobalamin"],
     categories: ["Energy", "Nervous System", "Brain Health", "Nutrient Repletion"],
     benefits: [
@@ -821,7 +795,7 @@ const herbs: Herb[] = [
     letter: "M",
     emoji: "⚪",
     entryType: "Mineral",
-    photo: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/17604755/pexels-photo-17604755.jpeg?cs=srgb&dl=pexels-beelith-17604755.jpg&fm=jpg",
     origin: ["Leafy greens", "Legumes", "Seeds", "Supplemental mineral salts"],
     categories: ["Sleep", "Stress & Adrenal", "Muscle Recovery", "Nervous System"],
     benefits: [
@@ -847,7 +821,7 @@ const herbs: Herb[] = [
     letter: "S",
     emoji: "🟠",
     entryType: "Mineral",
-    photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/10433520/pexels-photo-10433520.jpeg?cs=srgb&dl=pexels-rita-lakewood-142957273-10433520.jpg&fm=jpg",
     origin: ["Brazil nuts", "Seafood", "Eggs", "Supplement forms"],
     categories: ["Thyroid Support", "Antioxidant", "Nutrient Repletion"],
     benefits: [
@@ -873,7 +847,7 @@ const herbs: Herb[] = [
     letter: "Z",
     emoji: "🔹",
     entryType: "Mineral",
-    photo: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/13013778/pexels-photo-13013778.jpeg?cs=srgb&dl=pexels-ogutomacedo-13013778.jpg&fm=jpg",
     origin: ["Shellfish", "Meat", "Pumpkin seeds", "Supplement forms"],
     categories: ["Immune", "Skin", "Hormonal Balance", "Nutrient Repletion"],
     benefits: [
@@ -899,7 +873,7 @@ const herbs: Herb[] = [
     letter: "I",
     emoji: "🩸",
     entryType: "Mineral",
-    photo: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=250&fit=crop",
+    photo: "https://images.pexels.com/photos/13779115/pexels-photo-13779115.jpeg?cs=srgb&dl=pexels-supliful-13779115.jpg&fm=jpg",
     origin: ["Red meat", "Legumes", "Leafy greens", "Supplement forms"],
     categories: ["Energy", "Mineral Support", "Hair Support", "Nutrient Repletion"],
     benefits: [
@@ -1168,7 +1142,7 @@ export default function HerbDictionary() {
       </section>
 
       {/* Search + Filters */}
-      <section className="py-8 bg-background border-b sticky top-0 z-20 shadow-sm">
+      <section className="border-b bg-background py-8 shadow-sm md:sticky md:top-0 md:z-20">
         <div className="container space-y-4">
           {/* Search */}
           <div className="relative max-w-xl mx-auto">
@@ -1261,7 +1235,7 @@ export default function HerbDictionary() {
                   <Card
                     id={toHerbAnchor(herb.name)}
                     key={herb.name}
-                    className={`overflow-hidden border-2 transition-all duration-300 ${
+                    className={`scroll-mt-28 overflow-hidden border-2 transition-all duration-300 md:scroll-mt-36 ${
                       isOpen ? "border-primary/50 shadow-xl" : "border-border hover:border-primary/30 hover:shadow-lg"
                     }`}
                   >
