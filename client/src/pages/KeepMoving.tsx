@@ -114,10 +114,7 @@ export default function KeepMoving() {
                 AskDoGood Digital Library
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
-                Practical guides to help you improve your health, understand your body, and build better daily habits.
-              </p>
-              <p className="max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
-                The AskDoGood Digital Library is a growing collection of practical guides designed to help you better understand your health, improve your daily habits, and take action with confidence.
+                The AskDoGood Digital Library is where information turns into action. These are not just guides-they're practical tools to help you understand your body, adjust your habits, and take control of your health in real life. Learn it, apply it, and build something that actually works for you.
               </p>
             </div>
 
@@ -136,7 +133,7 @@ export default function KeepMoving() {
               </a>
               <Link href="/shop">
                 <a className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white/78 transition-colors hover:border-white/30 hover:text-white">
-                  Shop Products
+                  Support Your Routine
                 </a>
               </Link>
             </div>
@@ -145,17 +142,17 @@ export default function KeepMoving() {
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-white/55">Utility</p>
                 <p className="mt-3 text-3xl font-bold">Action</p>
-                <p className="mt-2 text-sm text-white/72">built for real progress instead of passive scrolling</p>
+                <p className="mt-2 text-sm text-white/72">Built for real-life progress-not just reading and scrolling. Everything here is meant to be used, tested, and applied so you actually see and feel the difference.</p>
               </div>
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-white/55">Focus</p>
-                <p className="mt-3 text-3xl font-bold">3 lanes</p>
-                <p className="mt-2 text-sm text-white/72">nutrition, body awareness, and lifestyle reset</p>
+                <p className="mt-3 text-3xl font-bold">3 Lanes</p>
+                <p className="mt-2 text-sm text-white/72">Everything comes back to three things: how you eat, how you move, and how aware you are of your body. Master these, and everything else starts to fall into place.</p>
               </div>
               <div className="rounded-[1.75rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-white/55">Next step</p>
-                <p className="mt-3 text-3xl font-bold">Buy deeper</p>
-                <p className="mt-2 text-sm text-white/72">each guide should lead naturally into a fuller program</p>
+                <p className="mt-3 text-3xl font-bold">Go Deeper</p>
+                <p className="mt-2 text-sm text-white/72">Each guide is a starting point. When you're ready, go deeper-build routines, follow structured plans, and turn small changes into long-term results.</p>
               </div>
             </div>
           </div>
