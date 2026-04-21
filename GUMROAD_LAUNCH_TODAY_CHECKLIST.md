@@ -4,6 +4,10 @@
 **Total Time:** 3-4 hours  
 **Difficulty:** Easy (step-by-step instructions)
 
+**Canonical store for current site config:** `https://roseecraft.gumroad.com`
+
+**Reality check before you launch:** the Thyroid Health Mastery Course is the only audited live Gumroad product right now. The 21-Day Plant-Based Reset and Garden to Table Wellness Bundle still need their final Gumroad listings published before the site should treat them as live checkouts.
+
 ---
 
 ## ✅ PHASE 1: PREPARE YOUR FILES (60 minutes)
@@ -93,7 +97,7 @@
 1. Click profile icon → **Settings**
 2. Fill in:
    - **Display Name:** "RoSeé Murphy" or "AskDoGood"
-   - **Username:** `askdogood` (URL will be: gumroad.com/askdogood)
+  - **Username:** keep your current live storefront unless you are actively migrating products. The repo's current canonical store is `roseecraft`.
    - **Bio:** "Helping women heal naturally through nutrition, lifestyle, and functional medicine."
    - **Profile Picture:** Upload your photo or AskDoGood logo
    - **Website:** `https://askdogood.com`
@@ -120,7 +124,7 @@
 
 ### **Step 2: Basic Information**
 1. **Product Name:** `Thyroid Health Mastery Course`
-2. **URL:** `thyroid-mastery` (will be: gumroad.com/l/thyroid-mastery)
+2. **URL / slug:** `thyroid-health-mastery`
 3. **Price:** `$97`
 4. **Summary:** (1-2 sentences for previews)
    ```
@@ -217,7 +221,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 7: Publish**
 1. Click **"Publish"**
-2. Copy product URL: `https://askdogood.gumroad.com/l/thyroid-mastery`
+2. Copy product URL: `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
 3. ✅ **Product 1 is LIVE!**
 
 ---
@@ -229,7 +233,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 2: Basic Information**
 1. **Product Name:** `21-Day Plant-Based Reset`
-2. **URL:** `plant-based-reset`
+2. **URL / slug:** `21-day-plant-based-reset`
 3. **Price:** `$47`
 4. **Summary:**
    ```
@@ -301,7 +305,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 6: Publish**
 1. Click **"Publish"**
-2. Copy URL: `https://askdogood.gumroad.com/l/plant-based-reset`
+2. Copy URL: `https://roseecraft.gumroad.com/l/21-day-plant-based-reset`
 3. ✅ **Product 2 is LIVE!**
 
 ---
@@ -313,7 +317,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 2: Basic Information**
 1. **Product Name:** `Garden to Table Wellness Bundle`
-2. **URL:** `garden-to-table`
+2. **URL / slug:** `garden-to-table-bundle`
 3. **Price:** `$37`
 4. **Summary:**
    ```
@@ -389,7 +393,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 6: Publish**
 1. Click **"Publish"**
-2. Copy URL: `https://askdogood.gumroad.com/l/garden-to-table`
+2. Copy URL: `https://roseecraft.gumroad.com/l/garden-to-table-bundle`
 3. ✅ **Product 3 is LIVE!**
 
 ---
@@ -401,9 +405,9 @@ Your website already has Gumroad links built in. Verify they point to your actua
 
 1. Open your website: `https://askdogood.com/shop`
 2. Check that "Buy Now" buttons point to correct URLs:
-   - Thyroid Course → `https://askdogood.gumroad.com/l/thyroid-mastery`
-   - 21-Day Reset → `https://askdogood.gumroad.com/l/plant-based-reset`
-   - Garden Bundle → `https://askdogood.gumroad.com/l/garden-to-table`
+  - Thyroid Course → `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+  - 21-Day Reset → `https://roseecraft.gumroad.com/l/21-day-plant-based-reset`
+  - Garden Bundle → `https://roseecraft.gumroad.com/l/garden-to-table-bundle`
 
 **If links need updating:**
 1. Open `client/src/pages/Shop.tsx`
@@ -442,7 +446,7 @@ Inside, you'll get:
 
 **Launch Special: $97** (regular price $197)
 
-[👉 Get Instant Access](https://askdogood.gumroad.com/l/thyroid-mastery)
+[👉 Get Instant Access](https://roseecraft.gumroad.com/l/thyroid-health-mastery)
 
 This is for you if:
 - You've been told "your labs are normal" but feel terrible
@@ -458,8 +462,8 @@ With love,
 RoSeé
 
 P.S. I also launched two other programs today:
-- [21-Day Plant-Based Reset ($47)](https://askdogood.gumroad.com/l/plant-based-reset)
-- [Garden to Table Bundle ($37)](https://askdogood.gumroad.com/l/garden-to-table)
+- [21-Day Plant-Based Reset ($47)](https://roseecraft.gumroad.com/l/21-day-plant-based-reset)
+- [Garden to Table Bundle ($37)](https://roseecraft.gumroad.com/l/garden-to-table-bundle)
 
 All available for instant download. Let's do this together.
 ```
@@ -528,7 +532,7 @@ This course is for you.
 
 **Launch special: $97** (regular price $197)
 
-Link to purchase: https://askdogood.gumroad.com/l/thyroid-mastery
+Link to purchase: https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 Questions? Drop them below. I'm here for you. 💚
 ```

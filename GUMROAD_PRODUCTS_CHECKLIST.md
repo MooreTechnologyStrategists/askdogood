@@ -1,8 +1,8 @@
 # 🎯 AskDoGood Gumroad Products - Complete Checklist & Setup Guide
 
-**Last Updated:** January 25, 2026  
-**Gumroad Store:** https://askdogood.gumroad.com  
-**Status:** Ready for creation
+**Last Updated:** April 21, 2026  
+**Canonical Gumroad Store For Site Config:** https://roseecraft.gumroad.com  
+**Status:** Product planning doc - verify public publish state before treating any URL as live
 
 ---
 
@@ -10,10 +10,10 @@
 
 | Product | Type | Price | Status | Gumroad Link | Est. Revenue |
 |---------|------|-------|--------|-------------|--------------|
-| Thyroid Health Mastery Course | Online Course | $97 | 🟢 Ready | `l/thyroid-mastery` | $500-2000/mo |
-| Clinical Food RX - 30-Day Meal Plan | Digital Guide | $47 | 🟡 In Dev | `l/clinical-food-rx` | $200-800/mo |
-| Thyroid Lab Interpretation Guide | Ebook | $27 | 🟡 In Dev | `l/thyroid-labs-guide` | $100-300/mo |
-| Supplement Protocol Templates | Digital Templates | $17 | 🟡 In Dev | `l/supplement-protocols` | $50-150/mo |
+| Thyroid Health Mastery Course | Online Course | $97 | 🟢 Ready | `l/thyroid-health-mastery` | $500-2000/mo |
+| 21-Day Plant-Based Reset | Digital Guide | $47 | 🟡 Needs listing or relink | `l/21-day-plant-based-reset` | $200-800/mo |
+| Thyroid Lab Interpretation Guide | Ebook | $27 | 🟡 Needs listing or relink | `l/thyroid-lab-guide` | $100-300/mo |
+| Supplement Protocol Templates | Digital Templates | $17 | 🟡 Needs slug cleanup | `l/thyroid-supplement-templates` | $50-150/mo |
 | 1-on-1 Thyroid Health Coaching | Service | $200/hr | 🔴 Future | `l/coaching-sessions` | $1000-5000/mo |
 | Monthly Membership - Insider Circle | Membership | $29/mo | 🔴 Future | `l/insider-circle` | $500-2000/mo |
 
@@ -181,7 +181,7 @@ Enroll now and get instant lifetime access.
 
 **Status:** 🟡 IN DEVELOPMENT  
 **Target Price:** $47  
-**Gumroad Link Format:** `askdogood.gumroad.com/l/clinical-food-rx`
+**Canonical Gumroad Link Format:** `roseecraft.gumroad.com/l/21-day-plant-based-reset`
 
 ### Product Specifications
 
@@ -349,7 +349,7 @@ Grab Clinical Food RX today.
 
 **Status:** 🟡 IN DEVELOPMENT  
 **Target Price:** $27  
-**Gumroad Link Format:** `askdogood.gumroad.com/l/thyroid-labs-guide`
+**Canonical Gumroad Link Format:** `roseecraft.gumroad.com/l/thyroid-lab-guide`
 
 ### Product Specifications
 
@@ -531,7 +531,7 @@ Grab the guide today.
 
 **Status:** 🟡 IN DEVELOPMENT  
 **Target Price:** $17  
-**Gumroad Link Format:** `askdogood.gumroad.com/l/supplement-protocols`
+**Canonical Gumroad Link Format:** `roseecraft.gumroad.com/l/thyroid-supplement-templates`
 
 ### Product Specifications
 
@@ -730,7 +730,7 @@ Grab the templates today.
 
 **Status:** 🔴 FUTURE LAUNCH  
 **Target Price:** $200/hour  
-**Gumroad Link Format:** `askdogood.gumroad.com/l/coaching-sessions`  
+**Canonical Gumroad Link Format:** `roseecraft.gumroad.com/l/coaching-sessions`  
 **Launch Timeline:** Q2 2026
 
 ### Product Specifications
@@ -753,7 +753,7 @@ Grab the templates today.
 
 **Status:** 🔴 FUTURE LAUNCH  
 **Target Price:** $29/month  
-**Gumroad Link Format:** `askdogood.gumroad.com/l/insider-circle`  
+**Canonical Gumroad Link Format:** `roseecraft.gumroad.com/l/wellness-circle`  
 **Launch Timeline:** Q3 2026
 
 ### Membership Benefits
@@ -831,29 +831,29 @@ Grab the templates today.
 - [ ] Enable license keys (if needed)
 - [ ] Set up email on purchase
 - [ ] Publish product
-- [ ] **Product URL:** `https://askdogood.gumroad.com/l/thyroid-mastery`
+- [ ] **Product URL:** `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
 
-#### Product #2: Clinical Food RX
+#### Product #2: 21-Day Plant-Based Reset
 - [ ] Repeat same process
 - [ ] Price: $47
 - [ ] Attach meal plan PDF
 - [ ] Attach recipe book
 - [ ] Attach shopping lists
-- [ ] **Product URL:** `https://askdogood.gumroad.com/l/clinical-food-rx`
+- [ ] **Product URL:** `https://roseecraft.gumroad.com/l/21-day-plant-based-reset`
 
 #### Product #3: Lab Interpretation Guide
 - [ ] Repeat same process
 - [ ] Price: $27
 - [ ] Attach all guide PDFs
 - [ ] Attach tracking spreadsheet
-- [ ] **Product URL:** `https://askdogood.gumroad.com/l/thyroid-labs-guide`
+- [ ] **Product URL:** `https://roseecraft.gumroad.com/l/thyroid-lab-guide`
 
 #### Product #4: Supplement Templates
 - [ ] Repeat same process
 - [ ] Price: $17
 - [ ] Attach all template files
 - [ ] Attach protocols
-- [ ] **Product URL:** `https://askdogood.gumroad.com/l/supplement-protocols`
+- [ ] **Product URL:** `https://roseecraft.gumroad.com/l/thyroid-supplement-templates`
 
 ### Post-Launch (Week 3+)
 
@@ -937,19 +937,19 @@ Grab the templates today.
 
 ```
 Main Gumroad Profile:
-https://askdogood.gumroad.com
+https://roseecraft.gumroad.com
 
 Thyroid Health Mastery Course:
-https://askdogood.gumroad.com/l/thyroid-mastery
+https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
-Clinical Food RX:
-https://askdogood.gumroad.com/l/clinical-food-rx
+21-Day Plant-Based Reset:
+https://roseecraft.gumroad.com/l/21-day-plant-based-reset
 
 Thyroid Lab Guide:
-https://askdogood.gumroad.com/l/thyroid-labs-guide
+https://roseecraft.gumroad.com/l/thyroid-lab-guide
 
 Supplement Protocols:
-https://askdogood.gumroad.com/l/supplement-protocols
+https://roseecraft.gumroad.com/l/thyroid-supplement-templates
 ```
 
 ---

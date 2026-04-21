@@ -19,16 +19,16 @@
 
 | Product | Price | Description | Image / cover | Current link | Recommended checkout | Status / notes |
 |---|---:|---|---|---|---|---|
-| Thyroid Health Mastery Course | $97 | Signature thyroid course with video modules, lab guidance, medication support, nutrition, stress tools, and advocacy help. | `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png` | `https://askdogood.gumroad.com/l/thyroid-health-mastery` | **Both** (Gumroad primary, Stripe optional mirror) | Ready now. One legacy page still references `l/thyroid-mastery`; choose one canonical slug. |
-| 21-Day Plant-Based Reset | $47 | 21-day anti-inflammatory reset with meal plans, shopping lists, prep guides, and thyroid-friendly recipes. | `https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png` | `https://askdogood.gumroad.com/l/clinical-food-rx` | **Both** | Ready now. `Resources.tsx` also references `l/21-day-plant-based-reset`; unify the slug. |
-| Thyroid Lab Interpretation Guide | $27 | Plain-language guide to TSH, Free T3, Free T4, antibodies, reverse T3, optimal ranges, and doctor questions. | `https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png` | `https://askdogood.gumroad.com/l/thyroid-lab-guide` | **Gumroad** | Ready now. Good low-ticket digital offer. |
-| Thyroid Supplement Protocol Templates | $17 | Downloadable templates to build supplement, symptom, digestion, and stress-management protocols. | `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png` | `https://askdogood.gumroad.com/l/adioal` | **Gumroad** | Content is sellable, but the slug `adioal` should be renamed and it needs its own cover image. |
-| Garden to Table Wellness Bundle | $37 | Herb-growing, gardening, and 50+ recipe bundle with meal prep guidance and seasonal wellness content. | `/bundle-garden-to-table-v2.png` | Gumroad: `https://askdogood.gumroad.com/l/garden-to-table-bundle`  
+| Thyroid Health Mastery Course | $97 | Signature thyroid course with video modules, lab guidance, medication support, nutrition, stress tools, and advocacy help. | `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png` | `https://roseecraft.gumroad.com/l/thyroid-health-mastery` | **Both** (Gumroad primary, Stripe optional mirror) | Canonical live product for site config. |
+| 21-Day Plant-Based Reset | $47 | 21-day anti-inflammatory reset with meal plans, shopping lists, prep guides, and thyroid-friendly recipes. | `https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png` | `https://roseecraft.gumroad.com/l/21-day-plant-based-reset` | **Both** | Canonical slug chosen. Public listing still needs final publish or relink confirmation before marking it live in site content. |
+| Thyroid Lab Interpretation Guide | $27 | Plain-language guide to TSH, Free T3, Free T4, antibodies, reverse T3, optimal ranges, and doctor questions. | `https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png` | `https://roseecraft.gumroad.com/l/thyroid-lab-guide` | **Gumroad** | Canonical slug chosen. Verify publish state before treating as live. |
+| Thyroid Supplement Protocol Templates | $17 | Downloadable templates to build supplement, symptom, digestion, and stress-management protocols. | `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png` | `https://roseecraft.gumroad.com/l/thyroid-supplement-templates` | **Gumroad** | Canonical slug chosen. Still needs a dedicated cover image and publish confirmation. |
+| Garden to Table Wellness Bundle | $37 | Herb-growing, gardening, and 50+ recipe bundle with meal prep guidance and seasonal wellness content. | `/bundle-garden-to-table-v2.png` | Gumroad: `https://roseecraft.gumroad.com/l/garden-to-table-bundle`  
 Stripe: `https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03` | **Both** | Best candidate to sell on both platforms because a live Stripe link already exists. |
-| Autoimmune Recovery Guide | $27 | Root-cause support guide with food lists, meal plans, supplements, stress tools, sleep support, and symptom tracking. | `/images/branding/askdogood-logo-navy.png` | `https://askdogood.gumroad.com/l/autoimmune-recovery-guide` | **Gumroad** | Good digital guide. Needs a dedicated product cover instead of a logo placeholder. |
+| Autoimmune Recovery Guide | $27 | Root-cause support guide with food lists, meal plans, supplements, stress tools, sleep support, and symptom tracking. | `/images/branding/askdogood-logo-navy.png` | `https://roseecraft.gumroad.com/l/autoimmune-recovery-guide` | **Gumroad** | Good digital guide. Needs a dedicated product cover instead of a logo placeholder. |
 | Black Women’s Health Advocacy Toolkit | $27 | Scripts, templates, checklists, and insurance-navigation tools for advocating in medical settings. | `/images/branding/askdogood-logo-orange.png` | No live checkout link found in code | **Gumroad** | Strong product idea; needs a live Gumroad/Stripe link and a real cover image. |
-| Thyroid Symptom Tracker | $9.99 | Printable PDF tracker for symptoms, severity, medication, and supplement logging. | Homepage lifestyle image: `https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600` | `https://askdogood.gumroad.com/l/thyroid-symptom-tracker` | **Gumroad** | Great impulse-buy entry product. |
-| 30-Day Thyroid Meal Plan | $29.99 | 30-day meal plan with recipes, shopping lists, and prep guidance for thyroid-friendly eating. | Homepage lifestyle image: `https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600` | `https://askdogood.gumroad.com/l/30-day-meal-plan` | **Both** | Strong evergreen digital offer. |
+| Thyroid Symptom Tracker | $9.99 | Printable PDF tracker for symptoms, severity, medication, and supplement logging. | Homepage lifestyle image: `https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600` | `https://roseecraft.gumroad.com/l/thyroid-symptom-tracker` | **Gumroad** | Great impulse-buy entry product. Verify publish state before marking it live on the site. |
+| 30-Day Thyroid Meal Plan | $29.99 | 30-day meal plan with recipes, shopping lists, and prep guidance for thyroid-friendly eating. | Homepage lifestyle image: `https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600` | `https://roseecraft.gumroad.com/l/30-day-meal-plan` | **Both** | Strong evergreen digital offer. Verify publish state before switching checkout state to live. |
 
 ---
 
@@ -36,7 +36,7 @@ Stripe: `https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03` | **Both** | Best candi
 
 | Product | Price | Description | Image | Current link | Recommended checkout | Status / notes |
 |---|---:|---|---|---|---|---|
-| DoGood Wellness Circle | $27/mo regular, $19/mo founding | Monthly sisterhood-style wellness membership with live Q&A, private community, exclusive recipes, discounts, and support. | `/images/branding/askdogood-logo-navy.png` | `https://askdogood.gumroad.com/l/wellness-circle` | **Both** | Gumroad link already exists. Stripe is also worth adding later for better subscription control and checkout flexibility. |
+| DoGood Wellness Circle | $27/mo regular, $19/mo founding | Monthly sisterhood-style wellness membership with live Q&A, private community, exclusive recipes, discounts, and support. | `/images/branding/askdogood-logo-navy.png` | `https://roseecraft.gumroad.com/l/wellness-circle` | **Both** | Canonical slug chosen. Verify public publish state before treating as live. |
 
 ---
 
@@ -109,7 +109,7 @@ Stripe: `https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03` | **Both** | Best candi
 |---|---|---|
 | Budget Grocery Checklist PDF | Free practical grocery planning resource. | `https://askdogoodassets.blob.core.windows.net/downloads/budget-grocery-checklist.pdf` |
 | Meal Prep Container Guide PDF | Free meal prep storage and container guide. | `https://askdogoodassets.blob.core.windows.net/downloads/meal-prep-container-guide.pdf` |
-| Thyroid Checklist | Free thyroid-related opt-in/lead magnet. | `https://askdogood.gumroad.com/l/thyroid-checklist` |
+| Thyroid Checklist | Free thyroid-related opt-in/lead magnet. | `https://roseecraft.gumroad.com/l/thyroid-checklist` |
 
 ---
 
@@ -128,8 +128,9 @@ Stripe: `https://buy.stripe.com/6oUfZgbuId18g7N8Kk77O03` | **Both** | Best candi
 
 ## Cleanup notes before publishing
 
-- Pick one canonical Gumroad slug for the thyroid course: `thyroid-health-mastery` **or** `thyroid-mastery`.
-- Pick one canonical Gumroad slug for the reset: `clinical-food-rx` **or** `21-day-plant-based-reset`.
-- Rename `https://askdogood.gumroad.com/l/adioal` to a clearer product slug.
+- Canonical Gumroad store for site config is `https://roseecraft.gumroad.com` unless env overrides are intentionally set.
+- Canonical thyroid course slug is `thyroid-health-mastery`.
+- Canonical reset slug is `21-day-plant-based-reset`.
+- Canonical supplement templates slug is `thyroid-supplement-templates`.
 - Several merch and digital items still reference placeholder logo or mockup paths; swap in real covers before launch.
 - `client/src/data/merch-products.ts` still uses **test/placeholder Stripe links**, so those products are not ready for public checkout until replaced.

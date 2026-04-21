@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -213,9 +213,19 @@ const FeatureCard = ({ icon, title, description, content, href }: FeatureCardPro
 
 // Main Component
 export default function Home() {
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % heroSlides.length);
+    }, 4500);
+
+    return () => window.clearInterval(interval);
   }, []);
 
   const trustIndicators: TrustIndicatorProps[] = [
@@ -331,6 +341,43 @@ export default function Home() {
 
   const founderPhotoPrimary = "/images/personal/rosee-hero-1.jpg";
   const founderPhotoSecondary = "/assets/img/brand/rosee-hero.jpg";
+  const heroSlides = [
+    {
+      src: founderPhotoPrimary,
+      alt: "RoSee Murphy of Ask DoGood smiling outdoors",
+      eyebrow: "Founder",
+      caption: "Real guidance from lived experience.",
+      fallback: founderPhotoSecondary,
+    },
+    {
+      src: "https://askdogoodassets.blob.core.windows.net/images/foods/green-smoothie-avocado-oatmeal.JPG",
+      alt: "AskDoGood green smoothie and oatmeal breakfast",
+      eyebrow: "Food As Healing",
+      caption: "Simple meals that support energy and recovery.",
+      fallback: founderPhotoSecondary,
+    },
+    {
+      src: "https://askdogoodassets.blob.core.windows.net/images/walking-trails/DSC06410.JPG",
+      alt: "AskDoGood walking trail overlook with water and trees",
+      eyebrow: "Movement",
+      caption: "Fresh air, walking, and room to reset.",
+      fallback: founderPhotoSecondary,
+    },
+    {
+      src: "https://askdogoodassets.blob.core.windows.net/images/foods/growingMintInGrowBags.JPEG",
+      alt: "Fresh mint growing in containers for an AskDoGood garden",
+      eyebrow: "Garden To Table",
+      caption: "Herbs, growing food, and practical everyday wellness.",
+      fallback: founderPhotoSecondary,
+    },
+    {
+      src: "/images/personal/rosee-hero-7.jpg",
+      alt: "RoSee Murphy portrait for Ask DoGood",
+      eyebrow: "AskDoGood",
+      caption: "A grounded space to learn, explore, and stay awhile.",
+      fallback: founderPhotoSecondary,
+    },
+  ];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -377,7 +424,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Hero Image - Rosee Murphy */}
             <div className="flex justify-center mb-8">
-              <div className="relative w-[16rem] h-[20rem] md:w-[22rem] md:h-[28rem]">
+              <div className="relative w-[18rem] h-[22rem] md:w-[26rem] md:h-[30rem]">
                 {/* Soft glow behind photo */}
                 <div
                   className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/10 blur-2xl scale-110"
@@ -385,24 +432,48 @@ export default function Home() {
                 />
                 {/* Photo frame */}
                 <div className="absolute -inset-1 rounded-3xl border border-primary/20 bg-white/60 backdrop-blur-sm shadow-2xl" />
-                <img
-                  src={founderPhotoPrimary}
-                  alt="RoSeé Murphy of Ask DoGood, wellness educator and community advocate"
-                  className="relative w-full h-full rounded-3xl object-cover border-2 border-white/90 shadow-2xl"
-                  loading="eager"
-                  fetchPriority="high"
-                  width="352"
-                  height="448"
-                  onError={(e) =>
-                    handleImageError(
-                      e,
-                      "/assets/img/rosee-home.jpg",
-                    )
-                  }
-                />
-                {/* Professional credential badge */}
-                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white text-foreground px-5 py-2.5 rounded-full shadow-xl border border-primary/25 whitespace-nowrap">
-                  <span className="text-sm font-semibold tracking-tight">Thyroid Wellness Educator</span>
+                <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-white/90 shadow-2xl bg-muted">
+                  {heroSlides.map((slide, index) => (
+                    <div
+                      key={slide.src}
+                      className={`absolute inset-0 transition-opacity duration-1000 ${
+                        index === currentHeroIndex ? "opacity-100" : "opacity-0 pointer-events-none"
+                      }`}
+                    >
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="h-full w-full object-cover"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        width="416"
+                        height="480"
+                        onError={(e) => handleImageError(e, slide.fallback)}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                      <div className="absolute left-5 right-5 top-5 flex items-start justify-between gap-3">
+                        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-foreground shadow">
+                          {slide.eyebrow}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-6 left-5 right-5 text-left text-white">
+                        <p className="max-w-xs text-lg font-semibold leading-tight md:text-xl">{slide.caption}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white px-5 py-2.5 shadow-xl border border-primary/25 whitespace-nowrap">
+                  {heroSlides.map((slide, index) => (
+                    <button
+                      key={`${slide.eyebrow}-${index}`}
+                      type="button"
+                      onClick={() => setCurrentHeroIndex(index)}
+                      className={`h-2.5 rounded-full transition-all ${
+                        index === currentHeroIndex ? "w-7 bg-primary" : "w-2.5 bg-primary/25 hover:bg-primary/50"
+                      }`}
+                      aria-label={`Show ${slide.eyebrow} hero slide`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

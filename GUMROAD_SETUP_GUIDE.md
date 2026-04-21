@@ -255,7 +255,7 @@ RoSeé
 
 **Your Thyroid Course URL:**
 ```
-https://askdogood.gumroad.com/l/thyroid-mastery
+https://roseecraft.gumroad.com/l/thyroid-health-mastery
 ```
 
 ---
@@ -264,13 +264,13 @@ https://askdogood.gumroad.com/l/thyroid-mastery
 
 **Good news:** After product #1, the rest are much faster!
 
-### Quick Create for Clinical Food RX ($47)
+### Quick Create for 21-Day Plant-Based Reset ($47)
 
 1. Click "+ Create" → "Product"
-2. **Name:** `Clinical Food RX - 30-Day Meal Plan`
+2. **Name:** `21-Day Plant-Based Reset`
 3. **Price:** `47`
 4. **Original Price:** `97`
-5. **Short Description:** `Complete meal planning system with recipes, shopping lists, and prep guides for thyroid-optimal eating.`
+5. **Short Description:** `Transform your health in 3 weeks with delicious plant-based meals, shopping lists, and practical reset support.`
 6. **Files to upload:**
    - 30-Day Meal Plan PDF
    - Recipe Book PDF
@@ -279,7 +279,7 @@ https://askdogood.gumroad.com/l/thyroid-mastery
    - Customization Swap Guide PDF
 7. **Cover Image:** Create in Canva (meal/food themed)
 8. **Full Description:** Copy from checklist document
-9. **Publish** → URL will be: `https://askdogood.gumroad.com/l/clinical-food-rx`
+9. **Publish** → URL will be: `https://roseecraft.gumroad.com/l/21-day-plant-based-reset`
 
 ### Quick Create for Lab Interpretation Guide ($27)
 
@@ -293,7 +293,7 @@ https://askdogood.gumroad.com/l/thyroid-mastery
    - Wallet Card PDF
    - Doctor Scripts PDF
    - Lab Tracking Spreadsheet
-6. **Publish** → URL: `https://askdogood.gumroad.com/l/thyroid-labs-guide`
+6. **Publish** → URL: `https://roseecraft.gumroad.com/l/thyroid-lab-guide`
 
 ### Quick Create for Supplement Protocols ($17)
 
@@ -307,7 +307,7 @@ https://askdogood.gumroad.com/l/thyroid-mastery
    - Cost Optimizer Excel
    - Interaction Checker PDF
    - Quality Assessment Checklist
-6. **Publish** → URL: `https://askdogood.gumroad.com/l/supplement-protocols`
+6. **Publish** → URL: `https://roseecraft.gumroad.com/l/thyroid-supplement-templates`
 
 ---
 
@@ -389,10 +389,10 @@ Once you create products, you'll see:
 
 Add links to Gumroad products:
 ```
-- Thyroid Course: https://askdogood.gumroad.com/l/thyroid-mastery
-- Clinical Food RX: https://askdogood.gumroad.com/l/clinical-food-rx
-- Lab Guide: https://askdogood.gumroad.com/l/thyroid-labs-guide
-- Supplement Templates: https://askdogood.gumroad.com/l/supplement-protocols
+- Thyroid Course: https://roseecraft.gumroad.com/l/thyroid-health-mastery
+- 21-Day Plant-Based Reset: https://roseecraft.gumroad.com/l/21-day-plant-based-reset
+- Lab Guide: https://roseecraft.gumroad.com/l/thyroid-lab-guide
+- Supplement Templates: https://roseecraft.gumroad.com/l/thyroid-supplement-templates
 ```
 
 ### Email Launch Sequence
@@ -408,7 +408,7 @@ The Thyroid Health Mastery Course is NOW LIVE.
 
 This is the course I wish existed when I was diagnosed with Hashimoto's.
 
-→ Get instant access: https://askdogood.gumroad.com/l/thyroid-mastery
+→ Get instant access: https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 (50% off for the first 100 students - won't last long!)
 
@@ -422,7 +422,7 @@ Here's what's inside:
 Whether you've just been diagnosed or you've been struggling for years, this course will change how you understand your thyroid.
 
 Ready to start healing?
-→ https://askdogood.gumroad.com/l/thyroid-mastery
+→ https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 [Your signature]
 ```
@@ -438,7 +438,7 @@ I wanted to share what early students are experiencing...
 
 If you've been on the fence, now's the time. Launch discount ends in [X days].
 
-→ Enroll now: https://askdogood.gumroad.com/l/thyroid-mastery
+→ Enroll now: https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 [Your signature]
 ```
@@ -473,7 +473,7 @@ $97 (was $197)
 
 This is the education your doctor didn't give you
 
-→ https://askdogood.gumroad.com/l/thyroid-mastery
+→ https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 #Health #Thyroid
 ```
@@ -582,19 +582,19 @@ This is the education your doctor didn't give you
 
 ```
 Your Gumroad Store:
-https://askdogood.gumroad.com
+https://roseecraft.gumroad.com
 
 Thyroid Mastery Course:
-https://askdogood.gumroad.com/l/thyroid-mastery
+https://roseecraft.gumroad.com/l/thyroid-health-mastery
 
 Clinical Food RX:
-https://askdogood.gumroad.com/l/clinical-food-rx
+https://roseecraft.gumroad.com/l/21-day-plant-based-reset
 
 Thyroid Lab Guide:
-https://askdogood.gumroad.com/l/thyroid-labs-guide
+https://roseecraft.gumroad.com/l/thyroid-lab-guide
 
 Supplement Protocols:
-https://askdogood.gumroad.com/l/supplement-protocols
+https://roseecraft.gumroad.com/l/thyroid-supplement-templates
 
 Dashboard Login:
 https://app.gumroad.com
