@@ -19,7 +19,7 @@ Do not commit actual secrets to git.
 
 - [ ] Gumroad API token
 - [ ] Beehiiv API key
-- [ ] Beehiiv publication ID
+- [x] Beehiiv publication ID: pub_82c2e68c-a3f8-4fa4-a7fd-29bf9355e4c1
 - [ ] Google app password or OAuth workflow for askdogood@gmail.com
 - [ ] Claude/Anthropic API key (if API route)
 - [ ] Zeely token/access details (if available)
@@ -62,3 +62,8 @@ Do not commit actual secrets to git.
 - [ ] Zeely assets and copy prepared
 - [ ] Canva asset requests/specs prepared
 - [ ] KPI scorecard set for weekly optimization
+
+## Confirmed in this session
+
+- Permission status: Subscriber list is confirmed permission-based for marketing emails.
+- Subscriber file validated: 1510 rows, 1510 valid emails, 0 duplicates in the provided CSV.
