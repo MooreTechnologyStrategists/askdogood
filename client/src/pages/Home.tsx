@@ -1282,6 +1282,18 @@ export default function Home() {
         </div>
 
         <div className="container max-w-4xl relative z-10">
+          <div className="mx-auto mb-8 max-w-2xl overflow-hidden rounded-3xl border border-primary/20 bg-background/70 shadow-xl">
+            <img
+              src="/images/personal/food/meal-prep.jpg"
+              alt="Free Thyroid Symptom Checklist and 3-Day Meal Plan preview"
+              className="h-64 w-full object-cover"
+              loading="lazy"
+              width="1200"
+              height="640"
+              onError={(e) => handleImageError(e, "/images/products/gumroad_thumbnail.png")}
+            />
+          </div>
+
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-green-500 px-4 py-2 rounded-full mb-4 shadow-lg">
               <span className="text-sm font-bold text-white">Free resource</span>

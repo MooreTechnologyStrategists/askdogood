@@ -8,6 +8,9 @@ import { trackLeadMagnetView } from "@/lib/analytics";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 
 export default function FreeMealPlan() {
+  const leadMagnetImage = "/images/personal/food/meal-prep.jpg";
+  const leadMagnetFallback = "/images/products/gumroad_thumbnail.png";
+
   useEffect(() => {
     trackLeadMagnetView('thyroid-checklist-3day-plan', '/free-meal-plan');
   }, []);
@@ -43,8 +46,18 @@ export default function FreeMealPlan() {
 
             {/* Preview Image */}
             <div className="mb-12 relative">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                <UtensilsCrossed className="h-24 w-24 text-primary/40" />
+              <div className="aspect-video rounded-2xl overflow-hidden border-2 border-primary/20 bg-muted">
+                <img
+                  src={leadMagnetImage}
+                  alt="Free Thyroid Symptom Checklist and 3-Day Meal Plan preview"
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                  width="1280"
+                  height="720"
+                  onError={(e) => {
+                    e.currentTarget.src = leadMagnetFallback;
+                  }}
+                />
               </div>
               <div className="absolute -top-4 -right-4 bg-green-400 text-green-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg rotate-12">
                 100% FREE
