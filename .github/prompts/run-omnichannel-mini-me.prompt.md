@@ -1,7 +1,7 @@
 ---
 mode: ask
 model: GPT-5
-description: "Run one-week omnichannel mini-me execution across Zeely, Gumroad, Beehiiv, Claude, Emergent, Beautiful.ai, and Manus."
+description: "Run one-week omnichannel mini-me execution across Zeely, Gumroad, Beehiiv, Canva, Gmail blasts, Claude, Emergent, Beautiful.ai, and Manus."
 ---
 Run the AskDoGood omnichannel mini-me workflow.
 
@@ -16,9 +16,10 @@ Inputs:
 Tasks:
 1. Build one-week plan across active platforms.
 2. Generate platform-specific copy and payload blocks.
-3. Produce day-by-day execution list with owner and effort level.
-4. Produce KPI scorecard with pause/iterate/scale thresholds.
-5. Produce fallback manual workflow for platforms without API connectivity.
+3. Generate Canva asset prompts/specs and Gmail blast versions for each campaign beat.
+4. Produce day-by-day execution list with owner and effort level.
+5. Produce KPI scorecard with pause/iterate/scale thresholds.
+6. Produce fallback manual workflow for platforms without API connectivity.
 
 Constraints:
 - Keep founder voice consistent.

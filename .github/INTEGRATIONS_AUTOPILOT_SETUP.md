@@ -8,6 +8,8 @@ This file defines how AskDoGood connects and operates across:
 - Zeely
 - Gumroad
 - Beehiiv
+- Canva
+- Gmail blasts (askdogood@gmail.com)
 
 ## Reality check: what is possible
 - Full autopilot requires API keys, OAuth tokens, or official automation connectors.
@@ -51,6 +53,16 @@ This file defines how AskDoGood connects and operates across:
 - Required: account access and available API/automation hook.
 - Automation mode: connector-dependent.
 
+8. Canva
+- Goal: branded social creatives, carousel templates, and quick campaign graphics.
+- Required: Canva account access and brand kit/template access.
+- Automation mode: manual export workflow or connector-dependent automation.
+
+9. Gmail blasts (askdogood@gmail.com)
+- Goal: direct founder email blasts, segmented sends, and manual high-touch outreach.
+- Required: Google account access plus app password or OAuth method for connected tools.
+- Automation mode: manual sending, or connector-based sends through approved tooling.
+
 ## Recommended architecture
 
 Use one control hub to orchestrate all tools:
@@ -65,6 +77,8 @@ Flow pattern:
 5. Push ad variants to Zeely
 6. Generate deck briefs for Beautiful.ai
 7. Record outcomes to one weekly scorecard
+8. Generate or request Canva assets for channel-ready publishing
+9. Send or schedule Gmail blasts with compliant cadence and segmented lists
 
 ## Voice preservation protocol
 
@@ -83,11 +97,14 @@ Store voice guardrails once and apply everywhere:
 - GUMROAD_API_KEY=
 - BEEHIIV_API_KEY=
 - BEEHIIV_PUBLICATION_ID=
+- GMAIL_SENDER_EMAIL=askdogood@gmail.com
+- GOOGLE_APP_PASSWORD= (if using SMTP-compatible automation)
 - ANTHROPIC_API_KEY=
 - ZEELY_ACCESS_TOKEN= (if available)
 - EMERGENT_ACCESS_TOKEN= (if available)
 - BEAUTIFUL_AI_ACCESS_TOKEN= (if available)
 - MANUS_ACCESS_TOKEN= (if available)
+- CANVA_ACCESS_TOKEN= (if available)
 
 ## Operations model for your mini-me
 
@@ -100,6 +117,23 @@ Store voice guardrails once and apply everywhere:
 3. If API unavailable on a platform:
 - use manual publish checklist
 - paste outcomes back into weekly scorecard
+
+## Subscriber list reality and recovery
+
+- This repository currently contains planning docs that reference prior subscribers, but no confirmed live subscriber CSV is stored in the tracked files.
+- Recover source-of-truth subscriber lists from platform exports:
+  1. Beehiiv -> Audience -> Export CSV
+  2. Mailchimp (if used) -> Audience -> Export contacts
+  3. Any previous Azure/CRM export files
+- Keep one master canonical file outside git, then import into Beehiiv and/or Gmail segmentation workflows.
+
+## Gmail blast safety rules
+
+1. Warm sender reputation gradually if list is old.
+2. Send to engaged segment first, then expand.
+3. Include clear unsubscribe pathway.
+4. Avoid spam-trigger terms and overuse of promotional formatting.
+5. Track open/click/reply/bounce rates weekly.
 
 ## First milestone (fastest path)
 
