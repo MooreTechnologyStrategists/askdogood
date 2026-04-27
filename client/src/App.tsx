@@ -78,6 +78,7 @@ import ShopRedirect from "./pages/ShopRedirect";
 import HerbDictionary from "./pages/HerbDictionary";
 import GuestContributors from "./pages/GuestContributors";
 import WorkWithAskDoGood from "./pages/WorkWithAskDoGood";
+import ProductDetail from "./pages/ProductDetail";
 
 
 // Clinical Recipe System page - using standalone component from pages folder
@@ -153,6 +154,7 @@ function Router() {
     
     {/* Product Pages with Gumroad Integration */}
     <Route path="/product/thyroid-mastery-course" component={ThyroidMasteryCourse} />
+    <Route path="/product/:slug" component={ProductDetail} />
 
     {/* Lead Magnet Pages */}
     <Route path="/free-thyroid-lab-guide" component={FreeThyroidLabGuide} />

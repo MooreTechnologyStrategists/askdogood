@@ -69,7 +69,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Nutrition / Wellness",
     checkoutUrl: GUMROAD_URLS.plantReset,
     checkoutState: "planned",
-    internalPath: "/meal-prep",
+    internalPath: "/product/21-day-plant-based-reset",
     notes: "Use Gumroad as primary checkout and keep Stripe as optional mirror later.",
   },
   {
@@ -89,7 +89,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Health education",
     checkoutUrl: GUMROAD_URLS.labGuide,
     checkoutState: "planned",
-    internalPath: "/free-thyroid-lab-guide",
+    internalPath: "/product/thyroid-lab-interpretation-guide",
   },
   {
     id: "thyroid-supplement-protocol-templates",
@@ -109,7 +109,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.supplementTemplates,
     checkoutState: "planned",
-    internalPath: "/supplement-guide",
+    internalPath: "/product/thyroid-supplement-protocol-templates",
     notes: "Current live Gumroad slug is legacy and should be renamed before a full public push.",
   },
   {
@@ -128,7 +128,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Gardening / Wellness / Food",
     checkoutUrl: GUMROAD_URLS.gardenBundle,
     checkoutState: "planned",
-    internalPath: "/resources/library",
+    internalPath: "/product/garden-to-table-wellness-bundle",
   },
   {
     id: "autoimmune-recovery-guide",
@@ -147,7 +147,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Health / Autoimmune wellness",
     checkoutUrl: GUMROAD_URLS.autoimmuneGuide,
     checkoutState: "planned",
-    internalPath: "/resources/start",
+    internalPath: "/product/autoimmune-recovery-guide",
   },
   {
     id: "black-womens-health-advocacy-toolkit",
@@ -164,7 +164,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     cta: "Advocate like your health depends on it, because it does.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Women’s health / Advocacy",
-    internalPath: "/contact",
+    internalPath: "/product/black-womens-health-advocacy-toolkit",
     notes: "This is a strong offer, but it should not look live until a real checkout and cover exist.",
   },
   {
@@ -184,7 +184,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.symptomTracker,
     checkoutState: "planned",
-    internalPath: "/symptom-tracker",
+    internalPath: "/product/thyroid-symptom-tracker",
   },
   {
     id: "30-day-thyroid-meal-plan",
@@ -202,7 +202,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     category: "Nutrition / Thyroid health",
     checkoutUrl: GUMROAD_URLS.mealPlan,
     checkoutState: "planned",
-    internalPath: "/free-meal-plan",
+    internalPath: "/product/30-day-thyroid-meal-plan",
   },
 ];
 
@@ -224,7 +224,7 @@ export const membershipOffers: CatalogItem[] = [
     category: "Membership / Wellness",
     checkoutUrl: GUMROAD_URLS.wellnessCircle,
     checkoutState: "planned",
-    internalPath: "/contact",
+    internalPath: "/product/dogood-wellness-circle",
   },
 ];
 
