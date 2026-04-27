@@ -50,11 +50,21 @@ a{color:inherit}
 .closing{margin-top:2.5rem;padding:2.4rem;border-radius:1.9rem;background:linear-gradient(135deg,rgba(24,49,38,.9),rgba(10,17,13,.92));border:1px solid rgba(255,255,255,.08);text-align:center}
 .closing h2{margin:0;font-family:'Cormorant Garamond',serif;font-size:3rem}
 .closing p{max-width:760px;margin:1rem auto 0;color:var(--muted)}
+.flipbook-nav{width:min(1100px,92vw);margin:1.25rem auto;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.flipbook-nav-link{text-decoration:none;color:#f2ece0;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(242,236,224,.3);border-radius:999px;padding:.52rem .85rem;background:rgba(20,16,12,.55);transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.flipbook-nav-link:hover{border-color:rgba(217,175,97,.7);background:rgba(217,175,97,.14);transform:translateY(-1px)}
 .footer{padding:0 1.25rem 3rem;text-align:center;color:rgba(246,241,232,.5);font-size:.8rem}
 @media (max-width: 900px){.stats,.intro,.mosaic,.section,.story-grid,.gallery-grid{grid-template-columns:1fr}.full-photo img{height:360px}}
 </style>
 </head>
 <body>
+  <nav class="flipbook-nav" aria-label="Top navigation">
+    <a class="flipbook-nav-link" href="https://askdogood.com">Home</a>
+    <a class="flipbook-nav-link" href="https://askdogood.com/shop">Shop</a>
+    <a class="flipbook-nav-link" href="keep-moving.html">Keep Moving</a>
+    <a class="flipbook-nav-link" href="indian-creek-trail.html">Indian Creek</a>
+    <a class="flipbook-nav-link" href="patuxent-river-blue-trail.html">Patuxent Blue Trail</a>
+  </nav>
   <section class="hero">
     <div class="hero-inner">
       <span class="eyebrow">AskDoGood Walking Trails</span>
@@ -189,6 +199,14 @@ a{color:inherit}
       <p>The Blue Trail does not need exaggerated copy to be meaningful. The river, the boardwalk, the shade, the pauses, and the movement already say enough. This walk belongs in the library because it documents what real wellness often looks like: local, accessible, grounding, and worth returning to.</p>
     </section>
   </main>
+
+  <nav class="flipbook-nav" aria-label="Bottom navigation">
+    <a class="flipbook-nav-link" href="https://askdogood.com">Home</a>
+    <a class="flipbook-nav-link" href="https://askdogood.com/shop">Shop</a>
+    <a class="flipbook-nav-link" href="keep-moving.html">Keep Moving</a>
+    <a class="flipbook-nav-link" href="indian-creek-trail.html">Indian Creek</a>
+    <a class="flipbook-nav-link" href="patuxent-river-blue-trail.html">Patuxent Blue Trail</a>
+  </nav>
 
   <div class="footer">AskDoGood Digital Library</div>
 </body>

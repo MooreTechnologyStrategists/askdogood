@@ -63,12 +63,35 @@
   .tag-message { background:rgba(180,150,220,0.15); color:#c9a8e0; border:1px solid rgba(180,150,220,0.3); }
   .tag-win { background:rgba(200,168,75,0.25); color:var(--gold); border:1px solid rgba(200,168,75,0.4); }
 
+  .flipbook-nav {
+    width:min(1100px,92vw); margin:1.25rem auto;
+    display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center;
+  }
+  .flipbook-nav-link {
+    text-decoration:none; color:#f2ece0;
+    font-family:"DM Mono",monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+    border:1px solid rgba(242,236,224,.3); border-radius:999px;
+    padding:.52rem .85rem; background:rgba(20,16,12,.55);
+    transition:transform .2s ease,border-color .2s ease,background .2s ease;
+  }
+  .flipbook-nav-link:hover {
+    border-color:rgba(217,175,97,.7); background:rgba(217,175,97,.14); transform:translateY(-1px);
+  }
+
   footer { text-align:center; padding:3rem 2rem; border-top:1px solid rgba(122,158,110,0.2); background:#0a160a; font-family:"DM Mono",monospace; font-size:0.7rem; color:var(--sage); letter-spacing:0.15em; }
   .final-stat { font-family:"Fraunces",Georgia,serif; font-size:2.5rem; font-weight:700; color:var(--gold); display:block; margin:0.5rem 0; }
   .footer-quote { font-family:"Fraunces",Georgia,serif; font-style:italic; font-size:1rem; color:rgba(245,240,232,0.5); max-width:400px; margin:0 auto 1rem; line-height:1.6; }
 </style>
 </head>
 <body>
+
+<nav class="flipbook-nav" aria-label="Top navigation">
+  <a class="flipbook-nav-link" href="https://askdogood.com">Home</a>
+  <a class="flipbook-nav-link" href="https://askdogood.com/shop">Shop</a>
+  <a class="flipbook-nav-link" href="keep-moving.html">Keep Moving</a>
+  <a class="flipbook-nav-link" href="indian-creek-trail.html">Indian Creek</a>
+  <a class="flipbook-nav-link" href="patuxent-river-blue-trail.html">Patuxent Blue Trail</a>
+</nav>
 
 <section class="hero">
   <div class="hero-tag">Indian Creek Trail &middot; Greenbelt, MD &middot; April 2026</div>
@@ -168,6 +191,14 @@
         </div>
       </div>
 </div>
+
+<nav class="flipbook-nav" aria-label="Bottom navigation">
+  <a class="flipbook-nav-link" href="https://askdogood.com">Home</a>
+  <a class="flipbook-nav-link" href="https://askdogood.com/shop">Shop</a>
+  <a class="flipbook-nav-link" href="keep-moving.html">Keep Moving</a>
+  <a class="flipbook-nav-link" href="indian-creek-trail.html">Indian Creek</a>
+  <a class="flipbook-nav-link" href="patuxent-river-blue-trail.html">Patuxent Blue Trail</a>
+</nav>
 
 <footer>
   <div class="footer-quote">The world did not get more beautiful. I just got well enough to see it again.</div>
