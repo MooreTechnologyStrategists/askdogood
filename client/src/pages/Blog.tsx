@@ -243,9 +243,9 @@ export default function Blog() {
 
             <div className="grid gap-6 md:grid-cols-3">
               {featured.map((post) => (
+                <Link key={post.id} href={`/blog/${post.id}`}>
                 <Card
-                  key={post.id}
-                  className="hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-1 overflow-hidden"
+                  className="hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-1 overflow-hidden cursor-pointer"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
@@ -275,13 +275,12 @@ export default function Blog() {
                       ))}
                     </div>
 
-                    <Link href={`/blog/${post.id}`}>
                       <Button className="w-full border border-border/70 bg-background/60">
                         Read article
                       </Button>
-                    </Link>
                   </CardContent>
                 </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -312,9 +311,9 @@ export default function Blog() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post) => (
+              <Link key={post.id} href={`/blog/${post.id}`}>
               <Card
-                key={post.id}
-                className="hover:shadow-lg transition-shadow overflow-hidden"
+                className="hover:shadow-lg transition-shadow overflow-hidden cursor-pointer"
               >
                 <div className="aspect-video w-full overflow-hidden">
                   <img
@@ -344,13 +343,12 @@ export default function Blog() {
                     ))}
                   </div>
 
-                  <Link href={`/blog/${post.id}`}>
                     <Button className="w-full shadow-sm hover:shadow-md transition-shadow">
                       Read article
                     </Button>
-                  </Link>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
 

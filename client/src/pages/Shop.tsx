@@ -151,6 +151,9 @@ export default function Shop() {
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-foreground/80">
+                I built this storefront so you can choose your next move fast: start with a digital tool, book direct support, or shop the AskDoGood merch lane.
+              </p>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/85">
                 {siteCopy.cta}
               </p>
@@ -221,7 +224,8 @@ export default function Shop() {
       <section className="py-16 border-b border-border/40 bg-background/70">
         <div className="container">
           <div className="mb-8 grid gap-4 md:grid-cols-3">
-            <Card className="border-primary/20 bg-primary/5">
+            <Link href="/shop">
+            <Card className="border-primary/20 bg-primary/5 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <CardHeader>
                 <CardTitle className="text-xl">1. Buy Digital Products</CardTitle>
                 <CardDescription>
@@ -233,7 +237,9 @@ export default function Shop() {
                 <p className="text-sm text-muted-foreground">live product checkouts</p>
               </CardContent>
             </Card>
-            <Card className="border-border/60 bg-card/90">
+            </Link>
+            <Link href="/work-with-askdogood">
+            <Card className="border-border/60 bg-card/90 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <CardHeader>
                 <CardTitle className="text-xl">2. Book Services</CardTitle>
                 <CardDescription>
@@ -245,7 +251,9 @@ export default function Shop() {
                 <p className="text-sm text-muted-foreground">service pathways available</p>
               </CardContent>
             </Card>
-            <Card className="border-border/60 bg-card/90">
+            </Link>
+            <Link href="/merch">
+            <Card className="border-border/60 bg-card/90 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
               <CardHeader>
                 <CardTitle className="text-xl">3. Shop Merch</CardTitle>
                 <CardDescription>
@@ -257,6 +265,7 @@ export default function Shop() {
                 <p className="text-sm text-muted-foreground">merch concepts in rollout</p>
               </CardContent>
             </Card>
+            </Link>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">

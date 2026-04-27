@@ -212,38 +212,46 @@ export default function About() {
 
               {/* What they get here */}
               <div className="grid gap-4">
-                <Card className="hover:shadow-md transition-shadow">
+                <Link href="/resources/start">
+                <Card className="hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer">
                   <CardContent className="p-5 text-sm text-muted-foreground leading-relaxed">
                     <span className="font-medium text-foreground">Healing</span> — stabilization, inflammation awareness,
                     rest, and realistic nutrition (the kind that works on tired days).
                   </CardContent>
                 </Card>
+                </Link>
 
-                <Card className="hover:shadow-md transition-shadow">
+                <Link href="/resources/library">
+                <Card className="hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer">
                   <CardContent className="p-5 text-sm text-muted-foreground leading-relaxed">
                     <span className="font-medium text-foreground">Structure</span> — routines, accountability,
                     and “doable” plans that don’t collapse when life gets loud.
                   </CardContent>
                 </Card>
+                </Link>
 
-                <Card className="hover:shadow-md transition-shadow">
+                <Link href="/work-with-askdogood">
+                <Card className="hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer">
                   <CardContent className="p-5 text-sm text-muted-foreground leading-relaxed">
                     <span className="font-medium text-foreground">Real-life growth</span> — rebuilding confidence,
                     identity, and momentum without shame.
                   </CardContent>
                 </Card>
+                </Link>
 
-                <Card className="hover:shadow-md transition-shadow">
+                <Link href="/journey">
+                <Card className="hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer">
                   <CardContent className="p-5 text-sm text-muted-foreground leading-relaxed">
                     <span className="font-medium text-foreground">Faith-friendly support</span> — encouragement you can use,
                     without pressure or judgment. Come as you are.
                   </CardContent>
                 </Card>
+                </Link>
               </div>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link href="/free-reset">
+                <Link href="/free-meal-plan">
                   <Button className="gap-2 shadow-md hover:shadow-lg transition-shadow">
                     Start with the Free Reset <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -256,12 +264,12 @@ export default function About() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/community">
+                <Link href="/contact">
                   <Button variant="secondary" className="gap-2">
                     Join DoGood Circle <UsersRound className="h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="/consulting">
+                <Link href="/coaching">
                   <Button variant="outline" className="gap-2">
                     Book a Reset Session <Handshake className="h-4 w-4" />
                   </Button>
@@ -289,17 +297,17 @@ export default function About() {
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-              <Link href="/free-reset">
+              <Link href="/free-meal-plan">
                 <Button size="lg" className="gap-2 shadow-md hover:shadow-lg transition-shadow">
                   Get the Free Reset <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/consulting">
+              <Link href="/coaching">
                 <Button size="lg" variant="outline" className="gap-2 shadow-sm hover:shadow-md transition-shadow">
                   Book a Reset Session <Handshake className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/community">
+              <Link href="/contact">
                 <Button size="lg" variant="secondary" className="gap-2">
                   Join DoGood Circle <UsersRound className="h-4 w-4" />
                 </Button>

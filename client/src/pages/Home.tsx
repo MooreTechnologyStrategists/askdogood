@@ -479,6 +479,51 @@ export default function Home() {
               ))}
             </div>
 
+            <div className="mx-auto grid w-full max-w-4xl gap-3 sm:grid-cols-3">
+              <Link href="/journey">
+                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <img
+                    src="/images/personal/rosee-hero-1.jpg"
+                    alt="RoSee Murphy founder portrait"
+                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(e) => handleImageError(e, founderPhotoSecondary)}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
+                    Founder Journey
+                  </div>
+                </a>
+              </Link>
+              <Link href="/behind-the-scenes/in-my-kitchen">
+                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <img
+                    src="/images/personal/food/meal-prep.jpg"
+                    alt="RoSee Murphy meal prep routine"
+                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(e) => handleImageError(e)}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
+                    In My Kitchen
+                  </div>
+                </a>
+              </Link>
+              <Link href="/behind-the-scenes">
+                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <img
+                    src="/images/personal/rosee-founder-snow-2026.jpg"
+                    alt="RoSee Murphy founder outdoor photo"
+                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(e) => handleImageError(e, founderPhotoSecondary)}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
+                    Behind The Scenes
+                  </div>
+                </a>
+              </Link>
+            </div>
+
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/free-meal-plan">
@@ -537,7 +582,7 @@ export default function Home() {
                   You don&apos;t need a complete overhaul, you need consistency. You need awareness. You need a system that helps you make better decisions daily without thinking about it too hard.
                 </p>
                 <p className="mt-4 text-base md:text-lg leading-8 text-muted-foreground">
-                  That&apos;s what AskDoGood is here for.
+                  That&apos;s why I built AskDoGood.
                 </p>
               </div>
             </div>
