@@ -6,7 +6,7 @@ Audit date: April 18, 2026
 
 Resolved live during audit:
 
-- `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+- `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 
 Returned 404 during audit:
 

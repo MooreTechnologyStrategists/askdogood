@@ -62,7 +62,7 @@
   - "Enroll Now" buttons linking to Gumroad checkout
   - 30-day money-back guarantee messaging
   - Professional layout matching WebMD/Mayo Clinic style
-- ✅ Gumroad Link: `https://askdogood.gumroad.com/l/thyroid-mastery`
+- ✅ Gumroad Link: `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 
 ---
 
@@ -191,7 +191,7 @@ Add these routes:
 ## 🔗 GUMROAD SETUP CHECKLIST
 
 ### Products to Create on Gumroad:
-1. ✅ Thyroid Health Mastery Course - `https://askdogood.gumroad.com/l/thyroid-mastery`
+1. ✅ Thyroid Health Mastery Course - `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 2. ❌ Autoimmune Recovery Guide - Create at gumroad.com
 3. ❌ Black Women's Health Advocacy Toolkit - Create at gumroad.com
 4. ❌ DoGood Wellness Circle (subscription) - Create at gumroad.com

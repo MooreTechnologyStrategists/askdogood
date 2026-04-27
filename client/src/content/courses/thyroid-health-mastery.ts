@@ -2,7 +2,7 @@ export const thyroidHealthMasteryCourse = {
   title: "Thyroid Health Mastery Course",
   subtitle: "Your Complete Guide to Understanding, Healing, and Thriving with Thyroid Conditions",
   price: 97,
-  coverImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200",
+  coverImage: "/images/products/gumroad_cover.png",
   description: "Everything you need to take control of your thyroid health—from understanding your labs to creating your personalized healing protocol.",
   
   modules: [

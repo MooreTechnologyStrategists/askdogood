@@ -43,7 +43,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "A self-paced digital course designed to help you better understand thyroid health, symptoms, labs, medication support, nutrition, stress, and self-advocacy. Built from lived experience, real research, and a whole-person healing perspective.",
     cta: "Start your thyroid healing journey today.",
     image:
-      "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
+      "/images/products/gumroad_cover.png",
     category: "Health / Wellness / Education",
     checkoutUrl: GUMROAD_URLS.thyroidMastery,
     checkoutState: "live",
@@ -105,7 +105,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "Downloadable templates to help structure your supplement routine, symptom tracking, digestion notes, and recovery support.",
     cta: "Build a routine your body can follow.",
     image:
-      "https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png",
+      "/images/products/gumroad_cover.png",
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.supplementTemplates,
     checkoutState: "planned",

@@ -71,11 +71,25 @@ function RecoveredContentSection() {
                 ))}
               </div>
 
+              <div className="mt-6 rounded-[1.5rem] border border-border bg-secondary/20 p-5 md:hidden">
+                <p className="text-sm leading-6 text-muted-foreground">
+                  Mobile preview is opened as a full page to avoid nested scrolling.
+                </p>
+                <a
+                  href={item.href}
+                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-background px-5 py-2.5 text-sm font-semibold text-primary"
+                >
+                  Open {item.title}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
               <iframe
                 src={item.href}
                 title={`${item.title} preview`}
-                className="mt-6 h-[540px] w-full rounded-[1.5rem] border border-border bg-white"
+                className="mt-6 hidden h-[540px] w-full rounded-[1.5rem] border border-border bg-white md:block"
                 loading="lazy"
+                scrolling="no"
               />
             </article>
           ))}
@@ -206,6 +220,7 @@ export default function KeepMoving() {
                       title={`${item.title} card preview`}
                       className="pointer-events-none absolute inset-0 h-full w-full scale-[1.05] opacity-50"
                       loading="lazy"
+                      scrolling="no"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,19,20,0.14),rgba(11,19,20,0.5))]" aria-hidden="true" />
                   </div>
@@ -233,6 +248,7 @@ export default function KeepMoving() {
                   title={`${featuredWalkResource.title} feature preview`}
                   className="pointer-events-none absolute inset-0 h-full w-full scale-[1.04] opacity-50"
                   loading="lazy"
+                  scrolling="no"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,17,13,0.12),rgba(10,17,13,0.52))]" aria-hidden="true" />
               </div>

@@ -156,11 +156,11 @@ export default function ThyroidCourse() {
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
+            src="/images/products/gumroad_cover.png"
             alt="Thyroid Health"
             className="w-full h-full object-cover opacity-20"
             onError={(e) => {
-              e.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/products/Thumbnail_Thyroid_Health_Mastery_Ebook.png";
+              e.currentTarget.src = "/images/products/gumroad_thumbnail.png";
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-background/90" />

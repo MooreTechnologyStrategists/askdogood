@@ -20,11 +20,11 @@ export default function ThyroidMasteryCourse() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
                   <img
-                    src="https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png"
+                    src="/images/products/gumroad_cover.png"
                     alt="Thyroid Health Mastery Course"
                     className="w-full h-full object-cover"
                     onError={(event) => {
-                      event.currentTarget.src = "https://askdogoodassets.blob.core.windows.net/images/products/Thumbnail_Thyroid_Health_Mastery_Ebook.png";
+                      event.currentTarget.src = "/images/products/gumroad_thumbnail.png";
                     }}
                   />
                 </div>

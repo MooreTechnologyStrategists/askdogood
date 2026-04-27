@@ -98,7 +98,8 @@ function getSchemaForPath(path: string) {
           sameAs: SITE_URL,
         },
         url: `${SITE_URL}/course/thyroid-health-mastery`,
-        image: DEFAULT_OG_IMAGE,
+        image:
+          "/images/products/gumroad_cover.png",
       };
     case "/product/thyroid-mastery-course":
       return {
@@ -107,7 +108,8 @@ function getSchemaForPath(path: string) {
         name: "Thyroid Mastery Course",
         description:
           "Ask DoGood course product page for thyroid education, healing routines, and self-advocacy.",
-        image: DEFAULT_OG_IMAGE,
+        image:
+          "/images/products/gumroad_cover.png",
         brand: {
           "@type": "Brand",
           name: SITE_NAME,

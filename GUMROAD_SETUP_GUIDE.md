@@ -255,7 +255,7 @@ RoSeé
 
 **Your Thyroid Course URL:**
 ```
-https://roseecraft.gumroad.com/l/thyroid-health-mastery
+https://askdogood.gumroad.com/l/thyroid-health-mastery
 ```
 
 ---
@@ -389,7 +389,7 @@ Once you create products, you'll see:
 
 Add links to Gumroad products:
 ```
-- Thyroid Course: https://roseecraft.gumroad.com/l/thyroid-health-mastery
+- Thyroid Course: https://askdogood.gumroad.com/l/thyroid-health-mastery
 - 21-Day Plant-Based Reset: https://roseecraft.gumroad.com/l/21-day-plant-based-reset
 - Lab Guide: https://roseecraft.gumroad.com/l/thyroid-lab-guide
 - Supplement Templates: https://roseecraft.gumroad.com/l/thyroid-supplement-templates
@@ -408,7 +408,7 @@ The Thyroid Health Mastery Course is NOW LIVE.
 
 This is the course I wish existed when I was diagnosed with Hashimoto's.
 
-→ Get instant access: https://roseecraft.gumroad.com/l/thyroid-health-mastery
+→ Get instant access: https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 (50% off for the first 100 students - won't last long!)
 
@@ -422,7 +422,7 @@ Here's what's inside:
 Whether you've just been diagnosed or you've been struggling for years, this course will change how you understand your thyroid.
 
 Ready to start healing?
-→ https://roseecraft.gumroad.com/l/thyroid-health-mastery
+→ https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 [Your signature]
 ```
@@ -438,7 +438,7 @@ I wanted to share what early students are experiencing...
 
 If you've been on the fence, now's the time. Launch discount ends in [X days].
 
-→ Enroll now: https://roseecraft.gumroad.com/l/thyroid-health-mastery
+→ Enroll now: https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 [Your signature]
 ```
@@ -473,7 +473,7 @@ $97 (was $197)
 
 This is the education your doctor didn't give you
 
-→ https://roseecraft.gumroad.com/l/thyroid-health-mastery
+→ https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 #Health #Thyroid
 ```
@@ -585,7 +585,7 @@ Your Gumroad Store:
 https://roseecraft.gumroad.com
 
 Thyroid Mastery Course:
-https://roseecraft.gumroad.com/l/thyroid-health-mastery
+https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 Clinical Food RX:
 https://roseecraft.gumroad.com/l/21-day-plant-based-reset

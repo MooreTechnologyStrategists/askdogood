@@ -241,7 +241,7 @@
 
 5. **Your Product URL**
    ```
-   https://askdogood.gumroad.com/l/thyroid-mastery
+   https://askdogood.gumroad.com/l/thyroid-health-mastery
    ```
 
 ---
@@ -314,7 +314,7 @@ The Thyroid Health Mastery Course is NOW LIVE.
 
 This is the course I wish existed when I was diagnosed with Hashimoto's.
 
-→ Get instant access: https://askdogood.gumroad.com/l/thyroid-mastery
+→ Get instant access: https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 (50% off for the first 100 students - won't last long!)
 
@@ -328,7 +328,7 @@ Here's what's inside:
 Whether you've just been diagnosed or you've been struggling for years, this course will change how you understand your thyroid.
 
 Ready to start healing?
-→ https://askdogood.gumroad.com/l/thyroid-mastery
+→ https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 [Your signature]
 ```

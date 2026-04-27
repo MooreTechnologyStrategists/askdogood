@@ -10,7 +10,7 @@ Canonical store assumption for site config: `https://roseecraft.gumroad.com`
 
 Only one public Gumroad product resolved live during audit:
 
-- Thyroid Health Mastery Course: `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+- Thyroid Health Mastery Course: `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 
 Everything else still needs one of these:
 
@@ -37,7 +37,7 @@ Everything else still needs one of these:
 
 | Product | Canonical slug | Current status | Cover image status | Deliverable status | Final public URL | Done |
 |---|---|---|---|---|---|---|
-| Thyroid Health Mastery Course | `thyroid-health-mastery` | Live | Ready | Ready | `https://roseecraft.gumroad.com/l/thyroid-health-mastery` | [ ] |
+| Thyroid Health Mastery Course | `thyroid-health-mastery` | Live | Ready | Ready | `https://askdogood.gumroad.com/l/thyroid-health-mastery` | [ ] |
 | 21-Day Plant-Based Reset | `21-day-plant-based-reset` | Needs listing or relink | Ready | Ready |  | [ ] |
 | Thyroid Symptom Tracker | `thyroid-symptom-tracker` | Needs listing or relink | Usable, could improve later | Ready |  | [ ] |
 | Thyroid Lab Interpretation Guide | `thyroid-lab-guide` | Needs listing or relink | Ready | Ready |  | [ ] |
@@ -56,7 +56,7 @@ Everything else still needs one of these:
 - Price: `$97`
 - Product type: digital course
 - Copy source: `GUMROAD_PRODUCT_COPY_PASTE.md`
-- Cover image: `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png`
+- Cover image: `/images/products/gumroad_cover.png`
 - Status: already live
 - Action:
   - confirm product is on the store you want to keep long-term

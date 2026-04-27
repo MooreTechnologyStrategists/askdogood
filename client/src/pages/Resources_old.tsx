@@ -157,9 +157,9 @@ const Resources = () => {
           <div className="max-w-5xl mx-auto">
             <h3 className="text-2xl font-bold mb-6 text-center text-primary">Shop Wellness Tools</h3>
             <div className="flex flex-wrap justify-center gap-8">
-              <a href="https://gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
+              <a href="https://askdogood.gumroad.com/l/thyroid-health-mastery" target="_blank" rel="noopener noreferrer" className="max-w-xs w-full">
                 <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl transition">
-                  <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400" alt="Thyroid Health Mastery Course" className="w-full h-32 object-cover rounded-lg mb-2" />
+                  <img src="/images/products/gumroad_cover.png" alt="Thyroid Health Mastery Course" className="w-full h-32 object-cover rounded-lg mb-2" />
                   <h4 className="font-bold text-lg mb-1">Thyroid Health Mastery Course</h4>
                   <p className="text-sm mb-2">$97</p>
                   <button className="w-full bg-primary text-white rounded-xl py-2 font-semibold hover:bg-primary/90 transition">Buy Now</button>

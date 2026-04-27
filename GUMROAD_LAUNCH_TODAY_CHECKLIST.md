@@ -221,7 +221,7 @@ Questions? Email: rosee@askdogood.com
 
 ### **Step 7: Publish**
 1. Click **"Publish"**
-2. Copy product URL: `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+2. Copy product URL: `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 3. ✅ **Product 1 is LIVE!**
 
 ---
@@ -405,7 +405,7 @@ Your website already has Gumroad links built in. Verify they point to your actua
 
 1. Open your website: `https://askdogood.com/shop`
 2. Check that "Buy Now" buttons point to correct URLs:
-  - Thyroid Course → `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+  - Thyroid Course → `https://askdogood.gumroad.com/l/thyroid-health-mastery`
   - 21-Day Reset → `https://roseecraft.gumroad.com/l/21-day-plant-based-reset`
   - Garden Bundle → `https://roseecraft.gumroad.com/l/garden-to-table-bundle`
 
@@ -446,7 +446,7 @@ Inside, you'll get:
 
 **Launch Special: $97** (regular price $197)
 
-[👉 Get Instant Access](https://roseecraft.gumroad.com/l/thyroid-health-mastery)
+[👉 Get Instant Access](https://askdogood.gumroad.com/l/thyroid-health-mastery)
 
 This is for you if:
 - You've been told "your labs are normal" but feel terrible
@@ -532,7 +532,7 @@ This course is for you.
 
 **Launch special: $97** (regular price $197)
 
-Link to purchase: https://roseecraft.gumroad.com/l/thyroid-health-mastery
+Link to purchase: https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 Questions? Drop them below. I'm here for you. 💚
 ```

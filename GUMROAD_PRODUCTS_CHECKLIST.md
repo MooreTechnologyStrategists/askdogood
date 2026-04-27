@@ -831,7 +831,7 @@ Grab the templates today.
 - [ ] Enable license keys (if needed)
 - [ ] Set up email on purchase
 - [ ] Publish product
-- [ ] **Product URL:** `https://roseecraft.gumroad.com/l/thyroid-health-mastery`
+- [ ] **Product URL:** `https://askdogood.gumroad.com/l/thyroid-health-mastery`
 
 #### Product #2: 21-Day Plant-Based Reset
 - [ ] Repeat same process
@@ -940,7 +940,7 @@ Main Gumroad Profile:
 https://roseecraft.gumroad.com
 
 Thyroid Health Mastery Course:
-https://roseecraft.gumroad.com/l/thyroid-health-mastery
+https://askdogood.gumroad.com/l/thyroid-health-mastery
 
 21-Day Plant-Based Reset:
 https://roseecraft.gumroad.com/l/21-day-plant-based-reset

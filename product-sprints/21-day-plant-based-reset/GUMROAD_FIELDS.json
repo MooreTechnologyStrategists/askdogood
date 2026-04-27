@@ -1,0 +1,55 @@
+{
+  "productName": "21-Day Plant-Based Reset",
+  "subtitle": "A practical thyroid-friendly reset for energy, digestion, and consistency.",
+  "slug": "21-day-plant-based-reset",
+  "productType": "Digital Product",
+  "category": "Health & Wellness",
+  "priceUsd": 47,
+  "compareAtPriceUsd": 97,
+  "currency": "USD",
+  "status": "Launch-ready draft",
+  "purchaseButtonText": "Start My 21-Day Reset",
+  "coverImagePath": "/images/products/plant_reset_cover.svg",
+  "thumbnailImagePath": "/images/products/plant_reset_thumbnail.svg",
+  "shortDescription": "Reset your plate, energy, and routine in 21 days with practical meal structure, prep shortcuts, and thyroid-friendly guidance you can actually stick to.",
+  "whoItsFor": [
+    "Women managing thyroid symptoms, inflammation, fatigue, or bloating",
+    "People who need structure without strict perfection rules",
+    "Busy schedules needing realistic food systems"
+  ],
+  "whatYouGet": [
+    "21-day step-by-step reset framework",
+    "Weekly meal mapping templates",
+    "Prep-day workflow and grocery list builder",
+    "Thyroid-supportive food guidance",
+    "Emergency low-energy meal fallback list",
+    "Daily check-in tracker"
+  ],
+  "deliveryFiles": [
+    "PRODUCT_CONTENT.md",
+    "Day-by-day tracker (PDF export)",
+    "Grocery + prep worksheet (PDF export)"
+  ],
+  "faq": [
+    {
+      "q": "Is this vegan?",
+      "a": "It is plant-based by design and can be adjusted for your needs."
+    },
+    {
+      "q": "Do I need special ingredients?",
+      "a": "No. The framework is built around accessible grocery-store foods."
+    },
+    {
+      "q": "How fast will I see results?",
+      "a": "Many users report better consistency and less food decision fatigue within the first week."
+    }
+  ],
+  "refundPolicy": "7-day satisfaction guarantee for digital products.",
+  "seoKeywords": [
+    "plant-based reset",
+    "thyroid-friendly meal plan",
+    "anti-inflammatory meal prep",
+    "21 day wellness reset",
+    "energy and digestion reset"
+  ]
+}

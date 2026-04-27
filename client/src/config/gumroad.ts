@@ -21,7 +21,7 @@ export const GUMROAD_URLS = {
   storefront: GUMROAD_STOREFRONT,
   thyroidMastery:
     import.meta.env.VITE_GUMROAD_THYROID_MASTERY_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.thyroidMastery),
+    "https://askdogood.gumroad.com/l/thyroid-health-mastery",
   plantReset:
     import.meta.env.VITE_GUMROAD_PLANT_RESET_URL ||
     gumroadProductUrl(GUMROAD_SLUGS.plantReset),

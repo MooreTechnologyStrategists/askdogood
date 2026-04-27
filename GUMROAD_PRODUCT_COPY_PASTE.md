@@ -17,7 +17,7 @@
 
 - **Price:** `$97`
 - **Product type:** Digital course
-- **Cover image:** `https://askdogoodassets.blob.core.windows.net/images/products/Thyroid_Health_Mastery_Cover.png`
+- **Cover image:** `/images/products/gumroad_cover.png`
 - **Recommended Gumroad URL slug:** `thyroid-health-mastery`
 - **Short description:** Master your thyroid health with expert guidance, lab education, nutrition support, and real-world strategies that actually make sense.
 

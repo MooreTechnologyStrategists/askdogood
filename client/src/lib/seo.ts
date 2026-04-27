@@ -415,6 +415,8 @@ export const staticSeoPages: StaticSeoPage[] = [
       "thyroid healing",
     ],
     type: "product",
+    image:
+      "/images/products/gumroad_cover.png",
     priority: 0.9,
     changefreq: "weekly",
   },
@@ -425,6 +427,8 @@ export const staticSeoPages: StaticSeoPage[] = [
       "Review the Ask DoGood thyroid mastery course offer, benefits, and what is included before you enroll.",
     keywords: ["thyroid mastery course", "thyroid product page", "wellness course"],
     type: "product",
+    image:
+      "/images/products/gumroad_cover.png",
     priority: 0.85,
     changefreq: "weekly",
   },
