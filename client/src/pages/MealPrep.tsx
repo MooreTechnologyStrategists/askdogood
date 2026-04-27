@@ -13,11 +13,13 @@ import {
   CheckCircle2,
   Truck,
   PhoneCall,
+  Leaf,
 } from "lucide-react";
 import { recipes } from "@/data/recipes";
 import RecipeModal from "@/components/RecipeModal";
 import type { Recipe } from "@/data/recipes";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
+import { GUMROAD_URLS } from "@/config/gumroad";
 
 const mealPlans = [
   {

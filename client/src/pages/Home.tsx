@@ -22,6 +22,7 @@ import {
   Quote,
   TrendingUp,
   Zap,
+  Leaf,
 } from "lucide-react";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import GardenSeasonsSection from "@/components/GardenSeasonsSection";
@@ -361,6 +362,29 @@ export default function Home() {
     },
   ];
 
+  const missionStandards = [
+    {
+      title: "Pay It Forward",
+      detail: "Revenue from offers is designed to fund community support, education, and practical local impact.",
+      icon: <Users className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "End Harmful Vices",
+      detail: "We teach replacement habits, accountability, and structure so people can break destructive cycles.",
+      icon: <ShieldCheck className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "Reduce Toxin Load",
+      detail: "People get practical guidance on cleaner food, herbs, movement, and stress reduction before more damage accumulates.",
+      icon: <Leaf className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "Eat To Live",
+      detail: "Discipline in food choices is framed as freedom, stability, and long-term quality of life.",
+      icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* HERO SECTION - Main Value Proposition */}
@@ -472,6 +496,62 @@ export default function Home() {
                   That&apos;s what AskDoGood is here for.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-16 md:py-20 bg-[linear-gradient(165deg,rgba(248,255,250,1)_0%,rgba(242,249,245,1)_38%,rgba(255,255,255,1)_100%)] overflow-hidden">
+        <div className="absolute -top-24 -left-16 h-64 w-64 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+        <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-secondary/20 blur-3xl" aria-hidden="true" />
+
+        <div className="container relative">
+          <div className="mx-auto max-w-6xl rounded-[2rem] border border-primary/15 bg-white/95 p-7 shadow-[0_22px_70px_rgba(20,45,30,0.10)] md:p-10">
+            <div className="mb-8 grid gap-5 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/80">Mission in one sentence</p>
+                <h2 className="mt-3 text-3xl font-bold leading-tight text-foreground md:text-5xl font-serif">
+                  AskDoGood exists to help people build wholesome lives and pay that healing forward to their communities.
+                </h2>
+                <p className="mt-4 text-base leading-8 text-muted-foreground md:text-lg">
+                  We close the missing gaps that keep people stuck: health literacy, food discipline, vice interruption, employment stability, and everyday structure.
+                </p>
+              </div>
+              <div className="rounded-[1.6rem] border border-primary/20 bg-[linear-gradient(160deg,rgba(14,49,33,0.95),rgba(26,99,66,0.92))] p-6 text-white shadow-xl">
+                <p className="text-xs uppercase tracking-[0.24em] text-white/75">Founder standard</p>
+                <p className="mt-3 text-2xl font-bold leading-tight font-serif">Eat to live. Never live to eat.</p>
+                <p className="mt-3 text-sm leading-7 text-white/85">
+                  Discipline is not punishment. It is the bridge between intention and a life your body can actually sustain.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {missionStandards.map((item) => (
+                <div key={item.title} className="rounded-3xl border border-border/70 bg-background/90 p-5 shadow-sm">
+                  <div className="mb-3 inline-flex rounded-2xl bg-primary/10 p-3">{item.icon}</div>
+                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-3 md:grid-cols-3">
+              <Link href="/free-meal-plan">
+                <Button className="h-full w-full rounded-3xl px-6 py-6 text-base font-bold shadow-lg">
+                  Start free with a plan
+                </Button>
+              </Link>
+              <Link href="/shop">
+                <Button variant="outline" className="h-full w-full rounded-3xl border-2 border-primary/30 px-6 py-6 text-base font-bold">
+                  Explore paid tools
+                </Button>
+              </Link>
+              <Link href="/work-with-askdogood">
+                <Button variant="secondary" className="h-full w-full rounded-3xl px-6 py-6 text-base font-bold">
+                  Partner for community impact
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

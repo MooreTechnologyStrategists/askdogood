@@ -1,7 +1,8 @@
 export const siteCopy = {
   home: {
     headline: "Real Health. Real Discipline. Real Life.",
-    subtext: "Take control of your health through food, movement, and consistency.",
+    subtext:
+      "AskDoGood helps communities heal whole-life gaps through health education, discipline, practical employment support, and everyday structure.",
   },
   mealPrep: {
     headline: "Cook Once. Eat Better All Week.",
@@ -39,7 +40,8 @@ export const siteCopy = {
     content:
       "AskDoGood was built from real-life experience - learning what works, what doesn't, and what actually helps people feel better and live better.\n\nThis isn't about perfection. It's about progress, awareness, and building habits that support your life long-term.\n\nThe mission is simple: help people take control of their health, break cycles, and create better outcomes for themselves and their families.",
   },
-  cta: "Start where you are. Use what you have. Do better consistently.",
+  cta:
+    "Eat to live, never live to eat. Build discipline, restore health, and pay it forward to your community.",
 } as const;
 
 export function splitCopy(content: string): string[] {

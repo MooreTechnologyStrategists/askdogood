@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Leaf, ExternalLink } from 'lucide-react';
+import { X, Send, Leaf, ExternalLink } from 'lucide-react';
 import { GUMROAD_URLS } from '@/config/gumroad';
 
 // ─── Health Knowledge Base ─────────────────────────────────────────────────
@@ -466,14 +466,114 @@ If you want to write for Ask DoGood or pitch a collaboration, use the contributo
 
 Great fits include holistic health, meal prep, rest, spirituality, movement, education, employment, and real-life growth content.`],
 
+  // EMPLOYMENT / STABILITY
+  [['employment', 'job', 'career', 'workforce', 'resume', 'interview', 'income', 'financial stability'],
+  `**Employment and stability are part of healing.**
+
+AskDoGood is not just food and herbs. We also focus on structure, income, and practical progress so people can build whole lives.
+
+**Start here:**
+• Build a weekly routine: sleep, meals, movement, job-search blocks
+• Track applications and follow-ups consistently
+• Practice interview answers and negotiation scripts
+• Protect your energy so burnout does not derail your progress
+
+If you want partnership support for workshops or workforce-centered programming:
+→ [Work With AskDoGood](/work-with-askdogood)
+
+For practical lifestyle structure and implementation:
+→ [Resources](/resources)
+→ [Blog](/blog)`],
+
+  // VICE / HABIT CHANGE
+  [['vice', 'addiction', 'smoking', 'alcohol', 'drinking', 'quit', 'habit', 'relapse', 'substance'],
+  `**Breaking a vice takes structure, not shame.**
+
+You are not weak. You need a replacement plan, accountability, and a safer daily rhythm.
+
+**Practical first steps:**
+• Identify your top triggers (time, place, emotions, people)
+• Build a replacement action for each trigger (walk, tea, call, prayer, journaling)
+• Remove easy access and reduce high-risk environments
+• Use community support: trusted friend, sponsor, therapist, support group
+• Track wins daily, even small ones
+
+If cravings feel intense or relapse risk is high, please use same-day professional support and local resources.
+
+Start with these AskDoGood resources:
+→ [Blog](/blog)
+→ [Contact AskDoGood](/contact)`],
+
   // DEFAULT
+];
+
+const URGENT_KEYWORDS = [
+  'chest pain',
+  'can\'t breathe',
+  'cant breathe',
+  'shortness of breath',
+  'suicidal',
+  'suicide',
+  'kill myself',
+  'overdose',
+  'stroke',
+  'fainting',
+  'passed out',
+  'seizure',
+  'severe allergic reaction',
+  'anaphylaxis',
+];
+
+const MEDICAL_DECISION_KEYWORDS = [
+  'diagnose me',
+  'diagnosis',
+  'prescribe',
+  'dosage',
+  'dose',
+  'how much medication',
+  'stop my medication',
+  'replace my medication',
+  'can i stop levothyroxine',
+  'is this cancer',
+  'emergency',
 ];
 
 function getResponse(input: string): string {
   const lower = input.toLowerCase();
-  for (const [keys, answer] of KB) {
-    if (keys.some((k) => lower.includes(k))) return answer;
+
+  if (URGENT_KEYWORDS.some((keyword) => lower.includes(keyword))) {
+    return `**This could be urgent. Please get immediate in-person help now.**
+
+If you are in the U.S., call **911** for emergency symptoms (chest pain, trouble breathing, stroke signs, severe allergic reaction, or overdose).
+
+If this is a mental health crisis, call or text **988** right now.
+
+After urgent care is handled, you can come back and I can help with follow-up questions and resources.`;
   }
+
+  if (MEDICAL_DECISION_KEYWORDS.some((keyword) => lower.includes(keyword))) {
+    return `I can help you prepare better questions, but I cannot diagnose, prescribe, or tell you to start/stop medications.
+
+**Safer next step:**
+• Contact your licensed clinician for treatment decisions
+• Bring your symptom timeline and recent labs
+• Use these prep tools before your appointment:
+
+📋 [Doctor Checklist](/doctor-checklist)
+📖 [Free Thyroid Lab Guide](/free-thyroid-lab-guide)`;
+  }
+
+  const rankedMatches = KB.map(([keys, answer]) => ({
+    answer,
+    score: keys.reduce((total, keyword) => total + (lower.includes(keyword) ? 1 : 0), 0),
+  }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  if (rankedMatches.length > 0) {
+    return rankedMatches[0].answer;
+  }
+
   return `I'm the AskDoGood AI assistant. I can help you with:
 
 • 🦋 **Thyroid health** — labs, Hashimoto's, medications, symptoms

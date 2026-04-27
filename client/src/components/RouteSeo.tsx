@@ -55,7 +55,7 @@ function getSchemaForPath(path: string) {
           name: SITE_NAME,
           url: SITE_URL,
           description:
-            "Practical wellness, thyroid support, DMV meal prep, and real-life healing guidance from Ask DoGood.",
+            "AskDoGood helps people eat to live, reduce toxin load, rebuild discipline, grow stability, and pay wellness forward in their communities.",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
