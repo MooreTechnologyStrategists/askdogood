@@ -290,6 +290,8 @@ export default function Home() {
     .map((id) => catalogById[id])
     .filter((item) => Boolean(item)) as Array<(typeof catalogById)[string]>;
 
+  const quickCashOffer = catalogById["thyroid-health-mastery"];
+
   const features: FeatureCardProps[] = [
     {
       icon: <HeartPulse className="h-5 w-5 text-primary" />,
@@ -482,6 +484,28 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+
+            {quickCashOffer && hasLiveCheckout(quickCashOffer) ? (
+              <div className="mx-auto w-full max-w-3xl rounded-[2rem] border border-primary/30 bg-[linear-gradient(140deg,rgba(16,185,129,0.14),rgba(255,255,255,0.95))] p-6 shadow-lg md:p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/90">Fast support for AskDoGood</p>
+                <h3 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">Need a quick win today? Start with the live flagship course.</h3>
+                <p className="mt-3 text-base leading-7 text-muted-foreground">
+                  This is the most direct way to support AskDoGood right now while getting a complete, structured system for thyroid and holistic healing habits.
+                </p>
+                <div className="mt-5 flex flex-col items-center justify-between gap-4 rounded-2xl border border-primary/20 bg-white/85 px-4 py-4 sm:flex-row">
+                  <div className="text-left">
+                    <p className="text-sm font-semibold text-foreground">{quickCashOffer.name}</p>
+                    <p className="text-sm text-muted-foreground">Immediate access after checkout</p>
+                  </div>
+                  <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                    <Button className="w-full rounded-3xl px-7 py-5 text-base font-bold sm:w-auto">
+                      Buy now {quickCashOffer.priceLabel}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            ) : null}
 
             <div className="max-w-4xl mx-auto pt-4 text-left">
               <div className="rounded-[2rem] border border-border/70 bg-background/85 backdrop-blur-sm p-6 md:p-8 shadow-lg">

@@ -30,6 +30,8 @@ const launchRoadmap = launchOrder
   .map((id) => catalogById[id])
   .filter((item): item is CatalogItem => Boolean(item));
 
+const fastCashOffer = catalogById["thyroid-health-mastery"];
+
 function CatalogAction({ item }: { item: CatalogItem }) {
   if (hasLiveCheckout(item)) {
     return (
@@ -174,6 +176,31 @@ export default function Shop() {
           </div>
         </div>
       </section>
+
+      {fastCashOffer && hasLiveCheckout(fastCashOffer) ? (
+        <section className="border-b border-border/40 bg-[linear-gradient(140deg,rgba(16,185,129,0.10),rgba(255,255,255,0.92))] py-10">
+          <div className="container">
+            <div className="mx-auto flex max-w-5xl flex-col gap-5 rounded-[1.8rem] border border-primary/25 bg-background/90 p-6 shadow-sm md:flex-row md:items-center md:justify-between md:p-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Fastest path to support this mission today</p>
+                <h2 className="mt-2 text-2xl font-bold md:text-3xl">Start with the live flagship offer and get immediate access.</h2>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  If you want the quickest way to invest now, this is the one active checkout currently optimized for instant delivery.
+                </p>
+              </div>
+              <div className="flex min-w-[220px] flex-col gap-3">
+                <p className="text-center text-sm font-semibold text-foreground">{fastCashOffer.name}</p>
+                <a href={fastCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full gap-2 rounded-full text-base font-semibold">
+                    Buy now {fastCashOffer.priceLabel}
+                    <ExternalLink className="h-4 w-4" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="py-16 border-b border-border/40 bg-background/70">
         <div className="container">

@@ -1,5 +1,5 @@
 const GUMROAD_STOREFRONT =
-  import.meta.env.VITE_GUMROAD_STOREFRONT_URL || "https://roseecraft.gumroad.com";
+  import.meta.env.VITE_GUMROAD_STOREFRONT_URL || "https://askdogood.gumroad.com";
 
 const gumroadProductUrl = (slug: string) => `${GUMROAD_STOREFRONT}/l/${slug}`;
 
@@ -15,6 +15,7 @@ export const GUMROAD_SLUGS = {
   autoimmuneGuide: "autoimmune-recovery-guide",
   wellnessCircle: "wellness-circle",
   thyroidChecklist: "thyroid-checklist",
+  blackWomensToolkit: "black-womens-health-advocacy-toolkit",
 } as const;
 
 export const GUMROAD_URLS = {
@@ -52,6 +53,9 @@ export const GUMROAD_URLS = {
   thyroidChecklist:
     import.meta.env.VITE_GUMROAD_THYROID_CHECKLIST_URL ||
     gumroadProductUrl(GUMROAD_SLUGS.thyroidChecklist),
+  blackWomensToolkit:
+    import.meta.env.VITE_GUMROAD_BLACK_WOMENS_TOOLKIT_URL ||
+    gumroadProductUrl(GUMROAD_SLUGS.blackWomensToolkit),
   budgetGroceryChecklist:
     import.meta.env.VITE_GUMROAD_BUDGET_GROCERY_CHECKLIST_URL ||
     "https://askdogoodassets.blob.core.windows.net/downloads/budget-grocery-checklist.pdf",
