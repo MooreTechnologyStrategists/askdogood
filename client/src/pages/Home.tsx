@@ -335,6 +335,26 @@ export default function Home() {
   const heroMainImage = "/hero-home.jpeg";
   const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
   const founderPhotoSecondary = "/assets/img/brand/rosee-hero.jpg";
+  const founderGallery = [
+    {
+      src: "/images/personal/rosee-hero-1.jpg",
+      alt: "RoSee Murphy founder portrait",
+      label: "Founder",
+      caption: "Lived experience, clear direction, and steady standards.",
+    },
+    {
+      src: "/images/personal/rosee-hero-2.jpg",
+      alt: "RoSee Murphy wellness brand portrait",
+      label: "Wellness leadership",
+      caption: "A real person behind every AskDoGood product and message.",
+    },
+    {
+      src: "/images/personal/rosee-founder-snow-2026.jpg",
+      alt: "RoSee Murphy in founder journey photo",
+      label: "Real life",
+      caption: "Documenting the journey while helping others build theirs.",
+    },
+  ];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -828,6 +848,44 @@ export default function Home() {
           </div>
           <div className="max-w-3xl mx-auto">
             <PersonalSlideshow />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[linear-gradient(160deg,rgba(255,250,244,0.95),rgba(255,255,255,1))] border-y border-border/50">
+        <div className="container">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-8 text-center">
+              <p className="text-xs uppercase tracking-[0.28em] text-primary font-semibold">Founder gallery</p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold font-serif">More of the real person behind AskDoGood</h2>
+              <p className="mt-3 text-lg text-muted-foreground max-w-3xl mx-auto">
+                Strong information builds trust, and seeing the founder builds connection. These moments keep the brand human while the business stays polished.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {founderGallery.map((item) => (
+                <Card key={item.src} className="overflow-hidden border-border/60 bg-card/95 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      width="500"
+                      height="620"
+                      onError={(e) => handleImageError(e, founderPhotoSecondary)}
+                    />
+                    <div className="absolute left-4 top-4">
+                      <Badge className="rounded-full bg-black/45 text-white border border-white/30">{item.label}</Badge>
+                    </div>
+                  </div>
+                  <CardContent className="p-5">
+                    <p className="text-sm leading-7 text-muted-foreground">{item.caption}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import {
   catalogById,
+  comingSoonMerchItems,
   flagshipDigitalProducts,
   hasLiveCheckout,
   launchOrder,
@@ -33,6 +34,17 @@ const launchRoadmap = launchOrder
 const fastCashOffer = catalogById["thyroid-health-mastery"];
 
 function CatalogAction({ item }: { item: CatalogItem }) {
+  if (item.kind === "coming-soon") {
+    return (
+      <Link href="/merch">
+        <Button variant="outline" className="w-full gap-2">
+          Browse merch gallery
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </Link>
+    );
+  }
+
   if (hasLiveCheckout(item)) {
     return (
       <a href={item.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
@@ -98,6 +110,10 @@ function CatalogCard({ item }: { item: CatalogItem }) {
 }
 
 export default function Shop() {
+  const liveProductsCount = readyNow.filter((item) => hasLiveCheckout(item)).length;
+  const liveResourcesCount = leadMagnets.filter((item) => hasLiveCheckout(item)).length;
+  const merchPreviewCount = comingSoonMerchItems.length;
+
   const healthNutritionItems = [
     catalogById["21-day-plant-based-reset"],
     catalogById["30-day-thyroid-meal-plan"],
@@ -204,6 +220,45 @@ export default function Shop() {
 
       <section className="py-16 border-b border-border/40 bg-background/70">
         <div className="container">
+          <div className="mb-8 grid gap-4 md:grid-cols-3">
+            <Card className="border-primary/20 bg-primary/5">
+              <CardHeader>
+                <CardTitle className="text-xl">1. Buy Digital Products</CardTitle>
+                <CardDescription>
+                  Instant-access courses, guides, and tools built for real wellness progress.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-primary">{liveProductsCount}</p>
+                <p className="text-sm text-muted-foreground">live product checkouts</p>
+              </CardContent>
+            </Card>
+            <Card className="border-border/60 bg-card/90">
+              <CardHeader>
+                <CardTitle className="text-xl">2. Book Services</CardTitle>
+                <CardDescription>
+                  Coaching and strategic reset support for deeper personal or community outcomes.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-primary">{serviceCatalog.length}</p>
+                <p className="text-sm text-muted-foreground">service pathways available</p>
+              </CardContent>
+            </Card>
+            <Card className="border-border/60 bg-card/90">
+              <CardHeader>
+                <CardTitle className="text-xl">3. Shop Merch</CardTitle>
+                <CardDescription>
+                  Branded drops that extend AskDoGood identity with lifestyle-forward pieces.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-primary">{merchPreviewCount}</p>
+                <p className="text-sm text-muted-foreground">merch concepts in rollout</p>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="grid gap-6 lg:grid-cols-3">
             <Card className="border-border/60 bg-card/90 shadow-sm">
               <CardHeader>
@@ -296,6 +351,10 @@ export default function Shop() {
                 <BriefcaseBusiness className="mr-2 h-4 w-4" />
                 Services
               </TabsTrigger>
+              <TabsTrigger value="merch" className="rounded-full border px-4 py-2 data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                <ShoppingBag className="mr-2 h-4 w-4" />
+                Merch
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="ready-now" className="space-y-10">
@@ -317,6 +376,27 @@ export default function Shop() {
             <TabsContent value="services" className="space-y-10">
               <div className="grid gap-8 lg:grid-cols-3">
                 {serviceCatalog.map((item) => (
+                  <CatalogCard key={item.id} item={item} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="merch" className="space-y-10">
+              <div className="rounded-3xl border border-primary/20 bg-primary/5 p-5">
+                <p className="text-sm font-medium text-primary">
+                  Merch is in staged rollout. Browse the gallery and shop the AskDoGood storefront while individual item checkouts finish publishing.
+                </p>
+                <div className="mt-4">
+                  <Link href="/merch">
+                    <Button className="gap-2">
+                      Open merch gallery
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="grid gap-8 lg:grid-cols-3">
+                {comingSoonMerchItems.slice(0, 9).map((item) => (
                   <CatalogCard key={item.id} item={item} />
                 ))}
               </div>
@@ -350,6 +430,9 @@ export default function Shop() {
                 <h2 className="text-3xl font-bold md:text-4xl">The DoGood Wellness Circle stays visible as the retention offer.</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                   If you want ongoing support instead of one-time information, the Wellness Circle is the bridge between a single download and a more consistent transformation process.
+                </p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Live free-resource checkouts: {liveResourcesCount}. This lets new visitors enter the brand ecosystem before stepping into premium offers.
                 </p>
               </div>
               <Card className="border-border/50">
