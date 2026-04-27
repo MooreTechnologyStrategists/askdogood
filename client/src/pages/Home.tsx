@@ -474,11 +474,11 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-center gap-3">
               <p className="text-sm text-muted-foreground font-medium">
-                Free Thyroid Symptom Checklist + 3-Day Meal Plan
+                Free meal plan + practical health guidance for thyroid, blood pressure, blood sugar, and gut recovery
               </p>
               <Link href="/free-meal-plan">
                 <Button variant="outline" className="rounded-3xl px-6 py-5 text-sm font-semibold border-2 border-primary/45 bg-background text-foreground shadow-lg hover:bg-primary/5">
-                  Get the Free Checklist + 3-Day Plan
+                  Get the Free 3-Day Plan
                 </Button>
               </Link>
             </div>
@@ -677,7 +677,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOD SLIDESHOW - Thyroid-Friendly Meals */}
+      {/* FOOD SLIDESHOW - Healing Meals */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
           <div className="text-center mb-8">
@@ -685,7 +685,7 @@ export default function Home() {
               Real Food. <span className="text-primary">Real Healing.</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Thyroid-friendly meals that support your health goals
+              Discipline-based meals that support healing across thyroid, gut, blood pressure, and blood sugar goals
             </p>
           </div>
           <div className="max-w-2xl mx-auto mb-8">
@@ -808,7 +808,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SHOP SECTION - Thyroid Toolkit */}
+      {/* SHOP SECTION - Core Toolkit */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/5">
         <div className="container">
           <div className="text-center mb-12">
@@ -821,7 +821,7 @@ export default function Home() {
               Start with four <span className="text-primary">core tools</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The homepage now points to the live products that already matter most: the thyroid course, the 21-day reset, the symptom tracker, and the 30-day meal plan.
+              Start with practical products built for real-life healing, food discipline, and stable routines that support long-term health.
             </p>
           </div>
 
@@ -932,7 +932,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 font-semibold">
-                Practical writing on thyroid health, meal prep, systems, culture, and the everyday work of rebuilding well.
+                Practical writing on holistic health, blood pressure, blood sugar, meal prep, gut recovery, systems, culture, and the everyday work of rebuilding well.
               </p>
             </div>
 
@@ -1287,10 +1287,10 @@ export default function Home() {
               <span className="text-sm font-bold text-white">Free resource</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 font-serif">
-              Start with a practical thyroid resource.
+              Start with a practical holistic resource.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a free 3-day thyroid-friendly meal plan and symptom tracker. Clear value, no clutter.
+              Get a free 3-day healing meal plan and practical guidance. Clear value, no clutter.
             </p>
           </div>
 

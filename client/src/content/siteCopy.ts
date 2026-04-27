@@ -2,7 +2,7 @@ export const siteCopy = {
   home: {
     headline: "Real Health. Real Discipline. Real Life.",
     subtext:
-      "AskDoGood helps communities heal whole-life gaps through health education, discipline, practical employment support, and everyday structure.",
+      "AskDoGood helps people find comfort and practical direction across many health battles, from thyroid and blood pressure to blood sugar, gut healing, and brain fog recovery.",
   },
   mealPrep: {
     headline: "Cook Once. Eat Better All Week.",
