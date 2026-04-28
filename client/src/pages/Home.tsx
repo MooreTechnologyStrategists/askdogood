@@ -479,49 +479,85 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mx-auto grid w-full max-w-4xl gap-3 sm:grid-cols-3">
-              <Link href="/journey">
-                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <img
-                    src="/images/personal/rosee-hero-1.jpg"
-                    alt="RoSee Murphy founder portrait"
-                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => handleImageError(e, founderPhotoSecondary)}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
-                    Founder Journey
+            <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-primary/20 bg-white/80 p-4 shadow-xl backdrop-blur-sm md:p-6">
+              <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+                <div className="rounded-3xl border border-border/70 bg-background/85 p-5 text-left md:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/75">Founder in real life</p>
+                  <h3 className="mt-3 text-2xl font-bold leading-tight font-serif text-foreground">
+                    Not stock photos. Real moments from my actual journey.
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                    These are snapshots from the same life that shaped AskDoGood: healing routines, kitchen discipline, and staying consistent in every season.
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <Link href="/journey">
+                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">Founder Journey</a>
+                    </Link>
+                    <Link href="/behind-the-scenes/in-my-kitchen">
+                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">In My Kitchen</a>
+                    </Link>
+                    <Link href="/behind-the-scenes">
+                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">Behind The Scenes</a>
+                    </Link>
                   </div>
-                </a>
-              </Link>
-              <Link href="/behind-the-scenes/in-my-kitchen">
-                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <img
-                    src="/images/personal/food/meal-prep.jpg"
-                    alt="RoSee Murphy meal prep routine"
-                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => handleImageError(e)}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
-                    In My Kitchen
-                  </div>
-                </a>
-              </Link>
-              <Link href="/behind-the-scenes">
-                <a className="group relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <img
-                    src="/images/personal/rosee-founder-snow-2026.jpg"
-                    alt="RoSee Murphy founder outdoor photo"
-                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => handleImageError(e, founderPhotoSecondary)}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.62))] px-3 py-2 text-left text-xs font-semibold text-white">
-                    Behind The Scenes
-                  </div>
-                </a>
-              </Link>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <Link href="/journey">
+                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <div className="relative h-44 overflow-hidden">
+                        <img
+                          src="/images/personal/rosee-hero-1.jpg"
+                          alt="RoSee Murphy founder portrait"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          onError={(e) => handleImageError(e, founderPhotoSecondary)}
+                        />
+                      </div>
+                      <div className="border-t border-border/50 px-4 py-3 text-left">
+                        <p className="text-sm font-semibold text-foreground">Founder Journey</p>
+                        <p className="text-xs text-muted-foreground">My timeline, lessons, and mission.</p>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/behind-the-scenes">
+                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:translate-y-4">
+                      <div className="relative h-44 overflow-hidden">
+                        <img
+                          src="/images/personal/rosee-founder-snow-2026.jpg"
+                          alt="RoSee Murphy founder outdoor photo"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          onError={(e) => handleImageError(e, founderPhotoSecondary)}
+                        />
+                      </div>
+                      <div className="border-t border-border/50 px-4 py-3 text-left">
+                        <p className="text-sm font-semibold text-foreground">Behind The Scenes</p>
+                        <p className="text-xs text-muted-foreground">Community work and daily standards.</p>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/behind-the-scenes/in-my-kitchen">
+                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:col-span-2">
+                      <div className="relative h-48 overflow-hidden sm:h-40">
+                        <img
+                          src="/images/personal/food/meal-prep.jpg"
+                          alt="RoSee Murphy meal prep routine"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          onError={(e) => handleImageError(e)}
+                        />
+                      </div>
+                      <div className="border-t border-border/50 px-4 py-3 text-left">
+                        <p className="text-sm font-semibold text-foreground">In My Kitchen</p>
+                        <p className="text-xs text-muted-foreground">Real food routines that carry real healing.</p>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* CTA */}
@@ -772,62 +808,94 @@ export default function Home() {
       {/* FOOD SLIDESHOW - Healing Meals */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container">
-          <div className="text-center mb-8">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 font-serif">
               Real Food. <span className="text-primary">Real Healing.</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Discipline-based meals that support healing across thyroid, gut, blood pressure, and blood sugar goals
             </p>
           </div>
-          <div className="max-w-2xl mx-auto mb-8">
-            <FoodSlideshow />
-          </div>
+          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            <div className="rounded-[2rem] border border-primary/20 bg-card p-6 shadow-xl md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">My health journey</p>
+              <h3 className="mt-3 text-2xl font-bold leading-tight font-serif text-foreground md:text-3xl">
+                From survival mode to steady healing
+              </h3>
 
-          {/* Personal Health Journey Story */}
-          <div className="max-w-4xl mx-auto mt-12 p-8 bg-card rounded-3xl shadow-xl border-2 border-primary/20">
-            <div className="prose prose-lg dark:prose-invert mx-auto">
-              <p className="text-lg leading-relaxed mb-4">
-                I don't just teach thyroid health—I've walked through my own fire. For{" "}
-                <strong>seven years</strong>, I couldn't eat. I'm talking about surviving on
-                Italian ice, water, and Pepto Bismol like it was my lifeline.
-              </p>
+              <div className="mt-6 space-y-4">
+                <div className="rounded-2xl border border-border/70 bg-background/85 p-4">
+                  <p className="text-base leading-7 text-muted-foreground">
+                    For <strong>seven years</strong>, I could barely eat. I survived on Italian ice, water, and Pepto Bismol while severe GERD and IBS symptoms controlled my days.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border/70 bg-background/85 p-4">
+                  <p className="text-base leading-7 text-muted-foreground">
+                    Pantoprazole at max dose still wasn&apos;t enough. Then dicyclomine finally gave me a measurable shift, and I used that moment to rebuild everything else with structure.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border/70 bg-background/85 p-4">
+                  <p className="text-base leading-7 text-muted-foreground">
+                    I moved into <strong>plant-based meals, daily movement, and faith-driven discipline</strong>. I went from dicyclomine four times a day to <strong>none</strong>, and got back to eating real food.
+                  </p>
+                </div>
+              </div>
 
-              <p className="text-lg leading-relaxed mb-4">
-                They had me on <strong>pantoprazole</strong> (maxed out the dose) for my GERD, but
-                nothing changed. The monstrous burps. The palpitations that became so normal I
-                stopped noticing them. My IBS symptoms mirrored my husband's Crohn's disease—same
-                meal, different day, completely different reaction. You never knew what would keep
-                you doubled over in pain.
-              </p>
+              <div className="mt-6 rounded-2xl border border-primary/25 bg-primary/8 p-5">
+                <p className="text-base font-semibold leading-7 text-foreground">
+                  That journey is why every AskDoGood recipe is tested in real life, not just written for likes.
+                </p>
+              </div>
 
-              <p className="text-lg leading-relaxed mb-4">
-                Then one day, my doctor introduced me to <strong>dicyclomine</strong>, and it
-                made a measurable difference. But I did not stop there. I rebuilt my routine with
-                clean, <strong>plant-based eating</strong>, daily structure, workouts (P90X, gym,
-                running), and <strong>faith in God</strong>. I went from taking dicyclomine four
-                times a day to <strong>none</strong>, and eventually started <em>eating real food again</em>.
-              </p>
-
-              <p className="text-lg leading-relaxed font-semibold text-primary">
-                That journey from survival to thriving? That's why I cook the way I do. That's why
-                every recipe I create is tested, real, and built for bodies that have been through
-                it. Because I've been there. And I know the way out.
-              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3 text-center">
+                <div className="rounded-2xl border border-primary/20 bg-primary/10 p-4">
+                  <p className="text-2xl font-bold text-primary">7 Years</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Chronic GERD + IBS</p>
+                </div>
+                <div className="rounded-2xl border border-secondary/25 bg-secondary/10 p-4">
+                  <p className="text-2xl font-bold text-secondary">Daily Movement</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">P90X, gym, running</p>
+                </div>
+                <div className="rounded-2xl border border-primary/20 bg-primary/10 p-4">
+                  <p className="text-2xl font-bold text-primary">Real Recovery</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Back to thriving</p>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-primary/10 rounded-2xl">
-                <p className="text-2xl font-bold text-primary mb-1">7 Years</p>
-                <p className="text-sm text-muted-foreground">Of chronic GERD & IBS</p>
+            <div className="space-y-4">
+              <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-card p-4 shadow-lg">
+                <FoodSlideshow />
               </div>
-              <div className="p-4 bg-secondary/10 rounded-2xl">
-                <p className="text-2xl font-bold text-secondary mb-1">Daily Workouts</p>
-                <p className="text-sm text-muted-foreground">P90X, gym, running</p>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-3xl border border-border/70 bg-card shadow-md">
+                  <img
+                    src="/images/personal/food/meal-complete.jpg"
+                    alt="Complete healing meal prepared by RoSee Murphy"
+                    className="h-44 w-full object-cover"
+                    loading="lazy"
+                    onError={(e) => handleImageError(e)}
+                  />
+                  <p className="px-4 py-3 text-sm font-medium text-foreground">Balanced meals with intention</p>
+                </div>
+                <div className="overflow-hidden rounded-3xl border border-border/70 bg-card shadow-md">
+                  <img
+                    src="/images/personal/food/smoothie-green-goddess.jpg"
+                    alt="Green smoothie for gut and inflammation support"
+                    className="h-44 w-full object-cover"
+                    loading="lazy"
+                    onError={(e) => handleImageError(e)}
+                  />
+                  <p className="px-4 py-3 text-sm font-medium text-foreground">Simple prep that supports healing</p>
+                </div>
               </div>
-              <div className="p-4 bg-primary/10 rounded-2xl">
-                <p className="text-2xl font-bold text-primary mb-1">Real Recovery</p>
-                <p className="text-sm text-muted-foreground">From barely eating to thriving</p>
+
+              <div className="rounded-3xl border border-primary/25 bg-[linear-gradient(150deg,rgba(16,185,129,0.14),rgba(255,255,255,0.95))] p-5 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Why this section matters</p>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  Food is not just fuel. It&apos;s information to your hormones, your gut, your blood sugar, and your stress response. This is where discipline becomes healing.
+                </p>
               </div>
             </div>
           </div>
