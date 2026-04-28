@@ -41,7 +41,7 @@ export const siteCopy = {
       "AskDoGood was built from real-life experience - learning what works, what doesn't, and what actually helps people feel better and live better.\n\nThis isn't about perfection. It's about progress, awareness, and building habits that support your life long-term.\n\nThe mission is simple: help people take control of their health, break cycles, and create better outcomes for themselves and their families.",
   },
   cta:
-    "Eat to live, never live to eat. Build discipline, restore health, and pay it forward to your community.",
+    "Eat to live, never live to eat. Build discipline, restore health, and break the cycles that have been holding you back.",
 } as const;
 
 export function splitCopy(content: string): string[] {

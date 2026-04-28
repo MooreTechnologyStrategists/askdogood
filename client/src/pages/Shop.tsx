@@ -154,6 +154,9 @@ export default function Shop() {
               <p className="mt-3 max-w-3xl text-base leading-7 text-foreground/80">
                 I built this storefront so you can choose your next move fast: start with a digital tool, book direct support, or shop the AskDoGood merch lane.
               </p>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-foreground/80">
+                These tools are built for people breaking harmful vices — smoking, sugar, alcohol, and chronic stress — and reclaiming their health from the inside out.
+              </p>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/85">
                 {siteCopy.cta}
               </p>

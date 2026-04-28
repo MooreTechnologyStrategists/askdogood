@@ -386,13 +386,8 @@ export default function Home() {
 
   const missionStandards = [
     {
-      title: "Pay It Forward",
-      detail: "Revenue from offers is designed to fund community support, education, and practical local impact.",
-      icon: <Users className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "End Harmful Vices",
-      detail: "We teach replacement habits, accountability, and structure so people can break destructive cycles.",
+      title: "Break Harmful Vices",
+      detail: "We teach replacement habits, accountability, and structure so people can permanently break destructive cycles — smoking, sugar, alcohol, and more.",
       icon: <ShieldCheck className="h-5 w-5 text-primary" />,
     },
     {
@@ -402,8 +397,13 @@ export default function Home() {
     },
     {
       title: "Eat To Live",
-      detail: "Discipline in food choices is framed as freedom, stability, and long-term quality of life.",
+      detail: "As Elijah Muhammad taught in How to Eat to Live — food discipline is the foundation. We frame eating right as freedom and long-term quality of life, never restriction.",
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
+    },
+    {
+      title: "Build Real Structure",
+      detail: "Routines, accountability, and doable plans that don't collapse when life gets loud. Stability is built one good decision at a time.",
+      icon: <Users className="h-5 w-5 text-primary" />,
     },
   ];
 
@@ -611,6 +611,9 @@ export default function Home() {
                 <p className="mt-3 text-2xl font-bold leading-tight font-serif">Eat to live. Never live to eat.</p>
                 <p className="mt-3 text-sm leading-7 text-white/85">
                   Discipline is not punishment. It is the bridge between intention and a life your body can actually sustain.
+                </p>
+                <p className="mt-3 text-xs text-white/60 italic">
+                  Inspired by <em>How to Eat to Live</em> by Elijah Muhammad
                 </p>
               </div>
             </div>

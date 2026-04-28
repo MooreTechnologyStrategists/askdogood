@@ -247,6 +247,15 @@ export default function About() {
                   </CardContent>
                 </Card>
                 </Link>
+
+                <Link href="/resources">
+                <Card className="hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer border-primary/20">
+                  <CardContent className="p-5 text-sm text-muted-foreground leading-relaxed">
+                    <span className="font-medium text-foreground">Vice cessation</span> — practical steps and accountability
+                    frameworks for quitting smoking, alcohol, sugar dependency, and other destructive habits for good.
+                  </CardContent>
+                </Card>
+                </Link>
               </div>
 
               {/* CTAs */}
