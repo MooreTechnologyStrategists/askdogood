@@ -1,0 +1,87 @@
+[
+  {
+    "id": "mug-gratitude",
+    "file": "mockup_mug_gratitude.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_gratitude.webp"
+  },
+  {
+    "id": "mug-healing",
+    "file": "mockup_mug_healing.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_healing.webp"
+  },
+  {
+    "id": "mug-thriving",
+    "file": "mockup_mug_thriving.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_thriving.webp"
+  },
+  {
+    "id": "mug-small-wins",
+    "file": "mockup_mug_small_wins.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_small_wins.webp"
+  },
+  {
+    "id": "mug-therapy",
+    "file": "mockup_mug_therapy.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_therapy.webp"
+  },
+  {
+    "id": "tshirt-progress",
+    "file": "mockup_tshirt_progress.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp"
+  },
+  {
+    "id": "tshirt-healing-loud",
+    "file": "mockup_tshirt_healing_loud.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_healing_loud.webp"
+  },
+  {
+    "id": "tshirt-structure",
+    "file": "mockup_tshirt_structure.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_structure.webp"
+  },
+  {
+    "id": "tshirt-chosen",
+    "file": "mockup_tshirt_chosen.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_chosen.webp"
+  },
+  {
+    "id": "tshirt-no-apologies",
+    "file": "mockup_tshirt_no_apologies.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_no_apologies.webp"
+  },
+  {
+    "id": "hoodie-boundaries",
+    "file": "mockup_hoodie_boundaries.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_hoodie_boundaries.webp"
+  },
+  {
+    "id": "hoodie-rest",
+    "file": "mockup_hoodie_rest.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_hoodie_rest.webp"
+  },
+  {
+    "id": "hoodie-magic",
+    "file": "mockup_hoodie_magic.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_hoodie_magic.webp"
+  },
+  {
+    "id": "hoodie-vibes",
+    "file": "mockup_hoodie_vibes.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_hoodie_vibes.webp"
+  },
+  {
+    "id": "tote-ancestral",
+    "file": "mockup_tote_ancestral.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tote_ancestral.webp"
+  },
+  {
+    "id": "tote-community",
+    "file": "mockup_tote_community.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tote_community.webp"
+  },
+  {
+    "id": "tote-plant-powered",
+    "file": "mockup_tote_plant_powered.webp",
+    "url": "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tote_plant_powered.webp"
+  }
+]

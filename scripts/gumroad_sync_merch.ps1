@@ -1,6 +1,21 @@
 $ErrorActionPreference = 'Stop'
 $token = $env:GUMROAD_TOKEN
 
+$imageMap = @{}
+$imageMapPath = Join-Path $PSScriptRoot 'merch_images.json'
+if (Test-Path $imageMapPath) {
+  try {
+    $imageOverrides = Get-Content -Raw -Path $imageMapPath | ConvertFrom-Json
+    foreach ($entry in $imageOverrides) {
+      if ($entry.id -and $entry.url) {
+        $imageMap[$entry.id] = [string]$entry.url
+      }
+    }
+  } catch {
+    Write-Warning "Unable to parse merch_images.json; using built-in image URLs."
+  }
+}
+
 if ([string]::IsNullOrWhiteSpace($token)) {
   throw 'GUMROAD_TOKEN environment variable is required.'
 }
@@ -14,32 +29,32 @@ function Invoke-GumroadJson {
   )
 
   $base = "https://api.gumroad.com/v2$Path"
-  $args = @('-sS', '-X', $Method)
+  $curlArgs = @('-sS', '-X', $Method)
 
   if ($Method -eq 'GET') {
-    $args += '-G'
-    $args += $base
-    $args += '--data-urlencode'
-    $args += "access_token=$token"
+    $curlArgs += '-G'
+    $curlArgs += $base
+    $curlArgs += '--data-urlencode'
+    $curlArgs += "access_token=$token"
     if ($Data) {
       foreach ($k in $Data.Keys) {
-        $args += '--data-urlencode'
-        $args += "$k=$($Data[$k])"
+        $curlArgs += '--data-urlencode'
+        $curlArgs += "$k=$($Data[$k])"
       }
     }
   } else {
-    $args += $base
-    $args += '-d'
-    $args += "access_token=$token"
+    $curlArgs += $base
+    $curlArgs += '-d'
+    $curlArgs += "access_token=$token"
     if ($Data) {
       foreach ($k in $Data.Keys) {
-        $args += '-d'
-        $args += "$k=$($Data[$k])"
+        $curlArgs += '-d'
+        $curlArgs += "$k=$($Data[$k])"
       }
     }
   }
 
-  $raw = & curl.exe @args
+  $raw = & curl.exe @curlArgs
   if ([string]::IsNullOrWhiteSpace($raw)) {
     throw "Empty response for $Method $Path"
   }
@@ -90,6 +105,10 @@ foreach ($m in $merchTargets) {
   if ($dailyLimitReached) {
     $remaining += $m.id
     continue
+  }
+
+  if ($imageMap.ContainsKey($m.id)) {
+    $m.image = $imageMap[$m.id]
   }
 
   $id = $null
