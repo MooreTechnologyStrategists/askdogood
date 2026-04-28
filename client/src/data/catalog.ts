@@ -85,7 +85,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "A straightforward guide to TSH, Free T3, Free T4, antibodies, reverse T3, and the right questions to ask your provider.",
     cta: "Stop guessing at your lab work.",
     image:
-      "https://askdogoodassets.blob.core.windows.net/images/products/Lab_Interpretation_Guide_Cover.png",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     category: "Health education",
     checkoutUrl: GUMROAD_URLS.labGuide,
     checkoutState: "live",
@@ -105,7 +105,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
       "Downloadable templates to help structure your supplement routine, symptom tracking, digestion notes, and recovery support.",
     cta: "Build a routine your body can follow.",
     image:
-      "/images/products/gumroad_cover.png",
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde0b?w=600&h=400&fit=crop",
     category: "Health tools",
     checkoutUrl: GUMROAD_URLS.supplementTemplates,
     checkoutState: "live",
@@ -143,7 +143,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "Includes food guidance, symptom support, lifestyle structure, and practical wellness tools for autoimmune healing support.",
     cta: "Start supporting your body with intention.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
     category: "Health / Autoimmune wellness",
     checkoutUrl: GUMROAD_URLS.autoimmuneGuide,
     checkoutState: "live",
@@ -162,7 +162,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "A practical advocacy toolkit with checklists, appointment prep, scripts, and decision-support guidance created to help Black women be heard, respected, and better prepared in medical settings.",
     cta: "Advocate like your health depends on it, because it does.",
-    image: "/images/branding/askdogood-logo-orange.png",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     category: "Women’s health / Advocacy",
     checkoutUrl: GUMROAD_URLS.blackWomensToolkit,
     checkoutState: "live",

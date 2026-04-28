@@ -417,8 +417,15 @@ export default function Shop() {
         </div>
       </section>
 
-      <section className="border-y border-border/40 bg-secondary/20 py-16">
-        <div className="container">
+      <section className="border-y border-border/40 bg-secondary/20 py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="https://images.unsplash.com/photo-1507842775343-583cf4270c5a?w=1200&h=600&fit=crop"
+            alt="Organized books and workspace"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="mb-4 rounded-full px-4 py-1 uppercase tracking-[0.22em]">
               Why this storefront works

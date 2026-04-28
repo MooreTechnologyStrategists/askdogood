@@ -122,6 +122,8 @@ export default function Journey() {
         "A content and product ecosystem built around thyroid health, structured healing, practical food systems, and self-advocacy.",
       currentWork:
         "Expanding evergreen articles, digital guides, lead magnets, and commerce pathways that convert trust into clear offers.",
+      image: "https://images.unsplash.com/photo-1596394516093-501ba68352fc?w=600&h=400&fit=crop",
+      imageAlt: "Wellness education platform representing health knowledge",
     },
     {
       label: "Technical Leadership",
@@ -130,6 +132,8 @@ export default function Journey() {
         "Enterprise work focused on Azure security, compliance, identity, threat modeling, and high-trust delivery across complex environments.",
       currentWork:
         "Deepening security architecture depth while pairing hands-on engineering with stronger platform storytelling.",
+      image: "https://images.unsplash.com/photo-1676145629385-9c1f7186b8d8?w=600&h=400&fit=crop",
+      imageAlt: "Cloud security and digital infrastructure",
     },
     {
       label: "Education",
@@ -138,6 +142,8 @@ export default function Journey() {
         "Instruction through PG Parks & Planning and TheDopeCloudTeacher, translating experience into practical lessons people can use.",
       currentWork:
         "Developing coursework and publishable educational material that serve both technical and wellness audiences.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+      imageAlt: "Education and teaching across multiple audiences",
     },
     {
       label: "Writing",
@@ -146,6 +152,8 @@ export default function Journey() {
         "Long-form writing that connects lived experience, health advocacy, reinvention, and disciplined rebuilding.",
       currentWork:
         "Advancing Starting From Scratch in the Basement while sharpening the founder narrative behind AskDoGood.",
+      image: "https://images.unsplash.com/photo-1455390883262-51205f4193e7?w=600&h=400&fit=crop",
+      imageAlt: "Writing, storytelling, and personal narrative",
     },
   ];
 
@@ -210,7 +218,17 @@ export default function Journey() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {platformSnapshot.map((item) => (
-              <Card key={item.title} className="border-border/70 shadow-sm">
+              <Card key={item.title} className="border-border/70 shadow-sm overflow-hidden">
+                {item.image && (
+                  <div className="h-40 w-full overflow-hidden bg-muted">
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <CardContent className="pt-6 space-y-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                     {item.label}
