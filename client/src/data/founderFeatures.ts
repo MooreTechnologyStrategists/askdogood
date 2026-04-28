@@ -18,8 +18,8 @@ export const founderFeatures: FounderFeature[] = [
       'A real highlight from the season around your surprise 39th birthday during CIAA, including personal time with MC Lyte and world-renowned DJ K-Rock.',
     cta: 'Read the feature',
     href: '/behind-the-scenes#ciaa-birthday',
-    image: 'https://askdogoodassets.blob.core.windows.net/images/Zay-and-KRock.jpg',
-    imageAlt: 'RoSee Murphy with world-renowned DJ K-Rock during the CIAA birthday celebration',
+    image: '/images/personal/rosee-with-mc-lyte.jpg',
+    imageAlt: 'RoSee Murphy with MC Lyte during the CIAA birthday celebration',
   },
   {
     id: 'healing-with-style',

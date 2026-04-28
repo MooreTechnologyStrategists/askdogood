@@ -95,9 +95,9 @@ export default function BehindTheScenes() {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,10,8,0.04)_0%,rgba(14,10,8,0.72)_100%)]" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                   <p className="text-sm uppercase tracking-[0.28em] text-white/75">Featured Memory</p>
-                  <h2 className="mt-3 font-serif text-3xl font-semibold">CIAA birthday with MC Lyte and DJ K-Rock</h2>
+                  <h2 className="mt-3 font-serif text-3xl font-semibold">CIAA birthday with MC Lyte</h2>
                   <p className="mt-3 max-w-lg text-base leading-7 text-white/85">
-                    A personal milestone with real cultural weight, including exclusive time with MC Lyte and world-renowned DJ K-Rock during your surprise thirty-ninth birthday celebration at CIAA.
+                    A personal milestone with real cultural weight, including exclusive time with hip-hop legend MC Lyte during your surprise thirty-ninth birthday celebration at CIAA.
                   </p>
                 </div>
               </div>

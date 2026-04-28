@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 
-const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-7.jpg";
-const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-4.jpg";
+const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-1.jpg";
+const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-2.jpg";
 
 export default function About() {
   return (
