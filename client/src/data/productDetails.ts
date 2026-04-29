@@ -187,12 +187,12 @@ export const productDetailsById: Record<string, ProductDetailContent> = {
   "dogood-wellness-circle": {
     headline: "Heal in community with practical monthly support.",
     subheadline:
-      "A membership for women who want structure, accountability, and sisterhood while building healthier routines.",
+      "One simple membership for women who want structure, accountability, and community while building healthier routines.",
     includes: [
       "Monthly support-focused guidance",
       "Community-centered wellness accountability",
       "Exclusive tools and resources",
-      "Founding-member pricing option",
+      "Simple monthly access",
     ],
     bestFor: [
       "Women who do better with community support",
@@ -204,6 +204,6 @@ export const productDetailsById: Record<string, ProductDetailContent> = {
       "Less isolation in healing journey",
       "Consistent monthly momentum",
     ],
-    deliveryNote: "Enrollment access is being finalized for the next membership intake.",
+    deliveryNote: "Monthly membership access with ongoing support.",
   },
 };

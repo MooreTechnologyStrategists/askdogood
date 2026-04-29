@@ -13,9 +13,9 @@ export const founderFeatures: FounderFeature[] = [
   {
     id: 'ciaa-birthday',
     eyebrow: 'Music memory',
-    title: 'CIAA birthday with MC Lyte and DJ K-Rock',
+    title: 'My surprise 39th birthday party with MC Lyte at CIAA',
     summary:
-      'A real highlight from the season around your surprise 39th birthday during CIAA, including personal time with MC Lyte and world-renowned DJ K-Rock.',
+      'A real highlight from my CIAA season: my surprise 39th birthday party and personal time with hip-hop legend MC Lyte.',
     cta: 'Read the feature',
     href: '/behind-the-scenes#ciaa-birthday',
     image: '/images/personal/rosee-with-mc-lyte.jpg',

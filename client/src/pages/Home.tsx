@@ -1,7 +1,8 @@
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import {
   Card,
   CardContent,
@@ -93,6 +94,13 @@ interface FeatureCardProps {
   description: string;
   content: string;
   href?: string;
+}
+
+interface SpotlightItem {
+  src: string;
+  alt: string;
+  title: string;
+  detail: string;
 }
 
 // Reusable Components
@@ -219,6 +227,90 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  const [spotlight, setSpotlight] = useState<SpotlightItem | null>(null);
+
+  const openSpotlight = (item: SpotlightItem) => {
+    setSpotlight(item);
+  };
+
+  const closeSpotlight = () => {
+    setSpotlight(null);
+  };
+
+  const renderPillarArt = (title: string) => {
+    switch (title) {
+      case "Nutrition":
+        return (
+          <svg viewBox="0 0 220 180" className="h-full w-full">
+            <g fill="none" strokeWidth="3">
+              <path d="M55 145 C25 125, 35 80, 75 65 C88 103, 86 132, 55 145 Z" stroke="#3f8f53" fill="#6dbb73" fillOpacity="0.35" />
+              <path d="M105 138 C82 120, 90 82, 125 70 C136 102, 132 124, 105 138 Z" stroke="#4d9f5f" fill="#84c98a" fillOpacity="0.35" />
+              <circle cx="155" cy="120" r="22" stroke="#b23d62" fill="#d26a8b" fillOpacity="0.35" />
+              <circle cx="155" cy="120" r="11" stroke="#9b2f54" />
+              <ellipse cx="185" cy="72" rx="26" ry="18" stroke="#a5784d" fill="#d7bb96" fillOpacity="0.35" />
+              <line x1="168" y1="72" x2="202" y2="72" stroke="#8f6640" />
+            </g>
+          </svg>
+        );
+      case "Movement":
+        return (
+          <svg viewBox="0 0 220 180" className="h-full w-full">
+            <g fill="#8e5a3a" fillOpacity="0.35" stroke="#6f4328" strokeWidth="3">
+              <ellipse cx="142" cy="56" rx="18" ry="14" />
+              <path d="M132 72 L116 104 L137 118 L155 88 Z" />
+              <path d="M155 88 L186 109 L175 122 L148 103 Z" />
+              <path d="M137 118 L110 145 L95 136 L122 108 Z" />
+            </g>
+            <g stroke="#b57b55" strokeWidth="3" strokeLinecap="round" opacity="0.55">
+              <line x1="62" y1="80" x2="82" y2="75" />
+              <line x1="55" y1="100" x2="82" y2="92" />
+              <line x1="60" y1="120" x2="84" y2="114" />
+            </g>
+          </svg>
+        );
+      case "Income":
+        return (
+          <svg viewBox="0 0 220 180" className="h-full w-full">
+            <g fill="#59b36f" fillOpacity="0.2" stroke="#2f8a48" strokeWidth="2">
+              <rect x="32" y="72" width="150" height="78" rx="12" />
+              <rect x="48" y="54" width="150" height="78" rx="12" />
+            </g>
+            <g fill="#2f8a48" fillOpacity="0.55" fontSize="34" fontWeight="700" fontFamily="Arial, sans-serif">
+              <text x="70" y="106">$</text>
+              <text x="106" y="100">$</text>
+              <text x="140" y="106">$</text>
+            </g>
+          </svg>
+        );
+      case "Mindset":
+        return (
+          <svg viewBox="0 0 220 180" className="h-full w-full">
+            <g fill="none" stroke="#6f6ac7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M92 131 C68 118, 63 82, 90 65 C117 49, 151 64, 156 92 C160 114, 143 133, 122 136 L108 153 L103 135 C99 134, 95 133, 92 131 Z" fill="#908be2" fillOpacity="0.2" />
+              <path d="M105 90 C110 83, 121 83, 126 90" />
+              <path d="M102 106 C109 113, 121 113, 128 106" />
+              <line x1="70" y1="54" x2="82" y2="44" />
+              <line x1="86" y1="42" x2="91" y2="28" />
+              <line x1="151" y1="54" x2="165" y2="47" />
+            </g>
+          </svg>
+        );
+      case "Environment":
+        return (
+          <svg viewBox="0 0 220 180" className="h-full w-full">
+            <g fill="none" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M110 54 L152 88 V144 H68 V88 Z" stroke="#4a8f63" fill="#7cc58f" fillOpacity="0.2" />
+              <path d="M95 144 V112 H125 V144" stroke="#4a8f63" />
+              <circle cx="176" cy="54" r="16" stroke="#d5b24f" fill="#f4dc8b" fillOpacity="0.35" />
+              <path d="M40 132 C35 112, 52 94, 72 99 C80 80, 106 80, 114 99 C132 96, 146 110, 142 127" stroke="#4a8f63" fill="#7cc58f" fillOpacity="0.2" />
+            </g>
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
+
   const trustIndicators: TrustIndicatorProps[] = [
     {
       icon: <Users className="h-5 w-5 text-primary" />,
@@ -334,25 +426,28 @@ export default function Home() {
 
   const heroMainImage = "/hero-home.webp";
   const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
-  const founderPhotoSecondary = "/assets/img/brand/rosee-hero.jpg";
+  const founderPhotoSecondary = "/images/personal/rosee-hero-2.jpg";
   const founderGallery = [
     {
       src: "/images/personal/rosee-hero-1.jpg",
       alt: "RoSee Murphy founder portrait",
       label: "Founder",
       caption: "Lived experience, clear direction, and steady standards.",
+      context: "This portrait anchors the founder timeline and shows the person behind the systems, products, and health guidance.",
     },
     {
       src: "/images/personal/rosee-hero-2.jpg",
       alt: "RoSee Murphy wellness brand portrait",
       label: "Wellness leadership",
       caption: "A real person behind every AskDoGood product and message.",
+      context: "Leadership at AskDoGood means visible accountability, not faceless branding. Every offer ties back to lived standards.",
     },
     {
       src: "/images/personal/rosee-founder-snow-2026.jpg",
       alt: "RoSee Murphy in founder journey photo",
       label: "Real life",
       caption: "Documenting the journey while helping others build theirs.",
+      context: "This moment reflects the everyday side of consistency: showing up in real conditions, not only curated moments.",
     },
   ];
   const featuredNatureWalk = featuredWalkResource;
@@ -361,26 +456,31 @@ export default function Home() {
       title: "Nutrition",
       description: "Eat to heal, not just survive.",
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
+      context: "Nutrition here is practical: real meals, anti-inflammatory choices, and routines people can repeat without burnout.",
     },
     {
       title: "Movement",
       description: "Restore energy and circulation through practical movement.",
       icon: <HeartPulse className="h-5 w-5 text-primary" />,
+      context: "Movement is framed as consistency over intensity: walks, training, and mobility that support recovery and stamina.",
     },
     {
       title: "Mindset",
       description: "Reduce stress, gain clarity, and support emotional reset.",
       icon: <Sparkles className="h-5 w-5 text-primary" />,
+      context: "Mindset means emotional regulation, faith, and disciplined self-talk so progress survives hard days.",
     },
     {
       title: "Income",
       description: "Learn skills that increase opportunity and long-term stability.",
       icon: <TrendingUp className="h-5 w-5 text-primary" />,
+      context: "Income is health strategy too: stronger cash flow lowers chronic stress and protects people from crisis cycling.",
     },
     {
       title: "Environment",
       description: "Build a life, home, and routine that support your growth.",
       icon: <Users className="h-5 w-5 text-primary" />,
+      context: "Environment includes your space, social circle, and daily systems. Your surroundings either support healing or sabotage it.",
     },
   ];
 
@@ -436,12 +536,21 @@ export default function Home() {
                   <img
                     src={heroMainImage}
                     alt="AskDoGood homepage hero"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover cursor-zoom-in"
                     loading="eager"
                     fetchPriority="high"
                     width="416"
                     height="480"
                     onError={(e) => handleImageError(e, heroMainFallback)}
+                    onClick={() =>
+                      openSpotlight({
+                        src: heroMainImage,
+                        alt: "AskDoGood homepage hero",
+                        title: "AskDoGood founder hero",
+                        detail:
+                          "This hero image sets the tone of the brand: practical healing, visible leadership, and standards that can be lived daily.",
+                      })
+                    }
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
                   <div className="absolute left-5 right-5 top-5 flex items-start justify-between gap-3">
@@ -778,11 +887,26 @@ export default function Home() {
 
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
               {dersPillars.map((pillar) => (
-                <div key={pillar.title} className="rounded-3xl border border-border/70 bg-background/85 p-5 shadow-lg backdrop-blur-sm">
+                <button
+                  key={pillar.title}
+                  type="button"
+                  className="relative overflow-hidden rounded-3xl border border-border/70 bg-background/85 p-5 text-left shadow-lg backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
+                  onClick={() =>
+                    openSpotlight({
+                      src: "",
+                      alt: pillar.title,
+                      title: pillar.title,
+                      detail: pillar.context,
+                    })
+                  }
+                >
+                  <div className="pointer-events-none absolute -right-8 -bottom-8 h-36 w-36 opacity-80">
+                    {renderPillarArt(pillar.title)}
+                  </div>
                   <div className="mb-3 inline-flex rounded-2xl bg-primary/10 p-3">{pillar.icon}</div>
                   <h3 className="text-xl font-semibold mb-2">{pillar.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
-                </div>
+                </button>
               ))}
             </div>
 
@@ -937,11 +1061,20 @@ export default function Home() {
               <img
                 src={founderPhotoSecondary}
                 alt="RoSeé Murphy portrait for Ask DoGood wellness brand"
-                className="relative w-full max-w-sm rounded-[2rem] object-cover border border-white/70 shadow-2xl"
+                className="relative w-full max-w-sm rounded-[2rem] object-cover border border-white/70 shadow-2xl cursor-zoom-in"
                 loading="lazy"
                 width="420"
                 height="520"
-                onError={(e) => handleImageError(e, "/assets/img/brand/rosee-hero.jpg")}
+                onError={(e) => handleImageError(e, "/images/personal/rosee-hero-1.jpg")}
+                onClick={() =>
+                  openSpotlight({
+                    src: founderPhotoSecondary,
+                    alt: "RoSeé Murphy portrait for Ask DoGood wellness brand",
+                    title: "Founder portrait",
+                    detail:
+                      "This is the visual anchor for AskDoGood. It links the mission to a real person with lived health and rebuilding experience.",
+                  })
+                }
               />
             </div>
           </div>
@@ -981,7 +1114,18 @@ export default function Home() {
 
             <div className="grid gap-5 md:grid-cols-3">
               {founderGallery.map((item) => (
-                <Card key={item.src} className="overflow-hidden border-border/60 bg-card/95 shadow-sm hover:shadow-xl transition-all duration-300">
+                <Card
+                  key={item.src}
+                  className="overflow-hidden border-border/60 bg-card/95 shadow-sm hover:shadow-xl transition-all duration-300 cursor-zoom-in"
+                  onClick={() =>
+                    openSpotlight({
+                      src: item.src,
+                      alt: item.alt,
+                      title: item.label,
+                      detail: item.context,
+                    })
+                  }
+                >
                   <div className="relative aspect-[4/5] overflow-hidden bg-muted">
                     <img
                       src={item.src}
@@ -1514,6 +1658,30 @@ export default function Home() {
 
       {/* AFFILIATE PRODUCT RECOMMENDATIONS */}
       <AffiliateProductRecommendations />
+
+      <Dialog open={Boolean(spotlight)} onOpenChange={(open) => !open && closeSpotlight()}>
+        <DialogContent className="max-w-4xl overflow-hidden p-0">
+          <div className="bg-gradient-to-b from-background to-secondary/10">
+            {spotlight?.src ? (
+              <div className="max-h-[65vh] overflow-hidden bg-muted">
+                <img
+                  src={spotlight.src}
+                  alt={spotlight.alt}
+                  className="h-full w-full object-contain"
+                  loading="eager"
+                  onError={(e) => handleImageError(e, heroMainFallback)}
+                />
+              </div>
+            ) : null}
+            <div className="p-6 md:p-8">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-serif">{spotlight?.title}</DialogTitle>
+              </DialogHeader>
+              <p className="mt-3 text-base leading-7 text-muted-foreground">{spotlight?.detail}</p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

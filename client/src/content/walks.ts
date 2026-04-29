@@ -82,13 +82,13 @@ export const walkResources: WalkResource[] = [
     recoveredSummary:
       "A longer river essay that links physical movement with personal accountability: how to audit your choices, reset your standards, and walk in alignment.",
     stats: [
-      { label: "Trail", value: "Blue Trail" },
-      { label: "Region", value: "Patuxent River" },
-      { label: "Season", value: "Spring" },
-      { label: "Format", value: "Article" },
+      { label: "Mission lane", value: "Blue Trail" },
+      { label: "Community ground", value: "Patuxent River" },
+      { label: "Healing season", value: "Spring" },
+      { label: "Story style", value: "Photo essay" },
     ],
     highlights: [
-      "A 1,200-word article framed around accountability and the Blue Trail section of the Patuxent River route.",
+      "A practical field journal framed around accountability and the Blue Trail section of the Patuxent River route.",
       "Uses landscape moments as prompts for self-audit: what is working, what is performative, and what must change.",
       "Centers growth as repeated responsibility, not motivation spikes or image management.",
       "Uses direct hosted trail images so the narrative remains live, practical, and expandable as new walk stories are added.",

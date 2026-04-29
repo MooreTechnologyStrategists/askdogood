@@ -214,14 +214,14 @@ export const membershipOffers: CatalogItem[] = [
     name: "DoGood Wellness Circle",
     kind: "membership",
     platform: "both",
-    priceLabel: "$27/mo regular, $19/mo founding",
+    priceLabel: "$27",
     slug: "dogood-wellness-circle",
     status: "Ready",
     shortSummary:
-      "A wellness-centered membership for support, sisterhood, tools, and practical healing conversation.",
+      "One simple monthly membership for support, accountability, and practical wellness guidance.",
     description:
-      "Monthly community experience with Q&A sessions, exclusive content, wellness tools, recipes, insights, and support for women rebuilding their health and peace.",
-    cta: "Join the circle and heal in community.",
+      "A simple monthly membership with community support, practical guidance, wellness tools, and ongoing encouragement for women rebuilding their health and peace.",
+    cta: "Join the monthly membership.",
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Membership / Wellness",
     checkoutUrl: GUMROAD_URLS.wellnessCircle,

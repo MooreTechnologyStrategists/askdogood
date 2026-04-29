@@ -27,6 +27,9 @@ import {
 
 const readyNow = [...flagshipDigitalProducts, ...membershipOffers];
 
+const formatCatalogPrice = (item: CatalogItem) =>
+  item.kind === "membership" ? `${item.priceLabel}/month` : item.priceLabel;
+
 const launchRoadmap = launchOrder
   .map((id) => catalogById[id])
   .filter((item): item is CatalogItem => Boolean(item));
@@ -92,7 +95,7 @@ function CatalogCard({ item }: { item: CatalogItem }) {
             <CardTitle className="text-2xl">{item.name}</CardTitle>
             <CardDescription className="mt-2 text-base">{item.shortSummary}</CardDescription>
           </div>
-          <span className="text-lg font-semibold text-primary">{item.priceLabel}</span>
+          <span className="text-lg font-semibold text-primary">{formatCatalogPrice(item)}</span>
         </div>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-5">
@@ -124,10 +127,9 @@ export default function Shop() {
     catalogById["thyroid-checklist"],
   ].filter((item): item is CatalogItem => Boolean(item));
 
-  const transformationItems = [
-    catalogById["dogood-wellness-circle"],
-    catalogById["transformation-package"],
-  ].filter((item): item is CatalogItem => Boolean(item));
+  const transformationItems = [catalogById["dogood-wellness-circle"]].filter(
+    (item): item is CatalogItem => Boolean(item),
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -310,10 +312,10 @@ export default function Shop() {
 
             <Card className="border-border/60 bg-card/90 shadow-sm">
               <CardHeader>
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Lifestyle Transformation</p>
-                <CardTitle className="text-2xl">Programs that push daily change into motion</CardTitle>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Membership</p>
+                <CardTitle className="text-2xl">One ongoing membership for steady support</CardTitle>
                 <CardDescription className="text-base leading-7">
-                  A structured system to reset your health, mindset, and daily habits, with room to go deeper when you are ready.
+                  Keep the ongoing offer simple: one membership for accountability, community, and practical wellness support.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-muted-foreground">
@@ -444,11 +446,11 @@ export default function Shop() {
             <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
               <div>
                 <Badge variant="outline" className="mb-4 rounded-full px-4 py-1 uppercase tracking-[0.22em]">
-                  Membership and community
+                  Membership
                 </Badge>
-                <h2 className="text-3xl font-bold md:text-4xl">The DoGood Wellness Circle stays visible as the retention offer.</h2>
+                <h2 className="text-3xl font-bold md:text-4xl">One clean monthly membership.</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                  If you want ongoing support instead of one-time information, the Wellness Circle is the bridge between a single download and a more consistent transformation process.
+                  If you want ongoing support instead of a one-time download, the Wellness Circle is the one simple membership option on the site.
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Live free-resource checkouts: {liveResourcesCount}. This lets new visitors enter the brand ecosystem before stepping into premium offers.
@@ -464,7 +466,7 @@ export default function Shop() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">{membershipOffers[0].description}</p>
-                  <div className="text-lg font-semibold text-primary">{membershipOffers[0].priceLabel}</div>
+                  <div className="text-lg font-semibold text-primary">{formatCatalogPrice(membershipOffers[0])}</div>
                   <CatalogAction item={membershipOffers[0]} />
                 </CardContent>
               </Card>

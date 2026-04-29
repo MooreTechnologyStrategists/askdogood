@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { founderFeatures } from '@/data/founderFeatures';
 
 const sections = [
@@ -13,6 +15,8 @@ const sections = [
     caption: 'Real meals. Real ingredients. This is where healing starts, one plate at a time.',
     image: 'https://askdogoodassets.blob.core.windows.net/images/foods/jarSalads.JPEG',
     imageAlt: 'Mason jar salads and prepared food for the AskDoGood kitchen journal',
+    imageDetail:
+      'These kitchen photos document the actual food discipline behind AskDoGood. The point is not aesthetics alone. It is proof of repeatable, nourishing routines.',
     href: '/behind-the-scenes/in-my-kitchen',
   },
   {
@@ -22,6 +26,8 @@ const sections = [
     caption: 'Simple blends designed to reduce inflammation and support stronger daily energy.',
     image: 'https://askdogoodassets.blob.core.windows.net/images/foods/green-smoothie-avocado-oatmeal.JPG',
     imageAlt: 'Green smoothie with avocado and oatmeal prepared for daily wellness support',
+    imageDetail:
+      'This image supports the daily nourishment side of the brand: simple blends, accessible ingredients, and food choices that support energy instead of draining it.',
   },
   {
     id: 'staying-active',
@@ -30,6 +36,8 @@ const sections = [
     caption: 'Movement does not have to be extreme. Consistency is what creates change.',
     image: 'https://askdogoodassets.blob.core.windows.net/images/walking-trails/DSC06410.JPG',
     imageAlt: 'Wide overlook along the Patuxent River Blue Trail',
+    imageDetail:
+      'This trail photo ties movement to regulation, not performance. It represents walking as part of mental clarity, physical recovery, and emotional steadiness.',
   },
   {
     id: 'building-the-platform',
@@ -44,11 +52,21 @@ const sections = [
     caption: 'Growth is part of the process. The more you learn, the more you can help others.',
     image: 'https://askdogoodassets.blob.core.windows.net/images/garden/seedlings-starting.webp',
     imageAlt: 'Seedlings starting in trays as part of a hands-on growing practice',
+    imageDetail:
+      'The seedling image reflects the education side of AskDoGood: learning patiently, building capacity over time, and respecting real growth cycles.',
   },
 ];
 
+type SpotlightImage = {
+  src: string;
+  alt: string;
+  title: string;
+  detail: string;
+};
+
 export default function BehindTheScenes() {
   const leadFeature = founderFeatures[0];
+  const [spotlight, setSpotlight] = useState<SpotlightImage | null>(null);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,rgba(250,245,240,1)_0%,rgba(255,255,255,1)_40%,rgba(247,241,236,1)_100%)] text-foreground">
@@ -87,17 +105,26 @@ export default function BehindTheScenes() {
                 <img
                   src={leadFeature.image}
                   alt={leadFeature.imageAlt}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full cursor-zoom-in object-cover"
                   loading="eager"
                   width="900"
                   height="1125"
+                  onClick={() =>
+                    setSpotlight({
+                      src: leadFeature.image ?? '',
+                      alt: leadFeature.imageAlt ?? 'Featured memory image',
+                      title: 'My surprise 39th birthday party with MC Lyte',
+                      detail:
+                        'This photo is part of a real personal memory, not filler imagery. It documents a cultural moment tied directly to my own life and story.',
+                    })
+                  }
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,10,8,0.04)_0%,rgba(14,10,8,0.72)_100%)]" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                   <p className="text-sm uppercase tracking-[0.28em] text-white/75">Featured Memory</p>
-                  <h2 className="mt-3 font-serif text-3xl font-semibold">CIAA birthday with MC Lyte</h2>
+                  <h2 className="mt-3 font-serif text-3xl font-semibold">My surprise 39th birthday party with MC Lyte</h2>
                   <p className="mt-3 max-w-lg text-base leading-7 text-white/85">
-                    A personal milestone with real cultural weight, including exclusive time with hip-hop legend MC Lyte during your surprise thirty-ninth birthday celebration at CIAA.
+                    A personal milestone with real cultural weight, including exclusive time with hip-hop legend MC Lyte during my surprise 39th birthday party at CIAA.
                   </p>
                 </div>
               </div>
@@ -126,10 +153,18 @@ export default function BehindTheScenes() {
                     <img
                       src={section.image}
                       alt={section.imageAlt}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full cursor-zoom-in object-cover"
                       loading="lazy"
                       width="720"
                       height="448"
+                      onClick={() =>
+                        setSpotlight({
+                          src: section.image,
+                          alt: section.imageAlt ?? section.title,
+                          title: section.title,
+                          detail: section.imageDetail ?? section.caption,
+                        })
+                      }
                     />
                   </div>
                 ) : (
@@ -174,6 +209,29 @@ export default function BehindTheScenes() {
           </Card>
         </div>
       </section>
+
+      <Dialog open={Boolean(spotlight)} onOpenChange={(open) => !open && setSpotlight(null)}>
+        <DialogContent className="max-w-4xl overflow-hidden p-0">
+          <div className="bg-[linear-gradient(180deg,rgba(250,245,240,1),rgba(255,255,255,1))]">
+            {spotlight?.src ? (
+              <div className="max-h-[65vh] overflow-hidden bg-muted/30">
+                <img
+                  src={spotlight.src}
+                  alt={spotlight.alt}
+                  className="h-full w-full object-contain"
+                  loading="eager"
+                />
+              </div>
+            ) : null}
+            <div className="p-6 md:p-8">
+              <DialogHeader>
+                <DialogTitle className="font-serif text-2xl font-semibold">{spotlight?.title}</DialogTitle>
+              </DialogHeader>
+              <p className="mt-3 text-base leading-7 text-muted-foreground">{spotlight?.detail}</p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

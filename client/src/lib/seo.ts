@@ -184,7 +184,7 @@ export const staticSeoPages: StaticSeoPage[] = [
     keywords: [
       "behind the scenes",
       "MC Lyte birthday story",
-      "DJ K-Rock",
+      "surprise 39th birthday party",
       "community outreach",
       "healing with style",
       "Ask DoGood founder notes",
