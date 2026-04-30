@@ -18,6 +18,7 @@ import { safeBlogPosts } from "@/content/blogData";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { blogImages } from "@/data/blogImages";
 import PromoBanner from '../components/PromoBanner';
+import RecommendedReads from '../components/RecommendedReads';
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
@@ -378,6 +379,7 @@ export default function Blog() {
         </div>
       </section>
       <PromoBanner />
+      <RecommendedReads count={3} />
     </main>
   );
 }

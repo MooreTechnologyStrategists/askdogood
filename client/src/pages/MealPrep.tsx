@@ -21,6 +21,7 @@ import type { Recipe } from "@/data/recipes";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { GUMROAD_URLS } from "@/config/gumroad";
 import PromoBanner from '../components/PromoBanner';
+import RecommendedReads from '../components/RecommendedReads';
 
 const mealPlans = [
   {
@@ -905,6 +906,7 @@ export default function MealPrepResources() {
           </Tabs>
         </div>
       </section>
+      <RecommendedReads count={3} />
     </div>
   );
 }

@@ -42,6 +42,7 @@ import { GUMROAD_URLS } from "@/config/gumroad";
 import { catalogById, hasLiveCheckout, homepageFeaturedProductIds } from "@/data/catalog";
 import { featuredWalkResource, walkResources } from "@/content/walks";
 import PromoBanner from '../components/PromoBanner';
+import RecommendedReads from '../components/RecommendedReads';
 
 // Constants
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";

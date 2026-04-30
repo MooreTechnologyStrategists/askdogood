@@ -1,0 +1,29 @@
+.recommended-reads {
+  background: #f8f9fa;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+.reads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.read-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-decoration: none;
+  color: #222;
+  transition: box-shadow 0.2s;
+}
+.read-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.curated-badge {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
