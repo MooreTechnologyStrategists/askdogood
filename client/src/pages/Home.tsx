@@ -426,7 +426,7 @@ export default function Home() {
     },
   ];
 
-  const heroMainImage = "/hero-home.webp";
+  const heroMainImage = "/assets/img/rosee-home.jpg";
   const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
   const founderPhotoSecondary = "/images/personal/rosee-hero-2.jpg";
   const founderGallery = [
