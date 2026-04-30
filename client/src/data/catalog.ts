@@ -64,8 +64,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "A 21-day guided reset with meal ideas, shopping support, prep tips, and wellness encouragement for anyone ready to clean things up without making life miserable.",
     cta: "Reset your plate. Reset your energy.",
-    image:
-      "https://askdogoodassets.blob.core.windows.net/images/products/Clinical_Food_RX_Cover.png",
+    image: "/images/products/plant_reset_cover.svg",
     category: "Nutrition / Wellness",
     checkoutUrl: GUMROAD_URLS.plantReset,
     checkoutState: "live",

@@ -7,6 +7,10 @@
 # status: "draft"
 # ---
 
+<p align="center">
+	<img src="client/public/images/products/plant_reset_cover.svg" alt="AskDoGood Logo and 21-Day Plant-Based Reset Cover" width="320" />
+</p>
+
 # 21-Day Plant-Based Reset Program
 ## Transform Your Health in 3 Weeks with Clean, Delicious Plant-Based Meals
 

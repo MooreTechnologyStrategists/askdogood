@@ -1,35 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400" role="img" aria-label="21-Day Plant-Based Reset cover">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f2a20"/>
-      <stop offset="55%" stop-color="#1f5a42"/>
-      <stop offset="100%" stop-color="#d1aa4f"/>
+      <stop offset="0%" stop-color="#f7f1e7"/>
+      <stop offset="55%" stop-color="#efe4d4"/>
+      <stop offset="100%" stop-color="#d7e7d3"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.2" cy="0.2" r="0.8">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#173d2f"/>
+      <stop offset="100%" stop-color="#0f2b21"/>
+    </linearGradient>
   </defs>
   <rect width="1600" height="2400" fill="url(#bg)"/>
-  <rect width="1600" height="2400" fill="url(#glow)"/>
-  <circle cx="1280" cy="420" r="300" fill="#ffffff" opacity="0.08"/>
-  <circle cx="260" cy="1980" r="380" fill="#ffffff" opacity="0.06"/>
+  <circle cx="1320" cy="340" r="240" fill="#d9b65a" opacity="0.25"/>
+  <circle cx="1335" cy="345" r="180" fill="#ffffff" opacity="0.2"/>
+  <path d="M0 1940 C280 1820, 540 1820, 840 1940 C1120 2055, 1375 2060, 1600 1940 L1600 2400 L0 2400 Z" fill="#b9d2b2" opacity="0.55"/>
+  <path d="M0 2060 C315 1935, 620 1945, 900 2060 C1165 2165, 1380 2165, 1600 2055 L1600 2400 L0 2400 Z" fill="#8caf83" opacity="0.4"/>
 
-  <text x="120" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#f5e9cd" letter-spacing="6">ASKDOGOOD</text>
+  <rect x="96" y="96" width="1408" height="2208" rx="40" fill="#fffaf3" opacity="0.72"/>
+  <rect x="120" y="120" width="1360" height="2160" rx="36" fill="none" stroke="#1d4335" stroke-opacity="0.18" stroke-width="2"/>
 
-  <text x="120" y="640" font-family="Georgia, 'Times New Roman', serif" font-size="138" font-weight="700" fill="#ffffff">21-Day</text>
-  <text x="120" y="790" font-family="Georgia, 'Times New Roman', serif" font-size="138" font-weight="700" fill="#ffffff">Plant-Based</text>
-  <text x="120" y="940" font-family="Georgia, 'Times New Roman', serif" font-size="138" font-weight="700" fill="#ffffff">Reset</text>
+  <text x="160" y="260" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" fill="#173d2f" letter-spacing="8">ASKDOGOOD</text>
+  <text x="160" y="340" font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#6b715f" letter-spacing="4">NOURISHMENT. STRUCTURE. CONSISTENCY.</text>
 
-  <rect x="120" y="1040" width="1360" height="3" fill="#f0d28b" opacity="0.85"/>
+  <text x="160" y="620" font-family="Georgia, 'Times New Roman', serif" font-size="148" font-weight="700" fill="#173d2f">21-Day</text>
+  <text x="160" y="790" font-family="Georgia, 'Times New Roman', serif" font-size="148" font-weight="700" fill="#173d2f">Plant-Based</text>
+  <text x="160" y="960" font-family="Georgia, 'Times New Roman', serif" font-size="148" font-weight="700" fill="#173d2f">Reset</text>
 
-  <text x="120" y="1160" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#f5d188">Reset Your Plate.</text>
-  <text x="120" y="1250" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#f5d188">Reset Your Energy.</text>
-  <text x="120" y="1340" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#f5d188">Reset Your Routine.</text>
+  <rect x="160" y="1048" width="420" height="6" fill="#d0aa56"/>
 
-  <text x="120" y="1640" font-family="Arial, Helvetica, sans-serif" font-size="48" fill="#e8f2ec" opacity="0.92">Practical 21-day framework for thyroid-friendly</text>
-  <text x="120" y="1710" font-family="Arial, Helvetica, sans-serif" font-size="48" fill="#e8f2ec" opacity="0.92">meal structure, prep rhythm, and consistency.</text>
+  <text x="160" y="1165" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" fill="#2a5b46">Clean up your plate without</text>
+  <text x="160" y="1240" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" fill="#2a5b46">making life miserable.</text>
 
-  <rect x="120" y="2080" width="520" height="120" rx="60" fill="#ffffff" opacity="0.15"/>
-  <text x="180" y="2158" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#ffffff">DIGITAL GUIDE</text>
+  <rect x="160" y="1400" width="540" height="116" rx="58" fill="url(#panel)"/>
+  <text x="220" y="1475" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#f7f1e7" letter-spacing="2">DIGITAL RESET GUIDE</text>
+
+  <g transform="translate(1060 1210)">
+    <ellipse cx="120" cy="120" rx="124" ry="88" fill="#7da878" opacity="0.28"/>
+    <path d="M54 165 C8 130, 18 57, 92 32 C112 99, 108 142, 54 165 Z" fill="#6d9d67" fill-opacity="0.9"/>
+    <path d="M121 160 C82 126, 92 55, 160 36 C174 92, 164 140, 121 160 Z" fill="#5f8b5c" fill-opacity="0.88"/>
+    <circle cx="188" cy="126" r="34" fill="#b84f66" fill-opacity="0.88"/>
+    <circle cx="188" cy="126" r="17" fill="#efd7dc" fill-opacity="0.75"/>
+    <path d="M185 62 C195 36, 226 24, 252 42 C238 70, 213 81, 185 62 Z" fill="#d8c28d" fill-opacity="0.92"/>
+  </g>
+
+  <text x="160" y="1760" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#4c544b">A practical 21-day framework for anti-inflammatory</text>
+  <text x="160" y="1828" font-family="Arial, Helvetica, sans-serif" font-size="46" fill="#4c544b">meal structure, prep rhythm, and stronger routines.</text>
+
+  <line x1="160" y1="1960" x2="1440" y2="1960" stroke="#173d2f" stroke-opacity="0.15" stroke-width="2"/>
+
+  <text x="160" y="2070" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#173d2f" letter-spacing="3">INCLUDES</text>
+  <text x="160" y="2140" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#3f4d42">Meal guidance, grocery rhythm, prep flow, and sustainable structure.</text>
 </svg>
