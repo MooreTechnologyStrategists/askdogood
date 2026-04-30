@@ -20,6 +20,7 @@ import RecipeModal from "@/components/RecipeModal";
 import type { Recipe } from "@/data/recipes";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { GUMROAD_URLS } from "@/config/gumroad";
+import PromoBanner from '../components/PromoBanner';
 
 const mealPlans = [
   {

@@ -17,6 +17,7 @@ import {
 import { safeBlogPosts } from "@/content/blogData";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { blogImages } from "@/data/blogImages";
+import PromoBanner from '../components/PromoBanner';
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
@@ -376,6 +377,7 @@ export default function Blog() {
           )}
         </div>
       </section>
+      <PromoBanner />
     </main>
   );
 }

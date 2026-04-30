@@ -1,0 +1,31 @@
+.promo-banner {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin: 32px auto;
+  padding: 24px;
+  max-width: 900px;
+  gap: 32px;
+}
+.promo-banner-image {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.promo-banner-content {
+  flex: 1;
+}
+.promo-banner-content h2 {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  color: #222;
+}
+.promo-banner-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}

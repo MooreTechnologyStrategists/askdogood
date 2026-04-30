@@ -15,6 +15,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
+import PromoBanner from '../components/PromoBanner';
 
 const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-1.jpg";
 const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-2.jpg";
@@ -329,6 +330,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <PromoBanner />
     </main>
   );
 }
