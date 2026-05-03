@@ -546,50 +546,6 @@ export default function Home() {
         
         <div className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Hero Image - Rosee Murphy */}
-            <div className="flex justify-center mb-8">
-              <div className="relative w-[18rem] h-[22rem] md:w-[26rem] md:h-[30rem]">
-                {/* Soft glow behind photo */}
-                <div
-                  className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/10 blur-2xl scale-110"
-                  aria-hidden="true"
-                />
-                {/* Photo frame */}
-                <div className="absolute -inset-1 rounded-3xl border border-primary/20 bg-white/60 backdrop-blur-sm shadow-2xl" />
-                <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-white/90 shadow-2xl bg-muted">
-                  <img
-                    src={heroMainImage}
-                    alt="AskDoGood homepage hero"
-                    className="h-full w-full object-cover cursor-zoom-in"
-                    loading="eager"
-                    fetchPriority="high"
-                    width="416"
-                    height="480"
-                    onError={(e) => handleImageError(e, heroMainFallback)}
-                    onClick={() =>
-                      openSpotlight({
-                        src: heroMainImage,
-                        alt: "AskDoGood homepage hero",
-                        title: "AskDoGood founder hero",
-                        detail:
-                          "This hero image sets the tone of the brand: practical healing, visible leadership, and standards that can be lived daily.",
-                      })
-                    }
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
-                  <div className="absolute left-5 right-5 top-5 flex items-start justify-between gap-3">
-                    <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-foreground shadow">
-                      AskDoGood
-                    </span>
-                  </div>
-                  <div className="absolute bottom-6 left-5 right-5 text-left text-white">
-                    <p className="max-w-xs text-lg font-semibold leading-tight md:text-xl">
-                      Real guidance for everyday healing and structure.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
               Real Health.
