@@ -448,32 +448,6 @@ export default function Home() {
     },
   ];
 
-  const heroMainImage = "/assets/img/rosee-home.jpg";
-  const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
-  const founderPhotoSecondary = "/images/personal/rosee-hero-2.jpg";
-  const founderGallery = [
-    {
-      src: "/images/personal/rosee-hero-1.jpg",
-      alt: "RoSee Murphy founder portrait",
-      label: "Founder",
-      caption: "Lived experience, clear direction, and steady standards.",
-      context: "This portrait anchors the founder timeline and shows the person behind the systems, products, and health guidance.",
-    },
-    {
-      src: "/images/personal/rosee-hero-2.jpg",
-      alt: "RoSee Murphy wellness brand portrait",
-      label: "Wellness leadership",
-      caption: "A real person behind every AskDoGood product and message.",
-      context: "Leadership at AskDoGood means visible accountability, not faceless branding. Every offer ties back to lived standards.",
-    },
-    {
-      src: "/images/personal/rosee-founder-snow-2026.jpg",
-      alt: "RoSee Murphy in founder journey photo",
-      label: "Real life",
-      caption: "Documenting the journey while helping others build theirs.",
-      context: "This moment reflects the everyday side of consistency: showing up in real conditions, not only curated moments.",
-    },
-  ];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -591,61 +565,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <Link href="/journey">
-                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                      <div className="relative h-44 overflow-hidden">
-                        <img
-                          src="/images/personal/rosee-hero-1.jpg"
-                          alt="RoSee Murphy founder portrait"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                          onError={(e) => handleImageError(e, founderPhotoSecondary)}
-                        />
-                      </div>
-                      <div className="border-t border-border/50 px-4 py-3 text-left">
-                        <p className="text-sm font-semibold text-foreground">Founder Journey</p>
-                        <p className="text-xs text-muted-foreground">My timeline, lessons, and mission.</p>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/behind-the-scenes">
-                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:translate-y-4">
-                      <div className="relative h-44 overflow-hidden">
-                        <img
-                          src="/images/personal/rosee-founder-snow-2026.jpg"
-                          alt="RoSee Murphy founder outdoor photo"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                          onError={(e) => handleImageError(e, founderPhotoSecondary)}
-                        />
-                      </div>
-                      <div className="border-t border-border/50 px-4 py-3 text-left">
-                        <p className="text-sm font-semibold text-foreground">Behind The Scenes</p>
-                        <p className="text-xs text-muted-foreground">Community work and daily standards.</p>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/behind-the-scenes/in-my-kitchen">
-                    <a className="group overflow-hidden rounded-3xl border border-white/60 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:col-span-2">
-                      <div className="relative h-48 overflow-hidden sm:h-40">
-                        <img
-                          src="/images/personal/food/meal-prep.jpg"
-                          alt="RoSee Murphy meal prep routine"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                          onError={(e) => handleImageError(e)}
-                        />
-                      </div>
-                      <div className="border-t border-border/50 px-4 py-3 text-left">
-                        <p className="text-sm font-semibold text-foreground">In My Kitchen</p>
-                        <p className="text-xs text-muted-foreground">Real food routines that carry real healing.</p>
-                      </div>
-                    </a>
-                  </Link>
-                </div>
+                {/* Founder/hero images removed for credibility and clean design */}
               </div>
             </div>
 
