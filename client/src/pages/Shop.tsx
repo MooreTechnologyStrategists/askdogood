@@ -25,7 +25,11 @@ import {
   type CatalogItem,
 } from "@/data/catalog";
 
-const readyNow = [...flagshipDigitalProducts, ...membershipOffers];
+// Only include products with a working Gumroad checkout link
+import { GUMROAD_URLS } from "@/config/gumroad";
+const readyNow = [...flagshipDigitalProducts, ...membershipOffers].filter(
+  (item) => hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)
+);
 
 const formatCatalogPrice = (item: CatalogItem) =>
   item.kind === "membership" ? `${item.priceLabel}/month` : item.priceLabel;
@@ -34,21 +38,14 @@ const launchRoadmap = launchOrder
   .map((id) => catalogById[id])
   .filter((item): item is CatalogItem => Boolean(item));
 
-const fastCashOffer = catalogById["thyroid-health-mastery"];
+// Only show fastCashOffer if it has a working Gumroad checkout
+const fastCashOffer = hasLiveCheckout(catalogById["thyroid-health-mastery"]) && catalogById["thyroid-health-mastery"].checkoutUrl && catalogById["thyroid-health-mastery"].checkoutUrl.startsWith(GUMROAD_URLS.storefront)
+  ? catalogById["thyroid-health-mastery"]
+  : null;
 
 function CatalogAction({ item }: { item: CatalogItem }) {
-  if (item.kind === "coming-soon") {
-    return (
-      <Link href="/merch">
-        <Button variant="outline" className="w-full gap-2">
-          Browse merch gallery
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-      </Link>
-    );
-  }
-
-  if (hasLiveCheckout(item)) {
+  // Only show buy/download if Gumroad checkout is live and valid
+  if (hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)) {
     return (
       <a href={item.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
         <Button className="w-full gap-2">
@@ -58,26 +55,8 @@ function CatalogAction({ item }: { item: CatalogItem }) {
       </a>
     );
   }
-
-  if (item.internalPath) {
-    return (
-      <Link href={item.internalPath}>
-        <Button variant="outline" className="w-full gap-2">
-          {item.kind === "lead-magnet" ? "Open resource" : "Learn more"}
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-      </Link>
-    );
-  }
-
-  return (
-    <Link href="/contact">
-      <Button variant="outline" className="w-full gap-2">
-        Join waitlist
-        <ArrowRight className="h-4 w-4" />
-      </Button>
-    </Link>
-  );
+  // Hide or disable for non-existent or coming soon offers
+  return null;
 }
 
 function CatalogCard({ item }: { item: CatalogItem }) {
@@ -113,8 +92,8 @@ function CatalogCard({ item }: { item: CatalogItem }) {
 }
 
 export default function Shop() {
-  const liveProductsCount = readyNow.filter((item) => hasLiveCheckout(item)).length;
-  const liveResourcesCount = leadMagnets.filter((item) => hasLiveCheckout(item)).length;
+  const liveProductsCount = readyNow.length;
+  const liveResourcesCount = leadMagnets.filter((item) => hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)).length;
   const merchPreviewCount = comingSoonMerchItems.length;
 
   const healthNutritionItems = [
@@ -229,33 +208,35 @@ export default function Shop() {
       <section className="py-16 border-b border-border/40 bg-background/70">
         <div className="container">
           <div className="mb-8 grid gap-4 md:grid-cols-3">
-            <Link href="/shop">
-            <Card className="border-primary/20 bg-primary/5 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
-              <CardHeader>
-                <CardTitle className="text-xl">1. Buy Digital Products</CardTitle>
-                <CardDescription>
-                  Instant-access courses, guides, and tools built for real wellness progress.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold text-primary">{liveProductsCount}</p>
-                <p className="text-sm text-muted-foreground">live product checkouts</p>
-              </CardContent>
-            </Card>
-            </Link>
+            {liveProductsCount > 0 && (
+              <Link href="/shop">
+                <Card className="border-primary/20 bg-primary/5 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-xl">1. Buy Digital Products</CardTitle>
+                    <CardDescription>
+                      Instant-access courses, guides, and tools built for real wellness progress.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-3xl font-bold text-primary">{liveProductsCount}</p>
+                    <p className="text-sm text-muted-foreground">live product checkouts</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            )}
             <Link href="/work-with-askdogood">
-            <Card className="border-border/60 bg-card/90 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
-              <CardHeader>
-                <CardTitle className="text-xl">2. Book Services</CardTitle>
-                <CardDescription>
-                  Coaching and strategic reset support for deeper personal or community outcomes.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold text-primary">{serviceCatalog.length}</p>
-                <p className="text-sm text-muted-foreground">service pathways available</p>
-              </CardContent>
-            </Card>
+              <Card className="border-border/60 bg-card/90 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl">2. Book Services</CardTitle>
+                  <CardDescription>
+                    Coaching and strategic reset support for deeper personal or community outcomes.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-3xl font-bold text-primary">{serviceCatalog.length}</p>
+                  <p className="text-sm text-muted-foreground">service pathways available</p>
+                </CardContent>
+              </Card>
             </Link>
             <Link href="/merch">
             <Card className="border-border/60 bg-card/90 transition-all hover:-translate-y-1 hover:shadow-lg cursor-pointer">

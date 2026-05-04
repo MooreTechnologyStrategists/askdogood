@@ -1,5 +1,4 @@
-const GUMROAD_STOREFRONT =
-  import.meta.env.VITE_GUMROAD_STOREFRONT_URL || "https://askdogood.gumroad.com";
+const GUMROAD_STOREFRONT = "https://askdogood.gumroad.com";
 
 const gumroadProductUrl = (slug: string) => `${GUMROAD_STOREFRONT}/l/${slug}`;
 
@@ -20,49 +19,19 @@ export const GUMROAD_SLUGS = {
 
 export const GUMROAD_URLS = {
   storefront: GUMROAD_STOREFRONT,
-  thyroidMastery:
-    import.meta.env.VITE_GUMROAD_THYROID_MASTERY_URL ||
-    "https://askdogood.gumroad.com/l/thyroid-health-mastery",
-  plantReset:
-    import.meta.env.VITE_GUMROAD_PLANT_RESET_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.plantReset),
-  mealPlan:
-    import.meta.env.VITE_GUMROAD_MEAL_PLAN_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.mealPlan),
-  mealPrepDeposit:
-    import.meta.env.VITE_GUMROAD_MEAL_PREP_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.mealPrepDeposit),
-  symptomTracker:
-    import.meta.env.VITE_GUMROAD_SYMPTOM_TRACKER_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.symptomTracker),
-  labGuide:
-    import.meta.env.VITE_GUMROAD_LAB_GUIDE_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.labGuide),
-  supplementTemplates:
-    import.meta.env.VITE_GUMROAD_SUPPLEMENT_TEMPLATES_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.supplementTemplates),
-  gardenBundle:
-    import.meta.env.VITE_GUMROAD_GARDEN_BUNDLE_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.gardenBundle),
-  autoimmuneGuide:
-    import.meta.env.VITE_GUMROAD_AUTOIMMUNE_GUIDE_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.autoimmuneGuide),
-  wellnessCircle:
-    import.meta.env.VITE_GUMROAD_WELLNESS_CIRCLE_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.wellnessCircle),
-  thyroidChecklist:
-    import.meta.env.VITE_GUMROAD_THYROID_CHECKLIST_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.thyroidChecklist),
-  blackWomensToolkit:
-    import.meta.env.VITE_GUMROAD_BLACK_WOMENS_TOOLKIT_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.blackWomensToolkit),
-  budgetGroceryChecklist:
-    import.meta.env.VITE_GUMROAD_BUDGET_GROCERY_CHECKLIST_URL ||
-    "https://askdogoodassets.blob.core.windows.net/downloads/budget-grocery-checklist.pdf",
-  mealPrepContainerGuide:
-    import.meta.env.VITE_GUMROAD_MEAL_PREP_CONTAINER_GUIDE_URL ||
-    "https://askdogoodassets.blob.core.windows.net/downloads/meal-prep-container-guide.pdf",
-  freeChecklistMealPlan:
-    import.meta.env.VITE_GUMROAD_FREE_CHECKLIST_MEAL_PLAN_URL ||
-    gumroadProductUrl(GUMROAD_SLUGS.thyroidChecklist),
+  thyroidMastery: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.thyroidMastery}`,
+  plantReset: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.plantReset}`,
+  mealPlan: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.mealPlan}`,
+  mealPrepDeposit: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.mealPrepDeposit}`,
+  symptomTracker: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.symptomTracker}`,
+  labGuide: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.labGuide}`,
+  supplementTemplates: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.supplementTemplates}`,
+  gardenBundle: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.gardenBundle}`,
+  autoimmuneGuide: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.autoimmuneGuide}`,
+  wellnessCircle: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.wellnessCircle}`,
+  thyroidChecklist: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.thyroidChecklist}`,
+  blackWomensToolkit: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.blackWomensToolkit}`,
+  budgetGroceryChecklist: "https://askdogoodassets.blob.core.windows.net/downloads/budget-grocery-checklist.pdf",
+  mealPrepContainerGuide: "https://askdogoodassets.blob.core.windows.net/downloads/meal-prep-container-guide.pdf",
+  freeChecklistMealPlan: `${GUMROAD_STOREFRONT}/l/${GUMROAD_SLUGS.thyroidChecklist}`,
 } as const;
