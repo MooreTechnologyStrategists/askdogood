@@ -45,8 +45,8 @@ import PromoBanner from '../components/PromoBanner';
 import RecommendedReads from '../components/RecommendedReads';
 
 // Constants
-const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
-const FALLBACK_IMAGE = "/assets/img/blog/_fallback/blog.webp";
+const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
+const FALLBACK_IMAGE = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
 
 // Utility function for image error handling
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, fallback?: string) => {
