@@ -507,131 +507,30 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* HERO SECTION - Main Value Proposition */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        {/* Clean gradient background — no clutter */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background to-accent/5"
-          aria-hidden="true"
-        />
-        {/* Subtle decorative circles */}
-        <div className="absolute top-1/4 -right-24 w-96 h-96 bg-primary/6 rounded-full blur-3xl" aria-hidden="true" />
-        <div className="absolute bottom-1/4 -left-24 w-80 h-80 bg-accent/8 rounded-full blur-3xl" aria-hidden="true" />
-        
-        <div className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-
-            <h2 className="text-5xl md:text-7xl font-bold leading-tight font-serif">
-              Real Health.
-              <br />
-              <span className="text-primary">Real Discipline. Real Life.</span>
-            </h2>
-
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              {siteCopy.home.subtext}
-            </p>
-
-            <p className="text-sm md:text-base font-medium text-primary/80 max-w-3xl mx-auto">
-              {siteCopy.cta}
-            </p>
-
-            {/* Trust Indicators - Professional */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-              {trustIndicators.map((indicator, index) => (
-                <TrustIndicator key={`trust-${index}`} {...indicator} />
-              ))}
-            </div>
-
-            <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-primary/20 bg-white/80 p-4 shadow-xl backdrop-blur-sm md:p-6">
-              <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
-                <div className="rounded-3xl border border-border/70 bg-background/85 p-5 text-left md:p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/75">Founder in real life</p>
-                  <h3 className="mt-3 text-2xl font-bold leading-tight font-serif text-foreground">
-                    Not stock photos. Real moments from my actual journey.
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    These are snapshots from the same life that shaped AskDoGood: healing routines, kitchen discipline, and staying consistent in every season.
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    <Link href="/journey">
-                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">Founder Journey</a>
-                    </Link>
-                    <Link href="/behind-the-scenes/in-my-kitchen">
-                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">In My Kitchen</a>
-                    </Link>
-                    <Link href="/behind-the-scenes">
-                      <a className="rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:bg-primary/12">Behind The Scenes</a>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Founder/hero images removed for credibility and clean design */}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/free-meal-plan">
-                <Button className="group rounded-3xl px-9 py-8 text-lg font-extrabold tracking-wide border-2 border-primary/20 bg-gradient-to-r from-primary via-primary to-secondary text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition-all">
-                  Start Your Reset
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </Link>
-              <Link href="/resources">
-                <Button variant="outline" className="rounded-3xl px-8 py-8 text-lg font-bold border-2 border-primary/35 bg-background/90 shadow-lg hover:bg-primary/5">
-                  Explore Resources
-                </Button>
-              </Link>
-            </div>
-
-            <div className="flex flex-col items-center justify-center gap-3">
-              <p className="text-sm text-muted-foreground font-medium">
-                Free meal plan + practical health guidance for thyroid, blood pressure, blood sugar, and gut recovery
-              </p>
-              <Link href="/free-meal-plan">
-                <Button variant="outline" className="rounded-3xl px-6 py-5 text-sm font-semibold border-2 border-primary/45 bg-background text-foreground shadow-lg hover:bg-primary/5">
-                  Get the Free 3-Day Plan
-                </Button>
-              </Link>
-            </div>
-
-            {quickCashOffer && hasLiveCheckout(quickCashOffer) ? (
-              <div className="mx-auto w-full max-w-3xl rounded-[2rem] border border-primary/30 bg-[linear-gradient(140deg,rgba(16,185,129,0.14),rgba(255,255,255,0.95))] p-6 shadow-lg md:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/90">Fast support for AskDoGood</p>
-                <h3 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">Need a quick win today? Start with the live flagship course.</h3>
-                <p className="mt-3 text-base leading-7 text-muted-foreground">
-                  This is the most direct way to support AskDoGood right now while getting a complete, structured system for thyroid and holistic healing habits.
-                </p>
-                <div className="mt-5 flex flex-col items-center justify-between gap-4 rounded-2xl border border-primary/20 bg-white/85 px-4 py-4 sm:flex-row">
-                  <div className="text-left">
-                    <p className="text-sm font-semibold text-foreground">{quickCashOffer.name}</p>
-                    <p className="text-sm text-muted-foreground">Immediate access after checkout</p>
-                  </div>
-                  <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                    <Button className="w-full rounded-3xl px-7 py-5 text-base font-bold sm:w-auto">
-                      Buy now {quickCashOffer.priceLabel}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            ) : null}
-
-            <div className="max-w-4xl mx-auto pt-4 text-left">
-              <div className="rounded-[2rem] border border-border/70 bg-background/85 backdrop-blur-sm p-6 md:p-8 shadow-lg">
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">What This Is</p>
-                <h3 className="text-2xl md:text-3xl font-bold font-serif text-foreground leading-tight">
-                  This isn&apos;t about trends or perfection. This is about building habits that actually work in real life.
-                </h3>
-                <p className="mt-4 text-base md:text-lg leading-8 text-muted-foreground">
-                  You don&apos;t need a complete overhaul, you need consistency. You need awareness. You need a system that helps you make better decisions daily without thinking about it too hard.
-                </p>
-                <p className="mt-4 text-base md:text-lg leading-8 text-muted-foreground">
-                  That&apos;s why I built AskDoGood.
-                </p>
-              </div>
-            </div>
-          </div>
+      {/* SALES FOCUS SECTION - Thyroid Health Mastery */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
+        <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8 p-8 rounded-3xl border border-primary/20 bg-white/90 shadow-2xl">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-serif text-primary mb-4">
+            Transform Your Thyroid Health
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
+            The Thyroid Health Mastery Course is your step-by-step system for reversing symptoms, regaining energy, and building lifelong habits that work in the real world.
+          </p>
+          <ul className="text-left text-lg text-foreground mx-auto max-w-xl mb-6 list-disc list-inside">
+            <li>✔️ Doctor-reviewed, evidence-based protocols</li>
+            <li>✔️ Meal plans, recipes, and shopping guides</li>
+            <li>✔️ Stress, sleep, and movement strategies</li>
+            <li>✔️ Lifetime access and community support</li>
+          </ul>
+          <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-3xl px-10 py-7 text-2xl font-extrabold bg-primary text-white shadow-xl hover:bg-primary/90">
+              Enroll Now – {quickCashOffer.priceLabel}
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </Button>
+          </a>
+          <p className="text-base text-muted-foreground mt-4">
+            Immediate access after checkout. 100% satisfaction guarantee.
+          </p>
         </div>
       </section>
 
