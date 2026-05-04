@@ -418,28 +418,11 @@ export default function Home() {
     },
     {
       icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
-                  {/* Meal Prep Banner Section */}
-                  <section className="mx-auto mb-10 max-w-3xl rounded-[2rem] border border-pink-300 bg-gradient-to-br from-pink-50 via-pink-100 to-white p-6 shadow-xl flex flex-col md:flex-row items-center gap-6">
-                    <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
-                      <img
-                        src="/images/personal/food/meal-prep.jpg"
-                        alt="Meal Prep Menu Preview"
-                        className="rounded-2xl border-2 border-pink-200 shadow-lg object-cover w-44 h-44 md:w-36 md:h-36"
-                        loading="lazy"
-                        onError={(e) => handleImageError(e)}
-                      />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h3 className="text-2xl md:text-3xl font-bold text-pink-700 mb-2">New: DMV Meal Prep Menu</h3>
-                      <p className="text-base md:text-lg text-muted-foreground mb-3">Order chef-prepped, anti-inflammatory meals for the week. Choose your menu, pickup or delivery, and get real food that heals.</p>
-                      <Link href="/meal-prep">
-                        <Button className="rounded-3xl px-7 py-4 text-base font-bold bg-pink-600 text-white shadow-lg hover:bg-pink-700">
-                          Explore Meal Prep Menu
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </section>
+      title: "Work With AskDoGood",
+      description: "Programs, workshops, and strategic collaboration.",
+      content:
+        "A partner-ready offer for community centers, churches, schools, government programs, and wellness organizations.",
+      href: "/work-with-askdogood",
       title: "Work With AskDoGood",
       description: "Programs, workshops, and strategic collaboration.",
       content:
