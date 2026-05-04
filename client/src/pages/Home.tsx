@@ -45,6 +45,18 @@ import PromoBanner from '../components/PromoBanner';
 import RecommendedReads from '../components/RecommendedReads';
 
 // Constants
+// Fallbacks for missing image constants
+const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
+const founderGallery = [
+  {
+    src: "/images/personal/rosee-hero-1.jpg",
+    alt: "RoSee Murphy portrait for Ask DoGood wellness brand",
+    title: "Founder portrait",
+    detail: "This is the visual anchor for AskDoGood. It links the mission to a real person with lived health and rebuilding experience.",
+  },
+  // Add more images as needed
+];
+const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
 const FALLBACK_IMAGE = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
 
@@ -416,16 +428,6 @@ export default function Home() {
         "Open the AskDoGood digital library to browse flipbooks like Indian Creek Trail and Keep Moving without hunting through the footer.",
       href: "/keep-moving",
     },
-    const services = [
-  {
-    icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
-    title: "Meal Prep & Wellness",
-    description:
-      "Healthy meal prep, juices, and custom wellness plans designed for real life.",
-    href: "/meal-prep",
-  },
-  // other items...
-];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -1403,7 +1405,7 @@ export default function Home() {
         <div className="container max-w-4xl relative z-10">
           <div className="mx-auto mb-8 max-w-2xl overflow-hidden rounded-3xl border border-primary/20 bg-background/70 shadow-xl">
             <img
-              src="/images/personal/food/meal-prep.jpg"
+              src="/images/personal/food/meal-complete.jpg"
               alt="Free Thyroid Symptom Checklist and 3-Day Meal Plan preview"
               className="h-64 w-full object-cover"
               loading="lazy"

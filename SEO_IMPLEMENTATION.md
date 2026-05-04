@@ -109,11 +109,6 @@ function MyPage() {
 - **Keywords**: Black fiction, short stories, contemporary fiction, urban fiction
 - **Type**: website
 
-### Chyna White Series (`/stories/chyna-white`)
-- **Title**: "Chyna White - Chronicles of a Beautiful Contradiction"
-- **Description**: "Follow Chyna: former rapper, ex-street pharmacist, corporate escapee, current boss. A story of reinvention, resilience, and refusing to fit anyone's box."
-- **Keywords**: Black fiction, urban fiction, strong female characters, contemporary romance
-- **Type**: website
 
 ### Contact (`/contact`)
 - **Title**: "Contact RoSeé Murphy | Ask DoGood"

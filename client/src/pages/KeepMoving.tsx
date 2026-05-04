@@ -6,7 +6,7 @@ const mosaicImages = [
   "/images/personal/rosee-hero-1.jpg",
   "/images/personal/professional/rosee-professional-suit.jpg",
   "/images/personal/food/greens-salad.jpg",
-  "/images/personal/food/meal-prep.jpg",
+  "/images/personal/food/meal-complete.jpg",
   "/images/personal/food/vegetables-roasted.jpg",
   "/hero-home.webp",
 ];
@@ -55,7 +55,7 @@ function RecoveredContentSection() {
           <div className="grid gap-5 md:grid-cols-[0.85fr_1.15fr] md:items-center">
             <div className="overflow-hidden rounded-2xl border border-white/60 shadow-lg">
               <img
-                src="/images/personal/food/meal-prep.jpg"
+                src="/images/personal/food/meal-complete.jpg"
                 alt="RoSee Murphy meal prep session"
                 className="h-full w-full object-cover"
                 loading="lazy"

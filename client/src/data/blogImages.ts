@@ -3,7 +3,7 @@ export const BLOG_DEFAULT_CARD = "/assets/img/blog/library/blog-list-hero.jpg";
 export const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
 
 export const blogImages: Record<string, string> = {
-  "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out": "/images/personal/food/meal-prep.jpg",
+  "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out": "/images/personal/food/meal-complete.jpg",
   "10-tips-to-boost-your-emotional-wellness": "/assets/img/blog/assigned/10-tips-to-boost-your-emotional-wellness.webp",
   "5-foods-you-need-to-include-in-a-vegan-diet": "/assets/img/blog/assigned/5-foods-you-need-to-include-in-a-vegan-diet.webp",
   "7-ways-to-boost-focus-and-productivity-while-working-from-home": "/assets/img/blog/assigned/7-ways-to-boost-focus-and-productivity-while-working-from-home.webp",

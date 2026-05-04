@@ -8,7 +8,7 @@ import { trackLeadMagnetView } from "@/lib/analytics";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 
 export default function FreeMealPlan() {
-  const leadMagnetImage = "/images/personal/food/meal-prep.jpg";
+  const leadMagnetImage = "/images/personal/food/meal-complete.jpg";
   const leadMagnetFallback = "/images/products/gumroad_thumbnail.png";
 
   useEffect(() => {

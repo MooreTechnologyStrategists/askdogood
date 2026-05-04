@@ -1,3 +1,4 @@
+// This file has been removed.
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';

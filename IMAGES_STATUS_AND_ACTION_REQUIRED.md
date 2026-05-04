@@ -59,29 +59,6 @@ https://askdogoodassets.blob.core.windows.net/images/apps/clinical-food-rx-hero.
 
 ---
 
-### 4. Chyna White Character Art ✅ CODE UPDATED
-**Location in code:** 
-- ShortStories.tsx - Character cover
-- ChinaWhiteSeries.tsx - Character gallery
-
-**Expected Azure paths:**
-```
-https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-cover.webp  (main)
-https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-1.webp      (Boss Mode)
-https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-2.webp      (Corporate)
-https://askdogoodassets.blob.core.windows.net/images/stories/chyna-white-3.webp      (optional)
-```
-
-**What you need:**
-- Generate AI art using prompts from CHYNA_WHITE_IMAGE_COMPLETE_GUIDE.md
-- OR use stock photos from guide
-- **Current fallback:** Beautiful animated placeholder with crown emoji (looks professional!)
-
-**Status:** You can launch with current placeholder - it looks great!
-
----
-
-### 5. "I Teach My Clients" Section Backgrounds ✅ ALREADY WORKING!
 **Location:** Home page - READ LABELS education section
 
 **Current images:**

@@ -24,7 +24,7 @@ const toolVisuals: Record<string, ToolVisual> = {
     alt: 'Packaged grocery products arranged on shelves for ingredient label review',
   },
   mealPrep: {
-    image: '/images/personal/food/meal-prep.jpg',
+    image: '/images/personal/food/meal-complete.jpg',
     alt: 'Prepared meal containers arranged for weekly meal prep',
   },
   clinicalRecipes: {

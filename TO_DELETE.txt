@@ -1,0 +1,8 @@
+client/src/pages/ChinaWhiteSeries.tsx
+client/src/pages/ChinaWhiteEpisode1.tsx
+client/src/pages/ShortStories.tsx
+CHYNA_WHITE_CHARACTER_ART.md
+CHYNA_WHITE_IMAGE_COMPLETE_GUIDE.md
+IMAGES_STATUS_AND_ACTION_REQUIRED.md
+SEO_IMPLEMENTATION.md
+client/src/lib/seo.ts

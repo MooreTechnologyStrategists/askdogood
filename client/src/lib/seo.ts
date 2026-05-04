@@ -492,35 +492,6 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "weekly",
   },
   {
-    path: "/stories",
-    title: "Stories and Serialized Fiction | Ask DoGood",
-    description:
-      "Read serialized fiction from Ask DoGood, led by Chyna White and built around sharp characters, modern tension, and premium storytelling.",
-    keywords: ["short stories", "serialized fiction", "Chyna White", "Ask DoGood stories"],
-    priority: 0.7,
-    changefreq: "weekly",
-  },
-  {
-    path: "/stories/chyna-white",
-    title: "Chyna White | Ask DoGood",
-    description:
-      "Enter the Chyna White story world and follow a fierce, high-pressure lead built for readers who want tension, style, and authority.",
-    keywords: ["Chyna White", "fiction series", "serialized fiction", "contemporary drama"],
-    type: "article",
-    priority: 0.7,
-    changefreq: "weekly",
-  },
-  {
-    path: "/stories/chyna-white/episode-1",
-    title: "Chyna White Episode 1 | Ask DoGood",
-    description:
-      "Read episode 1 of Chyna White and step into a sharp opening chapter filled with boardroom tension, old history, and a lead who does not shrink.",
-    keywords: ["Chyna White episode 1", "fiction episode", "serialized fiction", "Ask DoGood fiction"],
-    type: "article",
-    priority: 0.65,
-    changefreq: "monthly",
-  },
-  {
     path: "/login",
     title: "Log In | Ask DoGood",
     description: "Log in to your Ask DoGood account.",
