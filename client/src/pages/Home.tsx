@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import Hero from "@/components/site/Hero";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -53,8 +54,11 @@ const founderGallery = [
     alt: "RoSee Murphy portrait for Ask DoGood wellness brand",
     title: "Founder portrait",
     detail: "This is the visual anchor for AskDoGood. It links the mission to a real person with lived health and rebuilding experience.",
+    label: "Founder",
+    context: "Founder portrait context.",
+    caption: "RoSee Murphy, founder of AskDoGood."
   },
-  // Add more images as needed
+  // Add more images as needed, ensure label, context, caption are present
 ];
 const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
@@ -236,6 +240,11 @@ const FeatureCard = ({ icon, title, description, content, href }: FeatureCardPro
 
 // Main Component
 export default function Home() {
+  // Hero image and text
+  const heroImage = "/images/personal/hero-main.jpg";
+  const heroTitle = "Rebuild Your Health. Reclaim Your Life.";
+  const heroSubtitle =
+    "Real food, real structure, and real support for thyroid, hormone, and holistic healing. Start your journey with AskDoGood.";
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -428,6 +437,7 @@ export default function Home() {
         "Open the AskDoGood digital library to browse flipbooks like Indian Creek Trail and Keep Moving without hunting through the footer.",
       href: "/keep-moving",
     },
+  ];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
@@ -487,6 +497,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* HERO SECTION */}
+      <Hero
+        image={heroImage}
+        title={heroTitle}
+        subtitle={heroSubtitle}
+        align="center"
+      />
       {/* SALES FOCUS SECTION - Thyroid Health Mastery */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8 p-8 rounded-3xl border border-primary/20 bg-white/90 shadow-2xl">
@@ -900,8 +917,8 @@ export default function Home() {
                     openSpotlight({
                       src: item.src,
                       alt: item.alt,
-                      title: item.label,
-                      detail: item.context,
+                      title: item.title,
+                      detail: item.detail,
                     })
                   }
                 >
@@ -916,7 +933,7 @@ export default function Home() {
                       onError={(e) => handleImageError(e, founderPhotoSecondary)}
                     />
                     <div className="absolute left-4 top-4">
-                      <Badge className="rounded-full bg-black/45 text-white border border-white/30">{item.label}</Badge>
+                      <Badge className="rounded-full bg-black/45 text-white border border-white/30">{item.title}</Badge>
                     </div>
                   </div>
                   <CardContent className="p-5">
