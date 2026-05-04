@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, GraduationCap, Shield, Heart, Rocket } from "lucide-react";
+import PersistentCTABanner from '../components/PersistentCTABanner';
 
 export default function Journey() {
   const phases = [
@@ -176,7 +177,9 @@ export default function Journey() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <PersistentCTABanner />
+      <div className="min-h-screen">
       <SEO
         title="My Journey"
         description="A structured look at RoSee Murphy's path across technology, military service, health advocacy, teaching, and the growth of AskDoGood."
@@ -582,5 +585,7 @@ export default function Journey() {
         </div>
       </section>
     </div>
+      </div>
+    </>
   );
 }

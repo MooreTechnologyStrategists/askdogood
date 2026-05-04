@@ -8,10 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ShieldCheck, CheckCircle2, ExternalLink } from "lucide-react";
+import PersistentCTABanner from '../components/PersistentCTABanner';
 
 export default function NoFluff() {
   return (
-    <div className="min-h-screen">
+    <>
+      <PersistentCTABanner />
+      <div className="min-h-screen">
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background">
         <div className="container py-16 md:py-24">
@@ -282,5 +285,7 @@ export default function NoFluff() {
         </div>
       </section>
     </div>
+      </div>
+    </>
   );
 }

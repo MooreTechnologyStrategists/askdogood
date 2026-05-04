@@ -16,13 +16,16 @@ import {
 } from "lucide-react";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import PromoBanner from '../components/PromoBanner';
+import PersistentCTABanner from '../components/PersistentCTABanner';
 
 const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-1.jpg";
 const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-2.jpg";
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-background">
+    <>
+      <PersistentCTABanner />
+      <main className="min-h-screen bg-background">
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
@@ -332,5 +335,7 @@ export default function About() {
       </section>
       <PromoBanner />
     </main>
+      </main>
+    </>
   );
 }

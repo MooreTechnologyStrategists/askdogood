@@ -52,7 +52,7 @@ function CatalogAction({ item }: { item: CatalogItem }) {
     return (
       <a href={item.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
         <Button className="w-full gap-2">
-          {item.kind === "lead-magnet" ? "Download" : "Open checkout"}
+          {item.kind === "lead-magnet" ? "Download" : "Buy & Download Now"}
           <ExternalLink className="h-4 w-4" />
         </Button>
       </a>
@@ -165,7 +165,7 @@ export default function Shop() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href={readyNow[0].checkoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2">
-                    Shop ready-now offers
+                    Buy & Download Now
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </a>

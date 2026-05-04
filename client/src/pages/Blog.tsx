@@ -18,6 +18,7 @@ import { safeBlogPosts } from "@/content/blogData";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import { blogImages } from "@/data/blogImages";
 import PromoBanner from '../components/PromoBanner';
+import PersistentCTABanner from '../components/PersistentCTABanner';
 import RecommendedReads from '../components/RecommendedReads';
 
 const BLOG_ICON_URL =
@@ -105,7 +106,9 @@ export default function Blog() {
   }, [posts, query, activeTag]);
 
   return (
-    <main className="min-h-screen bg-background">
+    <>
+      <PersistentCTABanner />
+      <main className="min-h-screen bg-background">
       {/* HERO / INTRO */}
       <section className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
@@ -381,5 +384,7 @@ export default function Blog() {
       <PromoBanner />
       <RecommendedReads count={3} />
     </main>
+      </main>
+    </>
   );
 }
