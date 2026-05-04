@@ -524,7 +524,7 @@ export default function Home() {
           </ul>
           <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer">
             <Button className="rounded-3xl px-10 py-7 text-2xl font-extrabold bg-primary text-white shadow-xl hover:bg-primary/90">
-              Enroll Now – {quickCashOffer.priceLabel}
+              Download Now – {quickCashOffer.priceLabel}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </a>
