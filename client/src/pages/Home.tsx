@@ -416,21 +416,16 @@ export default function Home() {
         "Open the AskDoGood digital library to browse flipbooks like Indian Creek Trail and Keep Moving without hunting through the footer.",
       href: "/keep-moving",
     },
-    {
-      icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
-      title: "Work With AskDoGood",
-      description: "Programs, workshops, and strategic collaboration.",
-      content:
-        "A partner-ready offer for community centers, churches, schools, government programs, and wellness organizations.",
-      href: "/work-with-askdogood",
-      title: "Work With AskDoGood",
-      description: "Programs, workshops, and strategic collaboration.",
-      content:
-        "A partner-ready offer for community centers, churches, schools, government programs, and wellness organizations.",
-      href: "/work-with-askdogood",
-    },
-  ];
-
+    const services = [
+  {
+    icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
+    title: "Meal Prep & Wellness",
+    description:
+      "Healthy meal prep, juices, and custom wellness plans designed for real life.",
+    href: "/meal-prep",
+  },
+  // other items...
+];
   const featuredNatureWalk = featuredWalkResource;
   const dersPillars = [
     {
