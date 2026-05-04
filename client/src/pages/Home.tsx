@@ -524,12 +524,12 @@ export default function Home() {
           </ul>
           <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer">
             <Button className="rounded-3xl px-10 py-7 text-2xl font-extrabold bg-primary text-white shadow-xl hover:bg-primary/90">
-              Download Now – {quickCashOffer.priceLabel}
+              Purchase & Download – {quickCashOffer.priceLabel}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </a>
           <p className="text-base text-muted-foreground mt-4">
-            Immediate access after checkout. 100% satisfaction guarantee.
+            Purchase required. Immediate download after checkout. 100% satisfaction guarantee.
           </p>
         </div>
       </section>
