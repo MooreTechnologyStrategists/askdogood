@@ -335,7 +335,6 @@ export default function About() {
       </section>
       <PromoBanner />
     </main>
-      </main>
     </>
   );
 }
