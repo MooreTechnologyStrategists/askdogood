@@ -1,20 +1,22 @@
+// Canonical Gumroad storefront — all product URLs must use this base.
+// Do NOT use roseecraft.gumroad.com; that account is inactive for AskDoGood products.
 const GUMROAD_STOREFRONT = "https://askdogood.gumroad.com";
 
 const gumroadProductUrl = (slug: string) => `${GUMROAD_STOREFRONT}/l/${slug}`;
 
 export const GUMROAD_SLUGS = {
-  thyroidMastery: "thyroid-health-mastery",
-  plantReset: "21-day-plant-based-reset",
-  mealPlan: "30-day-meal-plan",
-  mealPrepDeposit: "meal-prep-deposit",
-  symptomTracker: "thyroid-symptom-tracker",
-  labGuide: "thyroid-lab-guide",
-  supplementTemplates: "thyroid-supplement-templates",
-  gardenBundle: "garden-to-table-bundle",
-  autoimmuneGuide: "autoimmune-recovery-guide",
-  wellnessCircle: "wellness-circle",
-  thyroidChecklist: "thyroid-checklist",
-  blackWomensToolkit: "black-womens-health-advocacy-toolkit",
+  thyroidMastery: "thyroid-health-mastery",          // LIVE — flagship course ($97)
+  plantReset: "21-day-plant-based-reset",             // LIVE — plant-based reset ($47)
+  mealPlan: "30-day-meal-plan",                       // LIVE — 30-day meal plan ($29.99)
+  mealPrepDeposit: "meal-prep-deposit",               // UNPUBLISHED — booking deposit, publish when service is active
+  symptomTracker: "thyroid-symptom-tracker",          // LIVE — symptom tracker ($9.99)
+  labGuide: "thyroid-lab-guide",                      // LIVE — lab guide ($27)
+  supplementTemplates: "thyroid-supplement-templates",// LIVE — supplement templates ($17); slug may need rename before full push
+  gardenBundle: "garden-to-table-bundle",             // LIVE — garden bundle ($37)
+  autoimmuneGuide: "autoimmune-recovery-guide",       // LIVE — autoimmune guide ($27)
+  wellnessCircle: "wellness-circle",                  // LIVE — monthly membership ($27)
+  thyroidChecklist: "thyroid-checklist",              // LIVE — free lead magnet
+  blackWomensToolkit: "black-womens-health-advocacy-toolkit", // LIVE — advocacy toolkit ($27)
 } as const;
 
 export const GUMROAD_URLS = {

@@ -585,7 +585,6 @@ export default function Journey() {
         </div>
       </section>
     </div>
-      </div>
     </>
   );
 }
