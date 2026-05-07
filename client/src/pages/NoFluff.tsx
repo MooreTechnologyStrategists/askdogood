@@ -285,7 +285,6 @@ export default function NoFluff() {
         </div>
       </section>
     </div>
-      </div>
     </>
   );
 }

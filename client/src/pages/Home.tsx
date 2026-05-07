@@ -44,6 +44,7 @@ import { catalogById, hasLiveCheckout, homepageFeaturedProductIds } from "@/data
 import { featuredWalkResource, walkResources } from "@/content/walks";
 import PromoBanner from '../components/PromoBanner';
 import RecommendedReads from '../components/RecommendedReads';
+import GumroadHero from '../components/GumroadHero';
 
 // Constants
 // Fallbacks for missing image constants
@@ -504,6 +505,10 @@ export default function Home() {
         subtitle={heroSubtitle}
         align="center"
       />
+
+      {/* GUMROAD HERO — Three featured products + Beehiiv newsletter strip */}
+      <GumroadHero />
+
       {/* SALES FOCUS SECTION - Thyroid Health Mastery */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8 p-8 rounded-3xl border border-primary/20 bg-white/90 shadow-2xl">
