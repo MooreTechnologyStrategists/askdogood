@@ -503,31 +503,70 @@ export default function Home() {
         title={heroTitle}
         subtitle={heroSubtitle}
         align="center"
+        ctaPrimary={{ label: "Start Your Free Plan", href: "/free-meal-plan" }}
+        ctaSecondary={{ label: "Explore the Shop", href: "/shop" }}
       />
       {/* SALES FOCUS SECTION - Thyroid Health Mastery */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
-        <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8 p-8 rounded-3xl border border-primary/20 bg-white/90 shadow-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-serif text-primary mb-4">
-            Transform Your Thyroid Health
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            The Thyroid Health Mastery Course is your step-by-step system for reversing symptoms, regaining energy, and building lifelong habits that work in the real world.
-          </p>
-          <ul className="text-left text-lg text-foreground mx-auto max-w-xl mb-6 list-disc list-inside">
-            <li>✔️ Doctor-reviewed, evidence-based protocols</li>
-            <li>✔️ Meal plans, recipes, and shopping guides</li>
-            <li>✔️ Stress, sleep, and movement strategies</li>
-            <li>✔️ Lifetime access and community support</li>
-          </ul>
-          <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="rounded-3xl px-10 py-7 text-2xl font-extrabold bg-primary text-white shadow-xl hover:bg-primary/90">
-              Purchase & Download – {quickCashOffer.priceLabel}
-              <ArrowRight className="ml-3 h-6 w-6" />
-            </Button>
-          </a>
-          <p className="text-base text-muted-foreground mt-4">
-            Purchase required. Immediate download after checkout. 100% satisfaction guarantee.
-          </p>
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{ background: "linear-gradient(160deg, oklch(0.99 0.010 82) 0%, oklch(0.96 0.025 80) 100%)" }}>
+        {/* Decorative blobs */}
+        <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full blur-3xl" style={{ background: "oklch(0.33 0.13 138 / 0.07)" }} aria-hidden="true" />
+        <div className="absolute -bottom-20 -right-10 h-80 w-80 rounded-full blur-3xl" style={{ background: "oklch(0.57 0.15 45 / 0.08)" }} aria-hidden="true" />
+        <div className="relative z-10 container">
+          <div className="max-w-3xl mx-auto text-center">
+            {/* Badge */}
+            <span className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] mb-6"
+              style={{ background: "oklch(0.57 0.15 45 / 0.12)", color: "oklch(0.57 0.15 45)" }}>
+              ✦ Featured Course
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight font-serif mb-4"
+              style={{ color: "oklch(0.33 0.13 138)" }}>
+              Transform Your Thyroid Health
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+              The Thyroid Health Mastery Course is your step-by-step system for reversing symptoms, regaining energy, and building lifelong habits — built from real recovery, not theory.
+            </p>
+            <ul className="text-left text-base text-foreground mx-auto max-w-lg mb-8 space-y-2">
+              {[
+                "Doctor-reviewed, evidence-based protocols",
+                "Meal plans, recipes, and shopping guides",
+                "Stress, sleep, and movement strategies",
+                "Lifetime access and community support",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <span className="mt-0.5 shrink-0 h-5 w-5 rounded-full flex items-center justify-center text-xs font-bold"
+                    style={{ background: "oklch(0.33 0.13 138 / 0.12)", color: "oklch(0.33 0.13 138)" }}>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href={quickCashOffer.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  className="rounded-2xl px-8 py-6 text-lg font-extrabold shadow-xl transition-all hover:scale-[1.03]"
+                  style={{
+                    background: "oklch(0.33 0.13 138)",
+                    color: "oklch(0.98 0.012 82)",
+                    boxShadow: "0 6px 24px oklch(0.33 0.13 138 / 0.35)",
+                  }}
+                >
+                  Get Instant Access — {quickCashOffer.priceLabel}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <Link href="/free-thyroid-lab-guide">
+                <Button
+                  variant="outline"
+                  className="rounded-2xl px-8 py-6 text-lg font-semibold border-2"
+                  style={{ borderColor: "oklch(0.33 0.13 138 / 0.30)", color: "oklch(0.33 0.13 138)" }}
+                >
+                  Get Free Lab Guide First
+                </Button>
+              </Link>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              Immediate download after checkout. 30-day money-back guarantee.
+            </p>
+          </div>
         </div>
       </section>
 

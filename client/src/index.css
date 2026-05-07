@@ -42,46 +42,79 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  /* Brand palette tokens (direct access via Tailwind) */
+  --color-forest: var(--forest);
+  --color-terracotta: var(--terracotta);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+
   /* Custom font families */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 :root {
-  /* 2026 Premium Wellness — Sage + Champagne Gold (refined, elegant, culturally rich) */
-  --primary: oklch(0.36 0.12 160);           /* Rich sage-forest green — calm authority */
-  --primary-foreground: oklch(0.98 0.006 160);
-  --sidebar-primary: oklch(0.32 0.11 160);
-  --sidebar-primary-foreground: oklch(0.98 0.006 160);
-  --chart-1: oklch(0.56 0.13 160);           /* Medium sage */
-  --chart-2: oklch(0.36 0.12 160);           /* Deep sage */
-  --chart-3: oklch(0.24 0.09 160);           /* Very dark sage */
-  --chart-4: oklch(0.76 0.17 84);            /* Champagne gold */
-  --chart-5: oklch(0.60 0.14 84);            /* Deep gold */
-  --radius: 0.875rem;
-  --background: oklch(0.987 0.006 90);       /* Warm ivory — premium, never stark */
-  --foreground: oklch(0.13 0.012 260);       /* Rich near-black — maximum readability */
-  --card: oklch(0.998 0.004 88);             /* Slightly warm white card */
-  --card-foreground: oklch(0.13 0.012 260);
-  --popover: oklch(0.998 0.004 88);
-  --popover-foreground: oklch(0.13 0.012 260);
-  --secondary: oklch(0.93 0.022 162);        /* Light sage — fresh, airy */
-  --secondary-foreground: oklch(0.23 0.06 160);
-  --muted: oklch(0.95 0.014 160);            /* Soft sage wash */
-  --muted-foreground: oklch(0.47 0.018 240); /* Balanced warm gray body text */
-  --accent: oklch(0.76 0.17 84);             /* Champagne gold — luxury, cultural richness */
-  --accent-foreground: oklch(0.12 0.022 84);
-  --destructive: oklch(0.54 0.20 25);
+  /* ─────────────────────────────────────────────────────────────
+     AskDoGood 2026 — Warm, Professional, Trust-Inspiring Palette
+     Rooted in nature: forest greens, terracotta earth, warm cream
+     ───────────────────────────────────────────────────────────── */
+
+  /* Raw brand color anchors */
+  --forest:     oklch(0.33 0.13 138);   /* #2D5016 Deep forest green      */
+  --terracotta: oklch(0.57 0.15 45);    /* #C4652A Warm terracotta         */
+  --sage:       oklch(0.63 0.10 140);   /* #7BA05B Sage green              */
+  --cream:      oklch(0.98 0.012 82);   /* #FDF8F0 Warm ivory cream        */
+  --charcoal:   oklch(0.14 0.002 0);    /* #1C1C1C Deep charcoal           */
+  --warm-gray:  oklch(0.54 0.025 58);   /* #8B7B6B Warm stone gray         */
+
+  /* ── Semantic roles ── */
+  --primary:            oklch(0.33 0.13 138);   /* Forest green — authority, healing */
+  --primary-foreground: oklch(0.98 0.012 82);   /* Cream on green                    */
+
+  --secondary:            oklch(0.94 0.035 50);  /* Soft terracotta wash — warmth    */
+  --secondary-foreground: oklch(0.40 0.10 45);   /* Rich terracotta text              */
+
+  --muted:            oklch(0.95 0.014 85);      /* Warm ivory muted bg               */
+  --muted-foreground: oklch(0.52 0.025 58);      /* Warm stone gray body copy         */
+
+  --accent:            oklch(0.95 0.020 100);    /* Golden cream hover bg             */
+  --accent-foreground: oklch(0.33 0.13 138);     /* Forest text on cream hover        */
+
+  --background:      oklch(0.99 0.010 82);       /* Warm cream — never stark white    */
+  --foreground:      oklch(0.14 0.002 0);        /* Deep charcoal — max readability   */
+
+  --card:            oklch(1.00 0.005 82);       /* Pure warm white card              */
+  --card-foreground: oklch(0.14 0.002 0);
+
+  --popover:            oklch(1.00 0.005 82);
+  --popover-foreground: oklch(0.14 0.002 0);
+
+  --destructive:            oklch(0.54 0.20 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.89 0.016 160);           /* Refined sage border */
-  --input: oklch(0.89 0.016 160);
-  --ring: oklch(0.36 0.12 160);
-  --sidebar: oklch(0.975 0.006 90);
-  --sidebar-foreground: oklch(0.13 0.012 260);
-  --sidebar-accent: oklch(0.93 0.022 162);
-  --sidebar-accent-foreground: oklch(0.23 0.06 160);
-  --sidebar-border: oklch(0.89 0.016 160);
-  --sidebar-ring: oklch(0.36 0.12 160);
+
+  --border: oklch(0.90 0.018 80);               /* Warm sand border                  */
+  --input:  oklch(0.90 0.018 80);
+  --ring:   oklch(0.33 0.13 138);               /* Forest ring focus                 */
+
+  --radius: 0.875rem;
+
+  /* ── Charts ── */
+  --chart-1: oklch(0.33 0.13 138);   /* Forest green          */
+  --chart-2: oklch(0.57 0.15 45);    /* Terracotta            */
+  --chart-3: oklch(0.63 0.10 140);   /* Sage green            */
+  --chart-4: oklch(0.75 0.14 85);    /* Warm gold             */
+  --chart-5: oklch(0.52 0.025 58);   /* Warm gray             */
+
+  /* ── Sidebar ── */
+  --sidebar:                    oklch(0.97 0.010 82);
+  --sidebar-foreground:         oklch(0.14 0.002 0);
+  --sidebar-primary:            oklch(0.33 0.13 138);
+  --sidebar-primary-foreground: oklch(0.98 0.012 82);
+  --sidebar-accent:             oklch(0.95 0.020 100);
+  --sidebar-accent-foreground:  oklch(0.33 0.13 138);
+  --sidebar-border:             oklch(0.90 0.018 80);
+  --sidebar-ring:               oklch(0.33 0.13 138);
 }
 
 /* Utility for Playfair Display font */
@@ -108,14 +141,44 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
     font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+  }
+
+  /* Improved link styles */
+  a {
+    transition: color 0.15s ease;
+  }
+
+  /* Better paragraph spacing in prose contexts */
+  p {
+    line-height: 1.80;
+  }
+
+  /* Remove default list styles for nav */
+  nav ul, nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   button:not(:disabled),
@@ -129,17 +192,54 @@
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+
+  /* Accessible focus ring using brand colors */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 @layer components {
-  /* Modern button styles with trendy rounded corners */
+  /* Refined button styles */
   button, .btn {
-    @apply rounded-2xl transition-all duration-300;
+    @apply rounded-2xl transition-all duration-200;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
-  /* Card styles with enhanced rounded corners */
+  /* Card styles with warm shadows */
   [class*="card"], .card {
     @apply rounded-3xl;
+    box-shadow: 0 1px 3px oklch(0.14 0.002 0 / 0.06), 0 4px 12px oklch(0.14 0.002 0 / 0.04);
+  }
+
+  /* Primary CTA button variant */
+  .btn-primary-cta {
+    background: linear-gradient(135deg, var(--primary) 0%, oklch(0.40 0.14 138) 100%);
+    color: var(--primary-foreground);
+    box-shadow: 0 4px 14px oklch(0.33 0.13 138 / 0.35);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+  .btn-primary-cta:hover {
+    box-shadow: 0 6px 20px oklch(0.33 0.13 138 / 0.45);
+    transform: translateY(-1px);
+  }
+
+  /* Terracotta accent button */
+  .btn-terracotta {
+    background: linear-gradient(135deg, var(--terracotta) 0%, oklch(0.48 0.14 42) 100%);
+    color: oklch(0.98 0.012 82);
+    box-shadow: 0 4px 14px oklch(0.57 0.15 45 / 0.30);
+  }
+
+  /* Section separator */
+  .section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 0;
   }
 
   .container {
@@ -191,19 +291,25 @@
   }
 }
 
-/* Playful Cartoonish Animations & Effects */
+/* AskDoGood Brand Animation Library */
 @layer utilities {
   /* Floating animation for badges and decorative elements */
   @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
+    50% { transform: translateY(-12px) rotate(1deg); }
   }
   
   @keyframes float-slow {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
   }
   
+  /* Gentle pulse for CTAs */
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+
   /* Wiggle animation for playful hover effects */
   @keyframes wiggle {
     0%, 100% { transform: rotate(-3deg); }
@@ -218,10 +324,16 @@
     75% { transform: translateY(-5px); }
   }
   
-  /* Pulse glow effect */
+  /* Forest green glow pulse */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3); }
-    50% { box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.6); }
+    0%, 100% { box-shadow: 0 0 20px oklch(0.33 0.13 138 / 0.25); }
+    50% { box-shadow: 0 0 32px oklch(0.33 0.13 138 / 0.50); }
+  }
+
+  /* Terracotta glow for secondary CTAs */
+  @keyframes pulse-terracotta {
+    0%, 100% { box-shadow: 0 0 20px oklch(0.57 0.15 45 / 0.25); }
+    50% { box-shadow: 0 0 32px oklch(0.57 0.15 45 / 0.45); }
   }
   
   /* Shake animation for attention */
@@ -233,18 +345,28 @@
   
   /* Pop-in animation */
   @keyframes pop-in {
-    0% { transform: scale(0.8); opacity: 0; }
-    50% { transform: scale(1.05); }
+    0% { transform: scale(0.85); opacity: 0; }
+    55% { transform: scale(1.04); }
     100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Slide up fade in */
+  @keyframes slide-up-fade {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
   
   /* Utility classes */
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 3.5s ease-in-out infinite;
   }
   
   .animate-float-slow {
-    animation: float-slow 4s ease-in-out infinite;
+    animation: float-slow 5s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2.5s ease-in-out infinite;
   }
   
   .animate-wiggle {
@@ -256,7 +378,11 @@
   }
   
   .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 2.5s ease-in-out infinite;
+  }
+
+  .animate-pulse-terracotta {
+    animation: pulse-terracotta 2.5s ease-in-out infinite;
   }
   
   .animate-shake {
@@ -265,6 +391,10 @@
   
   .animate-pop-in {
     animation: pop-in 0.4s ease-out;
+  }
+
+  .animate-slide-up-fade {
+    animation: slide-up-fade 0.5s ease-out;
   }
   
   /* Hover animations */
@@ -280,45 +410,91 @@
     animation: float 1s ease-in-out;
   }
   
-  /* Cartoon-style shadows */
+  /* Warm brand shadows */
+  .shadow-warm {
+    box-shadow: 0 4px 14px oklch(0.33 0.13 138 / 0.12), 0 1px 3px oklch(0.14 0.002 0 / 0.08);
+  }
+
+  .shadow-warm-lg {
+    box-shadow: 0 8px 28px oklch(0.33 0.13 138 / 0.16), 0 2px 6px oklch(0.14 0.002 0 / 0.08);
+  }
+
+  .shadow-terracotta {
+    box-shadow: 0 4px 14px oklch(0.57 0.15 45 / 0.28);
+  }
+
+  /* Legacy cartoon-style shadows (kept for compat) */
   .shadow-cartoon {
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 0px oklch(0.14 0.002 0 / 0.14);
   }
   
   .shadow-cartoon-lg {
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 0px oklch(0.14 0.002 0 / 0.14);
   }
-  
+
   .shadow-cartoon-primary {
     box-shadow: 4px 4px 0px var(--primary);
   }
   
   /* Fun sticker-style badges */
   .sticker-badge {
-    transform: rotate(-5deg);
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(-4deg);
+    box-shadow: 3px 3px 0px oklch(0.14 0.002 0 / 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   
   .sticker-badge:hover {
-    transform: rotate(0deg) scale(1.1);
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.15);
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 5px 5px 0px oklch(0.14 0.002 0 / 0.14);
   }
   
-  /* Playful gradient backgrounds */
+  /* Brand gradient backgrounds */
+  .bg-gradient-forest {
+    background: linear-gradient(135deg, 
+      oklch(0.33 0.13 138) 0%, 
+      oklch(0.42 0.12 140) 100%);
+  }
+
+  .bg-gradient-terracotta {
+    background: linear-gradient(135deg, 
+      oklch(0.57 0.15 45) 0%, 
+      oklch(0.48 0.13 42) 100%);
+  }
+
+  .bg-gradient-cream {
+    background: linear-gradient(160deg, 
+      oklch(0.99 0.010 82) 0%, 
+      oklch(0.96 0.020 80) 100%);
+  }
+
+  /* Legacy gradient kept for compat */
   .bg-gradient-cartoon {
     background: linear-gradient(135deg, 
-      hsl(var(--primary)) 0%, 
-      hsl(var(--secondary)) 50%, 
-      hsl(var(--accent)) 100%);
+      oklch(0.33 0.13 138) 0%, 
+      oklch(0.94 0.035 50) 50%, 
+      oklch(0.57 0.15 45) 100%);
   }
   
   .bg-gradient-fun {
     background: radial-gradient(circle at 30% 50%, 
-      hsl(var(--primary) / 0.2) 0%, 
+      oklch(0.33 0.13 138 / 0.12) 0%, 
       transparent 50%),
       radial-gradient(circle at 70% 50%, 
-      hsl(var(--secondary) / 0.2) 0%, 
+      oklch(0.57 0.15 45 / 0.10) 0%, 
       transparent 50%);
   }
+
+  /* Text color utilities for brand colors */
+  .text-forest    { color: var(--forest); }
+  .text-terracotta { color: var(--terracotta); }
+  .text-sage      { color: var(--sage); }
+  .text-cream     { color: var(--cream); }
+  .text-charcoal  { color: var(--charcoal); }
+  .text-warm-gray { color: var(--warm-gray); }
+
+  /* Background utilities */
+  .bg-forest    { background-color: var(--forest); }
+  .bg-terracotta { background-color: var(--terracotta); }
+  .bg-sage      { background-color: var(--sage); }
+  .bg-cream     { background-color: var(--cream); }
 }
