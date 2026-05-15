@@ -255,7 +255,7 @@ export default function Home() {
       }));
   // Hero image and text
   // Use best available hero image (local or Azure)
-  const heroImage = "/assets/img/heroes/hero-home.webp";
+  const heroImage = "/assets/img/brand/rosee-hero.jpg";
   const heroTitle = "AskDoGood: Real Healing, Real Results";
   const heroSubtitle =
     "Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood.";
