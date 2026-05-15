@@ -240,11 +240,25 @@ const FeatureCard = ({ icon, title, description, content, href }: FeatureCardPro
 
 // Main Component
 export default function Home() {
+    // Blog highlights: show 3 most recent posts
+    const blogHighlights = safeBlogPosts
+      .slice()
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3)
+      .map((post) => ({
+        title: post.title,
+        excerpt: post.excerpt,
+        slug: post.id,
+        image: blogImages[post.id] || post.image || FALLBACK_IMAGE,
+        category: post.category || post.tags[0] || "Journal",
+        readTime: post.readTime,
+      }));
   // Hero image and text
-  const heroImage = "/images/personal/hero-main.jpg";
-  const heroTitle = "Rebuild Your Health. Reclaim Your Life.";
+  // Use best available hero image (local or Azure)
+  const heroImage = "/assets/img/heroes/hero-home.webp";
+  const heroTitle = "AskDoGood: Real Healing, Real Results";
   const heroSubtitle =
-    "Real food, real structure, and real support for thyroid, hormone, and holistic healing. Start your journey with AskDoGood.";
+    "Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood.";
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -411,30 +425,30 @@ export default function Home() {
     {
       icon: <HeartPulse className="h-5 w-5 text-primary" />,
       title: "The AskDoGood Framework",
-      description: "Five pillars working together in one system.",
+      description: "Five pillars, one holistic system.",
       content:
-        "Health, routines, mindset, income, and environment are treated as connected problems instead of separate topics.",
+        "We connect health, mindset, income, and environment for real, sustainable results. No more isolated fixes—just real structure and support.",
     },
     {
       icon: <UtensilsCrossed className="h-5 w-5 text-primary" />,
       title: "Meal Prep Concierge",
-      description: "DMV-friendly orders, menus, and healing meal support.",
-      content: "Book sample Monday-Friday menus, choose pickup or delivery, and move straight into a Gumroad-backed offer.",
+      description: "Personalized, healing meal plans.",
+      content: "Order custom menus, get nutrition guidance, and enjoy easy pickup or delivery. Designed for your health journey.",
       href: "/meal-prep",
     },
     {
       icon: <Zap className="h-5 w-5 text-primary" />,
       title: "Label Scanner App",
-      description: "Make smarter shopping decisions in seconds.",
-      content: "A more competitive wellness tool experience for visitors who want practical help, not fluff.",
+      description: "Shop smarter, live better.",
+      content: "Scan food labels and get instant, evidence-based feedback. Make every grocery trip a win for your health.",
       href: "/label-scanner",
     },
     {
       icon: <BookOpen className="h-5 w-5 text-primary" />,
       title: "Digital Library & Flipbooks",
-      description: "Visual guides that are already live on the site.",
+      description: "Explore our visual wellness guides.",
       content:
-        "Open the AskDoGood digital library to browse flipbooks like Indian Creek Trail and Keep Moving without hunting through the footer.",
+        "Browse AskDoGood flipbooks—like 'Keep Moving' and 'Indian Creek Trail'—for practical, inspiring health strategies.",
       href: "/keep-moving",
     },
   ];
@@ -497,6 +511,52 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* MISSION STATEMENT SECTION */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/5 to-white text-center">
+        <div className="container max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold font-serif text-primary mb-4">Our Mission</h1>
+          <p className="text-lg md:text-2xl text-muted-foreground mb-6">
+            AskDoGood exists to help people build wholesome lives and pay that healing forward to their communities. We close the missing gaps that keep people stuck: health literacy, food discipline, vice interruption, employment stability, and everyday structure.
+          </p>
+        </div>
+      </section>
+
+      {/* FEATURED PRODUCTS & SERVICES SECTION */}
+      <section className="py-12 md:py-20 bg-white border-b border-primary/10">
+        <div className="container max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8 text-center">Featured Products & Services</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature) => (
+              <FeatureCard key={feature.title} {...feature} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BLOG HIGHLIGHTS SECTION */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-accent/10">
+        <div className="container max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8 text-center">From the Blog</h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {blogHighlights.map((post) => (
+              <BlogCard
+                key={post.slug}
+                title={post.title}
+                description={post.excerpt}
+                category={post.category}
+                readTime={post.readTime}
+                slug={post.slug}
+                imagePath={post.image}
+              />
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link href="/blog">
+              <Button className="rounded-full px-7 py-3 font-bold">Read All Blog Posts</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* HERO SECTION */}
       <Hero
         image={heroImage}
@@ -548,10 +608,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="rounded-[1.6rem] border border-primary/20 bg-[linear-gradient(160deg,rgba(14,49,33,0.95),rgba(26,99,66,0.92))] p-6 text-white shadow-xl">
-                <p className="text-xs uppercase tracking-[0.24em] text-white/75">Founder standard</p>
+                <p className="text-xs uppercase tracking-[0.24em] text-white/75">Founder Standard</p>
                 <p className="mt-3 text-2xl font-bold leading-tight font-serif">Eat to live. Never live to eat.</p>
                 <p className="mt-3 text-sm leading-7 text-white/85">
-                  Discipline is not punishment. It is the bridge between intention and a life your body can actually sustain.
+                  Discipline is not punishment. It’s the bridge between your intention and a life your body can sustain. AskDoGood is about real change, not quick fixes.
                 </p>
                 <p className="mt-3 text-xs text-white/60 italic">
                   Inspired by <em>How to Eat to Live</em> by Elijah Muhammad
@@ -590,76 +650,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FLIPBOOK / DIGITAL LIBRARY SECTION */}
       <section className="py-16 md:py-20 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.18),_transparent_32%),linear-gradient(180deg,_rgba(244,250,246,1)_0%,_rgba(255,255,255,1)_100%)]">
         <div className="container">
           <div className="mx-auto max-w-6xl overflow-hidden rounded-[2.25rem] border border-primary/15 bg-white shadow-[0_24px_80px_rgba(22,45,33,0.08)]">
             <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
-              <div className="relative p-8 md:p-10 lg:p-12">
-                <div className="absolute inset-y-0 right-0 hidden w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent lg:block" aria-hidden="true" />
-                <span className="inline-flex rounded-full border border-primary/20 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
-                  Nature Remedy
+              {/* Flipbook/Digital Library Section - Visual and Text */}
+              <div className="relative p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+                <span className="inline-flex rounded-full border border-primary/20 bg-primary/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-4">
+                  Digital Library
                 </span>
-                <h2 className="mt-5 max-w-3xl text-3xl font-bold leading-tight text-foreground md:text-5xl font-serif">
-                  DoGood&apos;s Nature Remedy to Lower Cortisol
-                </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-                  Movement, breath, food, awareness... this is where we begin lowering stress at the root instead of reacting to it. I don&apos;t believe in cutting doctors out, we need them, but we need a different relationship. One where you come informed, aware, and ready to have real conversations about your health. Nobody will care about your body more than you. In a world that&apos;s changing fast, we have to learn how to take care of ourselves beyond systems that may not always be there. AskDoGood is built on self-awareness, early adjustments, and real healing, not masking symptoms. Doctors can be wrong, they&apos;re human, and that&apos;s why your voice matters. I believe healing starts and ends with nature. If access changed tomorrow, what would you rely on? This is about building real health, better habits, and generational change.
+                <h2 className="text-3xl md:text-5xl font-bold font-serif text-foreground mb-4">Explore Our Flipbooks & Visual Guides</h2>
+                <p className="text-base md:text-lg text-muted-foreground mb-6">
+                  Dive into AskDoGood’s digital library for practical, visual guides on healing, movement, meal prep, and more. Each flipbook is crafted to inspire and empower your wellness journey.
                 </p>
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Regulate</p>
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Walking outdoors can interrupt stress loops and support lower cortisol patterns.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                  {/* Example flipbook cards - update with real data as needed */}
+                  <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/20 bg-white">
+                    <img src="/assets/img/blog/library/hero-black-woman-triumph.png" alt="Keep Moving Flipbook" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg mb-1">Keep Moving</h3>
+                      <p className="text-sm text-muted-foreground mb-2">A visual guide to movement, mobility, and healing routines for all levels.</p>
+                      <Link href="/keep-moving">
+                        <Button className="rounded-full px-5 py-2 text-sm font-semibold">Open Flipbook</Button>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Restore</p>
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Fresh air, steady pace, and visual quiet can help settle blood pressure and mental noise.</p>
-                  </div>
-                  <div className="rounded-3xl border border-border/70 bg-secondary/20 p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-primary/70">Reconnect</p>
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">Nature heightens awareness. That often opens the door to gratitude, prayer, and spiritual clarity.</p>
+                  <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/20 bg-white">
+                    <img src="/assets/img/blog/library/health-wellness.png" alt="Indian Creek Trail Flipbook" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg mb-1">Indian Creek Trail</h3>
+                      <p className="text-sm text-muted-foreground mb-2">Discover the healing power of nature with this step-by-step walking guide.</p>
+                      <Link href="/indian-creek-trail">
+                        <Button className="rounded-full px-5 py-2 text-sm font-semibold">Open Flipbook</Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Link href="/keep-moving">
-                    <Button className="rounded-3xl px-7 py-6 text-base font-bold shadow-lg">
-                      Explore the flipbooks
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <a href={featuredNatureWalk.href} className="inline-flex items-center justify-center rounded-3xl border-2 border-primary/25 px-7 py-6 text-base font-bold text-foreground transition-colors hover:bg-primary/5">
-                    Open {featuredNatureWalk.title}
-                  </a>
-                </div>
+                <Link href="/library">
+                  <Button variant="outline" className="rounded-full px-7 py-3 font-bold">Browse All Flipbooks</Button>
+                </Link>
               </div>
-
-              <div className="relative overflow-hidden bg-[linear-gradient(160deg,_rgba(12,43,29,0.96),_rgba(22,78,52,0.9))] p-8 md:p-10 lg:p-12 text-white">
-                <iframe
-                  src={featuredNatureWalk.href}
-                  title={`${featuredNatureWalk.title} background preview`}
-                  className="pointer-events-none absolute inset-0 h-full w-full scale-[1.04] opacity-50"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(160deg,_rgba(12,43,29,0.62),_rgba(22,78,52,0.56))]" aria-hidden="true" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.16),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.1),_transparent_34%)]" aria-hidden="true" />
-                <div className="relative z-10">
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">Featured walk</p>
-                  <h3 className="mt-4 text-3xl font-bold md:text-4xl">{featuredNatureWalk.title}</h3>
-                  <p className="mt-4 max-w-xl text-base leading-7 text-white/80">{featuredNatureWalk.description}</p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {featuredNatureWalk.stats.slice(0, 4).map((stat) => (
-                      <div key={stat.label} className="rounded-3xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
-                        <p className="text-xs uppercase tracking-[0.22em] text-white/65">{stat.label}</p>
-                        <p className="mt-2 text-2xl font-bold">{stat.value}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 rounded-[1.75rem] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
-                    <p className="text-sm uppercase tracking-[0.22em] text-white/60">Why it works</p>
-                    <p className="mt-3 text-base leading-7 text-white/85">
-                      {featuredNatureWalk.highlights[0]} {featuredNatureWalk.highlights[3]}
-                    </p>
-                  </div>
-                </div>
+              {/* Flipbook Section Visual - Brand/Founder Image */}
+              <div className="relative flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 p-8 md:p-10 lg:p-12">
+                <img src="/assets/img/brand/rosee-hero.jpg" alt="AskDoGood Founder" className="rounded-3xl shadow-2xl w-full max-w-md object-cover border-4 border-primary/20" />
               </div>
             </div>
           </div>
