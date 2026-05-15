@@ -50,7 +50,7 @@ import RecommendedReads from '../components/RecommendedReads';
 const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
 const founderGallery = [
   {
-    src: "/img/brand/rosee-hero.JPG"
+    src: "/img/brand/rosee-hero.JPG",
     alt: "RoSee Murphy portrait for Ask DoGood wellness brand",
     title: "Founder portrait",
     detail: "This is the visual anchor for Ask DoGood. It links the mission to a real person with lived health and rebuilding experience.",
