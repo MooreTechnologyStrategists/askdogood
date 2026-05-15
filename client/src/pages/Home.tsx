@@ -50,17 +50,17 @@ import RecommendedReads from '../components/RecommendedReads';
 const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
 const founderGallery = [
   {
-    src: "/images/personal/rosee-hero-1.jpg",
+    src: "/img/brand/rosee-hero.JPG"
     alt: "RoSee Murphy portrait for Ask DoGood wellness brand",
     title: "Founder portrait",
-    detail: "This is the visual anchor for AskDoGood. It links the mission to a real person with lived health and rebuilding experience.",
+    detail: "This is the visual anchor for Ask DoGood. It links the mission to a real person with lived health and rebuilding experience.",
     label: "Founder",
     context: "Founder portrait context.",
-    caption: "RoSee Murphy, founder of AskDoGood."
+    caption: "RoSee Murphy, founder of Ask DoGood."
   },
   // Add more images as needed, ensure label, context, caption are present
 ];
-const heroMainFallback = "/images/personal/rosee-hero-1.jpg";
+const heroMainFallback = "/img/brand/rosee-hero.JPG";
 const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
 const FALLBACK_IMAGE = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
 
