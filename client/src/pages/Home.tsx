@@ -980,6 +980,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AUTHENTIC LIFE & COMMUNITY REFLECTIONS SECTION */}
+      <section className="py-20 bg-gradient-to-b from-background to-primary/10">
+        <div className="container">
+          <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2">
+            {/* Speaking Bold Truths */}
+            <div className="flex flex-col justify-center">
+              <img src="/assets/img/brand/rosee-hero.jpg" alt="Speaking Bold Truths" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">The Importance of Speaking the Bold Truth</h2>
+              <p className="text-base text-muted-foreground mb-4">In a world that often rewards silence and conformity, I’ve learned the value of speaking up—even when it feels like the world is against me. Telling the truth, especially when it’s uncomfortable, is an act of courage and self-respect. My journey is about standing firm in my values, even when it’s lonely.</p>
+            </div>
+            {/* Protecting Our Children, Our Future, and Democracy */}
+            <div className="flex flex-col justify-center">
+              <img src="/assets/img/blog/library/hero-black-woman-triumph.png" alt="Protecting Our Children" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">Protecting Our Children, Our Future, and Democracy</h2>
+              <p className="text-base text-muted-foreground mb-4">Our children are our legacy. In these challenging times, it’s more important than ever to nurture, protect, and guide them. We must create safe spaces for them to grow, learn, and become leaders who value justice and community. The future of our democracy depends on the strength and unity of our families.</p>
+            </div>
+          </div>
+          <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 mt-16">
+            {/* Everyday Rituals */}
+            <div className="flex flex-col justify-center">
+              <img src="/images/personal/food/meal-complete.jpg" alt="Everyday Rituals" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">Rituals That Keep Me Grounded</h2>
+              <p className="text-base text-muted-foreground mb-4">Simple rituals can be powerful. I believe in the old saying, “An apple a day keeps the doctor away,” and I add, “An onion a day keeps everyone away!” These small acts of self-care and humor help me stay healthy and remind me to find joy in the everyday.</p>
+            </div>
+            {/* The UnMotherly Mother’s Day */}
+            <div className="flex flex-col justify-center">
+              <img src="/assets/img/brand/rosee-hero.jpg" alt="UnMotherly Mother's Day" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">The UnMotherly Mother’s Day: A Tribute</h2>
+              <p className="text-base text-muted-foreground mb-4">Mother’s Day isn’t always a celebration. For some, it’s a reminder of distance, longing, or unfulfilled relationships. I know the pain of wanting a closer bond with my children and grandchild, and the ache of seeing mothers who don’t embrace their role. This is a tribute to all who mother with love, even when it goes unseen or unreturned.</p>
+            </div>
+          </div>
+          <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 mt-16">
+            {/* Strengthening the Black Household */}
+            <div className="flex flex-col justify-center">
+              <img src="/assets/img/blog/library/health-wellness.png" alt="Strengthening the Black Household" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">Strengthening the Black Household</h2>
+              <p className="text-base text-muted-foreground mb-4">Too often, we’re told to push our children out before they’re ready. But our strength comes from togetherness—supporting each other through education, work, and life’s challenges. It’s time to embrace a new mindset: one that values community, resilience, and the power of staying connected.</p>
+            </div>
+            {/* Redefining Success */}
+            <div className="flex flex-col justify-center">
+              <img src="/images/personal/food/smoothie-green-goddess.jpg" alt="Redefining Success" className="rounded-2xl shadow-lg mb-6 w-full object-cover max-h-72" />
+              <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2 text-primary">Redefining Success</h2>
+              <p className="text-base text-muted-foreground mb-4">Many of us work hard, give back, and strive for more—yet it never feels like enough. Let’s shift our mindset: success isn’t just about what we achieve, but how we support each other and find meaning in our journey.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SHOP SECTION - Core Toolkit */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/5">
         <div className="container">
