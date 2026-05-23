@@ -384,5 +384,8 @@ export default function Blog() {
       <PromoBanner />
       <RecommendedReads count={3} />
     </main>
-  );
-}
+      </>
+    );
+  }
+
+
