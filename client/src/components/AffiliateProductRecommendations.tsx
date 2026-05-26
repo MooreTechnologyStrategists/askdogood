@@ -78,13 +78,25 @@ export default function AffiliateProductRecommendations() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map((product, index) => (
-            <Card key={index} className="flex flex-col hover:shadow-xl hover:shadow-primary/20 transition-all hover:-translate-y-2 hover-wiggle group">
-              <CardHeader className="pb-3">
-                <div className="aspect-square bg-secondary/50 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+            <Card key={index} className="flex flex-col hover:shadow-xl hover:shadow-primary/20 transition-all hover:-translate-y-2 hover-wiggle group relative overflow-hidden">
+              {/* Card background image for visual impact */}
+              <div
+                className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                style={{
+                  backgroundImage: `url(${product.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'blur(2px) saturate(1.2)',
+                }}
+                aria-hidden="true"
+              />
+              <CardHeader className="pb-3 z-10 relative">
+                <div className="aspect-square bg-secondary/60 rounded-lg mb-3 flex items-center justify-center overflow-hidden shadow-lg">
                   <img 
                     src={product.image} 
-                    alt={product.name}
+                    alt={`Product: ${product.name} - ${product.category}`}
                     className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                     onError={(e) => {
                       // Use Amazon logo as fallback for better brand consistency
                       e.currentTarget.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg';
@@ -109,9 +121,27 @@ export default function AffiliateProductRecommendations() {
                   {product.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="mt-auto pt-0">
+              <CardContent className="mt-auto pt-0 z-10 relative">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xl font-bold text-primary">{product.price}</span>
+                  {/* Share button for self-marketing */}
+                  <button
+                    className="ml-2 px-2 py-1 rounded bg-primary/10 text-primary text-xs font-semibold hover:bg-primary/20 transition"
+                    title="Share this product"
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: product.name,
+                          text: product.description,
+                          url: product.affiliateLink,
+                        });
+                      } else {
+                        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(product.name + ' ' + product.affiliateLink)}`);
+                      }
+                    }}
+                  >
+                    Share
+                  </button>
                 </div>
                 <a 
                   href={product.affiliateLink} 

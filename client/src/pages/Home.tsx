@@ -1,5 +1,14 @@
 import { Link } from "wouter";
 import Hero from "@/components/site/Hero";
+// useEffect and useState already imported below; remove duplicate import
+// Use dynamic import for Helmet to avoid build errors if react-helmet is missing
+let Helmet: any = null;
+try {
+  // @ts-ignore
+  Helmet = require("react-helmet").Helmet;
+} catch (e) {
+  Helmet = null;
+}
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +54,38 @@ import { featuredWalkResource, walkResources } from "@/content/walks";
 import PromoBanner from '../components/PromoBanner';
 import RecommendedReads from '../components/RecommendedReads';
 
-// Constants
+
+// SEO & Social Meta
+const SEO = () => (
+  Helmet ? (
+    <Helmet>
+      <title>AskDoGood: Real Healing, Real Results</title>
+      <meta name="description" content="Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood." />
+      <meta property="og:title" content="AskDoGood: Real Healing, Real Results" />
+      <meta property="og:description" content="Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood." />
+      <meta property="og:image" content="https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="AskDoGood: Real Healing, Real Results" />
+      <meta name="twitter:description" content="Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health." />
+      <meta name="twitter:image" content="https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png" />
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "AskDoGood",
+          "url": "https://askdogood.com",
+          "logo": "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png",
+          "sameAs": [
+            "https://www.instagram.com/askdogood/",
+            "https://www.facebook.com/askdogood/"
+          ]
+        }
+      `}</script>
+    </Helmet>
+  ) : null
+);
+
 // Fallbacks for missing image constants
 const founderPhotoSecondary = "/images/personal/rosee-hero-1.jpg";
 const founderGallery = [
@@ -53,7 +93,7 @@ const founderGallery = [
     src: "/img/brand/rosee-hero.JPG",
     alt: "RoSee Murphy portrait for Ask DoGood wellness brand",
     title: "Founder portrait",
-    detail: "This is the visual anchor for Ask DoGood. It links the mission to a real person with lived health and rebuilding experience.",
+    detail: "This is the visual anchor for AskDoGood. It links the mission to a real person with lived health and rebuilding experience.",
     label: "Founder",
     context: "Founder portrait context.",
     caption: "RoSee Murphy, founder of Ask DoGood."
@@ -511,6 +551,50 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEO />
+      {/* Above-the-fold: Hero, Tech/Trust Badges, CTA */}
+      <section className="relative bg-gradient-to-b from-primary/10 to-white pb-12 pt-10 md:pt-20">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 flex flex-col items-start justify-center text-left">
+            <h1 className="text-4xl md:text-6xl font-bold font-serif text-primary mb-4 drop-shadow-lg">
+              Real Healing, Real Results
+            </h1>
+            <p className="text-lg md:text-2xl text-muted-foreground mb-6 max-w-xl">
+              Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <a href="/free-meal-plan">
+                <Button className="rounded-full px-7 py-3 font-bold text-lg shadow-lg hover:scale-105 transition-transform bg-primary text-white">
+                  Start Free – Get a Meal Plan
+                </Button>
+              </a>
+              <a href="/shop">
+                <Button variant="outline" className="rounded-full px-7 py-3 font-bold text-lg border-2 border-primary/30">
+                  Explore Paid Tools
+                </Button>
+              </a>
+            </div>
+            {/* Tech/Credibility Badges */}
+            <div className="flex flex-wrap gap-3 items-center mt-2">
+              <img src="/assets/img/brand/azure-blob-logo.png" alt="Powered by Azure Blob Storage" className="h-8" />
+              <img src="/assets/img/brand/ai-badge.png" alt="AI-Powered" className="h-8" />
+              <img src="/assets/img/brand/analytics-badge.png" alt="Advanced Analytics" className="h-8" />
+              <img src="/assets/img/brand/news-badge.png" alt="Current Events Integrated" className="h-8" />
+              <span className="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold rounded-full text-xs">Trusted by 1,000+ Members</span>
+            </div>
+          </div>
+          <div className="flex-1 flex items-center justify-center">
+            <img
+              src="https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png"
+              alt="AskDoGood Hero: Mobility, Blood Pressure, Energy, Healing"
+              className="rounded-3xl shadow-2xl w-full max-w-md object-cover border-4 border-primary/20"
+              loading="eager"
+              width="480"
+              height="480"
+            />
+          </div>
+        </div>
+      </section>
       {/* MISSION STATEMENT SECTION */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-primary/5 to-white text-center">
         <div className="container max-w-3xl mx-auto">
@@ -557,13 +641,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* HERO SECTION */}
-      <Hero
-        image={heroImage}
-        title={heroTitle}
-        subtitle={heroSubtitle}
-        align="center"
-      />
+      {/* HERO SECTION (moved above-the-fold) */}
       {/* SALES FOCUS SECTION - Thyroid Health Mastery */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
         <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8 p-8 rounded-3xl border border-primary/20 bg-white/90 shadow-2xl">
