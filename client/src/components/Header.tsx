@@ -17,6 +17,7 @@ import {
   Scan,
   Heart,
   Leaf,
+  HeartHandshake,
 } from "lucide-react";
 
 export default function Header() {
@@ -34,6 +35,7 @@ export default function Header() {
     { href: "/stories", label: "Stories", icon: BookOpen },
     { href: "/resources", label: "Resources", icon: Library },
     { href: "/keep-moving", label: "Digital Library", icon: BookOpen },
+    { href: "/relationship-keeper", label: "Relationship Keeper", icon: HeartHandshake, highlight: true },
     { href: "/herbs", label: "Herbs", icon: Leaf },
     {
       label: "Health Apps",

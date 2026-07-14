@@ -138,6 +138,147 @@ If you need a reset, start with one DERS pillar this week. Then add the next one
     author: "RoSeÃ© Murphy",
   },
   {
+    id: "healthy-date-ideas-that-feel-like-care-not-homework",
+    title: "Healthy Date Ideas That Feel Like Care, Not Homework",
+    excerpt:
+      "A good date should feel warm, restorative, and a little memorable. These healthy date ideas keep the vibe adult, intentional, and actually doable.",
+    content: `Healthy date ideas work best when they feel like care, not a performance. The point is not to force wellness into something stiff. The point is to create time together that leaves both people feeling better than they did before.
+
+## Start with the energy you want
+
+If you want connection, choose a slower pace. If you want movement, choose a walk or active outing. If you want rest, choose a low-stimulation evening with good food and no phones.
+
+## Ideas that stay grown and practical
+
+- Sunrise or sunset walk
+- Healthy brunch spot
+- Farmers market and picnic
+- Cooking one new meal together
+- Botanical garden or trail date
+
+## A simple rule
+
+Pick one thing to explore, one thing to eat, and one thing to talk about. That keeps the date from feeling crowded.
+
+## Why this matters
+
+Intentional dates are not just entertainment. They are a way to build rhythm, trust, and shared memories without spending a lot of money or overcomplicating the evening.
+
+If you want more structure, The Relationship Keeper turns ideas like these into a repeatable private couple experience.
+`,
+    date: "2026-07-10",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1522093007474-d86e8a22f3cd?w=1200",
+    tags: ["Relationships", "Healthy Living", "Date Ideas"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
+    id: "how-to-build-a-weekly-relationship-check-in-ritual",
+    title: "How to Build a Weekly Relationship Check-In Ritual",
+    excerpt:
+      "A weekly check-in helps couples stay connected before small issues become bigger ones. Here is a simple rhythm you can repeat without turning it into therapy.",
+    content: `A weekly check-in is not about interrogating each other. It is about making time for honest conversation before the week disappears.
+
+## Keep it short enough to repeat
+
+You do not need an hour-long meeting. Fifteen to twenty minutes is enough if both people are present.
+
+## Questions worth keeping on repeat
+
+- How connected did we feel this week?
+- What made us laugh?
+- What felt difficult?
+- What do we need more of?
+- What should we plan next?
+
+## Add one rating scale
+
+Pick a few numbers from 1 to 10 for things like connection, fun, support, and stress. That makes patterns easier to notice over time.
+
+## Close with one action
+
+End each check-in by choosing one thing you will do before the next conversation. It could be a walking date, a better sleep routine, or a simple dinner out.
+
+The goal is not perfection. The goal is staying in rhythm with each other.
+`,
+    date: "2026-07-08",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200",
+    tags: ["Relationships", "Check-Ins", "Communication"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
+    id: "affordable-dmv-date-ideas-for-couples-who-want-more-than-dinner",
+    title: "Affordable DMV Date Ideas for Couples Who Want More Than Dinner",
+    excerpt:
+      "The DMV has no shortage of interesting, affordable ways to spend time together. These date ideas are low-pressure, local, and easy to repeat.",
+    content: `The DMV is full of options if you know how to look for them. You do not need to default to the same expensive dinner every time you want to see each other.
+
+## Try one of these regions
+
+- Washington, DC
+- Prince George's County
+- Montgomery County
+- Northern Virginia
+- Arlington or Alexandria
+- National Harbor
+- Annapolis
+- Baltimore
+
+## Low-budget wins
+
+- Free museum afternoon
+- Bookstore and coffee
+- Waterfront walk
+- Library event or author talk
+- Picnic and park stroll
+
+## Why local matters
+
+When couples use nearby places well, date night becomes more sustainable. That means more consistency and less stress around money.
+
+If your relationship needs a reset, start local and keep the pacing gentle.
+`,
+    date: "2026-07-05",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200",
+    tags: ["DMV", "Date Ideas", "Budget"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
+    id: "music-dates-bookstore-dates-and-slow-walk-dates-that-actually-work",
+    title: "Music Dates, Bookstore Dates, and Slow-Walk Dates That Actually Work",
+    excerpt:
+      "Not every good date needs a big budget or a complex plan. Some of the best dates are just well-chosen settings with room to talk, listen, and notice each other.",
+    content: `Some date ideas work because they give you a shared container. You are not trying to impress each other every second. You are simply creating space for the relationship to breathe.
+
+## Music dates
+
+Live jazz, a record store, a playlist swap, or a quiet listening night at home can all become meaningful if you are present enough to actually hear what the experience brings out.
+
+## Bookstore dates
+
+Bookstores are underrated because they create easy conversation. Each person can pick something that reflects their taste, then talk about why it caught their eye.
+
+## Slow-walk dates
+
+Walks are perfect when the goal is not entertainment but connection. A walk gives the conversation room to move at a human pace.
+
+## The takeaway
+
+Choose dates that let you observe each other. That is how ordinary time becomes a memory.
+`,
+    date: "2026-07-01",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200",
+    tags: ["Music", "Books", "Walking"],
+    featured: true,
+    author: "RoSeé Murphy",
+  },
+  {
     id: "pro-tips-for-giving-tuesday",
     title: "Pro Tips for Giving Tuesday",
     excerpt: "Giving Tuesday is a global movement that encourages people to give back to their communities...",

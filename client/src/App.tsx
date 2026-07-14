@@ -11,6 +11,7 @@ import BookTeaser from "./components/BookTeaser";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import RelationshipKeeper from "./pages/RelationshipKeeper";
 import Rewards from "./pages/Rewards";
 import Challenges from "./pages/Challenges";
 import MealPrep from "./pages/MealPrep";
@@ -101,6 +102,7 @@ function Router() {
 
     {/* Auth */}
     <Route path="/dashboard" component={Dashboard} />
+    <Route path="/relationship-keeper" component={RelationshipKeeper} />
     <Route path="/profile" component={Profile} />
     <Route path="/rewards" component={Rewards} />
     <Route path="/challenges" component={Challenges} />
