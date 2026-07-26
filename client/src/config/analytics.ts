@@ -1,6 +1,8 @@
 // Google Analytics Configuration
 
-export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-7K8N2DFHDP';
+export const GA_PLACEHOLDER_ID = 'G-XXXXXXXXXX';
+export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-B82FDY14ZX';
+export const DCT_GA_MEASUREMENT_ID = import.meta.env.VITE_DCT_GA_MEASUREMENT_ID || 'G-G05YSEYHFN';
 
 // Microsoft Clarity Configuration
 export const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_PROJECT_ID || 'clarity_placeholder';
@@ -51,6 +53,7 @@ export const GA_EVENTS = {
   COURSE_PURCHASE_INTENT: 'course_purchase_intent',
   SHOP_PAGE_VIEW: 'shop_page_view',
   PRODUCT_CLICK: 'product_click',
+  MERCH_CTA_CLICK: 'merch_cta_click',
   
   // Affiliate tracking
   AFFILIATE_CLICK: 'affiliate_click',

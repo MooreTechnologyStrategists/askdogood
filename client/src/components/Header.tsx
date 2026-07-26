@@ -22,6 +22,7 @@ import {
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const officialLogo = "/images/branding/the-dope-cloud-teacher-logo.png";
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -51,11 +52,19 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/88 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,45,30,0.08)]">
       <div className="container flex h-14 items-center justify-between">
         {/* LEFT: Logo / Brand */}
-        <Link href="/" className="flex items-center font-semibold cursor-pointer">
-          <span className="text-[0.95rem] font-semibold tracking-[0.08em] uppercase text-foreground">Ask DoGood</span>
+        <Link href="/" className="flex items-center gap-2 font-semibold cursor-pointer">
+          <img
+            src={officialLogo}
+            alt="The Dope Cloud Teacher official logo"
+            className="h-8 w-auto rounded-md object-contain"
+            loading="eager"
+            width="120"
+            height="32"
+          />
+          <span className="hidden md:inline text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-foreground">Ask DoGood</span>
         </Link>
 
         {/* CENTER: Nav (desktop) */}
@@ -64,7 +73,7 @@ export default function Header() {
             if (item.submenu) {
               return (
                 <div key={item.label} className="relative group">
-                  <button className={["flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent hover:text-accent-foreground hover:shadow-sm","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2","text-muted-foreground"].join(" ")}
+                  <button className={["flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent/70 hover:text-accent-foreground hover:shadow-sm","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2","text-muted-foreground"].join(" ")}
                   >
                     <item.icon className="h-3.5 w-3.5" />
                     {item.label}
@@ -75,7 +84,7 @@ export default function Header() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-all"
+                          className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:bg-accent/70 hover:text-accent-foreground rounded-md transition-all"
                         >
                           <sub.icon className="h-4 w-4" />
                           {sub.label}
@@ -92,7 +101,7 @@ export default function Header() {
                   <Link 
                   key={item.href} 
                   href={item.href}
-                  className={["flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent/50 hover:text-foreground","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",isActive? "text-primary font-semibold border-b-2 border-primary rounded-none pb-[6px]": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold rounded-md",].join(" ")}
+                  className={["flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent/60 hover:text-foreground","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",isActive? "bg-primary/10 text-primary font-semibold": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",].join(" ")}
                 >
                   <Icon className="h-3.5 w-3.5" />
                   {item.label}
@@ -110,7 +119,7 @@ export default function Header() {
             </Button>
           </Link>
           <Link href="/signup">
-            <Button size="sm" className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-4">
+            <Button size="sm" className="hidden md:flex font-semibold px-4 shadow-md hover:shadow-lg">
               Join Free
             </Button>
           </Link>

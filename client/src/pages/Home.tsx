@@ -53,6 +53,7 @@ import { catalogById, hasLiveCheckout, homepageFeaturedProductIds } from "@/data
 import { featuredWalkResource, walkResources } from "@/content/walks";
 import PromoBanner from '../components/PromoBanner';
 import RecommendedReads from '../components/RecommendedReads';
+import { merchProducts } from "@/data/merch-products";
 
 
 // SEO & Social Meta
@@ -75,7 +76,7 @@ const SEO = () => (
           "@type": "Organization",
           "name": "AskDoGood",
           "url": "https://askdogood.com",
-          "logo": "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png",
+          "logo": "https://askdogood.com/images/branding/the-dope-cloud-teacher-logo.png",
           "sameAs": [
             "https://www.instagram.com/askdogood/",
             "https://www.facebook.com/askdogood/"
@@ -101,8 +102,10 @@ const founderGallery = [
   // Add more images as needed, ensure label, context, caption are present
 ];
 const heroMainFallback = "/img/brand/rosee-hero.JPG";
-const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
+const ASSET_BASE_URL = "https://askdogoodassets.blob.core.windows.net/images";
 const FALLBACK_IMAGE = "https://askdogoodassets.blob.core.windows.net/images/hero/Mobility.%20Blood%20pressure.%20Energy.%20Healing.%20(4).png";
+const STORY_IMAGE = `${ASSET_BASE_URL}/personal/outdoor-photoshoot.webp`;
+const STORY_IMAGE_FALLBACK = `${ASSET_BASE_URL}/personal/rosee-story.webp`;
 
 // Utility function for image error handling
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, fallback?: string) => {
@@ -549,6 +552,37 @@ export default function Home() {
     },
   ];
 
+  const carePathways = [
+    {
+      title: "Start Free",
+      description: "Get a practical meal plan and begin with no cost.",
+      detail: "Best if you want immediate traction and a clear starting point.",
+      href: "/free-meal-plan",
+      cta: "Get the free plan",
+    },
+    {
+      title: "Get Personal Guidance",
+      description: "Work directly with AskDoGood for a customized approach.",
+      detail: "Best if you need accountability, structure, and direct support.",
+      href: "/coaching",
+      cta: "Explore coaching",
+    },
+    {
+      title: "Build Your Toolkit",
+      description: "Use curated products and resources to support daily habits.",
+      detail: "Best if you want self-paced tools for sustainable routines.",
+      href: "/resources/start",
+      cta: "See starter resources",
+    },
+  ];
+
+  const featuredMerchThisWeek = [
+    "tshirt-soft-life-discipline",
+    "tshirt-classroom-to-cloud",
+  ]
+    .map((id) => merchProducts.find((product) => product.id === id))
+    .filter((product): product is NonNullable<typeof product> => Boolean(product));
+
   return (
     <div className="min-h-screen">
       <SEO />
@@ -563,16 +597,16 @@ export default function Home() {
               Personalized wellness, meal prep, and holistic support for thyroid, hormone, and total health. Discover your path to lasting change with AskDoGood.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
-              <a href="/free-meal-plan">
+              <Link href="/free-meal-plan">
                 <Button className="rounded-full px-7 py-3 font-bold text-lg shadow-lg hover:scale-105 transition-transform bg-primary text-white">
                   Start Free – Get a Meal Plan
                 </Button>
-              </a>
-              <a href="/shop">
+              </Link>
+              <Link href="/shop">
                 <Button variant="outline" className="rounded-full px-7 py-3 font-bold text-lg border-2 border-primary/30">
                   Explore Paid Tools
                 </Button>
-              </a>
+              </Link>
             </div>
             {/* Tech/Credibility Badges */}
             <div className="flex flex-wrap gap-3 items-center mt-2">
@@ -595,6 +629,100 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-12 md:py-16 bg-gradient-to-b from-background to-primary/5 border-b border-primary/10">
+        <div className="container">
+          <div className="mx-auto max-w-6xl rounded-[2rem] border border-primary/15 bg-white/95 p-6 md:p-8 shadow-[0_20px_60px_rgba(20,45,30,0.08)]">
+            <div className="text-center mb-7">
+              <p className="text-xs uppercase tracking-[0.26em] text-primary/80 font-semibold">Get started quickly</p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold font-serif text-foreground">Choose your best next step in under 2 minutes</h2>
+              <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+                Better outcomes come from matching the right support to your stage. Pick one clear path and start today.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {carePathways.map((path) => (
+                <Card key={path.title} className="border-border/70 bg-background/90 shadow-sm hover:shadow-lg transition-all">
+                  <CardContent className="p-5">
+                    <h3 className="text-xl font-bold text-foreground">{path.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-7">{path.description}</p>
+                    <p className="mt-2 text-sm text-foreground/90 leading-7">{path.detail}</p>
+                    <div className="mt-4">
+                      <Link href={path.href}>
+                        <Button className="w-full rounded-full font-semibold">
+                          {path.cta}
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 md:p-5">
+              <p className="text-sm md:text-base text-foreground leading-7">
+                AskDoGood is educational wellness support, not crisis care. If you are in emotional distress or need urgent mental health help,
+                please call or text <strong>988</strong> in the U.S. for immediate support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED THIS WEEK - HERO MERCH */}
+      <section className="py-10 md:py-14 bg-white border-b border-primary/10">
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl rounded-3xl border border-primary/15 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6 md:p-8">
+            <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.24em] text-primary/80 font-semibold">Featured This Week</p>
+                <h2 className="mt-2 text-2xl md:text-3xl font-bold font-serif text-foreground">
+                  Two flagship drops. One clear launch focus.
+                </h2>
+                <p className="mt-2 text-sm md:text-base text-muted-foreground">
+                  AskDoGood + The Dope Cloud Teacher hero tees selected for the 7-day first-sale sprint.
+                </p>
+              </div>
+              <Link href="/merch">
+                <Button className="rounded-full px-6 py-3 font-semibold">
+                  Shop All Merch
+                </Button>
+              </Link>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {featuredMerchThisWeek.map((product) => (
+                <Card key={product.id} className="border-primary/15 bg-background/85">
+                  <CardContent className="p-5">
+                    <div className="flex items-center justify-between gap-3">
+                      <Badge variant="secondary" className="uppercase tracking-wide text-xs">
+                        {product.brand === "dct" ? "The Dope Cloud Teacher" : "AskDoGood"}
+                      </Badge>
+                      <Badge variant="outline" className="capitalize text-xs">
+                        {product.category}
+                      </Badge>
+                    </div>
+
+                    <h3 className="mt-3 text-xl font-bold">{product.name}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+
+                    <div className="mt-4 flex items-center justify-between">
+                      <div className="text-2xl font-bold text-foreground">${product.price}</div>
+                      <Link href="/merch">
+                        <Button variant="outline" className="rounded-full px-4">
+                          View Drop <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MISSION STATEMENT SECTION */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-primary/5 to-white text-center">
         <div className="container max-w-3xl mx-auto">
@@ -759,13 +887,13 @@ export default function Home() {
                     <div className="p-4">
                       <h3 className="font-bold text-lg mb-1">Indian Creek Trail</h3>
                       <p className="text-sm text-muted-foreground mb-2">Discover the healing power of nature with this step-by-step walking guide.</p>
-                      <Link href="/indian-creek-trail">
+                      <Link href="/resources/library">
                         <Button className="rounded-full px-5 py-2 text-sm font-semibold">Open Flipbook</Button>
                       </Link>
                     </div>
                   </div>
                 </div>
-                <Link href="/library">
+                <Link href="/resources/library">
                   <Button variant="outline" className="rounded-full px-7 py-3 font-bold">Browse All Flipbooks</Button>
                 </Link>
               </div>
@@ -1273,14 +1401,14 @@ export default function Home() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                   <img
-                    src={`${ASSET_BASE_URL}/personal/outdoor-photoshoot.webp`}
+                    src={STORY_IMAGE}
                     alt="Rosee Murphy - Thyroid Cancer Survivor & Wellness Advocate"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width="600"
                     height="450"
                     onError={(e) =>
-                      handleImageError(e, `${ASSET_BASE_URL}/personal/rosee-story.webp`)
+                      handleImageError(e, STORY_IMAGE_FALLBACK)
                     }
                   />
                 </div>

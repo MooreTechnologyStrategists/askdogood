@@ -13,17 +13,55 @@ import {
   BookOpen,
   ShoppingBag,
   UsersRound,
+  Flame,
+  Megaphone,
 } from "lucide-react";
 import { siteCopy, splitCopy } from "@/content/siteCopy";
 import PromoBanner from '../components/PromoBanner';
 import PersistentCTABanner from '../components/PersistentCTABanner';
+import SEO from "@/components/SEO";
+import { GA_EVENTS } from "@/config/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 const ABOUT_HERO_IMAGE = "/images/personal/rosee-hero-1.jpg";
 const ABOUT_STORY_IMAGE = "/images/personal/rosee-hero-2.jpg";
 
+const FLAGSHIP_DROPS = [
+  {
+    title: "DO GOOD.",
+    line: "Be the reason someone believes good people still exist.",
+    focus: "AskDoGood core uniform",
+    vibe: "Minimal, premium, timeless",
+  },
+  {
+    title: "THE NEXT 250 STARTS WITH US.",
+    line: "Choose love, learning, community, service, and innovation.",
+    focus: "Summer to year-round civic pride",
+    vibe: "DMV and Carolinas event-ready",
+  },
+  {
+    title: "PROTECT THE GIRLS.",
+    line: "Teach them. Believe them. Support them. Respect them. Protect them.",
+    focus: "Advocacy-led hero design",
+    vibe: "Movement energy, clear purpose",
+  },
+  {
+    title: "BUILD. DON'T SCROLL.",
+    line: "Cloud. AI. Security. Future.",
+    focus: "The Dope Cloud Teacher flagship",
+    vibe: "Tech-minimal, conference-ready",
+  },
+];
+
 export default function About() {
   return (
     <>
+      <SEO
+        title="About RoSeé Murphy | Ask DoGood"
+        description="Meet RoSeé Murphy, founder of Ask DoGood. Thyroid advocate, wellness coach, and community builder sharing lived recovery, resilience, and real-life healing."
+        keywords={['RoSeé Murphy', 'Ask DoGood founder', 'thyroid advocate', 'wellness coach', 'healing journey', 'Hashimoto\'s recovery']}
+        url="/about"
+      />
       <PersistentCTABanner />
       <main className="min-h-screen bg-background">
       {/* HERO */}
@@ -292,6 +330,87 @@ export default function About() {
               <p className="text-xs text-muted-foreground">
                 If you’re overwhelmed, start small. Consistency beats intensity — and yes, I’ll remind you again next week.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FLAGSHIP MERCH SECTION */}
+      <section className="py-14 md:py-20 border-y bg-gradient-to-br from-secondary/20 via-background to-primary/10">
+        <div className="container">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-2 text-sm font-medium">
+              <Flame className="h-4 w-4 text-primary" />
+              Summer Flagship Drops
+            </div>
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+              Merch with a mission, not random inventory
+            </h2>
+            <p className="mt-4 text-muted-foreground text-base md:text-lg">
+              These are the campaign-ready concepts selected to drive first sales fast across the DMV and the Carolinas,
+              while building long-term brand equity for AskDoGood and The Dope Cloud Teacher.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {FLAGSHIP_DROPS.map((drop) => (
+              <Card key={drop.title} className="border-primary/20 bg-background/80 backdrop-blur-sm">
+                <CardContent className="p-6 space-y-3">
+                  <h3 className="text-xl font-bold tracking-tight">{drop.title}</h3>
+                  <p className="text-sm text-muted-foreground">{drop.line}</p>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground">Focus:</span> {drop.focus}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground">Vibe:</span> {drop.vibe}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border bg-background/80 p-5 md:p-6">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-sm font-medium">
+                  <Megaphone className="h-4 w-4 text-primary" />
+                  7-Day Sales Sprint
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Launch one AskDoGood hero tee and one DCT hero tee first. Keep messaging tight, publish 10 short videos,
+                  and route every click to one checkout path.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/merch">
+                  <Button
+                    className="gap-2"
+                    onClick={() =>
+                      trackEvent(GA_EVENTS.MERCH_CTA_CLICK, {
+                        cta_location: "about_flagship_section",
+                        cta_type: "shop_merch",
+                      })
+                    }
+                  >
+                    Shop Merch <ShoppingBag className="h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    className="gap-2"
+                    onClick={() =>
+                      trackEvent(GA_EVENTS.MERCH_CTA_CLICK, {
+                        cta_location: "about_flagship_section",
+                        cta_type: "launch_planning",
+                      })
+                    }
+                  >
+                    Start Launch Planning <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

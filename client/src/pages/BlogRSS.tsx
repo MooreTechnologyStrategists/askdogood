@@ -102,7 +102,7 @@ function generateRSS(): string {
     <lastBuildDate>${now}</lastBuildDate>
     <ttl>60</ttl>
     <image>
-      <url>https://askdogoodassets.blob.core.windows.net/images/brand/logo-flower-circle.webp</url>
+      <url>https://askdogood.com/images/branding/the-dope-cloud-teacher-logo.png</url>
       <title>AskDoGood</title>
       <link>${baseUrl}</link>
     </image>

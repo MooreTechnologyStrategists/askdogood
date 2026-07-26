@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 import { Link } from "wouter";
 import { trackCoachingPageView, trackCoachingCTAClick } from "@/lib/analytics";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
@@ -423,6 +424,25 @@ export default function OneOnOneCoaching() {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Not Ready Yet — Email Capture */}
+      <section className="py-16 bg-background border-t">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-muted-foreground mb-6 text-lg">
+              Not ready to book yet? Get my free thyroid starter pack — symptom checklist, 3-day meal plan, and weekly tips delivered to your inbox.
+            </p>
+            <BeehiivSubscribe
+              variant="card"
+              title="Get Free Thyroid Resources First"
+              description="Weekly thyroid tips, meal ideas, and lab guides — no sales pressure, just support."
+              buttonText="Send Me the Free Resources"
+              source="coaching_page"
+              magnetType="thyroid-checklist-3day-plan"
+            />
           </div>
         </div>
       </section>

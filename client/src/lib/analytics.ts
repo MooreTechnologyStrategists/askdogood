@@ -1,4 +1,4 @@
-import { GA_MEASUREMENT_ID, GA_DEBUG, GA_EVENTS, CONVERSION_GOALS } from '@/config/analytics';
+import { GA_MEASUREMENT_ID, GA_PLACEHOLDER_ID, GA_DEBUG, GA_EVENTS, CONVERSION_GOALS } from '@/config/analytics';
 
 // Initialize Google Analytics
 declare global {
@@ -11,7 +11,7 @@ declare global {
 
 // Load Google Analytics script
 export function initGoogleAnalytics() {
-  if (typeof window === 'undefined' || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-7K8N2DFHDP') {
+  if (typeof window === 'undefined' || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === GA_PLACEHOLDER_ID) {
     if (GA_DEBUG) console.log('GA not initialized - missing or placeholder ID');
     return;
   }

@@ -4,7 +4,7 @@ export const SITE_AUTHOR = 'RoSeé Murphy';
 export const DEFAULT_DESCRIPTION =
   "AskDoGood helps people heal better, live smarter, and earn stronger through practical wellness, self-advocacy, and everyday stability.";
 export const DEFAULT_OG_IMAGE =
-  "https://askdogoodassets.blob.core.windows.net/images/AskDoGood_Logo_300x300.png";
+  "https://askdogood.com/images/branding/the-dope-cloud-teacher-logo.png";
 export const RSS_FEED_PATH = "/blog-rss.xml";
 export const TWITTER_HANDLE = "@askdogood";
 

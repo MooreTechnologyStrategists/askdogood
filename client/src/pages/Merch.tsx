@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Filter, ShoppingCart } from "lucide-react";
-import { merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
+import { hasValidCheckoutUrl, merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GUMROAD_URLS } from "@/config/gumroad";
+import { GA_EVENTS } from "@/config/analytics";
+import { trackEvent, trackProductClick } from "@/lib/analytics";
 
 export default function Merch() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -18,10 +20,30 @@ export default function Merch() {
       : merchProducts.filter((product) => product.category === selectedCategory);
 
   const handleAddToCart = (product: MerchProduct) => {
+    const checkoutSource = hasValidCheckoutUrl(product.checkoutUrl)
+      ? "checkout_url"
+      : hasValidCheckoutUrl(product.stripeLink)
+      ? "stripe_link"
+      : "storefront_fallback";
+
     const purchaseUrl =
-      product.stripeLink && !product.stripeLink.includes("PLACEHOLDER")
-        ? product.stripeLink
+      checkoutSource === "checkout_url"
+        ? product.checkoutUrl!
+        : checkoutSource === "stripe_link"
+        ? product.stripeLink!
         : GUMROAD_URLS.storefront;
+
+    trackProductClick(product.name, product.price, product.category);
+    trackEvent(GA_EVENTS.MERCH_CTA_CLICK, {
+      product_id: product.id,
+      product_name: product.name,
+      product_brand: product.brand,
+      product_category: product.category,
+      product_price: product.price,
+      cta_location: "merch_grid",
+      checkout_source: checkoutSource,
+      purchase_url: purchaseUrl,
+    });
 
     window.open(purchaseUrl, "_blank", "noopener,noreferrer");
   };
@@ -101,6 +123,12 @@ export default function Merch() {
                   <div>
                     <h3 className="mb-2 text-xl font-bold">{product.name}</h3>
                     <p className="line-clamp-2 text-sm text-muted-foreground">{product.description}</p>
+                  </div>
+
+                  <div>
+                    <Badge variant="secondary" className="text-xs uppercase tracking-wide">
+                      {product.brand === "dct" ? "The Dope Cloud Teacher" : "AskDoGood"}
+                    </Badge>
                   </div>
 
                   <div className="flex items-center justify-between">

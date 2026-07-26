@@ -60,19 +60,30 @@ const socialLinks = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const officialLogo = "/images/branding/the-dope-cloud-teacher-logo.png";
 
   return (
-    <footer className="w-full border-t border-border/40 bg-secondary/30">
+    <footer className="w-full border-t border-border/50 bg-[linear-gradient(180deg,rgba(245,251,247,0.92),rgba(255,255,255,1))]">
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-xl font-bold" style={{ fontFamily: "var(--font-serif)" }}>
-              Ask Do Good
-            </h3>
+            <div className="mb-4 flex items-center gap-3">
+              <img
+                src={officialLogo}
+                alt="The Dope Cloud Teacher official logo"
+                className="h-10 w-auto rounded-md object-contain"
+                loading="lazy"
+                width="180"
+                height="40"
+              />
+              <h3 className="text-xl font-bold tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
+                Ask Do Good
+              </h3>
+            </div>
             <p className="mb-4 text-sm text-muted-foreground">
               Evidence-based wellness, practical healing tools, and stronger systems for real life.
             </p>
-            <div className="mb-4 flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs text-muted-foreground">
+            <div className="mb-4 flex items-center gap-2 rounded-xl bg-primary/8 px-3 py-2 text-xs text-muted-foreground border border-primary/15">
               <Shield className="h-4 w-4 text-primary" />
               <span className="font-medium">30-Day Money-Back Guarantee</span>
             </div>
@@ -87,7 +98,7 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-muted-foreground transition-colors ${social.color}`}
+                    className={`rounded-full border border-border/60 p-2 text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/40 ${social.color}`}
                     aria-label={social.name}
                     title={social.name}
                     onClick={() => trackSocialClick(social.name.toLowerCase(), "footer")}
@@ -100,7 +111,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold">Start here</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-foreground/85">Start here</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/journey" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
@@ -131,7 +142,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold">Explore</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-foreground/85">Explore</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/herbs" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">
@@ -175,7 +186,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold">Topics</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-foreground/85">Topics</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/course/thyroid-health-mastery" className="block cursor-pointer text-sm text-muted-foreground transition-colors hover:text-primary">

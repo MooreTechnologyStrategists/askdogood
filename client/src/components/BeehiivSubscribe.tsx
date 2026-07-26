@@ -43,24 +43,16 @@ export default function BeehiivSubscribe({
     // Track the signup attempt
     trackNewsletterSignup(source, magnetType);
 
+    // Fire-and-forget: attempt server-side lead capture but never block the signup
+    fetch("/api/newsletter-signups", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, source, magnetType: magnetType || "none" }),
+    }).catch(() => {
+      // Silently ignore — server may not be available on static hosting
+    });
+
     try {
-      const leadResponse = await fetch("/api/newsletter-signups", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          source,
-          magnetType: magnetType || "none",
-        }),
-      });
-
-      const leadResult = await leadResponse.json().catch(() => null);
-      if (!leadResponse.ok || !leadResult?.success) {
-        throw new Error(leadResult?.message || "Newsletter signup capture failed");
-      }
-
       // Submit to Beehiiv
       const formData = new FormData();
       formData.append("email", email);

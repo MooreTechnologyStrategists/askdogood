@@ -1,5 +1,6 @@
 export interface MerchProduct {
   id: string;
+  brand: "askdogood" | "dct";
   name: string;
   category: "mugs" | "tshirts" | "hoodies" | "totes";
   price: number;
@@ -9,14 +10,80 @@ export interface MerchProduct {
   colors?: string[];
   inStock: boolean;
   featured?: boolean;
+  checkoutUrl?: string;
   stripeLink?: string;
   designStyle: "minimalist" | "artsy" | "cartoon" | "bold" | "holistic";
 }
 
 export const merchProducts: MerchProduct[] = [
+  // FLAGSHIP DROPS (SUMMER 2026)
+  {
+    id: "tshirt-soft-life-discipline",
+    brand: "askdogood",
+    name: "Soft Life Is a Discipline Tee",
+    category: "tshirts",
+    price: 34,
+    description: "AskDoGood flagship drop for the 7-day sprint. A premium identity statement centered on boundaries, healing, and intentional living.",
+    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Vintage Black", "Cream"],
+    inStock: true,
+    featured: true,
+    designStyle: "minimalist",
+    checkoutUrl: "https://askdogood.gumroad.com/l/askdogood-soft-life-is-a-discipline-tee",
+    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_SOFTLIFE"
+  },
+  {
+    id: "tshirt-classroom-to-cloud",
+    brand: "dct",
+    name: "From Classroom to Cloud Tee",
+    category: "tshirts",
+    price: 36,
+    description: "The Dope Cloud Teacher flagship drop for educators moving into cloud and AI careers. Built for conference floors and everyday wear.",
+    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Charcoal", "Heather Gray"],
+    inStock: true,
+    featured: true,
+    designStyle: "bold",
+    checkoutUrl: "https://askdogood.gumroad.com/l/dope-cloud-teacher-from-classroom-to-cloud-tee",
+    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_CLASSROOMCLOUD"
+  },
+  {
+    id: "tshirt-protect-the-girls",
+    brand: "askdogood",
+    name: "Protect the Girls Tee",
+    category: "tshirts",
+    price: 36,
+    description: "Movement-led advocacy design with purpose-first messaging. Designed to start conversation and convert mission into action.",
+    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Black", "Cream"],
+    inStock: true,
+    featured: false,
+    designStyle: "bold",
+    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_PROTECTGIRLS"
+  },
+  {
+    id: "tshirt-build-dont-scroll",
+    brand: "dct",
+    name: "Build. Don't Scroll. Tee",
+    category: "tshirts",
+    price: 34,
+    description: "Minimal, high-signal tech statement for builders. Designed for social content, meetups, and fast conversion with clear audience fit.",
+    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Black", "Cream"],
+    inStock: true,
+    featured: false,
+    designStyle: "minimalist",
+    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_BUILDNOSCROLL"
+  },
+
   // MUGS
   {
     id: "mug-gratitude",
+    brand: "askdogood",
     name: "The \"Gratitude\" Mug",
     category: "mugs",
     price: 18,
@@ -30,6 +97,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "mug-healing",
+    brand: "askdogood",
     name: "The \"Healing Path\" Mug",
     category: "mugs",
     price: 18,
@@ -43,6 +111,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "mug-thriving",
+    brand: "askdogood",
     name: "The \"Thriving\" Mug",
     category: "mugs",
     price: 18,
@@ -56,6 +125,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "mug-small-wins",
+    brand: "askdogood",
     name: "The \"Small Wins\" Mug",
     category: "mugs",
     price: 18,
@@ -69,6 +139,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "mug-therapy",
+    brand: "askdogood",
     name: "The \"Therapy\" Mug",
     category: "mugs",
     price: 18,
@@ -84,6 +155,7 @@ export const merchProducts: MerchProduct[] = [
   // T-SHIRTS
   {
     id: "tshirt-progress",
+    brand: "askdogood",
     name: "The \"Progress\" Tee",
     category: "tshirts",
     price: 28,
@@ -98,6 +170,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tshirt-healing-loud",
+    brand: "askdogood",
     name: "The \"Healing Out Loud\" Tee",
     category: "tshirts",
     price: 28,
@@ -112,6 +185,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tshirt-structure",
+    brand: "askdogood",
     name: "The \"Structure\" Tee",
     category: "tshirts",
     price: 28,
@@ -126,6 +200,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tshirt-chosen",
+    brand: "askdogood",
     name: "The \"I Chose Me\" Tee",
     category: "tshirts",
     price: 28,
@@ -140,6 +215,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tshirt-no-apologies",
+    brand: "askdogood",
     name: "The \"No Apologies\" Tee",
     category: "tshirts",
     price: 28,
@@ -156,6 +232,7 @@ export const merchProducts: MerchProduct[] = [
   // HOODIES
   {
     id: "hoodie-boundaries",
+    brand: "askdogood",
     name: "The \"Boundaries\" Hoodie",
     category: "hoodies",
     price: 48,
@@ -170,6 +247,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "hoodie-rest",
+    brand: "askdogood",
     name: "The \"Rest\" Hoodie",
     category: "hoodies",
     price: 48,
@@ -184,6 +262,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "hoodie-magic",
+    brand: "askdogood",
     name: "The \"Black Girl Magic\" Hoodie",
     category: "hoodies",
     price: 48,
@@ -198,6 +277,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "hoodie-vibes",
+    brand: "askdogood",
     name: "The \"Good Vibes\" Hoodie",
     category: "hoodies",
     price: 48,
@@ -214,6 +294,7 @@ export const merchProducts: MerchProduct[] = [
   // TOTE BAGS
   {
     id: "tote-ancestral",
+    brand: "askdogood",
     name: "The \"Ancestral Strength\" Tote",
     category: "totes",
     price: 22,
@@ -227,6 +308,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tote-community",
+    brand: "askdogood",
     name: "The \"Community\" Tote",
     category: "totes",
     price: 22,
@@ -240,6 +322,7 @@ export const merchProducts: MerchProduct[] = [
   },
   {
     id: "tote-plant-powered",
+    brand: "askdogood",
     name: "The \"Plant Powered\" Tote",
     category: "totes",
     price: 22,
@@ -262,3 +345,16 @@ export const merchCategories = [
 ];
 
 export const featuredMerch = merchProducts.filter(p => p.featured);
+
+export const hasValidCheckoutUrl = (url?: string): boolean => {
+  if (!url) return false;
+  const normalized = url.trim();
+  if (!normalized) return false;
+
+  const blockedTokens = ["PLACEHOLDER", "test_PLACEHOLDER", "TODO", "TBD"];
+  return blockedTokens.every((token) => !normalized.includes(token));
+};
+
+export const merchProductsNeedingCheckoutUrls = merchProducts.filter(
+  (product) => !hasValidCheckoutUrl(product.checkoutUrl) && !hasValidCheckoutUrl(product.stripeLink)
+);

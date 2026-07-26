@@ -20,6 +20,7 @@ import { blogImages } from "@/data/blogImages";
 import PromoBanner from '../components/PromoBanner';
 import PersistentCTABanner from '../components/PersistentCTABanner';
 import RecommendedReads from '../components/RecommendedReads';
+import SEO from "@/components/SEO";
 
 const BLOG_ICON_URL =
   "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
@@ -107,6 +108,13 @@ export default function Blog() {
 
   return (
     <>
+      <SEO
+        title="Wellness & Thyroid Articles | Ask DoGood Blog"
+        description="Practical articles on thyroid wellness, Hashimoto's, hormone balance, anti-inflammatory nutrition, and real-life healing from Ask DoGood."
+        keywords={['thyroid blog', 'Hashimoto\'s articles', 'hypothyroidism tips', 'anti-inflammatory diet', 'holistic wellness blog', 'Ask DoGood blog']}
+        url="/blog"
+        type="website"
+      />
       <PersistentCTABanner />
       <main className="min-h-screen bg-background">
       {/* HERO / INTRO */}
