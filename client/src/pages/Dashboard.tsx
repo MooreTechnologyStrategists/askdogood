@@ -134,6 +134,13 @@ export default function Dashboard() {
       href: "/blog",
       cta: "Read posts",
     },
+    {
+      title: "Relationship Keeper",
+      description: "Plan intentional dates and save private memories.",
+      icon: Sparkles,
+      href: "/relationship-keeper",
+      cta: "Open journal",
+    },
   ];
 
   return (
@@ -230,7 +237,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
               {quickLinks.map((item) => {
                 const Icon = item.icon;
                 return (

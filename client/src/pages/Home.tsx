@@ -19,6 +19,67 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+
+      <section className="py-16 md:py-20 bg-gradient-to-b from-white to-primary/5 border-b border-primary/10">
+        <div className="container">
+          <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-primary/15 bg-card shadow-[0_24px_70px_rgba(18,44,31,0.08)]">
+            <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
+              <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                  Private couple experience
+                </div>
+                <h2 className="mt-4 text-3xl md:text-5xl font-bold font-serif text-foreground leading-tight">
+                  Build a relationship full of memories, not just routines.
+                </h2>
+                <p className="mt-4 text-base md:text-lg text-muted-foreground leading-8 max-w-2xl">
+                  The Relationship Keeper helps couples intentionally connect through meaningful dates, conversations, wellness goals, cultural experiences, music, books, adventure, and reflection.
+                </p>
+                <div className="mt-6 grid gap-3 sm:grid-cols-3 text-sm text-muted-foreground">
+                  <div className="rounded-2xl border bg-background/80 p-4">100 intentional experiences</div>
+                  <div className="rounded-2xl border bg-background/80 p-4">Private memories and uploads</div>
+                  <div className="rounded-2xl border bg-background/80 p-4">Planner, check-ins, and progress</div>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link href="/relationship-keeper">
+                    <Button className="rounded-3xl px-6 py-6 text-base font-semibold shadow-lg gap-2">
+                      Start Your Journey <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link href="/relationship-keeper">
+                    <Button variant="outline" className="rounded-3xl px-6 py-6 text-base font-semibold gap-2">
+                      Explore the 100 Experiences <BookOpen className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="relative flex items-center justify-center bg-[linear-gradient(150deg,rgba(54,94,64,0.12),rgba(212,179,153,0.12))] p-8 md:p-10 lg:p-12">
+                <div className="absolute inset-8 rounded-[2rem] bg-white/50 blur-2xl" aria-hidden="true" />
+                <div className="relative w-full max-w-md rounded-[2rem] border border-border/60 bg-white shadow-2xl overflow-hidden">
+                  <img src={heroImage} alt="Relationship Keeper mockup style cover" className="h-60 w-full object-cover" />
+                  <div className="space-y-4 p-6">
+                    <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+                      <Sparkles className="h-4 w-4" /> Dashboard preview
+                    </div>
+                    <div className="grid gap-3 sm:grid-cols-2 text-sm">
+                      <div className="rounded-2xl border bg-secondary/20 p-4">
+                        <p className="text-muted-foreground">Your Progress</p>
+                        <p className="mt-1 text-2xl font-bold">94%</p>
+                      </div>
+                      <div className="rounded-2xl border bg-secondary/20 p-4">
+                        <p className="text-muted-foreground">Next Adventure</p>
+                        <p className="mt-1 text-lg font-semibold">Bookstore and coffee</p>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border bg-background p-4 text-sm text-muted-foreground">
+                      Save progress, return later, upload photos, and keep building your shared journal from one secure couple account.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 } from "@/components/ui/card";
 import {
   ArrowRight,
