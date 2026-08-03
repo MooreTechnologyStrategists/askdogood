@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowLeft, ShoppingBag, Clock, Download } from "lucide-react";
-import { catalogById } from "@/data/catalog";
+import { catalogById, catalogItems, type CatalogItem } from "@/data/catalog";
 import { productDetailsById } from "@/data/productDetails";
 
 type ProductRouteParams = {
@@ -14,8 +14,15 @@ export default function ProductDetail() {
   const params = useParams<ProductRouteParams>();
   const slug = params.slug ?? "";
 
-  const product = catalogById[slug];
-  const detail = productDetailsById[slug];
+  const product =
+    catalogById[slug] ||
+    catalogItems.find((item) => item.slug === slug || item.id === slug);
+
+  const detail = product
+    ? productDetailsById[product.id] ||
+      productDetailsById[product.slug] ||
+      buildFallbackDetail(product)
+    : null;
 
   if (!product || !detail) {
     return (
@@ -230,4 +237,27 @@ export default function ProductDetail() {
       </section>
     </div>
   );
+}
+
+function buildFallbackDetail(product: CatalogItem) {
+  return {
+    headline: product.name,
+    subheadline: product.shortSummary,
+    includes: [
+      "Immediate access after checkout",
+      "Practical guidance built from lived experience",
+      "Clear next steps you can apply right away",
+    ],
+    bestFor: [
+      "People ready to take a practical next step",
+      "Anyone who wants structure without perfection pressure",
+      "Supporters of the AskDoGood healing mission",
+    ],
+    outcomes: [
+      "More clarity about your next move",
+      "A simple plan you can act on quickly",
+      "Momentum toward better health and consistency",
+    ],
+    deliveryNote: "Digital access is delivered after checkout.",
+  };
 }

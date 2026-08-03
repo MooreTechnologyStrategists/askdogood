@@ -2,22 +2,19 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import {
-  Sparkles,
-  HeartPulse,
-  UtensilsCrossed,
   BookOpen,
-  Users,
-  ShoppingBag,
-  Library,
-  Mail,
-  User,
-  Home,
-  Menu,
-  X,
-  Scan,
-  Heart,
-  Leaf,
+  Brain,
+  FlaskConical,
   HeartHandshake,
+  Home,
+  Leaf,
+  Menu,
+  ShoppingBag,
+  User,
+  UtensilsCrossed,
+  Library,
+  X,
+  Users,
 } from "lucide-react";
 
 export default function Header() {
@@ -30,33 +27,24 @@ export default function Header() {
   }, [location]);
 
   const navItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/journey", label: "Journey", icon: Sparkles },
-    { href: "/blog", label: "Blog", icon: BookOpen },
-    { href: "/resources", label: "Resources", icon: Library },
+    { href: "/", label: "🏠 Home", icon: Home },
+    { href: "/journey", label: "🌱 My Story", icon: User },
+    { href: "/blog", label: "🥬 Healing Foods", icon: UtensilsCrossed },
+    { href: "/herbs", label: "🌿 Herbs & Minerals", icon: Leaf },
+    { href: "/resources", label: "🧠 Mind & Spirit", icon: Brain },
+    { href: "/relationship-keeper", label: "❤️ Relationships", icon: HeartHandshake },
+    { href: "/behind-the-scenes/in-my-kitchen", label: "🍽 Kitchen", icon: UtensilsCrossed },
+    { href: "/resources/library", label: "📚 Research Library", icon: Library },
+    { href: "/shop", label: "🛒 Shop", icon: ShoppingBag, highlight: true },
+    { href: "/guest-contributors", label: "💜 Community", icon: Users },
     { href: "/keep-moving", label: "Digital Library", icon: BookOpen },
-    { href: "/relationship-keeper", label: "Relationship Keeper", icon: HeartHandshake, highlight: true },
-    { href: "/herbs", label: "Herbs", icon: Leaf },
-    {
-      label: "Health Apps",
-      icon: Heart,
-      submenu: [
-        { href: "/label-scanner", label: "Label Scanner", icon: Scan },
-        { href: "/meal-prep", label: "Meal Prep Concierge", icon: UtensilsCrossed },
-        { href: "/clinical-recipes", label: "Clinical Recipes", icon: HeartPulse },
-      ],
-    },
-    { href: "/dashboard", label: "Dashboard", icon: Users },
-    { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
-    { href: "/about", label: "About", icon: User },
-    { href: "/contact", label: "Contact", icon: Mail },
+    { href: "/label-scanner", label: "Label Scanner", icon: FlaskConical },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/88 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,45,30,0.08)]">
       <div className="container flex h-14 items-center justify-between">
-        {/* LEFT: Logo / Brand */}
-        <Link href="/" className="flex items-center gap-2 font-semibold cursor-pointer">
+        <Link href="/" className="flex items-center gap-3">
           <img
             src={officialLogo}
             alt="The Dope Cloud Teacher official logo"
@@ -65,7 +53,9 @@ export default function Header() {
             width="120"
             height="32"
           />
-          <span className="hidden md:inline text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-foreground">Ask DoGood</span>
+          <span className="hidden text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-foreground md:inline">
+            Ask DoGood
+          </span>
         </Link>
 
         {/* CENTER: Nav (desktop) */}
@@ -74,11 +64,18 @@ export default function Header() {
             if (item.submenu) {
               return (
                 <div key={item.label} className="relative group">
-                  <button className={["flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent/70 hover:text-accent-foreground hover:shadow-sm","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2","text-muted-foreground"].join(" ")}
+                  <button
+                    className={[
+                      "flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer",
+                      "hover:bg-accent/70 hover:text-accent-foreground hover:shadow-sm",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+                      "text-muted-foreground",
+                    ].join(" ")}
                   >
                     <item.icon className="h-3.5 w-3.5" />
                     {item.label}
                   </button>
+
                   <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background border opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-20">
                     <div className="py-2">
                       {item.submenu.map((sub) => (
@@ -98,11 +95,18 @@ export default function Header() {
             } else {
               const isActive = location === item.href;
               const Icon = item.icon;
+
               return (
-                  <Link 
-                  key={item.href} 
+                <Link
+                  key={item.href}
                   href={item.href}
-                  className={["flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer","hover:bg-accent/60 hover:text-foreground","focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",isActive? "bg-primary/10 text-primary font-semibold": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",].join(" ")}
+                  className={[
+                    "flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer",
+                    "hover:bg-accent/60 hover:text-foreground",
+                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+                    isActive ? "bg-primary/10 text-primary font-semibold" : "text-muted-foreground",
+                    item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
+                  ].join(" ")}
                 >
                   <Icon className="h-3.5 w-3.5" />
                   {item.label}
@@ -119,12 +123,13 @@ export default function Header() {
               Sign In
             </Button>
           </Link>
+
           <Link href="/signup">
             <Button size="sm" className="hidden md:flex font-semibold px-4 shadow-md hover:shadow-lg">
               Join Free
             </Button>
           </Link>
-          
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -133,18 +138,17 @@ export default function Header() {
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-site-menu"
           >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div id="mobile-site-menu" className="lg:hidden border-t bg-background/95 backdrop-blur animate-in slide-in-from-top-2 duration-200">
+        <div
+          id="mobile-site-menu"
+          className="lg:hidden border-t bg-background/95 backdrop-blur animate-in slide-in-from-top-2 duration-200"
+        >
           <nav className="container py-4 flex flex-col gap-2">
             {navItems.map((item) => {
               if (item.submenu) {
@@ -154,6 +158,7 @@ export default function Header() {
                       <item.icon className="h-5 w-5" />
                       {item.label}
                     </span>
+
                     <div className="pl-6 flex flex-col gap-1">
                       {item.submenu.map((sub) => (
                         <Link
@@ -172,12 +177,18 @@ export default function Header() {
               } else {
                 const isActive = location === item.href;
                 const Icon = item.icon;
+
                 return (
-                  <Link 
-                    key={item.href} 
+                  <Link
+                    key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={["flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium transition-all cursor-pointer","hover:bg-accent hover:text-accent-foreground",isActive? "bg-accent text-accent-foreground": "text-muted-foreground",item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",].join(" ")}
+                    className={[
+                      "flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium transition-all cursor-pointer",
+                      "hover:bg-accent hover:text-accent-foreground",
+                      isActive ? "bg-accent text-accent-foreground" : "text-muted-foreground",
+                      item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
+                    ].join(" ")}
                   >
                     <Icon className="h-5 w-5" />
                     {item.label}
@@ -186,12 +197,14 @@ export default function Header() {
               }
             })}
           </nav>
+
           <div className="container pb-4 flex flex-col gap-2">
             <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-transparent border border-border text-foreground hover:bg-accent">
                 Sign In
               </Button>
             </Link>
+
             <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 Join

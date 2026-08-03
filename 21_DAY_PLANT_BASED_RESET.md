@@ -32,35 +32,35 @@ This complete 21-day program includes meal plans, recipes, shopping lists, and d
 - Reduce joint pain
 - Improve mental clarity
 
-### ✅ COMPLETE PROGRAM INCLUDES:
+### COMPLETE PROGRAM INCLUDES:
 
-**📅 21 Days of Complete Meal Plans**
+**21 Days of Complete Meal Plans**
 - Breakfast, lunch, dinner, and snacks planned for you
 - Perfectly balanced macros (plant-based protein, healthy fats, complex carbs)
 - No calorie counting or restriction
 - Flexible options for food preferences
 
-**🍽️ 60+ Delicious Plant-Based Recipes**
+**60+ Delicious Plant-Based Recipes**
 - Simple 30-minute meals
 - Budget-friendly ingredients
 - Family-approved (kid-tested!)
 - Step-by-step instructions with photos
 - Nutrition information for each recipe
 
-**🛒 Weekly Shopping Lists**
+**Weekly Shopping Lists**
 - Organized by store section
 - Budget-conscious (average $60-75/week)
 - Alternative ingredient options
 - Bulk buying strategies
 
-**📊 Daily Check-Ins & Tracking**
+**Daily Check-Ins & Tracking**
 - Morning motivation emails
 - Symptom tracking worksheets
 - Before/after photo guide
 - Body measurements tracker
 - Energy level monitoring
 
-**🥗 Bonus Resources**
+**Bonus Resources**
 - Anti-inflammatory food guide
 - Substitution chart for allergies (gluten, soy, nuts)
 - Restaurant dining guide
@@ -69,7 +69,7 @@ This complete 21-day program includes meal plans, recipes, shopping lists, and d
 
 ---
 
-## 📆 WEEK-BY-WEEK BREAKDOWN
+## WEEK-BY-WEEK BREAKDOWN
 
 ### **WEEK 1: FOUNDATION (Days 1-7)**
 **Focus:** Gentle transition & gentle detox  
@@ -219,7 +219,7 @@ This complete 21-day program includes meal plans, recipes, shopping lists, and d
 
 ---
 
-## 🍳 SIGNATURE RECIPES (15 Favorites)
+## SIGNATURE RECIPES (15 Favorites)
 
 ### 1. **GREEN GLOW SMOOTHIE** (5 min)
 *Energizing breakfast, reduces inflammation*
