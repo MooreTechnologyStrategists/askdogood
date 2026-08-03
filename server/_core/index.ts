@@ -9,6 +9,7 @@ import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { registerCollaborationRoutes } from "../collaborationRoutes";
 import { registerRelationshipKeeperRoutes } from "../relationshipKeeperRoutes";
+import { registerImageAutomationRoutes } from "../imageAutomationRoutes";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -39,6 +40,7 @@ async function startServer() {
   registerOAuthRoutes(app);
   registerCollaborationRoutes(app);
   registerRelationshipKeeperRoutes(app);
+  registerImageAutomationRoutes(app);
   // tRPC API
   app.use(
     "/api/trpc",

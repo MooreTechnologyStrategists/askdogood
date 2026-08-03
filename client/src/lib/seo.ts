@@ -492,6 +492,19 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "weekly",
   },
   {
+    path: "/image-studio",
+    title: "Image Studio | Ask DoGood",
+    description:
+      "Generate Ask DoGood brand visuals with built-in SEO metadata, alt text, social tags, and Canva-ready production notes.",
+    keywords: [
+      "AI image generator",
+      "SEO image metadata",
+      "Canva image brief",
+      "Ask DoGood image studio",
+    ],
+    noindex: true,
+  },
+  {
     path: "/login",
     title: "Log In | Ask DoGood",
     description: "Log in to your Ask DoGood account.",

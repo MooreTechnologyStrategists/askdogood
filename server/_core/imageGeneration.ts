@@ -20,6 +20,7 @@ import { ENV } from "./env";
 
 export type GenerateImageOptions = {
   prompt: string;
+  storageKey?: string;
   originalImages?: Array<{
     url?: string;
     b64Json?: string;
@@ -28,8 +29,18 @@ export type GenerateImageOptions = {
 };
 
 export type GenerateImageResponse = {
+  key: string;
   url?: string;
+  mimeType: string;
 };
+
+function extensionFromMimeType(mimeType: string): string {
+  const normalized = (mimeType || "").toLowerCase();
+  if (normalized.includes("webp")) return "webp";
+  if (normalized.includes("jpeg") || normalized.includes("jpg")) return "jpg";
+  if (normalized.includes("png")) return "png";
+  return "png";
+}
 
 export async function generateImage(
   options: GenerateImageOptions
@@ -79,14 +90,14 @@ export async function generateImage(
   };
   const base64Data = result.image.b64Json;
   const buffer = Buffer.from(base64Data, "base64");
+  const mimeType = result.image.mimeType || "image/png";
+  const fallbackKey = `generated/${Date.now()}.${extensionFromMimeType(mimeType)}`;
+  const uploadKey = (options.storageKey && options.storageKey.trim()) || fallbackKey;
 
-  // Save to S3
-  const { url } = await storagePut(
-    `generated/${Date.now()}.png`,
-    buffer,
-    result.image.mimeType
-  );
+  const { key, url } = await storagePut(uploadKey, buffer, mimeType);
   return {
+    key,
     url,
+    mimeType,
   };
 }

@@ -33,9 +33,6 @@ import NoFluff from "./pages/NoFluff";
 import Resources from "./pages/Resources";
 import ResourcesStart from "./pages/ResourcesStart";
 import ResourcesLibrary from "./pages/ResourcesLibrary";
-import ShortStories from "./pages/ShortStories";
-import ChinaWhiteSeries from "./pages/ChinaWhiteSeries";
-import ChinaWhiteEpisode1 from "./pages/ChinaWhiteEpisode1";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
 import GardenSeasonPost from "@/pages/GardenSeasonPost";
@@ -80,6 +77,7 @@ import HerbDictionary from "./pages/HerbDictionary";
 import GuestContributors from "./pages/GuestContributors";
 import WorkWithAskDoGood from "./pages/WorkWithAskDoGood";
 import ProductDetail from "./pages/ProductDetail";
+import ImageStudio from "./pages/ImageStudio";
 
 
 // Clinical Recipe System page - using standalone component from pages folder
@@ -167,11 +165,7 @@ function Router() {
 
     {/* Coaching */}
     <Route path="/coaching" component={Coaching} />
-
-    {/* Stories */}
-    <Route path="/stories" component={ShortStories} />
-    <Route path="/stories/chyna-white" component={ChinaWhiteSeries} />
-    <Route path="/stories/chyna-white/episode-1" component={ChinaWhiteEpisode1} />
+    <Route path="/image-studio" component={ImageStudio} />
 
       {/* Errors */}
       <Route path="/404" component={NotFound} />
