@@ -514,36 +514,6 @@ But here's what I've learned: advocating for your health is revolutionary. Deman
 
 True health equity requires systemic change. But while we fight for that change, we must also take care of ourselves and each other.
 
-Your health matters. Your life matters. Don't let anyone tell you otherwise.`,"Exploring the intersection of healthcare costs, racial disparities, and the fight for equitable access to wellness...",
-    content: `Healthcare in America is expensive. But for Black and Brown communities, the cost goes beyond dollars—it's measured in lives lost, chronic conditions unmanaged, and generational trauma.
-
-**The Reality:**
-
-- Black women are 3-4x more likely to die from pregnancy-related complications
-- Black Americans have higher rates of hypertension, diabetes, and heart disease
-- Medical debt disproportionately affects communities of color
-- Mistrust of the healthcare system runs deep, rooted in historical abuses
-
-**My Story:**
-
-When I was diagnosed with thyroid issues, I faced not just the physical symptoms but the financial burden of ongoing treatment, the frustration of doctors who didn't listen, and the isolation of feeling like my health didn't matter.
-
-**The Beautiful Big Bill:**
-
-But here's what I've learned: advocating for your health is revolutionary. Demanding quality care is an act of resistance. Building community around wellness is how we heal.
-
-**What We Can Do:**
-
-1. **Educate ourselves** about our health conditions
-2. **Find culturally competent providers** who listen and respect us
-3. **Build support networks** with others who understand
-4. **Advocate for policy changes** that address health disparities
-5. **Share our stories** to break the silence
-
-**The Path Forward:**
-
-True health equity requires systemic change. But while we fight for that change, we must also take care of ourselves and each other.
-
 Your health matters. Your life matters. Don't let anyone tell you otherwise.`,
     readTime: "6 min read",
     image: "/assets/img/blog/assigned/the-beautiful-big-bill-america-s-reckoning.webp",
