@@ -514,7 +514,7 @@ But here's what I've learned: advocating for your health is revolutionary. Deman
 
 True health equity requires systemic change. But while we fight for that change, we must also take care of ourselves and each other.
 
-Your health matters. Your life matters. Don't let anyone tell you otherwise.`,"Exploring the intersection of healthcare costs, racial disparities, and the fight for equitable access to wellness...",
+Your health matters. Your life matters. Don't let anyone tell you otherwise.`,
     content: `Healthcare in America is expensive. But for Black and Brown communities, the cost goes beyond dollars—it's measured in lives lost, chronic conditions unmanaged, and generational trauma.
 
 **The Reality:**
@@ -3205,4 +3205,3 @@ const mergedBlogPosts = [
 export const safeBlogPosts = mergedBlogPosts
   .map((post) => sanitizeBlogPost(post))
   .filter((post) => shouldPublishBlogPost(post));
-
