@@ -1,21 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import {
-  BookOpen,
-  Brain,
-  FlaskConical,
-  HeartHandshake,
-  Home,
-  Leaf,
-  Menu,
-  ShoppingBag,
-  User,
-  UtensilsCrossed,
-  Library,
-  X,
-  Users,
-} from "lucide-react";
+import { BookOpen, HeartHandshake, Home, Menu, ShoppingBag, User, X } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
@@ -27,18 +13,12 @@ export default function Header() {
   }, [location]);
 
   const navItems = [
-    { href: "/", label: "🏠 Home", icon: Home },
-    { href: "/journey", label: "🌱 My Story", icon: User },
-    { href: "/blog", label: "🥬 Healing Foods", icon: UtensilsCrossed },
-    { href: "/herbs", label: "🌿 Herbs & Minerals", icon: Leaf },
-    { href: "/resources", label: "🧠 Mind & Spirit", icon: Brain },
-    { href: "/relationship-keeper", label: "❤️ Relationships", icon: HeartHandshake },
-    { href: "/behind-the-scenes/in-my-kitchen", label: "🍽 Kitchen", icon: UtensilsCrossed },
-    { href: "/resources/library", label: "📚 Research Library", icon: Library },
-    { href: "/shop", label: "🛒 Shop", icon: ShoppingBag, highlight: true },
-    { href: "/guest-contributors", label: "💜 Community", icon: Users },
-    { href: "/keep-moving", label: "Digital Library", icon: BookOpen },
-    { href: "/label-scanner", label: "Label Scanner", icon: FlaskConical },
+    { href: "/", label: "Home", icon: Home },
+    { href: "/resources", label: "Wellness", icon: HeartHandshake },
+    { href: "/work-with-askdogood", label: "Programs", icon: BookOpen },
+    { href: "/journey", label: "Our Story", icon: User },
+    { href: "/resources/library", label: "Resources", icon: BookOpen },
+    { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
   ];
 
   return (
