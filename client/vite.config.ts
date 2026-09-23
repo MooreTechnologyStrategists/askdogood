@@ -22,10 +22,10 @@ export default defineConfig({
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
 
-          if (id.includes("react") || id.includes("scheduler")) {
-            return "react-vendor";
-          }
-
+          // Check specific ecosystems first so packages that merely contain
+          // "react" in their name (e.g. @radix-ui/react-*, @tanstack/react-query,
+          // lucide-react) don't get swept into react-vendor and create a
+          // circular dependency between chunks.
           if (
             id.includes("@radix-ui") ||
             id.includes("lucide-react") ||
@@ -43,6 +43,17 @@ export default defineConfig({
             id.includes("marked")
           ) {
             return "app-vendor";
+          }
+
+          if (
+            id.includes("/node_modules/react/") ||
+            id.includes("/node_modules/react-dom/") ||
+            id.includes("/node_modules/scheduler/") ||
+            id.includes("\\node_modules\\react\\") ||
+            id.includes("\\node_modules\\react-dom\\") ||
+            id.includes("\\node_modules\\scheduler\\")
+          ) {
+            return "react-vendor";
           }
         },
       },

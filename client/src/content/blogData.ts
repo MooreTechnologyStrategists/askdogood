@@ -515,6 +515,7 @@ But here's what I've learned: advocating for your health is revolutionary. Deman
 True health equity requires systemic change. But while we fight for that change, we must also take care of ourselves and each other.
 
 Your health matters. Your life matters. Don't let anyone tell you otherwise.`,
+    date: "2025-02-24",
     readTime: "6 min read",
     image: "/assets/img/blog/assigned/the-beautiful-big-bill-america-s-reckoning.webp",
     tags: ["Health Equity", "Black Women", "Advocacy"],
@@ -3086,7 +3087,10 @@ function isMeaningfulBlogText(value: string | undefined): value is string {
   );
 }
 
-function normalizeBlogDate(value: string): string {
+function normalizeBlogDate(value: string | undefined): string {
+  if (typeof value !== "string") {
+    return "";
+  }
   const match = value.match(/\d{4}-\d{2}-\d{2}/);
   return match ? match[0] : "";
 }
