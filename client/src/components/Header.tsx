@@ -15,10 +15,10 @@ export default function Header() {
   const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/resources", label: "Wellness", icon: HeartHandshake },
-    { href: "/work-with-askdogood", label: "Programs", icon: BookOpen },
+    { href: "/work-with-askdogood", label: "Partner With Us", icon: BookOpen },
     { href: "/journey", label: "Our Story", icon: User },
     { href: "/resources/library", label: "Resources", icon: BookOpen },
-    { href: "/shop", label: "Shop", icon: ShoppingBag, highlight: true },
+    { href: "/shop", label: "Shop", icon: ShoppingBag },
   ];
 
   return (
