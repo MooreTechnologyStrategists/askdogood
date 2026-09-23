@@ -17,46 +17,9 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets", // <-- Explicitly set this (it's the default, but be explicit)
     emptyOutDir: true,   // <-- Clean the output directory before build
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-
-          // Check specific ecosystems first so packages that merely contain
-          // "react" in their name (e.g. @radix-ui/react-*, @tanstack/react-query,
-          // lucide-react) don't get swept into react-vendor and create a
-          // circular dependency between chunks.
-          if (
-            id.includes("@radix-ui") ||
-            id.includes("lucide-react") ||
-            id.includes("class-variance-authority") ||
-            id.includes("clsx") ||
-            id.includes("tailwind-merge")
-          ) {
-            return "ui-vendor";
-          }
-
-          if (
-            id.includes("@tanstack") ||
-            id.includes("recharts") ||
-            id.includes("wouter") ||
-            id.includes("marked")
-          ) {
-            return "app-vendor";
-          }
-
-          if (
-            id.includes("/node_modules/react/") ||
-            id.includes("/node_modules/react-dom/") ||
-            id.includes("/node_modules/scheduler/") ||
-            id.includes("\\node_modules\\react\\") ||
-            id.includes("\\node_modules\\react-dom\\") ||
-            id.includes("\\node_modules\\scheduler\\")
-          ) {
-            return "react-vendor";
-          }
-        },
-      },
-    },
+    // No manualChunks: splitting vendor code by substring match (e.g. "react")
+    // repeatedly produced circular/out-of-order chunk loading that crashed the
+    // app in production ("Cannot read properties of undefined (reading
+    // 'createContext')"). Let Rollup's default chunking handle this safely.
   },
 });
