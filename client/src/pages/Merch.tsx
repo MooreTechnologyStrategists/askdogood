@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Filter, ShoppingCart } from "lucide-react";
+import { Filter, Music2, ShoppingCart } from "lucide-react";
 import { hasValidCheckoutUrl, merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -55,14 +55,36 @@ export default function Merch() {
           <div className="inline-flex rounded-full border bg-background/80 px-4 py-2 text-sm font-medium backdrop-blur-sm">
             AskDoGood merch
           </div>
-          <h1 className="mt-6 text-5xl font-bold md:text-6xl">Merch that supports the brand without cheapening it.</h1>
+          <h1 className="mt-6 text-5xl font-bold md:text-6xl">Wear what moves you.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            This page now works as a curated merch gallery that sends people to the AskDoGood storefront instead of pretending every mockup already has its own live product page.
+            Pieces for joy, healing, and showing up for your community. Explore the collection and find the message that feels like yours.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span>Curated product gallery</span>
-            <span>Cleaner category filters</span>
-            <span>Single storefront checkout</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="music-collection-heading" className="bg-[#173c32] text-[#fff8e9]">
+        <div className="container mx-auto grid gap-8 px-4 py-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] md:items-center md:py-16">
+          <div className="space-y-5">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#fff8e9]/40 px-4 py-2 text-sm font-semibold uppercase tracking-widest">
+              <Music2 aria-hidden="true" className="h-4 w-4" /> The music lane
+            </span>
+            <h2 id="music-collection-heading" className="text-4xl font-bold leading-tight md:text-5xl">
+              Old school soul. Hip-hop heart. Good in every beat.
+            </h2>
+            <p className="max-w-xl text-lg leading-relaxed text-[#f4e6d4]">
+              Music carries our stories, gets us moving, and brings us together. We’re building an AskDoGood music collection inspired by that feeling: expressive pieces with a purpose, made for the people who know every word when the right song comes on.
+            </p>
+            <a href="/#newsletter" className="inline-flex min-h-11 items-center rounded-full bg-[#efb88e] px-6 py-3 font-semibold text-[#173c32] transition hover:bg-[#ffd4ae] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#fff8e9]">
+              Hear about the first drop
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-[#fff8e9]/20 bg-[#274c40]">
+            <img src="https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp" alt="Music and creative expression at AskDoGood" loading="lazy" className="aspect-[4/3] w-full object-cover" />
+            <div className="grid gap-3 p-5 sm:grid-cols-3">
+              {['Music moves me', 'Good vibes, real healing', 'Community is the chorus'].map((idea) => (
+                <span key={idea} className="rounded-xl border border-[#fff8e9]/25 p-3 text-center text-sm font-medium">{idea}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -188,28 +210,10 @@ export default function Merch() {
       <section className="bg-secondary/20 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl space-y-6 text-center">
-            <h2 className="text-3xl font-bold">A stronger merch standard</h2>
+            <h2 className="text-3xl font-bold">Made to mean something</h2>
             <p className="text-lg text-muted-foreground">
-              Merch should extend the brand, not make it look unfinished. That means removing fake item-level checkout promises, keeping the presentation cleaner, and routing people to the storefront that is actually ready.
+              Every collection starts with a message worth carrying. Browse what’s here, and join the list for the music-inspired drop.
             </p>
-            <div className="grid grid-cols-2 gap-4 pt-8 md:grid-cols-4">
-              <div className="space-y-2">
-                <div className="text-2xl font-bold">{merchProducts.length}</div>
-                <div className="text-sm text-muted-foreground">Designs in gallery</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-bold">1</div>
-                <div className="text-sm text-muted-foreground">Storefront destination</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-bold">5</div>
-                <div className="text-sm text-muted-foreground">Core categories</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl font-bold">Clean</div>
-                <div className="text-sm text-muted-foreground">Presentation</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
