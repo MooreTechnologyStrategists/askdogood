@@ -31,7 +31,7 @@ export default function Login() {
       const data = await getMe();
       if (data?.clientPrincipal) {
         setIsAuthed(true);
-        setTimeout(() => setLocation("/dashboard"), 600);
+        setTimeout(() => setLocation("/profile"), 600);
       }
       setChecking(false);
     })();
@@ -39,15 +39,7 @@ export default function Login() {
 
   const loginMicrosoft = () => {
     // SWA built-in provider route (works if provider is enabled)
-    window.location.href = "/.auth/login/aad?post_login_redirect_uri=/dashboard";
-  };
-
-  const loginGoogle = () => {
-    window.location.href = "/.auth/login/google?post_login_redirect_uri=/dashboard";
-  };
-
-  const loginFacebook = () => {
-    window.location.href = "/.auth/login/facebook?post_login_redirect_uri=/dashboard";
+    window.location.href = "/.auth/login/aad?post_login_redirect_uri=/profile";
   };
 
   return (
@@ -97,33 +89,6 @@ export default function Login() {
               Continue with Microsoft
             </Button>
 
-            {/* These only work if you configure providers in staticwebapp.config.json */}
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full"
-              size="lg"
-              disabled={checking}
-              onClick={loginGoogle}
-            >
-              Continue with Google
-            </Button>
-
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full"
-              size="lg"
-              disabled={checking}
-              onClick={loginFacebook}
-            >
-              Continue with Facebook
-            </Button>
-
-            <p className="text-xs text-muted-foreground">
-              If Google/Facebook don’t work yet, that’s normal until we enable them
-              in your Static Web Apps auth config.
-            </p>
           </CardContent>
 
           <CardFooter className="flex flex-col space-y-3">
