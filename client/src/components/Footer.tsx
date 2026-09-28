@@ -59,7 +59,7 @@ const socialLinks = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const officialLogo = "/images/branding/the-dope-cloud-teacher-logo.png";
+  const officialLogo = "/images/branding/askdogood-logo.png";
 
   return (
     <footer className="w-full border-t border-border/50 bg-[linear-gradient(180deg,rgba(245,251,247,0.92),rgba(255,255,255,1))]">
