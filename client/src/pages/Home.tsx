@@ -28,7 +28,7 @@ const littlePockets = [
   { title: "In my garden", description: "What I'm growing, learning, and making room for.", href: "/garden", image: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", alt: "RoSeé in her garden" },
   { title: "The seasons", description: "Small shifts for the season you're in.", href: "/garden", image: fallGardenImage, alt: "Fall garden inspiration" },
   { title: "What music made me", description: "Old school hip-hop, soul, and the songs that stay with us.", href: "/interests#music", image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp", alt: "Music and creative expression" },
-  { title: "What I make", description: "Ideas, stories, and pieces that carry a message.", href: "/merch", image: "/images/branding/askdogood-logo.png", alt: "AskDoGood crab crest" },
+  { title: "What I make", description: "Ideas, stories, and pieces that carry a message.", href: "/merch#original-collection", image: "/images/merch/askdogood-original-three.webp", alt: "The original AskDoGood hoodie, matching set, and cream tee" },
   { title: "Tools I use", description: "The creative and practical software behind my work.", href: "/interests#tools", image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp", alt: "Technology and creative work" },
 ];
 
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className="relative">
           <div className="absolute -inset-5 rounded-[3rem] bg-primary/10 blur-2xl" aria-hidden="true" />
-          <img src="/assets/img/heroes/hero-home.webp" alt="A Black woman preparing fresh food in a bright kitchen" className="relative aspect-[4/3] w-full rounded-[2.5rem] object-cover shadow-2xl" width="1200" height="900" fetchPriority="high" />
+          <img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé smiling beside the plants in her garden" className="relative aspect-[4/3] w-full rounded-[2.5rem] object-cover shadow-2xl" width="1100" height="825" fetchPriority="high" />
         </div>
       </section>
 
@@ -62,13 +62,22 @@ export default function Home() {
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {littlePockets.map((pocket, index) => (
               <Link key={pocket.title} href={pocket.href} className={`group overflow-hidden rounded-3xl border border-[#173c32]/15 bg-background shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${index === 0 ? "lg:col-span-2" : ""}`}>
-                <img src={pocket.image} alt={pocket.alt} loading="lazy" className={`w-full ${index === 3 ? "bg-[#173c32] object-contain p-8" : "object-cover"} ${index === 0 ? "aspect-[16/7]" : "aspect-[4/3]"}`} />
+                <img src={pocket.image} alt={pocket.alt} loading="lazy" className={`w-full object-cover ${index === 0 ? "aspect-[16/7]" : "aspect-[4/3]"}`} />
                 <div className="p-6"><h3 className="text-2xl">{pocket.title}</h3><p className="mt-2 leading-7 text-muted-foreground">{pocket.description}</p><span className="mt-5 inline-flex items-center font-semibold text-primary">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span></div>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      <section className="bg-[#fff8ed] py-16 md:py-20" aria-labelledby="table-heading">
+        <div className="container grid gap-8 md:grid-cols-[1fr_1fr] md:items-center">
+          <img src="/images/personal/food/muhammad-dishes-2.jpg" alt="A home-style plate with vegetables and corn" loading="lazy" className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" />
+          <div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">From the table</p><h2 id="table-heading" className="mt-3 text-4xl">Real food. Real stories. Room for the whole conversation.</h2><p className="mt-5 text-lg leading-8 text-foreground/75">A meal can hold a memory, a budget decision, a hard day, or a little joy. We’re making space for the food we actually eat and the stories behind it, one plate at a time.</p><p className="mt-4 leading-7 text-foreground/75">Explore recipes and food education now. More personal photos and the stories that belong to them will join the table as the archive grows.</p><Link href="/clinical-recipes" className="mt-6 inline-flex items-center font-semibold text-primary">Explore food and recipes <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
+        </div>
+      </section>
+
+      <section className="container py-16 md:py-20" aria-labelledby="originals-heading"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Made with a message</p><h2 id="originals-heading" className="mt-3 text-4xl">The original three.</h2><p className="mt-3 max-w-2xl leading-7 text-muted-foreground">The embroidered black hoodie, the matching hoodie and jogger set, and the cream tee. Get to know the pieces that started the AskDoGood collection.</p></div><Link href="/merch#original-collection" className="inline-flex items-center font-semibold text-primary">See the collection <ArrowRight className="ml-2 h-4 w-4" /></Link></div><img src="/images/merch/askdogood-original-three.webp" alt="Original AskDoGood black hoodie, matching hoodie and jogger set, and cream tee" loading="lazy" className="mt-8 w-full rounded-[2rem] border border-[#173c32]/10 object-cover shadow-lg" /></section>
 
       <section className="border-y border-border/70 bg-card/55">
         <div className="container grid gap-10 py-16 md:grid-cols-[0.8fr_1.2fr] md:items-start">
