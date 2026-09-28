@@ -24,13 +24,12 @@ export const merchProducts: MerchProduct[] = [
     category: "tshirts",
     price: 34,
     description: "AskDoGood flagship drop for the 7-day sprint. A premium identity statement centered on boundaries, healing, and intentional living.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    image: "/images/merch/askdogood-tee-concepts.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Vintage Black", "Cream"],
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    checkoutUrl: "https://askdogood.gumroad.com/l/askdogood-soft-life-is-a-discipline-tee",
     stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_SOFTLIFE"
   },
   {
@@ -40,13 +39,12 @@ export const merchProducts: MerchProduct[] = [
     category: "tshirts",
     price: 36,
     description: "The Dope Cloud Teacher flagship drop for educators moving into cloud and AI careers. Built for conference floors and everyday wear.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    image: "/images/merch/mockup_tshirt_progress.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Charcoal", "Heather Gray"],
     inStock: true,
     featured: true,
     designStyle: "bold",
-    checkoutUrl: "https://askdogood.gumroad.com/l/dope-cloud-teacher-from-classroom-to-cloud-tee",
     stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_CLASSROOMCLOUD"
   },
   {
@@ -56,7 +54,7 @@ export const merchProducts: MerchProduct[] = [
     category: "tshirts",
     price: 36,
     description: "Movement-led advocacy design with purpose-first messaging. Designed to start conversation and convert mission into action.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    image: "/images/merch/askdogood-tee-concepts.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Black", "Cream"],
     inStock: true,
@@ -71,7 +69,7 @@ export const merchProducts: MerchProduct[] = [
     category: "tshirts",
     price: 34,
     description: "Minimal, high-signal tech statement for builders. Designed for social content, meetups, and fast conversion with clear audience fit.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    image: "/images/merch/mockup_tshirt_progress.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Black", "Cream"],
     inStock: true,
@@ -88,7 +86,7 @@ export const merchProducts: MerchProduct[] = [
     category: "mugs",
     price: 18,
     description: "Start your day with real talk. Less fuckin' attitude, more fuckin' gratitude. Bold minimalist design with gold accents.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_gratitude.webp",
+    image: "/images/merch/mockup_mug_gratitude.webp",
     colors: ["White"],
     inStock: true,
     featured: true,
@@ -102,7 +100,7 @@ export const merchProducts: MerchProduct[] = [
     category: "mugs",
     price: 18,
     description: "Healing isn't linear and that's okay. A gentle reminder with warm, earthy tones and elegant typography.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_healing.webp",
+    image: "/images/merch/mockup_mug_healing.webp",
     colors: ["Cream"],
     inStock: true,
     featured: false,
@@ -116,7 +114,7 @@ export const merchProducts: MerchProduct[] = [
     category: "mugs",
     price: 18,
     description: "Thriving not just surviving. Bold statement design for your morning motivation and empowerment.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_thriving.webp",
+    image: "/images/merch/mockup_mug_thriving.webp",
     colors: ["White"],
     inStock: true,
     featured: false,
@@ -130,7 +128,7 @@ export const merchProducts: MerchProduct[] = [
     category: "mugs",
     price: 18,
     description: "Small wins compound. Beautiful botanical design with calming wellness aesthetic and elegant typography.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_small_wins.webp",
+    image: "/images/merch/mockup_mug_small_wins.webp",
     colors: ["Cream"],
     inStock: true,
     featured: false,
@@ -144,7 +142,7 @@ export const merchProducts: MerchProduct[] = [
     category: "mugs",
     price: 18,
     description: "Therapy saved my life. Clean minimalist design celebrating mental health and healing through therapy.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_mug_therapy.webp",
+    image: "/images/merch/mockup_mug_therapy.webp",
     colors: ["White"],
     inStock: true,
     featured: true,
@@ -160,7 +158,7 @@ export const merchProducts: MerchProduct[] = [
     category: "tshirts",
     price: 28,
     description: "Progress over perfection every damn time. Comfortable oversized fit with vintage-inspired design.",
-    image: "https://askdogoodassets.blob.core.windows.net/images/merch/mockup_tshirt_progress.webp",
+    image: "/images/merch/mockup_tshirt_progress.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: ["Cream"],
     inStock: true,
@@ -351,7 +349,7 @@ export const hasValidCheckoutUrl = (url?: string): boolean => {
   const normalized = url.trim();
   if (!normalized) return false;
 
-  const blockedTokens = ["PLACEHOLDER", "test_PLACEHOLDER", "TODO", "TBD"];
+  const blockedTokens = ["PLACEHOLDER", "TODO", "TBD", "buy.stripe.com/test_"];
   return blockedTokens.every((token) => !normalized.includes(token));
 };
 

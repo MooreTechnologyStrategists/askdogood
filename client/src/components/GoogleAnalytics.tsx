@@ -21,30 +21,32 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
       return;
     }
 
-    // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer?.push(args);
+    if (!document.querySelector(`script[data-ga-id="${measurementId}"]`)) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      script.dataset.gaId = measurementId;
+      document.head.appendChild(script);
     }
-    window.gtag = gtag;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = (...args: any[]) => { window.dataLayer?.push(args); };
 
     // Configure GA4
     gtag('js', new Date());
     gtag('config', measurementId, {
-      page_path: location,
-      send_page_view: true,
+      send_page_view: false,
     });
-
-    console.log('Google Analytics initialized:', measurementId);
   }, [measurementId]);
 
   // Track page views on route change
   useEffect(() => {
     if (window.gtag && measurementId && measurementId !== 'G-XXXXXXXXXX') {
-      window.gtag('config', measurementId, {
+      window.gtag('event', 'page_view', {
         page_path: location,
+        page_location: window.location.href,
+        page_title: document.title,
       });
-      console.log('GA4 page view:', location);
     }
   }, [location, measurementId]);
 
@@ -52,15 +54,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
     return null;
   }
 
-  return (
-    <>
-      {/* Google Analytics Script */}
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-      />
-    </>
-  );
+  return null;
 };
 
 export default GoogleAnalytics;
