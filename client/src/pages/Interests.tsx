@@ -1,9 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Flower2, Music, Laptop, Scissors, Sprout, Sun, Droplets } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Interests() {
   const [selectedImage, setSelectedImage] = useState(0);
+
+  useEffect(() => {
+    const section = window.location.hash.slice(1);
+    if (section === "music" || section === "tools") {
+      requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView());
+    }
+  }, []);
 
   const gardenImages = [
     { url: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", caption: "Tending the garden - where healing meets growth" },
@@ -24,7 +31,7 @@ export default function Interests() {
     {
       title: "Music",
       subtitle: "Creative Expression",
-      description: "Music is my creative outlet, my therapy, and my joy. Whether I'm listening, creating playlists, or just vibing to the rhythm, music helps me process emotions, celebrate wins, and stay grounded. It's the soundtrack to my healing journey.",
+      description: "Old school hip-hop and soul are part of my story. I listen for the words, the rhythm, and the memories a song can bring back. Music gives me room to feel joy, move my body, and connect with people. This is where I'll share what I'm listening to and what it inspires me to make.",
       image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp",
       icon: Music,
       color: "from-purple-500/20 to-pink-500/20",
@@ -185,7 +192,7 @@ export default function Interests() {
                     <div className={`p-8 md:p-12 flex flex-col justify-center ${isEven ? '' : 'md:col-start-1 md:row-start-1'}`}>
                       <div className="mb-6">
                         <Icon className="h-12 w-12 text-primary mb-4" />
-                        <h2 className="text-3xl font-bold mb-2">{interest.title}</h2>
+                  <h2 id={interest.title === "Music" ? "music" : undefined} className="scroll-mt-24 text-3xl font-bold mb-2">{interest.title}</h2>
                         <p className="text-lg text-primary font-medium">{interest.subtitle}</p>
                       </div>
                       <p className="text-muted-foreground leading-relaxed">
@@ -196,6 +203,18 @@ export default function Interests() {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" className="scroll-mt-24 bg-[#f8eee5] py-16">
+        <div className="container max-w-5xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">Behind the work</p>
+          <h2 className="mt-3 text-4xl font-bold">The tools I use to make things happen</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">I move between creative work and practical systems. These are two tools I use to turn ideas into something people can actually experience.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Create</p><h3 className="mt-3 text-2xl font-semibold">Canva</h3><p className="mt-3 leading-7 text-muted-foreground">For shaping visuals and resources that help an idea connect with people.</p></div>
+            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Build</p><h3 className="mt-3 text-2xl font-semibold">Microsoft Azure</h3><p className="mt-3 leading-7 text-muted-foreground">For the technology and systems behind the work I bring to life.</p></div>
           </div>
         </div>
       </section>
