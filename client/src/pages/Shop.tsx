@@ -115,6 +115,7 @@ export default function Shop() {
       <SEO
         title="Shop AskDoGood Courses, Guides, and Wellness Tools"
         description="Explore AskDoGood digital products, free resources, membership offers, services, and upcoming merch from a single professional storefront."
+        url="/shop"
       />
 
       <section className="relative overflow-hidden border-b border-border/40 bg-[radial-gradient(circle_at_top_left,_rgba(233,124,64,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(14,116,144,0.18),_transparent_30%)] py-20">
