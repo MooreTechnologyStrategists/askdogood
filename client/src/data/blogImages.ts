@@ -54,7 +54,7 @@ export const blogImages: Record<string, string> = {
   "navigating-a-license-suspension-or-revocation-a-resilient-guide-for-minority-professionals": "/assets/img/blog/assigned/navigating-a-license-suspension-or-revocation-a-resilient-guide-for-minority-professionals.webp",
   "navigating-police-encounters-the-do-s-and-don-ts-for-a-safe-interaction": "/assets/img/blog/assigned/navigating-police-encounters-the-do-s-and-don-ts-for-a-safe-interaction.webp",
   "over-40-any-love-left-to-love-me": "/assets/img/blog/assigned/over-40-any-love-left-to-love-me.webp",
-  "overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism": "/assets/img/blog/assigned/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism.webp",
+  "overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism": "/images/personal/travel/rosee-speaking-paris-2023.webp",
   "peace-of-mind-important-steps-to-take-before-you-die-regarding-life-insurance": "/assets/img/blog/assigned/peace-of-mind-important-steps-to-take-before-you-die-regarding-life-insurance.webp",
   "prayer-for-guidance-and-support-in-overcoming-vices-and-bad-habits": "/assets/img/blog/assigned/prayer-for-guidance-and-support-in-overcoming-vices-and-bad-habits.webp",
   "pro-tips-for-giving-tuesday": "/assets/img/blog/assigned/pro-tips-for-giving-tuesday.webp",

@@ -90,18 +90,25 @@ export default function GardenSeasonPost() {
         <span className="text-foreground">{label}</span>
       </nav>
 
-      <article className="max-w-3xl">
+      <article className="max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-bold">{season.title}</h1>
         {season.subtitle ? (
           <p className="mt-2 text-muted-foreground">{season.subtitle}</p>
         ) : null}
 
-        <img
-          src={heroImg}
-          alt={season.heroAlt ?? `${label} garden`}
-          className="mt-8 w-full rounded-3xl object-cover shadow-xl"
-          loading="lazy"
-        />
+        <div className="mt-8 grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+          <img src={heroImg} alt={season.heroAlt ?? `${label} garden`} className="h-full min-h-80 max-h-[34rem] w-full rounded-3xl object-cover shadow-lg" loading="lazy" />
+          <div className="grid gap-4">
+            <img src={season.slug === "fall" ? "/images/personal/food/garden-peppers.jpg" : "/images/personal/food/collards-in-small-raised-bed.jpg"} alt={season.slug === "fall" ? "Peppers growing in the AskDoGood garden" : "Leafy greens growing in a raised bed"} className="h-48 w-full rounded-3xl object-cover md:h-full" loading="lazy" />
+          </div>
+        </div>
+
+        {season.inSeason?.length ? <section className="mt-10 rounded-3xl bg-[#fff8ed] p-6 md:p-8" aria-labelledby="season-produce">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">From bed, orchard, and pantry</p>
+          <h2 id="season-produce" className="mt-2 text-2xl font-bold">What this season can put on the table</h2>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{season.inSeason.map((crop) => <div key={crop} className="rounded-2xl border border-[#173c32]/15 bg-white px-5 py-4 font-medium">{crop}</div>)}</div>
+          <p className="mt-5 text-sm leading-6 text-muted-foreground">{season.seasonNote} <a className="underline" href="https://extension.umd.edu/resource/when-plant-vegetables" target="_blank" rel="noreferrer">See the University of Maryland planting calendar</a>.</p>
+        </section> : null}
 
         <div className="mt-8 space-y-5 text-base leading-7">
           {body.length ? (
@@ -131,12 +138,10 @@ export default function GardenSeasonPost() {
           )}
         </div>
 
-        <div className="mt-10 rounded-3xl border-2 p-8 bg-gradient-to-br from-primary/5 to-secondary/5 shadow-lg">
-          <h2 className="text-xl font-bold">Your reflection (quick prompt)</h2>
-          <p className="text-muted-foreground mt-3">
-            What “golden gem” have you learned lately that you can use now… and what gem might be slow-moving
-            but still valuable?
-          </p>
+        <div className="mt-10 rounded-3xl border border-primary/20 bg-[#f8eee5] p-8">
+          <h2 className="text-2xl font-bold">Pull up a chair</h2>
+          <p className="mt-3 text-lg leading-8">{season.conversation ?? "What has this season been teaching you?"}</p>
+          <a className="mt-5 inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground" href={`mailto:askdogood@gmail.com?subject=${encodeURIComponent(`${season.title} garden conversation`)}`}>Tell me your story</a>
         </div>
       </article>
     </main>

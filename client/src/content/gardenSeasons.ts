@@ -13,6 +13,9 @@ export type GardenSeason = {
   heroImg: string;
   heroAlt: string;
   body: string[];
+  inSeason?: string[];
+  seasonNote?: string;
+  conversation?: string;
 };
 
 export const gardenSeasons: GardenSeason[] = [
@@ -83,25 +86,35 @@ export const gardenSeasons: GardenSeason[] = [
   {
     slug: "fall",
     title: "Fall",
-    subtitle: "Harvest, release, and reflection",
+    subtitle: "A second planting, a slower harvest, and a little honesty",
     heroImg: fallImg,
-    heroAlt: "Fall garden harvest",
+    heroAlt: "RoSeé outdoors wearing an AskDoGood garden shirt",
+    inSeason: ["Peppers before frost", "Collards and other greens", "Radishes", "Carrots", "Spinach", "Apples and pears from local orchards"],
+    seasonNote: "A DMV seasonal guide, not a claim that every crop pictured or listed came from my own beds. Planting and harvest depend on weather, variety, and protection.",
+    conversation: "What are you carrying into the next season because it still feeds you—and what can finally become compost?",
     body: [
-      "Fall teaches gratitude.",
-      "Not everything is meant to be carried forward.",
-      "Some things are harvested. Some things are compost."
+      "The first cool morning always changes the way I walk through the garden. I start looking closely: which peppers can come in before frost, which greens are ready for another round, and what I can stop trying to rescue. A plant can be done. That doesn't make the season a failure.",
+      "Around central Maryland, fall can still be full of food. Quick radishes, spinach, carrots, and sturdy greens make room for another harvest; peppers may keep producing until the cold settles in. Apples and pears belong to the wider local food story too, even when they come from an orchard instead of my patio.",
+      "This is when the garden feels most like a conversation about real life. Some things need one more chance. Some things need to be picked and shared. Some things have given all they can and are ready for the compost pile. I don't always get that distinction right on the first try—ask any plant I've kept on life support out of pure stubbornness.",
+      "Fall asks me to take stock without turning it into a performance review. What worked? What tasted good? What was too much work for too little joy? I write it down, save the seeds or lessons worth saving, and make room for the next season.",
+      "The harvest is more than what's in the bowl. It can be a better routine, a neighbor with extra greens, or the relief of admitting that one plan just wasn't it."
     ]
   },
   {
     slug: "winter",
     title: "Winter",
-    subtitle: "Rest is not failure",
+    subtitle: "What grows quietly, what keeps, and what waits",
     heroImg: winterImg,
-    heroAlt: "Winter garden at rest",
+    heroAlt: "RoSeé indoors reflecting on a new season",
+    inSeason: ["Protected spinach", "Cold-hardy greens", "Herbs on a bright windowsill", "Stored winter squash", "Stored apples and pears", "Seeds planned for spring"],
+    seasonNote: "Winter growing in Maryland often needs a row cover or cold frame. Stored fruit and squash were harvested earlier; they're part of winter eating, not a winter harvest.",
+    conversation: "What does useful rest look like for you when the world keeps asking for more?",
     body: [
-      "Winter looks empty but the work is still happening.",
-      "Rest restores what growth depletes.",
-      "Dormancy is preparation, not punishment."
+      "Winter doesn't put on the same show. The beds look quieter, the days get short, and I have to resist treating every pause like a problem to solve. I know what it is to start over more than once. The garden keeps reminding me that a slower season still counts.",
+      "With a little protection, hardy greens and spinach can carry on through some cold weather. A windowsill can hold herbs. The pantry may hold squash or apples saved from an earlier harvest. That's winter food too: not proof that everything is growing at once, but proof that tending and planning matter.",
+      "Some winter days I check the cover, clear a path, and leave the plants alone. Some days I sit with a notebook and decide what I actually want to grow next. The seed catalogs are very persuasive; my available space is less so.",
+      "Rest doesn't mean disappearing. It can mean keeping one small promise to yourself, sharing a warm meal, or making room to recover before you build again. That is work, even if it doesn't look impressive in a photo.",
+      "By the time spring comes, I want to remember what winter taught me: not every good thing announces itself while it is happening."
     ]
   }
 ];

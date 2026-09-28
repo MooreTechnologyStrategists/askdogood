@@ -7,7 +7,7 @@ export default function Interests() {
 
   useEffect(() => {
     const section = window.location.hash.slice(1);
-    if (section === "music" || section === "tools") {
+    if (section === "music" || section === "tools" || section === "listening") {
       requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView());
     }
   }, []);
@@ -54,6 +54,13 @@ export default function Interests() {
     },
   ];
 
+  const listeningShelf = [
+    { name: "IMO with Michelle Obama & Craig Robinson", mood: "For perspective with family warmth", note: "Big life questions, practical advice, and room to laugh.", href: "https://podcasts.apple.com/us/podcast/imo-with-michelle-obama-and-craig-robinson/id1532956108" },
+    { name: "The Joe Budden Podcast", mood: "For music and unfiltered conversation", note: "When you want culture, chemistry, and a conversation that keeps moving.", href: "https://podcasts.apple.com/us/podcast/the-joe-budden-podcast/id1535809341" },
+    { name: "The Rachel Maddow Show", mood: "For a deeper look at the news", note: "For the evenings when you want context before you decide what you think.", href: "https://podcasts.apple.com/us/podcast/the-rachel-maddow-show/id294055449" },
+    { name: "The Weekly Show with Jon Stewart", mood: "For politics with a little wit", note: "Longer conversations about the decisions shaping everyday life.", href: "https://podcasts.apple.com/us/podcast/the-weekly-show-with-jon-stewart/id1583132133" },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -67,6 +74,8 @@ export default function Interests() {
           </div>
         </div>
       </section>
+
+      <section id="listening" className="scroll-mt-24 bg-[#fff8ed] py-16 md:py-20" aria-labelledby="listening-heading"><div className="container"><p className="text-sm font-semibold uppercase tracking-widest text-primary">After-work listening</p><h2 id="listening-heading" className="mt-3 max-w-3xl text-4xl font-bold">Pick the conversation your day calls for.</h2><p className="mt-5 max-w-3xl text-lg leading-8 text-foreground/75">Some nights I need laughter and music. Some nights I want to understand what's happening in the world before I can put my phone down. This is a small listening shelf, not a demand to keep up with everything. Take what gives you perspective; leave the rest for tomorrow.</p><div className="mt-8 grid gap-4 sm:grid-cols-2">{listeningShelf.map((show) => <a key={show.name} href={show.href} target="_blank" rel="noopener noreferrer" className="group rounded-3xl border border-[#173c32]/15 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"><p className="text-sm font-semibold uppercase tracking-wide text-primary">{show.mood}</p><h3 className="mt-3 text-2xl font-bold">{show.name}</h3><p className="mt-3 leading-7 text-muted-foreground">{show.note}</p><span className="mt-5 inline-flex font-semibold text-primary">Open the show ↗</span></a>)}</div><p className="mt-6 text-sm text-muted-foreground">Independent shows and viewpoints. Links open the publishers' podcast pages; AskDoGood is not affiliated with them.</p></div></section>
 
       {/* Gardening Section - Expanded */}
       <section className="py-20 bg-secondary/30">
