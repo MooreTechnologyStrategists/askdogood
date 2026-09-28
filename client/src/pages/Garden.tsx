@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import { gardenSeasons } from "@/content/gardenSeasons";
+import SEO from "@/components/SEO";
+import BeehiivSubscribe from "@/components/BeehiivSubscribe";
 
 
 /**
@@ -12,12 +14,12 @@ import { gardenSeasons } from "@/content/gardenSeasons";
 export default function Garden() {
   return (
     <main className="container mx-auto px-4 py-12">
+      <SEO title="A Garden Through the Seasons | AskDoGood" description="Come through RoSeé's garden for real-life stories, fall and winter growing ideas, seasonal food, and conversation starters." url="/garden" />
       <header className="max-w-3xl space-y-3">
-        <h1 className="text-3xl md:text-4xl font-bold">Seasons of Growth</h1>
-        <p className="text-muted-foreground">
-          I try to find joy in everything. Even when it’s draining or thankless,
-          the real reward is the wisdom you pick up along the way—some gems you
-          use immediately, some slow-moving… all priceless.
+        <p className="text-sm font-semibold uppercase tracking-widest text-primary">RoSeé's garden journal</p>
+        <h1 className="text-4xl md:text-5xl font-bold">Seasons of Growth</h1>
+        <p className="text-lg leading-8 text-muted-foreground">
+          My garden has taught me patience, fed a few good meals, and occasionally humbled me before breakfast. Follow the seasons for what is growing, what is resting, and what that has to do with the rest of life.
         </p>
       </header>
 
@@ -61,31 +63,12 @@ export default function Garden() {
         })}
       </section>
 
-      <section className="mt-14 max-w-3xl rounded-2xl border p-6">
-        <h2 className="text-xl font-semibold">Want the Garden Journal?</h2>
-        <p className="text-muted-foreground mt-2">
-          I’m building a seasonal reflection journal with prompts, wellness notes,
-          and practical garden lessons. If you want it when it drops, join the list.
-        </p>
-
-        {/* Replace this with your real form later (ConvertKit/Mailchimp/etc.) */}
-        <div className="mt-4 flex flex-col sm:flex-row gap-3">
-          <label className="sr-only" htmlFor="garden-email">
-            Email address
-          </label>
-          <input
-            id="garden-email"
-            type="email"
-            className="w-full rounded-xl border px-4 py-3"
-            placeholder="Email address"
-            autoComplete="email"
-          />
-          <button type="button" className="rounded-xl px-5 py-3 font-semibold border">
-            Join the Garden List
-          </button>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">No spam. Just growth.</p>
+      <section className="mt-14 grid gap-6 rounded-3xl bg-[#fff8ed] p-7 md:grid-cols-[1fr_1fr] md:p-10">
+        <img src="/images/personal/food/collards-in-small-raised-bed.jpg" alt="Greens growing in RoSeé's raised garden bed" className="aspect-[4/3] w-full rounded-2xl object-cover" loading="lazy" />
+        <div className="self-center"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Start a conversation</p><h2 className="mt-3 text-3xl font-bold">What are you growing through?</h2><p className="mt-4 leading-7 text-muted-foreground">Sometimes the question is about vegetables. Sometimes it's about surviving a season you didn't choose. Bring the honest answer; there's room for both.</p><a href="mailto:askdogood@gmail.com?subject=Garden%20Table%20conversation" className="mt-5 inline-flex font-semibold text-primary underline">Write to the Garden Table</a></div>
       </section>
+
+      <section className="mt-14 max-w-3xl rounded-3xl border bg-card p-6"><BeehiivSubscribe variant="inline" source="garden_journal" title="Notes from the garden" description="Seasonal stories, useful ideas, and invitations to future conversations." buttonText="Join free" /></section>
 
       {/* Optional: small debug hint during development */}
       {/* <pre className="mt-10 text-xs text-muted-foreground">{JSON.stringify(gardenSeasons, null, 2)}</pre> */}
