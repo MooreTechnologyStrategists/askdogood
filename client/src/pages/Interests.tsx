@@ -24,7 +24,7 @@ export default function Interests() {
     {
       title: "Music",
       subtitle: "Creative Expression",
-      description: "Music is my creative outlet, my therapy, and my joy. Whether I'm listening, creating playlists, or just vibing to the rhythm, music helps me process emotions, celebrate wins, and stay grounded. It's the soundtrack to my healing journey.",
+      description: "Old school hip-hop and soul are part of my story. I listen for the words, the rhythm, and the memories a song can bring back. Music gives me room to feel joy, move my body, and connect with people. This is where I'll share what I'm listening to and what it inspires me to make.",
       image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp",
       icon: Music,
       color: "from-purple-500/20 to-pink-500/20",
@@ -185,7 +185,7 @@ export default function Interests() {
                     <div className={`p-8 md:p-12 flex flex-col justify-center ${isEven ? '' : 'md:col-start-1 md:row-start-1'}`}>
                       <div className="mb-6">
                         <Icon className="h-12 w-12 text-primary mb-4" />
-                        <h2 className="text-3xl font-bold mb-2">{interest.title}</h2>
+                  <h2 id={interest.title === "Music" ? "music" : undefined} className="scroll-mt-24 text-3xl font-bold mb-2">{interest.title}</h2>
                         <p className="text-lg text-primary font-medium">{interest.subtitle}</p>
                       </div>
                       <p className="text-muted-foreground leading-relaxed">
@@ -196,6 +196,18 @@ export default function Interests() {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" className="scroll-mt-24 bg-[#f8eee5] py-16">
+        <div className="container max-w-5xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">Behind the work</p>
+          <h2 className="mt-3 text-4xl font-bold">The tools I use to make things happen</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">I move between creative work and practical systems. Canva helps me shape ideas visually; Azure helps me build and manage technology. Here, I'll share the software I'm actually using and what I make with it.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border bg-background p-6"><h3 className="text-2xl font-semibold">Create</h3><p className="mt-3 leading-7 text-muted-foreground">Visuals, stories, and useful resources for AskDoGood and The Dope Cloud Teacher.</p></div>
+            <div className="rounded-2xl border bg-background p-6"><h3 className="text-2xl font-semibold">Build</h3><p className="mt-3 leading-7 text-muted-foreground">The systems and tools that help good ideas reach real people.</p></div>
           </div>
         </div>
       </section>
