@@ -2,6 +2,7 @@ import { ArrowRight, BookOpen, HeartHandshake, Leaf, MoveUpRight, Moon, Utensils
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import fallGardenImage from "@/content/images/garden/fall.webp";
 
 const pillars = [
   { title: "Nourish", description: "Practical food and nutrition for the life you are actually living.", href: "/blog", icon: UtensilsCrossed },
@@ -21,6 +22,14 @@ const featuredResources = [
   { title: "What is AskDoGood?", description: "A practical starting point for whole-person wellness education.", href: "/blog/what-is-askdogood", image: "/assets/img/blog/assigned/what-is-askdogood.webp" },
   { title: "Recipes for real life", description: "Simple food ideas that make nourishing yourself feel more possible.", href: "/clinical-recipes", image: "/images/personal/food/muhammad-dishes-2.jpg" },
   { title: "The founder journey", description: "Why Rosee built a place for useful knowledge and better choices.", href: "/journey", image: "/assets/img/journey/hero-journey.png" },
+];
+
+const littlePockets = [
+  { title: "In my garden", description: "What I'm growing, learning, and making room for.", href: "/garden", image: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", alt: "RoSeé in her garden" },
+  { title: "The seasons", description: "Small shifts for the season you're in.", href: "/garden", image: fallGardenImage, alt: "Fall garden inspiration" },
+  { title: "What music made me", description: "Old school hip-hop, soul, and the songs that stay with us.", href: "/interests#music", image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp", alt: "Music and creative expression" },
+  { title: "What I make", description: "Ideas, stories, and pieces that carry a message.", href: "/merch", image: "/images/personal/rosee-hero-1.jpg", alt: "RoSeé, founder of AskDoGood" },
+  { title: "Tools I use", description: "The creative and practical software behind my work.", href: "/interests#tools", image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp", alt: "Technology and creative work" },
 ];
 
 export default function Home() {
@@ -63,6 +72,22 @@ export default function Home() {
       </section>
 
       <section className="container py-16 md:py-20"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Featured resources</p><h2 className="mt-3 text-4xl">A few places to begin.</h2></div><Link href="/resources/library" className="inline-flex items-center text-sm font-semibold text-primary">Browse the full library <ArrowRight className="ml-2 h-4 w-4" /></Link></div><div className="mt-10 grid gap-6 md:grid-cols-3">{featuredResources.map((resource) => <Link key={resource.title} href={resource.href} className="group overflow-hidden rounded-3xl border border-border/70 bg-card"><img src={resource.image} alt="" className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" width="640" height="480" /><div className="p-6"><h3 className="text-2xl">{resource.title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{resource.description}</p><span className="mt-5 inline-flex items-center text-sm font-semibold text-primary">Read more <ArrowRight className="ml-2 h-4 w-4" /></span></div></Link>)}</div></section>
+
+      <section className="bg-[#f8eee5] py-16 md:py-20" aria-labelledby="pockets-heading">
+        <div className="container">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Little pockets of good</p>
+          <h2 id="pockets-heading" className="mt-3 max-w-2xl text-4xl">Peace, love, and the things that make us feel alive.</h2>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-foreground/75">Come through the garden, follow the seasons, turn up the music, and see what I'm creating along the way.</p>
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {littlePockets.map((pocket, index) => (
+              <Link key={pocket.title} href={pocket.href} className={`group overflow-hidden rounded-3xl border border-[#173c32]/15 bg-background shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${index === 0 ? "lg:col-span-2" : ""}`}>
+                <img src={pocket.image} alt={pocket.alt} loading="lazy" className={`w-full object-cover ${index === 0 ? "aspect-[16/7]" : "aspect-[4/3]"}`} />
+                <div className="p-6"><h3 className="text-2xl">{pocket.title}</h3><p className="mt-2 leading-7 text-muted-foreground">{pocket.description}</p><span className="mt-5 inline-flex items-center font-semibold text-primary">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="border-y border-border/70 bg-[#f3ddd2] py-16 md:py-20"><div className="container grid gap-8 md:grid-cols-[1fr_auto] md:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Community and partnership</p><h2 className="mt-3 max-w-2xl text-4xl">Bring AskDoGood to your community.</h2><p className="mt-4 max-w-2xl text-base leading-7 text-foreground/75">We support workshops, senior and veteran programming, food education, wellness education, and thoughtful organizational partnerships.</p></div><Link href="/work-with-askdogood"><Button className="rounded-full px-6 py-6">Let&apos;s work together <HeartHandshake className="ml-2 h-4 w-4" /></Button></Link></div></section>
 
