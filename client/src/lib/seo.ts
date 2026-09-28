@@ -4,7 +4,7 @@ export const SITE_AUTHOR = 'RoSeé Murphy';
 export const DEFAULT_DESCRIPTION =
   "AskDoGood helps people heal better, live smarter, and earn stronger through practical wellness, self-advocacy, and everyday stability.";
 export const DEFAULT_OG_IMAGE =
-  "https://askdogood.com/images/branding/the-dope-cloud-teacher-logo.png";
+  "https://askdogood.com/images/branding/askdogood-logo.png";
 export const RSS_FEED_PATH = "/blog-rss.xml";
 export const TWITTER_HANDLE = "@askdogood";
 
@@ -399,11 +399,11 @@ export const staticSeoPages: StaticSeoPage[] = [
   },
   {
     path: "/merch",
-    title: "Merch | Ask DoGood",
+    title: "Merch Design Previews | Ask DoGood",
     description:
-      "Explore Ask DoGood merchandise designed to extend the brand’s voice, mission, and community.",
+      "Preview AskDoGood tees, mugs, hoodies, and totes celebrating joy, healing, and community. Sign up for launch and ordering updates.",
     keywords: ["Ask DoGood merch", "wellness merch"],
-    type: "product",
+    type: "website",
     priority: 0.7,
     changefreq: "monthly",
   },

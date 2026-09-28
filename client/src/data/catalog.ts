@@ -213,7 +213,7 @@ export const membershipOffers: CatalogItem[] = [
     name: "DoGood Wellness Circle",
     kind: "membership",
     platform: "both",
-    priceLabel: "$27",
+    priceLabel: "$19",
     slug: "dogood-wellness-circle",
     status: "Ready",
     shortSummary:

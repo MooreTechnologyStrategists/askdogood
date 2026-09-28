@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Filter, Music2, ShoppingCart } from "lucide-react";
+import { Filter, Music2, ArrowRight } from "lucide-react";
 import { hasValidCheckoutUrl, merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { GUMROAD_URLS } from "@/config/gumroad";
 import { GA_EVENTS } from "@/config/analytics";
 import { trackEvent, trackProductClick } from "@/lib/analytics";
 
@@ -14,24 +13,14 @@ export default function Merch() {
     window.scrollTo(0, 0);
   }, []);
 
+  const askDoGoodProducts = merchProducts.filter((product) => product.brand === "askdogood");
   const filteredProducts =
     selectedCategory === "all"
-      ? merchProducts
-      : merchProducts.filter((product) => product.category === selectedCategory);
+      ? askDoGoodProducts
+      : askDoGoodProducts.filter((product) => product.category === selectedCategory);
 
   const handleAddToCart = (product: MerchProduct) => {
-    const checkoutSource = hasValidCheckoutUrl(product.checkoutUrl)
-      ? "checkout_url"
-      : hasValidCheckoutUrl(product.stripeLink)
-      ? "stripe_link"
-      : "storefront_fallback";
-
-    const purchaseUrl =
-      checkoutSource === "checkout_url"
-        ? product.checkoutUrl!
-        : checkoutSource === "stripe_link"
-        ? product.stripeLink!
-        : GUMROAD_URLS.storefront;
+    const purchaseUrl = hasValidCheckoutUrl(product.stripeLink) ? product.stripeLink! : product.checkoutUrl!;
 
     trackProductClick(product.name, product.price, product.category);
     trackEvent(GA_EVENTS.MERCH_CTA_CLICK, {
@@ -41,7 +30,7 @@ export default function Merch() {
       product_category: product.category,
       product_price: product.price,
       cta_location: "merch_grid",
-      checkout_source: checkoutSource,
+      checkout_source: hasValidCheckoutUrl(product.stripeLink) ? "stripe_link" : "checkout_url",
       purchase_url: purchaseUrl,
     });
 
@@ -57,8 +46,9 @@ export default function Merch() {
           </div>
           <h1 className="mt-6 text-5xl font-bold md:text-6xl">Wear what moves you.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            Pieces for joy, healing, and showing up for your community. Explore the collection and find the message that feels like yours.
+            Explore designs for joy, healing, and community. These are collection previews; join the list for launch and ordering details.
           </p>
+          <a href="#collection" className="mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Explore the designs <ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
         </div>
       </section>
 
@@ -89,7 +79,7 @@ export default function Merch() {
         </div>
       </section>
 
-      <section className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <section id="collection" className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 overflow-x-auto">
             <Filter className="h-5 w-5 flex-shrink-0 text-muted-foreground" />
@@ -103,7 +93,7 @@ export default function Merch() {
               >
                 {category.name}
                 <Badge variant="secondary" className="ml-2">
-                  {category.count}
+                  {category.id === "all" ? askDoGoodProducts.length : askDoGoodProducts.filter((product) => product.category === category.id).length}
                 </Badge>
               </Button>
             ))}
@@ -120,11 +110,15 @@ export default function Merch() {
                 className="group relative overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:shadow-lg"
               >
                 <div className="relative aspect-square overflow-hidden bg-muted">
-                  <img
+                  {product.id === "tshirt-soft-life-discipline" || product.id === "tshirt-protect-the-girls" ? (
+                    <div role="img" aria-label={`${product.name} design mockup`} className="h-full w-full bg-cover" style={{ backgroundImage: `url(${product.image})`, backgroundSize: "200% 100%", backgroundPosition: product.id === "tshirt-soft-life-discipline" ? "left center" : "right center" }} />
+                  ) : <img
                     src={product.image}
                     alt={product.name}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                    loading="lazy"
+                    onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/images/branding/askdogood-logo.png"; }}
+                  />}
                   {!product.inStock ? (
                     <div className="absolute inset-0 flex items-center justify-center bg-background/80">
                       <Badge variant="secondary" className="px-4 py-2 text-lg">
@@ -132,7 +126,7 @@ export default function Merch() {
                       </Badge>
                     </div>
                   ) : null}
-                  {product.featured ? <Badge className="absolute left-4 top-4 bg-primary">Featured</Badge> : null}
+                  <Badge className="absolute left-4 top-4 bg-primary">Design preview</Badge>
                   <Badge
                     variant="outline"
                     className="absolute right-4 top-4 bg-background/90 text-xs capitalize backdrop-blur-sm"
@@ -154,7 +148,7 @@ export default function Merch() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold">${product.price}</span>
+                    <span className="text-sm font-semibold text-muted-foreground">Collection concept</span>
                     <Badge variant="outline" className="text-xs capitalize">
                       {product.category}
                     </Badge>
@@ -185,15 +179,11 @@ export default function Merch() {
                     </div>
                   ) : null}
 
-                  <Button
-                    onClick={() => handleAddToCart(product)}
-                    disabled={!product.inStock}
-                    className="w-full"
-                    size="lg"
-                  >
-                    <ShoppingCart className="mr-2 h-4 w-4" />
-                    {product.inStock ? "Shop storefront" : "Unavailable"}
-                  </Button>
+                  {(hasValidCheckoutUrl(product.stripeLink) || hasValidCheckoutUrl(product.checkoutUrl)) && product.inStock ? (
+                    <Button onClick={() => handleAddToCart(product)} className="w-full" size="lg">View ordering details <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  ) : (
+                    <Button asChild className="w-full" size="lg"><a href="/#newsletter">Get launch updates <ArrowRight className="ml-2 h-4 w-4" /></a></Button>
+                  )}
                 </div>
               </div>
             ))}
