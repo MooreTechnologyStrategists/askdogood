@@ -1,9 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Flower2, Music, Laptop, Scissors, Sprout, Sun, Droplets } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Interests() {
   const [selectedImage, setSelectedImage] = useState(0);
+
+  useEffect(() => {
+    const section = window.location.hash.slice(1);
+    if (section === "music" || section === "tools") {
+      requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView());
+    }
+  }, []);
 
   const gardenImages = [
     { url: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", caption: "Tending the garden - where healing meets growth" },
@@ -204,10 +211,10 @@ export default function Interests() {
         <div className="container max-w-5xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Behind the work</p>
           <h2 className="mt-3 text-4xl font-bold">The tools I use to make things happen</h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">I move between creative work and practical systems. Canva helps me shape ideas visually; Azure helps me build and manage technology. Here, I'll share the software I'm actually using and what I make with it.</p>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">I move between creative work and practical systems. These are two tools I use to turn ideas into something people can actually experience.</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border bg-background p-6"><h3 className="text-2xl font-semibold">Create</h3><p className="mt-3 leading-7 text-muted-foreground">Visuals, stories, and useful resources for AskDoGood and The Dope Cloud Teacher.</p></div>
-            <div className="rounded-2xl border bg-background p-6"><h3 className="text-2xl font-semibold">Build</h3><p className="mt-3 leading-7 text-muted-foreground">The systems and tools that help good ideas reach real people.</p></div>
+            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Create</p><h3 className="mt-3 text-2xl font-semibold">Canva</h3><p className="mt-3 leading-7 text-muted-foreground">For shaping visuals and resources that help an idea connect with people.</p></div>
+            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Build</p><h3 className="mt-3 text-2xl font-semibold">Microsoft Azure</h3><p className="mt-3 leading-7 text-muted-foreground">For the technology and systems behind the work I bring to life.</p></div>
           </div>
         </div>
       </section>
