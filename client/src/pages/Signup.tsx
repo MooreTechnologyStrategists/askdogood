@@ -7,7 +7,7 @@ export default function Signup() {
   const [, setLocation] = useLocation();
 
   // Azure Static Web Apps managed auth endpoints
-  const AAD_LOGIN = "/.auth/login/aad";
+  const AAD_LOGIN = "/.auth/login/aad?post_login_redirect_uri=/profile";
   // Optional if you enable Google later:
   // const GOOGLE_LOGIN = "/.auth/login/google";
 
@@ -97,8 +97,7 @@ export default function Signup() {
               */}
 
               <div className="text-xs text-muted-foreground font-sans leading-relaxed">
-                By continuing, you agree to our Terms and Privacy Policy.
-                (We’ll link these properly next.)
+                Microsoft handles account sign-in. Your profile notes are saved on this device.
               </div>
             </CardContent>
 
