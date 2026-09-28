@@ -22,8 +22,7 @@ import PersistentCTABanner from '../components/PersistentCTABanner';
 import RecommendedReads from '../components/RecommendedReads';
 import SEO from "@/components/SEO";
 
-const BLOG_ICON_URL =
-  "https://askdogoodassets.blob.core.windows.net/images/blog_icon.png";
+const BLOG_ICON_URL = "/images/personal/rosee-garden-2026.webp";
 
 // ✅ Local fallback asset (must exist at: client/public/assets/img/blog/_fallback/blog.webp)
 const BLOG_FALLBACK = "/assets/img/blog/_fallback/blog.webp";
@@ -206,7 +205,7 @@ export default function Blog() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border bg-secondary/20 shadow-sm">
                   <img
                     src={BLOG_ICON_URL}
-                    alt="Ask DoGood Blog icon"
+                    alt="RoSeé sharing the garden behind AskDoGood"
                     className="h-full w-full object-cover"
                     loading="lazy"
                     decoding="async"
@@ -258,7 +257,7 @@ export default function Blog() {
               {featured.map((post) => (
                 <Link key={post.id} href={`/blog/${post.id}`}>
                 <Card
-                  className="hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-1 overflow-hidden cursor-pointer"
+                  className="h-full border-[#173c32]/15 bg-[#fffaf1] hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-1 overflow-hidden cursor-pointer"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
@@ -326,7 +325,7 @@ export default function Blog() {
             {filtered.map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`}>
               <Card
-                className="hover:shadow-lg transition-shadow overflow-hidden cursor-pointer"
+                className="h-full border-[#173c32]/15 bg-[#fffaf1] hover:shadow-lg transition-shadow overflow-hidden cursor-pointer"
               >
                 <div className="aspect-video w-full overflow-hidden">
                   <img
@@ -395,5 +394,4 @@ export default function Blog() {
       </>
     );
   }
-
 

@@ -194,22 +194,18 @@ export default function BlogPost() {
         tags={post.tags}
         schema={articleSchema}
       />
-      {/* Hero Section with Featured Image */}
-      <section
-        className="relative py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroSrc})` }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
+      {/* A readable introduction lets the article and its image each have room. */}
+      <section className="bg-[#fff8ed] py-12 md:py-20">
+        <div className="container grid gap-9 lg:grid-cols-2 lg:items-center">
+          <div className="max-w-3xl text-foreground">
             <Link href="/blog">
-              <Button className="text-white mb-6 hover:bg-white/20 bg-transparent">
+              <Button variant="outline" className="mb-6">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
               </Button>
             </Link>
 
-            <div className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium mb-4">
               {safeCategory}
             </div>
 
@@ -217,7 +213,7 @@ export default function BlogPost() {
               {safeTitle}
             </h1>
 
-            <div className="flex items-center justify-center gap-6 text-white/90">
+            <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <span>{safeDateLabel(post.date)}</span>
@@ -228,6 +224,7 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
+          <img src={heroSrc} alt={safeTitle} className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/assets/img/blog/_fallback/blog.webp"; }} />
         </div>
       </section>
 
