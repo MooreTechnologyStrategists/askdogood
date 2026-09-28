@@ -6,7 +6,7 @@ import { BookOpen, HeartHandshake, Home, Menu, ShoppingBag, User, X } from "luci
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const officialLogo = "/images/branding/the-dope-cloud-teacher-logo.png";
+  const officialLogo = "/images/branding/askdogood-logo.png";
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -27,15 +27,12 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <img
             src={officialLogo}
-            alt="The Dope Cloud Teacher official logo"
+            alt="AskDoGood official logo"
             className="h-8 w-auto rounded-md object-contain"
             loading="eager"
             width="120"
             height="32"
           />
-          <span className="hidden text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-foreground md:inline">
-            Ask DoGood
-          </span>
         </Link>
 
         {/* CENTER: Nav (desktop) */}
