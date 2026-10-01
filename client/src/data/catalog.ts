@@ -30,6 +30,26 @@ export interface CatalogItem {
 
 export const flagshipDigitalProducts: CatalogItem[] = [
   {
+    id: "7-day-reset",
+    name: "AskDoGood 7-Day Reset",
+    kind: "digital",
+    platform: "stripe",
+    priceLabel: "$17",
+    slug: "7-day-reset",
+    status: "Available now",
+    shortSummary:
+      "A gentle seven-day structure for rebuilding food, movement, rest, and daily wellness habits.",
+    description:
+      "A practical one-week reset for people who want a clear place to begin without crash diets or perfection pressure. Use the daily prompts and simple routine to reduce overwhelm, notice what your body needs, and build momentum you can continue.",
+    cta: "Take your next good step today.",
+    image: "/images/branding/askdogood-logo.png",
+    category: "Wellness reset",
+    checkoutUrl: "https://buy.stripe.com/14AfZi4Ie6f6g2Igbs0sU05",
+    checkoutState: "live",
+    internalPath: "/product/7-day-reset",
+    notes: "Secure Stripe checkout. Digital next steps are provided after purchase.",
+  },
+  {
     id: "thyroid-health-mastery",
     name: "Thyroid Health Mastery Course",
     kind: "digital",
@@ -212,10 +232,10 @@ export const membershipOffers: CatalogItem[] = [
     id: "dogood-wellness-circle",
     name: "DoGood Wellness Circle",
     kind: "membership",
-    platform: "both",
+    platform: "stripe",
     priceLabel: "$19",
     slug: "dogood-wellness-circle",
-    status: "Ready",
+    status: "Available now",
     shortSummary:
       "One simple monthly membership for support, accountability, and practical wellness guidance.",
     description:
@@ -223,7 +243,7 @@ export const membershipOffers: CatalogItem[] = [
     cta: "Join the monthly membership.",
     image: "/images/branding/askdogood-logo-navy.png",
     category: "Membership / Wellness",
-    checkoutUrl: GUMROAD_URLS.wellnessCircle,
+    checkoutUrl: "https://buy.stripe.com/5kQdRa8Yubzq5o4f7o0sU06",
     checkoutState: "live",
     internalPath: "/product/dogood-wellness-circle",
   },
@@ -286,6 +306,26 @@ export function hasLiveCheckout(item?: CatalogItem | null): boolean {
 }
 
 export const serviceCatalog: CatalogItem[] = [
+  {
+    id: "custom-wellness-plan",
+    name: "Custom Wellness Plan",
+    kind: "service",
+    platform: "stripe",
+    priceLabel: "$97",
+    slug: "custom-wellness-plan",
+    status: "Available now",
+    shortSummary:
+      "Personalized, practical wellness guidance shaped around your goals, routines, and real life.",
+    description:
+      "A focused plan for people who need more than generic advice. After checkout, AskDoGood gathers the information needed to shape realistic next steps around food, movement, rest, stress, and consistency. This is wellness education and planning, not medical care.",
+    cta: "Get a plan built around how you actually live.",
+    image: "/images/branding/askdogood-logo.png",
+    category: "Personal wellness planning",
+    checkoutUrl: "https://book.stripe.com/bJe7sMgqW7ja4k0f7o0sU07",
+    checkoutState: "live",
+    internalPath: "/product/custom-wellness-plan",
+    notes: "Secure Stripe booking checkout. Personalized next-step instructions follow purchase.",
+  },
   {
     id: "discovery-call",
     name: "Personal Wellness Reset Coaching",
