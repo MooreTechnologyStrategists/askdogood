@@ -43,6 +43,7 @@ export default function ProductDetail() {
 
   const isLive = product.checkoutState === "live" && !!product.checkoutUrl;
   const isMembership = product.kind === "membership";
+  const isService = product.kind === "service";
 
   return (
     <div className="min-h-screen">
@@ -107,7 +108,7 @@ export default function ProductDetail() {
                     >
                       <Button size="lg" className="w-full text-base rounded-xl gap-2">
                         <ShoppingBag className="w-5 h-5" />
-                        {isMembership ? "Join Now" : "Buy Now — Instant Access"}
+                        {isMembership ? "Join Now" : isService ? "Purchase & Get Next Steps" : "Buy Now — Instant Access"}
                       </Button>
                     </a>
                   ) : (
@@ -215,7 +216,7 @@ export default function ProductDetail() {
             >
               <Button size="lg" className="rounded-xl gap-2 px-10 text-base">
                 <ShoppingBag className="w-5 h-5" />
-                {isMembership ? "Join the Circle" : "Get Instant Access"}
+                {isMembership ? "Join the Circle" : isService ? "Purchase Your Plan" : "Get Instant Access"}
               </Button>
             </a>
           ) : (
@@ -258,6 +259,11 @@ function buildFallbackDetail(product: CatalogItem) {
       "A simple plan you can act on quickly",
       "Momentum toward better health and consistency",
     ],
-    deliveryNote: "Digital access is delivered after checkout.",
+    deliveryNote:
+      product.kind === "service"
+        ? "Personalized next-step instructions are provided after checkout."
+        : product.kind === "membership"
+          ? "Membership next steps are provided after checkout."
+          : "Digital access is delivered after checkout.",
   };
 }
