@@ -8,6 +8,51 @@ export interface ProductDetailContent {
 }
 
 export const productDetailsById: Record<string, ProductDetailContent> = {
+  "7-day-reset": {
+    headline: "Seven days. One realistic reset. No perfection required.",
+    subheadline:
+      "A warm, practical reset to help you rebuild food, movement, rest, and everyday wellness habits one manageable day at a time.",
+    includes: [
+      "A clear seven-day wellness rhythm",
+      "Simple daily food, movement, rest, and reflection prompts",
+      "Practical guidance that works with a real schedule",
+      "A continuation plan for keeping your momentum",
+    ],
+    bestFor: [
+      "People who feel overwhelmed and need a gentle place to restart",
+      "Anyone tired of all-or-nothing wellness plans",
+      "People who want useful structure without crash dieting",
+    ],
+    outcomes: [
+      "A calmer, clearer daily wellness routine",
+      "More confidence about what to do next",
+      "Seven days of momentum you can continue building on",
+    ],
+    deliveryNote: "Digital reset materials and next steps are provided after checkout.",
+  },
+  "custom-wellness-plan": {
+    headline: "Get practical wellness guidance shaped around your real life.",
+    subheadline:
+      "A personalized plan for your goals, routines, barriers, and next steps—not another generic checklist that ignores how you actually live.",
+    includes: [
+      "A focused review of your goals and current routine",
+      "Personalized food, movement, rest, and consistency recommendations",
+      "Clear priorities so you know where to begin",
+      "A practical written plan you can follow and revisit",
+    ],
+    bestFor: [
+      "People who need direction beyond general wellness content",
+      "Anyone managing competing health, schedule, or energy demands",
+      "People ready to make realistic changes with a clear plan",
+    ],
+    outcomes: [
+      "A clearer picture of your highest-value next steps",
+      "A realistic wellness structure built around your life",
+      "Less confusion and more confidence about where to focus",
+    ],
+    deliveryNote:
+      "After checkout, you will receive instructions for providing the information needed to prepare your personalized plan. This service is wellness education, not medical care.",
+  },
   "21-day-plant-based-reset": {
     headline: "Reset your routine with real food that supports healing.",
     subheadline:
