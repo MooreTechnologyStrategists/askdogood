@@ -25,11 +25,15 @@ import {
   type CatalogItem,
 } from "@/data/catalog";
 
-// Only include products with a working Gumroad checkout link
-import { GUMROAD_URLS } from "@/config/gumroad";
-const readyNow = [...flagshipDigitalProducts, ...membershipOffers].filter(
-  (item) => hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)
-);
+const isTrustedCheckout = (item: CatalogItem) =>
+  hasLiveCheckout(item) &&
+  Boolean(
+    item.checkoutUrl?.startsWith("https://buy.stripe.com/") ||
+      item.checkoutUrl?.startsWith("https://book.stripe.com/") ||
+      item.checkoutUrl?.startsWith("https://askdogood.gumroad.com/")
+  );
+
+const readyNow = [...flagshipDigitalProducts, ...membershipOffers, ...serviceCatalog].filter(isTrustedCheckout);
 
 const formatCatalogPrice = (item: CatalogItem) =>
   item.kind === "membership" ? `${item.priceLabel}/month` : item.priceLabel;
@@ -38,18 +42,22 @@ const launchRoadmap = launchOrder
   .map((id) => catalogById[id])
   .filter((item): item is CatalogItem => Boolean(item));
 
-// Only show fastCashOffer if it has a working Gumroad checkout
-const fastCashOffer = hasLiveCheckout(catalogById["thyroid-health-mastery"]) && catalogById["thyroid-health-mastery"].checkoutUrl && catalogById["thyroid-health-mastery"].checkoutUrl.startsWith(GUMROAD_URLS.storefront)
+const fastCashOffer = isTrustedCheckout(catalogById["thyroid-health-mastery"])
   ? catalogById["thyroid-health-mastery"]
   : null;
 
 function CatalogAction({ item }: { item: CatalogItem }) {
-  // Only show buy/download if Gumroad checkout is live and valid
-  if (hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)) {
+  if (isTrustedCheckout(item)) {
     return (
       <a href={item.checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
         <Button className="w-full gap-2">
-          {item.kind === "lead-magnet" ? "Download" : "Buy & Download Now"}
+          {item.kind === "lead-magnet"
+            ? "Download"
+            : item.kind === "membership"
+              ? "Join Monthly"
+              : item.kind === "service"
+                ? "Purchase & Get Next Steps"
+                : "Buy & Download Now"}
           <ExternalLink className="h-4 w-4" />
         </Button>
       </a>
@@ -93,7 +101,7 @@ function CatalogCard({ item }: { item: CatalogItem }) {
 
 export default function Shop() {
   const liveProductsCount = readyNow.length;
-  const liveResourcesCount = leadMagnets.filter((item) => hasLiveCheckout(item) && item.checkoutUrl && item.checkoutUrl.startsWith(GUMROAD_URLS.storefront)).length;
+  const liveResourcesCount = leadMagnets.filter(isTrustedCheckout).length;
   const merchPreviewCount = comingSoonMerchItems.length;
 
   const healthNutritionItems = [
