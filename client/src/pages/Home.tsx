@@ -42,7 +42,8 @@ export default function Home() {
           <p className="mt-6 max-w-xl text-xl leading-8 text-muted-foreground">Practical wellness for real life.</p>
           <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">Come as you are after a long day. There is room here for useful wellness, a garden story, good music, and an honest conversation about the world we live in.</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/resources/start"><Button className="rounded-full px-6 py-6 text-base">Explore wellness <ArrowRight className="ml-2 h-4 w-4" /></Button></Link>
+            <Link href="/shop"><Button className="rounded-full px-6 py-6 text-base">Shop live offers <ArrowRight className="ml-2 h-4 w-4" /></Button></Link>
+            <Link href="/resources/start"><Button variant="outline" className="rounded-full px-6 py-6 text-base">Explore wellness</Button></Link>
             <Link href="/work-with-askdogood"><Button variant="outline" className="rounded-full px-6 py-6 text-base">Partner with AskDoGood</Button></Link>
             <a href="#pockets" className="inline-flex min-h-12 items-center rounded-full px-4 font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Explore the little pockets ↓</a>
           </div>
