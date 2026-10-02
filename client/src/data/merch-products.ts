@@ -30,7 +30,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_SOFTLIFE"
+    checkoutUrl: "https://askdogood.gumroad.com/l/askdogood-soft-life-is-a-discipline-tee"
   },
   {
     id: "tshirt-classroom-to-cloud",
