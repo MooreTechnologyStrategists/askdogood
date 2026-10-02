@@ -46,14 +46,14 @@ export default function Merch() {
           </div>
           <h1 className="mt-6 text-5xl font-bold md:text-6xl">Wear what moves you.</h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            Explore designs for joy, healing, and community. These are collection previews; join the list for launch and ordering details.
+            Shop AskDoGood pieces rooted in peace, joy, healing, culture, and commUNITY. Items marked Shop Now have a live purchase path; upcoming pieces are clearly labeled Coming Soon.
           </p>
-          <a href="#original-collection" className="mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">See the original three <ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
+          <a href="#original-collection" className="mt-7 inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Shop AskDoGood <ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
         </div>
       </section>
 
       <section id="original-collection" className="scroll-mt-20 bg-[#fff8ed] py-16 md:py-20" aria-labelledby="original-collection-heading">
-        <div className="container mx-auto px-4"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">The original AskDoGood pieces</p><h2 id="original-collection-heading" className="mt-3 text-4xl">Three ways to carry the good.</h2><p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/75">These are the original apparel designs: an embroidered black hoodie, a matching black hoodie and jogger set, and a cream tee. They’re collection previews; join the list to hear when ordering opens.</p><img src="/images/merch/askdogood-original-three.webp" alt="The original AskDoGood embroidered black hoodie, matching hoodie and jogger set, and cream tee" className="mt-8 w-full rounded-3xl border border-[#173c32]/10 shadow-lg" /><div className="mt-5 grid gap-3 text-center font-semibold sm:grid-cols-3"><span>Embroidered black hoodie</span><span>Matching hoodie + joggers</span><span>Cream tee</span></div><a href="/#newsletter" className="mt-8 inline-flex min-h-11 items-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Get the first ordering update <ArrowRight className="ml-2 h-4 w-4" /></a></div>
+        <div className="container mx-auto px-4"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">The original AskDoGood pieces</p><h2 id="original-collection-heading" className="mt-3 text-4xl">Three ways to carry the good.</h2><p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/75">These are the original apparel designs: an embroidered black hoodie, a matching black hoodie and jogger set, and a cream tee. We’re bringing these signature pieces into the live store now. Each item will switch to Shop Now as soon as its production and checkout path is verified.</p><img src="/images/merch/askdogood-original-three.webp" alt="The original AskDoGood embroidered black hoodie, matching hoodie and jogger set, and cream tee" className="mt-8 w-full rounded-3xl border border-[#173c32]/10 shadow-lg" /><div className="mt-5 grid gap-3 text-center font-semibold sm:grid-cols-3"><span>Embroidered black hoodie</span><span>Matching hoodie + joggers</span><span>Cream tee</span></div><a href="/#newsletter" className="mt-8 inline-flex min-h-11 items-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Get notified when these drop <ArrowRight className="ml-2 h-4 w-4" /></a></div>
       </section>
 
       <section aria-labelledby="music-collection-heading" className="bg-[#173c32] text-[#fff8e9]">
@@ -130,7 +130,7 @@ export default function Merch() {
                       </Badge>
                     </div>
                   ) : null}
-                  <Badge className="absolute left-4 top-4 bg-primary">Design preview</Badge>
+                  <Badge className="absolute left-4 top-4 bg-primary">{(hasValidCheckoutUrl(product.stripeLink) || hasValidCheckoutUrl(product.checkoutUrl)) && product.inStock ? "Available now" : "Coming soon"}</Badge>
                   <Badge
                     variant="outline"
                     className="absolute right-4 top-4 bg-background/90 text-xs capitalize backdrop-blur-sm"
@@ -152,7 +152,7 @@ export default function Merch() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-semibold text-muted-foreground">Collection concept</span>
+                    <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
                     <Badge variant="outline" className="text-xs capitalize">
                       {product.category}
                     </Badge>
@@ -184,9 +184,9 @@ export default function Merch() {
                   ) : null}
 
                   {(hasValidCheckoutUrl(product.stripeLink) || hasValidCheckoutUrl(product.checkoutUrl)) && product.inStock ? (
-                    <Button onClick={() => handleAddToCart(product)} className="w-full" size="lg">View ordering details <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                    <Button onClick={() => handleAddToCart(product)} className="w-full" size="lg">Shop now <ArrowRight className="ml-2 h-4 w-4" /></Button>
                   ) : (
-                    <Button asChild className="w-full" size="lg"><a href="/#newsletter">Get launch updates <ArrowRight className="ml-2 h-4 w-4" /></a></Button>
+                    <Button disabled className="w-full" size="lg">Coming soon</Button>
                   )}
                 </div>
               </div>
@@ -206,7 +206,7 @@ export default function Merch() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <h2 className="text-3xl font-bold">Made to mean something</h2>
             <p className="text-lg text-muted-foreground">
-              Every collection starts with a message worth carrying. Browse what’s here, and join the list for the music-inspired drop.
+              AskDoGood is more than a logo. It is a reminder to protect your peace, choose love, show up for commUNITY, and leave people and places a little better than you found them. Wear something that means something.
             </p>
           </div>
         </div>
