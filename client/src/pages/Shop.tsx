@@ -89,7 +89,6 @@ function CatalogCard({ item }: { item: CatalogItem }) {
         <div className="space-y-2 text-sm text-muted-foreground">
           <p>{item.description}</p>
           <p className="font-medium text-foreground/80">{item.category}</p>
-          {item.notes ? <p>{item.notes}</p> : null}
         </div>
         <div className="mt-auto">
           <CatalogAction item={item} />
@@ -100,7 +99,7 @@ function CatalogCard({ item }: { item: CatalogItem }) {
 }
 
 export default function Shop() {
-  const liveProductsCount = readyNow.length;
+  const liveProductsCount = flagshipDigitalProducts.filter(isTrustedCheckout).length;
   const liveResourcesCount = leadMagnets.filter(isTrustedCheckout).length;
   const merchPreviewCount = comingSoonMerchItems.length;
 
