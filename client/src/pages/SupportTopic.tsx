@@ -141,7 +141,7 @@ export default function SupportTopic() {
       >
         <p>
           {topic.id === "relationships"
-            ? "The Wellness Circle is an ongoing wellness membership. For a personal conversation, ask us about availability and scope first."
+            ? "AskDoGood Wellness Membership offers ongoing wellness resources. For a personal conversation, ask us about availability and scope first."
             : topic.id === "career"
               ? "The reset guide supports everyday habits and reflection. It is a wellness resource, not a career course."
               : "Read what’s included and how the offer works before purchasing."}
