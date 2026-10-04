@@ -1,8 +1,8 @@
 export const SITE_NAME = "Ask DoGood";
 export const SITE_URL = "https://askdogood.com";
-export const SITE_AUTHOR = 'RoSeé Murphy';
+export const SITE_AUTHOR = "RoSeé Murphy";
 export const DEFAULT_DESCRIPTION =
-  "AskDoGood helps people heal better, live smarter, and earn stronger through practical wellness, self-advocacy, and everyday stability.";
+  "AskDoGood offers practical health education, relationship resources, career direction, and everyday life support through guides, plans, membership, and community workshops.";
 export const DEFAULT_OG_IMAGE =
   "https://askdogood.com/images/branding/askdogood-logo.png";
 export const RSS_FEED_PATH = "/blog-rss.xml";
@@ -35,9 +35,9 @@ export type StaticSeoPage = {
 export const staticSeoPages: StaticSeoPage[] = [
   {
     path: "/",
-    title: "Ask DoGood | Heal Better, Live Smarter, Earn Stronger",
+    title: "AskDoGood | Health, Relationships & Everyday Life",
     description:
-      "AskDoGood helps communities heal and pay it forward through thyroid education, toxin reduction, meal discipline, employment stability, and practical whole-life wellness tools.",
+      "Find practical guides, wellness plans, community support, and clear next steps for health, relationships, career, and everyday life.",
     keywords: [
       "thyroid wellness",
       "eat to live",
@@ -57,7 +57,7 @@ export const staticSeoPages: StaticSeoPage[] = [
   },
   {
     path: "/about",
-    title: "About RoSeé Murphy | Ask DoGood",
+    title: "Our Mission & Story | AskDoGood",
     description:
       "Meet RoSeé Murphy, founder of Ask DoGood, and learn how lived thyroid recovery, resilience, and wellness advocacy shape the site’s guidance and resources.",
     keywords: [
@@ -99,13 +99,19 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "AskDoGood Digital Library | Flipbooks and Practical Guides",
     description:
       "Browse the AskDoGood digital library for live flipbooks and practical visual guides, including Indian Creek Trail and Keep Moving.",
-    keywords: ["AskDoGood digital library", "flipbooks", "Indian Creek Trail", "Keep Moving"],
+    keywords: [
+      "AskDoGood digital library",
+      "flipbooks",
+      "Indian Creek Trail",
+      "Keep Moving",
+    ],
     priority: 0.78,
     changefreq: "weekly",
   },
   {
     path: "/herbs",
-    title: "A-Z Herb Dictionary — Benefits, Interactions & Thyroid Safety | Ask DoGood",
+    title:
+      "A-Z Herb Dictionary — Benefits, Interactions & Thyroid Safety | Ask DoGood",
     description:
       "Comprehensive A-Z guide to medicinal herbs: where they grow, proven benefits, active compounds, drug interactions, and thyroid-specific safety notes.",
     keywords: [
@@ -302,7 +308,11 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "Roasted Vegetables Trio Recipe | Ask DoGood",
     description:
       "A simple roasted vegetables trio recipe for a practical, nourishing, anti-inflammatory plate.",
-    keywords: ["roasted vegetables recipe", "healthy side dish", "anti inflammatory recipe"],
+    keywords: [
+      "roasted vegetables recipe",
+      "healthy side dish",
+      "anti inflammatory recipe",
+    ],
     type: "article",
     priority: 0.6,
     changefreq: "monthly",
@@ -332,7 +342,11 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "DoGood Lentil Burgers Recipe | Ask DoGood",
     description:
       "A hearty lentil burger recipe for plant-forward meals that still feel substantial and satisfying.",
-    keywords: ["lentil burgers", "plant based burgers", "healthy burger recipe"],
+    keywords: [
+      "lentil burgers",
+      "plant based burgers",
+      "healthy burger recipe",
+    ],
     type: "article",
     priority: 0.6,
     changefreq: "monthly",
@@ -342,7 +356,11 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "Chickpea Burgers Recipe | Ask DoGood",
     description:
       "A simple chickpea burger recipe for easy, nourishing plant-based meals.",
-    keywords: ["chickpea burger recipe", "plant based burgers", "healthy recipe"],
+    keywords: [
+      "chickpea burger recipe",
+      "plant based burgers",
+      "healthy recipe",
+    ],
     type: "article",
     priority: 0.6,
     changefreq: "monthly",
@@ -419,8 +437,7 @@ export const staticSeoPages: StaticSeoPage[] = [
       "thyroid healing",
     ],
     type: "product",
-    image:
-      "/images/products/gumroad_cover.png",
+    image: "/images/products/gumroad_cover.png",
     priority: 0.9,
     changefreq: "weekly",
   },
@@ -429,10 +446,13 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "Thyroid Mastery Course Product Page | Ask DoGood",
     description:
       "Review the Ask DoGood thyroid mastery course offer, benefits, and what is included before you enroll.",
-    keywords: ["thyroid mastery course", "thyroid product page", "wellness course"],
+    keywords: [
+      "thyroid mastery course",
+      "thyroid product page",
+      "wellness course",
+    ],
     type: "product",
-    image:
-      "/images/products/gumroad_cover.png",
+    image: "/images/products/gumroad_cover.png",
     priority: 0.85,
     changefreq: "weekly",
   },
@@ -468,7 +488,11 @@ export const staticSeoPages: StaticSeoPage[] = [
     title: "Supplement Guide | Ask DoGood",
     description:
       "Access the Ask DoGood supplement guide for more practical, informed decisions about wellness support tools.",
-    keywords: ["supplement guide", "wellness supplements", "thyroid supplements"],
+    keywords: [
+      "supplement guide",
+      "wellness supplements",
+      "thyroid supplements",
+    ],
     priority: 0.75,
     changefreq: "weekly",
   },
@@ -569,7 +593,7 @@ export const staticSeoPages: StaticSeoPage[] = [
   },
 ];
 
-const seoByPath = new Map(staticSeoPages.map((page) => [page.path, page]));
+const seoByPath = new Map(staticSeoPages.map(page => [page.path, page]));
 
 export function getStaticSeoForPath(path: string) {
   return seoByPath.get(path);

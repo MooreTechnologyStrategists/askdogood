@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import AnnouncementBar from "./components/AnnouncementBar";
 import BookTeaser from "./components/BookTeaser";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import SupportTopic from "./pages/SupportTopic";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import RelationshipKeeper from "./pages/RelationshipKeeper";
@@ -22,6 +23,7 @@ import BlogPost from "./pages/BlogPost";
 import BlogRSS from "./pages/BlogRSS";
 import Journey from "./pages/Journey";
 import Contact from "./pages/Contact";
+import ClinicalRecipesApp from "./components/ClinicalRecipesApp";
 import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
 import LabelScanner from "./pages/LabelScanner";
 import Shop from "./pages/Shop";
@@ -79,100 +81,121 @@ import WorkWithAskDoGood from "./pages/WorkWithAskDoGood";
 import ProductDetail from "./pages/ProductDetail";
 import ImageStudio from "./pages/ImageStudio";
 
-
 // Clinical Recipe System page - using standalone component from pages folder
 
 function Router() {
   const [location] = useLocation();
-  
+
   // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
-  
+
   return (
-  <>
-    <RouteSeo location={location} />
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
+    <>
+      <RouteSeo location={location} />
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
 
-    {/* Auth */}
-    <Route path="/dashboard" component={Dashboard} />
-    <Route path="/relationship-keeper" component={RelationshipKeeper} />
-    <Route path="/profile" component={Profile} />
-    <Route path="/rewards" component={Rewards} />
-    <Route path="/challenges" component={Challenges} />
+        {/* Auth */}
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/relationship-keeper" component={RelationshipKeeper} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/rewards" component={Rewards} />
+        <Route path="/challenges" component={Challenges} />
 
-    {/* Content */}
-    <Route path="/about" component={About} />
-    <Route path="/blog" component={Blog} />
-    <Route path="/blog/:slug" component={BlogPost} />
-    <Route path="/rss" component={BlogRSS} />
-    <Route path="/feed" component={BlogRSS} />
-    <Route path="/journey" component={Journey} />
-    <Route path="/keep-moving" component={KeepMoving} />
-    <Route path="/interests" component={Interests} />
-    <Route path="/garden" component={Garden} />
-    <Route path="/no-fluff" component={NoFluff} />
-    <Route path="/resources" component={Resources} />
-    <Route path="/resources/start" component={ResourcesStart} />
-    <Route path="/resources/library" component={ResourcesLibrary} />
-    <Route path="/contact" component={Contact} />
-    <Route path="/behind-the-scenes" component={BehindTheScenes} />
-    <Route path="/behind-the-scenes/in-my-kitchen" component={InMyKitchen} />
-    <Route path="/work-with-askdogood" component={WorkWithAskDoGood} />
-    <Route path="/guest-contributors" component={GuestContributors} />
-    <Route path="/herbs" component={HerbDictionary} />
-    <Route path="/garden/:season" component={GardenSeasonPost} />
+        {/* Content */}
+        <Route path="/about" component={About} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/rss" component={BlogRSS} />
+        <Route path="/feed" component={BlogRSS} />
+        <Route path="/journey" component={Journey} />
+        <Route path="/keep-moving" component={KeepMoving} />
+        <Route path="/interests" component={Interests} />
+        <Route path="/garden" component={Garden} />
+        <Route path="/no-fluff" component={NoFluff} />
+        <Route path="/support/:topic" component={SupportTopic} />
+        <Route path="/resources" component={Resources} />
+        <Route path="/resources/start" component={ResourcesStart} />
+        <Route path="/resources/library" component={ResourcesLibrary} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/behind-the-scenes" component={BehindTheScenes} />
+        <Route
+          path="/behind-the-scenes/in-my-kitchen"
+          component={InMyKitchen}
+        />
+        <Route path="/work-with-askdogood" component={WorkWithAskDoGood} />
+        <Route path="/guest-contributors" component={GuestContributors} />
+        <Route path="/herbs" component={HerbDictionary} />
+        <Route path="/garden/:season" component={GardenSeasonPost} />
 
+        {/* Wellness */}
+        <Route path="/meal-prep" component={MealPrep} />
+        <Route
+          path="/clinical-recipes"
+          component={ClinicalRecipesPageComponent}
+        />
+        <Route path="/recipes/planner" component={ClinicalRecipesApp} />
+        <Route path="/label-scanner" component={LabelScanner} />
 
-    {/* Wellness */}
-    <Route path="/meal-prep" component={MealPrep} />
-    <Route
-      path="/clinical-recipes"
-      component={ClinicalRecipesPageComponent}
-    />
-    <Route path="/label-scanner" component={LabelScanner} />
+        {/* Recipe Pages */}
+        <Route
+          path="/recipe/roasted-vegetables-trio"
+          component={RoastedVegetablesTrio}
+        />
+        <Route path="/recipe/quinoa-rice-medley" component={QuinoaRiceMedley} />
+        <Route
+          path="/recipe/purple-cabbage-broccoli-slaw"
+          component={PurpleCabbageBroccoliSlaw}
+        />
+        <Route
+          path="/recipe/dogood-lentil-burgers"
+          component={DoGoodLentilBurgers}
+        />
+        <Route path="/recipe/chickpea-burgers" component={ChickpeaBurgers} />
+        <Route
+          path="/recipe/green-smoothie-bowl"
+          component={GreenSmoothieBowl}
+        />
+        <Route path="/recipe/growing-fresh-mint" component={GrowingFreshMint} />
+        <Route path="/recipe/homemade-pizza" component={HomemadePizza} />
+        <Route path="/recipe/mason-jar-salad" component={MasonJarSalad} />
 
-    {/* Recipe Pages */}
-    <Route path="/recipe/roasted-vegetables-trio" component={RoastedVegetablesTrio} />
-    <Route path="/recipe/quinoa-rice-medley" component={QuinoaRiceMedley} />
-    <Route path="/recipe/purple-cabbage-broccoli-slaw" component={PurpleCabbageBroccoliSlaw} />
-    <Route path="/recipe/dogood-lentil-burgers" component={DoGoodLentilBurgers} />
-    <Route path="/recipe/chickpea-burgers" component={ChickpeaBurgers} />
-    <Route path="/recipe/green-smoothie-bowl" component={GreenSmoothieBowl} />
-    <Route path="/recipe/growing-fresh-mint" component={GrowingFreshMint} />
-    <Route path="/recipe/homemade-pizza" component={HomemadePizza} />
-    <Route path="/recipe/mason-jar-salad" component={MasonJarSalad} />
+        {/* Commerce */}
+        <Route path="/shop" component={Shop} />
+        <Route path="/merch" component={Merch} />
+        <Route
+          path="/course/thyroid-health-mastery"
+          component={ThyroidCourse}
+        />
 
-    {/* Commerce */}
-    <Route path="/shop" component={Shop} />
-    <Route path="/merch" component={Merch} />
-    <Route path="/course/thyroid-health-mastery" component={ThyroidCourse} />
-    
-    {/* Product Pages with Gumroad Integration */}
-    <Route path="/product/thyroid-mastery-course" component={ThyroidMasteryCourse} />
-    <Route path="/product/:slug" component={ProductDetail} />
+        {/* Product Pages with Gumroad Integration */}
+        <Route
+          path="/product/thyroid-mastery-course"
+          component={ThyroidMasteryCourse}
+        />
+        <Route path="/product/:slug" component={ProductDetail} />
 
-    {/* Lead Magnet Pages */}
-    <Route path="/free-thyroid-lab-guide" component={FreeThyroidLabGuide} />
-    <Route path="/free-meal-plan" component={FreeMealPlan} />
-    <Route path="/symptom-tracker" component={SymptomTracker} />
-    <Route path="/supplement-guide" component={SupplementGuide} />
-    <Route path="/doctor-checklist" component={DoctorChecklist} />
+        {/* Lead Magnet Pages */}
+        <Route path="/free-thyroid-lab-guide" component={FreeThyroidLabGuide} />
+        <Route path="/free-meal-plan" component={FreeMealPlan} />
+        <Route path="/symptom-tracker" component={SymptomTracker} />
+        <Route path="/supplement-guide" component={SupplementGuide} />
+        <Route path="/doctor-checklist" component={DoctorChecklist} />
 
-    {/* Coaching */}
-    <Route path="/coaching" component={Coaching} />
-    <Route path="/image-studio" component={ImageStudio} />
+        {/* Coaching */}
+        <Route path="/coaching" component={Coaching} />
+        <Route path="/image-studio" component={ImageStudio} />
 
-      {/* Errors */}
-      <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
-  </>
-);
+        {/* Errors */}
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </>
+  );
 }
 
 function App() {
@@ -183,12 +206,15 @@ function App() {
           <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
           <Toaster />
           <div className="flex flex-col min-h-screen">
+            <a className="adg-skip" href="#main-content">
+              Skip to content
+            </a>
             <AnnouncementBar />
             <Header />
-            <main className="flex-1">
+            <main id="main-content" className="flex-1 adg-site-content">
               <Router />
             </main>
-            <BookTeaser />
+
             <Chatbot />
             <Footer />
           </div>

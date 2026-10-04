@@ -1,166 +1,119 @@
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BookOpen, HandHeart, Sparkles, Users } from "lucide-react";
-
-const partners = [
-  "Senior centers and aging services",
-  "Veterans organizations",
-  "Faith communities and ministries",
-  "Nonprofits and community centers",
-  "Healthcare and public-health partners",
-  "Corporate sponsors and employee programs",
-] as const;
-
-const offers = [
-  {
-    title: "Organizational workshops",
-    description:
-      "A practical, in-person or virtual session on food, movement, or stress that your members can actually use, built around your group and your time.",
-    icon: <Users className="h-5 w-5 text-primary" />,
-  },
-  {
-    title: "Reset-style programming",
-    description:
-      "A guided, multi-week experience like the 21-Day Plant-Based Reset, adapted for your community and delivered with clear, simple materials.",
-    icon: <Sparkles className="h-5 w-5 text-primary" />,
-  },
-  {
-    title: "Digital resources for your members",
-    description:
-      "Guides, meal ideas, and reference tools your staff can hand to the people you serve, without creating new content from scratch.",
-    icon: <BookOpen className="h-5 w-5 text-primary" />,
-  },
-  {
-    title: "Sponsored community experiences",
-    description:
-      "A branded wellness event or program your organization sponsors, so your name reaches people through something genuinely useful.",
-    icon: <HandHeart className="h-5 w-5 text-primary" />,
-  },
-] as const;
-
+import {
+  Action,
+  PageIntro,
+  Section,
+  Reassurance,
+} from "@/components/Experience";
 export default function WorkWithAskDoGood() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(205,177,109,0.18),transparent_36%),linear-gradient(180deg,rgba(19,55,45,0.07),rgba(255,255,255,0.95))]" />
-        <div className="container relative z-10">
-          <div className="mx-auto max-w-4xl text-center">
-            <Badge className="mb-5 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.28em]">
-              Partner With AskDoGood
-            </Badge>
-            <h1 className="text-5xl font-bold leading-tight md:text-6xl font-serif">
-              Practical wellness programming for your community.
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-              AskDoGood brings workshops, guided resets, and everyday resources to the organizations
-              serving the people who need them most.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <a href="mailto:askdogood@gmail.com?subject=Partnership%20Inquiry%20for%20AskDoGood">
-                <Button className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Start a partnership conversation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-            </div>
-          </div>
+    <div className="adg-page">
+      <PageIntro
+        eyebrow="Workshops & partnerships"
+        title="Useful wellness for the people you serve."
+        text="Bring practical food, stress, healthy-habit, and life-transition education to your community. Programs can be adapted for adults, seniors, veterans, caregivers, families, and workplaces."
+        image="/images/personal/travel/rosee-speaking-paris-2023.webp"
+        alt="RoSeé speaking to a group in Paris"
+      >
+        <div className="adg-actions">
+          <Action href="/contact?topic=Community%20workshop">
+            Request a workshop conversation
+          </Action>
         </div>
-      </section>
-
-      <section className="border-y bg-[#fff8ed] py-16 md:py-20" aria-labelledby="work-in-motion"><div className="container"><p className="text-sm font-semibold uppercase tracking-widest text-primary">The work behind the invitation</p><h2 id="work-in-motion" className="mt-3 max-w-3xl text-3xl font-bold md:text-4xl">A lived story, public conversations, and resources people can use.</h2><p className="mt-4 max-w-3xl leading-7 text-muted-foreground">We show the kind of work and experience behind AskDoGood. A founder milestone is described as a founder milestone; an organization is called a partner only when that relationship is confirmed.</p><div className="mt-8 grid gap-5 md:grid-cols-3"><div className="rounded-3xl border bg-white p-6"><p className="text-sm font-semibold text-primary">Founder speaking · 2023</p><h3 className="mt-3 text-xl font-bold">Thyroid health in Paris</h3><p className="mt-3 leading-7 text-muted-foreground">RoSeé spoke on thyroid physiology and metabolism at an international conference in Bagnolet, France. Her own health journey gives the conversation a human starting point.</p><Link href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" className="mt-5 inline-flex font-semibold text-primary">See the story →</Link></div><div className="rounded-3xl border bg-white p-6"><p className="text-sm font-semibold text-primary">Ideas you can use</p><h3 className="mt-3 text-xl font-bold">Food, garden, and wellness resources</h3><p className="mt-3 leading-7 text-muted-foreground">Articles, seasonal reflections, recipes, and learning tools designed to start useful conversations at home or in a group.</p><Link href="/resources/library" className="mt-5 inline-flex font-semibold text-primary">Explore the library →</Link></div><div className="rounded-3xl border bg-white p-6"><p className="text-sm font-semibold text-primary">Build with us</p><h3 className="mt-3 text-xl font-bold">A workshop shaped for your people</h3><p className="mt-3 leading-7 text-muted-foreground">Tell us your audience, goals, format, and budget. We’ll propose a scope and fee for a workshop, conversation, or resource package.</p><a href="mailto:askdogood@gmail.com?subject=AskDoGood%20workshop%20scope" className="mt-5 inline-flex font-semibold text-primary">Request a proposal →</a></div></div></div></section>
-
-      <section className="py-16 md:py-20">
-        <div className="container">
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-10 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Who We Work With</p>
-              <h2 className="mt-3 text-3xl font-bold md:text-4xl">Built for the organizations already doing the work</h2>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {partners.map((partner) => (
-                <Card key={partner} className="rounded-2xl border border-border/70 bg-card shadow-sm">
-                  <CardContent className="p-5">
-                    <p className="text-base font-semibold leading-6">{partner}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+      </PageIntro>
+      <Section title="Choose a format.">
+        <div className="adg-grid adg-grid-three">
+          {[
+            [
+              "One workshop",
+              "A focused session on a practical topic, with take-home ideas participants can use.",
+            ],
+            [
+              "A short series",
+              "A connected set of sessions for building routines and practicing new habits.",
+            ],
+            [
+              "Sponsored community programming",
+              "Help make useful education and resources accessible to a group you care about.",
+            ],
+          ].map(([title, text]) => (
+            <article className="adg-card" key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <Action href="/contact?topic=Community%20workshop" secondary>
+                Discuss this format
+              </Action>
+            </article>
+          ))}
         </div>
-      </section>
-
-      <section className="bg-secondary/20 py-16 md:py-20">
-        <div className="container">
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-10 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">What We Bring</p>
-              <h2 className="mt-3 text-3xl font-bold md:text-4xl">Four ways to bring AskDoGood to your people</h2>
-            </div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {offers.map((offer) => (
-                <Card key={offer.title} className="h-full rounded-[1.75rem] border border-border/70 bg-background/90 shadow-sm">
-                  <CardHeader>
-                    <div className="mb-3 inline-flex w-fit rounded-2xl bg-primary/10 p-3">{offer.icon}</div>
-                    <CardTitle className="text-xl">{offer.title}</CardTitle>
-                    <CardDescription className="text-sm leading-7 text-muted-foreground">
-                      {offer.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </div>
+      </Section>
+      <Section tone title="Topics that meet real life.">
+        <div className="adg-grid adg-grid-three">
+          {[
+            [
+              "Food & meal planning",
+              "Affordable food ideas, hydration, and easier planning.",
+            ],
+            [
+              "Rest & stress",
+              "Sleep routines, everyday stress, and making space to recharge.",
+            ],
+            [
+              "Healthy aging & caregiving",
+              "Useful routines for seniors, caregivers, and families.",
+            ],
+            [
+              "Life transitions",
+              "Rebuilding structure during change, loss, or a new chapter.",
+            ],
+            [
+              "Garden & food literacy",
+              "Connecting growing, food, and everyday learning.",
+            ],
+            [
+              "Digital wellness",
+              "Thoughtful technology habits and everyday confidence.",
+            ],
+          ].map(([title, text]) => (
+            <article className="adg-card" key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
         </div>
-      </section>
-
-      <section className="container grid gap-10 py-16 md:grid-cols-[0.7fr_1.3fr] md:items-center md:py-20">
-        <img
-          src="/images/personal/professional/zachary-nelson-community.jpg"
-          alt="Community members gathered for a wellness workshop"
-          className="aspect-square w-full max-w-sm rounded-[2rem] object-cover"
-          loading="lazy"
-          width="600"
-          height="600"
-        />
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Why Partners Trust AskDoGood</p>
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">Grounded in lived experience, built for real communities</h2>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-            AskDoGood was built by Rosee from a personal health journey and years of working directly with families,
-            churches, and community organizations. Every workshop and resource is designed to be practical, respectful,
-            and easy for your team to put to use right away.
-          </p>
-          <Link href="/journey" className="mt-6 inline-flex items-center font-semibold text-primary">
-            Read the founder story <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <div className="container">
-          <div className="mx-auto max-w-3xl rounded-[2rem] border border-primary/20 bg-card px-8 py-10 text-center shadow-lg md:px-12 md:py-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Next Step</p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">Tell us about your community</h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-muted-foreground">
-              Send a note with your organization, who you serve, and what you have in mind. We will follow up to talk
-              through timing, format, and fit.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <a href="mailto:askdogood@gmail.com?subject=Partnership%20Inquiry%20for%20AskDoGood">
-                <Button className="rounded-3xl px-8 py-6 text-base font-semibold">
-                  Email AskDoGood
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
+      </Section>
+      <Section title="From idea to a clear proposal.">
+        <div className="adg-grid adg-grid-three">
+          {[
+            [
+              "Tell us about your group",
+              "Share the audience, goal, date, format, and approximate group size.",
+            ],
+            [
+              "Review your proposal",
+              "We confirm fit, content, availability, delivery, and a quoted price.",
+            ],
+            [
+              "Agree and prepare",
+              "Once the scope is agreed, we coordinate scheduling, materials, and next steps.",
+            ],
+          ].map(([title, text]) => (
+            <div className="adg-card" key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              AskDoGood provides education, tools, and wellness programming. It does not replace individualized medical care.
-            </p>
-          </div>
+          ))}
         </div>
-      </section>
-    </main>
+        <p className="adg-note">
+          Program fees are quoted based on scope, format, group size, and
+          delivery needs. Workshops provide non-clinical wellness education.
+        </p>
+        <Reassurance />
+        <div className="adg-actions">
+          <Action href="/contact?topic=Community%20workshop">
+            Plan a program with AskDoGood
+          </Action>
+        </div>
+      </Section>
+    </div>
   );
 }

@@ -1,269 +1,212 @@
-import { useParams, Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowLeft, ShoppingBag, Clock, Download } from "lucide-react";
+import { useParams } from "wouter";
+import SEO from "@/components/SEO";
+import {
+  Action,
+  PageIntro,
+  Section,
+  Reassurance,
+} from "@/components/Experience";
 import { catalogById, catalogItems, type CatalogItem } from "@/data/catalog";
 import { productDetailsById } from "@/data/productDetails";
-
-type ProductRouteParams = {
-  slug?: string;
-};
-
+import { coreOfferLabels } from "@/content/experience";
+import { trackEvent } from "@/lib/analytics";
 export default function ProductDetail() {
-  const params = useParams<ProductRouteParams>();
-  const slug = params.slug ?? "";
-
+  const { slug = "" } = useParams<{ slug: string }>();
   const product =
     catalogById[slug] ||
-    catalogItems.find((item) => item.slug === slug || item.id === slug);
-
-  const detail = product
-    ? productDetailsById[product.id] ||
-      productDetailsById[product.slug] ||
-      buildFallbackDetail(product)
-    : null;
-
-  if (!product || !detail) {
+    catalogItems.find(p => p.slug === slug || p.id === slug);
+  if (!product)
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-6 text-center px-4">
-        <ShoppingBag className="w-12 h-12 text-muted-foreground" />
-        <h1 className="text-2xl font-bold">Product not found</h1>
-        <p className="text-muted-foreground">
-          This product may have moved or isn't available yet.
-        </p>
-        <Link href="/shop">
-          <Button variant="outline">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Shop
-          </Button>
-        </Link>
-      </div>
+      <PageIntro
+        eyebrow="Shop AskDoGood"
+        title="Let’s find the right offer."
+        text="This item may have moved. Explore the current offers."
+      >
+        <Action href="/shop">Back to shop</Action>
+      </PageIntro>
     );
-  }
-
-  const isLive = product.checkoutState === "live" && !!product.checkoutUrl;
-  const isMembership = product.kind === "membership";
-  const isService = product.kind === "service";
-
-  return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 via-secondary/5 to-background">
-        <div className="container max-w-6xl mx-auto px-4">
-          <Link href="/shop">
-            <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Shop
-            </button>
-          </Link>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Product image */}
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-primary/10">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "/images/products/gumroad_cover.png";
-                  }}
-                />
-              </div>
-              {isLive && (
-                <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                  AVAILABLE NOW
-                </div>
-              )}
-            </div>
-
-            {/* Product info */}
-            <div className="flex flex-col gap-5">
-              <div>
-                <Badge variant="outline" className="mb-3 text-xs">
-                  {product.category}
-                </Badge>
-                <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">
-                  {product.name}
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {detail.subheadline}
-                </p>
-              </div>
-
-              {/* Price + CTA */}
-              <Card className="border-2 border-primary/20 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-baseline gap-3 mb-4">
-                    <span className="text-4xl font-bold">{product.priceLabel}</span>
-                    {isMembership && (
-                      <span className="text-sm text-muted-foreground">/ month</span>
-                    )}
-                  </div>
-
-                  {isLive ? (
-                    <a
-                      href={product.checkoutUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button size="lg" className="w-full text-base rounded-xl gap-2">
-                        <ShoppingBag className="w-5 h-5" />
-                        {isMembership ? "Join Now" : isService ? "Purchase & Get Next Steps" : "Buy Now — Instant Access"}
-                      </Button>
-                    </a>
-                  ) : (
-                    <div>
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="w-full text-base rounded-xl gap-2 cursor-not-allowed opacity-70"
-                        disabled
-                      >
-                        <Clock className="w-5 h-5" />
-                        Coming Soon — Launching Shortly
-                      </Button>
-                      <p className="text-xs text-center text-muted-foreground mt-3">
-                        Join the waitlist →{" "}
-                        <a
-                          href="https://askdogood.beehiiv.com/subscribe"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-foreground"
-                        >
-                          Subscribe for launch updates
-                        </a>
-                      </p>
-                    </div>
-                  )}
-
-                  <p className="text-xs text-center text-muted-foreground mt-4 flex items-center justify-center gap-1">
-                    <Download className="w-3 h-3" />
-                    {detail.deliveryNote}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included */}
-      <section className="py-14 bg-background">
-        <div className="container max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">What's Included</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {detail.includes.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10"
-              >
-                <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm leading-relaxed">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* This is for you if */}
-      <section className="py-14 bg-secondary/5">
-        <div className="container max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">This is for you if…</h2>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {detail.bestFor.map((item, i) => (
-              <Card key={i} className="border border-primary/10">
-                <CardContent className="p-5">
-                  <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Outcomes */}
-      <section className="py-14 bg-background">
-        <div className="container max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">What You'll Walk Away With</h2>
-          <div className="flex flex-col gap-4">
-            {detail.outcomes.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-4 p-4 rounded-xl border bg-card"
-              >
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm font-bold text-primary">{i + 1}</span>
-                </div>
-                <span className="text-sm leading-relaxed">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="py-16 bg-primary/5 border-t">
-        <div className="container max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">{detail.headline}</h2>
-          <p className="text-muted-foreground mb-8">{detail.subheadline}</p>
-          <div className="text-3xl font-bold mb-6">{product.priceLabel}</div>
-
-          {isLive ? (
-            <a
-              href={product.checkoutUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="rounded-xl gap-2 px-10 text-base">
-                <ShoppingBag className="w-5 h-5" />
-                {isMembership ? "Join the Circle" : isService ? "Purchase Your Plan" : "Get Instant Access"}
-              </Button>
-            </a>
-          ) : (
-            <a
-              href="https://askdogood.beehiiv.com/subscribe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" variant="outline" className="rounded-xl gap-2 px-10 text-base">
-                Notify Me at Launch
-              </Button>
-            </a>
-          )}
-
-          <p className="text-xs text-muted-foreground mt-4">
-            Questions? <Link href="/contact" className="underline hover:text-foreground">Get in touch</Link>
-          </p>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-function buildFallbackDetail(product: CatalogItem) {
-  return {
+  const detail = productDetailsById[product.id] || {
     headline: product.name,
     subheadline: product.shortSummary,
-    includes: [
-      "Immediate access after checkout",
-      "Practical guidance built from lived experience",
-      "Clear next steps you can apply right away",
-    ],
-    bestFor: [
-      "People ready to take a practical next step",
-      "Anyone who wants structure without perfection pressure",
-      "Supporters of the AskDoGood healing mission",
-    ],
-    outcomes: [
-      "More clarity about your next move",
-      "A simple plan you can act on quickly",
-      "Momentum toward better health and consistency",
-    ],
-    deliveryNote:
-      product.kind === "service"
-        ? "Personalized next-step instructions are provided after checkout."
-        : product.kind === "membership"
-          ? "Membership next steps are provided after checkout."
-          : "Digital access is delivered after checkout.",
+    includes: [product.description],
+    bestFor: ["People looking for practical wellness education."],
+    outcomes: ["A resource you can use at your own pace."],
+    deliveryNote: "Review delivery and access details at checkout.",
   };
+  const membership = product.kind === "membership";
+  const service = product.kind === "service";
+  const live =
+    product.checkoutState === "live" &&
+    /^https:\/\/(buy\.stripe\.com|book\.stripe\.com|askdogood\.gumroad\.com)\//.test(
+      product.checkoutUrl || ""
+    );
+  const label = coreOfferLabels[product.id];
+  const steps = service
+    ? [
+        "Pay securely for your personalized plan.",
+        "Follow the next-step instructions to share your goals and routine.",
+        "AskDoGood prepares your written plan from the information you provide.",
+      ]
+    : membership
+      ? [
+          "Review the $19/month recurring subscription at checkout.",
+          "Follow the membership access instructions after purchase.",
+          "Use the wellness resources and ongoing guidance as you build your routine.",
+        ]
+      : [
+          "Complete secure checkout using your preferred payment method.",
+          "Follow the digital access instructions provided after purchase.",
+          "Use the resource at your own pace.",
+        ];
+  return (
+    <div className="adg-page">
+      <SEO
+        title={`${product.name} | AskDoGood`}
+        description={product.shortSummary}
+        url={`/product/${product.slug}`}
+        type="product"
+      />
+      <PageIntro
+        eyebrow={
+          label?.format ||
+          (membership
+            ? "Monthly membership"
+            : service
+              ? "Personalized service"
+              : "Digital resource")
+        }
+        title={product.name}
+        text={detail.subheadline}
+      >
+        <div className="adg-actions">
+          <Action href="/shop" secondary>
+            Back to offers
+          </Action>
+        </div>
+      </PageIntro>
+      <Section>
+        <div className="adg-split adg-detail-layout">
+          <div>
+            <h2>What’s included</h2>
+            <ul className="adg-list">
+              {detail.includes.map(text => (
+                <li key={text}>{text}</li>
+              ))}
+            </ul>
+            <h2>Who it’s for</h2>
+            <ul className="adg-list">
+              {detail.bestFor.map(text => (
+                <li key={text}>{text}</li>
+              ))}
+            </ul>
+          </div>
+          <aside className="adg-card adg-purchase">
+            <p className="adg-eyebrow">
+              {membership ? "Recurring membership" : "One-time purchase"}
+            </p>
+            <p className="adg-price">
+              {product.priceLabel}
+              {membership && <span> / month</span>}
+            </p>
+            <p>
+              {service
+                ? "A personalized written wellness plan, prepared after we receive your information."
+                : membership
+                  ? "Ongoing wellness guidance, resources, and accountability."
+                  : "A digital resource to use at your own pace."}
+            </p>
+            <p className="adg-small">{detail.deliveryNote}</p>
+            {membership && (
+              <p className="adg-note">
+                This is a recurring subscription billed monthly. Review
+                subscription and cancellation terms before paying.
+              </p>
+            )}
+            {live ? (
+              <a
+                className="adg-button"
+                href={product.checkoutUrl}
+                onClick={() =>
+                  trackEvent("begin_checkout", {
+                    product_id: product.id,
+                    product_brand: "askdogood",
+                    currency: "USD",
+                  })
+                }
+              >
+                {membership
+                  ? "Join for $19/month"
+                  : service
+                    ? "Purchase my plan"
+                    : "Buy this resource"}
+              </a>
+            ) : (
+              <>
+                <p className="adg-note">
+                  This offer is not available to purchase yet.
+                </p>
+                <Action href="/contact?topic=Product%20question" secondary>
+                  Ask about this offer
+                </Action>
+              </>
+            )}
+            <p className="adg-small">
+              Payment is completed on the checkout provider’s secure page. Need
+              help? Email askdogood@gmail.com.
+            </p>
+          </aside>
+        </div>
+      </Section>
+      <Section tone title="What happens after you purchase?">
+        <div className="adg-grid adg-grid-three">
+          {steps.map((text, i) => (
+            <div className="adg-card" key={text}>
+              <span className="adg-step">0{i + 1}</span>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="adg-note">
+          {service
+            ? "This is wellness education and planning. It does not include medical diagnosis, treatment, or therapy."
+            : membership
+              ? "Membership supports everyday wellness. It does not include on-demand therapy or medical care."
+              : "These resources support learning and daily habits. They do not replace medical care."}
+        </p>
+        <Reassurance />
+      </Section>
+      <Section title="Before you choose.">
+        <div className="adg-faq">
+          <details>
+            <summary>Can I ask a question before paying?</summary>
+            <p>
+              Yes. Email askdogood@gmail.com with the offer name and your
+              question. We can clarify scope and delivery before you choose.
+            </p>
+          </details>
+          <details>
+            <summary>Where do I find access or order help?</summary>
+            <p>
+              Keep your payment confirmation and follow the access instructions
+              supplied after checkout. If something is missing, email AskDoGood
+              with the offer name and order reference. Do not send card details.
+            </p>
+          </details>
+          <details>
+            <summary>Does this guarantee a health or life outcome?</summary>
+            <p>
+              No. Our resources offer practical education and structure. Your
+              needs and results vary; medical decisions belong with your
+              qualified care team.
+            </p>
+          </details>
+        </div>
+        <div className="adg-actions">
+          <Action href="/contact?topic=Product%20question" secondary>
+            Ask before I buy
+          </Action>
+        </div>
+      </Section>
+    </div>
+  );
 }

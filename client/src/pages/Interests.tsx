@@ -1,5 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Flower2, Music, Laptop, Scissors, Sprout, Sun, Droplets } from "lucide-react";
+import {
+  Flower2,
+  Music,
+  Laptop,
+  Scissors,
+  Sprout,
+  Sun,
+  Droplets,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Interests() {
@@ -8,57 +16,120 @@ export default function Interests() {
   useEffect(() => {
     const section = window.location.hash.slice(1);
     if (section === "music" || section === "tools" || section === "listening") {
-      requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView());
+      requestAnimationFrame(() =>
+        document.getElementById(section)?.scrollIntoView()
+      );
     }
   }, []);
 
   const gardenImages = [
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", caption: "Tending the garden - where healing meets growth" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/full-patio-garden.webp", caption: "My patio garden oasis" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/garden-walkway-daytime.webp", caption: "Garden walkway with apple trees and raised beds" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/patio-garden-night.webp", caption: "Evening garden vibes with string lights" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/night-garden-setup.webp", caption: "Night garden setup with grow lights" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/red-peppers-closeup.webp", caption: "Fresh peppers ready for harvest" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/jalapenos-mixed-veg.webp", caption: "Jalapeños and mixed vegetables" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/raised-bed-greens.webp", caption: "Raised bed with fresh greens" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/vertical-garden-coleus.webp", caption: "Vertical garden with colorful coleus" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/rhubarb-plant.webp", caption: "Rhubarb growing strong" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/raised-bed-evening.webp", caption: "Evening harvest time" },
-    { url: "https://askdogoodassets.blob.core.windows.net/images/garden/seedlings-starting.webp", caption: "Starting from seed - the beginning of growth" },
+    {
+      url: "/images/personal/rosee-garden-2026.webp",
+      caption: "Tending the garden - where healing meets growth",
+    },
+    {
+      url: "/images/personal/food/night-garden.jpg",
+      caption: "My patio garden oasis",
+    },
+    {
+      url: "/images/personal/food/AskDoGood_mat_in_night-garden.jpg",
+      caption: "Garden walkway with apple trees and raised beds",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/patio-garden-night.webp",
+      caption: "Evening garden vibes with string lights",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/night-garden-setup.webp",
+      caption: "Night garden setup with grow lights",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/red-peppers-closeup.webp",
+      caption: "Fresh peppers ready for harvest",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/jalapenos-mixed-veg.webp",
+      caption: "Jalapeños and mixed vegetables",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/raised-bed-greens.webp",
+      caption: "Raised bed with fresh greens",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/vertical-garden-coleus.webp",
+      caption: "Vertical garden with colorful coleus",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/rhubarb-plant.webp",
+      caption: "Rhubarb growing strong",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/raised-bed-evening.webp",
+      caption: "Evening harvest time",
+    },
+    {
+      url: "https://askdogoodassets.blob.core.windows.net/images/garden/seedlings-starting.webp",
+      caption: "Starting from seed - the beginning of growth",
+    },
   ];
 
   const interests = [
     {
       title: "Music",
       subtitle: "Creative Expression",
-      description: "Old school hip-hop and soul are part of my story. I listen for the words, the rhythm, and the memories a song can bring back. Music gives me room to feel joy, move my body, and connect with people. This is where I'll share what I'm listening to and what it inspires me to make.",
-      image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp",
+      description:
+        "Old school hip-hop and soul are part of my story. I listen for the words, the rhythm, and the memories a song can bring back. Music gives me room to feel joy, move my body, and connect with people. This is where I'll share what I'm listening to and what it inspires me to make.",
+      image: "/images/personal/rosee-with-mc-lyte.jpg",
       icon: Music,
-      color: "from-purple-500/20 to-pink-500/20",
+      color: "from-primary/20 to-background/20",
     },
     {
       title: "Tech",
       subtitle: "Building & Problem-Solving",
-      description: "From Azure security to building AskDoGood, technology is where I combine creativity with structure. It's about solving real problems, creating systems that work, and empowering others through tools and platforms. Tech isn't just my career—it's how I build legacy.",
-      image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
+      description:
+        "From Azure security to building AskDoGood, technology is where I combine creativity with structure. It's about solving real problems, creating systems that work, and empowering others through tools and platforms. Tech isn't just my career—it's how I build legacy.",
+      image:
+        "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp",
       icon: Laptop,
-      color: "from-blue-500/20 to-cyan-500/20",
+      color: "from-primary/20 to-background/20",
     },
     {
       title: "Hair",
       subtitle: "Self-Care & Confidence",
-      description: "Doing hair is an art form, a ritual of self-care, and a way to express identity. Whether it's my own locs or helping others feel confident, hair care is about more than aesthetics—it's about honoring yourself, taking time for self-love, and showing up as your authentic self.",
-      image: "https://askdogoodassets.blob.core.windows.net/images/personal/outdoor-photoshoot.webp",
+      description:
+        "Doing hair is an art form, a ritual of self-care, and a way to express identity. Whether it's my own locs or helping others feel confident, hair care is about more than aesthetics—it's about honoring yourself, taking time for self-love, and showing up as your authentic self.",
+      image:
+        "https://askdogoodassets.blob.core.windows.net/images/personal/outdoor-photoshoot.webp",
       icon: Scissors,
       color: "from-orange-500/20 to-rose-500/20",
     },
   ];
 
   const listeningShelf = [
-    { name: "IMO with Michelle Obama & Craig Robinson", mood: "For perspective with family warmth", note: "Big life questions, practical advice, and room to laugh.", href: "https://podcasts.apple.com/us/podcast/imo-with-michelle-obama-and-craig-robinson/id1532956108" },
-    { name: "The Joe Budden Podcast", mood: "For music and unfiltered conversation", note: "When you want culture, chemistry, and a conversation that keeps moving.", href: "https://podcasts.apple.com/us/podcast/the-joe-budden-podcast/id1535809341" },
-    { name: "The Rachel Maddow Show", mood: "For a deeper look at the news", note: "For the evenings when you want context before you decide what you think.", href: "https://podcasts.apple.com/us/podcast/the-rachel-maddow-show/id294055449" },
-    { name: "The Weekly Show with Jon Stewart", mood: "For politics with a little wit", note: "Longer conversations about the decisions shaping everyday life.", href: "https://podcasts.apple.com/us/podcast/the-weekly-show-with-jon-stewart/id1583132133" },
+    {
+      name: "IMO with Michelle Obama & Craig Robinson",
+      mood: "For perspective with family warmth",
+      note: "Big life questions, practical advice, and room to laugh.",
+      href: "https://podcasts.apple.com/us/podcast/imo-with-michelle-obama-and-craig-robinson/id1532956108",
+    },
+    {
+      name: "The Joe Budden Podcast",
+      mood: "For music and unfiltered conversation",
+      note: "When you want culture, chemistry, and a conversation that keeps moving.",
+      href: "https://podcasts.apple.com/us/podcast/the-joe-budden-podcast/id1535809341",
+    },
+    {
+      name: "The Rachel Maddow Show",
+      mood: "For a deeper look at the news",
+      note: "For the evenings when you want context before you decide what you think.",
+      href: "https://podcasts.apple.com/us/podcast/the-rachel-maddow-show/id294055449",
+    },
+    {
+      name: "The Weekly Show with Jon Stewart",
+      mood: "For politics with a little wit",
+      note: "Longer conversations about the decisions shaping everyday life.",
+      href: "https://podcasts.apple.com/us/podcast/the-weekly-show-with-jon-stewart/id1583132133",
+    },
   ];
 
   return (
@@ -67,15 +138,68 @@ export default function Interests() {
       <section className="relative w-full py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">More Than Wellness</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              More Than Wellness
+            </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
-              Healing isn't one-dimensional. It's gardening, music, tech, and self-care. It's creating, building, and showing up fully in every area of life.
+              Healing isn't one-dimensional. It's gardening, music, tech, and
+              self-care. It's creating, building, and showing up fully in every
+              area of life.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="listening" className="scroll-mt-24 bg-[#fff8ed] py-16 md:py-20" aria-labelledby="listening-heading"><div className="container"><p className="text-sm font-semibold uppercase tracking-widest text-primary">After-work listening</p><h2 id="listening-heading" className="mt-3 max-w-3xl text-4xl font-bold">Pick the conversation your day calls for.</h2><p className="mt-5 max-w-3xl text-lg leading-8 text-foreground/75">Some nights I need laughter and music. Some nights I want to understand what's happening in the world before I can put my phone down. This is a small listening shelf, not a demand to keep up with everything. Take what gives you perspective; leave the rest for tomorrow.</p><div className="mt-8 grid gap-4 sm:grid-cols-2">{listeningShelf.map((show) => <a key={show.name} href={show.href} target="_blank" rel="noopener noreferrer" className="group rounded-3xl border border-[#173c32]/15 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"><p className="text-sm font-semibold uppercase tracking-wide text-primary">{show.mood}</p><h3 className="mt-3 text-2xl font-bold">{show.name}</h3><p className="mt-3 leading-7 text-muted-foreground">{show.note}</p><span className="mt-5 inline-flex font-semibold text-primary">Open the show ↗</span></a>)}</div><p className="mt-6 text-sm text-muted-foreground">Independent shows and viewpoints. Links open the publishers' podcast pages; AskDoGood is not affiliated with them.</p></div></section>
+      <section
+        id="listening"
+        className="scroll-mt-24 bg-[#fff8ed] py-16 md:py-20"
+        aria-labelledby="listening-heading"
+      >
+        <div className="container">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+            After-work listening
+          </p>
+          <h2
+            id="listening-heading"
+            className="mt-3 max-w-3xl text-4xl font-bold"
+          >
+            Pick the conversation your day calls for.
+          </h2>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-foreground/75">
+            Some nights I need laughter and music. Some nights I want to
+            understand what's happening in the world before I can put my phone
+            down. This is a small listening shelf, not a demand to keep up with
+            everything. Take what gives you perspective; leave the rest for
+            tomorrow.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {listeningShelf.map(show => (
+              <a
+                key={show.name}
+                href={show.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-3xl border border-[#173c32]/15 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+                  {show.mood}
+                </p>
+                <h3 className="mt-3 text-2xl font-bold">{show.name}</h3>
+                <p className="mt-3 leading-7 text-muted-foreground">
+                  {show.note}
+                </p>
+                <span className="mt-5 inline-flex font-semibold text-primary">
+                  Open the show ↗
+                </span>
+              </a>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Independent shows and viewpoints. Links open the publishers' podcast
+            pages; AskDoGood is not affiliated with them.
+          </p>
+        </div>
+      </section>
 
       {/* Gardening Section - Expanded */}
       <section className="py-20 bg-secondary/30">
@@ -84,9 +208,13 @@ export default function Interests() {
             {/* Header */}
             <div className="text-center mb-12">
               <Flower2 className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h2 className="text-4xl font-bold mb-4">Gardening: Growing Wellness</h2>
+              <h2 className="text-4xl font-bold mb-4">
+                Gardening: Growing Wellness
+              </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From my grandfather's garden to empty nester experiments across multiple states—gardening has been my constant companion, teacher, and healer.
+                From my grandfather's garden to empty nester experiments across
+                multiple states—gardening has been my constant companion,
+                teacher, and healer.
               </p>
             </div>
 
@@ -95,16 +223,35 @@ export default function Interests() {
               <CardContent className="p-8 md:p-12">
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg leading-relaxed mb-4">
-                    My love for gardening started with my grandfather. Watching him work the soil, tend to plants, and harvest food taught me that growth takes time, patience, and consistent care. Those early lessons stayed with me through every season of life.
+                    My love for gardening started with my grandfather. Watching
+                    him work the soil, tend to plants, and harvest food taught
+                    me that growth takes time, patience, and consistent care.
+                    Those early lessons stayed with me through every season of
+                    life.
                   </p>
                   <p className="text-lg leading-relaxed mb-4">
-                    As an empty nester, I've taken those lessons and run with them—literally across state lines. I've gardened in North Carolina, Maryland, and Virginia, adapting to different climates, soils, and growing seasons. Each location taught me something new about resilience, adaptation, and the power of starting fresh.
+                    As an empty nester, I've taken those lessons and run with
+                    them—literally across state lines. I've gardened in North
+                    Carolina, Maryland, and Virginia, adapting to different
+                    climates, soils, and growing seasons. Each location taught
+                    me something new about resilience, adaptation, and the power
+                    of starting fresh.
                   </p>
                   <p className="text-lg leading-relaxed mb-4">
-                    I grow everything from peppers and tomatoes to greens, herbs, and even fruit trees in containers. My patio garden is a mix of raised beds, grow bags, and creative vertical setups. I've learned from YouTube gardeners like <strong>James Prigioni</strong>, <strong>MIgardener</strong>, and <strong>Epic Gardening</strong>—their no-fluff, practical advice has been invaluable.
+                    I grow everything from peppers and tomatoes to greens,
+                    herbs, and even fruit trees in containers. My patio garden
+                    is a mix of raised beds, grow bags, and creative vertical
+                    setups. I've learned from YouTube gardeners like{" "}
+                    <strong>James Prigioni</strong>, <strong>MIgardener</strong>
+                    , and <strong>Epic Gardening</strong>—their no-fluff,
+                    practical advice has been invaluable.
                   </p>
                   <p className="text-lg leading-relaxed">
-                    Gardening isn't just about food—it's about healing. It's about creating beauty, practicing patience, and remembering that even in the hardest seasons, growth is possible. Every seed planted is an act of faith. Every harvest is a reminder that consistency pays off.
+                    Gardening isn't just about food—it's about healing. It's
+                    about creating beauty, practicing patience, and remembering
+                    that even in the hardest seasons, growth is possible. Every
+                    seed planted is an act of faith. Every harvest is a reminder
+                    that consistency pays off.
                   </p>
                 </div>
               </CardContent>
@@ -112,8 +259,10 @@ export default function Interests() {
 
             {/* Garden Gallery */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">My Garden Journey</h3>
-              
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                My Garden Journey
+              </h3>
+
               {/* Main Image */}
               <div className="mb-6 relative">
                 <img
@@ -122,7 +271,9 @@ export default function Interests() {
                   className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
-                  <p className="text-white text-lg font-medium">{gardenImages[selectedImage].caption}</p>
+                  <p className="text-white text-lg font-medium">
+                    {gardenImages[selectedImage].caption}
+                  </p>
                 </div>
               </div>
 
@@ -153,22 +304,32 @@ export default function Interests() {
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Sprout className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h4 className="font-bold text-lg mb-2">Multi-State Gardener</h4>
-                  <p className="text-sm text-muted-foreground">NC, MD, VA - adapting to every climate</p>
+                  <h4 className="font-bold text-lg mb-2">
+                    Multi-State Gardener
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    NC, MD, VA - adapting to every climate
+                  </p>
                 </CardContent>
               </Card>
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Sun className="h-10 w-10 text-primary mx-auto mb-3" />
                   <h4 className="font-bold text-lg mb-2">Year-Round Growing</h4>
-                  <p className="text-sm text-muted-foreground">Patio garden with grow lights & raised beds</p>
+                  <p className="text-sm text-muted-foreground">
+                    Patio garden with grow lights & raised beds
+                  </p>
                 </CardContent>
               </Card>
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Droplets className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h4 className="font-bold text-lg mb-2">From Seed to Harvest</h4>
-                  <p className="text-sm text-muted-foreground">Peppers, greens, herbs, tomatoes & more</p>
+                  <h4 className="font-bold text-lg mb-2">
+                    From Seed to Harvest
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Peppers, greens, herbs, tomatoes & more
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -183,26 +344,44 @@ export default function Interests() {
             {interests.map((interest, index) => {
               const Icon = interest.icon;
               const isEven = index % 2 === 0;
-              
+
               return (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className={`grid md:grid-cols-2 gap-0 ${isEven ? '' : 'md:grid-flow-dense'}`}>
+                <Card
+                  key={index}
+                  className="overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div
+                    className={`grid md:grid-cols-2 gap-0 ${isEven ? "" : "md:grid-flow-dense"}`}
+                  >
                     {/* Image */}
-                    <div className={`relative h-[300px] md:h-auto ${isEven ? '' : 'md:col-start-2'}`}>
+                    <div
+                      className={`relative h-[300px] md:h-auto ${isEven ? "" : "md:col-start-2"}`}
+                    >
                       <div
                         className="absolute inset-0 bg-cover bg-center"
                         style={{ backgroundImage: `url(${interest.image})` }}
                       >
-                        <div className={`absolute inset-0 bg-gradient-to-br ${interest.color}`} />
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${interest.color}`}
+                        />
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className={`p-8 md:p-12 flex flex-col justify-center ${isEven ? '' : 'md:col-start-1 md:row-start-1'}`}>
+                    <div
+                      className={`p-8 md:p-12 flex flex-col justify-center ${isEven ? "" : "md:col-start-1 md:row-start-1"}`}
+                    >
                       <div className="mb-6">
                         <Icon className="h-12 w-12 text-primary mb-4" />
-                  <h2 id={interest.title === "Music" ? "music" : undefined} className="scroll-mt-24 text-3xl font-bold mb-2">{interest.title}</h2>
-                        <p className="text-lg text-primary font-medium">{interest.subtitle}</p>
+                        <h2
+                          id={interest.title === "Music" ? "music" : undefined}
+                          className="scroll-mt-24 text-3xl font-bold mb-2"
+                        >
+                          {interest.title}
+                        </h2>
+                        <p className="text-lg text-primary font-medium">
+                          {interest.subtitle}
+                        </p>
                       </div>
                       <p className="text-muted-foreground leading-relaxed">
                         {interest.description}
@@ -218,12 +397,37 @@ export default function Interests() {
 
       <section id="tools" className="scroll-mt-24 bg-[#f8eee5] py-16">
         <div className="container max-w-5xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">Behind the work</p>
-          <h2 className="mt-3 text-4xl font-bold">The tools I use to make things happen</h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">I move between creative work and practical systems. These are two tools I use to turn ideas into something people can actually experience.</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+            Behind the work
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">
+            The tools I use to make things happen
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
+            I move between creative work and practical systems. These are two
+            tools I use to turn ideas into something people can actually
+            experience.
+          </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Create</p><h3 className="mt-3 text-2xl font-semibold">Canva</h3><p className="mt-3 leading-7 text-muted-foreground">For shaping visuals and resources that help an idea connect with people.</p></div>
-            <div className="rounded-2xl border bg-background p-6"><p className="text-sm font-semibold uppercase tracking-widest text-primary">Build</p><h3 className="mt-3 text-2xl font-semibold">Microsoft Azure</h3><p className="mt-3 leading-7 text-muted-foreground">For the technology and systems behind the work I bring to life.</p></div>
+            <div className="rounded-2xl border bg-background p-6">
+              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+                Create
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold">Canva</h3>
+              <p className="mt-3 leading-7 text-muted-foreground">
+                For shaping visuals and resources that help an idea connect with
+                people.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-background p-6">
+              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+                Build
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold">Microsoft Azure</h3>
+              <p className="mt-3 leading-7 text-muted-foreground">
+                For the technology and systems behind the work I bring to life.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -234,10 +438,13 @@ export default function Interests() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Healing is Holistic</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              It's not just about health—it's about creating a life you love, with purpose, creativity, and joy in every corner.
+              It's not just about health—it's about creating a life you love,
+              with purpose, creativity, and joy in every corner.
             </p>
             <p className="text-lg text-muted-foreground">
-              Whether you're here for wellness tips, tech insights, or just to see what I'm growing in the garden, welcome. Let's build something beautiful together.
+              Whether you're here for wellness tips, tech insights, or just to
+              see what I'm growing in the garden, welcome. Let's build something
+              beautiful together.
             </p>
           </div>
         </div>

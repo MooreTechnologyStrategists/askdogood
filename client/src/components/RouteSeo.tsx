@@ -6,6 +6,7 @@ import {
   SITE_URL,
   SOCIAL_PROFILES,
   getStaticSeoForPath,
+  type StaticSeoPage,
 } from "@/lib/seo";
 
 type RouteSeoProps = {
@@ -17,7 +18,77 @@ export default function RouteSeo({ location }: RouteSeoProps) {
     return null;
   }
 
-  const config = getStaticSeoForPath(location);
+  const overrides: Record<string, { title: string; description: string }> = {
+    "/about": {
+      title: "Our Mission & Story | AskDoGood",
+      description:
+        "Our mission is to help people care for their health, strengthen their relationships, and move forward in everyday life.",
+    },
+    "/resources": {
+      title: "Find Your Path | AskDoGood",
+      description:
+        "Choose health and food, relationships and support, career and purpose, or everyday life.",
+    },
+    "/resources/start": {
+      title: "Start Here | AskDoGood",
+      description:
+        "Find free resources and relevant support for the part of life you want help with.",
+    },
+    "/resources/library": {
+      title: "Free Resources | AskDoGood",
+      description:
+        "Explore articles, recipes, relationship tools, and practical resources for everyday life.",
+    },
+    "/shop": {
+      title: "Guides, Plans, Membership & Merch | AskDoGood",
+      description:
+        "Explore the $17 reset guide, $97 personalized wellness plan, $19/month membership, and original AskDoGood merch.",
+    },
+    "/merch": {
+      title: "Shop AskDoGood Merch",
+      description:
+        "Explore the original embroidered black hoodie, hoodie and jogger set, and cream logo tee.",
+    },
+    "/blog": {
+      title: "Articles & Stories | AskDoGood",
+      description:
+        "Read about health, relationships, work, and everyday life, alongside personal stories from RoSeé.",
+    },
+    "/coaching": {
+      title: "Personal Support | AskDoGood",
+      description:
+        "Explore wellness planning and membership, or inquire about conversation and life-transition support.",
+    },
+    "/journey": {
+      title: "RoSeé’s Story | AskDoGood",
+      description:
+        "The experiences with service, health, work, and rebuilding behind AskDoGood.",
+    },
+    "/contact": {
+      title: "Contact AskDoGood",
+      description:
+        "Ask about offers, orders, personal support, workshops, and partnerships.",
+    },
+    "/work-with-askdogood": {
+      title: "Community Workshops & Partnerships | AskDoGood",
+      description:
+        "Bring practical wellness education, healthy routines, and life-transition resources to your community.",
+    },
+    "/clinical-recipes": {
+      title: "Recipes & Food Ideas | AskDoGood",
+      description: "Explore recipes and practical meal ideas from AskDoGood.",
+    },
+    "/keep-moving": {
+      title: "Walking & Everyday Movement | AskDoGood",
+      description: "Explore walking guides and movement at your own pace.",
+    },
+  };
+  const base = getStaticSeoForPath(location);
+  const config: StaticSeoPage | undefined = base
+    ? { ...base, ...overrides[location] }
+    : overrides[location]
+      ? { path: location, keywords: [], ...overrides[location] }
+      : undefined;
   if (!config) {
     return null;
   }
@@ -55,7 +126,7 @@ function getSchemaForPath(path: string) {
           name: SITE_NAME,
           url: SITE_URL,
           description:
-            "AskDoGood helps people eat to live, reduce toxin load, rebuild discipline, grow stability, and pay wellness forward in their communities.",
+            "AskDoGood offers practical education and support for health, relationships, career, and everyday life.",
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
@@ -98,8 +169,7 @@ function getSchemaForPath(path: string) {
           sameAs: SITE_URL,
         },
         url: `${SITE_URL}/course/thyroid-health-mastery`,
-        image:
-          "/images/products/gumroad_cover.png",
+        image: "/images/products/gumroad_cover.png",
       };
     case "/product/thyroid-mastery-course":
       return {
@@ -108,8 +178,7 @@ function getSchemaForPath(path: string) {
         name: "Thyroid Mastery Course",
         description:
           "Ask DoGood course product page for thyroid education, healing routines, and self-advocacy.",
-        image:
-          "/images/products/gumroad_cover.png",
+        image: "/images/products/gumroad_cover.png",
         brand: {
           "@type": "Brand",
           name: SITE_NAME,
@@ -147,7 +216,8 @@ function getSchemaForPath(path: string) {
         "@type": "CollectionPage",
         name: "Ask DoGood Shop",
         url: `${SITE_URL}/shop`,
-        description: "Digital wellness tools and healing bundles available through Gumroad.",
+        description:
+          "Wellness guides, personalized plans, membership, and made-to-order merchandise.",
       };
     case "/coaching":
       return {

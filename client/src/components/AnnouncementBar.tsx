@@ -1,51 +1,20 @@
-import { X, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
-import { Button } from "./ui/button";
-
+import { X } from "lucide-react";
 export default function AnnouncementBar() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) {
-    return null;
-  }
-
-  return (
-    <div className="relative bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground">
+  const [visible, setVisible] = useState(true);
+  return visible ? (
+    <div className="adg-announcement">
       <div className="container">
-        <div className="flex items-center justify-center gap-3 px-4 py-2.5 text-sm font-medium">
-          <span className="hidden sm:inline">
-            <strong>New live offers:</strong> 7-Day Reset $17 · Wellness Membership $19/month · Custom Wellness Plan $97.
-          </span>
-          <span className="inline sm:hidden">
-            <strong>Now live:</strong> Reset, membership, and custom plan.
-          </span>
-          <div className="ml-2 flex gap-1.5">
-            <Link href="/shop">
-              <Button size="sm" variant="secondary" className="h-7 gap-1 text-xs">
-                Shop <ArrowRight className="h-3 w-3" />
-              </Button>
-            </Link>
-            <Link href="/product/custom-wellness-plan">
-              <Button
-                size="sm"
-                variant="outline"
-                className="h-7 gap-1 border-primary-foreground/30 bg-primary-foreground/10 text-xs text-primary-foreground hover:bg-primary-foreground/20"
-              >
-                Custom Plan <ArrowRight className="h-3 w-3" />
-              </Button>
-            </Link>
-          </div>
-
-          <button
-            onClick={() => setIsVisible(false)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-1 transition-colors hover:bg-primary-foreground/10"
-            aria-label="Close announcement"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
+        <span>Small steps start here.</span>{" "}
+        <Link href="/product/7-day-reset">Explore the $17 reset guide</Link>
+        <button
+          aria-label="Close announcement"
+          onClick={() => setVisible(false)}
+        >
+          <X size={18} />
+        </button>
       </div>
     </div>
-  );
+  ) : null;
 }

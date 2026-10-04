@@ -47,7 +47,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     checkoutUrl: "https://buy.stripe.com/14AfZi4Ie6f6g2Igbs0sU05",
     checkoutState: "live",
     internalPath: "/product/7-day-reset",
-    notes: "Secure Stripe checkout. Digital next steps are provided after purchase.",
+    notes:
+      "Secure Stripe checkout. Digital next steps are provided after purchase.",
   },
   {
     id: "thyroid-health-mastery",
@@ -62,8 +63,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "A self-paced digital course designed to help you better understand thyroid health, symptoms, labs, medication support, nutrition, stress, and self-advocacy. Built from lived experience, real research, and a whole-person healing perspective.",
     cta: "Start your thyroid healing journey today.",
-    image:
-      "/images/products/gumroad_cover.png",
+    image: "/images/products/gumroad_cover.png",
     category: "Health / Wellness / Education",
     checkoutUrl: GUMROAD_URLS.thyroidMastery,
     checkoutState: "live",
@@ -89,7 +89,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     checkoutUrl: GUMROAD_URLS.plantReset,
     checkoutState: "live",
     internalPath: "/product/21-day-plant-based-reset",
-    notes: "Use Gumroad as primary checkout and keep Stripe as optional mirror later.",
+    notes:
+      "Use Gumroad as primary checkout and keep Stripe as optional mirror later.",
   },
   {
     id: "thyroid-lab-interpretation-guide",
@@ -129,7 +130,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     checkoutUrl: GUMROAD_URLS.supplementTemplates,
     checkoutState: "live",
     internalPath: "/product/thyroid-supplement-protocol-templates",
-    notes: "Current live Gumroad slug is legacy and should be renamed before a full public push.",
+    notes:
+      "Current live Gumroad slug is legacy and should be renamed before a full public push.",
   },
   {
     id: "garden-to-table-wellness-bundle",
@@ -162,7 +164,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "Includes food guidance, symptom support, lifestyle structure, and practical wellness tools for autoimmune healing support.",
     cta: "Start supporting your body with intention.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
     category: "Health / Autoimmune wellness",
     checkoutUrl: GUMROAD_URLS.autoimmuneGuide,
     checkoutState: "live",
@@ -181,7 +184,8 @@ export const flagshipDigitalProducts: CatalogItem[] = [
     description:
       "A practical advocacy toolkit with checklists, appointment prep, scripts, and decision-support guidance created to help Black women be heard, respected, and better prepared in medical settings.",
     cta: "Advocate like your health depends on it, because it does.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     category: "Women’s health / Advocacy",
     checkoutUrl: GUMROAD_URLS.blackWomensToolkit,
     checkoutState: "live",
@@ -241,7 +245,7 @@ export const membershipOffers: CatalogItem[] = [
     description:
       "A simple monthly membership with community support, practical guidance, wellness tools, and ongoing encouragement for women rebuilding their health and peace.",
     cta: "Join the monthly membership.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Membership / Wellness",
     checkoutUrl: "https://buy.stripe.com/5kQdRa8Yubzq5o4f7o0sU06",
     checkoutState: "live",
@@ -258,10 +262,12 @@ export const leadMagnets: CatalogItem[] = [
     priceLabel: "Free",
     slug: "thyroid-checklist",
     status: "Ready",
-    shortSummary: "Start here if your body has been trying to tell you something.",
-    description: "A fast, practical starting-point checklist for thyroid-related symptoms and next steps.",
+    shortSummary:
+      "Start here if your body has been trying to tell you something.",
+    description:
+      "A fast, practical starting-point checklist for thyroid-related symptoms and next steps.",
     cta: "Start here if your body has been trying to tell you something.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Free thyroid resource",
     checkoutUrl: GUMROAD_URLS.thyroidChecklist,
     checkoutState: "live",
@@ -276,7 +282,8 @@ export const leadMagnets: CatalogItem[] = [
     slug: "budget-grocery-checklist",
     status: "Ready",
     shortSummary: "Shop smarter without sacrificing your health.",
-    description: "A practical grocery planning resource for stretching the budget while keeping better food on the table.",
+    description:
+      "A practical grocery planning resource for stretching the budget while keeping better food on the table.",
     cta: "Shop smarter without sacrificing your health.",
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600",
     category: "Free grocery resource",
@@ -292,7 +299,8 @@ export const leadMagnets: CatalogItem[] = [
     slug: "meal-prep-container-guide",
     status: "Ready",
     shortSummary: "Make meal prep easier before you ever cook a thing.",
-    description: "A quick storage and container guide to help people prep efficiently and waste less food.",
+    description:
+      "A quick storage and container guide to help people prep efficiently and waste less food.",
     cta: "Make meal prep easier before you ever cook a thing.",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600",
     category: "Free meal prep resource",
@@ -324,7 +332,8 @@ export const serviceCatalog: CatalogItem[] = [
     checkoutUrl: "https://book.stripe.com/bJe7sMgqW7ja4k0f7o0sU07",
     checkoutState: "live",
     internalPath: "/product/custom-wellness-plan",
-    notes: "Secure Stripe booking checkout. Personalized next-step instructions follow purchase.",
+    notes:
+      "Secure Stripe booking checkout. Personalized next-step instructions follow purchase.",
   },
   {
     id: "discovery-call",
@@ -334,10 +343,12 @@ export const serviceCatalog: CatalogItem[] = [
     priceLabel: "$297",
     slug: "discovery-call",
     status: "Inquiry or invoice",
-    shortSummary: "Practical one-on-one reset support for people who feel off, low-energy, or stuck.",
-    description: "If you are tired of feeling off, low energy, or stuck in unhealthy habits, this is where the reset starts. We focus on nutrition that supports your body, simple movement, stress reduction, and habits that actually stick in real life.",
+    shortSummary:
+      "Practical one-on-one reset support for people who feel off, low-energy, or stuck.",
+    description:
+      "If you are tired of feeling off, low energy, or stuck in unhealthy habits, this is where the reset starts. We focus on nutrition that supports your body, simple movement, stress reduction, and habits that actually stick in real life.",
     cta: "Reset with practical support, not extreme routines.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Coaching",
     internalPath: "/coaching",
   },
@@ -349,8 +360,10 @@ export const serviceCatalog: CatalogItem[] = [
     priceLabel: "Custom pricing",
     slug: "transformation-package",
     status: "Program inquiry",
-    shortSummary: "A direct pathway that connects better health habits with tech and income growth.",
-    description: "Healing matters, but so does stability. This program connects better health habits, career pathways in tech, and opportunities to increase income because long-term wellness requires both a healthy body and stronger financial footing.",
+    shortSummary:
+      "A direct pathway that connects better health habits with tech and income growth.",
+    description:
+      "Healing matters, but so does stability. This program connects better health habits, career pathways in tech, and opportunities to increase income because long-term wellness requires both a healthy body and stronger financial footing.",
     cta: "Connect healing with stability and skill-building.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Health + income pathway",
@@ -364,8 +377,10 @@ export const serviceCatalog: CatalogItem[] = [
     priceLabel: "$1,997",
     slug: "vip-intensive",
     status: "Private booking",
-    shortSummary: "A focused deep-dive for people who need a faster, more strategic reset plan.",
-    description: "A premium intensive built for deeper review, focused planning, and a clearer strategy when you need direct support across health, habits, and next steps.",
+    shortSummary:
+      "A focused deep-dive for people who need a faster, more strategic reset plan.",
+    description:
+      "A premium intensive built for deeper review, focused planning, and a clearer strategy when you need direct support across health, habits, and next steps.",
     cta: "Book a deeper strategic reset.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Premium service",
@@ -379,10 +394,12 @@ export const serviceCatalog: CatalogItem[] = [
     priceLabel: "Custom pricing",
     slug: "meal-prep-workshop",
     status: "Booking inquiry",
-    shortSummary: "Real-world workshops for communities dealing with real-life pressure.",
-    description: "These sessions cover reducing inflammation naturally, building energy through food and movement, managing stress and lifestyle habits, and introducing tech opportunities that support income growth. Available for community centers, churches, schools, and local organizations.",
+    shortSummary:
+      "Real-world workshops for communities dealing with real-life pressure.",
+    description:
+      "These sessions cover reducing inflammation naturally, building energy through food and movement, managing stress and lifestyle habits, and introducing tech opportunities that support income growth. Available for community centers, churches, schools, and local organizations.",
     cta: "Bring practical wellness education to your group.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Workshop",
     internalPath: "/work-with-askdogood",
   },
@@ -394,8 +411,10 @@ export const serviceCatalog: CatalogItem[] = [
     priceLabel: "Custom pricing",
     slug: "private-meal-prep-coaching",
     status: "Inquiry or invoice",
-    shortSummary: "Guidance and food support built around how you actually live and eat.",
-    description: "Food is one of the fastest ways to change how you feel. This service supports smoothies and juices, vegan, vegetarian, keto, or flexible plans, and simple affordable meals for people who need ideas, structure, or done-for-you options.",
+    shortSummary:
+      "Guidance and food support built around how you actually live and eat.",
+    description:
+      "Food is one of the fastest ways to change how you feel. This service supports smoothies and juices, vegan, vegetarian, keto, or flexible plans, and simple affordable meals for people who need ideas, structure, or done-for-you options.",
     cta: "Get nutrition support that meets you where you are.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Nutrition support",
@@ -430,7 +449,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "thyroid-thriver-tee-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Premium empowerment tee for thyroid warriors.",
-    description: "A preview listing for a premium empowerment tee once final mockups and Stripe links are in place.",
+    description:
+      "A preview listing for a premium empowerment tee once final mockups and Stripe links are in place.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel preview",
@@ -443,8 +463,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     priceLabel: "Coming soon",
     slug: "askdogood-vintage-hoodie-coming-soon",
     status: "Needs real mockup",
-    shortSummary: "Oversized healing-season hoodie with embroidered logo and back art.",
-    description: "A premium hoodie preview that should go live only after visual assets and checkout are production-ready.",
+    shortSummary:
+      "Oversized healing-season hoodie with embroidered logo and back art.",
+    description:
+      "A premium hoodie preview that should go live only after visual assets and checkout are production-ready.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Apparel preview",
@@ -458,9 +480,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "real-food-real-healing-cap-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Organic cotton dad cap for market runs and garden days.",
-    description: "A cap preview designed for future release once mockups and checkout flow are finalized.",
+    description:
+      "A cap preview designed for future release once mockups and checkout flow are finalized.",
     cta: "Join the waitlist.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Accessories preview",
   },
   {
@@ -471,8 +494,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     priceLabel: "Coming soon",
     slug: "autoimmune-warrior-crewneck-coming-soon",
     status: "Needs real mockup",
-    shortSummary: "Heavyweight crewneck for chronic illness and autoimmune community.",
-    description: "A crewneck preview for the autoimmune community, held back until assets and Stripe links are ready.",
+    shortSummary:
+      "Heavyweight crewneck for chronic illness and autoimmune community.",
+    description:
+      "A crewneck preview for the autoimmune community, held back until assets and Stripe links are ready.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel preview",
@@ -486,7 +511,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "garden-to-table-tote-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Oversized canvas tote for produce runs and groceries.",
-    description: "A future tote release that fits the food and garden side of the brand.",
+    description:
+      "A future tote release that fits the food and garden side of the brand.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Accessories preview",
@@ -500,9 +526,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "black-girl-magic-healing-hoodie-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Cropped hoodie celebrating Black women’s healing journey.",
-    description: "A future hoodie listing with strong audience appeal, pending production assets.",
+    description:
+      "A future hoodie listing with strong audience appeal, pending production assets.",
     cta: "Join the waitlist.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Apparel preview",
   },
   {
@@ -514,7 +541,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "normalize-rest-sleep-tee-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Soft modal sleep tee for recovery and rest days.",
-    description: "A rest-centered apparel preview designed to support the recovery side of the brand.",
+    description:
+      "A rest-centered apparel preview designed to support the recovery side of the brand.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel preview",
@@ -528,7 +556,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "good-energy-only-sweatpants-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Hand-dyed fleece sweatpants with mantra embroidery.",
-    description: "A future loungewear release pending production visuals and live checkout.",
+    description:
+      "A future loungewear release pending production visuals and live checkout.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Apparel preview",
@@ -542,9 +571,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "plant-powered-snapback-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Breathable trucker-style cap for workouts and garden days.",
-    description: "A future accessories release for the nutrition and active lifestyle audience.",
+    description:
+      "A future accessories release for the nutrition and active lifestyle audience.",
     cta: "Join the waitlist.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Accessories preview",
   },
   {
@@ -556,7 +586,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "healing-happens-here-joggers-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Premium fleece joggers with subtle healing message.",
-    description: "A premium jogger concept awaiting real mockups and Stripe readiness.",
+    description:
+      "A premium jogger concept awaiting real mockups and Stripe readiness.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Apparel preview",
@@ -570,7 +601,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "bloom-where-youre-planted-bucket-hat-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Reversible floral bucket hat with sun protection.",
-    description: "A future seasonal accessories release built around garden and growth themes.",
+    description:
+      "A future seasonal accessories release built around garden and growth themes.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Accessories preview",
@@ -584,9 +616,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "wellness-warrior-ringer-tee-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Retro-inspired tee with customizable year.",
-    description: "A future heritage-style tee pending completed visuals and commerce setup.",
+    description:
+      "A future heritage-style tee pending completed visuals and commerce setup.",
     cta: "Join the waitlist.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Apparel preview",
   },
   {
@@ -598,7 +631,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "hydrate-and-heal-tumbler-coming-soon",
     status: "Needs real mockup",
     shortSummary: "20oz insulated tumbler with hydration reminder branding.",
-    description: "A future drinkware release aligned to hydration and everyday wellness habits.",
+    description:
+      "A future drinkware release aligned to hydration and everyday wellness habits.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-orange.png",
     category: "Accessories preview",
@@ -611,10 +645,12 @@ export const comingSoonMerchItems: CatalogItem[] = [
     priceLabel: "Coming soon",
     slug: "protect-your-peace-water-bottle-coming-soon",
     status: "Needs real mockup",
-    shortSummary: "32oz motivational bottle with time markers and affirmations.",
-    description: "A future hydration product preview built around boundaries, energy, and routine.",
+    shortSummary:
+      "32oz motivational bottle with time markers and affirmations.",
+    description:
+      "A future hydration product preview built around boundaries, energy, and routine.",
     cta: "Join the waitlist.",
-    image: "/images/branding/askdogood-logo-navy.png",
+    image: "/images/branding/askdogood-logo.png",
     category: "Accessories preview",
   },
   {
@@ -626,7 +662,8 @@ export const comingSoonMerchItems: CatalogItem[] = [
     slug: "alignment-yoga-mat-coming-soon",
     status: "Needs real mockup",
     shortSummary: "Eco-friendly yoga mat with alignment markers.",
-    description: "A future yoga product for the movement and recovery audience.",
+    description:
+      "A future yoga product for the movement and recovery audience.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Wellness preview",
@@ -639,8 +676,10 @@ export const comingSoonMerchItems: CatalogItem[] = [
     priceLabel: "Coming soon",
     slug: "return-to-yourself-yoga-mat-coming-soon",
     status: "Needs real mockup",
-    shortSummary: "Inspirational mat built around the Return to Yourself mantra.",
-    description: "A future mat release designed around grounding, movement, and recovery.",
+    shortSummary:
+      "Inspirational mat built around the Return to Yourself mantra.",
+    description:
+      "A future mat release designed around grounding, movement, and recovery.",
     cta: "Join the waitlist.",
     image: "/images/branding/askdogood-logo-aqua.png",
     category: "Wellness preview",
@@ -676,5 +715,5 @@ export const catalogItems = [
 ];
 
 export const catalogById = Object.fromEntries(
-  catalogItems.map((item) => [item.id, item])
+  catalogItems.map(item => [item.id, item])
 ) as Record<string, CatalogItem>;

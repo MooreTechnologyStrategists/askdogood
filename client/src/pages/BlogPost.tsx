@@ -2,6 +2,7 @@ import { useParams, Link, useLocation } from "wouter";
 import { useMemo } from "react";
 import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
+import { Action, Section } from "@/components/Experience";
 import { blogImages } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
@@ -14,7 +15,7 @@ type BlogRouteParams = {
   slug?: string;
 };
 
-const BLOG_DEFAULT_HERO = "/assets/img/blog/library/blog-list-hero.jpg";
+const BLOG_DEFAULT_HERO = "/images/personal/food/night-garden.jpg";
 
 function normalizeBlogMarkdown(content: string): string {
   const decoded = content
@@ -23,7 +24,10 @@ function normalizeBlogMarkdown(content: string): string {
     .replace(/\r\n/g, "\n")
     .replace(/\t/g, "  ");
 
-  const withParagraphBreaks = decoded.replace(/([^\n])\n(?!\n|[#>*\-]|\d+\.)/g, "$1\n\n");
+  const withParagraphBreaks = decoded.replace(
+    /([^\n])\n(?!\n|[#>*\-]|\d+\.)/g,
+    "$1\n\n"
+  );
 
   return withParagraphBreaks.replace(/\n{3,}/g, "\n\n").trim();
 }
@@ -31,11 +35,8 @@ function normalizeBlogMarkdown(content: string): string {
 // Map blog post slugs to recommended product IDs
 function getProductRecommendations(slug: string): string[] | null {
   const recommendations: Record<string, string[]> = {
-    "the-superpower-of-sea-moss-the-ocean-s-secret-weapon-for-everyday-wellness": [
-      "hairGrowth",
-      "skinSnapback",
-      "seaMoss",
-    ],
+    "the-superpower-of-sea-moss-the-ocean-s-secret-weapon-for-everyday-wellness":
+      ["hairGrowth", "skinSnapback", "seaMoss"],
     "how-collagen-saved-my-skin-my-dad-s-mobility-and-maybe-even-my-life": [
       "skinSnapback",
       "hairGrowth",
@@ -182,7 +183,9 @@ export default function BlogPost() {
       <SEO
         title={safeTitle}
         description={safeDescription}
-        keywords={post.tags.length ? post.tags : [safeCategory, "Ask DoGood blog"]}
+        keywords={
+          post.tags.length ? post.tags : [safeCategory, "Ask DoGood blog"]
+        }
         image={heroSrc}
         imageAlt={safeTitle}
         url={`/blog/${slug}`}
@@ -224,7 +227,15 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-          <img src={heroSrc} alt={safeTitle} className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/assets/img/blog/_fallback/blog.webp"; }} />
+          <img
+            src={heroSrc}
+            alt={safeTitle}
+            className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl"
+            onError={event => {
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = "/assets/img/blog/_fallback/blog.webp";
+            }}
+          />
         </div>
       </section>
 
@@ -264,7 +275,8 @@ export default function BlogPost() {
                 <div>
                   <h3 className="font-bold text-xl">RoSeé "DoGood" Murphy</h3>
                   <p className="text-muted-foreground">
-                    Thyroid cancer survivor, wellness advocate, and founder of Ask DoGood
+                    Thyroid cancer survivor, wellness advocate, and founder of
+                    Ask DoGood
                   </p>
                 </div>
               </div>
@@ -291,6 +303,15 @@ export default function BlogPost() {
           </div>
         </div>
       </article>
+      <Section tone title="Put a good idea into practice.">
+        <p>Explore practical guides, wellness plans, and ongoing support.</p>
+        <div className="adg-actions">
+          <Action href="/shop">See offers & prices</Action>
+          <Action href="/resources/start" secondary>
+            Find my path
+          </Action>
+        </div>
+      </Section>
     </div>
   );
 }

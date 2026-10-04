@@ -157,11 +157,11 @@ export default function Challenges() {
   const getTypeColor = (type: string) => {
     switch (type) {
       case "daily":
-        return "bg-blue-500/10 text-blue-700 dark:text-blue-400";
+        return "bg-secondary/10 text-primary dark:text-primary";
       case "weekly":
         return "bg-green-500/10 text-green-700 dark:text-green-400";
       case "monthly":
-        return "bg-purple-500/10 text-purple-700 dark:text-purple-400";
+        return "bg-secondary/10 text-primary dark:text-primary";
       case "one_time":
         return "bg-orange-500/10 text-orange-700 dark:text-orange-400";
       default:

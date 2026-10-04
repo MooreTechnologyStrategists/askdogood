@@ -118,7 +118,7 @@ export default function SymptomTracker() {
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center border-2 border-primary/20">
                 <ClipboardList className="h-24 w-24 text-primary/40" />
               </div>
-              <div className="absolute -top-4 -right-4 bg-blue-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg rotate-12">
+              <div className="absolute -top-4 -right-4 bg-secondary text-primary px-4 py-2 rounded-full font-bold text-sm shadow-lg rotate-12">
                 PRINTABLE
               </div>
             </div>

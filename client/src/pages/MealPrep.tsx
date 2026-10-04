@@ -60,7 +60,7 @@ const weeklyMenu = [
     combo: "Salmon cakes, mason jar salad, and beet-apple juice",
     price: 18,
     note: "High-protein, fresh, and easy on the stomach",
-    gradient: "from-emerald-500 to-teal-600",
+    gradient: "from-emerald-500 to-background",
   },
   {
     id: "tuesday",
@@ -76,7 +76,7 @@ const weeklyMenu = [
     combo: "Tuna salad and a cucumber-mint smoothie",
     price: 16,
     note: "Light, crisp, and midday-friendly",
-    gradient: "from-sky-500 to-cyan-600",
+    gradient: "from-sky-500 to-background",
   },
   {
     id: "thursday",
@@ -92,7 +92,7 @@ const weeklyMenu = [
     combo: "Jerk salmon bites, quinoa salad, and hibiscus lime tea",
     price: 19,
     note: "Friday favorite with a little flair",
-    gradient: "from-fuchsia-500 to-rose-600",
+    gradient: "from-primary to-rose-600",
   },
 ];
 
@@ -221,7 +221,7 @@ export default function MealPrepResources() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-green-50 via-secondary to-background">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-4 text-base px-4 py-2">Meal Prep</Badge>
@@ -732,7 +732,7 @@ export default function MealPrepResources() {
               </div>
 
               <div className="mt-16 max-w-4xl mx-auto">
-                <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-2 border-primary/20">
+                <Card className="bg-gradient-to-br from-green-50 to-background border-2 border-primary/20">
                   <CardHeader>
                     <CardTitle className="text-2xl">
                       💰 Budget Shopping Tips for the DMV

@@ -1,195 +1,70 @@
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { BookOpen, HeartHandshake, Home, Menu, ShoppingBag, User, X } from "lucide-react";
-
+import { Menu, X } from "lucide-react";
+const nav = [
+  ["Start here", "/resources/start"],
+  ["Offers & shop", "/shop"],
+  ["Merch", "/merch"],
+  ["Free resources", "/resources/library"],
+  ["Workshops", "/work-with-askdogood"],
+  ["Our story", "/about"],
+];
 export default function Header() {
   const [location] = useLocation();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const officialLogo = "/images/branding/askdogood-logo.png";
-
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location]);
-
-  const navItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/resources", label: "Wellness", icon: HeartHandshake },
-    { href: "/work-with-askdogood", label: "Partner With Us", icon: BookOpen },
-    { href: "/journey", label: "Our Story", icon: User },
-    { href: "/resources/library", label: "Resources", icon: BookOpen },
-    { href: "/shop", label: "Shop", icon: ShoppingBag },
-    { href: "/merch", label: "Merch", icon: ShoppingBag },
-  ];
-
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [location]);
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/88 backdrop-blur-xl shadow-[0_10px_30px_rgba(20,45,30,0.08)]">
-      <div className="container flex h-14 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+    <header className="adg-header">
+      <div className="container adg-header-row">
+        <Link href="/" aria-label="AskDoGood home">
           <img
-            src={officialLogo}
+            src="/images/branding/askdogood-logo.png"
             alt="AskDoGood official logo"
-            className="h-8 w-auto rounded-md object-contain"
-            loading="eager"
-            width="120"
-            height="32"
+            className="adg-logo"
           />
         </Link>
-
-        {/* CENTER: Nav (desktop) */}
-        <nav className="hidden lg:flex items-center gap-0.5">
-          {navItems.map((item) => {
-            if (item.submenu) {
-              return (
-                <div key={item.label} className="relative group">
-                  <button
-                    className={[
-                      "flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer",
-                      "hover:bg-accent/70 hover:text-accent-foreground hover:shadow-sm",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-                      "text-muted-foreground",
-                    ].join(" ")}
-                  >
-                    <item.icon className="h-3.5 w-3.5" />
-                    {item.label}
-                  </button>
-
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-background border opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-20">
-                    <div className="py-2">
-                      {item.submenu.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:bg-accent/70 hover:text-accent-foreground rounded-md transition-all"
-                        >
-                          <sub.icon className="h-4 w-4" />
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              );
-            } else {
-              const isActive = location === item.href;
-              const Icon = item.icon;
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={[
-                    "flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-all cursor-pointer",
-                    "hover:bg-accent/60 hover:text-foreground",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-                    isActive ? "bg-primary/10 text-primary font-semibold" : "text-muted-foreground",
-                    item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
-                  ].join(" ")}
-                >
-                  <Icon className="h-3.5 w-3.5" />
-                  {item.label}
-                </Link>
-              );
-            }
-          })}
+        <nav aria-label="Main navigation" className="adg-desktop-nav">
+          {nav.map(([name, href]) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={location === href ? "page" : undefined}
+            >
+              {name}
+            </Link>
+          ))}
         </nav>
-
-        {/* RIGHT: CTA + Mobile Menu Button */}
-        <div className="flex items-center gap-2">
-          <Link href="/login">
-            <Button variant="ghost" size="sm" className="hidden md:flex text-muted-foreground hover:text-foreground font-medium">
-              Sign In
-            </Button>
-          </Link>
-
-          <Link href="/signup">
-            <Button size="sm" className="hidden md:flex font-semibold px-4 shadow-md hover:shadow-lg">
-              Join Free
-            </Button>
-          </Link>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-accent transition-colors"
-            aria-label="Toggle menu"
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-site-menu"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div
-          id="mobile-site-menu"
-          className="lg:hidden border-t bg-background/95 backdrop-blur animate-in slide-in-from-top-2 duration-200"
+        <Link href="/contact" className="adg-header-contact">
+          Let’s talk
+        </Link>
+        <button
+          className="adg-menu-button"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls="mobile-site-menu"
+          aria-label={open ? "Close menu" : "Open menu"}
         >
-          <nav className="container py-4 flex flex-col gap-2">
-            {navItems.map((item) => {
-              if (item.submenu) {
-                return (
-                  <div key={item.label} className="flex flex-col">
-                    <span className="flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium text-muted-foreground">
-                      <item.icon className="h-5 w-5" />
-                      {item.label}
-                    </span>
-
-                    <div className="pl-6 flex flex-col gap-1">
-                      {item.submenu.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-2 rounded-md px-4 py-2 text-base text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                        >
-                          <sub.icon className="h-4 w-4" />
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                );
-              } else {
-                const isActive = location === item.href;
-                const Icon = item.icon;
-
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={[
-                      "flex items-center gap-3 rounded-md px-4 py-3 text-base font-medium transition-all cursor-pointer",
-                      "hover:bg-accent hover:text-accent-foreground",
-                      isActive ? "bg-accent text-accent-foreground" : "text-muted-foreground",
-                      item.highlight && "bg-primary/10 text-primary hover:bg-primary/20 font-semibold",
-                    ].join(" ")}
-                  >
-                    <Icon className="h-5 w-5" />
-                    {item.label}
-                  </Link>
-                );
-              }
-            })}
-          </nav>
-
-          <div className="container pb-4 flex flex-col gap-2">
-            <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full bg-transparent border border-border text-foreground hover:bg-accent">
-                Sign In
-              </Button>
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+      {open && (
+        <nav
+          id="mobile-site-menu"
+          aria-label="Mobile navigation"
+          className="adg-mobile-nav container"
+        >
+          {nav.map(([name, href]) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={location === href ? "page" : undefined}
+            >
+              {name}
             </Link>
-
-            <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                Join
-              </Button>
-            </Link>
-          </div>
-        </div>
+          ))}
+          <Link href="/contact">Contact</Link>
+          <Link href="/login">Member sign in</Link>
+        </nav>
       )}
     </header>
   );

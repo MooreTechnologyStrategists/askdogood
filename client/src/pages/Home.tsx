@@ -1,115 +1,189 @@
-import { ArrowRight, BookOpen, HeartHandshake, Leaf, MoveUpRight, Moon, UtensilsCrossed } from "lucide-react";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+import {
+  Action,
+  PageIntro,
+  Section,
+  TopicCards,
+  OfferCards,
+  HowItWorks,
+  Reassurance,
+} from "@/components/Experience";
+import { mission, vision } from "@/content/experience";
 import BeehiivSubscribe from "@/components/BeehiivSubscribe";
-import fallGardenImage from "@/content/images/garden/fall.webp";
-
-const pillars = [
-  { title: "Nourish", description: "Practical food and nutrition for the life you are actually living.", href: "/blog", icon: UtensilsCrossed },
-  { title: "Move", description: "Movement that supports your energy, body, and everyday routines.", href: "/keep-moving", icon: Leaf },
-  { title: "Restore", description: "Rest, reflection, and routines that make room for renewal.", href: "/resources", icon: Moon },
-  { title: "Explore", description: "Traditional wisdom, modern information, and emerging wellness tools.", href: "/resources/library", icon: BookOpen },
-];
-
-const pathways = [
-  { title: "I want practical food ideas", description: "Start with recipes, food education, and garden-to-table inspiration.", href: "/blog", action: "Explore food" },
-  { title: "I want to feel better", description: "Find approachable resources for movement, rest, relationships, and daily habits.", href: "/resources/start", action: "Start exploring" },
-  { title: "I want to learn", description: "Browse the full library of articles, guides, stories, and tools.", href: "/resources/library", action: "Visit the library" },
-  { title: "I represent an organization", description: "Bring wellness education, workshops, and practical resources to your community.", href: "/work-with-askdogood", action: "Partner with us" },
-];
-
-const featuredResources = [
-  { title: "What is AskDoGood?", description: "A practical starting point for whole-person wellness education.", href: "/blog/what-is-askdogood", image: "/assets/img/blog/assigned/what-is-askdogood.webp" },
-  { title: "Recipes for real life", description: "Simple food ideas that make nourishing yourself feel more possible.", href: "/clinical-recipes", image: "/images/personal/food/muhammad-dishes-2.jpg" },
-  { title: "The founder journey", description: "Why Rosee built a place for useful knowledge and better choices.", href: "/journey", image: "/assets/img/journey/hero-journey.png" },
-];
-
-const littlePockets = [
-  { title: "In my garden", description: "What I'm growing, learning, and making room for.", href: "/garden", image: "https://askdogoodassets.blob.core.windows.net/images/garden/rosee-in-garden.webp", alt: "RoSeé in her garden" },
-  { title: "The seasons", description: "Small shifts for the season you're in.", href: "/garden", image: fallGardenImage, alt: "Fall garden inspiration" },
-  { title: "What music made me", description: "Old school hip-hop, soul, and the conversations worth listening to after work.", href: "/interests#listening", image: "https://askdogoodassets.blob.core.windows.net/images/personal/Music.webp", alt: "Music and creative expression" },
-  { title: "What I make", description: "Ideas, stories, and pieces that carry a message.", href: "/merch#original-collection", image: "/images/merch/askdogood-original-three.webp", alt: "The original AskDoGood hoodie, matching set, and cream tee" },
-  { title: "Tools I use", description: "The creative and practical software behind my work.", href: "/interests#tools", image: "https://askdogoodassets.blob.core.windows.net/images/journey/microsoft-azure-career.webp", alt: "Technology and creative work" },
-];
-
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <section className="container grid gap-10 py-14 md:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-24">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">AskDoGood</p>
-          <h1 className="mt-5 text-5xl leading-[0.98] text-foreground md:text-7xl">Wellness should not be a luxury.</h1>
-          <p className="mt-6 max-w-xl text-xl leading-8 text-muted-foreground">Practical wellness for real life.</p>
-          <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">Come as you are after a long day. There is room here for useful wellness, a garden story, good music, and an honest conversation about the world we live in.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/shop"><Button className="rounded-full px-6 py-6 text-base">Shop live offers <ArrowRight className="ml-2 h-4 w-4" /></Button></Link>
-            <Link href="/resources/start"><Button variant="outline" className="rounded-full px-6 py-6 text-base">Explore wellness</Button></Link>
-            <Link href="/work-with-askdogood"><Button variant="outline" className="rounded-full px-6 py-6 text-base">Partner with AskDoGood</Button></Link>
-            <a href="#pockets" className="inline-flex min-h-12 items-center rounded-full px-4 font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Explore the little pockets ↓</a>
+    <div className="adg-page">
+      <PageIntro
+        eyebrow="AskDoGood · Health, connection & everyday life"
+        title="A little guidance. A good next step."
+        text="Practical guides, wellness plans, community support, and real-life conversations to help you care for yourself and move forward."
+        image="/images/personal/rosee-garden-2026.webp"
+        alt="RoSeé smiling in her garden"
+      >
+        <p className="adg-small">
+          Start with a $17 reset guide, get a $97 personalized wellness plan, or
+          explore $19/month membership.
+        </p>
+        <div className="adg-actions">
+          <Action href="#choose">Find what I need</Action>
+          <Action href="/shop" secondary>
+            See offers & prices
+          </Action>
+        </div>
+      </PageIntro>
+      <Section
+        id="choose"
+        eyebrow="Start with what brought you here"
+        title="What would help today?"
+      >
+        <TopicCards />
+      </Section>
+      <Section
+        tone
+        eyebrow="Practical support you can purchase"
+        title="Three ways to take a next step."
+      >
+        <OfferCards />
+        <div className="adg-actions">
+          <Action href="/shop" secondary>
+            Browse all offers
+          </Action>
+        </div>
+      </Section>
+      <Section eyebrow="From exploring to doing" title="Here’s how it works.">
+        <HowItWorks />
+        <Reassurance />
+      </Section>
+      <Section tone eyebrow="Made with a message" title="Wear a little good.">
+        <div className="adg-split">
+          <img
+            src="/images/merch/askdogood-original-three.webp"
+            alt="AskDoGood black hoodie, hoodie and jogger set, and cream tee"
+            className="adg-photo adg-photo-contain"
+            loading="lazy"
+          />
+          <div>
+            <h3>Your original AskDoGood collection.</h3>
+            <p>
+              Black embroidered hoodie $59. Hoodie and jogger set $95. Cream
+              logo tee $29. Sizes S–2XL; shipping is calculated at checkout.
+            </p>
+            <div className="adg-actions">
+              <Action href="/merch">Shop merch</Action>
+            </div>
+            <p className="adg-small">
+              Made to order. Review sizing and delivery details before checkout.
+            </p>
           </div>
-          <p className="mt-5 text-xs leading-5 text-muted-foreground">AskDoGood is a wellness education platform, not a healthcare provider. Our resources do not replace professional medical care.</p>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-5 rounded-[3rem] bg-primary/10 blur-2xl" aria-hidden="true" />
-          <img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé smiling beside the plants in her garden" className="relative aspect-[4/3] w-full rounded-[2.5rem] object-cover shadow-2xl" width="1100" height="825" fetchPriority="high" />
-        </div>
-      </section>
-
-      <section className="bg-[#f8eee5] py-16 md:py-20" id="pockets" aria-labelledby="pockets-heading">
-        <div className="container">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Little pockets of good</p>
-          <h2 id="pockets-heading" className="mt-3 max-w-2xl text-4xl">Peace, love, and the things that make us feel alive.</h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-foreground/75">Come through the garden, follow the seasons, turn up the music, and see what I'm creating along the way.</p>
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {littlePockets.map((pocket, index) => (
-              <Link key={pocket.title} href={pocket.href} className={`group overflow-hidden rounded-3xl border border-[#173c32]/15 bg-background shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${index === 0 ? "lg:col-span-2" : ""}`}>
-                <img src={pocket.image} alt={pocket.alt} loading="lazy" className={`w-full object-cover ${index === 0 ? "aspect-[16/7]" : "aspect-[4/3]"}`} />
-                <div className="p-6"><h3 className="text-2xl">{pocket.title}</h3><p className="mt-2 leading-7 text-muted-foreground">{pocket.description}</p><span className="mt-5 inline-flex items-center font-semibold text-primary">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span></div>
-              </Link>
-            ))}
+      </Section>
+      <Section
+        eyebrow="Built from life, for life"
+        title="Meet the person behind AskDoGood."
+      >
+        <div className="adg-split">
+          <div>
+            <p>
+              I’m RoSeé. AskDoGood grew from my own experiences with health,
+              rebuilding, learning, and finding peace in the middle of real
+              life. This is where useful knowledge meets an honest conversation.
+            </p>
+            <h3>Our mission</h3>
+            <p>{mission}</p>
+            <h3>Our vision</h3>
+            <p>{vision}</p>
+            <p>
+              Faith-rooted, culturally grounded, and welcoming to people from
+              every walk of life.
+            </p>
+            <div className="adg-actions">
+              <Action href="/about" secondary>
+                Get to know AskDoGood
+              </Action>
+              <Action href="/journey" secondary>
+                Read my story
+              </Action>
+            </div>
           </div>
+          <img
+            src="/images/personal/food/zay-at-first-watch.jpg"
+            alt="RoSeé smiling outside a restaurant"
+            className="adg-photo"
+            loading="lazy"
+          />
         </div>
-      </section>
-
-      <section className="bg-[#fff8ed] py-16 md:py-20" aria-labelledby="table-heading">
-        <div className="container grid gap-8 md:grid-cols-[1fr_1fr] md:items-center">
-          <img src="/images/personal/food/muhammad-dishes-2.jpg" alt="A home-style plate with vegetables and corn" loading="lazy" className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lg" />
-          <div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">From the table</p><h2 id="table-heading" className="mt-3 text-4xl">Real food. Real stories. Room for the whole conversation.</h2><p className="mt-5 text-lg leading-8 text-foreground/75">A meal can hold a memory, a budget decision, a hard day, or a little joy. We’re making space for the food we actually eat and the stories behind it, one plate at a time.</p><p className="mt-4 leading-7 text-foreground/75">Explore recipes and food education now. More personal photos and the stories that belong to them will join the table as the archive grows.</p><Link href="/clinical-recipes" className="mt-6 inline-flex items-center font-semibold text-primary">Explore food and recipes <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
+      </Section>
+      <Section
+        tone
+        eyebrow="For the people you serve"
+        title="Bring AskDoGood to your community."
+      >
+        <p className="adg-lead">
+          Practical workshops on food, stress, healthy routines, caregiving, and
+          life transitions for community groups, senior centers, veterans
+          organizations, and workplaces.
+        </p>
+        <div className="adg-actions">
+          <Action href="/work-with-askdogood">
+            Explore workshops & partnerships
+          </Action>
         </div>
-      </section>
-
-      <section className="container py-16 md:py-20" aria-labelledby="originals-heading"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Made with a message</p><h2 id="originals-heading" className="mt-3 text-4xl">The original three.</h2><p className="mt-3 max-w-2xl leading-7 text-muted-foreground">The embroidered black hoodie, the matching hoodie and jogger set, and the cream tee. Get to know the pieces that started the AskDoGood collection.</p></div><Link href="/merch#original-collection" className="inline-flex items-center font-semibold text-primary">See the collection <ArrowRight className="ml-2 h-4 w-4" /></Link></div><img src="/images/merch/askdogood-original-three.webp" alt="Original AskDoGood black hoodie, matching hoodie and jogger set, and cream tee" loading="lazy" className="mt-8 w-full rounded-[2rem] border border-[#173c32]/10 object-cover shadow-lg" /></section>
-
-      <section className="border-y border-border/70 bg-card/55">
-        <div className="container grid gap-10 py-16 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-          <div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">A better front door</p><h2 className="mt-3 text-4xl">Useful wellness, made easier to reach.</h2></div>
-          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">AskDoGood connects practical generational wisdom with modern wellness knowledge and tools to help people create healthier, more sustainable everyday routines.</p>
+      </Section>
+      <Section
+        id="pockets"
+        eyebrow="Little pockets of peace"
+        title="There’s room for joy, too."
+      >
+        <div className="adg-grid adg-grid-three">
+          {[
+            {
+              title: "In the garden",
+              text: "Growing, changing, and making room for a slower moment.",
+              href: "/garden",
+              image: "/images/personal/food/garden-peppers.jpg",
+              alt: "Peppers growing in RoSeé’s garden",
+            },
+            {
+              title: "What music made me",
+              text: "Old school sounds, culture, and stories worth sharing.",
+              href: "/interests",
+              image: "/images/personal/rosee-with-mc-lyte.jpg",
+              alt: "A photograph of RoSeé with MC Lyte",
+            },
+            {
+              title: "Life beyond the familiar",
+              text: "The places and experiences that open a new chapter.",
+              href: "/journey",
+              image: "/images/personal/travel/rosee-speaking-paris-2023.webp",
+              alt: "RoSeé speaking in Paris",
+            },
+          ].map(item => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="adg-card adg-image-card"
+            >
+              <img src={item.image} alt={item.alt} loading="lazy" />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <span className="adg-text-link">Explore</span>
+              </div>
+            </Link>
+          ))}
         </div>
-      </section>
-
-      <section className="container py-16 md:py-20">
-        <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">The four pillars</p><h2 className="mt-3 text-4xl">Start with what matters today.</h2></div><p className="max-w-sm text-sm leading-6 text-muted-foreground">Old wisdom. New tools. Better choices.</p></div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map(({ title, description, href, icon: Icon }) => <Link key={title} href={href} className="group rounded-3xl border border-border/70 bg-background p-6 transition-transform hover:-translate-y-1 hover:border-primary/50"><Icon className="h-6 w-6 text-primary" /><h3 className="mt-8 text-2xl capitalize">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p><span className="mt-6 inline-flex items-center text-sm font-semibold text-primary">Explore <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></span></Link>)}
-        </div>
-      </section>
-
-      <section className="bg-primary py-16 text-primary-foreground md:py-20">
-        <div className="container"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground/70">Start where you are</p><h2 className="mt-3 max-w-2xl text-4xl md:text-5xl">Choose your next good step.</h2><div className="mt-10 grid gap-px overflow-hidden rounded-3xl border border-primary-foreground/20 bg-primary-foreground/20 md:grid-cols-2">{pathways.map((pathway) => <Link key={pathway.title} href={pathway.href} className="group bg-primary p-6 transition-colors hover:bg-primary-foreground hover:text-primary"><h3 className="text-xl">{pathway.title}</h3><p className="mt-3 max-w-md text-sm leading-6 text-primary-foreground/75 group-hover:text-primary/75">{pathway.description}</p><span className="mt-6 inline-flex items-center text-sm font-semibold">{pathway.action}<MoveUpRight className="ml-2 h-4 w-4" /></span></Link>)}</div></div>
-      </section>
-
-      <section className="container py-16 md:py-20"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Featured resources</p><h2 className="mt-3 text-4xl">A few places to begin.</h2></div><Link href="/resources/library" className="inline-flex items-center text-sm font-semibold text-primary">Browse the full library <ArrowRight className="ml-2 h-4 w-4" /></Link></div><div className="mt-10 grid gap-6 md:grid-cols-3">{featuredResources.map((resource) => <Link key={resource.title} href={resource.href} className="group overflow-hidden rounded-3xl border border-border/70 bg-card"><img src={resource.image} alt="" className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" width="640" height="480" /><div className="p-6"><h3 className="text-2xl">{resource.title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{resource.description}</p><span className="mt-5 inline-flex items-center text-sm font-semibold text-primary">Read more <ArrowRight className="ml-2 h-4 w-4" /></span></div></Link>)}</div></section>
-
-      <section className="bg-[#fff8ed] py-16 md:py-20" aria-labelledby="beyond-heading"><div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">From home to the world</p><h2 id="beyond-heading" className="mt-3 text-4xl">The stories go farther than the garden fence.</h2><p className="mt-5 text-lg leading-8 text-foreground/75">I went from being afraid to fly to standing in Paris talking about thyroid physiology and metabolism. Dubai became another stop in a life I once struggled to imagine. Travel isn't a trophy shelf here; it changes the questions I bring home about health, culture, possibility, and who gets invited into the conversation.</p><p className="mt-4 leading-7 text-foreground/75">The Paris photo is a real moment from the 2023 conference. More travel notes and personal photographs will be added as their stories are ready.</p><Link href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" className="mt-6 inline-flex items-center font-semibold text-primary">Read the Paris story <ArrowRight className="ml-2 h-4 w-4" /></Link></div><img src="/images/personal/travel/rosee-speaking-paris-2023.webp" alt="RoSeé speaking beside the conference banner in Paris in 2023" className="aspect-[4/3] w-full rounded-[2rem] object-cover object-[center_30%] shadow-lg" loading="lazy" /></div></section>
-
-      <section className="container py-16 md:py-20" aria-labelledby="conversations-heading"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Come into the conversation</p><h2 id="conversations-heading" className="mt-3 text-4xl">Good questions make room for good company.</h2><div className="mt-8 grid gap-5 md:grid-cols-3"><div className="rounded-3xl border bg-card p-6"><p className="text-sm font-semibold text-primary">At the garden table</p><h3 className="mt-3 text-2xl">What are you growing through?</h3><p className="mt-3 leading-7 text-muted-foreground">The fall and winter journal pairs real plants with the things we carry, release, and start again.</p><Link href="/garden" className="mt-5 inline-flex font-semibold text-primary">Join the garden conversation →</Link></div><div className="rounded-3xl border bg-card p-6"><p className="text-sm font-semibold text-primary">October 10</p><h3 className="mt-3 text-2xl">Meet AskDoGood in person</h3><p className="mt-3 leading-7 text-muted-foreground">We’re preparing for an October community event. Venue and visit details will be shared when confirmed.</p><a href="mailto:askdogood@gmail.com?subject=October%2010%20AskDoGood%20event" className="mt-5 inline-flex font-semibold text-primary">Ask for event details →</a></div><div className="rounded-3xl border bg-card p-6"><p className="text-sm font-semibold text-primary">For organizations</p><h3 className="mt-3 text-2xl">Bring the conversation to your people</h3><p className="mt-3 leading-7 text-muted-foreground">Workshops, guided experiences, and useful resources built around the people you serve.</p><Link href="/work-with-askdogood" className="mt-5 inline-flex font-semibold text-primary">Plan a workshop →</Link></div></div></section>
-
-
-      <section className="border-y border-border/70 bg-[#f3ddd2] py-16 md:py-20"><div className="container grid gap-8 md:grid-cols-[1fr_auto] md:items-center"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Community and partnership</p><h2 className="mt-3 max-w-2xl text-4xl">Bring AskDoGood to your community.</h2><p className="mt-4 max-w-2xl text-base leading-7 text-foreground/75">We support workshops, senior and veteran programming, food education, wellness education, and thoughtful organizational partnerships.</p></div><Link href="/work-with-askdogood"><Button className="rounded-full px-6 py-6">Let&apos;s work together <HeartHandshake className="ml-2 h-4 w-4" /></Button></Link></div></section>
-
-      <section className="container grid gap-10 py-16 md:grid-cols-[0.7fr_1.3fr] md:items-center md:py-20"><img src="/images/personal/rosee-founder-snow-2026.jpg" alt="RoSeé, founder of AskDoGood" className="aspect-square w-full max-w-sm rounded-[2rem] object-cover" loading="lazy" width="600" height="600" /><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Why AskDoGood exists</p><h2 className="mt-3 text-4xl">Knowledge should help people live, not overwhelm them.</h2><p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Rosee built AskDoGood from a lived journey of learning, changing habits, and sharing what proved useful. Today, the platform makes practical wellness education more accessible to everyday people.</p><Link href="/journey" className="mt-6 inline-flex items-center font-semibold text-primary">Read the full story <ArrowRight className="ml-2 h-4 w-4" /></Link></div></section>
-
-      <section id="newsletter" className="container scroll-mt-24 pb-16 md:pb-20" aria-labelledby="newsletter-heading"><div className="rounded-[2rem] border border-primary/20 bg-primary/5 p-8 md:flex md:items-center md:justify-between md:gap-10 md:p-12"><div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Keep going</p><h2 id="newsletter-heading" className="mt-3 text-4xl">Let&apos;s do some good.</h2><p className="mt-3 max-w-xl leading-7 text-muted-foreground">Get practical notes and new resources for food, movement, restoration, and everyday wellness.</p></div><BeehiivSubscribe variant="inline" className="mt-8 w-full md:mt-0 md:max-w-md" source="home_front_door" magnetType="wellness-notes" title="Stay connected" description="Useful wellness education, delivered occasionally." buttonText="Join free" /></div></section>
+      </Section>
+      <Section
+        id="newsletter"
+        tone
+        eyebrow="Stay connected"
+        title="A little good in your inbox."
+      >
+        <p>
+          Get practical resources, personal stories, and news about new offers.
+        </p>
+        <BeehiivSubscribe variant="inline" />
+      </Section>
     </div>
   );
 }

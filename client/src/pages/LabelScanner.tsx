@@ -488,8 +488,8 @@ export default function LabelScanner() {
                         <p className="text-2xl font-bold text-red-600">{scanResult.nutritionFacts.sodium}mg</p>
                         <p className="text-xs text-muted-foreground">Sodium</p>
                       </div>
-                      <div className="bg-blue-500/10 p-3 rounded-2xl text-center">
-                        <p className="text-2xl font-bold text-blue-600">{scanResult.nutritionFacts.protein}g</p>
+                      <div className="bg-secondary/10 p-3 rounded-2xl text-center">
+                        <p className="text-2xl font-bold text-primary">{scanResult.nutritionFacts.protein}g</p>
                         <p className="text-xs text-muted-foreground">Protein</p>
                       </div>
                       <div className="bg-green-500/10 p-3 rounded-2xl text-center">
@@ -541,9 +541,9 @@ export default function LabelScanner() {
                 )}
 
                 {/* Recommendations */}
-                <Card className="rounded-3xl shadow-xl border-2 border-blue-500/50 bg-blue-50/50 dark:bg-blue-950/20">
+                <Card className="rounded-3xl shadow-xl border-2 border-border/50 bg-secondary/50 dark:bg-secondary/20">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-blue-600">
+                    <CardTitle className="flex items-center gap-2 text-primary">
                       <TrendingUp className="h-5 w-5" />
                       Smart Recommendations
                     </CardTitle>
@@ -551,7 +551,7 @@ export default function LabelScanner() {
                   <CardContent className="space-y-3">
                     {scanResult.recommendations.map((rec, i) => (
                       <div key={i} className="flex items-start gap-3 p-4 bg-white dark:bg-zinc-900 rounded-2xl shadow-cartoon-lg hover-wiggle">
-                        <Zap className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
+                        <Zap className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                         <p className="text-sm font-medium">{rec}</p>
                       </div>
                     ))}
@@ -602,10 +602,10 @@ export default function LabelScanner() {
                 </div>
 
                 {/* Better Alternatives */}
-                <Card className="rounded-3xl shadow-xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-50/50 to-pink-50/50 dark:from-purple-950/20 dark:to-pink-950/20">
+                <Card className="rounded-3xl shadow-xl border-2 border-border/50 bg-gradient-to-br from-primary/50 to-background/50 dark:from-primary/20 dark:to-background/20">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Sparkles className="h-5 w-5 text-purple-600" />
+                      <Sparkles className="h-5 w-5 text-primary" />
                       Better Alternatives
                     </CardTitle>
                     <CardDescription>
