@@ -7,6 +7,7 @@ import {
   ShoppingBag,
   Users,
 } from "lucide-react";
+import OriginalMerchCheckout from "@/components/OriginalMerchCheckout";
 import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -128,9 +129,19 @@ export default function Shop() {
     <div className="min-h-screen bg-background">
       <SEO
         title="Shop AskDoGood Courses, Guides, and Wellness Tools"
-        description="Explore AskDoGood digital products, free resources, membership offers, services, and upcoming merch from a single professional storefront."
+        description="Explore AskDoGood digital products, free resources, membership offers, services, and merch from a single professional storefront."
         url="/shop"
       />
+
+      <section id="original-collection" className="border-b bg-[#fff8ed] py-10 md:py-14" aria-labelledby="shop-merch-heading">
+        <div className="container">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">AskDoGood merch</p>
+          <h2 id="shop-merch-heading" className="mt-3 text-3xl md:text-4xl">Wear what moves you.</h2>
+          <p className="mt-4 text-base">The original black hoodie, matching hoodie and jogger set, and cream logo tee. Choose your piece and size below.</p>
+          <OriginalMerchCheckout />
+          <Link href="/merch" className="mt-6 inline-flex rounded-full border border-primary px-5 py-3 font-semibold text-primary">Explore the full merch collection</Link>
+        </div>
+      </section>
 
       <section className="relative overflow-hidden border-b border-border/40 bg-[radial-gradient(circle_at_top_left,_rgba(233,124,64,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(14,116,144,0.18),_transparent_30%)] py-20">
         <div className="container relative z-10">
