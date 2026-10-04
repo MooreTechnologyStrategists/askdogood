@@ -19,6 +19,7 @@ export default function Header() {
     { href: "/journey", label: "Our Story", icon: User },
     { href: "/resources/library", label: "Resources", icon: BookOpen },
     { href: "/shop", label: "Shop", icon: ShoppingBag },
+    { href: "/merch", label: "Merch", icon: ShoppingBag },
   ];
 
   return (
