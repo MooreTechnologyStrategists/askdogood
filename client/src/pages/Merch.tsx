@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Filter, Music2, ArrowRight } from "lucide-react";
 import { hasValidCheckoutUrl, merchCategories, merchProducts, type MerchProduct } from "@/data/merch-products";
+import OriginalMerchCheckout from "@/components/OriginalMerchCheckout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GA_EVENTS } from "@/config/analytics";
@@ -53,7 +54,12 @@ export default function Merch() {
       </section>
 
       <section id="original-collection" className="scroll-mt-20 bg-[#fff8ed] py-16 md:py-20" aria-labelledby="original-collection-heading">
-        <div className="container mx-auto px-4"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">The original AskDoGood pieces</p><h2 id="original-collection-heading" className="mt-3 text-4xl">Three ways to carry the good.</h2><p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/75">These are the original apparel designs: an embroidered black hoodie, a matching black hoodie and jogger set, and a cream tee. We’re bringing these signature pieces into the live store now. Each item will switch to Shop Now as soon as its production and checkout path is verified.</p><img src="/images/merch/askdogood-original-three.webp" alt="The original AskDoGood embroidered black hoodie, matching hoodie and jogger set, and cream tee" className="mt-8 w-full rounded-3xl border border-[#173c32]/10 shadow-lg" /><div className="mt-5 grid gap-3 text-center font-semibold sm:grid-cols-3"><span>Embroidered black hoodie</span><span>Matching hoodie + joggers</span><span>Cream tee</span></div><a href="/#newsletter" className="mt-8 inline-flex min-h-11 items-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Get notified when these drop <ArrowRight className="ml-2 h-4 w-4" /></a></div>
+        <div className="container mx-auto px-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">The original AskDoGood pieces</p>
+          <h2 id="original-collection-heading" className="mt-3 text-4xl">Three ways to carry the good.</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/75">The embroidered black hoodie, matching hoodie and joggers, and cream logo tee. Choose your size and review delivery costs at secure checkout.</p>
+          <OriginalMerchCheckout />
+        </div>
       </section>
 
       <section aria-labelledby="music-collection-heading" className="bg-[#173c32] text-[#fff8e9]">
