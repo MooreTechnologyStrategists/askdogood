@@ -234,7 +234,7 @@ export const flagshipDigitalProducts: CatalogItem[] = [
 export const membershipOffers: CatalogItem[] = [
   {
     id: "dogood-wellness-circle",
-    name: "DoGood Wellness Circle",
+    name: "AskDoGood Wellness Membership",
     kind: "membership",
     platform: "stripe",
     priceLabel: "$19",
