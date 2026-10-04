@@ -38,6 +38,13 @@ const readyNow = [...flagshipDigitalProducts, ...membershipOffers, ...serviceCat
 const formatCatalogPrice = (item: CatalogItem) =>
   item.kind === "membership" ? `${item.priceLabel}/month` : item.priceLabel;
 
+const publicCatalogStatus = (item: CatalogItem) => {
+  if (isTrustedCheckout(item)) {
+    return item.kind === "lead-magnet" ? "Free" : "Available now";
+  }
+  return "Coming soon";
+};
+
 const launchRoadmap = launchOrder
   .map((id) => catalogById[id])
   .filter((item): item is CatalogItem => Boolean(item));
@@ -73,7 +80,7 @@ function CatalogCard({ item }: { item: CatalogItem }) {
       <div className="relative h-56 overflow-hidden bg-muted">
         <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
         <Badge className="absolute left-4 top-4 bg-background/90 text-foreground shadow-sm">
-          {item.status}
+          {publicCatalogStatus(item)}
         </Badge>
       </div>
       <CardHeader>
