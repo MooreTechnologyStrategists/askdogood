@@ -30,7 +30,7 @@ export default function BeehiivSubscribe({
       )}
       <a
         className="adg-button"
-        href="https://rosees-newsletter-9d5fac.beehiiv.com/?modal=signup"
+        href="https://rosees-newsletter-9d5fac.beehiiv.com/"
         onClick={() =>
           trackEvent("newsletter_signup_opened", {
             source,
