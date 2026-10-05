@@ -44,6 +44,11 @@ export default function RouteSeo({ location }: RouteSeoProps) {
       description:
         "Explore the $17 reset guide, $97 personalized wellness plan, $19/month membership, and original AskDoGood merch.",
     },
+    "/cookbook": {
+      title: "Beats, Plants & Plates Cookbook Preview | AskDoGood",
+      description:
+        "Explore original recipe drafts, hip-hop cultural notes, and the free preview of the AskDoGood cookbook in development.",
+    },
     "/merch": {
       title: "Shop AskDoGood Merch",
       description:

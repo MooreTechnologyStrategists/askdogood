@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { safeBlogPosts } from "@/content/blogData";
-import { articleImage, articleTopic } from "@/data/blogImages";
+import { articleImage, articleImageAlt, articleTopic } from "@/data/blogImages";
 import { topics } from "@/content/experience";
 import { Action, PageIntro, Section } from "@/components/Experience";
 export default function Blog() {
@@ -72,7 +72,7 @@ export default function Blog() {
             >
               <img
                 src={articleImage(post.id)}
-                alt="A photograph from the AskDoGood archive"
+                alt={articleImageAlt(post.id)}
                 loading="lazy"
               />
               <div>

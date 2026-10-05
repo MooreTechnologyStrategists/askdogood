@@ -175,9 +175,9 @@ If you want more structure, The Relationship Keeper turns ideas like these into 
   },
   {
     id: "how-to-build-a-weekly-relationship-check-in-ritual",
-    title: "How to Build a Weekly Relationship Check-In Ritual",
+    title: "Love Needs a Check-In, Not a Mind Reader",
     excerpt:
-      "A weekly check-in helps couples stay connected before small issues become bigger ones. Here is a simple rhythm you can repeat without turning it into therapy.",
+      "A weekly conversation can make room for honesty, needs, and a plan. Start with three questions and one agreement you can actually keep.",
     content: `A weekly check-in is not about interrogating each other. It is about making time for honest conversation before the week disappears.
 
 ## Keep it short enough to repeat
@@ -201,10 +201,23 @@ Pick a few numbers from 1 to 10 for things like connection, fun, support, and st
 End each check-in by choosing one thing you will do before the next conversation. It could be a walking date, a better sleep routine, or a simple dinner out.
 
 The goal is not perfection. The goal is staying in rhythm with each other.
-`,
+
+
+## Make it usable this week
+
+Choose a calm time rather than the middle of an argument. Ask: What felt good this week? What felt hard? What do we need from each other next week?
+
+Pick one specific agreement, such as a shared walk, a chore handoff, or a time to talk again. Listening is not the same as agreeing with everything; it means making room to understand.
+
+If you feel unsafe, a relationship exercise is not the right next step. Seek support appropriate to your situation.
+
+[Explore more relationship resources](/support/relationships), or [contact AskDoGood](/contact?topic=Conversation%20support) to ask about availability and scope.
+
+*Refreshed October 5, 2026, with new practical next steps.*`,
     date: "2026-07-08",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200",
+    image:
+      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200",
     tags: ["Relationships", "Check-Ins", "Communication"],
     featured: true,
     author: "RoSe� Murphy",
@@ -427,8 +440,9 @@ Remember, supplements work best as part of a holistic approach to health that in
   },
   {
     id: "finding-peace-in-the-chaos-mindfulness-for-black-women",
-    title: "Finding Peace in the Chaos: Mindfulness for Black Women",
-    excerpt: "The best thing you can do greater than finding peace, is maintaining it. -DoGood",
+    title: "You Can Be Strong and Still Need Peace",
+    excerpt:
+      "For the woman carrying a lot: make room for a pause, a boundary, and a small next step without pretending life is easy.",
     content: `Sis, **peace** isn’t accidental—it’s an agenda item. **Finding Peace in the Chaos: Mindfulness & Meditation for Black Women** is not a luxury; it’s survival. Between family, work, and the weight of microaggressions, our nervous systems stay on high alert. Mindfulness gives us the pause we’ve been denied—space to breathe, process, and come back home to ourselves.
 
 ## Why This Practice Hits Different for Us
@@ -475,10 +489,21 @@ Your **peace** is a **boundary**, not a bonus. Make **mindfulness** a daily, con
 
 And not only do you owe yourself the peace, but even more, you owe yourself the desire to **maintain it**.
 
-Related on AskDoGood: *   **Finding Peace Through Prayer & Relationships**`,
+Related on AskDoGood: *   **Finding Peace Through Prayer & Relationships**
+
+## Peace can start small
+
+Name one thing you are carrying. Choose one thing you can set down today, delay, or ask someone else to help with. Then give yourself a moment that belongs to you: music, a quiet seat, a short walk if comfortable, or a page of honest writing.
+
+You do not have to turn every hard day into a lesson. Rest and support can be useful before you have an explanation for everything.
+
+[Use the personal reflection space](/support/relationships), [visit the garden](/garden), or [choose a small next step](/next-step-checklist.html).
+
+*Refreshed October 5, 2026, with new practical next steps.*`,
     date: "2023-05-13",
     readTime: "2 min read",
-    image: "/assets/img/blog/assigned/finding-peace-in-the-chaos-mindfulness-for-black-women.webp",
+    image:
+      "/assets/img/blog/assigned/finding-peace-in-the-chaos-mindfulness-for-black-women.webp",
     tags: ["Wellness", "Health"],
   },
   {
@@ -718,8 +743,9 @@ Avoid those things that can have a negative impact on your sense of emotional we
   },
   {
     id: "7-ways-to-boost-focus-and-productivity-while-working-from-home",
-    title: "7 Ways to Boost Focus and Productivity While Working From Home",
-    excerpt: "Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be productive from home. It can be easy to sleep la...",
+    title: "Your Brain Is Full. Try This Workday Reset.",
+    excerpt:
+      "Seven practical ways to make a crowded workday more manageable, plus a short reset you can try before the next meeting.",
     content: `Many businesses have allowed or forced employees to work from home. While this is a welcome development for many people, it’s not always easy to be **productive** from home.
 
 It can be easy to sleep late, watch a little TV, spend too much time on social media, or just waste time in general. Having children at home makes everything even more challenging.
@@ -770,10 +796,21 @@ Get your work done and then worry about your **household chores**.
 
 Working from home might seem like the ideal situation, but it can be challenging to be productive for several reasons: the lack of a schedule, distractions, and the lack of supervision and peers in your environment.
 
-Working from home can be highly **productive** but might require a few changes in your approach."`,
+Working from home can be highly **productive** but might require a few changes in your approach."
+
+## The 15-minute reset
+
+Take two minutes to write down what is pulling at your attention. Spend three minutes choosing the one task that matters next. Give it ten minutes without switching tabs or answering non-urgent messages. Then decide whether to continue, ask for help, or change the plan.
+
+If your job is uncertain or your workload has changed, being more productive will not solve every structural problem. Start with what you can influence, and identify where you need information, boundaries, or support.
+
+[Explore career and purpose](/support/career), [get the free next-step checklist](/next-step-checklist.html), or review the [seven-day wellness reset](/product/7-day-reset) if you want more routine support.
+
+*Refreshed October 5, 2026, with new practical next steps.*`,
     date: "2022-12-22",
     readTime: "3 min read",
-    image: "/assets/img/blog/assigned/7-ways-to-boost-focus-and-productivity-while-working-from-home.webp",
+    image:
+      "/assets/img/blog/assigned/7-ways-to-boost-focus-and-productivity-while-working-from-home.webp",
     tags: ["Wellness", "Health"],
   },
   {

@@ -5,23 +5,94 @@ import {
   HowItWorks,
   Action,
 } from "@/components/Experience";
+import {
+  CommunityVoice,
+  CommunityResources,
+} from "@/components/CommunityVoice";
 export default function ResourcesStart() {
   return (
     <div className="adg-page">
       <PageIntro
-        eyebrow="Start here"
-        title="What do you need today?"
-        text="Choose the part of life you want help with. Each path brings together free reading, practical tools, and relevant ways to get more support."
-      />
+        eyebrow="Start here · You belong here"
+        title="Come as you are. Leave with a next step."
+        text="You do not have to have it all together to begin. Find space to breathe, practical guidance for what hurts, and tools to build what comes next."
+      >
+        <div className="adg-actions">
+          <Action href="#paths">Find my path</Action>
+          <Action href="#right-now" secondary>
+            I need practical help now
+          </Action>
+        </div>
+      </PageIntro>
       <Section>
-        <TopicCards />
+        <CommunityVoice />
       </Section>
-      <Section tone title="Take it one step at a time.">
+      <Section
+        id="paths"
+        tone
+        eyebrow="Your whole life matters"
+        title="What would help today?"
+      >
+        <TopicCards />
+        <p className="adg-small">
+          Start with free reading and tools. Paid guides, plans, and membership
+          are optional next steps, with prices shown before you choose.
+        </p>
+      </Section>
+      <Section
+        id="right-now"
+        eyebrow="Real challenges. Useful starting points."
+        title="When the ground shifts, reach for something solid."
+      >
+        <p className="adg-lead">
+          Politics and policy belong in the conversation when they affect our
+          jobs, care, food, and families. Alongside our perspectives, we point
+          you toward original sources and practical resources you can check for
+          yourself.
+        </p>
+        <CommunityResources />
+      </Section>
+      <Section
+        tone
+        eyebrow="Start small. Build strength."
+        title="You don’t need a perfect life to make a useful plan."
+      >
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card">
+            <h3>Start free</h3>
+            <p>
+              Use a printable checklist to choose one manageable step for your
+              body, mind, money, or connections.
+            </p>
+            <Action href="/next-step-checklist.html" secondary>
+              Get my next-step checklist
+            </Action>
+          </article>
+          <article className="adg-card">
+            <h3>Stay connected</h3>
+            <p>
+              Find the free newsletter signup below for resources, personal
+              stories, and new offers.
+            </p>
+            <Action href="#stay-connected" secondary>
+              Join the newsletter
+            </Action>
+          </article>
+          <article className="adg-card">
+            <h3>Choose more structure</h3>
+            <p>
+              Explore the $17 reset guide, $97 personalized plan, or $19/month
+              wellness membership.
+            </p>
+            <Action href="/shop">See what fits</Action>
+          </article>
+        </div>
+      </Section>
+      <Section title="Here’s how your next step works.">
         <HowItWorks />
         <div className="adg-actions">
-          <Action href="/shop">See offers & prices</Action>
           <Action href="/contact" secondary>
-            Ask a question
+            Ask RoSeé a question
           </Action>
         </div>
       </Section>

@@ -9,14 +9,17 @@ import {
   Reassurance,
 } from "@/components/Experience";
 import { mission, vision } from "@/content/experience";
-import BeehiivSubscribe from "@/components/BeehiivSubscribe";
+import {
+  CommunityVoice,
+  CommunityResources,
+} from "@/components/CommunityVoice";
 export default function Home() {
   return (
     <div className="adg-page">
       <PageIntro
         eyebrow="AskDoGood · Health, connection & everyday life"
         title="A little guidance. A good next step."
-        text="Practical guides, wellness plans, community support, and real-life conversations to help you care for yourself and move forward."
+        text="Whole-life support for real-life pressure. Find space to exhale, practical guidance, and a stronger next step for your health, relationships, work, and everyday life."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
@@ -31,12 +34,43 @@ export default function Home() {
           </Action>
         </div>
       </PageIntro>
+      <Section>
+        <CommunityVoice />
+      </Section>
       <Section
         id="choose"
         eyebrow="Start with what brought you here"
         title="What would help today?"
       >
         <TopicCards />
+      </Section>
+      <Section
+        tone
+        eyebrow="Useful, even before you spend a dollar"
+        title="Start with one good step."
+      >
+        <div className="adg-split">
+          <div>
+            <p className="adg-lead">
+              Feeling overwhelmed? Take the free next-step checklist. Choose one
+              small action for today, then build from there.
+            </p>
+            <div className="adg-actions">
+              <Action href="/next-step-checklist.html">
+                Get the free checklist
+              </Action>
+              <Action href="#stay-connected" secondary>
+                Stay connected
+              </Action>
+            </div>
+          </div>
+          <div className="adg-mini-poster">
+            <span>FEEL IT.</span>
+            <span>NAME IT.</span>
+            <strong>TAKE ONE STEP.</strong>
+            <p>Your pace. Your life. Your next chapter.</p>
+          </div>
+        </div>
       </Section>
       <Section
         tone
@@ -53,6 +87,38 @@ export default function Home() {
       <Section eyebrow="From exploring to doing" title="Here’s how it works.">
         <HowItWorks />
         <Reassurance />
+      </Section>
+      <Section
+        tone
+        eyebrow="Featured preview · In development"
+        title="Beats, Plants & Plates."
+      >
+        <div className="adg-split">
+          <img
+            src="/images/merch/beats-plants-plates-cover.webp"
+            alt="Beats, Plants & Plates review-edition cookbook cover"
+            className="adg-book-cover"
+            loading="lazy"
+          />
+          <div>
+            <h3>Good food. Good music. A stronger everyday rhythm.</h3>
+            <p>
+              Original recipes with a hip-hop heartbeat, practical swaps, and
+              sourced cultural notes. Read two recipe drafts while we prepare
+              the first release.
+            </p>
+            <div className="adg-actions">
+              <Action href="/cookbook">Explore the cookbook preview</Action>
+              <Action href="/contact?topic=Cookbook%20interest" secondary>
+                Tell me more
+              </Action>
+            </div>
+            <p className="adg-small">
+              Review edition. Kitchen testing and release preparation remain.
+              Purchasing is not open yet.
+            </p>
+          </div>
+        </div>
       </Section>
       <Section tone eyebrow="Made with a message" title="Wear a little good.">
         <div className="adg-split">
@@ -130,6 +196,52 @@ export default function Home() {
         </div>
       </Section>
       <Section
+        tone
+        eyebrow="The reading room"
+        title="Stories that meet the moment."
+      >
+        <div className="adg-grid adg-grid-three">
+          {[
+            {
+              slug: "when-life-shifts-your-next-step-still-matters",
+              title: "When life shifts, your next step still matters",
+              text: "Work, care, and the pressure to keep going—with practical places to begin.",
+              image:
+                "/images/editorial/when-life-shifts-your-next-step-still-matters.svg",
+              alt: "Editorial graphic about life transitions",
+            },
+            {
+              slug: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
+              title: "Feed yourself without burning yourself out",
+              text: "A practical meal-prep rhythm for a life that is already full.",
+              image: "/images/personal/food/muhammad-dishes-1.jpg",
+              alt: "Colorful vegetables in a prepared dish",
+            },
+            {
+              slug: "how-to-build-a-weekly-relationship-check-in-ritual",
+              title: "Connection takes a little room",
+              text: "Make space for listening, honesty, and a useful weekly check-in.",
+              image:
+                "/images/personal/professional/clay-banks-hands-together.jpg",
+              alt: "Hands together around a table",
+            },
+          ].map(item => (
+            <Link
+              key={item.slug}
+              href={`/blog/${item.slug}`}
+              className="adg-card adg-image-card"
+            >
+              <img src={item.image} alt={item.alt} loading="lazy" />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <span className="adg-text-link">Read & take a next step</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Section>
+      <Section
         id="pockets"
         eyebrow="Little pockets of peace"
         title="There’s room for joy, too."
@@ -174,15 +286,23 @@ export default function Home() {
         </div>
       </Section>
       <Section
-        id="newsletter"
-        tone
-        eyebrow="Stay connected"
-        title="A little good in your inbox."
+        eyebrow="Care, work & community"
+        title="Real life doesn’t happen in separate boxes."
       >
-        <p>
-          Get practical resources, personal stories, and news about new offers.
+        <p className="adg-lead">
+          A job change can affect your care. A money worry can follow you home.
+          Whole-life support makes room for that reality—and helps you find
+          something useful to do.
         </p>
-        <BeehiivSubscribe variant="inline" />
+        <CommunityResources />
+        <div className="adg-actions">
+          <Action
+            href="/blog/when-life-shifts-your-next-step-still-matters"
+            secondary
+          >
+            Read: When life shifts
+          </Action>
+        </div>
       </Section>
     </div>
   );

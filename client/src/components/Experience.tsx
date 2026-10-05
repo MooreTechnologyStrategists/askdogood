@@ -93,15 +93,43 @@ export function TopicCards() {
         <Link
           href={`/support/${topic.id}`}
           key={topic.id}
-          className="adg-card adg-topic-card"
+          className={`adg-card adg-topic-card adg-topic-${topic.id}`}
           onClick={() => trackEvent("topic_selected", { topic: topic.id })}
         >
-          <p className="adg-eyebrow">{topic.name}</p>
-          <h3>{topic.question}</h3>
-          <p>{topic.summary}</p>
-          <span className="adg-text-link">
-            Explore {topic.name.toLowerCase()}
-          </span>
+          <div className="adg-topic-visual" aria-hidden="true">
+            {topic.id === "career" ? (
+              <div className="adg-type-art">
+                <span>YOUR</span>
+                <strong>
+                  NEXT
+                  <br />
+                  CHAPTER.
+                </strong>
+                <span>STILL YOURS TO WRITE ↗</span>
+              </div>
+            ) : (
+              <img
+                src={
+                  topic.id === "relationships"
+                    ? "/images/personal/professional/clay-banks-hands-together.jpg"
+                    : topic.image
+                }
+                alt=""
+                loading="lazy"
+              />
+            )}
+            {topic.id === "life" && (
+              <span className="adg-visual-note">Room to breathe.</span>
+            )}
+          </div>
+          <div className="adg-topic-copy">
+            <p className="adg-eyebrow">{topic.name}</p>
+            <h3>{topic.question}</h3>
+            <p>{topic.summary}</p>
+            <span className="adg-text-link">
+              Explore {topic.name.toLowerCase()}
+            </span>
+          </div>
         </Link>
       ))}
     </div>

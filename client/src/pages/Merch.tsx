@@ -51,6 +51,53 @@ export default function Merch() {
         </div>
         <Reassurance />
       </Section>
+      <Section
+        tone
+        eyebrow="In development · design previews"
+        title="Common Ground: the DMV, in commUNITY."
+      >
+        <p className="adg-lead">
+          Different roots. One village. We’re exploring a new collection with
+          the message up front and a smaller AskDoGood mark on the sleeve, back
+          neck, or hem.
+        </p>
+        <img
+          src="/images/merch/common-ground-concepts.webp"
+          alt="Three Common Ground apparel concepts: black COMMUNITY hoodie, cream Different roots One village DMV tee, and green You Me UNITY hoodie, with small AskDoGood brand placements"
+          className="adg-concept-board"
+          loading="lazy"
+        />
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card">
+            <h3>01 · COMMUNITY</h3>
+            <p>
+              The DMV is our common ground. Connected lettering on a black
+              hoodie; a quiet brand mark at the wrist.
+            </p>
+          </article>
+          <article className="adg-card">
+            <h3>02 · Different roots. One village.</h3>
+            <p>
+              A DMV tee with interlocking arches. A neighborhood statement, with
+              AskDoGood at the back neck.
+            </p>
+          </article>
+          <article className="adg-card">
+            <h3>03 · You. Me. UNITY.</h3>
+            <p>
+              A forest-green hoodie with a bold back message and a small
+              front-hem brand detail.
+            </p>
+          </article>
+        </div>
+        <p className="adg-small">
+          Concept mockups, not production samples. These designs are not
+          available to purchase yet.
+        </p>
+        <Action href="/contact?topic=Common%20Ground%20collection" secondary>
+          Tell us which design you’d wear
+        </Action>
+      </Section>
       <Section title="More from the collection.">
         <details className="adg-card adg-details">
           <summary>Explore additional pieces and upcoming designs</summary>

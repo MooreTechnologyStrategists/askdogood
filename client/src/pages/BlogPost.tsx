@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
 import { Action, Section } from "@/components/Experience";
-import { blogImages } from "@/data/blogImages";
+import { blogImages, articleImageAlt } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -187,7 +187,7 @@ export default function BlogPost() {
           post.tags.length ? post.tags : [safeCategory, "Ask DoGood blog"]
         }
         image={heroSrc}
-        imageAlt={safeTitle}
+        imageAlt={slug ? articleImageAlt(slug) : safeTitle}
         url={`/blog/${slug}`}
         type="article"
         author={post.author?.trim() || SITE_AUTHOR}
