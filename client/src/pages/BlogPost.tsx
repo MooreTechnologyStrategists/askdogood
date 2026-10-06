@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { marked } from "marked";
 import { getPostBySlug } from "@/content/blogData";
 import { Action, Section } from "@/components/Experience";
-import { blogImages, articleImageAlt } from "@/data/blogImages";
+import { blogImages, articleImageAlt, BLOG_DEFAULT_HERO } from "@/data/blogImages";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Share2, ArrowLeft } from "lucide-react";
 import ProductRecommendations from "@/components/ProductRecommendations";
@@ -15,7 +15,7 @@ type BlogRouteParams = {
   slug?: string;
 };
 
-const BLOG_DEFAULT_HERO = "/images/personal/food/night-garden.jpg";
+
 
 function normalizeBlogMarkdown(content: string): string {
   const decoded = content
@@ -229,11 +229,10 @@ export default function BlogPost() {
           </div>
           <img
             src={heroSrc}
-            alt={safeTitle}
+            alt={articleImageAlt(slug)}
             className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl"
             onError={event => {
-              event.currentTarget.onerror = null;
-              event.currentTarget.src = "/assets/img/blog/_fallback/blog.webp";
+              if (event.currentTarget.getAttribute("src") !== BLOG_DEFAULT_HERO) event.currentTarget.src = BLOG_DEFAULT_HERO;
             }}
           />
         </div>

@@ -37,6 +37,17 @@ export default function OriginalMerchCheckout() {
       const data = await r.json(); if (!r.ok) throw new Error(data.error);
       if (!data.paid) throw new Error('Payment has not been confirmed. Please contact AskDoGood before paying again.');
       setPaid(true);
+      if (data.live && Number.isFinite(data.itemTotal)) {
+        const key = 'adg_purchase_' + session;
+        let recorded = false;
+        try { recorded = localStorage.getItem(key) === '1'; } catch { /* Storage can be unavailable. */ }
+        if (!recorded) {
+          trackEvent('purchase', { transaction_id: session, value: data.itemTotal / 100,
+            shipping: data.shippingTotal / 100, currency: 'USD',
+            items: [{ item_id: 'adg_merch_order', item_name: 'AskDoGood merchandise order', item_brand: 'AskDoGood', price: data.itemTotal / 100, quantity: 1 }] });
+          try { localStorage.setItem(key, '1'); } catch { /* GA4 also receives the stable transaction ID. */ }
+        }
+      }
       setConfirmation(`Payment confirmed — thank you! Order ${data.orderReference}. Total paid: ${(data.total / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}. ${data.fulfillment === 'production' ? 'Your order has been sent to production.' : 'Your order is being processed for fulfillment.'} Your payment receipt will be emailed to the address used at checkout.`);
     }).catch(error => setConfirmation(error.message || 'We could not verify payment. Please contact AskDoGood before paying again.'));
   }, []);

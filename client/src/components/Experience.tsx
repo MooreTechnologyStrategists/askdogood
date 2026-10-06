@@ -1,3 +1,4 @@
+import ProductPreview from "@/components/ProductPreview";
 import { Link } from "wouter";
 import { useState, type ReactNode } from "react";
 import { trackEvent } from "@/lib/analytics";
@@ -148,6 +149,7 @@ export function OfferCards({
         return (
           offer && (
             <article key={id} className="adg-card adg-offer-card">
+              <Link href={`/product/${offer.slug}`} aria-label={`Preview ${offer.name}`}><ProductPreview product={offer} compact /></Link>
               <p className="adg-eyebrow">
                 {info?.format || "Digital resource"}
               </p>

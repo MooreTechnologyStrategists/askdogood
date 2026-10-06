@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import { useState, type FormEvent } from "react";
 import { Action, PageIntro, Section } from "@/components/Experience";
 export default function Contact() {
@@ -12,6 +13,7 @@ export default function Contact() {
   const [status, setStatus] = useState("");
   function draft(e: FormEvent) {
     e.preventDefault();
+    trackEvent("contact_draft_open", { page: window.location.pathname });
     const body = `Name: ${name}\nReply email: ${email}\nTopic: ${topic}\n\n${message}`;
     window.location.href = `mailto:askdogood@gmail.com?subject=${encodeURIComponent("AskDoGood: " + topic)}&body=${encodeURIComponent(body)}`;
     setStatus(

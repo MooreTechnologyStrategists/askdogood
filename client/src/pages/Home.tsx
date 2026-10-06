@@ -253,6 +253,14 @@ export default function Home() {
           ))}
         </div>
       </Section>
+      <Section tone eyebrow="Scripture for the everyday" title="Faith that meets you here—and moves you forward.">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card"><p className="adg-eyebrow">James 1:5 · Wisdom</p><h3>Bring the question to God.</h3><p>James invites those who lack wisdom to ask God. What decision needs a quiet moment and an honest prayer today?</p><Action href="https://www.biblegateway.com/passage/?search=James+1%3A5&version=KJV" secondary>Read the passage</Action></article>
+          <article className="adg-card"><p className="adg-eyebrow">Micah 6:8 · Justice, mercy, humility</p><h3>Let your faith show up in your choices.</h3><p>Notice one person you can serve, one place you can practice mercy, and one conversation you can enter with humility.</p><Action href="https://www.biblegateway.com/passage/?search=Micah+6%3A8&version=KJV" secondary>Read the passage</Action></article>
+          <article className="adg-card"><p className="adg-eyebrow">Revelation · A conversation</p><h3>Does Revelation speak to our time?</h3><p>Explore the parallels people notice, the passages behind them, and the hope that belongs in the conversation.</p><Action href="/blog/does-revelation-speak-to-our-time" secondary>Read & reflect</Action></article>
+        </div>
+        <p className="adg-small">Reflections above paraphrase the themes. Follow each link to read the Scripture in context.</p>
+      </Section>
       <Section id="prayer" tone eyebrow="Faith, with room to breathe" title="A prayer for the next good step.">
         <div className="adg-split">
           <div className="adg-card"><p className="adg-lead">God, help me quiet the noise long enough to hear what matters. Give me wisdom for the next decision, courage to release what drains me, and patience for what is still growing. Help me care for myself and show up with love for my community. One honest step at a time. Amen.</p></div>

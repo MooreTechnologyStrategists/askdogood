@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { safeBlogPosts } from "@/content/blogData";
-import { articleImage, articleImageAlt, articleTopic } from "@/data/blogImages";
+import { articleImage, articleImageAlt, articleTopic, BLOG_DEFAULT_CARD } from "@/data/blogImages";
 import { topics } from "@/content/experience";
 import { Action, PageIntro, Section } from "@/components/Experience";
 export default function Blog() {
@@ -52,7 +52,7 @@ export default function Blog() {
               setLimit(12);
             }}
           >
-            <option value="all">All topics</option>
+            <option value="all">All topics</option><option value="faith">Faith & scripture</option>
             {topics.map(item => (
               <option key={item.id} value={item.id}>
                 {item.name}
@@ -74,10 +74,11 @@ export default function Blog() {
                 src={articleImage(post.id)}
                 alt={articleImageAlt(post.id)}
                 loading="lazy"
+                onError={e => { if (e.currentTarget.getAttribute("src") !== BLOG_DEFAULT_CARD) e.currentTarget.src = BLOG_DEFAULT_CARD; }}
               />
               <div>
                 <p className="adg-eyebrow">
-                  {topics.find(item => item.id === articleTopic(post.id))?.name}
+                  {topics.find(item => item.id === articleTopic(post.id))?.name || (articleTopic(post.id) === "faith" ? "Faith & scripture" : "Everyday life")}
                 </p>
                 <h2>{post.title}</h2>
                 <p>{post.excerpt}</p>

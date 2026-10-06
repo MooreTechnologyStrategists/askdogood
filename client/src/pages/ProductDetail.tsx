@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import ProductPreview from "@/components/ProductPreview";
 import { useParams } from "wouter";
 import SEO from "@/components/SEO";
 import {
@@ -15,6 +17,12 @@ export default function ProductDetail() {
   const product =
     catalogById[slug] ||
     catalogItems.find(p => p.slug === slug || p.id === slug);
+  useEffect(() => {
+    if (!product) return;
+    const price = Number(product.priceLabel.replace(/[^0-9.]/g, ""));
+    trackEvent("view_item", { currency: "USD", ...(Number.isFinite(price) && price > 0 ? { value: price } : {}),
+      items: [{ item_id: product.id, item_name: product.name, item_brand: "AskDoGood", ...(Number.isFinite(price) && price > 0 ? { price } : {}), quantity: 1 }] });
+  }, [product]);
   if (!product)
     return (
       <PageIntro
@@ -87,6 +95,7 @@ export default function ProductDetail() {
       <Section>
         <div className="adg-split adg-detail-layout">
           <div>
+            <ProductPreview product={product} />
             <h2>What’s included</h2>
             <ul className="adg-list">
               {detail.includes.map(text => (
@@ -131,6 +140,8 @@ export default function ProductDetail() {
                     product_id: product.id,
                     product_brand: "askdogood",
                     currency: "USD",
+                    value: Number(product.priceLabel.replace(/[^0-9.]/g, "")) || undefined,
+                    items: [{ item_id: product.id, item_name: product.name, item_brand: "AskDoGood", quantity: 1 }],
                   })
                 }
               >

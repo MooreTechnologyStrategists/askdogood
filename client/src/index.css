@@ -1232,3 +1232,12 @@ html {
   border-radius: 0.35rem;
   box-shadow: 0 12px 25px #193f3418;
 }
+
+/* Offer previews share the brand’s cream, green, and red across browse and detail views. */
+.adg-product-preview{margin:0 0 1.5rem;padding:1.25rem;background:#e7eee9;border:1px solid #b5c9bc;border-radius:1rem;display:grid;gap:1rem}
+.adg-preview-page{background:#fff9ed;padding:1.5rem;border-top:7px solid #22543d;border-radius:.5rem;box-shadow:0 8px 22px #173d2820;color:#173d28}
+.adg-preview-page h3{font-size:1.4rem;line-height:1.3;margin:.65rem 0 1rem}.adg-preview-page ol{padding-left:1.3rem}.adg-preview-page li{padding:.45rem 0;border-bottom:1px solid #ded8ca;font-size:1rem;line-height:1.5}
+.adg-preview-cover{display:block;max-height:280px;width:100%;object-fit:contain}.adg-preview-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.adg-preview-tabs button{border:1px solid #22543d;border-radius:.5rem;padding:.7rem;font:inherit;cursor:pointer;background:white;color:#173d28;min-height:44px}.adg-preview-tabs button[aria-pressed=true]{background:#22543d;color:white}.adg-preview-tabs button:focus-visible{outline:3px solid #a93432;outline-offset:3px}
+.adg-product-preview.is-compact{padding:.7rem;margin-bottom:1rem}.is-compact .adg-preview-page{padding:1rem}.is-compact .adg-preview-page h3{font-size:1.2rem}.is-compact .adg-preview-cover{max-height:190px}
+@media(max-width:480px){.adg-preview-page{padding:1rem}}
