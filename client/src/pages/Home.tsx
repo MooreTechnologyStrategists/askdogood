@@ -18,7 +18,7 @@ export default function Home() {
     <div className="adg-page">
       <PageIntro
         eyebrow="AskDoGood · Health, connection & everyday life"
-        title="A little guidance. A good next step."
+        title="A little peace. Some real talk. Your next good move."
         text="Whole-life support for real-life pressure. Find space to exhale, practical guidance, and a stronger next step for your health, relationships, work, and everyday life."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
@@ -34,6 +34,17 @@ export default function Home() {
           </Action>
         </div>
       </PageIntro>
+      <Section id="real-talk" tone eyebrow="Pull up a chair" title="The story has layers. So do we.">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card adg-image-card">
+            <img src="/images/personal/travel/rosee-speaking-paris-2023.webp" alt="RoSeé speaking in Paris" loading="lazy" />
+            <div><h3>How did a woman afraid to fly end up speaking in Paris?</h3><p>Fear had an opinion. Life had other plans. Come read the chapter behind the photograph.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>Read the Paris story</Action></div>
+          </article>
+          <article className="adg-card"><p className="adg-eyebrow">Let’s talk about it</p><h3>Is it peace—or are you just tired of explaining yourself?</h3><p>Boundaries, connection, and the conversations we rehearse in the car. A little relationship tea, with room for honesty and a useful next step.</p><Action href="/blog/how-to-build-a-weekly-relationship-check-in-ritual" secondary>Start the conversation</Action></article>
+          <article className="adg-card"><p className="adg-eyebrow">Wear what you believe</p><h3>Good on you. Good in the world.</h3><p>A cream tee. A black hoodie. A message you can take into your everyday life. Meet the original AskDoGood collection.</p><Action href="/merch">Find your piece</Action></article>
+        </div>
+        <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
+      </Section>
       <Section>
         <CommunityVoice />
       </Section>
@@ -241,6 +252,12 @@ export default function Home() {
           ))}
         </div>
       </Section>
+      <Section id="prayer" tone eyebrow="Faith, with room to breathe" title="A prayer for the next good step.">
+        <div className="adg-split">
+          <div className="adg-card"><p className="adg-lead">God, help me quiet the noise long enough to hear what matters. Give me wisdom for the next decision, courage to release what drains me, and patience for what is still growing. Help me care for myself and show up with love for my community. One honest step at a time. Amen.</p></div>
+          <div><h3>Pause. Pray. Put one thing into practice.</h3><p>Take one slow breath. Name what is weighing on you. Choose one kind, practical action for today. This space is faith-rooted, and you are welcome wherever you are in your journey.</p><Action href="/blog/prayer-for-guidance-and-support-in-overcoming-vices-and-bad-habits" secondary>Read the prayer & reflection</Action><p className="adg-small">You can reflect privately; you do not need to submit anything.</p></div>
+        </div>
+      </Section>
       <Section
         id="pockets"
         eyebrow="Little pockets of peace"
@@ -295,6 +312,9 @@ export default function Home() {
           something useful to do.
         </p>
         <CommunityResources />
+        <div className="adg-card" style={{ marginTop: "1.5rem" }}>
+          <a href="https://thedopecloudteacher.org/classes/" className="adg-actions"><img src="/images/branding/the-dope-cloud-teacher-logo.png" alt="The Dope Cloud Teacher official logo" width="100" height="100" style={{ objectFit: "contain" }} /><span><strong>Grow your skills. Bring them back to your community.</strong><br />Explore cloud and AI classes, certification pathways, and instructor opportunities with our sister brand.</span></a>
+        </div>
         <div className="adg-actions">
           <Action
             href="/blog/when-life-shifts-your-next-step-still-matters"
