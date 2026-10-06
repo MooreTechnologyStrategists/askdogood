@@ -14,7 +14,7 @@ export default function OriginalMerchCheckout() {
   const [loading, setLoading] = useState(true);
   const [catalog, setCatalog] = useState<Record<string, Product>>({});
   const [images, setImages] = useState<Record<string, string>>({});
-  const [product, setProduct] = useState('adg_hoodie');
+  const [product, setProduct] = useState('adg_tee');
   const [message, setMessage] = useState('Checking checkout availability…');
   const [busy, setBusy] = useState(false);
   const [paid, setPaid] = useState(false);
