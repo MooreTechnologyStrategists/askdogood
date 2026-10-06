@@ -31,6 +31,8 @@ export default function BeehiivSubscribe({
       <a
         className="adg-button"
         href="https://rosees-newsletter-9d5fac.beehiiv.com/"
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={() =>
           trackEvent("newsletter_signup_opened", {
             source,
@@ -38,10 +40,12 @@ export default function BeehiivSubscribe({
           })
         }
       >
-        {buttonText}
+        {buttonText} ↗
       </a>
       <p className="adg-small">
-        Enter your email on our newsletter page. You can unsubscribe anytime.
+        Opens our email signup in a new tab, so you can keep your place here.
+        Enter your email there and check your inbox for any confirmation request.
+        You can unsubscribe anytime.
       </p>
     </div>
   );
