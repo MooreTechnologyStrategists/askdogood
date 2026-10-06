@@ -34,6 +34,34 @@ export type StaticSeoPage = {
 
 export const staticSeoPages: StaticSeoPage[] = [
   {
+    path: "/whats-good-to-eat",
+    title: "What’s Good to Eat? Kitchen Tools | AskDoGood",
+    description: "Match kitchen ingredients with recipes, save favorites, and build a simple weekly meal plan and ingredient list. Free tools from AskDoGood.",
+    keywords: ["pantry recipes", "meal planner", "ingredient list", "AskDoGood"],
+    image: "/images/personal/food/rosee-home-meal.webp",
+    priority: 0.85,
+    changefreq: "monthly",
+  },
+  {
+    path: "/recipes/planner",
+    title: "Weekly Meal Planner | AskDoGood",
+    description: "Plan seven days of meals from the AskDoGood recipe library and download an ingredient list. Your plan stays on your browser.",
+    keywords: ["weekly meal planner", "recipe favorites", "AskDoGood"],
+    image: "/images/personal/food/rosee-home-meal.webp",
+    priority: 0.7,
+    changefreq: "monthly",
+  },
+  {
+    path: "/community",
+    title: "Community Events & Connections | AskDoGood",
+    description: "Find confirmed AskDoGood community appearances, event details and opportunities to bring practical education to your group.",
+    keywords: ["AskDoGood events", "community education", "DMV"],
+    image: "/images/personal/rosee-at-the-table.webp",
+    priority: 0.8,
+    changefreq: "weekly",
+  },
+
+  {
     path: "/",
     title: "AskDoGood | Health, Relationships & Everyday Life",
     description:
