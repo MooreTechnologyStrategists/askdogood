@@ -76,7 +76,7 @@ export function CommunityResources() {
       <div className="adg-grid adg-grid-three">
         {links.map(item => (
           <article key={item.title} className="adg-card adg-resource-card">
-            <span className="adg-step">{item.number}</span>
+            {item.number === "01" ? <a href="https://www.211.org/" aria-label="211 official community resource"><img src="https://www.211.org/themes/custom/uw211/assets/images/home-logo_2024.svg" alt="211 official logo" width="120" height="60" loading="lazy" style={{ objectFit: "contain", marginBottom: "1rem" }} /></a> : <span className="adg-step">{item.number}</span>}
             <h3>{item.title}</h3>
             <p>{item.text}</p>
             <div className="adg-actions">
@@ -93,7 +93,7 @@ export function CommunityResources() {
       <p className="adg-small">
         External resources are provided by the named organizations. Eligibility,
         availability, costs, and application steps vary. Resource links reviewed
-        October 5, 2026.
+        October 6, 2026. Logos identify external resources; they do not imply an AskDoGood partnership or endorsement.
       </p>
     </>
   );
