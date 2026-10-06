@@ -32,7 +32,7 @@ export default function PantryKitchen() {
   const shopping = [...new Set(selected.flatMap(recipe => recipe ? recipeMatch(recipe.ingredients, pantry).missing : []))];
   function download() {
     const text = "AskDoGood weekly meal plan\n\n" + days.map((day,i) => `${day}: ${selected[i]?.title || "Not planned"}`).join("\n") + "\n\nIngredients to check / buy\n" + shopping.map(item => `- ${item}`).join("\n") + (budget ? `\n\nMy shopping budget: $${budget}` : "") + "\n\nCheck each full recipe for quantities, optional ingredients and substitutions. Shopping entries can overlap across recipes; combine quantities yourself. No live prices or allergy screening.\n";
-    const url = URL.createObjectURL(new Blob([text], { type: "text/plain" })); const a = document.createElement("a"); a.href = url; a.download = "askdogood-weekly-meal-plan.txt"; a.click(); URL.revokeObjectURL(url); trackEvent("meal_plan_download", { planned_days: selected.filter(Boolean).length });
+    const url = URL.createObjectURL(new Blob([text], { type: "text/plain" })); const a = document.createElement("a"); a.href = url; a.download = "askdogood-weekly-meal-plan.txt"; document.body.appendChild(a); a.click(); a.remove(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); trackEvent("meal_plan_download", { planned_days: selected.filter(Boolean).length });
   }
   return <div className="adg-page">
     <PageIntro eyebrow="Free kitchen tools · Real food, real life" title="What’s good to eat?" text="Start with what’s in your kitchen. Explore a recipe, save your favorites, and put a few good meals on the calendar." image="/images/personal/food/rosee-home-meal.webp" alt="A home-prepared meal from RoSeé’s photo archive">
