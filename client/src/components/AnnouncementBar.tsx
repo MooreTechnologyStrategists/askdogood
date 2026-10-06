@@ -6,8 +6,8 @@ export default function AnnouncementBar() {
   return visible ? (
     <div className="adg-announcement">
       <div className="container">
-        <span>Small steps start here.</span>{" "}
-        <Link href="/product/7-day-reset">Explore the $17 reset guide</Link>
+        <span>Good looks good on you.</span>{" "}
+        <Link href="/merch#original-checkout">Meet the $29 cream tee</Link>
         <button
           aria-label="Close announcement"
           onClick={() => setVisible(false)}
