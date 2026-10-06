@@ -1,3 +1,4 @@
+import CommunityEvents from "@/components/CommunityEvents";
 import { Link } from "wouter";
 import {
   Action,
@@ -45,6 +46,10 @@ export default function Home() {
           <article className="adg-card"><p className="adg-eyebrow">Wear what you believe</p><h3>Good on you. Good in the world.</h3><p>A cream tee. A black hoodie. A message you can take into your everyday life. Meet the original AskDoGood collection.</p><Action href="/merch">Find your piece</Action></article>
         </div>
         <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
+      </Section>
+      <Section id="in-community" tone eyebrow="Good in motion" title="Meet us in the community.">
+        <CommunityEvents />
+        <div className="adg-actions"><Action href="/community" secondary>Events & community connections</Action><Action href="/whats-good-to-eat">What’s good to eat?</Action></div>
       </Section>
       <Section>
         <CommunityVoice />
@@ -164,7 +169,7 @@ export default function Home() {
             <p>
               I’m RoSeé. AskDoGood grew from my own experiences with health,
               rebuilding, learning, and finding peace in the middle of real
-              life. This is where useful knowledge meets an honest conversation.
+              life. God’s grace and mercy gave me another chance. Paying it forward is part of how I live now. This is where useful knowledge meets an honest conversation.
             </p>
             <h3>Our mission</h3>
             <p>{mission}</p>
@@ -184,8 +189,8 @@ export default function Home() {
             </div>
           </div>
           <img
-            src="/images/personal/food/zay-at-first-watch.jpg"
-            alt="RoSeé smiling outside a restaurant"
+            src="/images/personal/rosee-at-the-table.webp"
+            alt="RoSeé smiling at a table in a green sweater"
             className="adg-photo"
             loading="lazy"
           />

@@ -1,3 +1,5 @@
+import Community from "@/pages/Community";
+import PantryKitchen from "@/pages/PantryKitchen";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -139,7 +141,9 @@ function Router() {
           path="/clinical-recipes"
           component={ClinicalRecipesPageComponent}
         />
-        <Route path="/recipes/planner" component={ClinicalRecipesApp} />
+        <Route path="/recipes/planner" component={PantryKitchen} />
+        <Route path="/whats-good-to-eat" component={PantryKitchen} />
+        <Route path="/community" component={Community} />
         <Route path="/label-scanner" component={LabelScanner} />
 
         {/* Recipe Pages */}

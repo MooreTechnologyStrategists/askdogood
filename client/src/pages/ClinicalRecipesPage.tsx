@@ -6,9 +6,13 @@ export default function ClinicalRecipesPage() {
         eyebrow="Health & food"
         title="Something good to make at home."
         text="Explore recipes and practical food ideas. Start with one meal you want to try, then build a routine that fits your life."
-        image="/images/personal/food/muhammad-dishes-3.jpg"
-        alt="A meal from the AskDoGood kitchen archive"
+        image="/images/personal/food/rosee-home-meal.webp"
+        alt="A home-prepared meal from RoSeé’s photo archive"
       />
+      <Section tone title="What’s good to eat?">
+        <p>Tell us what you have, find a recipe to explore, and save a simple week of meals on your device.</p>
+        <Action href="/whats-good-to-eat">Open the kitchen tools</Action>
+      </Section>
       <Section title="Pick a recipe.">
         <div className="adg-grid adg-grid-three">
           {[

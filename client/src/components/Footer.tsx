@@ -38,6 +38,8 @@ export default function Footer() {
                 ["Guides, plans & membership", "/shop"],
                 ["Shop merch", "/merch"],
                 ["Cookbook preview", "/cookbook"],
+                ["What’s good to eat?", "/whats-good-to-eat"],
+                ["Events & community", "/community"],
                 ["Workshops & partnerships", "/work-with-askdogood"],
                 ["Member sign in", "/login"],
               ].map(([title, href]) => (
