@@ -24,13 +24,14 @@ export default function Home() {
         alt="RoSeé smiling in her garden"
       >
         <p className="adg-small">
-          Start with a $17 reset guide, get a $97 personalized wellness plan, or
-          explore $19/month membership.
+          Carry a little good into your everyday life. The original cream
+          logo tee is $29, made to order in sizes S–2XL. US shipping is calculated
+          at checkout.
         </p>
         <div className="adg-actions">
-          <Action href="#choose">Find what I need</Action>
-          <Action href="/shop" secondary>
-            See offers & prices
+          <Action href="/merch#original-checkout">Choose my $29 tee</Action>
+          <Action href="#real-talk" secondary>
+            Read the stories behind the good
           </Action>
         </div>
       </PageIntro>
