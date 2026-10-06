@@ -29,7 +29,7 @@ export default function Home() {
           at checkout.
         </p>
         <div className="adg-actions">
-          <Action href="/merch#original-checkout">Choose my $29 tee</Action>
+          <Action href="/merch">Choose my $29 tee</Action>
           <Action href="#real-talk" secondary>
             Read the stories behind the good
           </Action>
