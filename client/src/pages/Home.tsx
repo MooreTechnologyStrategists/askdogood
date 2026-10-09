@@ -18,24 +18,40 @@ export default function Home() {
   return (
     <div className="adg-page">
       <PageIntro
-        eyebrow="AskDoGood · Health, connection & everyday life"
-        title="A little peace. Some real talk. Your next good move."
-        text="Whole-life support for real-life pressure. Find space to exhale, practical guidance, and a stronger next step for your health, relationships, work, and everyday life."
+        eyebrow="AskDoGood · Rooted in the DMV. Built for real life."
+        title="You deserve more than survival. Let’s build your next chapter."
+        text="If you are tired of street life, habits that keep taking more than they give, painful relationships, or starting over without a foundation, you belong here. Find honest stories, free tools, and practical next steps toward health, stability, opportunity, and peace."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
-        <p className="adg-small">
-          Carry a little good into your everyday life. The original cream
-          logo tee is $29, made to order in sizes S–2XL. US shipping is calculated
-          at checkout.
-        </p>
-        <div className="adg-actions">
-          <Action href="/merch">Choose my $29 tee</Action>
-          <Action href="#real-talk" secondary>
-            Read the stories behind the good
-          </Action>
-        </div>
+        <p>I’m RoSeé. I used to be in the streets. Learning and growing in technology helped me turn my life around. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
+        <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
+        <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
+      <Section
+        id="choose"
+        eyebrow="Start with what brought you here"
+        title="What would help today?"
+      >
+        <TopicCards />
+      </Section>
+      <Section tone eyebrow="Our commitment to the DMV" title="Your neighborhood deserves investment. Your life deserves room to grow.">
+        <div style={{ maxWidth: "48rem" }}>
+          <p>AskDoGood is rooted in Prince George’s County and Washington, DC, with a commitment to reaching underserved neighbors, including Wards 7 and 8. These communities hold talent, creativity, families, and futures worth investing in. Hardship is something people face; it is not the whole story of who they are.</p>
+          <p>My stance is clear: I stand with people seeking dignity, stability, care, and a fair chance to build a better life. I oppose policies and decisions—including those of the current administration—that strip our communities of opportunity or make everyday survival harder. I want our response to include both a clear voice and something useful people can do.</p>
+          <p>That means making free starting points easy to find, sharing resources people can check, connecting learning with opportunity, and being honest about what AskDoGood can offer. My faith calls me toward service. You do not need to share my beliefs to belong here.</p>
+        </div>
+        <div className="adg-actions"><Action href="/resources/start">Start with free support</Action><Action href="/work-with-askdogood" secondary>Bring this work to your community</Action></div>
+      </Section>
+      <Section eyebrow="The person. The practice. The purpose." title="See the work behind the words.">
+        <p className="adg-lead">My story is a starting point for connection. Here are places you can see what I share, what I teach, and why I keep showing up.</p>
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card"><h3>A life rebuilt through learning</h3><p>I am a U.S. Army veteran, cloud technology professional, educator, and entrepreneur. My work brings service, practical knowledge, and lived experience into the same conversation.</p><Action href="/journey" secondary>Read my story</Action></article>
+          <article className="adg-card adg-image-card"><img src="/images/personal/travel/rosee-speaking-paris-2023.webp" alt="RoSeé speaking in Paris in 2023" loading="lazy" /><div><h3>Taking my voice into the world</h3><p>This photograph and the story behind it document a chapter of learning, speaking, and moving beyond fear. Read what that experience meant to me.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>See the Paris chapter</Action></div></article>
+          <article className="adg-card"><h3>Turning knowledge into opportunity</h3><p>Through The Dope Cloud TeacHer, I help make cloud, AI, and digital skills approachable. Explore the learning options and how this work connects with your next chapter.</p><Action href="https://thedopecloudteacher.org/classes/" secondary>Explore DCT learning</Action></article>
+        </div>
+        <p className="adg-small">These are examples of my experience and work. Your path, timing, and outcomes will be your own.</p>
+      </Section>
       <Section id="real-talk" tone eyebrow="Pull up a chair" title="The story has layers. So do we.">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card adg-image-card">
@@ -54,13 +70,7 @@ export default function Home() {
       <Section>
         <CommunityVoice />
       </Section>
-      <Section
-        id="choose"
-        eyebrow="Start with what brought you here"
-        title="What would help today?"
-      >
-        <TopicCards />
-      </Section>
+
       <Section
         tone
         eyebrow="Useful, even before you spend a dollar"
