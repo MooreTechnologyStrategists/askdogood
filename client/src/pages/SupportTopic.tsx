@@ -53,6 +53,12 @@ export default function SupportTopic() {
           </Action>
         </div>
       </PageIntro>
+      <Section eyebrow="You are not alone in this" title="What rebuilding can look like.">
+        <div style={{ maxWidth: "48rem" }}>{topic.details.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+        <h3>Three steps you can take.</h3>
+        <ol>{topic.steps.map(step => <li key={step} style={{ marginBottom: "1rem" }}>{step}</li>)}</ol>
+        <div className="adg-actions"><Action href="/next-step-checklist.html">Use the free next-step checklist</Action><Action href="/resources/start#right-now" secondary>Find practical resource starting points</Action></div>
+      </Section>
       <Section
         id="start"
         eyebrow="Something useful right now"
