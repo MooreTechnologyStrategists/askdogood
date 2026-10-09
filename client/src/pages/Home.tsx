@@ -24,7 +24,7 @@ export default function Home() {
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
-        <p>I’m RoSeé. I used to be in the streets. Learning and growing in technology helped me turn my life around. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
+        <p>I’m RoSeé. My journey has included difficult seasons, hard lessons, and finding a new direction. Education, technology, faith, and a commitment to growth helped me build a stronger foundation. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
         <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
         <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
