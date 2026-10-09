@@ -12,9 +12,7 @@ export function CommunityVoice() {
           Then we take the next step.
         </h2>
         <p>
-          Job uncertainty. Care that feels out of reach. Bills, grief,
-          relationships, and the weight of keeping everybody else together. We
-          see the whole person carrying all of it.
+          Leaving street life. Changing your relationship with weed or other substances. Coming home after incarceration. Grief, job uncertainty, bills, and relationships that keep draining you. You can bring the hard truth here without being reduced to it.
         </p>
         <p>
           AskDoGood is rooted in the lives of Black and Brown communities,
@@ -30,9 +28,7 @@ export function CommunityVoice() {
           you’re ready, let’s build a life with more strength, health, and joy.”
         </blockquote>
         <p>
-          I know what rebuilding asks of you. You do not owe anyone a
-          performance of being okay. And you deserve more than just getting
-          through the day.
+          I used to be in the streets, and learning and growing in technology became part of turning my life around. I know rebuilding takes more than a motivational quote. Let’s name what you need, find a useful starting point, and make the next move concrete.
         </p>
         <Action href="/support/relationships" secondary>
           Make space for what I’m carrying
