@@ -32,8 +32,10 @@ export default function Contact() {
           <div>
             <h2>Reach a real person.</h2>
             <p>
-              Use the form to prepare an email you can review and send, or email
-              us directly.
+              Bryan Sterling, Customer Relations Representative, helps with
+              product and order questions, event inquiries, and general
+              customer support for AskDoGood. Use the form to prepare an email
+              you can review and send, or email us directly.
             </p>
             <Action href="mailto:askdogood@gmail.com">
               Email askdogood@gmail.com
