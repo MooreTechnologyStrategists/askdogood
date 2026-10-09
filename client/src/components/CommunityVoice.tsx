@@ -28,7 +28,7 @@ export function CommunityVoice() {
           you’re ready, let’s build a life with more strength, health, and joy.”
         </blockquote>
         <p>
-          I used to be in the streets, and learning and growing in technology became part of turning my life around. I know rebuilding takes more than a motivational quote. Let’s name what you need, find a useful starting point, and make the next move concrete.
+          My journey includes difficult seasons and meaningful reinvention. Education and technology helped me build a stronger foundation. I know rebuilding takes more than a motivational quote. Let’s name what you need, find a useful starting point, and make the next move concrete.
         </p>
         <Action href="/support/relationships" secondary>
           Make space for what I’m carrying
