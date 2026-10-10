@@ -23,15 +23,15 @@ export default function PocketsOfPeace() {
     <header style={{background:"#f6efe3",padding:"clamp(1.5rem,5vw,4rem)",borderRadius:24}}>
       <p style={{textTransform:"uppercase",letterSpacing:2,fontWeight:800,color:"#a4493b"}}>AskDoGood · Pockets of Peace</p>
       <h1 style={{fontSize:"clamp(2.2rem,6vw,4.4rem)",lineHeight:1.08,margin:"1rem 0"}}>Life is doing the most. Find a little room to breathe.</h1>
-      <p style={{fontSize:"1.2rem",maxWidth:690}}>A garden lesson. A song that knows your story. Something good from the kitchen. A moment to remember how far you have come. This is where we make space for joy without pretending life is easy.</p>
+      <p style={{fontSize:"1.2rem",maxWidth:690}}>Maybe your day has been bills, family obligations, job worries, or one more thing you did not plan for. This page offers four small, free ways to reset: try a gardening idea, reflect on a song, make something simple to eat, or put a hard-earned lesson into words. None of it replaces the practical help you may need.</p>
       <a href="#take-five" style={{display:"inline-block",background:"#225c45",color:"white",padding:"0.85rem 1.3rem",borderRadius:10,fontWeight:700}}>Take five minutes for yourself →</a>
     </header>
     <section aria-label="Explore pockets of peace" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:18,margin:"2rem 0"}}>
       {[
-        {title:"The Garden Grows",img:"/images/personal/rosee-garden-2026.webp",description:"Real growing seasons, useful garden lessons, and the wisdom we harvest along the way.",href:"/garden",cta:"Step into the garden"},
-        {title:"The Soundtrack of Us",description:"Hip-hop, go-go, soul, and the music that holds our memories.",href:"#take-five",cta:"Find your song"},
-        {title:"Beats, Plants & Plates",description:"Comfort, creativity, and approachable food made for real life.",href:"/whats-good-to-eat",cta:"Explore the kitchen"},
-        {title:"Lessons I Didn't Know I Was Learning",description:"Stories about starting over, relationships, faith, and keeping the wisdom.",href:"/journey",cta:"Read the stories"}
+        {title:"The Garden Grows",img:"/images/personal/rosee-garden-2026.webp",description:"Explore existing garden guides and growing-season notes. Start with one manageable task, whether that is checking soil moisture, choosing seeds, or learning when to transplant.",href:"/garden",cta:"Step into the garden"},
+        {title:"The Soundtrack of Us",description:"Think of a song from hip-hop, go-go, or soul that carries a memory. Use the reflection below to name what it taught you. We do not host a music player or licensed tracks here.",href:"#take-five",cta:"Find your song"},
+        {title:"Beats, Plants & Plates",description:"Browse existing recipe pages and meal ideas. Check ingredients, serving needs, and instructions before cooking; recipes are not personalized medical nutrition advice.",href:"/whats-good-to-eat",cta:"Explore the kitchen"},
+        {title:"Lessons I Didn't Know I Was Learning",description:"Read personal stories about starting over, relationships, faith, and lessons learned. These are experiences to consider, not promises that your path will look the same.",href:"/journey",cta:"Read the stories"}
       ].map((item,i)=><article key={item.title} style={{border:"1px solid #e4d8c7",borderRadius:18,overflow:"hidden",background:"#fffaf2",padding:18}}>
         {item.img?<img src={item.img} alt="RoSeé in her garden" style={{width:"100%",height:175,objectFit:"cover",borderRadius:12}}/>:<div aria-hidden="true" style={{height:175,borderRadius:12,background:["","#d6dfd2","#ead5bd","#e7d4d0"][i],display:"grid",placeItems:"center",fontSize:46}}>{["","♫","✦","❧"][i]}</div>}
         <h2 style={{fontSize:"1.4rem",margin:"1rem 0 .5rem"}}>{item.title}</h2><p>{item.description}</p><a href={item.href} style={{fontWeight:800,color:"#a4493b"}}>{item.cta} →</a>
@@ -49,6 +49,6 @@ export default function PocketsOfPeace() {
       <div style={{marginTop:12}}><button type="button" onClick={saveReflection} style={{padding:"0.8rem 1.2rem",background:"#225c45",color:"white",border:0,borderRadius:10,fontWeight:800,cursor:"pointer"}}>Save reflection to my device</button></div>
       <p style={{fontSize:".9rem"}}>Your writing stays in this browser until you download it. We do not submit it to AskDoGood. {saved?"Your file was prepared for download.":""}</p>
     </section>
-    <section style={{padding:"2rem 0"}}><h2>One good moment can lead to another.</h2><p>Explore a recipe, read a story, or take a practical next step. You do not have to buy anything to belong here.</p><p><Link href="/resources/start">Find practical support →</Link> · <Link href="/community">Connect with the community →</Link></p></section>
+    <section style={{padding:"2rem 0"}}><h2>Take what helps. Leave what does not.</h2><p>This page is free. If you need help with work, housing, food, or another urgent issue, start with our practical resource links rather than relying on a reflection exercise alone.</p><p><Link href="/resources/start">Find practical support →</Link> · <Link href="/community">Connect with the community →</Link></p></section>
   </div>;
 }
