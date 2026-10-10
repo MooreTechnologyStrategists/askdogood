@@ -19,8 +19,8 @@ export default function Home() {
     <div className="adg-page">
       <PageIntro
         eyebrow="AskDoGood · Rooted in the DMV. Built for real life."
-        title="You deserve more than survival. Let’s build your next chapter."
-        text="If you are tired of street life, habits that keep taking more than they give, painful relationships, or starting over without a foundation, you belong here. Find honest stories, free tools, and practical next steps toward health, stability, opportunity, and peace."
+        title="Real life is complicated. Start with what you need today."
+        text="Maybe you need help sorting out a bill, finding your footing after a setback, making sense of a difficult relationship, or just getting through a hard week. Start with free reading, checklists, and links to resources. We explain what each tool does and what it cannot do."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
@@ -28,11 +28,11 @@ export default function Home() {
         <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
         <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
-      <Section eyebrow="NEW · Your five-minute escape" title="Life is doing the most. Come find your pocket of peace.">
+      <Section eyebrow="NEW · Your five-minute escape" title="A little breathing room, with something useful to take away.">
         <div className="adg-grid adg-grid-three">
-          <article className="adg-card adg-image-card"><img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé in the garden" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Garden wisdom, real stories, and small things worth tending.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
-          <article className="adg-card"><p className="adg-eyebrow">Turn the music up</p><h3>The soundtrack of us.</h3><p>Old-school hip-hop, go-go, soul, and the songs that take us somewhere good. Pick a reflection and save it for yourself.</p><Action href="/pockets-of-peace#take-five" secondary>Find your five-minute reset</Action></article>
-          <article className="adg-card"><p className="adg-eyebrow">Good food. Real life.</p><h3>Beats, Plants &amp; Plates.</h3><p>Kitchen comfort, growing things, and lessons worth passing forward.</p><Action href="/whats-good-to-eat" secondary>What's good to eat?</Action></article>
+          <article className="adg-card adg-image-card"><img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé in the garden" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Learn when to start seeds, how to care for young plants, and what gardening can teach us about patience. Start with our existing garden guides.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
+          <article className="adg-card"><p className="adg-eyebrow">Turn the music up</p><h3>The soundtrack of us.</h3><p>Pick a song that means something to you, reflect on the memory behind it, and save your thoughts to your own device. No account or purchase required.</p><Action href="/pockets-of-peace#take-five" secondary>Find your five-minute reset</Action></article>
+          <article className="adg-card"><p className="adg-eyebrow">Good food. Real life.</p><h3>Beats, Plants &amp; Plates.</h3><p>Browse existing recipes and practical meal ideas. We’ll distinguish tested instructions from stories and works in progress.</p><Action href="/whats-good-to-eat" secondary>What's good to eat?</Action></article>
         </div>
       </Section>
       <Section
