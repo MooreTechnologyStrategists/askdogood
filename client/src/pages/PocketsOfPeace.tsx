@@ -37,6 +37,36 @@ export default function PocketsOfPeace() {
         <h2 style={{fontSize:"1.4rem",margin:"1rem 0 .5rem"}}>{item.title}</h2><p>{item.description}</p><a href={item.href} style={{fontWeight:800,color:"#a4493b"}}>{item.cta} →</a>
       </article>)}
     </section>
+    <section aria-label="Practical pocket of peace guides" style={{padding:"1rem 0 2rem"}}>
+      <h2 style={{fontSize:"clamp(1.6rem,4vw,2.3rem)"}}>A little more than a feel-good quote.</h2>
+      <p>Try something small today. These ideas are starting points, not promises that a difficult situation will disappear.</p>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:18}}>
+        <article style={{background:"#fffaf2",border:"1px solid #e4d8c7",borderRadius:16,padding:20}}>
+          <h3>Garden: when your plant is struggling</h3>
+          <p>Before buying fertilizer or another plant, check the basics. Put a finger about an inch into the soil. If it feels damp, hold off watering and check that the pot drains. If it is dry, water slowly until the soil is evenly moist. Look at how many hours of light the plant gets, and identify the plant before changing its routine. Different plants need different care.</p>
+          <p><strong>Try today:</strong> Write down the plant name, light conditions, and last watering date. Observe it for a few days instead of changing everything at once.</p>
+          <a href="/garden" style={{fontWeight:800,color:"#a4493b"}}>Explore the seasonal garden notes →</a>
+        </article>
+        <article style={{background:"#fffaf2",border:"1px solid #e4d8c7",borderRadius:16,padding:20}}>
+          <h3>Music: make a three-song check-in</h3>
+          <p>Some songs take us straight back to a kitchen, a family gathering, a go-go show, or a younger version of ourselves. Pick three songs: one that matches how you feel, one that reminds you of your strength, and one that makes you want to move. You do not need a perfect playlist or a subscription to reflect on what they mean.</p>
+          <p><strong>Try today:</strong> Write down one lyric-free memory each song brings up, then ask yourself what you want to carry into the rest of the day.</p>
+          <a href="#take-five" style={{fontWeight:800,color:"#a4493b"}}>Use the music reflection →</a>
+        </article>
+        <article style={{background:"#fffaf2",border:"1px solid #e4d8c7",borderRadius:16,padding:20}}>
+          <h3>Kitchen: dinner when energy is low</h3>
+          <p>Not every evening calls for a full recipe. Check what you already have: a grain, a protein such as beans or eggs, and a vegetable. A simple bowl can come together with cooked rice, rinsed canned beans, warmed vegetables, and seasoning you like. Follow food safety instructions and adjust ingredients for your needs.</p>
+          <p><strong>Try today:</strong> Choose one meal from what is already in the kitchen before adding more to the grocery list.</p>
+          <a href="/whats-good-to-eat" style={{fontWeight:800,color:"#a4493b"}}>Browse recipe ideas →</a>
+        </article>
+        <article style={{background:"#fffaf2",border:"1px solid #e4d8c7",borderRadius:16,padding:20}}>
+          <h3>Stories: keep the lesson, not the harm</h3>
+          <p>Sometimes a relationship, a job, or an unexpected ending leaves you with both pain and useful knowledge. You can acknowledge what hurt without pretending it was worth it. Ask what you learned, what boundary you would set sooner, and which part of your experience might help somebody else. You never owe anyone the details of your story.</p>
+          <p><strong>Try today:</strong> Write one sentence beginning “Next time, I will…” and make it specific enough to act on.</p>
+          <a href="/journey" style={{fontWeight:800,color:"#a4493b"}}>Read the personal stories →</a>
+        </article>
+      </div>
+    </section>
     <section id="take-five" style={{background:"#edf3e9",borderRadius:22,padding:"clamp(1.2rem,4vw,2.5rem)"}}>
       <p style={{fontWeight:800,color:"#a4493b",letterSpacing:1}}>YOUR FIVE-MINUTE RESET</p>
       <h2 style={{fontSize:"clamp(1.6rem,4vw,2.5rem)"}}>What kind of peace do you need today?</h2>
