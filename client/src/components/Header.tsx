@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 const nav = [
   ["Start here", "/resources/start"],
+  ["Pockets of Peace", "/pockets-of-peace"],
   ["Offers & shop", "/shop"],
   ["Merch", "/merch"],
   ["Free resources", "/resources/library"],
