@@ -14,8 +14,8 @@ export default function ResourcesStart() {
     <div className="adg-page">
       <PageIntro
         eyebrow="Start here · You belong here"
-        title="Come as you are. Leave with a next step."
-        text="You do not have to have it all together to begin. Find space to breathe, practical guidance for what hurts, and tools to build what comes next."
+        title="Tell us what you are trying to sort out. Start with a free resource."
+        text="If you are overwhelmed, choose one issue instead of trying to solve everything today. Browse practical checklists and resource links, see what each one covers, and decide what you want to do next. AskDoGood shares information and lived experience; we cannot guarantee housing, employment, medical care, financial assistance, or individual outcomes."
       >
         <div className="adg-actions">
           <Action href="#paths">Find my path</Action>
