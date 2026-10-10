@@ -40,6 +40,7 @@ import ResourcesStart from "./pages/ResourcesStart";
 import ResourcesLibrary from "./pages/ResourcesLibrary";
 import DashboardLayout from "@/components/DashboardLayout";
 import Garden from "@/pages/Garden";
+import PocketsOfPeace from "@/pages/PocketsOfPeace";
 import GardenSeasonPost from "@/pages/GardenSeasonPost";
 import KeepMoving from "@/pages/KeepMoving";
 import RoastedVegetablesTrio from "@/pages/recipes/RoastedVegetablesTrio";
@@ -119,6 +120,7 @@ function Router() {
         <Route path="/keep-moving" component={KeepMoving} />
         <Route path="/interests" component={Interests} />
         <Route path="/garden" component={Garden} />
+        <Route path="/pockets-of-peace" component={PocketsOfPeace} />
         <Route path="/no-fluff" component={NoFluff} />
         <Route path="/support/:topic" component={SupportTopic} />
         <Route path="/resources" component={Resources} />
