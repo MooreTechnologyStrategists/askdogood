@@ -19,7 +19,7 @@ export default function Garden() {
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">RoSeé's garden journal</p>
         <h1 className="text-4xl md:text-5xl font-bold">Seasons of Growth</h1>
         <p className="text-lg leading-8 text-muted-foreground">
-          My garden has taught me patience, fed a few good meals, and occasionally humbled me before breakfast. Follow the seasons for what is growing, what is resting, and what that has to do with the rest of life.
+          Gardening can feel intimidating when you have limited space, a tight budget, or a plant that keeps looking at you sideways. Start with what you can check today: sunlight, soil moisture, drainage, and the season. Explore the growing notes below for practical ideas, then adapt them to your space and local weather. I also share what gardening has taught me about patience, starting over, and accepting that not every seed will make it.
         </p>
       </header>
 
