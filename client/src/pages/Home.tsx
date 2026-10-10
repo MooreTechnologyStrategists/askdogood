@@ -28,6 +28,13 @@ export default function Home() {
         <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
         <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
+      <Section eyebrow="NEW · Your five-minute escape" title="Life is doing the most. Come find your pocket of peace.">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card adg-image-card"><img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé in the garden" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Garden wisdom, real stories, and small things worth tending.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
+          <article className="adg-card"><p className="adg-eyebrow">Turn the music up</p><h3>The soundtrack of us.</h3><p>Old-school hip-hop, go-go, soul, and the songs that take us somewhere good. Pick a reflection and save it for yourself.</p><Action href="/pockets-of-peace#take-five" secondary>Find your five-minute reset</Action></article>
+          <article className="adg-card"><p className="adg-eyebrow">Good food. Real life.</p><h3>Beats, Plants &amp; Plates.</h3><p>Kitchen comfort, growing things, and lessons worth passing forward.</p><Action href="/whats-good-to-eat" secondary>What's good to eat?</Action></article>
+        </div>
+      </Section>
       <Section
         id="choose"
         eyebrow="Start with what brought you here"
