@@ -26,7 +26,7 @@ export default function Blog() {
       <PageIntro
         eyebrow="Articles & stories"
         title="Real questions. Room to explore."
-        text="Browse health and food, relationships, work, and everyday life. Discover practical ideas alongside RoSeé’s personal stories."
+        text="Looking for a practical idea about meals, relationships, work, or getting through a rough stretch? Search by topic and read at your own pace. Articles may offer checklists, questions to ask, or lived experience—not guaranteed results or individual professional advice."
       />
       <Section>
         <div className="adg-filter">
