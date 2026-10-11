@@ -1,3 +1,4 @@
+import PocketPeek from "@/components/PocketPeek";
 import CommunityEvents from "@/components/CommunityEvents";
 import NextStepBuilder from "@/components/NextStepBuilder";
 import { Link } from "wouter";
@@ -38,6 +39,7 @@ export default function Home() {
           <article className="adg-card adg-image-card"><img src="/images/community/ypd-welcome.webp" alt="Youth Professional Development event welcome sign beside yellow flowers" loading="lazy" /><div><p className="adg-eyebrow">YPD · Community Impact Event</p><h3>Inclusion with room to grow.</h3><p>An inclusive gathering brought several developmental organizations together to share resources, with youth career information among the opportunities to explore.</p><Action href="/community#ypd-recap">See the YPD highlight</Action></div></article>
         </div>
       </Section>
+      <Section tone eyebrow="NEW · Play & Grow" title="A little joy belongs in your next chapter."><PocketPeek /><div className="adg-grid adg-grid-three"><article className="adg-card"><h3>Quick curiosity</h3><p>Four-question rounds on health, love, music, faith, and everyday foundations. Get the why behind each answer.</p><Action href="/play-grow">Pick my quiz</Action></article><article className="adg-card"><h3>Peace by piece</h3><p>Arrange word tiles into an original AskDoGood reminder. A gentle puzzle, with hints when you want them.</p><Action href="/play-grow?activity=puzzle" secondary>Piece together some peace</Action></article><article className="adg-card"><h3>A surprise pocket</h3><p>Open a reflection about music, growth, kindness, or self-worth. No score, just a little room for you.</p><Action href="/play-grow?activity=pocket" secondary>Open my pocket</Action></article></div></Section>
       <Section id="take-action" tone eyebrow="The next move is yours" title="Choose a goal. Leave with a next step.">
         <NextStepBuilder />
       </Section>

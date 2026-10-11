@@ -1,0 +1,360 @@
+[
+  {
+    "id": "health1",
+    "track": "health",
+    "prompt": "Which description fits Graves’ disease?",
+    "options": [
+      "An autoimmune thyroid condition",
+      "A synonym for thyroid cancer",
+      "An infection of the stomach",
+      "A type of hearing loss"
+    ],
+    "correct": 0,
+    "why": "Graves’ disease is autoimmune and can cause excess thyroid hormone. It is distinct from thyroid cancer.",
+    "hint": "Think about the immune system’s role.",
+    "href": "https://www.niddk.nih.gov/health-information/endocrine-diseases/graves-disease",
+    "source": "NIDDK: Graves’ disease",
+    "next": "/health-stories/graves-disease"
+  },
+  {
+    "id": "health2",
+    "track": "health",
+    "prompt": "When is menopause generally identified?",
+    "options": [
+      "After a single missed period",
+      "After 12 months without a period",
+      "At the same birthday for everyone",
+      "Only after thyroid surgery"
+    ],
+    "correct": 1,
+    "why": "Menopause is generally identified after 12 months without a menstrual period. It is a life stage, and timing varies.",
+    "hint": "The definition uses a span of time, not a fixed birthday.",
+    "href": "https://medlineplus.gov/menopause.html",
+    "source": "MedlinePlus: menopause",
+    "next": "/health-stories/menopause"
+  },
+  {
+    "id": "health3",
+    "track": "health",
+    "prompt": "Does having a panic attack automatically mean someone has panic disorder?",
+    "options": [
+      "Yes, after any one attack",
+      "Yes, if the attack feels intense",
+      "No; a diagnosis needs evaluation",
+      "No; panic disorder never involves attacks"
+    ],
+    "correct": 2,
+    "why": "A panic attack alone does not establish panic disorder. A professional evaluates the pattern and other possible causes.",
+    "hint": "An event and a diagnosis are different things.",
+    "href": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms",
+    "source": "NIMH: panic disorder",
+    "next": "/health-stories/panic-attacks"
+  },
+  {
+    "id": "health4",
+    "track": "health",
+    "prompt": "Which statement about anemia is accurate?",
+    "options": [
+      "It always means low iron",
+      "It is diagnosed by tiredness alone",
+      "It needs no investigation",
+      "It can have several different causes"
+    ],
+    "correct": 3,
+    "why": "Anemia can have different causes. Evaluation helps determine what kind of care is appropriate.",
+    "hint": "Avoid treating one possible cause as the only cause.",
+    "href": "https://www.nhlbi.nih.gov/health/anemia",
+    "source": "NHLBI: anemia",
+    "next": "/health-stories/anemia"
+  },
+  {
+    "id": "health5",
+    "track": "health",
+    "prompt": "What is acid reflux?",
+    "options": [
+      "Stomach contents moving into the esophagus",
+      "A sore in the stomach lining",
+      "Inflammation in the stomach lining",
+      "A synonym for IBS"
+    ],
+    "correct": 0,
+    "why": "Reflux describes backflow into the esophagus. Ulcers, gastritis, and IBS describe different conditions.",
+    "hint": "Think about the direction contents move.",
+    "href": "https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/definition-facts",
+    "source": "NIDDK: reflux",
+    "next": "/health-stories/acid-reflux"
+  },
+  {
+    "id": "health6",
+    "track": "health",
+    "prompt": "A chart reports a rate for all headache disorders. What can you conclude?",
+    "options": [
+      "It gives migraine prevalence exactly",
+      "It describes a broader group than migraine alone",
+      "It predicts one person’s diagnosis",
+      "It proves every headache has the same cause"
+    ],
+    "correct": 1,
+    "why": "Headache disorders are a broader category. A combined statistic must not be relabeled as migraine-only prevalence.",
+    "hint": "Read the population label before using a number.",
+    "href": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+    "source": "WHO: headache disorders",
+    "next": "/health-stories/migraines"
+  },
+  {
+    "id": "love1",
+    "track": "love",
+    "prompt": "A partner asks for quiet time after work. Which response respects the boundary?",
+    "options": [
+      "Treat silence as punishment",
+      "Keep calling until they answer",
+      "Discuss a mutually comfortable time to reconnect",
+      "Demand proof they are working"
+    ],
+    "correct": 2,
+    "why": "Respectful boundaries make room for needs and a conversation about expectations. Reconnection can be agreed on together.",
+    "hint": "Look for a response that leaves room for both people.",
+    "href": "https://www.loveisrespect.org/resources/boundaries-expectations/",
+    "source": "love is respect: boundaries"
+  },
+  {
+    "id": "love2",
+    "track": "love",
+    "prompt": "Which statement expresses a personal boundary rather than control?",
+    "options": [
+      "You cannot see your friends",
+      "You must give me your passwords",
+      "You must answer every call",
+      "I will pause a conversation if I am being yelled at"
+    ],
+    "correct": 3,
+    "why": "A boundary explains your limits and what you will do. It is not permission to control another person.",
+    "hint": "Notice whose action the statement describes.",
+    "href": "https://www.loveisrespect.org/resources/boundaries-expectations/",
+    "source": "love is respect: boundaries"
+  },
+  {
+    "id": "love3",
+    "track": "love",
+    "prompt": "When someone’s boundary is unclear, which step helps?",
+    "options": [
+      "Ask what they are comfortable with",
+      "Assume your preferences match",
+      "Test how far you can push it",
+      "Ask someone else to override it"
+    ],
+    "correct": 0,
+    "why": "Asking creates a chance to understand their boundary. Respect does not require guessing or pushing past a limit.",
+    "hint": "Clarity begins with a conversation.",
+    "href": "https://www.loveisrespect.org/resources/what-are-my-boundaries/",
+    "source": "love is respect: understanding boundaries"
+  },
+  {
+    "id": "love4",
+    "track": "love",
+    "prompt": "Which expectation supports a healthy relationship?",
+    "options": [
+      "One person makes every decision",
+      "Both people can express needs and limits",
+      "Love requires unlimited access",
+      "Disagreement means someone owes obedience"
+    ],
+    "correct": 1,
+    "why": "Healthy relationships allow people to express needs, goals, and limits with respect.",
+    "hint": "Look for mutual respect rather than permission or control.",
+    "href": "https://www.loveisrespect.org/everyone-deserves-a-healthy-relationship/how-to-set-boundaries/",
+    "source": "love is respect: setting boundaries"
+  },
+  {
+    "id": "spirit1",
+    "track": "spirit",
+    "prompt": "In James 1:19, what comes first?",
+    "options": [
+      "Winning the argument",
+      "Speaking without pausing",
+      "Being quick to listen",
+      "Avoiding every conversation"
+    ],
+    "correct": 2,
+    "why": "James 1:19 calls for readiness to listen, patience in speaking, and restraint in anger.",
+    "hint": "The verse begins with how we receive others.",
+    "href": "https://www.biblegateway.com/passage/?search=James%201:19&version=KJV",
+    "source": "Bible: James 1:19 (KJV)"
+  },
+  {
+    "id": "spirit2",
+    "track": "spirit",
+    "prompt": "Which trio appears in Micah 6:8?",
+    "options": [
+      "Recognition, wealth, and influence",
+      "Speed, certainty, and perfection",
+      "Silence, isolation, and approval",
+      "Justice, mercy, and humility"
+    ],
+    "correct": 3,
+    "why": "Micah 6:8 connects doing justice, loving mercy, and walking humbly with God.",
+    "hint": "Think about how we treat people and how we carry ourselves.",
+    "href": "https://www.biblegateway.com/passage/?search=Micah%206:8&version=KJV",
+    "source": "Bible: Micah 6:8 (KJV)"
+  },
+  {
+    "id": "spirit3",
+    "track": "spirit",
+    "prompt": "James 1:22 encourages readers to do what?",
+    "options": [
+      "Put the word into action",
+      "Only collect more information",
+      "Measure faith by popularity",
+      "Wait for perfect circumstances"
+    ],
+    "correct": 0,
+    "why": "James 1:22 emphasizes doing rather than hearing alone.",
+    "hint": "The verse connects learning with practice.",
+    "href": "https://www.biblegateway.com/passage/?search=James%201:22&version=KJV",
+    "source": "Bible: James 1:22 (KJV)"
+  },
+  {
+    "id": "spirit4",
+    "track": "spirit",
+    "prompt": "In the Good Samaritan account, who acts as a neighbor?",
+    "options": [
+      "The person who passes by",
+      "The person who shows mercy",
+      "The person with the loudest opinion",
+      "The person who asks for recognition"
+    ],
+    "correct": 1,
+    "why": "Luke 10:36–37 identifies the neighbor through mercy and calls the listener to act similarly.",
+    "hint": "Look for the action that responds to someone’s need.",
+    "href": "https://www.biblegateway.com/passage/?search=Luke%2010:36-37&version=KJV",
+    "source": "Bible: Luke 10:36-37 (KJV)"
+  },
+  {
+    "id": "fun1",
+    "track": "fun",
+    "prompt": "RoSeé wrote her first rap, “House of Roxanne,” at what age?",
+    "options": [
+      "Six",
+      "Seven",
+      "Nine",
+      "Twelve"
+    ],
+    "correct": 2,
+    "why": "RoSeé has shared that she wrote “House of Roxanne” at nine. Music belongs in the AskDoGood story.",
+    "hint": "It was before her tenth birthday.",
+    "href": "/cookbook",
+    "source": "RoSeé’s music story"
+  },
+  {
+    "id": "fun2",
+    "track": "fun",
+    "prompt": "What has keys but cannot unlock your front door?",
+    "options": [
+      "A piano",
+      "A mailbox",
+      "A garden gate",
+      "A door handle"
+    ],
+    "correct": 0,
+    "why": "A piano has musical keys rather than door keys. This riddle plays on two meanings of the word.",
+    "hint": "Think music, not security.",
+    "href": "/pockets-of-peace",
+    "source": "AskDoGood wordplay"
+  },
+  {
+    "id": "fun3",
+    "track": "fun",
+    "prompt": "You clap once on each beat. At 60 beats per minute, how many claps in 30 seconds?",
+    "options": [
+      "15",
+      "30",
+      "60",
+      "120"
+    ],
+    "correct": 1,
+    "why": "60 beats per minute is one beat per second. In 30 seconds, that makes 30 claps.",
+    "hint": "A minute has 60 seconds.",
+    "href": "/pockets-of-peace",
+    "source": "AskDoGood rhythm puzzle"
+  },
+  {
+    "id": "fun4",
+    "track": "fun",
+    "prompt": "Which word completes this original AskDoGood phrase: “Make room for ___”?",
+    "options": [
+      "Deadlines",
+      "Perfection",
+      "Peace",
+      "Comparison"
+    ],
+    "correct": 2,
+    "why": "“Make room for peace” is the phrase in this wordplay round. Your version of peace can look different.",
+    "hint": "Think of the name Pockets of Peace.",
+    "href": "/pockets-of-peace",
+    "source": "AskDoGood wordplay"
+  },
+  {
+    "id": "foundation1",
+    "track": "foundation",
+    "prompt": "Which is the most specific small-step plan?",
+    "options": [
+      "Improve everything soon",
+      "Become perfect this week",
+      "Try harder somehow",
+      "Write three appointment questions tonight"
+    ],
+    "correct": 3,
+    "why": "The last choice names a concrete action and when to do it. Specificity makes this example easier to act on.",
+    "hint": "Find an action you could tell when you have completed.",
+    "href": "/resources/start",
+    "source": "AskDoGood practical planning example"
+  },
+  {
+    "id": "foundation2",
+    "track": "foundation",
+    "prompt": "Which sentence separates a setback from your identity?",
+    "options": [
+      "This attempt failed; I can review what to change",
+      "This attempt failed; I am a failure",
+      "This attempt failed; nothing can ever change",
+      "This attempt failed; my worth is gone"
+    ],
+    "correct": 0,
+    "why": "The first sentence describes an attempt and a possible next step without turning it into a verdict about a person.",
+    "hint": "Look for language about an event, not a permanent label.",
+    "href": "/support/relationships",
+    "source": "AskDoGood reflection example"
+  },
+  {
+    "id": "foundation3",
+    "track": "foundation",
+    "prompt": "A plan says “write the email.” What makes its next step clearer?",
+    "options": [
+      "Add three unrelated goals",
+      "Choose a time and the first sentence",
+      "Wait until confidence is perfect",
+      "Keep the task vague"
+    ],
+    "correct": 1,
+    "why": "Choosing a time and a first sentence turns this example into a more concrete starting point.",
+    "hint": "Make the beginning visible.",
+    "href": "/resources/start",
+    "source": "AskDoGood practical planning example"
+  },
+  {
+    "id": "foundation4",
+    "track": "foundation",
+    "prompt": "Which sentence asks for a clear kind of support?",
+    "options": [
+      "Help me with everything",
+      "You should know what I need",
+      "Could you read my draft before Friday?",
+      "Nothing matters anyway"
+    ],
+    "correct": 2,
+    "why": "The request names an action and a time. The other person can understand what is being asked.",
+    "hint": "Look for a request someone could answer directly.",
+    "href": "/support/relationships",
+    "source": "AskDoGood communication example"
+  }
+]

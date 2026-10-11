@@ -1,3 +1,4 @@
+import PocketPeek from "@/components/PocketPeek";
 import { useState } from "react";
 import { Link } from "wouter";
 
@@ -26,6 +27,8 @@ export default function PocketsOfPeace() {
       <p style={{fontSize:"1.2rem",maxWidth:690}}>Maybe your day has been bills, family obligations, job worries, or one more thing you did not plan for. This page offers four small, free ways to reset: try a gardening idea, reflect on a song, make something simple to eat, or put a hard-earned lesson into words. None of it replaces the practical help you may need.</p>
       <a href="#take-five" style={{display:"inline-block",background:"#225c45",color:"white",padding:"0.85rem 1.3rem",borderRadius:10,fontWeight:700}}>Take five minutes for yourself →</a>
     </header>
+    <section style={{padding:24,borderRadius:30,background:"#f4e5df",marginTop:24}}><h2>A little peace, with a little play.</h2><p>Try word-tile puzzles, music moments, or a surprise reflection pocket. Our curated mix rotates daily.</p><Link href="/play-grow" style={{fontWeight:800,textDecoration:"underline"}}>Step into Play &amp; Grow →</Link></section>
+    <PocketPeek />
     <section aria-label="Explore pockets of peace" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:18,margin:"2rem 0"}}>
       {[
         {title:"The Garden Grows",img:"/images/personal/food/night-garden.jpg",description:"Explore existing garden guides and growing-season notes. Start with one manageable task, whether that is checking soil moisture, choosing seeds, or learning when to transplant.",href:"/garden",cta:"Step into the garden"},

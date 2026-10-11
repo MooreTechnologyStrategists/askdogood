@@ -1,3 +1,4 @@
+import PocketPeek from "@/components/PocketPeek";
 import {
   PageIntro,
   Section,
@@ -15,6 +16,7 @@ export default function ResourcesLibrary() {
       <Section>
         <TopicCards />
       </Section>
+      <Section title="Learn through a little play." tone><PocketPeek /><p>Try quick knowledge rounds, word puzzles, and surprise reflection cards around health, love, music, faith, and self-worth.</p><Action href="/play-grow">Explore Play &amp; Grow</Action></Section>
       <Section tone title="Read, try, or take a breath.">
         <div className="adg-grid adg-grid-three">
           {[

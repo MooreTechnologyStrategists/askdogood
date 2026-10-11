@@ -1,3 +1,4 @@
+import PlayGrow from "@/pages/PlayGrow";
 import HealthStories, { HealthCategory } from "@/pages/HealthStories";
 import HealthStory from "@/pages/HealthStory";
 import Community from "@/pages/Community";
@@ -132,6 +133,7 @@ function Router() {
         <Route path="/rss" component={BlogRSS} />
         <Route path="/feed" component={BlogRSS} />
         <Route path="/journey" component={Journey} />
+        <Route path="/play-grow" component={PlayGrow} />
         <Route path="/health-stories" component={HealthStories} />
         <Route path="/health-stories/category/:categorySlug" component={HealthCategory} />
         <Route path="/health-stories/:slug" component={HealthStory} />

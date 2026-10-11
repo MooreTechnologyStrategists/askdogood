@@ -10,7 +10,7 @@ export default function HealthStory() {
   const [notes,setNotes]=useState("");
   const [downloaded,setDownloaded]=useState(false);
   useEffect(()=>{setNotes("");setDownloaded(false);setReplay(0);},[slug]);
-  if (!story) return <div className="adg-page"><Section title="Health topic not found"><p>Choose a topic from the health-story collection.</p><Action href="/health-stories">All health stories</Action></Section></div>;
+  if (!story) return <div className="adg-page health-bubbly-page"><Section title="Health topic not found"><p>Choose a topic from the health-story collection.</p><Action href="/health-stories">All health stories</Action></Section></div>;
   const chart=story.stat;
   const max=chart?.unit==="%" ? 100 : Math.ceil(Math.max(...(chart?.rows.map(r=>r.value)??[1]))/10000)*10000;
   function download() {
@@ -20,7 +20,7 @@ export default function HealthStory() {
     const a=document.createElement('a');a.href=url;a.download=`askdogood-${story.slug}-care-conversation.txt`;a.click();
     window.setTimeout(()=>URL.revokeObjectURL(url),1000);setDownloaded(true);
   }
-  return <div className="adg-page" key={story.slug}>
+  return <div className="adg-page health-bubbly-page" key={story.slug}>
     <PageIntro eyebrow={`RoSeé’s health stories · ${story.category}`} title={story.title} text={story.story}>
       <div className="adg-actions"><Action href="#care-conversation">Prepare my care conversation</Action><Action href={`/health-stories/category/${story.categorySlug}`} secondary>{story.category}</Action></div>
     </PageIntro>
@@ -44,6 +44,7 @@ export default function HealthStory() {
       </figure>
     </Section>}
     {story.diagram && <Section eyebrow="A visual guide" title={story.diagram.title}><div className="health-map">{story.diagram.nodes.map(([name,detail],i)=><article className="adg-card" key={name}><span className="health-map-number" aria-hidden="true">{i+1}</span><h3>{name}</h3><p>{detail}</p></article>)}</div><p className="adg-small">{story.diagram.note}</p>{story.category==='Digestive health' && <p><Source href="https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/definition-facts">NIDDK: ulcers</Source> · <Source href="https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/definition-facts">NIDDK: gastritis</Source> · <Source href="https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/definition-facts">NIDDK: reflux</Source></p>}</Section>}
+    <Section eyebrow="Let curiosity lead" title="Make a little room for play."><p>Practice health knowledge with short quizzes and gentle puzzles, then come back to the questions that matter to you.</p><Action href="/play-grow?track=health" secondary>Try a quick curiosity round</Action></Section>
     <Section id="care-conversation" tone eyebrow="Something useful to take with you" title="Prepare your next care conversation.">
       <ol className="health-list">{story.questions.map(q=><li key={q}>{q}</li>)}</ol>
       <label className="health-notes-label" htmlFor={`notes-${story.slug}`}>Optional notes for your appointment</label>

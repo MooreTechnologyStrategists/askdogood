@@ -54,6 +54,7 @@ export default function Footer() {
                 ["Mission & vision", "/about"],
                 ["RoSeé’s story", "/journey"],
                 ["Health stories & resources", "/health-stories"],
+                ["Play & Grow", "/play-grow"],
                 ["Free resources", "/resources/library"],
                 ["Articles & stories", "/blog"],
                 ["Contact", "/contact"],

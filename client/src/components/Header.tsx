@@ -5,7 +5,7 @@ const nav = [
   ["Start here", "/resources/start"],
   ["Pockets of Peace", "/pockets-of-peace"],
   ["Offers & shop", "/shop"],
-  ["Merch", "/merch"],
+  ["Play & Grow", "/play-grow"],
   ["Free resources", "/resources/library"],
   ["Workshops", "/work-with-askdogood"],
   ["Health stories", "/health-stories"],

@@ -35,6 +35,7 @@ export type StaticSeoPage = {
 };
 
 export const staticSeoPages: StaticSeoPage[] = [
+  {path:"/play-grow",title:"Play & Grow: Quizzes, Puzzles & Reflection | AskDoGood",description:"Explore health, love, music, faith, and self-worth through short quizzes, word-tile puzzles, and surprise reflection cards. A curated mix rotates daily.",keywords:["AskDoGood games","health knowledge","word puzzle","reflection"],priority:0.8,changefreq:"monthly"},
   { path: "/health-stories", title: "RoSeé’s Health Stories & Resources | AskDoGood", description: "Explore 19 health topics across six categories with personal perspective, trusted resources, sourced visuals, and downloadable care conversation worksheets.", keywords: ["health stories", "AskDoGood", "care conversation"], priority: 0.85, changefreq: "monthly" },
   ...healthCategories.map(category => ({path: `/health-stories/category/${category.slug}`, title: `${category.title}: Health Stories | AskDoGood`, description: category.description, keywords: [category.title, "AskDoGood"], priority: 0.75, changefreq: "monthly" as const})),
   ...healthStories.map(story => ({path: `/health-stories/${story.slug}`, title: `${story.title}: Stories & Resources | AskDoGood`, description: `Explore ${story.title.toLowerCase()} with RoSeé’s perspective, sourced health information, and questions to take to an appointment.`, keywords: [story.title, "AskDoGood", "health resources"], priority: 0.7, changefreq: "monthly" as const})),
