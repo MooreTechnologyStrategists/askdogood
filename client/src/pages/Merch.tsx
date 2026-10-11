@@ -21,7 +21,6 @@ export default function Merch() {
           </Action>
         </div>
       </PageIntro>
-      <div id="original-checkout" />
       <Section id="original-collection" title="Three ways to carry the good.">
         <p>
           Choose your piece and size. Shipping is calculated at secure checkout.

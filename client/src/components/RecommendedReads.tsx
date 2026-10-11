@@ -32,7 +32,7 @@ const defaultArticles = [
 ];
 
 // Rotates articles every 24 hours (or on reload)
-function getRotatedArticles(articles, count = 3) {
+function getRotatedArticles(articles: typeof defaultArticles, count = 3) {
   const day = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
   const start = day % articles.length;
   const rotated = [];

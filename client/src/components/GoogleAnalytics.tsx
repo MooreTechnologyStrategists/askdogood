@@ -33,8 +33,8 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ measurementId }) => {
     window.gtag = (...args: any[]) => { window.dataLayer?.push(args); };
 
     // Configure GA4
-    gtag('js', new Date());
-    gtag('config', measurementId, {
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {
       send_page_view: false,
     });
   }, [measurementId]);

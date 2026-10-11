@@ -199,6 +199,7 @@ export default function RelationshipKeeper() {
   const [checkInForm, setCheckInForm] = useState(emptyCheckIn);
   const [profileForm, setProfileForm] = useState({
     ...relationshipProfileDefaults,
+    monthlyGoalId: relationshipMonthlyGoals[0]?.id ?? "",
     interests: [] as string[],
     dietaryPreferences: [] as string[],
     favoriteMusicGenres: [] as string[],
@@ -555,6 +556,7 @@ export default function RelationshipKeeper() {
     setBootstrap(null);
     setProfileForm({
       ...relationshipProfileDefaults,
+      monthlyGoalId: relationshipMonthlyGoals[0]?.id ?? "",
       interests: [],
       dietaryPreferences: [],
       favoriteMusicGenres: [],

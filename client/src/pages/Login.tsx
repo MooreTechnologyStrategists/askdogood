@@ -28,12 +28,17 @@ export default function Login() {
 
   useEffect(() => {
     (async () => {
-      const data = await getMe();
-      if (data?.clientPrincipal) {
-        setIsAuthed(true);
-        setTimeout(() => setLocation("/profile"), 600);
+      try {
+        const data = await getMe();
+        if (data?.clientPrincipal) {
+          setIsAuthed(true);
+          setLocation("/profile");
+        }
+      } catch {
+        setError("We could not check your sign-in status. You can still continue with Microsoft below.");
+      } finally {
+        setChecking(false);
       }
-      setChecking(false);
     })();
   }, [setLocation]);
 

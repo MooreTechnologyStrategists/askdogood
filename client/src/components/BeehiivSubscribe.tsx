@@ -30,7 +30,7 @@ export default function BeehiivSubscribe({
       )}
       <a
         className="adg-button"
-        href="https://rosees-newsletter-9d5fac.beehiiv.com/"
+        href="https://rosees-newsletter-9d5fac.beehiiv.com/subscribe"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() =>

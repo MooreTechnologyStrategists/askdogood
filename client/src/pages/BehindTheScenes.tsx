@@ -160,9 +160,9 @@ export default function BehindTheScenes() {
                       onClick={() =>
                         setSpotlight({
                           src: section.image,
-                          alt: section.imageAlt ?? section.title,
+                          alt: section.imageAlt,
                           title: section.title,
-                          detail: section.imageDetail ?? section.caption,
+                          detail: section.imageDetail,
                         })
                       }
                     />

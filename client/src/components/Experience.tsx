@@ -18,6 +18,7 @@ export function Action({
     onClick: () => trackEvent("offering_path_click", { destination: href }),
   };
   return /^(https:|mailto:|tel:|#)/.test(href) ||
+    href.includes("#") ||
     /\.(html|pdf)([?#]|$)/.test(href) ? (
     <a href={href} {...props}>
       {children}
@@ -153,7 +154,7 @@ export function OfferCards({
               <p className="adg-eyebrow">
                 {info?.format || "Digital resource"}
               </p>
-              <h3>{offer.name}</h3>
+              <h3><Link href={`/product/${offer.slug}`}>{offer.name}</Link></h3>
               <p>{info?.forWho || offer.shortSummary}</p>
               <p className="adg-price">
                 {offer.priceLabel}

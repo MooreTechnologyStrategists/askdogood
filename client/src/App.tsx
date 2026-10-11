@@ -90,9 +90,20 @@ import ImageStudio from "./pages/ImageStudio";
 function Router() {
   const [location] = useLocation();
 
-  // Scroll to top on route change
+  // Honor section links after the destination page has rendered.
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    const scroll = () => {
+      const id = window.location.hash.slice(1);
+      const target = id ? document.getElementById(decodeURIComponent(id)) : null;
+      if (target) target.scrollIntoView({ block: "start", behavior: "instant" });
+      else if (!id) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    };
+    const frame = requestAnimationFrame(scroll);
+    window.addEventListener("hashchange", scroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", scroll);
+    };
   }, [location]);
 
   return (

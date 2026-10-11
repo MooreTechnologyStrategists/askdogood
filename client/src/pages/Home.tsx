@@ -20,14 +20,27 @@ export default function Home() {
       <PageIntro
         eyebrow="AskDoGood · Rooted in the DMV. Built for real life."
         title="Real life is complicated. Start with what you need today."
-        text="Maybe you need help sorting out a bill, finding your footing after a setback, making sense of a difficult relationship, or just getting through a hard week. Start with free reading, checklists, and links to resources. We explain what each tool does and what it cannot do."
+        text="AskDoGood turns real-life lessons into practical resources, honest conversations, and little pockets of peace. Explore free support for your next chapter, discover food and garden ideas, or shop original merch rooted in peace, culture, and commUNITY."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
         <p>I’m RoSeé. My journey has included difficult seasons, hard lessons, and finding a new direction. Education, technology, faith, and a commitment to growth helped me build a stronger foundation. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
-        <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action><Action href="/merch#original-checkout" secondary>Shop original AskDoGood merch</Action></div>
+        <div className="adg-actions"><Action href="/merch#original-checkout">Shop AskDoGood Merch</Action><Action href="#choose" secondary>Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
         <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
+      <Section tone eyebrow="Original AskDoGood collection" title="Wear a little peace. Carry a little commUNITY.">
+        <div className="adg-split">
+          <Link href="/merch#original-collection" aria-label="View the original AskDoGood collection">
+            <img src="/images/merch/askdogood-original-three.webp" alt="AskDoGood black embroidered hoodie, hoodie and jogger set, and cream logo tee" className="adg-photo adg-photo-contain" loading="lazy" />
+          </Link>
+          <div>
+            <h3>Your message. Your everyday pieces.</h3>
+            <p>Cream logo tee $29. Black embroidered hoodie $59. Hoodie and jogger set $95. Choose sizes S–2XL, with separate hoodie and jogger sizes for the set.</p>
+            <div className="adg-actions"><Action href="/merch#original-checkout">Choose my piece &amp; size</Action><Action href="/merch#original-collection" secondary>See the collection</Action></div>
+            <p className="adg-small">Made to order · US delivery · Shipping calculated at secure Stripe checkout.</p>
+          </div>
+        </div>
+      </Section>
       <Section eyebrow="NEW · Your five-minute escape" title="A little breathing room, with something useful to take away.">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card adg-image-card"><img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé in the garden" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Learn when to start seeds, how to care for young plants, and what gardening can teach us about patience. Start with our existing garden guides.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
@@ -116,6 +129,7 @@ export default function Home() {
           <Action href="/shop" secondary>
             Browse all offers
           </Action>
+          <Action href="/merch#original-checkout">Shop AskDoGood Merch</Action>
         </div>
       </Section>
       <Section eyebrow="From exploring to doing" title="Here’s how it works.">
@@ -169,7 +183,7 @@ export default function Home() {
               logo tee $29. Sizes S–2XL; shipping is calculated at checkout.
             </p>
             <div className="adg-actions">
-              <Action href="/merch">Shop merch</Action>
+              <Action href="/merch#original-checkout">Choose my piece &amp; size</Action>
             </div>
             <p className="adg-small">
               Made to order. Review sizing and delivery details before checkout.
