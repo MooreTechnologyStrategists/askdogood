@@ -30,6 +30,13 @@ export default function Home() {
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <Section id="community-highlights" tone eyebrow="October 10 · Good in motion" title="Two events. One mission. More doors open.">
+        <p className="adg-lead">We’re taking wellness, learning, and opportunity into our community. See where we showed up—and find your next step with us.</p>
+        <div className="adg-grid adg-grid-two">
+          <article className="adg-card adg-image-card"><img src="/images/community/trinidad-community.webp" alt="A smiling participant beside the DCT information table at the Trinidad Baptist Church tech fair" loading="lazy" /><div><p className="adg-eyebrow">Trinidad Baptist Church · Tech fair</p><h3>Showing up. Opening possibilities.</h3><p>Bryan and Christopher did an amazing job representing AskDoGood and The Dope Cloud TeacHer. A day of community connection deserves its flowers.</p><Action href="/community#trinidad-recap">See the Trinidad highlight</Action></div></article>
+          <article className="adg-card adg-image-card"><img src="/images/community/ypd-welcome.webp" alt="Youth Professional Development event welcome sign beside yellow flowers" loading="lazy" /><div><p className="adg-eyebrow">YPD · Community Impact Event</p><h3>Inclusion with room to grow.</h3><p>Several developmental organizations came together in an inclusive space. AskDoGood was there to connect our mission with the people it serves.</p><Action href="/community#ypd-recap">See the YPD highlight</Action></div></article>
+        </div>
+      </Section>
       <Section id="take-action" tone eyebrow="The next move is yours" title="Choose a goal. Leave with a next step.">
         <NextStepBuilder />
       </Section>
@@ -96,7 +103,7 @@ export default function Home() {
         <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
       </Section>
       <Section id="in-community" tone eyebrow="Good in motion" title="Meet us in the community.">
-        <p>Our recent YPD visit brought together several developmental organizations in an inclusive space for community connection.</p><Action href="/community#ypd-recap">See the YPD event recap &amp; photos</Action>
+        <p>Explore our latest YPD and Trinidad church event highlights, then connect with us about bringing useful learning and resources to your community.</p><Action href="#community-highlights">See our community highlights</Action>
         <CommunityEvents />
         <div className="adg-actions"><Action href="/community" secondary>Events & community connections</Action><Action href="/whats-good-to-eat">What’s good to eat?</Action></div>
       </Section>
