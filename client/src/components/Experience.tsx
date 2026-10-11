@@ -36,6 +36,7 @@ export function PageIntro({
   children,
   image,
   alt = "",
+  brandImage,
 }: {
   eyebrow: string;
   title: string;
@@ -43,11 +44,13 @@ export function PageIntro({
   children?: ReactNode;
   image?: string;
   alt?: string;
+  brandImage?: string;
 }) {
   return (
-    <section className="adg-intro">
+    <section className={`adg-intro${brandImage ? " adg-intro-branded" : ""}`}>
       <div className={`container ${image ? "adg-split" : ""}`}>
         <div>
+          {brandImage && <img className="adg-hero-logo" src={brandImage} alt="AskDoGood official logo" width="1200" height="400" fetchPriority="high" />}
           <p className="adg-eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
           <p className="adg-lead">{text}</p>

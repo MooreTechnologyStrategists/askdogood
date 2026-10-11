@@ -1,4 +1,5 @@
 import CommunityEvents from "@/components/CommunityEvents";
+import NextStepBuilder from "@/components/NextStepBuilder";
 import { Link } from "wouter";
 import {
   Action,
@@ -18,16 +19,28 @@ export default function Home() {
   return (
     <div className="adg-page">
       <PageIntro
-        eyebrow="AskDoGood · Rooted in the DMV. Built for real life."
-        title="Real life is complicated. Start with what you need today."
-        text="AskDoGood turns real-life lessons into practical resources, honest conversations, and little pockets of peace. Explore free support for your next chapter, discover food and garden ideas, or shop original merch rooted in peace, culture, and commUNITY."
+        brandImage="/images/branding/askdogood-logo.png"
+        eyebrow="AskDoGood · Black-rooted. DMV-grown. Everyone welcome."
+        title="Reclaim your health. Your power. Your future."
+        text="Eat with intention. Change what drains you. Know your worth. Build skills for your next chapter. AskDoGood helps you turn real-life lessons into a practical plan—with free tools, resource connections, and ways to ask for support. Your past does not get the final word."
         image="/images/personal/rosee-garden-2026.webp"
         alt="RoSeé smiling in her garden"
       >
-        <p>I’m RoSeé. My journey has included difficult seasons, hard lessons, and finding a new direction. Education, technology, faith, and a commitment to growth helped me build a stronger foundation. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
-        <div className="adg-actions"><Action href="/merch#original-checkout">Shop AskDoGood Merch</Action><Action href="#choose" secondary>Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
-        <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
+        <div className="adg-actions"><Action href="#take-action">Build my next-step plan</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
+        <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
+        <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <Section id="take-action" tone eyebrow="The next move is yours" title="Choose a goal. Leave with a next step.">
+        <NextStepBuilder />
+      </Section>
+      <Section eyebrow="What we help you put into practice" title="A healthier life. A stronger sense of self. More choices.">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card"><h3>Protect your health</h3><p>Meal planning, everyday routines, and appointment preparation help you act on your health goals. If you want to know whether healthier habits could change your medication needs, start with a review by your prescribing clinician. AskDoGood does not direct medication changes.</p><Action href="/doctor-checklist" secondary>Start my care conversation</Action></article>
+          <article className="adg-card"><h3>Break patterns. Build self-worth.</h3><p>Explore habit-change resources, healthy relationship skills, boundaries, and reflection tools. Learn to name what is costing you peace and what support would help you move forward safely.</p><Action href="/support/relationships" secondary>Work on my boundaries &amp; worth</Action></article>
+          <article className="adg-card"><h3>Build opportunity through learning</h3><p>Starting over does not erase your ability. Explore cloud and AI education through The Dope Cloud TeacHer, career resources, and steps toward a new direction—including after incarceration or a gap in work.</p><Action href="/support/career" secondary>Plan my learning &amp; career path</Action></article>
+        </div>
+        <div className="adg-actions"><Action href="/contact?topic=Help%20choosing%20my%20next%20step">Ask us about my next step</Action><Action href="/shop" secondary>Explore guided plans &amp; membership</Action><Action href="/merch#original-checkout" secondary>Shop AskDoGood Merch</Action></div>
+      </Section>
       <Section tone eyebrow="Original AskDoGood collection" title="Wear a little peace. Carry a little commUNITY.">
         <div className="adg-split">
           <Link href="/merch#original-collection" aria-label="View the original AskDoGood collection">

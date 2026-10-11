@@ -14,8 +14,8 @@ export default function ResourcesStart() {
     <div className="adg-page">
       <PageIntro
         eyebrow="Start here · You belong here"
-        title="Tell us what you are trying to sort out. Start with a free resource."
-        text="If you are overwhelmed, choose one issue instead of trying to solve everything today. Browse practical checklists and resource links, see what each one covers, and decide what you want to do next. AskDoGood shares information and lived experience; we cannot guarantee housing, employment, medical care, financial assistance, or individual outcomes."
+        title="Find the tools. Reach the support. Make your next move."
+        text="Start with what you need: food and housing support, health care, habit-change resources, relationship safety, education, or a new career direction. We bring starting tools and official resource links together so you can see who provides what and take a concrete next step."
       >
         <div className="adg-actions">
           <Action href="#paths">Find my path</Action>
@@ -42,13 +42,15 @@ export default function ResourcesStart() {
       <Section
         id="right-now"
         eyebrow="Real challenges. Useful starting points."
-        title="When the ground shifts, reach for something solid."
+        title="A resource for the need in front of you."
       >
         <p className="adg-lead">
-          Politics and policy belong in the conversation when they affect our
-          jobs, care, food, and families. Alongside our perspectives, we point
-          you toward original sources and practical resources you can check for
-          yourself.
+          AskDoGood provides practical tools, education, and a way to ask about
+          support. DCT offers technology learning through our sister business.
+          The directory below points to outside providers for needs that require
+          their services. Choose a resource, check the requirements, and make
+          the call or application. If you are unsure where to begin, ask us
+          about your goal using our contact page.
         </p>
         <CommunityResources />
       </Section>

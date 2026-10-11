@@ -1,5 +1,5 @@
 export const mission =
-  "Help people rebuilding after hardship find practical next steps toward health, safer relationships, meaningful opportunity, stability, and peace.";
+  "Help our people reclaim health, self-worth, and opportunity through practical education, everyday tools, and resource connections—turning hard-earned lessons into next steps for a stronger future.";
 export const vision =
   "A DMV where your ZIP code, income, or past does not close the door on a healthier, more stable future.";
 export const topics = [

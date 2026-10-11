@@ -66,6 +66,51 @@ export function CommunityResources() {
       secondLabel: "Plan my next step",
       number: "03",
     },
+    {
+      title: "Careers, training & reentry",
+      text: "CareerOneStop provides career exploration and job-search tools, including resources for people with a criminal record. American Job Centers can help you find local employment and training support.",
+      href: "https://www.careeronestop.org/JusticeImpacted/default.aspx",
+      label: "Explore career & reentry tools",
+      second: "https://www.careeronestop.org/LocalHelp/AmericanJobCenters/find-american-job-centers.aspx",
+      secondLabel: "Find an American Job Center",
+      number: "04",
+    },
+    {
+      title: "Substance use & mental-health care",
+      text: "FindTreatment.gov helps you locate treatment providers. Use SAMHSA’s help directory to explore treatment options and support. Ask a qualified provider about safely changing substance use.",
+      href: "https://findtreatment.gov/",
+      label: "Find treatment providers",
+      second: "https://www.samhsa.gov/find-help",
+      secondLabel: "Explore help & treatment",
+      number: "05",
+    },
+    {
+      title: "Relationship safety & support",
+      text: "The National Domestic Violence Hotline offers support and safety-planning resources for people experiencing relationship abuse. If you worry someone monitors your device, consider using a safer device to seek help.",
+      href: "https://www.thehotline.org/get-help/",
+      label: "Reach relationship safety support",
+      second: "/support/relationships",
+      secondLabel: "Explore boundaries & self-worth",
+      number: "06",
+    },
+    {
+      title: "Veterans: care & benefits",
+      text: "Use the VA’s official pages to explore health-care eligibility, services, and benefits. Bring your questions to the VA or the appropriate benefits office.",
+      href: "https://www.va.gov/health-care/",
+      label: "Explore VA health care",
+      second: "https://www.va.gov/",
+      secondLabel: "Explore VA benefits",
+      number: "07",
+    },
+    {
+      title: "Medication questions & prevention",
+      text: "Prepare for a review with your prescribing clinician and explore NIH guidance on medication safety and habits that can lower the risk of type 2 diabetes. Never stop or reduce prescribed medicines on your own.",
+      href: "/doctor-checklist",
+      label: "Prepare my medication questions",
+      second: "https://www.nia.nih.gov/health/medicines-and-medication-management/taking-medicines-safely-you-age",
+      secondLabel: "Read NIH medication guidance",
+      number: "08",
+    },
   ];
   return (
     <>
@@ -82,14 +127,18 @@ export function CommunityResources() {
               <Action href={item.second} secondary>
                 {item.secondLabel}
               </Action>
+              {item.number === "08" && <Action href="https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes" secondary>Explore diabetes prevention</Action>}
             </div>
           </article>
         ))}
       </div>
       <p className="adg-small">
-        External resources are provided by the named organizations. Eligibility,
-        availability, costs, and application steps vary. Resource links reviewed
-        October 6, 2026. Logos identify external resources; they do not imply an AskDoGood partnership or endorsement.
+        The Dope Cloud TeacHer is our sister business. The other named services
+        are independent resource providers, not confirmed AskDoGood partners.
+        You contact each provider directly; eligibility, availability, costs,
+        and application steps vary. External resource pages checked October 11, 2026.
+        AskDoGood can help you organize questions and discuss a starting point;
+        providers decide admission, benefits, treatment, and hiring.
       </p>
     </>
   );
