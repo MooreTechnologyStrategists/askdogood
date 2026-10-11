@@ -30,9 +30,10 @@ export default function Home() {
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
-      <Section id="community-highlights" tone eyebrow="October 10 · Good in motion" title="Community highlights: access, inclusion, and opportunity.">
+      <Section id="community-highlights" tone eyebrow="October 8–10 · Good in motion" title="Community highlights: access, inclusion, and opportunity.">
         <p className="adg-lead">We’re taking wellness, learning, and opportunity into our community. See where we showed up—and find your next step with us.</p>
-        <div className="adg-grid adg-grid-two">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card adg-image-card"><img src="/images/community/st-luke-gathering.webp" alt="Community members and resource tables fill the room at St. Luke in Washington, DC" loading="lazy" /><div><p className="adg-eyebrow">St. Luke · October 8 · Washington, DC</p><h3>A second chance needs an open door.</h3><p>Good people. Renewed hope. Real possibilities. Our reflection on the recruitment and resource fair centers on dignity, connection, and making room for people to begin again.</p><Action href="/community#st-luke-recap">See the St. Luke highlight</Action></div></article>
           <article className="adg-card adg-image-card"><img src="/images/community/trinidad-community.webp" alt="A smiling participant beside the DCT information table at the Trinidad Baptist Church tech fair" loading="lazy" /><div><p className="adg-eyebrow">Trinidad Baptist Church · Tech fair</p><h3>Digital access. Practical learning.</h3><p>The Digital Inclusion &amp; Tech Fair connected the community with digital tools, skills, and resources at Trinidad Baptist Church.</p><Action href="/community#trinidad-recap">See the Trinidad highlight</Action></div></article>
           <article className="adg-card adg-image-card"><img src="/images/community/ypd-welcome.webp" alt="Youth Professional Development event welcome sign beside yellow flowers" loading="lazy" /><div><p className="adg-eyebrow">YPD · Community Impact Event</p><h3>Inclusion with room to grow.</h3><p>An inclusive gathering brought several developmental organizations together to share resources, with youth career information among the opportunities to explore.</p><Action href="/community#ypd-recap">See the YPD highlight</Action></div></article>
         </div>
@@ -103,7 +104,7 @@ export default function Home() {
         <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
       </Section>
       <Section id="in-community" tone eyebrow="Good in motion" title="Meet us in the community.">
-        <p>Explore our latest YPD and Trinidad church event highlights, then connect with us about bringing useful learning and resources to your community.</p><Action href="#community-highlights">See our community highlights</Action>
+        <p>Explore our latest St. Luke, YPD, and Trinidad church event highlights, then connect with us about bringing useful learning and resources to your community.</p><Action href="#community-highlights">See our community highlights</Action>
         <CommunityEvents />
         <div className="adg-actions"><Action href="/community" secondary>Events & community connections</Action><Action href="/whats-good-to-eat">What’s good to eat?</Action></div>
       </Section>
