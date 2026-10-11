@@ -42,10 +42,10 @@ export default function Home() {
         <NextStepBuilder />
       </Section>
       <Section eyebrow="My life. Our learning. Your next step." title="Your diagnosis does not get to tell your whole story.">
-        <p className="adg-lead">I’m making room for the health experiences I have lived: hearing loss, thyroid cancer, mental health, migraines, digestive conditions, and changes in my body and habits. Explore 17 individual sections with trusted resources, clear visuals, and questions you can take to your next appointment.</p>
+        <p className="adg-lead">I’m making room for the health experiences I have lived: hearing loss, thyroid cancer, mental health, migraines, digestive conditions, and changes in my body and habits. Explore 19 individual topics across six categories with trusted resources, clear visuals, and questions you can take to your next appointment.</p>
         <div className="adg-grid adg-grid-three">
-          <article className="adg-card"><h3>Mental &amp; emotional health</h3><p>Panic attacks, anxiety, depression, and PTSD. Support starts with being heard.</p><Action href="/health-stories/anxiety" secondary>Explore health stories</Action></article>
-          <article className="adg-card"><h3>Digestive health</h3><p>IBS, ulcers, gastritis, and acid reflux each deserve their own conversation.</p><Action href="/health-stories/ibs" secondary>Begin with IBS</Action></article>
+          <article className="adg-card"><h3>Mental &amp; emotional health</h3><p>Panic attacks, anxiety, depression, and PTSD. Support starts with being heard.</p><Action href="/health-stories/category/mental-emotional-health" secondary>Explore health stories</Action></article>
+          <article className="adg-card"><h3>Digestive health</h3><p>IBS, ulcers, gastritis, and acid reflux each deserve their own conversation.</p><Action href="/health-stories/category/digestive-health" secondary>Explore digestive health</Action></article>
           <article className="adg-card"><h3>Bring your questions</h3><p>Every topic includes an appointment worksheet you can download and keep.</p><Action href="/health-stories" secondary>Find my topic &amp; worksheet</Action></article>
         </div>
       </Section>

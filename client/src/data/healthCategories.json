@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "thyroid-hormonal-health",
+    "title": "Thyroid & hormonal health",
+    "intro": "Graves’ disease, thyroid cancer, and early menopause at 41 are parts of my health story. I’m bringing them together here so we can talk about hormones and life changes while giving each experience its own space.",
+    "description": "Graves’ disease, thyroid cancer, and menopause.",
+    "topics": [
+      "thyroid-cancer",
+      "graves-disease",
+      "menopause"
+    ]
+  },
+  {
+    "slug": "mental-emotional-health",
+    "title": "Mental & emotional health",
+    "intro": "Panic attacks, anxiety, depression, and PTSD are experiences I want to speak about honestly. Asking for support should come with dignity, not shame.",
+    "description": "Panic attacks, anxiety, depression, and PTSD.",
+    "topics": [
+      "panic-attacks",
+      "anxiety",
+      "depression",
+      "ptsd"
+    ]
+  },
+  {
+    "slug": "digestive-health",
+    "title": "Digestive health",
+    "intro": "IBS, ulcers, gastritis, and acid reflux all have a place in my story. I want to make uncomfortable conversations easier to begin, without assuming that every digestive symptom has the same cause.",
+    "description": "IBS, ulcers, gastritis, and acid reflux.",
+    "topics": [
+      "ibs",
+      "ulcers",
+      "gastritis",
+      "acid-reflux"
+    ]
+  },
+  {
+    "slug": "hearing-balance-headaches",
+    "title": "Hearing, balance & headaches",
+    "intro": "My hereditary hearing loss, vertigo, and migraines deserve more than a passing mention. Here, my experience opens the conversation about communication, daily life, and being heard.",
+    "description": "Hearing loss, vertigo, and migraines.",
+    "topics": [
+      "hearing-loss",
+      "vertigo",
+      "migraines"
+    ]
+  },
+  {
+    "slug": "heart-blood-health",
+    "title": "Heart & blood health",
+    "intro": "High blood pressure and anemia are part of my experience too. I want us to feel comfortable asking what our numbers mean and what questions belong in our next care conversation.",
+    "description": "High blood pressure and anemia.",
+    "topics": [
+      "high-blood-pressure",
+      "anemia"
+    ]
+  },
+  {
+    "slug": "habits-body-changes",
+    "title": "Habits & body changes",
+    "intro": "Cigarette smoking, weight gain, and weight loss belong in this conversation without judgment. I want to make room for real life while reminding us that our worth is bigger than a habit or a number.",
+    "description": "Cigarette smoking, weight gain, and weight loss.",
+    "topics": [
+      "cigarette-smoking",
+      "weight-gain",
+      "weight-loss"
+    ]
+  }
+]

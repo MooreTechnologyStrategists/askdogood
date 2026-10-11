@@ -1,4 +1,4 @@
-import HealthStories from "@/pages/HealthStories";
+import HealthStories, { HealthCategory } from "@/pages/HealthStories";
 import HealthStory from "@/pages/HealthStory";
 import Community from "@/pages/Community";
 import PantryKitchen from "@/pages/PantryKitchen";
@@ -133,6 +133,7 @@ function Router() {
         <Route path="/feed" component={BlogRSS} />
         <Route path="/journey" component={Journey} />
         <Route path="/health-stories" component={HealthStories} />
+        <Route path="/health-stories/category/:categorySlug" component={HealthCategory} />
         <Route path="/health-stories/:slug" component={HealthStory} />
         <Route path="/keep-moving" component={KeepMoving} />
         <Route path="/interests" component={Interests} />

@@ -2,8 +2,8 @@
   {
     "slug": "hearing-loss",
     "title": "Hearing loss",
-    "category": "Everyday health",
-    "story": "Hearing loss is part of my story. This space is about access, communication, and making room for the support we deserve.",
+    "category": "Hearing, balance & headaches",
+    "story": "My hearing loss is hereditary. I had a left stapedectomy in 1994 and a right stapedectomy in 2007. That history is part of why I want to make room for communication, accessibility, and the support we deserve.",
     "definition": "Hearing difficulties can affect communication and daily participation. Different causes and degrees of hearing loss require individual evaluation. Accessibility is a practical need, not a favor.",
     "guidance": [
       "Ask for captions, written instructions, or a quieter place to talk.",
@@ -47,13 +47,14 @@
       "note": "Population estimates describe groups, not your individual hearing ability.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "hearing-balance-headaches"
   },
   {
     "slug": "thyroid-cancer",
     "title": "Thyroid cancer",
-    "category": "Everyday health",
-    "story": "Thyroid cancer belongs in my story, alongside the person I am beyond a diagnosis. Here I want to make space for questions, care conversations, and the next chapter.",
+    "category": "Thyroid & hormonal health",
+    "story": "My thyroid history includes Graves’ disease, thyroid cancer in situ, and a total thyroidectomy on September 13, 2021. These are parts of my story, not the whole of who I am. Here I want to make space for questions, care conversations, and the next chapter.",
     "definition": "Thyroid cancer care depends on the type of cancer, its extent, and individual circumstances. A population statistic cannot predict one person’s outcome. Use your own care team to understand your diagnosis and follow-up.",
     "guidance": [
       "Keep a place for your questions between appointments.",
@@ -89,7 +90,8 @@
       "note": "Estimates are projections, not a count of completed diagnoses.",
       "unit": "cases"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "thyroid-hormonal-health"
   },
   {
     "slug": "panic-attacks",
@@ -127,7 +129,8 @@
       "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "mental-emotional-health"
   },
   {
     "slug": "anxiety",
@@ -165,7 +168,8 @@
       "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "mental-emotional-health"
   },
   {
     "slug": "depression",
@@ -203,7 +207,8 @@
       "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "mental-emotional-health"
   },
   {
     "slug": "ptsd",
@@ -241,12 +246,13 @@
       "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "mental-emotional-health"
   },
   {
     "slug": "high-blood-pressure",
     "title": "High blood pressure",
-    "category": "Everyday health",
+    "category": "Heart & blood health",
     "story": "High blood pressure is part of the health story I want to share. Knowing what to ask is one way to take an active role in our care.",
     "definition": "High blood pressure often has no obvious symptoms. The survey below defines hypertension as blood pressure of at least 130/80 mm Hg or current blood-pressure medication use. A care plan needs individual clinical guidance.",
     "guidance": [
@@ -287,12 +293,13 @@
       "note": "",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "heart-blood-health"
   },
   {
     "slug": "anemia",
     "title": "Anemia",
-    "category": "Everyday health",
+    "category": "Heart & blood health",
     "story": "Anemia is part of my experience. This section makes room for understanding the cause, asking questions, and being heard.",
     "definition": "Anemia involves too few healthy red blood cells or insufficient hemoglobin. It has multiple causes; anemia does not automatically mean iron deficiency. Evaluation helps determine which care is appropriate.",
     "guidance": [
@@ -333,12 +340,13 @@
       "note": "Includes different causes of anemia; these are not iron-deficiency-only estimates.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "heart-blood-health"
   },
   {
     "slug": "vertigo",
     "title": "Vertigo",
-    "category": "Everyday health",
+    "category": "Hearing, balance & headaches",
     "story": "Vertigo is among the experiences I want to make space for. Feeling understood matters when symptoms interrupt ordinary life.",
     "definition": "Vertigo is a sensation of movement or spinning. It is one kind of balance symptom, not a synonym for every episode of dizziness. Balance involves information from the inner ear, eyes, and the body’s position-sensing systems.",
     "guidance": [
@@ -371,7 +379,8 @@
       "note": "This percentage must not be interpreted as the prevalence of vertigo.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "hearing-balance-headaches"
   },
   {
     "slug": "cigarette-smoking",
@@ -409,7 +418,8 @@
       "note": "Population context; not a measure of readiness to stop smoking.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "habits-body-changes"
   },
   {
     "slug": "weight-gain",
@@ -451,7 +461,8 @@
         ]
       ],
       "note": "An information map, not a diagnostic model or a chart of how much each factor contributes."
-    }
+    },
+    "categorySlug": "habits-body-changes"
   },
   {
     "slug": "weight-loss",
@@ -493,12 +504,13 @@
         ]
       ],
       "note": "An information map, not a diagnostic model or a chart of how much each factor contributes."
-    }
+    },
+    "categorySlug": "habits-body-changes"
   },
   {
     "slug": "migraines",
     "title": "Migraines",
-    "category": "Everyday health",
+    "category": "Hearing, balance & headaches",
     "story": "Migraines—oh, the migraines—belong in my story too. I want this space to recognize the impact of symptoms and help us prepare for better care conversations.",
     "definition": "Migraine is a headache disorder that can include nausea and sensitivity to light or sound. Headache disorders are a broader category. A clinician can help identify a headache pattern and discuss appropriate care.",
     "guidance": [
@@ -531,7 +543,8 @@
       "note": "This statistic covers headache disorders together and is not migraine prevalence.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "hearing-balance-headaches"
   },
   {
     "slug": "ibs",
@@ -569,7 +582,8 @@
       "note": "An approximate estimate, not a way to diagnose symptoms.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "digestive-health"
   },
   {
     "slug": "ulcers",
@@ -613,7 +627,8 @@
       "note": "These conditions can coexist. This distinction does not identify the cause of your symptoms."
     },
     "urgent": "Vomiting blood or material like coffee grounds, black tarry stools, or sudden severe abdominal pain need urgent medical attention. Do not treat these as an ordinary digestive flare.",
-    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes"
+    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes",
+    "categorySlug": "digestive-health"
   },
   {
     "slug": "gastritis",
@@ -657,7 +672,8 @@
       "note": "These conditions can coexist. This distinction does not identify the cause of your symptoms."
     },
     "urgent": "Vomiting blood or material like coffee grounds, black tarry stools, or sudden severe abdominal pain need urgent medical attention. Do not treat these as an ordinary digestive flare.",
-    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes"
+    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+    "categorySlug": "digestive-health"
   },
   {
     "slug": "acid-reflux",
@@ -695,6 +711,106 @@
       "note": "This estimate describes GERD, not all acid reflux.",
       "unit": "%"
     },
-    "diagram": null
+    "diagram": null,
+    "categorySlug": "digestive-health"
+  },
+  {
+    "slug": "graves-disease",
+    "title": "Graves’ disease",
+    "category": "Thyroid & hormonal health",
+    "categorySlug": "thyroid-hormonal-health",
+    "story": "Graves’ disease was part of my thyroid journey before my total thyroidectomy in 2021. My story includes thyroid cancer too, but those are distinct diagnoses. I want this section to help us name what we have lived through and ask clearer questions about our care.",
+    "definition": "Graves’ disease is an autoimmune condition that can cause the thyroid to produce excess hormone. It is a common cause of hyperthyroidism, but it is not thyroid cancer. Some people also develop eye problems; individual evaluation and follow-up matter.",
+    "guidance": [
+      "Keep your diagnosis and treatment history together for appointments.",
+      "Ask how your past thyroid treatment affects your current follow-up.",
+      "Mention eye symptoms or changes rather than assuming they are unrelated."
+    ],
+    "questions": [
+      "What monitoring applies after my thyroid treatment?",
+      "Which symptoms or eye changes should I report?",
+      "Can you explain my thyroid results and follow-up plan?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: Graves’ disease",
+        "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/graves-disease"
+      }
+    ],
+    "diagram": {
+      "title": "Graves’ disease and thyroid function",
+      "nodes": [
+        [
+          "Autoimmune activity",
+          "Antibodies can stimulate thyroid cells"
+        ],
+        [
+          "Hormone production",
+          "The thyroid may make more hormone than the body needs"
+        ],
+        [
+          "Individual care",
+          "Tests and treatment history guide evaluation and follow-up"
+        ]
+      ],
+      "note": "A simplified explanation of Graves’ disease, not a model of your current thyroid function after treatment."
+    },
+    "stat": {
+      "title": "Graves’ disease population context",
+      "population": "Americans; approximate NIDDK overview estimate",
+      "period": "Overview estimate; no single survey year specified",
+      "rows": [
+        {
+          "label": "Nearly 1 in 100 Americans",
+          "value": 1
+        }
+      ],
+      "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/graves-disease",
+      "note": "Rounded to approximately 1% for the visual. This is not an individual risk estimate.",
+      "unit": "%"
+    }
+  },
+  {
+    "slug": "menopause",
+    "title": "Menopause",
+    "category": "Thyroid & hormonal health",
+    "categorySlug": "thyroid-hormonal-health",
+    "story": "I experienced early menopause at 41. That is part of my story, and it deserves its own conversation alongside everything else life was asking of me. I want this space to help us talk about changes in our bodies without reducing ourselves to them.",
+    "definition": "Menopause is a life stage, not an illness. It is generally identified after 12 months without a menstrual period. Perimenopause is the transition leading up to it. Menopause before age 45 is called early menopause; before age 40 is called premature menopause. Symptoms and care needs vary.",
+    "guidance": [
+      "Bring questions about sleep, mood, symptoms, and daily life to your appointment.",
+      "Ask what early menopause means for your individual health needs.",
+      "Seek explanations and support that respect your priorities."
+    ],
+    "questions": [
+      "How do my age and health history affect the care I need?",
+      "What could explain the symptoms I am noticing?",
+      "Which symptom-management and longer-term health options should we discuss?"
+    ],
+    "resources": [
+      {
+        "title": "MedlinePlus: menopause",
+        "url": "https://medlineplus.gov/menopause.html"
+      }
+    ],
+    "diagram": {
+      "title": "Understanding the stages",
+      "nodes": [
+        [
+          "Perimenopause",
+          "The transition before menopause; timing varies"
+        ],
+        [
+          "Menopause",
+          "Generally identified after 12 months without a period"
+        ],
+        [
+          "Postmenopause",
+          "The years after menopause; care needs remain individual"
+        ]
+      ],
+      "note": "A stage guide, not a fixed timeline or a way to diagnose missed periods. A clinician can help evaluate other causes."
+    },
+    "stat": null
   }
 ]

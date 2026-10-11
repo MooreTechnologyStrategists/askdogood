@@ -22,7 +22,7 @@ export default function HealthStory() {
   }
   return <div className="adg-page" key={story.slug}>
     <PageIntro eyebrow={`RoSeé’s health stories · ${story.category}`} title={story.title} text={story.story}>
-      <div className="adg-actions"><Action href="#care-conversation">Prepare my care conversation</Action><Action href="/health-stories" secondary>All health stories</Action></div>
+      <div className="adg-actions"><Action href="#care-conversation">Prepare my care conversation</Action><Action href={`/health-stories/category/${story.categorySlug}`} secondary>{story.category}</Action></div>
     </PageIntro>
     <Section eyebrow="My perspective" title="You deserve to be heard.">
       <div className="adg-split"><div><p>These are the things I want you to take with you:</p><ul className="health-list">{story.guidance.map(g=><li key={g}>{g}</li>)}</ul></div><aside className="adg-card"><p className="adg-eyebrow">The story is still growing</p><h3>From my life to the page</h3><p>I’m developing my memoir and the fuller stories behind these topics. Detailed reflections and selected excerpts are planned as the manuscript develops.</p><Action href="/in-the-works#memoir" secondary>See the book in progress</Action></aside></div>
@@ -51,7 +51,7 @@ export default function HealthStory() {
       <p className="adg-small">Notes stay in this page’s memory and are not submitted to AskDoGood. Refreshing or leaving clears them. Downloading saves a text file on your device; choose where you keep or share it.</p>
       <button className="adg-button" type="button" onClick={download}>Download my appointment worksheet</button><p role="status" className="adg-small">{downloaded ? 'Your worksheet download is ready. Keep the file somewhere you trust.' : ''}</p>
       <p className="adg-small">Sources checked October 11, 2026. This is the check date, not the date of the underlying data.</p>
-      <div className="adg-actions"><Action href="/health-stories" secondary>Explore another topic</Action><Action href="/journey" secondary>More of RoSeé’s story</Action></div>
+      <div className="adg-actions"><Action href={`/health-stories/category/${story.categorySlug}`} secondary>More in {story.category.toLowerCase()}</Action><Action href="/health-stories" secondary>All health categories</Action><Action href="/journey" secondary>More of RoSeé’s story</Action></div>
     </Section>
   </div>;
 }
