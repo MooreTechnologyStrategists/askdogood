@@ -25,7 +25,7 @@ export default function Home() {
         alt="RoSeé smiling in her garden"
       >
         <p>I’m RoSeé. My journey has included difficult seasons, hard lessons, and finding a new direction. Education, technology, faith, and a commitment to growth helped me build a stronger foundation. I built AskDoGood to pay forward what I’m learning—so someone else can see possibilities and take a real next step.</p>
-        <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action></div>
+        <div className="adg-actions"><Action href="#choose">Find my next step</Action><Action href="/resources/start#right-now" secondary>I need practical help now</Action><Action href="/merch#original-checkout" secondary>Shop original AskDoGood merch</Action></div>
         <p className="adg-small">Start with free resources. You do not need to purchase anything to begin.</p>
       </PageIntro>
       <Section eyebrow="NEW · Your five-minute escape" title="A little breathing room, with something useful to take away.">
