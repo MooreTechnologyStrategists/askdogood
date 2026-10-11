@@ -385,6 +385,10 @@ export default function Home() {
           </Action>
         </div>
       </Section>
+      <Section tone id="in-the-works" eyebrow="Looking ahead · Projects in development" title="Good things take vision—and work.">
+        <p>The memoir is being written. The hip-hop cookbook is being developed. Habit-change resources and more community learning opportunities are planned directions. See what each project is meant to do, where it stands, and what still needs to happen.</p>
+        <div className="adg-actions"><Action href="/in-the-works">Explore what’s in the works</Action><Action href="/contact?topic=Upcoming%20AskDoGood%20projects" secondary>Tell us what you’d like to see</Action></div>
+      </Section>
     </div>
   );
 }

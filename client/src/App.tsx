@@ -30,6 +30,7 @@ import ClinicalRecipesPageComponent from "./pages/ClinicalRecipesPage";
 import LabelScanner from "./pages/LabelScanner";
 import Shop from "./pages/Shop";
 import Merch from "./pages/Merch";
+import InTheWorks from "./pages/InTheWorks";
 import Cookbook from "./pages/Cookbook";
 import Interests from "./pages/Interests";
 import ThyroidCourse from "./pages/ThyroidCourse";
@@ -188,6 +189,7 @@ function Router() {
         <Route path="/shop" component={Shop} />
         <Route path="/merch" component={Merch} />
         <Route path="/cookbook" component={Cookbook} />
+        <Route path="/in-the-works" component={InTheWorks} />
         <Route
           path="/course/thyroid-health-mastery"
           component={ThyroidCourse}
