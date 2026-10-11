@@ -1,3 +1,5 @@
+import HealthStories from "@/pages/HealthStories";
+import HealthStory from "@/pages/HealthStory";
 import Community from "@/pages/Community";
 import PantryKitchen from "@/pages/PantryKitchen";
 import { Toaster } from "@/components/ui/sonner";
@@ -130,6 +132,8 @@ function Router() {
         <Route path="/rss" component={BlogRSS} />
         <Route path="/feed" component={BlogRSS} />
         <Route path="/journey" component={Journey} />
+        <Route path="/health-stories" component={HealthStories} />
+        <Route path="/health-stories/:slug" component={HealthStory} />
         <Route path="/keep-moving" component={KeepMoving} />
         <Route path="/interests" component={Interests} />
         <Route path="/garden" component={Garden} />

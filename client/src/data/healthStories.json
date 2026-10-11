@@ -1,0 +1,700 @@
+[
+  {
+    "slug": "hearing-loss",
+    "title": "Hearing loss",
+    "category": "Everyday health",
+    "story": "Hearing loss is part of my story. This space is about access, communication, and making room for the support we deserve.",
+    "definition": "Hearing difficulties can affect communication and daily participation. Different causes and degrees of hearing loss require individual evaluation. Accessibility is a practical need, not a favor.",
+    "guidance": [
+      "Ask for captions, written instructions, or a quieter place to talk.",
+      "Tell the people supporting you which communication methods work best.",
+      "Write down what you missed rather than pretending you heard it."
+    ],
+    "questions": [
+      "What kind of hearing evaluation would help me?",
+      "Which communication supports or hearing devices fit my needs?",
+      "Can I receive a written summary of this visit?"
+    ],
+    "resources": [
+      {
+        "title": "NIDCD: hearing information and statistics",
+        "url": "https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing"
+      }
+    ],
+    "stat": {
+      "title": "Disabling hearing loss by age",
+      "population": "US adults in the specified age groups; hearing threshold ≥35 dB in the better ear",
+      "period": "NHANES 2015–2020",
+      "rows": [
+        {
+          "label": "45–54",
+          "value": 5
+        },
+        {
+          "label": "55–64",
+          "value": 10
+        },
+        {
+          "label": "65–74",
+          "value": 22
+        },
+        {
+          "label": "75+",
+          "value": 55
+        }
+      ],
+      "url": "https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing",
+      "note": "Population estimates describe groups, not your individual hearing ability.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "thyroid-cancer",
+    "title": "Thyroid cancer",
+    "category": "Everyday health",
+    "story": "Thyroid cancer belongs in my story, alongside the person I am beyond a diagnosis. Here I want to make space for questions, care conversations, and the next chapter.",
+    "definition": "Thyroid cancer care depends on the type of cancer, its extent, and individual circumstances. A population statistic cannot predict one person’s outcome. Use your own care team to understand your diagnosis and follow-up.",
+    "guidance": [
+      "Keep a place for your questions between appointments.",
+      "Ask for explanations in everyday language.",
+      "Give yourself permission to discuss emotional needs alongside physical care."
+    ],
+    "questions": [
+      "What type of thyroid cancer do I have?",
+      "What follow-up plan applies to my situation?",
+      "Who should I contact about new symptoms or treatment questions?"
+    ],
+    "resources": [
+      {
+        "title": "NCI: thyroid cancer treatment",
+        "url": "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq"
+      }
+    ],
+    "stat": {
+      "title": "Estimated new thyroid cancer cases",
+      "population": "United States; estimated new diagnoses, not an individual risk calculation",
+      "period": "2026 estimates",
+      "rows": [
+        {
+          "label": "Male",
+          "value": 13240
+        },
+        {
+          "label": "Female",
+          "value": 32000
+        }
+      ],
+      "url": "https://www.cancer.org/cancer/types/thyroid-cancer/about/key-statistics.html",
+      "note": "Estimates are projections, not a count of completed diagnoses.",
+      "unit": "cases"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "panic-attacks",
+    "title": "Panic attacks",
+    "category": "Mental & emotional health",
+    "story": "Panic attacks are part of what I want to talk about honestly. No one should have to hide distress to be treated with dignity.",
+    "definition": "A panic attack is an episode of intense fear with physical symptoms. Having an attack does not automatically mean you have panic disorder. A clinician can help distinguish panic symptoms from other health problems.",
+    "guidance": [
+      "Let a trusted person know what support would feel helpful.",
+      "Bring a few written questions to a care conversation.",
+      "Ask for professional support when symptoms are affecting your life."
+    ],
+    "questions": [
+      "What could explain these episodes?",
+      "What should my plan be when symptoms occur?",
+      "Which treatment or support options fit my situation?"
+    ],
+    "resources": [
+      {
+        "title": "NIMH: Panic attacks",
+        "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+      }
+    ],
+    "stat": {
+      "title": "Past-year prevalence in a defined survey",
+      "population": "US adults age 18+; Panic disorder, not all panic attacks",
+      "period": "2001–2003 NCS-R; historical survey",
+      "rows": [
+        {
+          "label": "Panic disorder, not all panic attacks",
+          "value": 2.7
+        }
+      ],
+      "url": "https://www.nimh.nih.gov/health/statistics/panic-disorder",
+      "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "anxiety",
+    "title": "Anxiety",
+    "category": "Mental & emotional health",
+    "story": "Anxiety is part of my lived experience. I want this space to help us ask for support without treating fear as a personal failure.",
+    "definition": "Anxiety disorders involve more than occasional worry. Symptoms can interfere with daily life, and different conditions call for different care. Educational resources are a starting point for a conversation, not a diagnosis.",
+    "guidance": [
+      "Let a trusted person know what support would feel helpful.",
+      "Bring a few written questions to a care conversation.",
+      "Ask for professional support when symptoms are affecting your life."
+    ],
+    "questions": [
+      "How can we understand the pattern of my symptoms?",
+      "What support could help with daily functioning?",
+      "How will we review whether my care plan is helping?"
+    ],
+    "resources": [
+      {
+        "title": "NIMH: Anxiety",
+        "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+      }
+    ],
+    "stat": {
+      "title": "Past-year prevalence in a defined survey",
+      "population": "US adults age 18+; Any anxiety disorder under the survey’s historical definitions",
+      "period": "2001–2003 NCS-R; historical survey",
+      "rows": [
+        {
+          "label": "Any anxiety disorder under the survey’s historical definitions",
+          "value": 19.1
+        }
+      ],
+      "url": "https://www.nimh.nih.gov/health/statistics/any-anxiety-disorder",
+      "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "depression",
+    "title": "Depression",
+    "category": "Mental & emotional health",
+    "story": "Depression deserves a place in my story, without shame. We can value ourselves even when asking for help feels difficult.",
+    "definition": "Depression can affect mood, interest, thinking, sleep, and daily functioning. A major depressive episode is a defined research measure; it is not the same as every experience of sadness or a diagnosis made by this page.",
+    "guidance": [
+      "Let a trusted person know what support would feel helpful.",
+      "Bring a few written questions to a care conversation.",
+      "Ask for professional support when symptoms are affecting your life."
+    ],
+    "questions": [
+      "How can I describe the changes I am noticing?",
+      "Which care options are available to me?",
+      "Who can I reach if I feel unsafe or overwhelmed?"
+    ],
+    "resources": [
+      {
+        "title": "NIMH: Depression",
+        "url": "https://www.nimh.nih.gov/health/topics/depression"
+      }
+    ],
+    "stat": {
+      "title": "Past-year prevalence in a defined survey",
+      "population": "US adults age 18+; Major depressive episode, not every experience of low mood",
+      "period": "2021 NSDUH",
+      "rows": [
+        {
+          "label": "Major depressive episode, not every experience of low mood",
+          "value": 8.3
+        }
+      ],
+      "url": "https://www.nimh.nih.gov/health/statistics/major-depression",
+      "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "ptsd",
+    "title": "PTSD",
+    "category": "Mental & emotional health",
+    "story": "PTSD is among the experiences I am making room for here. My purpose is to encourage dignity, choice, and support—not to ask anyone to relive their story publicly.",
+    "definition": "PTSD can develop after traumatic experiences, but not everyone who experiences trauma develops PTSD. A qualified professional can evaluate symptoms and discuss treatment options. You can ask how a care setting will support your comfort and sense of control.",
+    "guidance": [
+      "Let a trusted person know what support would feel helpful.",
+      "Bring a few written questions to a care conversation.",
+      "Ask for professional support when symptoms are affecting your life."
+    ],
+    "questions": [
+      "How can we discuss symptoms without sharing more than I am ready to?",
+      "What treatment options could fit my needs?",
+      "What can help me feel safer during appointments?"
+    ],
+    "resources": [
+      {
+        "title": "NIMH: PTSD",
+        "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+      }
+    ],
+    "stat": {
+      "title": "Past-year prevalence in a defined survey",
+      "population": "US adults age 18+; Post-traumatic stress disorder",
+      "period": "2001–2003 NCS-R; historical survey",
+      "rows": [
+        {
+          "label": "Post-traumatic stress disorder",
+          "value": 3.6
+        }
+      ],
+      "url": "https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd",
+      "note": "This is population context, not a screening result. Historical surveys and definitions should not be treated as current prevalence.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "high-blood-pressure",
+    "title": "High blood pressure",
+    "category": "Everyday health",
+    "story": "High blood pressure is part of the health story I want to share. Knowing what to ask is one way to take an active role in our care.",
+    "definition": "High blood pressure often has no obvious symptoms. The survey below defines hypertension as blood pressure of at least 130/80 mm Hg or current blood-pressure medication use. A care plan needs individual clinical guidance.",
+    "guidance": [
+      "Bring any readings you already have to an appointment.",
+      "Ask how to measure blood pressure correctly.",
+      "Discuss medication questions with your prescribing clinician before making changes."
+    ],
+    "questions": [
+      "What do my readings mean for me?",
+      "How and when should I measure at home?",
+      "What follow-up and care plan do you recommend?"
+    ],
+    "resources": [
+      {
+        "title": "CDC: hypertension prevalence and care",
+        "url": "https://www.cdc.gov/nchs/products/databriefs/db511.htm"
+      }
+    ],
+    "stat": {
+      "title": "Hypertension prevalence by age",
+      "population": "US adults; crude estimates, not age-adjusted",
+      "period": "NHANES August 2021–August 2023",
+      "rows": [
+        {
+          "label": "18–39",
+          "value": 23.4
+        },
+        {
+          "label": "40–59",
+          "value": 52.5
+        },
+        {
+          "label": "60+",
+          "value": 71.6
+        }
+      ],
+      "url": "https://www.cdc.gov/nchs/products/databriefs/db511.htm",
+      "note": "",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "anemia",
+    "title": "Anemia",
+    "category": "Everyday health",
+    "story": "Anemia is part of my experience. This section makes room for understanding the cause, asking questions, and being heard.",
+    "definition": "Anemia involves too few healthy red blood cells or insufficient hemoglobin. It has multiple causes; anemia does not automatically mean iron deficiency. Evaluation helps determine which care is appropriate.",
+    "guidance": [
+      "Describe how symptoms affect your day.",
+      "Ask what the test results mean and what remains uncertain.",
+      "Discuss supplements with your care team rather than assuming iron is the answer."
+    ],
+    "questions": [
+      "What kind of anemia do I have?",
+      "Which tests help explain its cause?",
+      "How will we monitor my response to care?"
+    ],
+    "resources": [
+      {
+        "title": "NHLBI: anemia",
+        "url": "https://www.nhlbi.nih.gov/health/anemia"
+      }
+    ],
+    "stat": {
+      "title": "Anemia prevalence",
+      "population": "US population age 2+; this chart includes children and adults",
+      "period": "NHANES August 2021–August 2023",
+      "rows": [
+        {
+          "label": "Overall",
+          "value": 9.3
+        },
+        {
+          "label": "Female",
+          "value": 13
+        },
+        {
+          "label": "Male",
+          "value": 5.5
+        }
+      ],
+      "url": "https://www.cdc.gov/nchs/products/databriefs/db519.htm",
+      "note": "Includes different causes of anemia; these are not iron-deficiency-only estimates.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "vertigo",
+    "title": "Vertigo",
+    "category": "Everyday health",
+    "story": "Vertigo is among the experiences I want to make space for. Feeling understood matters when symptoms interrupt ordinary life.",
+    "definition": "Vertigo is a sensation of movement or spinning. It is one kind of balance symptom, not a synonym for every episode of dizziness. Balance involves information from the inner ear, eyes, and the body’s position-sensing systems.",
+    "guidance": [
+      "Note whether symptoms feel like spinning, faintness, or imbalance.",
+      "Write down when episodes happen and how long they last.",
+      "Ask about safe daily activities while symptoms are being evaluated."
+    ],
+    "questions": [
+      "What might explain the kind of dizziness I feel?",
+      "Do I need a hearing or balance evaluation?",
+      "Which changes in symptoms need prompt attention?"
+    ],
+    "resources": [
+      {
+        "title": "NIDCD: balance disorders",
+        "url": "https://www.nidcd.nih.gov/health/balance-disorders"
+      }
+    ],
+    "stat": {
+      "title": "Broader balance and dizziness context",
+      "population": "US adults reporting a balance or dizziness problem; not vertigo-only",
+      "period": "2008; historical estimate",
+      "rows": [
+        {
+          "label": "Balance or dizziness problem",
+          "value": 15
+        }
+      ],
+      "url": "https://www.nidcd.nih.gov/health/balance-disorders",
+      "note": "This percentage must not be interpreted as the prevalence of vertigo.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "cigarette-smoking",
+    "title": "Cigarette smoking",
+    "category": "Habits & body changes",
+    "story": "Cigarette smoking belongs in this conversation without judgment. I want people to know that asking for support is a step they can take.",
+    "definition": "Smoking cessation support can include counseling and clinician-guided treatment. The right plan can be discussed with a qualified professional. Support is available without needing a perfect history or a perfect first attempt.",
+    "guidance": [
+      "Name what you want help with, without shaming yourself.",
+      "Ask about support options that fit your routines.",
+      "Prepare questions about cravings, triggers, and previous attempts."
+    ],
+    "questions": [
+      "Which cessation supports are available to me?",
+      "How can we plan around cravings and triggers?",
+      "What follow-up would help me stay connected to support?"
+    ],
+    "resources": [
+      {
+        "title": "Smokefree.gov: speak to an expert",
+        "url": "https://smokefree.gov/tools-tips/get-extra-help/speak-to-an-expert"
+      }
+    ],
+    "stat": {
+      "title": "Current cigarette smoking",
+      "population": "US adults age 18+",
+      "period": "2022",
+      "rows": [
+        {
+          "label": "Current cigarette smoking",
+          "value": 11.6
+        }
+      ],
+      "url": "https://www.cdc.gov/tobacco/campaign/tips/resources/data/cigarette-smoking-in-united-states.html",
+      "note": "Population context; not a measure of readiness to stop smoking.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "weight-gain",
+    "title": "Weight gain",
+    "category": "Habits & body changes",
+    "story": "Weight gain is part of the body changes I want to discuss honestly. A number on a scale does not determine our worth.",
+    "definition": "Body weight can be influenced by habits, sleep, medicines, and health conditions. A change deserves context rather than an assumption about someone’s choices. This page does not set a weight target or promise weight change.",
+    "guidance": [
+      "Focus on how you feel and function, alongside any measurements.",
+      "Notice whether a change was expected or unplanned.",
+      "Ask for care that respects your goals and dignity."
+    ],
+    "questions": [
+      "What could be contributing to this change?",
+      "Do we need to review symptoms, medicines, or tests?",
+      "What goals are appropriate for my circumstances?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: factors affecting weight and health",
+        "url": "https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/factors-affecting-weight-health"
+      }
+    ],
+    "stat": null,
+    "diagram": {
+      "title": "Bring the whole picture to the conversation",
+      "nodes": [
+        [
+          "Daily life",
+          "Eating patterns, movement, and sleep"
+        ],
+        [
+          "Care context",
+          "Medicines and health conditions"
+        ],
+        [
+          "Your priorities",
+          "Symptoms, function, and personal goals"
+        ]
+      ],
+      "note": "An information map, not a diagnostic model or a chart of how much each factor contributes."
+    }
+  },
+  {
+    "slug": "weight-loss",
+    "title": "Weight loss",
+    "category": "Habits & body changes",
+    "story": "Weight loss is part of the body changes I want to discuss honestly. A number on a scale does not determine our worth.",
+    "definition": "Body weight can be influenced by habits, sleep, medicines, and health conditions. A change deserves context rather than an assumption about someone’s choices. This page does not set a weight target or promise weight change.",
+    "guidance": [
+      "Focus on how you feel and function, alongside any measurements.",
+      "Notice whether a change was expected or unplanned.",
+      "Ask for care that respects your goals and dignity."
+    ],
+    "questions": [
+      "What could be contributing to this change?",
+      "Do we need to review symptoms, medicines, or tests?",
+      "What goals are appropriate for my circumstances?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: factors affecting weight and health",
+        "url": "https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/factors-affecting-weight-health"
+      }
+    ],
+    "stat": null,
+    "diagram": {
+      "title": "Bring the whole picture to the conversation",
+      "nodes": [
+        [
+          "Daily life",
+          "Eating patterns, movement, and sleep"
+        ],
+        [
+          "Care context",
+          "Medicines and health conditions"
+        ],
+        [
+          "Your priorities",
+          "Symptoms, function, and personal goals"
+        ]
+      ],
+      "note": "An information map, not a diagnostic model or a chart of how much each factor contributes."
+    }
+  },
+  {
+    "slug": "migraines",
+    "title": "Migraines",
+    "category": "Everyday health",
+    "story": "Migraines—oh, the migraines—belong in my story too. I want this space to recognize the impact of symptoms and help us prepare for better care conversations.",
+    "definition": "Migraine is a headache disorder that can include nausea and sensitivity to light or sound. Headache disorders are a broader category. A clinician can help identify a headache pattern and discuss appropriate care.",
+    "guidance": [
+      "Keep brief notes about timing, duration, and impact.",
+      "Include all headache medicines in your appointment list.",
+      "Ask for a plan that explains both routine care and urgent symptoms."
+    ],
+    "questions": [
+      "Does my headache pattern suggest migraine or another cause?",
+      "What should I record between appointments?",
+      "Which symptoms mean I should seek urgent help?"
+    ],
+    "resources": [
+      {
+        "title": "WHO: headache disorders",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders"
+      }
+    ],
+    "stat": {
+      "title": "Broader headache-disorder context",
+      "population": "Global population affected by headache disorders; not migraine-only",
+      "period": "2021 estimate; WHO fact sheet published 2025",
+      "rows": [
+        {
+          "label": "Headache disorders",
+          "value": 40
+        }
+      ],
+      "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+      "note": "This statistic covers headache disorders together and is not migraine prevalence.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "ibs",
+    "title": "IBS",
+    "category": "Digestive health",
+    "story": "IBS deserves its own space in my story. Talking about digestive symptoms can be uncomfortable; asking for support should not be.",
+    "definition": "Irritable bowel syndrome involves repeated abdominal pain and changes in bowel movements. It is a disorder of gut–brain interaction and is different from inflammatory bowel disease. Similar symptoms can have other explanations.",
+    "guidance": [
+      "Describe symptoms and bowel changes in your own words.",
+      "Bring a list of medicines and supplements to your visit.",
+      "Ask before making a restrictive diet or treatment change."
+    ],
+    "questions": [
+      "What could explain my symptoms, and what should be ruled out?",
+      "Which tests or follow-up are appropriate?",
+      "What care plan fits my situation, and when should I contact you?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: IBS",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/irritable-bowel-syndrome/definition-facts"
+      }
+    ],
+    "stat": {
+      "title": "IBS population context",
+      "population": "People in the United States; approximate overview estimate",
+      "period": "NIDDK overview estimate; no single survey year specified",
+      "rows": [
+        {
+          "label": "Estimated IBS prevalence",
+          "value": 12
+        }
+      ],
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/irritable-bowel-syndrome/definition-facts",
+      "note": "An approximate estimate, not a way to diagnose symptoms.",
+      "unit": "%"
+    },
+    "diagram": null
+  },
+  {
+    "slug": "ulcers",
+    "title": "Ulcers",
+    "category": "Digestive health",
+    "story": "Ulcers are another part of the digestive-health conversation I want to share. This page is a place to ask what is happening, rather than guess from symptoms alone.",
+    "definition": "Peptic ulcers are sores in the lining of the stomach or duodenum. Common causes include H. pylori infection and nonsteroidal anti-inflammatory drugs. An ulcer is different from IBS, reflux, or inflammation alone.",
+    "guidance": [
+      "Describe symptoms and bowel changes in your own words.",
+      "Bring a list of medicines and supplements to your visit.",
+      "Ask before making a restrictive diet or treatment change."
+    ],
+    "questions": [
+      "What could explain my symptoms, and what should be ruled out?",
+      "Which tests or follow-up are appropriate?",
+      "What care plan fits my situation, and when should I contact you?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: Ulcers",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/definition-facts"
+      }
+    ],
+    "stat": null,
+    "diagram": {
+      "title": "Three different digestive concepts",
+      "nodes": [
+        [
+          "Inflammation",
+          "Gastritis: inflammation in the stomach lining"
+        ],
+        [
+          "A sore",
+          "Peptic ulcer: a sore in the stomach or duodenal lining"
+        ],
+        [
+          "Backflow",
+          "Reflux: contents moving into the esophagus"
+        ]
+      ],
+      "note": "These conditions can coexist. This distinction does not identify the cause of your symptoms."
+    },
+    "urgent": "Vomiting blood or material like coffee grounds, black tarry stools, or sudden severe abdominal pain need urgent medical attention. Do not treat these as an ordinary digestive flare.",
+    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers/symptoms-causes"
+  },
+  {
+    "slug": "gastritis",
+    "title": "Gastritis",
+    "category": "Digestive health",
+    "story": "Gastritis belongs here as its own topic. I want us to have language for our concerns and a place to prepare questions.",
+    "definition": "Gastritis means inflammation of the stomach lining. Gastropathy refers to lining damage with little or no inflammation. These terms are related but not interchangeable, and symptoms alone cannot establish the cause.",
+    "guidance": [
+      "Describe symptoms and bowel changes in your own words.",
+      "Bring a list of medicines and supplements to your visit.",
+      "Ask before making a restrictive diet or treatment change."
+    ],
+    "questions": [
+      "What could explain my symptoms, and what should be ruled out?",
+      "Which tests or follow-up are appropriate?",
+      "What care plan fits my situation, and when should I contact you?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: Gastritis",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/definition-facts"
+      }
+    ],
+    "stat": null,
+    "diagram": {
+      "title": "Three different digestive concepts",
+      "nodes": [
+        [
+          "Inflammation",
+          "Gastritis: inflammation in the stomach lining"
+        ],
+        [
+          "A sore",
+          "Peptic ulcer: a sore in the stomach or duodenal lining"
+        ],
+        [
+          "Backflow",
+          "Reflux: contents moving into the esophagus"
+        ]
+      ],
+      "note": "These conditions can coexist. This distinction does not identify the cause of your symptoms."
+    },
+    "urgent": "Vomiting blood or material like coffee grounds, black tarry stools, or sudden severe abdominal pain need urgent medical attention. Do not treat these as an ordinary digestive flare.",
+    "urgentUrl": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes"
+  },
+  {
+    "slug": "acid-reflux",
+    "title": "Acid reflux",
+    "category": "Digestive health",
+    "story": "Acid reflux is part of the digestive story I want to make room for. Understanding the terms can help us talk about what we are experiencing.",
+    "definition": "Reflux happens when stomach contents move back into the esophagus. GERD is a more persistent condition or one involving complications. Occasional reflux and GERD are not interchangeable.",
+    "guidance": [
+      "Describe symptoms and bowel changes in your own words.",
+      "Bring a list of medicines and supplements to your visit.",
+      "Ask before making a restrictive diet or treatment change."
+    ],
+    "questions": [
+      "What could explain my symptoms, and what should be ruled out?",
+      "Which tests or follow-up are appropriate?",
+      "What care plan fits my situation, and when should I contact you?"
+    ],
+    "resources": [
+      {
+        "title": "NIDDK: Acid reflux",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/definition-facts"
+      }
+    ],
+    "stat": {
+      "title": "GERD population context",
+      "population": "People in the United States; GERD, not every episode of reflux",
+      "period": "NIDDK overview estimate; no single survey year specified",
+      "rows": [
+        {
+          "label": "Estimated GERD prevalence",
+          "value": 20
+        }
+      ],
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/definition-facts",
+      "note": "This estimate describes GERD, not all acid reflux.",
+      "unit": "%"
+    },
+    "diagram": null
+  }
+]

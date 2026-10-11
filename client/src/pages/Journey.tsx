@@ -10,6 +10,7 @@ export default function Journey() {
         image="/images/personal/rosee-founder-snow-2026.jpg"
         alt="RoSeé outdoors in the snow"
       />
+      <Section title="Health stories, with room for your next step." tone><p>My health experiences are part of the story I’m continuing to write. Explore individual topics, trusted resources, sourced visuals, and questions to take into a care conversation.</p><Action href="/health-stories">Explore my health stories &amp; resources</Action></Section>
       <Section title="The experiences behind the purpose.">
         <div className="adg-grid adg-grid-three">
           {[

@@ -8,7 +8,7 @@ const nav = [
   ["Merch", "/merch"],
   ["Free resources", "/resources/library"],
   ["Workshops", "/work-with-askdogood"],
-  ["Our story", "/about"],
+  ["Health stories", "/health-stories"],
 ];
 export default function Header() {
   const [location] = useLocation();

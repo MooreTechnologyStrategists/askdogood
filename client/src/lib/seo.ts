@@ -1,3 +1,4 @@
+import healthStories from "@/data/healthStories.json";
 export const SITE_NAME = "Ask DoGood";
 export const SITE_URL = "https://askdogood.com";
 export const SITE_AUTHOR = "RoSeé Murphy";
@@ -33,6 +34,8 @@ export type StaticSeoPage = {
 };
 
 export const staticSeoPages: StaticSeoPage[] = [
+  { path: "/health-stories", title: "RoSeé’s Health Stories & Resources | AskDoGood", description: "Explore 17 health topics with personal perspective, trusted resources, sourced visuals, and downloadable care conversation worksheets.", keywords: ["health stories", "AskDoGood", "care conversation"], priority: 0.85, changefreq: "monthly" },
+  ...healthStories.map(story => ({path: `/health-stories/${story.slug}`, title: `${story.title}: Stories & Resources | AskDoGood`, description: `Explore ${story.title.toLowerCase()} with RoSeé’s perspective, sourced health information, and questions to take to an appointment.`, keywords: [story.title, "AskDoGood", "health resources"], priority: 0.7, changefreq: "monthly" as const})),
   {
     path: "/whats-good-to-eat",
     title: "What’s Good to Eat? Kitchen Tools | AskDoGood",

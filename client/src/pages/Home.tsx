@@ -41,6 +41,14 @@ export default function Home() {
       <Section id="take-action" tone eyebrow="The next move is yours" title="Choose a goal. Leave with a next step.">
         <NextStepBuilder />
       </Section>
+      <Section eyebrow="My life. Our learning. Your next step." title="Your diagnosis does not get to tell your whole story.">
+        <p className="adg-lead">I’m making room for the health experiences I have lived: hearing loss, thyroid cancer, mental health, migraines, digestive conditions, and changes in my body and habits. Explore 17 individual sections with trusted resources, clear visuals, and questions you can take to your next appointment.</p>
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card"><h3>Mental &amp; emotional health</h3><p>Panic attacks, anxiety, depression, and PTSD. Support starts with being heard.</p><Action href="/health-stories/anxiety" secondary>Explore health stories</Action></article>
+          <article className="adg-card"><h3>Digestive health</h3><p>IBS, ulcers, gastritis, and acid reflux each deserve their own conversation.</p><Action href="/health-stories/ibs" secondary>Begin with IBS</Action></article>
+          <article className="adg-card"><h3>Bring your questions</h3><p>Every topic includes an appointment worksheet you can download and keep.</p><Action href="/health-stories" secondary>Find my topic &amp; worksheet</Action></article>
+        </div>
+      </Section>
       <Section eyebrow="What we help you put into practice" title="A healthier life. A stronger sense of self. More choices.">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card"><h3>Protect your health</h3><p>Meal planning, everyday routines, and appointment preparation help you act on your health goals. If you want to know whether healthier habits could change your medication needs, start with a review by your prescribing clinician. AskDoGood does not direct medication changes.</p><Action href="/doctor-checklist" secondary>Start my care conversation</Action></article>
