@@ -46,11 +46,15 @@ export function PageIntro({
   alt?: string;
   brandImage?: string;
 }) {
+  const [motionPaused, setMotionPaused] = useState(false);
   return (
     <section className={`adg-intro${brandImage ? " adg-intro-branded" : ""}`}>
       <div className={`container ${image ? "adg-split" : ""}`}>
         <div>
-          {brandImage && <img className="adg-hero-logo" src={brandImage} alt="AskDoGood official logo" width="1200" height="400" fetchPriority="high" />}
+          {brandImage && <div className="adg-brand-stage" data-paused={motionPaused}>
+            <img className="adg-hero-logo" src={brandImage} alt="AskDoGood official logo" width="1200" height="400" fetchPriority="high" />
+            <button type="button" className="adg-motion-toggle" aria-pressed={motionPaused} onClick={() => setMotionPaused(value => !value)}>{motionPaused ? "Play logo animation" : "Pause logo animation"}</button>
+          </div>}
           <p className="adg-eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
           <p className="adg-lead">{text}</p>
@@ -115,9 +119,7 @@ export function TopicCards() {
             ) : (
               <img
                 src={
-                  topic.id === "relationships"
-                    ? "/images/personal/professional/clay-banks-hands-together.jpg"
-                    : topic.image
+                  topic.image
                 }
                 alt=""
                 loading="lazy"

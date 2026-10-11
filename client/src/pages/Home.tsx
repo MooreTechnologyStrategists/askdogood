@@ -23,8 +23,8 @@ export default function Home() {
         eyebrow="AskDoGood · Black-rooted. DMV-grown. Everyone welcome."
         title="Reclaim your health. Your power. Your future."
         text="Eat with intention. Change what drains you. Know your worth. Build skills for your next chapter. AskDoGood helps you turn real-life lessons into a practical plan—with free tools, resource connections, and ways to ask for support. Your past does not get the final word."
-        image="/images/personal/rosee-garden-2026.webp"
-        alt="RoSeé smiling in her garden"
+        image="/images/community/family-kitchen.webp"
+        alt="A family preparing a meal together in a welcoming kitchen"
       >
         <div className="adg-actions"><Action href="#take-action">Build my next-step plan</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
@@ -56,7 +56,7 @@ export default function Home() {
       </Section>
       <Section eyebrow="NEW · Your five-minute escape" title="A little breathing room, with something useful to take away.">
         <div className="adg-grid adg-grid-three">
-          <article className="adg-card adg-image-card"><img src="/images/personal/rosee-garden-2026.webp" alt="RoSeé in the garden" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Learn when to start seeds, how to care for young plants, and what gardening can teach us about patience. Start with our existing garden guides.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
+          <article className="adg-card adg-image-card"><img src="/images/personal/food/collards-in-small-raised-bed.jpg" alt="Leafy greens growing in a small raised bed" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Learn when to start seeds, how to care for young plants, and what gardening can teach us about patience. Start with our existing garden guides.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></article>
           <article className="adg-card"><p className="adg-eyebrow">Turn the music up</p><h3>The soundtrack of us.</h3><p>Pick a song that means something to you, reflect on the memory behind it, and save your thoughts to your own device. No account or purchase required.</p><Action href="/pockets-of-peace#take-five" secondary>Find your five-minute reset</Action></article>
           <article className="adg-card"><p className="adg-eyebrow">Good food. Real life.</p><h3>Beats, Plants &amp; Plates.</h3><p>Browse existing recipes and practical meal ideas. We’ll distinguish tested instructions from stories and works in progress.</p><Action href="/whats-good-to-eat" secondary>What's good to eat?</Action></article>
         </div>
@@ -80,7 +80,7 @@ export default function Home() {
         <p className="adg-lead">My story is a starting point for connection. Here are places you can see what I share, what I teach, and why I keep showing up.</p>
         <div className="adg-grid adg-grid-three">
           <article className="adg-card"><h3>A life rebuilt through learning</h3><p>I am a U.S. Army veteran, cloud technology professional, educator, and entrepreneur. My work brings service, practical knowledge, and lived experience into the same conversation.</p><Action href="/journey" secondary>Read my story</Action></article>
-          <article className="adg-card adg-image-card"><img src="/images/personal/travel/rosee-speaking-paris-2023.webp" alt="RoSeé speaking in Paris in 2023" loading="lazy" /><div><h3>Taking my voice into the world</h3><p>This photograph and the story behind it document a chapter of learning, speaking, and moving beyond fear. Read what that experience meant to me.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>See the Paris chapter</Action></div></article>
+          <article className="adg-card"><div><h3>Taking my voice into the world</h3><p>The story of speaking in Paris documents a chapter of learning, speaking, and moving beyond fear. Read what that experience meant to me.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>See the Paris chapter</Action></div></article>
           <article className="adg-card"><h3>Turning knowledge into opportunity</h3><p>Through The Dope Cloud TeacHer, I help make cloud, AI, and digital skills approachable. Explore the learning options and how this work connects with your next chapter.</p><Action href="https://thedopecloudteacher.org/classes/" secondary>Explore DCT learning</Action></article>
         </div>
         <p className="adg-small">These are examples of my experience and work. Your path, timing, and outcomes will be your own.</p>
@@ -88,8 +88,7 @@ export default function Home() {
       <Section id="real-talk" tone eyebrow="Pull up a chair" title="The story has layers. So do we.">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card adg-image-card">
-            <img src="/images/personal/travel/rosee-speaking-paris-2023.webp" alt="RoSeé speaking in Paris" loading="lazy" />
-            <div><h3>How did a woman afraid to fly end up speaking in Paris?</h3><p>Fear had an opinion. Life had other plans. Come read the chapter behind the photograph.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>Read the Paris story</Action></div>
+            <div><h3>How did a woman afraid to fly end up speaking in Paris?</h3><p>Fear had an opinion. Life had other plans. Come read the chapter behind that experience.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>Read the Paris story</Action></div>
           </article>
           <article className="adg-card"><p className="adg-eyebrow">Let’s talk about it</p><h3>Is it peace—or are you just tired of explaining yourself?</h3><p>Boundaries, connection, and the conversations we rehearse in the car. A little relationship tea, with room for honesty and a useful next step.</p><Action href="/blog/how-to-build-a-weekly-relationship-check-in-ritual" secondary>Start the conversation</Action></article>
           <article className="adg-card"><p className="adg-eyebrow">Wear what you believe</p><h3>Good on you. Good in the world.</h3><p>A cream tee. A black hoodie. A message you can take into your everyday life. Meet the original AskDoGood collection.</p><Action href="/merch">Find your piece</Action></article>
@@ -97,6 +96,7 @@ export default function Home() {
         <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
       </Section>
       <Section id="in-community" tone eyebrow="Good in motion" title="Meet us in the community.">
+        <p>Our recent YPD visit brought together several developmental organizations in an inclusive space for community connection.</p><Action href="/community#ypd-recap">See the YPD event recap &amp; photos</Action>
         <CommunityEvents />
         <div className="adg-actions"><Action href="/community" secondary>Events & community connections</Action><Action href="/whats-good-to-eat">What’s good to eat?</Action></div>
       </Section>
@@ -182,13 +182,8 @@ export default function Home() {
         </div>
       </Section>
       <Section tone eyebrow="Made with a message" title="Wear a little good.">
-        <div className="adg-split">
-          <img
-            src="/images/merch/askdogood-original-three.webp"
-            alt="AskDoGood black hoodie, hoodie and jogger set, and cream tee"
-            className="adg-photo adg-photo-contain"
-            loading="lazy"
-          />
+        <div>
+
           <div>
             <h3>Your original AskDoGood collection.</h3>
             <p>
@@ -233,8 +228,8 @@ export default function Home() {
             </div>
           </div>
           <img
-            src="/images/personal/rosee-at-the-table.webp"
-            alt="RoSeé smiling at a table in a green sweater"
+            src="/images/personal/rosee-garden-2026.webp"
+            alt="RoSeé in her garden"
             className="adg-photo"
             loading="lazy"
           />
@@ -275,8 +270,8 @@ export default function Home() {
               slug: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
               title: "Feed yourself without burning yourself out",
               text: "A practical meal-prep rhythm for a life that is already full.",
-              image: "/images/personal/food/muhammad-dishes-1.jpg",
-              alt: "Colorful vegetables in a prepared dish",
+              image: "/images/community/family-meal.webp",
+              alt: "Family members preparing food together at home",
             },
             {
               slug: "how-to-build-a-weekly-relationship-check-in-ritual",
@@ -341,8 +336,8 @@ export default function Home() {
               title: "Life beyond the familiar",
               text: "The places and experiences that open a new chapter.",
               href: "/journey",
-              image: "/images/personal/travel/rosee-speaking-paris-2023.webp",
-              alt: "RoSeé speaking in Paris",
+              image: "/images/personal/professional/zachary-nelson-community.jpg",
+              alt: "Friends enjoying a joyful moment outdoors",
             },
           ].map(item => (
             <Link

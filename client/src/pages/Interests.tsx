@@ -24,7 +24,7 @@ export default function Interests() {
 
   const gardenImages = [
     {
-      url: "/images/personal/rosee-garden-2026.webp",
+      url: "/images/personal/food/collards-in-small-raised-bed.jpg",
       caption: "Tending the garden - where healing meets growth",
     },
     {

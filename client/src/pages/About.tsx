@@ -75,8 +75,8 @@ export default function About() {
           </div>
           <img
             className="adg-photo"
-            src="/images/personal/travel/rosee-speaking-paris-2023.webp"
-            alt="RoSeé speaking in Paris in 2023"
+            src="/images/personal/rosee-at-the-table.webp"
+            alt="RoSeé smiling at a table in a green sweater"
             loading="lazy"
           />
         </div>

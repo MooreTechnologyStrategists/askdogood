@@ -7,8 +7,8 @@ export default function Journey() {
         eyebrow="RoSeé’s story"
         title="Still learning. Still rebuilding. Still doing good."
         text="Starting over rarely happens in one inspiring moment. Sometimes it means making another appointment, learning a skill, setting a boundary, or figuring out dinner while the rest of life keeps moving. These are stories from my experience—not instructions for yours. Take a useful question, a practical idea, or simply the reminder that progress can be uneven."
-        image="/images/personal/rosee-garden-2026.webp"
-        alt="RoSeé in her garden"
+        image="/images/personal/rosee-founder-snow-2026.jpg"
+        alt="RoSeé outdoors in the snow"
       />
       <Section title="The experiences behind the purpose.">
         <div className="adg-grid adg-grid-three">

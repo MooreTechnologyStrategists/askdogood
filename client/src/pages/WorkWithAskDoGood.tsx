@@ -11,8 +11,8 @@ export default function WorkWithAskDoGood() {
         eyebrow="Workshops & partnerships"
         title="Useful wellness for the people you serve."
         text="Bring practical food, stress, healthy-habit, and life-transition education to your community. Programs can be adapted for adults, seniors, veterans, caregivers, families, and workplaces."
-        image="/images/personal/travel/rosee-speaking-paris-2023.webp"
-        alt="RoSeé speaking to a group in Paris"
+        image="/images/community/family-cooking.webp"
+        alt="A family preparing food together at home"
       >
         <div className="adg-actions">
           <Action href="/contact?topic=Community%20workshop">

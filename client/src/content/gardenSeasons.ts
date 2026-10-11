@@ -19,8 +19,8 @@ export const gardenSeasons: GardenSeason[] = [
     slug: "spring",
     title: "Spring",
     subtitle: "New Beginnings, Fresh Starts, and Intentional Growth",
-    heroImg: "/images/personal/rosee-garden-2026.webp",
-    heroAlt: "RoSeé in her garden, from the AskDoGood photo archive",
+    heroImg: "/images/personal/food/collards-in-small-raised-bed.jpg",
+    heroAlt: "Leafy greens growing in a raised bed",
     body: [
       "Spring is that 'brand new, ready for a fresh look' season that everyone loves. We're happy to have survived the horrible dark moments of daylight savings time and seasonal depression. Even if you didn't struggle through winter, we all look to spring as the becoming of new things.",
 
@@ -41,8 +41,8 @@ export const gardenSeasons: GardenSeason[] = [
     slug: "summer",
     title: "Summer",
     subtitle: "Tending what you prayed for",
-    heroImg: "/images/personal/rosee-garden-2026.webp",
-    heroAlt: "RoSeé in her garden, from the AskDoGood photo archive",
+    heroImg: "/images/personal/food/garden-peppers.jpg",
+    heroAlt: "Peppers growing in the garden",
     body: [
       "Summer is loud. Everything demands attention. The plants you carefully started in spring are now towering, sprawling, and screaming for water, for pruning, for support. This is the season where your commitment gets tested—where the dream of 'having a garden' meets the reality of maintaining one.",
 
@@ -83,8 +83,8 @@ export const gardenSeasons: GardenSeason[] = [
     slug: "fall",
     title: "Fall",
     subtitle: "A second planting, a slower harvest, and a little honesty",
-    heroImg: "/images/personal/rosee-garden-2026.webp",
-    heroAlt: "RoSeé in her garden, from the AskDoGood photo archive",
+    heroImg: "/images/personal/food/night-garden.jpg",
+    heroAlt: "An evening view of the garden",
     inSeason: [
       "Peppers before frost",
       "Collards and other greens",
@@ -109,8 +109,8 @@ export const gardenSeasons: GardenSeason[] = [
     slug: "winter",
     title: "Winter",
     subtitle: "What grows quietly, what keeps, and what waits",
-    heroImg: "/images/personal/rosee-garden-2026.webp",
-    heroAlt: "RoSeé in her garden, from the AskDoGood photo archive",
+    heroImg: "/images/personal/food/night-umbrella.jpg",
+    heroAlt: "A quiet garden seating area at night",
     inSeason: [
       "Protected spinach",
       "Cold-hardy greens",

@@ -28,7 +28,7 @@ export default function PocketsOfPeace() {
     </header>
     <section aria-label="Explore pockets of peace" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:18,margin:"2rem 0"}}>
       {[
-        {title:"The Garden Grows",img:"/images/personal/rosee-garden-2026.webp",description:"Explore existing garden guides and growing-season notes. Start with one manageable task, whether that is checking soil moisture, choosing seeds, or learning when to transplant.",href:"/garden",cta:"Step into the garden"},
+        {title:"The Garden Grows",img:"/images/personal/food/night-garden.jpg",description:"Explore existing garden guides and growing-season notes. Start with one manageable task, whether that is checking soil moisture, choosing seeds, or learning when to transplant.",href:"/garden",cta:"Step into the garden"},
         {title:"The Soundtrack of Us",description:"Think of a song from hip-hop, go-go, or soul that carries a memory. Use the reflection below to name what it taught you. We do not host a music player or licensed tracks here.",href:"#take-five",cta:"Find your song"},
         {title:"Beats, Plants & Plates",description:"Browse existing recipe pages and meal ideas. Check ingredients, serving needs, and instructions before cooking; recipes are not personalized medical nutrition advice.",href:"/whats-good-to-eat",cta:"Explore the kitchen"},
         {title:"Lessons I Didn't Know I Was Learning",description:"Read personal stories about starting over, relationships, faith, and lessons learned. These are experiences to consider, not promises that your path will look the same.",href:"/journey",cta:"Read the stories"}

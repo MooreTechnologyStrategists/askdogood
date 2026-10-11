@@ -45,8 +45,8 @@ export const topics = [
     question: "I want healthier connections.",
     summary:
       "Work through grief, boundaries, family pressure, and relationships or sexual patterns that leave you feeling drained. Make room for respect, safety, and honest choices.",
-    image: "/images/personal/food/night-garden.jpg",
-    alt: "An evening gathering space in RoSeé’s garden",
+    image: "/images/community/family-together.webp",
+    alt: "Parents and children holding hands at home",
     title: "You deserve connection that makes room for your dignity.",
     intro:
       "Love, sex, loyalty, loneliness, and family can get tangled when you are trying to survive. If a relationship keeps costing you your peace—or you keep choosing connection that leaves you feeling empty—this is a place to slow down, name what is happening, and consider a different next step.",
@@ -82,8 +82,8 @@ export const topics = [
     question: "I’m ready for a different future.",
     summary:
       "If you are leaving street life, returning after incarceration, facing job loss, or starting over, explore skills and practical steps toward a future with more choices.",
-    image: "/images/personal/travel/rosee-speaking-paris-2023.webp",
-    alt: "RoSeé speaking at a conference in Paris in 2023",
+    image: "/images/personal/professional/jeffery-erhunse-pro.jpg",
+    alt: "A woman looking toward the camera outdoors",
     title: "Your past is part of your story. Your next step still belongs to you.",
     intro:
       "Wanting a different life is a meaningful beginning. Building it takes more: skills, reliable routines, access to opportunity, and people who can help you navigate the gaps. This path connects personal rebuilding with practical learning, including cloud and AI education through The Dope Cloud TeacHer.",
@@ -116,8 +116,8 @@ export const topics = [
     question: "I need stability and room to breathe.",
     summary:
       "When bills, housing worries, family responsibilities, or a major setback have taken over, sort what is urgent and build a routine with space for faith, music, and peace.",
-    image: "/images/personal/rosee-garden-2026.webp",
-    alt: "RoSeé smiling beside the plants in her garden",
+    image: "/images/personal/professional/good-faces-diverse.jpg",
+    alt: "A woman using her phone beside a window",
     title: "Let’s build a foundation underneath your next chapter.",
     intro:
       "Sometimes the crisis is one big event. Sometimes it is rent, family pressure, grief, unfinished paperwork, and another day of holding everything together. This path helps you separate what needs attention now from what can wait, find resource starting points, and create a manageable rhythm.",
