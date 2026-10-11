@@ -51,6 +51,7 @@ import ChickpeaBurgers from "@/pages/recipes/ChickpeaBurgers";
 import GreenSmoothieBowl from "@/pages/recipes/GreenSmoothieBowl";
 import GrowingFreshMint from "@/pages/recipes/GrowingFreshMint";
 import HomemadePizza from "@/pages/recipes/HomemadePizza";
+import KitchenRecipe from "@/pages/recipes/KitchenRecipe";
 import MasonJarSalad from "@/pages/recipes/MasonJarSalad";
 
 // Lead Magnet Pages
@@ -181,6 +182,7 @@ function Router() {
         <Route path="/recipe/growing-fresh-mint" component={GrowingFreshMint} />
         <Route path="/recipe/homemade-pizza" component={HomemadePizza} />
         <Route path="/recipe/mason-jar-salad" component={MasonJarSalad} />
+        <Route path="/recipe/:slug" component={KitchenRecipe} />
 
         {/* Commerce */}
         <Route path="/shop" component={Shop} />

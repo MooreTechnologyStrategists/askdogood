@@ -1,3 +1,4 @@
+import CookbookTeaser from "@/components/CookbookTeaser";
 import { useEffect, useMemo, useState } from "react";
 import { Action, PageIntro, Section } from "@/components/Experience";
 import recipes from "@/data/kitchenRecipes.json";
@@ -38,6 +39,7 @@ export default function PantryKitchen() {
     <PageIntro eyebrow="Free kitchen tools · Real food, real life" title="What’s good to eat?" text="Start with what’s in your kitchen. Explore a recipe, save your favorites, and put a few good meals on the calendar." image="/images/personal/food/rosee-home-meal.webp" alt="A home-prepared meal from RoSeé’s photo archive">
       <div className="adg-actions"><Action href="#build-my-meal">Build my meal</Action><Action href="#my-week" secondary>Plan my week</Action></div>
     </PageIntro>
+    <CookbookTeaser />
     <Section id="build-my-meal" title="1. What do you have?" eyebrow="Kitchen companion">
       <div className="adg-split"><form className="adg-card adg-kitchen-form" onSubmit={event => { event.preventDefault(); setSubmitted(ingredients); setSurprise(""); trackEvent("recipe_match", { ingredient_count: pantryItems(ingredients).length }); }}>
         <label htmlFor="pantry-ingredients">Ingredients, separated by commas</label><textarea id="pantry-ingredients" value={ingredients} onChange={event => setIngredients(event.target.value)} placeholder="chickpeas, oats, onion, garlic, lemon" rows={4} maxLength={1000} />

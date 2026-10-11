@@ -16,6 +16,10 @@ export default function Cookbook() {
           </Action>
         </div>
       </PageIntro>
+      <Section eyebrow="RoSeé’s musical roots" title="My first track was House of Roxanne.">
+        <p>At the tender age of nine, I wrote my first rap, “House of Roxanne.” I used to write rhymes myself, and music has been a love of mine ever since. Hip-hop gave me a place to play with words, find a rhythm, and create something of my own.</p>
+        <p>That creative thread belongs in this book. Beats, Plants &amp; Plates brings my love for hip-hop and music together with food and the everyday practice of caring for yourself. A favorite song can set the mood; a recipe gives your hands something good to do. This is an invitation to enjoy both.</p>
+      </Section>
       <Section>
         <div className="adg-split">
           <img
@@ -49,6 +53,12 @@ export default function Cookbook() {
           </div>
         </div>
       </Section>
+      <Section id="cookbook-interest" tone title="Taste the preview. Be part of the next chapter.">
+        <p>Start with two free recipe drafts. If the flavor and the concept speak to you, send a cookbook-interest inquiry so we can hear what you want from the full collection. No payment is collected for an inquiry.</p>
+        <div className="adg-actions"><Action href="/downloads/Beats-Plants-and-Plates-Preview.pdf">Read the free preview</Action><Action href="/contact?topic=Beats%20Plants%20Plates%20cookbook%20interest">Register my cookbook interest</Action><Action href="/subscribe" secondary>Get AskDoGood updates</Action></div>
+        <p className="adg-small">The cookbook is in development. Price and release date are not set; orders are not open yet.</p>
+      </Section>
+      <Section title="Want a practical routine today?"><p>The available AskDoGood 7-Day Reset offers daily prompts for food, movement, and rest. It is a separate $17 product, not the cookbook.</p><Action href="/product/7-day-reset">See what’s included in the $17 reset</Action></Section>
       <Section tone title="Where the book stands.">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card">
@@ -72,7 +82,7 @@ export default function Cookbook() {
               cookbook inquiry. Release date and price have not been set;
               purchasing is not open.
             </p>
-            <Action href="#stay-connected" secondary>
+            <Action href="/subscribe" secondary>
               Join the newsletter
             </Action>
           </article>
