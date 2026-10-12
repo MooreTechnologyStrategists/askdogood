@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 const nav = [
-  ["Start here", "/resources/start"],
+  ["Find my path", "/services"],
   ["Pockets of Peace", "/pockets-of-peace"],
   ["Offers & shop", "/shop"],
   ["Play & Grow", "/play-grow"],

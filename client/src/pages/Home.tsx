@@ -1,3 +1,4 @@
+import WellnessPaths from "@/components/WellnessPaths";
 import VoterCallout from "@/components/VoterCallout";
 import PocketPeek from "@/components/PocketPeek";
 import CommunityEvents from "@/components/CommunityEvents";
@@ -23,15 +24,16 @@ export default function Home() {
       <PageIntro
         brandImage="/images/branding/askdogood-logo.png"
         eyebrow="AskDoGood · Black-rooted. DMV-grown. Everyone welcome."
-        title="Reclaim your health. Your power. Your future."
-        text="Eat with intention. Change what drains you. Know your worth. Build skills for your next chapter. AskDoGood helps you turn real-life lessons into a practical plan—with free tools, resource connections, and ways to ask for support. Your past does not get the final word."
+        title="You deserve a clearer next step."
+        text="Prepare for a clearer conversation about your care. Eat with more intention. Build routines that support your everyday life. Choose what you need, understand what you get, and take one good step."
         image="/images/community/family-kitchen.webp"
         alt="A family preparing a meal together in a welcoming kitchen"
       >
-        <div className="adg-actions"><Action href="#take-action">Build my next-step plan</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
+        <div className="adg-actions"><Action href="#ask-services">Find my path</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <div className="container"><WellnessPaths /></div>
       <Section id="dct-learning-ad" tone eyebrow="From our sister business · DCT promotion" title="Your next chapter can include a new skill.">
         <div className="adg-grid adg-grid-two">
           <a href="https://thedopecloudteacher.org/hub/enroll.html?utm_source=askdogood&amp;utm_medium=website&amp;utm_campaign=year_end_25" aria-label="Explore DCT courses for $25 each"><img src="https://thedopecloudteacher.org/assets/dct-25-year-end-blowout.webp" alt="POW! DCT year-end blowout: all self-paced courses $25 each through December 31, 2026." width={1254} height={1254} loading="lazy" style={{display:"block",width:"100%",maxWidth:480,height:"auto",borderRadius:20,margin:"0 auto"}} /></a>

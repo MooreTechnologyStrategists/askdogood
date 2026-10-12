@@ -1,3 +1,6 @@
+import LifeSticker from "@/components/LifeSticker";
+import WellnessServices from "@/pages/WellnessServices";
+import MyToolkit from "@/pages/MyToolkit";
 import PlayGrow from "@/pages/PlayGrow";
 import HealthStories, { HealthCategory } from "@/pages/HealthStories";
 import HealthStory from "@/pages/HealthStory";
@@ -115,6 +118,8 @@ function Router() {
     <>
       <RouteSeo location={location} />
       <Switch>
+        <Route path="/services" component={WellnessServices} />
+        <Route path="/my-toolkit" component={MyToolkit} />
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
@@ -233,7 +238,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
+          {window.location.pathname !== "/my-toolkit" && <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />}
           <Toaster />
           <div className="flex flex-col min-h-screen">
             <a className="adg-skip" href="#main-content">
@@ -242,7 +247,7 @@ function App() {
             <AnnouncementBar />
             <Header />
             <main id="main-content" className="flex-1 adg-site-content">
-              <Router />
+              <LifeSticker /><Router /><LifeSticker slot={1} />
             </main>
 
             <Chatbot />

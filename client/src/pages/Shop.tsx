@@ -1,3 +1,4 @@
+import WellnessPaths from "@/components/WellnessPaths";
 import {
   Action,
   PageIntro,
@@ -13,17 +14,17 @@ export default function Shop() {
       <PageIntro
         eyebrow="Shop AskDoGood"
         title="Choose your next good step."
-        text="Start with a guide, choose a personalized wellness plan, join the monthly membership, or shop the original merch. Read the details before you buy."
+        text="Start with free care preparation, choose a $25 food or routine toolkit, or shop the original merch. Personal support is arranged separately."
       >
         <div className="adg-actions">
-          <Action href="#offers">Guides, plans & membership</Action>
+          <Action href="#offers">Find my support path</Action>
           <Action href="#original-collection" secondary>
             Shop merch
           </Action>
         </div>
       </PageIntro>
-      <Section id="offers" title="Start with these three.">
-        <OfferCards />
+      <Section id="offers" title="Care. Food. Your everyday routine.">
+        <WellnessPaths />
         <Reassurance />
       </Section>
       <Section
