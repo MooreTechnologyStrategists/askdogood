@@ -1,3 +1,4 @@
+import VoterCallout from "@/components/VoterCallout";
 import PocketPeek from "@/components/PocketPeek";
 import CommunityEvents from "@/components/CommunityEvents";
 import NextStepBuilder from "@/components/NextStepBuilder";
@@ -37,6 +38,7 @@ export default function Home() {
           <div className="adg-card"><h3>Bring your curiosity. Build your confidence.</h3><p>Explore nine self-paced cloud, AI and cybersecurity courses from The Dope Cloud TeacHer. <strong>$25 per course through December 31, 2026.</strong> Videos, reading, practice and knowledge checks help you learn wherever you are.</p><p>Need help with the fee? Learners in DC Wards 7 and 8 and Prince George’s County can choose fee assistance when enrolling.</p><Action href="https://thedopecloudteacher.org/hub/enroll.html?utm_source=askdogood&utm_medium=website&utm_campaign=year_end_25">Explore $25 DCT classes</Action><p className="adg-small">Self-paced online courses. Exam fees, cloud usage and live group instruction are separate.</p></div>
         </div>
       </Section>
+      <VoterCallout />
       <Section id="community-highlights" tone eyebrow="October 8–10 · Good in motion" title="Community highlights: access, inclusion, and opportunity.">
         <p className="adg-lead">We’re taking wellness, learning, and opportunity into our community. See where we showed up—and find your next step with us.</p>
         <div className="adg-grid adg-grid-three">
