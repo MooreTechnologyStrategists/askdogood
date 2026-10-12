@@ -31,6 +31,12 @@ export default function Home() {
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <Section id="dct-learning-ad" tone eyebrow="From our sister business · DCT promotion" title="Your next chapter can include a new skill.">
+        <div className="adg-grid adg-grid-two">
+          <a href="https://thedopecloudteacher.org/hub/enroll.html?utm_source=askdogood&amp;utm_medium=website&amp;utm_campaign=year_end_25" aria-label="Explore DCT courses for $25 each"><img src="https://thedopecloudteacher.org/assets/dct-25-year-end-blowout.webp" alt="POW! DCT year-end blowout: all self-paced courses $25 each through December 31, 2026." width={1254} height={1254} loading="lazy" style={{display:"block",width:"100%",maxWidth:480,height:"auto",borderRadius:20,margin:"0 auto"}} /></a>
+          <div className="adg-card"><h3>Bring your curiosity. Build your confidence.</h3><p>Explore nine self-paced cloud, AI and cybersecurity courses from The Dope Cloud TeacHer. <strong>$25 per course through December 31, 2026.</strong> Videos, reading, practice and knowledge checks help you learn wherever you are.</p><p>Need help with the fee? Learners in DC Wards 7 and 8 and Prince George’s County can choose fee assistance when enrolling.</p><Action href="https://thedopecloudteacher.org/hub/enroll.html?utm_source=askdogood&utm_medium=website&utm_campaign=year_end_25">Explore $25 DCT classes</Action><p className="adg-small">Self-paced online courses. Exam fees, cloud usage and live group instruction are separate.</p></div>
+        </div>
+      </Section>
       <Section id="community-highlights" tone eyebrow="October 8–10 · Good in motion" title="Community highlights: access, inclusion, and opportunity.">
         <p className="adg-lead">We’re taking wellness, learning, and opportunity into our community. See where we showed up—and find your next step with us.</p>
         <div className="adg-grid adg-grid-three">
