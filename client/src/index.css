@@ -1321,3 +1321,14 @@ html {
 @media(max-width:650px){.play-daily-row,.play-mode-tabs,.play-answers{grid-template-columns:1fr}.play-mode-tabs button{display:grid;grid-template-columns:40px 1fr}.play-mode-tabs small{grid-column:2}.play-mode-tabs span{grid-row:1/3}.play-track-tabs button{flex-grow:1}.play-word-tray button,.play-word-line button{padding:.65rem .8rem}}
 @media(prefers-reduced-motion:reduce){.play-feedback,.play-pocket-reveal{animation:none}}
 .pocket-peek{border:1px solid #d5cfbf;border-radius:30px;padding:clamp(1.2rem,3vw,2rem);background:#fffaf1;margin:1.4rem 0 2rem;color:#214b3b}.pocket-peek-choices{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}.pocket-peek-choices button{padding:.85rem 1.2rem;border:1px solid #9baa91;border-radius:22px;background:#eaf0df;color:#214b3b;cursor:pointer;font-weight:700}.pocket-peek-choices button:nth-child(2){background:#f3e1da}.pocket-peek-choices button:nth-child(3){background:#f7eacd}.pocket-peek-choices button[aria-pressed="true"]{outline:2px solid #245747;outline-offset:3px}.pocket-peek-choices span{margin-right:.6rem;font-size:1.5rem}.pocket-peek-message{padding:1rem 0 0;border-top:1px solid #d9d2c3}.pocket-peek-message h4{font-size:1.3rem;margin:.5rem 0}.pocket-peek button:focus-visible{outline:3px solid #9c622f;outline-offset:4px}
+
+/* Consistent centered actions and responsive media */
+.adg-actions{justify-content:center;align-items:center;gap:1rem}
+.adg-actions>.adg-button{margin:0;max-width:100%;white-space:normal}
+.adg-card>.adg-button,.adg-card>div>.adg-button,.adg-image-card>div>.adg-button{display:table;margin:1.25rem auto 0;text-align:center}
+.adg-offer-card .adg-button{align-self:center;margin-top:auto}
+.adg-site-content img,.adg-site-content video{max-width:100%}
+.adg-site-content figure{margin-left:auto;margin-right:auto}
+.adg-intro-image,.adg-story-image{margin-left:auto;margin-right:auto}
+.pocket-peek-choices{justify-content:center;gap:1rem}
+@media(max-width:650px){.adg-actions>.adg-button{width:min(100%,340px)}.adg-actions{margin:1.4rem 0 .8rem}.adg-card>.adg-button,.adg-card>div>.adg-button{max-width:100%}}
