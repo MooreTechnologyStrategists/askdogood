@@ -1,3 +1,4 @@
+import SeasonalMerchVote from "@/components/SeasonalMerchVote";
 import {
   Action,
   PageIntro,
@@ -21,11 +22,12 @@ export default function Merch() {
           </Action>
         </div>
       </PageIntro>
-      <Section id="fall-holiday-editions" tone eyebrow="Fall + holiday editions · Design preview" title="Wear your peace. Bring your confidence.">
-        <img src="https://thedopecloudteacher.org/assets/fall-holiday-editions.webp" alt="Fall and holiday apparel concepts: AskDoGood Protect Your Peace Press Play black crewneck and DCT Big Confidence Cloud Energy white crewneck, with official logos centered on the back and sleeve" loading="lazy" style={{display:"block",width:"100%",maxWidth:1000,height:"auto",margin:"24px auto",borderRadius:20}} />
-        <div className="adg-grid adg-grid-two"><article className="adg-card"><h3>AskDoGood · Protect Your Peace. Press Play.</h3><p>A black crewneck concept with an original headphones-and-botanical illustration in cream, green, terracotta and blush. The official AskDoGood logo sits centered on the upper back, with a smaller mark on the sleeve. A statement about making room for music, peace and your own rhythm.</p></article><article className="adg-card"><h3>DCT · Big Confidence. Cloud Energy.</h3><p>A white crewneck concept with an original learner illustration, blue clouds and security motifs. The official blue DCT logo sits centered on the upper back and on the sleeve. For the people bringing curiosity, confidence and useful skills into their next chapter.</p></article></div>
-        <p className="adg-small">These are illustrated design previews, not production samples. Fabric, print method, size chart, retail price and delivery estimates will be published when the print-provider products are ready. The dimensional appearance is part of the artwork; raised printing or embroidery is not promised.</p>
-        <div className="adg-actions"><Action href="#original-collection">Shop the available collection</Action><Action href="/contact?topic=Fall%20and%20holiday%20editions" secondary>Ask about the seasonal designs</Action></div>
+      <Section id="fall-holiday-editions" tone eyebrow="AskDoGood · Fall + holiday edition" title="Make room for your rhythm.">
+        <p className="adg-lead">Fall invites us to slow down, gather close and make room for what restores us. The holidays can bring joy and a full calendar, so protecting your peace is a practice worth wearing. This AskDoGood design celebrates the music, small rituals and moments of rest that help us come back to ourselves. A thoughtful gift can carry a message: your joy deserves room, too.</p>
+        <img src="https://thedopecloudteacher.org/assets/askdogood-fall-edition.webp" alt="AskDoGood black Protect Your Peace Press Play apparel concept, front and back with official back and sleeve logos" loading="lazy" style={{display:"block",width:"100%",maxWidth:1000,height:"auto",margin:"24px auto",borderRadius:20}} />
+        <article className="adg-card"><h3>Protect Your Peace. Press Play.</h3><p>Original headphones-and-botanical artwork in cream, green, terracotta and blush, shown on a black crewneck. The official AskDoGood logo is centered on the upper back, with a smaller sleeve mark. The shaded illustration gives the print a dimensional appearance.</p><p>Design preview. Fabric, print method, size chart, price and delivery estimates will be confirmed before sales open. Raised printing or embroidery is not promised.</p></article>
+        <SeasonalMerchVote />
+        <div className="adg-actions"><Action href="#original-collection">Shop available AskDoGood merch</Action></div>
       </Section>
       <Section id="original-collection" title="Three ways to carry the good.">
         <p>
