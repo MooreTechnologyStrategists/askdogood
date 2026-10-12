@@ -23,7 +23,7 @@ export const merchProducts: MerchProduct[] = [
     name: "Soft Life Is a Discipline Tee",
     category: "tshirts",
     price: 34,
-    description: "AskDoGood flagship drop for the 7-day sprint. A premium identity statement centered on boundaries, healing, and intentional living.",
+    description: "A statement design about boundaries, healing and intentional living. Review the design and confirmed ordering details before purchasing.",
     image: "/images/merch/askdogood-tee-concepts.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Vintage Black", "Cream"],
@@ -45,7 +45,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_CLASSROOMCLOUD"
+
   },
   {
     id: "tshirt-protect-the-girls",
@@ -60,7 +60,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_PROTECTGIRLS"
+
   },
   {
     id: "tshirt-build-dont-scroll",
@@ -68,14 +68,14 @@ export const merchProducts: MerchProduct[] = [
     name: "Build. Don't Scroll. Tee",
     category: "tshirts",
     price: 34,
-    description: "Minimal, high-signal tech statement for builders. Designed for social content, meetups, and fast conversion with clear audience fit.",
+    description: "A simple statement for people who want to spend more time creating and learning. Bold lettering keeps the message clear.",
     image: "/images/merch/mockup_tshirt_progress.webp",
     sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
     colors: ["Black", "Cream"],
     inStock: true,
     featured: false,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_BUILDNOSCROLL"
+
   },
 
   // MUGS
@@ -91,7 +91,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_MUG1"
+
   },
   {
     id: "mug-healing",
@@ -105,7 +105,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_MUG2"
+
   },
   {
     id: "mug-thriving",
@@ -119,7 +119,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_MUG3"
+
   },
   {
     id: "mug-small-wins",
@@ -133,7 +133,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "holistic",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_MUG4"
+
   },
   {
     id: "mug-therapy",
@@ -147,7 +147,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_MUG5"
+
   },
 
   // T-SHIRTS
@@ -164,7 +164,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TEE1"
+
   },
   {
     id: "tshirt-healing-loud",
@@ -179,7 +179,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "bold",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TEE2"
+
   },
   {
     id: "tshirt-structure",
@@ -194,7 +194,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TEE3"
+
   },
   {
     id: "tshirt-chosen",
@@ -209,7 +209,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TEE4"
+
   },
   {
     id: "tshirt-no-apologies",
@@ -224,7 +224,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "artsy",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TEE5"
+
   },
 
   // HOODIES
@@ -241,7 +241,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_HOODIE1"
+
   },
   {
     id: "hoodie-rest",
@@ -256,7 +256,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "holistic",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_HOODIE2"
+
   },
   {
     id: "hoodie-magic",
@@ -271,7 +271,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "cartoon",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_HOODIE3"
+
   },
   {
     id: "hoodie-vibes",
@@ -286,7 +286,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "artsy",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_HOODIE4"
+
   },
 
   // TOTE BAGS
@@ -302,7 +302,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "holistic",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TOTE1"
+
   },
   {
     id: "tote-community",
@@ -316,7 +316,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: false,
     designStyle: "minimalist",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TOTE2"
+
   },
   {
     id: "tote-plant-powered",
@@ -330,7 +330,7 @@ export const merchProducts: MerchProduct[] = [
     inStock: true,
     featured: true,
     designStyle: "holistic",
-    stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_TOTE3"
+
   },
 ];
 
