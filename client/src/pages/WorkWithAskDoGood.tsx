@@ -20,6 +20,33 @@ export default function WorkWithAskDoGood() {
           </Action>
         </div>
       </PageIntro>
+      <Section title="Three ways to learn, grow, and move forward.">
+        <p className="adg-note">Real-life learning for real people. These are facilitated group experiences for organizations, campuses, employers and community partners—not prebooked public dates. Tell us about your group and we'll propose a date, format and quote. Sponsored seats may be available when funding is confirmed.</p>
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card">
+            <img src="/images/community/family-cooking.webp" alt="Family sharing a relaxed moment preparing food together" loading="lazy" style={{width:"100%",aspectRatio:"4 / 3",objectFit:"cover",borderRadius:"16px"}} />
+            <p className="adg-note">ASKDOGOOD · WELLNESS & LIFE SKILLS</p>
+            <h3>The Life Reset Lab</h3>
+            <p>Sometimes the next chapter starts with one manageable change. In this welcoming, judgment-free workshop, we explore healthy living on a budget, finding trustworthy community resources, handling life transitions, and creating a realistic personal next-step plan. Expect conversation, reflection, practical take-home tools and encouragement—not lectures or pressure to have everything figured out.</p>
+            <p>Ideal for student groups, community organizations, employee resource groups, veterans and adult learners. Educational programming only; not therapy, medical advice or financial counseling.</p>
+            <Action href="/contact?topic=Life%20Reset%20Lab">Request a Life Reset Lab</Action>
+          </article>
+          <article className="adg-card">
+            <p className="adg-note">THE DOPE CLOUD TEACHER · DIGITAL CONFIDENCE</p>
+            <h3>Digital Confidence: AI Without Fear</h3>
+            <p>Curious about AI but not sure where to begin? You belong in this conversation. Explore useful everyday AI tools, learn to spot scams and misinformation, protect personal information and practice asking better questions. No technical background or age limit to curiosity. We move at a human pace and make room for every question.</p>
+            <p>Ideal for seniors, libraries, community groups and first-time AI learners. Offered through our sister education brand, The Dope Cloud Teacher.</p>
+            <a href="https://thedopecloudteacher.org/partners.html">Explore DCT group training →</a>
+          </article>
+          <article className="adg-card">
+            <p className="adg-note">THE DOPE CLOUD TEACHER · WORKPLACE LEARNING</p>
+            <h3>AI at Work: Use It. Verify It. Protect It.</h3>
+            <p>Make AI useful without putting your organization at risk. Teams learn where AI can save time, how to verify outputs, what information should stay private, and how to apply practical safeguards. The session combines relatable examples, guided exercises and an actionable checklist participants can use immediately.</p>
+            <p>Ideal for employers, nonprofit teams, college departments and professional groups. Offered through The Dope Cloud Teacher.</p>
+            <a href="https://thedopecloudteacher.org/partners.html">Ask DCT about workplace training →</a>
+          </article>
+        </div>
+      </Section>
       <Section title="Choose a format.">
         <div className="adg-grid adg-grid-three">
           {[
