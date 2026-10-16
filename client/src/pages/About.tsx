@@ -75,8 +75,11 @@ export default function About() {
           </div>
           <img
             className="adg-photo"
-            src="/images/personal/rosee-at-the-table.webp"
-            alt="RoSeé smiling at a table in a green sweater"
+            src="/images/personal/rosee-orange-headphones.svg"
+            style={{ aspectRatio: "3 / 4" }}
+            width={900}
+            height={1200}
+            alt="RoSeé Murphy smiling in an orange jacket and headphones"
             loading="lazy"
           />
         </div>
