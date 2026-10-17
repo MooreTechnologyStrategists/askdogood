@@ -29,6 +29,22 @@ export function Action({
     </Link>
   );
 }
+// Keep the visible action available to keyboard users while making the
+// surrounding image, copy, and card padding follow the same destination.
+export function LinkedCard({ href, children, className = "adg-card" }: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  const hitArea = { className: "adg-card-hit-area", tabIndex: -1, "aria-hidden": true as const };
+  return <article className={`${className} adg-linked-card`}>
+    {href.includes("#") || /^(https?:|mailto:|tel:)/.test(href)
+      ? <a href={href} {...hitArea} />
+      : <Link href={href} {...hitArea} />}
+    {children}
+  </article>;
+}
+
 export function PageIntro({
   eyebrow,
   title,
@@ -154,7 +170,7 @@ export function OfferCards({
         const info = coreOfferLabels[id];
         return (
           offer && (
-            <article key={id} className="adg-card adg-offer-card">
+            <LinkedCard key={id} href={`/product/${offer.slug}`} className="adg-card adg-offer-card">
               <Link href={`/product/${offer.slug}`} aria-label={`Preview ${offer.name}`}><ProductPreview product={offer} compact /></Link>
               <p className="adg-eyebrow">
                 {info?.format || "Digital resource"}
@@ -169,7 +185,7 @@ export function OfferCards({
                 {info?.action || "See what’s included"}
               </Action>
               <p className="adg-small">Read the details before you buy.</p>
-            </article>
+            </LinkedCard>
           )
         );
       })}
