@@ -34,6 +34,24 @@ export default function Home() {
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <Section id="meet-dogood" tone eyebrow="Meet RoSeé · The woman behind AskDoGood" title="Pull up a chair. There’s room for you here.">
+        <div className="adg-split" style={{alignItems:"start"}}>
+          <img src="/images/personal/a-moment-with-dogood.webp" alt="A Moment with DoGood: RoSeé with copper locs and a knowing smile, against a cream, green and blush background" width={1254} height={1254} style={{display:"block",width:"100%",height:"auto",borderRadius:24}} />
+          <div>
+            <p className="adg-lead">Allow me to introduce myself. And yes, this expression comes with commentary. 😂</p>
+            <p>I’m RoSeé—also known as DoGood—the woman behind AskDoGood.</p>
+            <p>Cloud architect. Hairstylist. Army veteran. Mother. Grandmother. Student. And apparently, someone who believes one lifetime should hold at least seven careers.</p>
+            <p>I love a good laugh, a meaningful conversation, and information you can actually do something with. My faith grounds me. My curiosity keeps me learning. And my life has given me plenty to write about—which is how a book became part of the mix, too.</p>
+            <p>AskDoGood brings those pieces together: practical resources, healthy living on a budget, real community connections, and room to pause when life gets loud.</p>
+            <p>Around here, we can talk about what’s for dinner, what’s draining your wallet, what’s happening in our communities, and what your next chapter might look like. There’s room for prayer, accountability, and a little well-placed side-eye.</p>
+            <p>I’m building a space where we can learn something, laugh a little, and leave better equipped to handle our business.</p>
+            <p><strong>Welcome to AskDoGood. Pull up a chair.</strong></p>
+            <p><strong>Eat Well • Spend Less • Find Your Next Step</strong></p>
+            <p>What could you use a little more of right now: peace, practical help, or a fresh start?</p>
+            <div className="adg-actions"><Action href="/pockets-of-peace">A little peace</Action><Action href="/resources/start" secondary>Practical help</Action><Action href="/journey" secondary>Get to know me</Action></div>
+          </div>
+        </div>
+      </Section>
       <div className="container"><WellnessPaths /></div>
       <Section id="dct-learning-ad" tone eyebrow="From our sister business · DCT promotion" title="Your next chapter can include a new skill.">
         <div className="adg-grid adg-grid-two">
