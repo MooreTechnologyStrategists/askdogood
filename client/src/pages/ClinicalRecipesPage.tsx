@@ -1,3 +1,4 @@
+import RecipeDietStripe from "@/components/RecipeDietStripe";
 import CookbookTeaser from "@/components/CookbookTeaser";
 import newRecipes from "@/data/newKitchenRecipes.json";
 import { Action, PageIntro, Section } from "@/components/Experience";
@@ -16,7 +17,7 @@ export default function ClinicalRecipesPage() {
         <p>Tell us what you have, find a recipe to explore, and save a simple week of meals on your device.</p>
         <Action href="/whats-good-to-eat">Open the kitchen tools</Action>
       </Section>
-      <Section title="Fresh additions to the kitchen."><p>Six new recipe ideas with ingredients, directions, serving estimates, and swaps. Kitchen testing is pending.</p><div className="adg-grid adg-grid-three">{newRecipes.map(recipe => <article className="adg-card" key={recipe.id}><p className="adg-eyebrow">{recipe.minutes} minutes · {recipe.servings} servings, estimated</p><h3>{recipe.title}</h3><p>{recipe.description}</p><Action href={`/recipe/${recipe.id}`} secondary>Get the recipe</Action></article>)}</div></Section>
+      <Section title="Fresh additions to the kitchen."><p>Explore our growing collection, including five DERS recipes from A Little Good, Every Day. Find ingredients, directions, dietary labels, and serving estimates. Kitchen testing is pending.</p><div className="adg-grid adg-grid-three">{newRecipes.map(recipe => <article className="adg-card" key={recipe.id}><RecipeDietStripe recipe={recipe} />{recipe.image && <img src={recipe.image} alt={recipe.imageAlt || recipe.title} loading="lazy" style={{ width: "100%", aspectRatio: "3 / 2", objectFit: "cover", borderRadius: ".75rem", marginBottom: "1rem" }} />}<p className="adg-eyebrow">{recipe.minutes} minutes · {recipe.servings} servings, estimated</p><h3>{recipe.title}</h3><p>{recipe.description}</p><Action href={`/recipe/${recipe.id}`} secondary>Get the recipe</Action></article>)}</div></Section>
       <Section title="Pick a recipe.">
         <div className="adg-grid adg-grid-three">
           {[

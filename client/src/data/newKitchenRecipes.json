@@ -7,20 +7,20 @@
     "description": "A bright, one-pan meal with beans, greens, and a little lemon.",
     "ingredients": [
       "1 tablespoon olive oil",
-      "\u00bd onion, diced",
+      "½ onion, diced",
       "2 garlic cloves, minced",
       "1 can (15 oz) chickpeas, drained and rinsed",
-      "\u00bd cup water",
+      "½ cup water",
       "3 cups fresh spinach",
       "1 tablespoon lemon juice",
-      "\u00bd teaspoon smoked paprika",
-      "\u00bc teaspoon salt, optional",
+      "½ teaspoon smoked paprika",
+      "¼ teaspoon salt, optional",
       "Black pepper to taste"
     ],
     "instructions": [
       "Heat oil in a large skillet over medium heat. Cook onion for 5 minutes, stirring, until softened.",
       "Add garlic and paprika; stir for 30 seconds. Add chickpeas and water; simmer for 5 minutes.",
-      "Stir in spinach a handful at a time and cook for 2\u20133 minutes until wilted.",
+      "Stir in spinach a handful at a time and cook for 2–3 minutes until wilted.",
       "Add lemon juice, salt if using, and pepper. Divide between two bowls; serve with toast or cooked rice if desired."
     ],
     "note": "Serve with rice or toast. Chickpeas can be replaced with white beans."
@@ -34,10 +34,10 @@
     "ingredients": [
       "1 cup rolled oats",
       "1 cup unsweetened oat milk",
-      "\u00bd cup plain yogurt or plant-based yogurt",
+      "½ cup plain yogurt or plant-based yogurt",
       "1 small apple, diced",
       "1 tablespoon chia seeds",
-      "\u00bd teaspoon cinnamon",
+      "½ teaspoon cinnamon",
       "1 teaspoon maple syrup, optional"
     ],
     "instructions": [
@@ -56,17 +56,17 @@
     "ingredients": [
       "1 tablespoon olive oil",
       "1 bell pepper, thinly sliced",
-      "\u00bd onion, sliced",
+      "½ onion, sliced",
       "1 can (15 oz) black beans, drained and rinsed",
-      "\u00bd teaspoon cumin",
-      "\u00bd teaspoon smoked paprika",
-      "\u00bc cup water",
+      "½ teaspoon cumin",
+      "½ teaspoon smoked paprika",
+      "¼ cup water",
       "6 small corn tortillas",
-      "\u00bd avocado, sliced",
+      "½ avocado, sliced",
       "1 tablespoon lime juice"
     ],
     "instructions": [
-      "Heat oil over medium heat in a skillet. Cook pepper and onion for 6\u20138 minutes until tender.",
+      "Heat oil over medium heat in a skillet. Cook pepper and onion for 6–8 minutes until tender.",
       "Add beans, cumin, paprika, and water. Simmer for 5 minutes, stirring; mash a few beans to thicken.",
       "Warm tortillas in a dry skillet according to package directions.",
       "Divide filling among tortillas and top with avocado and lime juice."
@@ -87,13 +87,13 @@
       "1 tablespoon grated fresh ginger",
       "1 garlic clove, minced",
       "1 teaspoon maple syrup",
-      "\u00bc cup water",
+      "¼ cup water",
       "2 cups cooked rice"
     ],
     "instructions": [
-      "Cut dry tofu into \u00be-inch cubes. Heat oil over medium-high heat in a large nonstick skillet.",
-      "Cook tofu for 8\u201310 minutes, turning gently, until browned on several sides.",
-      "Add broccoli and water, cover, and cook for 4\u20135 minutes until broccoli is tender.",
+      "Cut dry tofu into ¾-inch cubes. Heat oil over medium-high heat in a large nonstick skillet.",
+      "Cook tofu for 8–10 minutes, turning gently, until browned on several sides.",
+      "Add broccoli and water, cover, and cook for 4–5 minutes until broccoli is tender.",
       "Mix soy sauce, ginger, garlic, and maple syrup. Add to skillet and stir for 2 minutes; add a splash of water if too dry.",
       "Serve over cooked rice."
     ],
@@ -118,7 +118,7 @@
       "Black pepper to taste"
     ],
     "instructions": [
-      "Heat oil over medium heat in a large pot. Cook onion and carrots for 7\u20138 minutes until softened.",
+      "Heat oil over medium heat in a large pot. Cook onion and carrots for 7–8 minutes until softened.",
       "Add garlic and oregano; stir for 30 seconds.",
       "Add tomatoes, beans, and broth. Bring to a gentle boil, then simmer uncovered for 15 minutes, stirring occasionally.",
       "Stir in spinach and cook for 2 minutes. Season with pepper; add water for a thinner soup."
@@ -135,7 +135,7 @@
       "1 cup plain yogurt or plant-based yogurt",
       "1 banana, sliced",
       "1 cup fresh berries, rinsed",
-      "\u00bd cup granola",
+      "½ cup granola",
       "1 tablespoon pumpkin seeds"
     ],
     "instructions": [
@@ -144,5 +144,146 @@
       "Add granola and pumpkin seeds just before eating to keep them crunchy."
     ],
     "note": "Check yogurt and granola labels for milk, soy, nuts, and wheat. Use seed-free toppings if needed."
+  },
+  {
+    "id": "lemon-salmon-bowl",
+    "title": "Lemon Salmon Bowl",
+    "minutes": 30,
+    "servings": 2,
+    "description": "Lemon, salmon and broccoli over quinoa for a simple dinner.",
+    "ingredients": [
+      "Two 4-oz salmon fillets",
+      "1 cup cooked quinoa",
+      "2 cups broccoli florets",
+      "2 tsp olive oil",
+      "1 lemon",
+      "black pepper"
+    ],
+    "instructions": [
+      "Heat oven to 400 F. Toss broccoli with 1 tsp oil; roast 10 min. Add salmon, brush with remaining oil and pepper; roast 10-15 min more, until fish reaches 145 F. Divide warm quinoa between bowls; add fish, broccoli and lemon juice."
+    ],
+    "note": "Fish allergen. Use verified gluten-free ingredients and clean tools to prevent gluten cross-contact.",
+    "diet": "pescatarian",
+    "dietLabel": "Pescatarian-friendly",
+    "dietColor": "#175A99",
+    "dietTags": [
+      "Gluten-free with label checks and cross-contact precautions"
+    ],
+    "image": "/images/recipes/lemon-salmon-bowl.webp",
+    "imageAlt": "Lemon Salmon Bowl — illustrative food image",
+    "series": "DERS"
+  },
+  {
+    "id": "chickpea-crunch-bowl",
+    "title": "Chickpea Crunch Bowl",
+    "minutes": 10,
+    "servings": 2,
+    "description": "A fresh, no-cook bowl with chickpeas, cucumber and tomatoes.",
+    "ingredients": [
+      "One 15-oz can no-salt-added chickpeas, drained and rinsed",
+      "1 cup diced cucumber",
+      "1 cup cherry tomatoes, halved",
+      "2 tbsp chopped parsley",
+      "1 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "black pepper"
+    ],
+    "instructions": [
+      "Combine chickpeas, cucumber, tomatoes and parsley. Whisk oil, lemon juice and pepper. Toss together. Serve right away or chill until ready to eat."
+    ],
+    "note": "For celiac disease: verify packaged ingredients are gluten-free; avoid cross-contact during preparation.",
+    "diet": "vegan",
+    "dietLabel": "Vegan",
+    "dietColor": "#A94412",
+    "dietTags": [
+      "Gluten-free with label checks and cross-contact precautions"
+    ],
+    "image": "/images/recipes/chickpea-crunch-bowl.webp",
+    "imageAlt": "Chickpea Crunch Bowl — illustrative food image",
+    "series": "DERS"
+  },
+  {
+    "id": "blueberry-overnight-oats",
+    "title": "Blueberry Overnight Oats",
+    "minutes": 5,
+    "servings": 1,
+    "description": "A make-ahead blueberry breakfast with oats, chia and soy milk.",
+    "ingredients": [
+      "1/2 cup certified gluten-free rolled oats",
+      "3/4 cup unsweetened fortified soy milk",
+      "1 tbsp chia seeds",
+      "1/2 cup blueberries",
+      "1/4 tsp cinnamon"
+    ],
+    "instructions": [
+      "Stir oats, soy milk, chia and cinnamon in a clean jar. Fold in half the berries. Cover and refrigerate overnight. Stir in the morning; top with remaining berries. Add a splash of soy milk if too thick."
+    ],
+    "note": "Contains soy. *Use certified gluten-free oats. Some people with celiac disease cannot tolerate oats; follow your care plan. Preparation takes 5 minutes, plus overnight refrigeration.",
+    "diet": "vegan",
+    "dietLabel": "Vegan",
+    "dietColor": "#A94412",
+    "dietTags": [
+      "Certified gluten-free oats required; follow your celiac care plan"
+    ],
+    "image": "/images/recipes/blueberry-overnight-oats.webp",
+    "imageAlt": "Blueberry Overnight Oats — illustrative food image",
+    "series": "DERS"
+  },
+  {
+    "id": "cozy-lentil-spinach-soup",
+    "title": "Cozy Lentil & Spinach Soup",
+    "minutes": 40,
+    "servings": 4,
+    "description": "A warming pot of lentils, carrots and spinach.",
+    "ingredients": [
+      "1 cup dry green lentils, rinsed and checked",
+      "2 diced carrots",
+      "1 diced onion",
+      "4 cups low-sodium gluten-free vegetable broth",
+      "2 cups spinach",
+      "1 tbsp olive oil",
+      "1 tsp cumin"
+    ],
+    "instructions": [
+      "Heat oil in a pot. Soften onion and carrots for 5 min; stir in cumin. Add lentils and broth. Bring to a boil; cover loosely and simmer 25-30 min, until tender. Add water if needed. Stir in spinach; cook 2 min."
+    ],
+    "note": "For celiac disease: use labeled gluten-free broth and spices; prevent cross-contact. Lentils provide plant protein and fiber.",
+    "diet": "vegan",
+    "dietLabel": "Vegan",
+    "dietColor": "#A94412",
+    "dietTags": [
+      "Gluten-free with label checks and cross-contact precautions"
+    ],
+    "image": "/images/recipes/cozy-lentil-spinach-soup.webp",
+    "imageAlt": "Cozy Lentil & Spinach Soup — illustrative food image",
+    "series": "DERS"
+  },
+  {
+    "id": "green-gold-breakfast",
+    "title": "Green & Gold Breakfast",
+    "minutes": 10,
+    "servings": 1,
+    "description": "Eggs and spinach with avocado and tomatoes for a colorful start.",
+    "ingredients": [
+      "2 eggs",
+      "1 cup spinach",
+      "1 tsp olive oil",
+      "1/4 avocado, sliced",
+      "1/2 cup cherry tomatoes, halved",
+      "black pepper"
+    ],
+    "instructions": [
+      "Warm oil in a skillet; wilt spinach for 1 min. Beat eggs with pepper. Pour into pan and stir gently over medium-low heat until fully set and mixture reaches 160 F. Serve with avocado and tomatoes."
+    ],
+    "note": "Contains egg. Gluten-free ingredients: verify labels and avoid cross-contact if preparing for celiac disease.",
+    "diet": "vegetarian",
+    "dietLabel": "Vegetarian / flexitarian-friendly",
+    "dietColor": "#664391",
+    "dietTags": [
+      "Gluten-free with label checks and cross-contact precautions"
+    ],
+    "image": "/images/recipes/green-gold-breakfast.webp",
+    "imageAlt": "Green & Gold Breakfast — illustrative food image",
+    "series": "DERS"
   }
 ]
