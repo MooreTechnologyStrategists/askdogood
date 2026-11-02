@@ -1,7 +1,6 @@
-export const mission =
-  "Help our people reclaim health, self-worth, and opportunity through practical education, everyday tools, and resource connections—turning hard-earned lessons into next steps for a stronger future.";
-export const vision =
-  "A DMV where your ZIP code, income, or past does not close the door on a healthier, more stable future.";
+import { wellnessMission, wellnessVision } from "./wellnessFramework";
+export const mission = wellnessMission;
+export const vision = wellnessVision;
 export const topics = [
   {
     id: "health",

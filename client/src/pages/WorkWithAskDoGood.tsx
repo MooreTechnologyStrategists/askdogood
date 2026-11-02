@@ -1,3 +1,4 @@
+import { communityPriorities } from "@/content/wellnessFramework";
 import {
   Action,
   PageIntro,
@@ -20,6 +21,15 @@ export default function WorkWithAskDoGood() {
           </Action>
         </div>
       </PageIntro>
+      <Section tone eyebrow="One foundation, shared community goals" title="Everyday Wellness Plan for your group.">
+        <p className="adg-lead">A facilitated DERS workshop where participants create a seven-day plan for food, movement, rest, and a personally meaningful grounding practice.</p>
+        <p>Plan for approximately 75 minutes, with demonstration, guided practice, facilitator feedback, and a take-home plan. Group fees are quoted for your audience, location, group size, accessibility needs, and requested customization. Public individual pilot pricing is $25 per participant; group quotations are separate.</p>
+        <Action href="/contact?topic=Group%20Everyday%20Wellness%20Plan">Bring AskDoGood to your community</Action>
+      </Section>
+      <Section id="community-priorities" eyebrow="CHIP-aligned program planning" title="Four priorities. A practical contribution to each.">
+        <p>Our proposed program areas connect DERS with the four Community Health Improvement Plan priorities below. This describes program alignment, not an endorsement, contracted partnership, or clinical service.</p>
+        <div className="adg-grid adg-grid-two">{communityPriorities.map(p => <article className="adg-card" key={p.name}><p className="adg-eyebrow">{p.area}</p><h3>{p.name}</h3><p>{p.contribution}</p><p className="adg-small">{p.boundary}</p><Action href={"/contact?topic=" + encodeURIComponent("Community priority: " + p.name)} secondary>Discuss this priority</Action></article>)}</div>
+      </Section>
       <Section title="Three ways to learn, grow, and move forward.">
         <p className="adg-note">Real-life learning for real people. These are facilitated group experiences for organizations, campuses, employers and community partners—not prebooked public dates. Tell us about your group and we'll propose a date, format and quote. Sponsored seats may be available when funding is confirmed.</p>
         <div className="adg-grid adg-grid-three">

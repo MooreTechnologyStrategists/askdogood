@@ -1,3 +1,4 @@
+import { DERSFoundation, EverydayWellnessOffer } from "@/components/EverydayWellness";
 import WellnessPaths from "@/components/WellnessPaths";
 import VoterCallout from "@/components/VoterCallout";
 import PocketPeek from "@/components/PocketPeek";
@@ -25,15 +26,17 @@ export default function Home() {
       <PageIntro
         brandImage="/images/branding/askdogood-logo.png"
         eyebrow="AskDoGood · Black-rooted. DMV-grown. Everyone welcome."
-        title="You deserve a clearer next step."
-        text="Prepare for a clearer conversation about your care. Eat with more intention. Build routines that support your everyday life. Choose what you need, understand what you get, and take one good step."
+        title="Healthier routines. Real life. Your next step."
+        text="Build healthier everyday routines with practical education, affordable choices, and community connections. Eat well, spend less, and find a next step that fits your life."
         image="/images/community/family-kitchen.webp"
         alt="A family preparing a meal together in a welcoming kitchen"
       >
-        <div className="adg-actions"><Action href="#ask-services">Find my path</Action><Action href="/shop" secondary>Browse wellness guides</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
+        <div className="adg-actions"><Action href="/services#everyday-wellness">Build my everyday wellness plan</Action><Action href="/shop" secondary>Browse wellness guides</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
+      <EverydayWellnessOffer />
+      <DERSFoundation />
       <Section id="meet-dogood" tone eyebrow="Meet RoSeé · The woman behind AskDoGood" title="Pull up a chair. There’s room for you here.">
         <div className="adg-split" style={{alignItems:"start"}}>
           <img src="/images/personal/a-moment-with-dogood.webp" alt="A Moment with DoGood: RoSeé with copper locs and a knowing smile, against a cream, green and blush background" width={1254} height={1254} style={{display:"block",width:"100%",height:"auto",borderRadius:24}} />
@@ -182,7 +185,7 @@ export default function Home() {
       <Section
         tone
         eyebrow="Practical support you can purchase"
-        title="Three ways to take a next step."
+        title="More resources for your next step."
       >
         <OfferCards />
         <div className="adg-actions">
