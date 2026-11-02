@@ -19,10 +19,13 @@ export default function RouteSeo({ location }: RouteSeoProps) {
   }
 
   const overrides: Record<string, { title: string; description: string }> = {
+    "/": { title: "AskDoGood | Eat Well, Spend Less, Find Your Next Step", description: "Build healthier everyday routines with practical education, affordable choices, and community connections. Explore the Everyday Wellness Plan and free DERS starter." },
+    "/services": { title: "Everyday Wellness Plan | AskDoGood", description: "Explore the $25 guided workshop pilot, create a free seven-day DERS plan, or choose a self-paced wellness toolkit. Dates and delivery confirmed before booking." },
+    "/work-with-askdogood": { title: "Community Wellness Workshops | AskDoGood", description: "Bring DERS-based everyday wellness education to your group. Explore program alignment with Healthy Living, Healthy Minds, Healthy Start, and Healthy Connections." },
     "/about": {
       title: "Our Mission & Story | AskDoGood",
       description:
-        "Our mission is to help people care for their health, strengthen their relationships, and move forward in everyday life.",
+        "Practical education, affordable choices, and community connections for healthier everyday routines, guided by Diet, Exercise, Rest, and Spiritual practice.",
     },
     "/resources": {
       title: "Find Your Path | AskDoGood",
@@ -73,11 +76,6 @@ export default function RouteSeo({ location }: RouteSeoProps) {
       title: "Contact AskDoGood",
       description:
         "Ask about offers, orders, personal support, workshops, and partnerships.",
-    },
-    "/work-with-askdogood": {
-      title: "Community Workshops & Partnerships | AskDoGood",
-      description:
-        "Bring practical wellness education, healthy routines, and life-transition resources to your community.",
     },
     "/clinical-recipes": {
       title: "Recipes & Food Ideas | AskDoGood",

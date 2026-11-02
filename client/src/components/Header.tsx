@@ -2,13 +2,12 @@ import { Link, useLocation } from "wouter";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 const nav = [
-  ["Find my path", "/services"],
-  ["Pockets of Peace", "/pockets-of-peace"],
-  ["Offers & shop", "/shop"],
-  ["Play & Grow", "/play-grow"],
-  ["Free resources", "/resources/library"],
-  ["Workshops", "/work-with-askdogood"],
-  ["Health stories", "/health-stories"],
+  ["Eat Well", "/whats-good-to-eat"],
+  ["Spend Less", "/services#wellness-planner"],
+  ["Find Your Next Step", "/services"],
+  ["Our Story", "/about"],
+  ["Community Workshops", "/work-with-askdogood"],
+  ["Shop", "/shop"],
 ];
 export default function Header() {
   const [location] = useLocation();

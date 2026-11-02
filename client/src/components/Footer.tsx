@@ -35,6 +35,8 @@ export default function Footer() {
             <div>
               <h3>Offers & experiences</h3>
               {[
+                ["Everyday Wellness Plan", "/services#everyday-wellness"],
+                ["Free DERS plan starter", "/services#wellness-planner"],
                 ["Guides, plans & membership", "/shop"],
                 ["Shop merch", "/merch"],
                 ["Cookbook preview", "/cookbook"],

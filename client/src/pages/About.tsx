@@ -1,3 +1,4 @@
+import { DERSFoundation } from "@/components/EverydayWellness";
 import {
   Action,
   PageIntro,
@@ -11,7 +12,7 @@ export default function About() {
       <PageIntro
         eyebrow="About AskDoGood"
         title="Useful guidance for a full, real life."
-        text="AskDoGood brings together health education, relationships, practical life tools, and honest stories—so you can find a next step that fits your life."
+        text="Practical education, affordable choices, and community connections help you build healthier everyday routines. Diet, Exercise, Rest, and Spiritual practice are our foundation."
         image="/images/personal/food/zay-at-first-watch.jpg"
         alt="RoSeé smiling outside a restaurant"
       />
@@ -37,6 +38,7 @@ export default function About() {
           </article>
         </div>
       </Section>
+      <DERSFoundation />
       <Section tone title="What you’ll find here.">
         <TopicCards />
         <div className="adg-actions">

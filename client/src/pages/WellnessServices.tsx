@@ -1,3 +1,4 @@
 import {PageIntro} from '@/components/Experience';
 import WellnessPaths from '@/components/WellnessPaths';
-export default function WellnessServices(){return <div className="adg-page"><PageIntro eyebrow="AskDoGood · Practical support for real life" title="A clearer next step starts here." text="Prepare for your care conversations, eat with more intention, and build routines that support your everyday life. Free care preparation plus two self-paced $25 toolkits—with personal support available by inquiry." /><div className="container"><WellnessPaths /></div></div>;}
+import {DERSFoundation, EverydayWellnessOffer, WellnessPlanStarter} from '@/components/EverydayWellness';
+export default function WellnessServices(){return <div className="adg-page"><PageIntro eyebrow="Eat Well · Spend Less · Find Your Next Step" title="A healthier week starts with a workable plan." text="Practical wellness education built around Diet, Exercise, Rest, and Spiritual practice. Choose a guided workshop, try a free plan starter, or explore a self-paced toolkit." /><EverydayWellnessOffer /><DERSFoundation /><WellnessPlanStarter /><div className="container"><WellnessPaths /></div></div>;}
