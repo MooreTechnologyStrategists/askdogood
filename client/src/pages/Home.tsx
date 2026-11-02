@@ -30,7 +30,7 @@ export default function Home() {
         image="/images/community/family-kitchen.webp"
         alt="A family preparing a meal together in a welcoming kitchen"
       >
-        <div className="adg-actions"><Action href="#ask-services">Find my path</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
+        <div className="adg-actions"><Action href="#ask-services">Find my path</Action><Action href="/shop" secondary>Browse wellness guides</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
         <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
         <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
       </PageIntro>
