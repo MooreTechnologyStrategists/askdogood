@@ -86,7 +86,7 @@ export default function Home() {
           <LinkedCard href="/support/relationships" className="adg-card"><h3>Break patterns. Build self-worth.</h3><p>Explore habit-change resources, healthy relationship skills, boundaries, and reflection tools. Learn to name what is costing you peace and what support would help you move forward safely.</p><Action href="/support/relationships" secondary>Work on my boundaries &amp; worth</Action></LinkedCard>
           <LinkedCard href="/support/career" className="adg-card"><h3>Build opportunity through learning</h3><p>Starting over does not erase your ability. Explore cloud and AI education through The Dope Cloud TeacHer, career resources, and steps toward a new direction—including after incarceration or a gap in work.</p><Action href="/support/career" secondary>Plan my learning &amp; career path</Action></LinkedCard>
         </div>
-        <div className="adg-actions"><Action href="/contact?topic=Help%20choosing%20my%20next%20step">Ask us about my next step</Action><Action href="/shop" secondary>Explore guided plans &amp; membership</Action><Action href="/merch#original-checkout" secondary>Shop AskDoGood Merch</Action></div>
+        <div className="adg-actions"><Action href="/contact?topic=Help%20choosing%20my%20next%20step">Ask us about my next step</Action><Action href="/shop" secondary>See wellness guides and prices</Action><Action href="/merch#original-checkout" secondary>Shop AskDoGood Merch</Action></div>
       </Section>
       <Section tone eyebrow="Original AskDoGood collection" title="Wear a little peace. Carry a little commUNITY.">
         <div className="adg-split">
