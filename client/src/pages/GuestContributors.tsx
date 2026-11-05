@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -165,6 +166,7 @@ export default function GuestContributors() {
               <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
                 Tell your story. <span className="text-primary">Build with Ask DoGood.</span>
               </h1>
+          <LifeSticker />
               <p className="text-lg leading-relaxed text-muted-foreground">
                 Ask DoGood is where healing, structure, culture, and real-life growth meet. If you
                 have wisdom, lived experience, or a brand that genuinely serves the community, this

@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -64,6 +65,7 @@ export default function ForgotPassword() {
           <h1 className="font-serif text-4xl font-bold text-foreground mb-2">
             Reset Password
           </h1>
+          <LifeSticker />
           <p className="text-muted-foreground font-sans">
             Enter your email and we'll send you a reset link
           </p>

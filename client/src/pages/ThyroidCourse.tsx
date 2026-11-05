@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
@@ -175,6 +176,7 @@ export default function ThyroidCourse() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Thyroid Health Mastery
             </h1>
+          <LifeSticker />
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
               The Clinical Approach to Healing Your Thyroid Naturally

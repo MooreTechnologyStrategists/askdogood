@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Flower2,
@@ -141,6 +142,7 @@ export default function Interests() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               More Than Wellness
             </h1>
+          <LifeSticker />
             <p className="text-xl md:text-2xl text-muted-foreground">
               Healing isn't one-dimensional. It's gardening, music, tech, and
               self-care. It's creating, building, and showing up fully in every

@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -109,6 +110,7 @@ export default function ImageStudio() {
         <div className="space-y-3">
           <Badge className="bg-primary/10 text-primary border-primary/20">Image Automation Studio</Badge>
           <h1 className="text-3xl md:text-4xl font-bold">Generate Brand Images With SEO Metadata</h1>
+          <LifeSticker />
           <p className="text-muted-foreground max-w-3xl">
             This studio generates visuals for AskDoGood and automatically returns SEO fields, social tags,
             and Canva-ready production notes.

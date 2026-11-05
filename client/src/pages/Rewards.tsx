@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useUser } from "@/hooks/useUser";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
@@ -107,6 +108,7 @@ export default function Rewards() {
           <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: 'var(--font-serif)' }}>
             Rewards Store
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground mb-4">
             Redeem your points for exclusive rewards and benefits
           </p>

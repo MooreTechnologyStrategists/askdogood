@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useMemo, useState } from "react";
 import { CheckCircle2, Download, ClipboardList, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -107,6 +108,7 @@ export default function SymptomTracker() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
               Thyroid Symptom Tracker
             </h1>
+          <LifeSticker />
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Track your symptoms, identify patterns, and have concrete data to share with your doctor. 

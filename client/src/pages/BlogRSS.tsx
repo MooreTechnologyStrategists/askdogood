@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect } from 'react';
 import { safeBlogPosts } from '@/content/blogData';
 
@@ -20,6 +21,7 @@ export default function BlogRSS() {
   return (
     <div className="container py-20 text-center">
       <h1 className="text-3xl font-bold mb-4">Generating RSS Feed...</h1>
+          <LifeSticker />
       <p className="text-muted-foreground">
         Your RSS feed is being generated. If download doesn't start automatically,{' '}
         <button 

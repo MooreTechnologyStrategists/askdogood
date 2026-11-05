@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Clock, Sprout, Sun } from "lucide-react";
@@ -14,6 +15,7 @@ export default function GrowingFreshMint() {
           <h1 className="text-5xl md:text-6xl font-bold font-serif mb-4 text-primary">
             Growing Fresh Mint in Grow Bags
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground mb-8">
             Easy herb gardening for fresh, healing ingredients
           </p>

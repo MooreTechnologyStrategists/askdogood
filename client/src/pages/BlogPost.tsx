@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useParams, Link, useLocation } from "wouter";
 import { useMemo } from "react";
 import { marked } from "marked";
@@ -93,6 +94,7 @@ export default function BlogPost() {
             noindex
           />
           <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <LifeSticker />
           <p className="text-muted-foreground mb-8">
             The blog post you're looking for doesn't exist.
           </p>
@@ -215,6 +217,7 @@ export default function BlogPost() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {safeTitle}
             </h1>
+          <LifeSticker />
 
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
               <div className="flex items-center gap-2">

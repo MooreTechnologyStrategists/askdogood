@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -40,6 +41,7 @@ export default function ThyroidMasteryCourse() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                   Thyroid Health Mastery Course
                 </h1>
+          <LifeSticker />
                 <p className="text-xl text-muted-foreground mb-6">
                   Master your thyroid health with expert guidance and proven protocols. Everything you need to understand, manage, and optimize your thyroid health.
                 </p>

@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +19,7 @@ export default function Signup() {
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2">
             Join Ask DoGood
           </h1>
+          <LifeSticker />
           <p className="text-muted-foreground font-sans text-lg">
             A healing ecosystem for habits, mindset, meals, and momentum — built for real life.
           </p>

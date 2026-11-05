@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link } from "wouter";
 import { gardenSeasons } from "@/content/gardenSeasons";
 import SEO from "@/components/SEO";
@@ -18,6 +19,7 @@ export default function Garden() {
       <header className="max-w-3xl space-y-3">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">RoSeé's garden journal</p>
         <h1 className="text-4xl md:text-5xl font-bold">Seasons of Growth</h1>
+          <LifeSticker />
         <p className="text-lg leading-8 text-muted-foreground">
           Gardening can feel intimidating when you have limited space, a tight budget, or a plant that keeps looking at you sideways. Start with what you can check today: sunlight, soil moisture, drainage, and the season. Explore the growing notes below for practical ideas, then adapt them to your space and local weather. I also share what gardening has taught me about patience, starting over, and accepting that not every seed will make it.
         </p>

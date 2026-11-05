@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 // client/src/pages/NotFound.tsx
 import * as React from "react";
 import SEO from "@/components/SEO";
@@ -12,6 +13,7 @@ export default function NotFound() {
         noindex
       />
       <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>Page not found</h1>
+          <LifeSticker />
       <p>Sorry, the page you’re looking for doesn’t exist.</p>
     </div>
   );

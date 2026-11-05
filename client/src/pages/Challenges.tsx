@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useUser } from "@/hooks/useUser";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
@@ -177,6 +178,7 @@ export default function Challenges() {
           <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: 'var(--font-serif)' }}>
             Health Challenges
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground mb-4">
             Complete challenges to earn points and level up your wellness journey
           </p>

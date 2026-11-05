@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useMemo, useState } from "react";
 import { Search, ChevronDown, ChevronUp, AlertTriangle, Leaf, MapPin, Zap, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -1029,6 +1030,7 @@ export default function HerbDictionary() {
           <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4">
             A–Z Natural Wellness <span className="text-primary">Reference</span>
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             Real information about herbs, essential oils, vitamins, and minerals, including{" "}
             <strong>benefits, cautions, and thyroid-aware guidance before you use them</strong>.

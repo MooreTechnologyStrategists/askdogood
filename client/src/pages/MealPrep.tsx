@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -228,6 +229,7 @@ export default function MealPrepResources() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
               {siteCopy.mealPrep.headline}
             </h1>
+          <LifeSticker />
             <div className="mb-8 space-y-4 text-xl text-muted-foreground leading-relaxed">
               {splitCopy(siteCopy.mealPrep.content).map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>

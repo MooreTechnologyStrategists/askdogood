@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect } from "react";
 import { CheckCircle2, Download, Pill, ShoppingCart, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,6 +35,7 @@ export default function SupplementGuide() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
               Thyroid Supplement Guide
             </h1>
+          <LifeSticker />
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Stop wasting money on supplements that don't work. Get the complete guide to 

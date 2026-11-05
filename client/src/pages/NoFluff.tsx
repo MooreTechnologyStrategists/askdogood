@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,6 +31,7 @@ export default function NoFluff() {
             >
               No Fluff. Just Real Talk + Real Tools.
             </h1>
+          <LifeSticker />
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               I'm not here to sell you dreams. I'm here to share what actually worked for me—through thyroid cancer, autoimmune struggles, career pivots, and building a life that feels sustainable. No gimmicks. No empty promises. Just honest guidance and tools that deliver.

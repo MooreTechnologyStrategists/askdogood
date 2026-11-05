@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Clock, Users, Flame } from "lucide-react";
@@ -14,6 +15,7 @@ export default function HomemadePizza() {
           <h1 className="text-5xl md:text-6xl font-bold font-serif mb-4 text-primary">
             Homemade Pizza
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground mb-8">
             Whole grain crust loaded with vegetables and flavor
           </p>

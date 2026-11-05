@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { useUser } from "@/hooks/useUser";
@@ -36,6 +37,7 @@ export default function Profile() {
   return (
     <main className="container mx-auto max-w-2xl px-4 py-16">
       <h1 className="text-4xl font-bold">Your profile</h1>
+          <LifeSticker />
       <p className="mt-3 text-muted-foreground">Welcome, {name || user.userDetails || "friend"}. Add a little about yourself.</p>
       <Card className="mt-8"><CardHeader><CardTitle>Your details</CardTitle><CardDescription>These notes are stored on this device. They do not sync across devices or grant membership access.</CardDescription></CardHeader>
         <CardContent>

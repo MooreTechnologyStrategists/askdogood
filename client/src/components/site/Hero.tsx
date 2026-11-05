@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 type HeroProps = {
   title: string;
   subtitle?: string;
@@ -16,6 +17,7 @@ export default function Hero({ title, subtitle, image, align = "left" }: HeroPro
         <div className="relative container py-16 md:py-24 text-white">
           <div className={align === "center" ? "max-w-3xl mx-auto text-center" : "max-w-3xl"}>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">{title}</h1>
+          <LifeSticker />
             {subtitle ? (
               <p className="mt-5 text-lg md:text-2xl text-white/90 leading-relaxed">{subtitle}</p>
             ) : null}

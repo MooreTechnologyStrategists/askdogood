@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -271,6 +272,7 @@ export default function LabelScanner() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ fontFamily: 'var(--font-serif)' }}>
             Smart Label Scanner 🏷️
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Scan any food label and get instant personalized health insights based on YOUR conditions, goals, and diet. 
             Make informed choices that support your holistic wellness journey! 💚

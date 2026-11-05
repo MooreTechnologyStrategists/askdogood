@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link } from "wouter";
 import { siteCopy } from "@/content/siteCopy";
 
@@ -12,6 +13,7 @@ export default function ResourcesHeader() {
         <h1 className="text-3xl md:text-4xl font-semibold mb-4">
           {siteCopy.resources.headline}
         </h1>
+          <LifeSticker />
 
         <div className="space-y-4 text-gray-600 mb-6">
           {siteCopy.resources.content.split("\n\n").map((paragraph) => (

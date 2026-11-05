@@ -1,4 +1,3 @@
-import LifeSticker from "@/components/LifeSticker";
 import WellnessServices from "@/pages/WellnessServices";
 import MyToolkit from "@/pages/MyToolkit";
 import PlayGrow from "@/pages/PlayGrow";
@@ -14,7 +13,6 @@ import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AnnouncementBar from "./components/AnnouncementBar";
 import BookTeaser from "./components/BookTeaser";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import SupportTopic from "./pages/SupportTopic";
@@ -244,10 +242,9 @@ function App() {
             <a className="adg-skip" href="#main-content">
               Skip to content
             </a>
-            <AnnouncementBar />
             <Header />
             <main id="main-content" className="flex-1 adg-site-content">
-              <LifeSticker /><Router /><LifeSticker slot={1} />
+              <Router />
             </main>
 
             <Chatbot />

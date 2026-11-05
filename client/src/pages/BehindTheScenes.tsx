@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
@@ -88,6 +89,7 @@ export default function BehindTheScenes() {
                 <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl">
                   The real work behind real change.
                 </h1>
+          <LifeSticker />
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
                   AskDoGood is not just a brand. It is a lifestyle in progress.
                 </p>

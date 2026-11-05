@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -152,6 +153,7 @@ export default function Dashboard() {
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
                 Your Dashboard
               </h1>
+          <LifeSticker />
               <p className="mt-2 text-muted-foreground text-lg flex items-center gap-2 flex-wrap">
                 {currentQuote}
                 <Button 

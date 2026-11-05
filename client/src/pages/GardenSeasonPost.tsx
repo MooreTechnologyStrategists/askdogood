@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link, useRoute } from "wouter";
 import SEO from "@/components/SEO";
 import { gardenSeasons, getSeason } from "@/content/gardenSeasons";
@@ -26,6 +27,7 @@ export default function GardenSeasonPost() {
           noindex
         />
         <h1 className="text-2xl font-bold">Not found</h1>
+          <LifeSticker />
         <p className="mt-2 text-muted-foreground">That season isn’t planted yet.</p>
         <Link href="/garden">
           <a className="underline mt-6 inline-block">Back to Garden</a>
@@ -92,6 +94,7 @@ export default function GardenSeasonPost() {
 
       <article className="max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-bold">{season.title}</h1>
+          <LifeSticker />
         {season.subtitle ? (
           <p className="mt-2 text-muted-foreground">{season.subtitle}</p>
         ) : null}

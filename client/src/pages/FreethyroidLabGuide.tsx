@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect } from "react";
 import { CheckCircle2, Download, FileText, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ export default function FreeThyroidLabGuide() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
               The Ultimate Thyroid Lab Interpretation Guide
             </h1>
+          <LifeSticker />
             
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Stop guessing what your thyroid labs mean. Get instant access to my comprehensive guide 

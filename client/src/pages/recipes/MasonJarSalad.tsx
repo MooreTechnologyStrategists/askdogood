@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Clock, Users, Flame } from "lucide-react";
@@ -14,6 +15,7 @@ export default function MasonJarSalad() {
           <h1 className="text-5xl md:text-6xl font-bold font-serif mb-4 text-primary">
             Mason Jar Salad
           </h1>
+          <LifeSticker />
           <p className="text-xl text-muted-foreground mb-8">
             Meal prep made easy with layers of fresh, crisp vegetables
           </p>

@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { BlogRenderer } from "@/components/BlogRenderer";
@@ -38,6 +39,7 @@ export default function InMyKitchen() {
           <div className="mx-auto max-w-4xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Kitchen journal</p>
             <h1 className="text-4xl md:text-6xl font-semibold mt-3 mb-4">{typedKitchenPost.title}</h1>
+          <LifeSticker />
             <p className="text-lg text-muted-foreground leading-8">{typedKitchenPost.excerpt}</p>
 
             <div className="mt-8 overflow-hidden rounded-[2rem] border border-border/70 shadow-sm">

@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -92,6 +93,7 @@ export default function ThyroidHealthMasteryCourse() {
             >
               Thyroid Health Mastery
             </h1>
+          <LifeSticker />
 
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               {course.subtitle}

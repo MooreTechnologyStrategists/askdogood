@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -54,6 +55,7 @@ export default function Login() {
           <h1 className="font-serif text-4xl font-bold text-foreground mb-2">
             Welcome Back
           </h1>
+          <LifeSticker />
           <p className="text-muted-foreground font-sans">
             Sign in to access your wellness journey
           </p>

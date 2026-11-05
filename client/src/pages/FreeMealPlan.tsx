@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import { useEffect } from "react";
 import {
   CheckCircle2,
@@ -53,6 +54,7 @@ export default function FreeMealPlan() {
             >
               Free Thyroid Symptom Checklist + 3-Day Meal Plan
             </h1>
+          <LifeSticker />
 
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Get a focused starter pack: the thyroid symptom checklist that

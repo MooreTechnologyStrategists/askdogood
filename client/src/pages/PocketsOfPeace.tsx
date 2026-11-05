@@ -1,3 +1,4 @@
+import LifeSticker from "@/components/LifeSticker";
 import PocketPeek from "@/components/PocketPeek";
 import { useState } from "react";
 import { Link } from "wouter";
@@ -24,6 +25,7 @@ export default function PocketsOfPeace() {
     <header style={{background:"#f6efe3",padding:"clamp(1.5rem,5vw,4rem)",borderRadius:24}}>
       <p style={{textTransform:"uppercase",letterSpacing:2,fontWeight:800,color:"#a4493b"}}>AskDoGood · Pockets of Peace</p>
       <h1 style={{fontSize:"clamp(2.2rem,6vw,4.4rem)",lineHeight:1.08,margin:"1rem 0"}}>Life is doing the most. Find a little room to breathe.</h1>
+          <LifeSticker />
       <p style={{fontSize:"1.2rem",maxWidth:690}}>Maybe your day has been bills, family obligations, job worries, or one more thing you did not plan for. This page offers four small, free ways to reset: try a gardening idea, reflect on a song, make something simple to eat, or put a hard-earned lesson into words. None of it replaces the practical help you may need.</p>
       <a href="#take-five" style={{display:"inline-block",background:"#225c45",color:"white",padding:"0.85rem 1.3rem",borderRadius:10,fontWeight:700}}>Take five minutes for yourself →</a>
     </header>
