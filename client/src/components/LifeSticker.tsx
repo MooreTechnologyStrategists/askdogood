@@ -12,5 +12,5 @@ export default function LifeSticker({slot=0}:{slot?:number}){
  const [path]=useLocation();if(path==='/my-toolkit')return null;
  const hash=[...path+new Date().toISOString().slice(0,10)].reduce((n,c)=>n+c.charCodeAt(0),0);
  const note=notes[(hash+slot*3)%notes.length];
- return <aside className="life-sticker-wrap" aria-label="A little AskDoGood encouragement"><details className="life-sticker"><summary>{note.title}<span> Open a little good ↗</span></summary><p>{note.text}</p>{note.source?<a href={note.source} target="_blank" rel="noopener noreferrer">{note.label} →</a>:<small>An original AskDoGood reminder</small>}</details></aside>;
+ return <aside className="life-sticker-wrap" aria-label="A little AskDoGood encouragement"><details className="life-sticker"><summary>{note.title}<span> Open a little good</span></summary><p>{note.text}</p>{note.source?<a href={note.source} target="_blank" rel="noopener noreferrer">{note.label} →</a>:<small>An original AskDoGood reminder</small>}</details></aside>;
 }

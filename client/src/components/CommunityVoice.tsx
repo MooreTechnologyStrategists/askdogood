@@ -4,7 +4,7 @@ export function CommunityVoice() {
     <div className="adg-community-voice">
       <div>
         <p className="adg-eyebrow">
-          Whole-life support. With our people in mind.
+          Good company for the next chapter.
         </p>
         <h2>
           You can exhale here.
@@ -15,10 +15,10 @@ export function CommunityVoice() {
           Leaving street life. Changing your relationship with weed or other substances. Coming home after incarceration. Grief, job uncertainty, bills, and relationships that keep draining you. You can bring the hard truth here without being reduced to it.
         </p>
         <p>
-          AskDoGood is rooted in the lives of Black and Brown communities,
-          including people living on modest incomes or no income. Your income
-          does not determine your worth—or your welcome here. Everyone who comes
-          with respect belongs.
+          A meal that stretches. A song that takes you back. A neighbor who
+          shares a useful resource. Care shows up in everyday ways around here.
+          Bring your questions, your stories, and whatever this season looks
+          like for you. There is room at the table, before you spend a dollar.
         </p>
       </div>
       <div className="adg-manifesto">

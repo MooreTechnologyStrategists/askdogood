@@ -25,7 +25,7 @@ export default function Home() {
     <div className="adg-page">
       <PageIntro
         brandImage="/images/branding/askdogood-logo.png"
-        eyebrow="AskDoGood · Black-rooted. DMV-grown. Everyone welcome."
+        eyebrow="AskDoGood · A little good, every day."
         title="Healthier routines. Real life. Your next step."
         text="Build healthier everyday routines with practical education, affordable choices, and community connections. Eat well, spend less, and find a next step that fits your life."
         image="/images/community/family-kitchen.webp"
@@ -112,7 +112,7 @@ export default function Home() {
       >
         <TopicCards />
       </Section>
-      <Section tone eyebrow="Our commitment to the DMV" title="Your neighborhood deserves investment. Your life deserves room to grow.">
+      <Section tone eyebrow="Here for our neighbors" title="Your neighborhood deserves investment. Your life deserves room to grow.">
         <div style={{ maxWidth: "48rem" }}>
           <p>AskDoGood is rooted in Prince George’s County and Washington, DC, with a commitment to reaching underserved neighbors, including Wards 7 and 8. These communities hold talent, creativity, families, and futures worth investing in. Hardship is something people face; it is not the whole story of who they are.</p>
           <p>My stance is clear: I stand with people seeking dignity, stability, care, and a fair chance to build a better life. I oppose policies and decisions—including those of the current administration—that strip our communities of opportunity or make everyday survival harder. I want our response to include both a clear voice and something useful people can do.</p>

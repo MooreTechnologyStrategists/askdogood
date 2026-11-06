@@ -182,7 +182,7 @@ export default function GuestContributors() {
                 <div className="rounded-2xl border bg-background/70 p-4">
                   <p className="text-sm font-semibold">Community-first</p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Practical content for Black and Brown wellness journeys and real everyday life.
+                    Useful ideas for the meals, routines, conversations, and communities we share.
                   </p>
                 </div>
                 <div className="rounded-2xl border bg-background/70 p-4">
