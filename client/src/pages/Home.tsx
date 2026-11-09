@@ -254,27 +254,53 @@ export default function Home() {
         eyebrow="Wellness in the DMV"
         title="Bring practical wellness to your group"
       >
-        <p>
-          AskDoGood offers group workshops for faith communities, senior
-          centers, nonprofits, and workplaces. Tell us who you’re bringing
-          together and what you want participants to take home.
-        </p>
-        <div className="adg-actions">
-          <Action href="/contact?topic=Community%20workshop">
-            Inquire About a Group Workshop
-          </Action>
-          <Action href="/work-with-askdogood" secondary>
-            Explore Workshop Formats
-          </Action>
-        </div>
-        <p>
-          See where we’ve shown up in DC, from the resource fair at St. Luke to
-          the digital inclusion fair at Trinidad Baptist Church.
-        </p>
-        <div className="adg-actions">
-          <Action href="/community" secondary>
-            See Community Highlights
-          </Action>
+        <div className="adg-split">
+          <div>
+            <p>
+              Across Prince George’s County and DC, we want wellness to feel
+              like something you can talk about after church, at the senior
+              center, or around the kitchen table. Our workshops make room for
+              real questions, from stretching a grocery budget to building a
+              routine that fits the week you actually have.
+            </p>
+            <p>
+              We’ve shown up at the St. Luke recruitment and resource fair in
+              Washington, DC, and AskDoGood was represented at the YPD Community
+              Impact Event. We’ve also been in conversation with the University
+              of Maryland Extension’s Expanded Food and Nutrition Education
+              Program about what a community nutrition pilot could look like.
+            </p>
+            <p>
+              If you bring people together at a church, senior center,
+              nonprofit, or workplace, tell us what would be useful for your
+              group. We’ll talk through what a workshop could look like.
+            </p>
+            <div className="adg-actions">
+              <Action href="/contact?topic=Community%20workshop">
+                Inquire About a Group Workshop
+              </Action>
+              <Action href="/work-with-askdogood" secondary>
+                Explore Workshop Formats
+              </Action>
+            </div>
+          </div>
+          <figure>
+            <img
+              className="adg-photo"
+              src="/images/community/st-luke-connections.webp"
+              alt="Attendees and recruiters talking beside resource tables at St. Luke"
+              loading="lazy"
+            />
+            <figcaption className="adg-small">
+              Connecting with neighbors at the St. Luke resource fair in
+              Washington, DC.
+            </figcaption>
+            <div className="adg-actions">
+              <Action href="/community" secondary>
+                See Community Highlights
+              </Action>
+            </div>
+          </figure>
         </div>
       </Section>
     </div>
