@@ -1,5 +1,5 @@
-export const wellnessMission = "Help people build healthier everyday routines through practical education, affordable choices, and community connections.";
-export const wellnessVision = "Communities where healthier living is understandable, achievable, and supported—regardless of income or starting point.";
+export const wellnessMission = "Empowering everyday people to reclaim their health, self-worth, and vitality through practical wellness education, affordable food habits, and culturally grounded community support.";
+export const wellnessVision = "A future where whole-person health is accessible, affordable, and actionable for every community—starting on your porch, in your kitchen, and in your daily choices.";
 export const dersPillars = [
   { key: "diet", name: "Diet", description: "Food you enjoy, a grocery budget you can work with, and a meal plan that fits your week.", prompt: "One food or shopping step I can repeat", example: "Example: plan two dinners around ingredients I already have." },
   { key: "exercise", name: "Exercise", description: "Everyday movement adapted to your ability, preferences, and available time.", prompt: "One movement step that fits my ability", example: "Example: choose a comfortable movement break during my day." },

@@ -1,14 +1,30 @@
 import { Link, useLocation } from "wouter";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
 import { Menu, X } from "lucide-react";
 const nav = [
-  ["Eat Well", "/whats-good-to-eat"],
-  ["Spend Less", "/services#wellness-planner"],
-  ["Find Your Next Step", "/services"],
+  ["Find Your Next Step", "/#find-your-next-step"],
+  ["Wellness Guides", "/#pathways"],
   ["Our Story", "/about"],
   ["Community Workshops", "/work-with-askdogood"],
   ["Shop", "/shop"],
 ];
+function NavLink({
+  href,
+  children,
+  ...props
+}: ComponentPropsWithoutRef<"a"> & { href: string }) {
+  if (href.includes("#"))
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  return (
+    <Link href={href} {...props}>
+      {children}
+    </Link>
+  );
+}
 export default function Header() {
   const [location] = useLocation();
   const [open, setOpen] = useState(false);
@@ -25,13 +41,14 @@ export default function Header() {
         </Link>
         <nav aria-label="Main navigation" className="adg-desktop-nav">
           {nav.map(([name, href]) => (
-            <Link
+            <NavLink
               key={href}
               href={href}
+              onClick={() => setOpen(false)}
               aria-current={location === href ? "page" : undefined}
             >
               {name}
-            </Link>
+            </NavLink>
           ))}
         </nav>
         <Link href="/contact" className="adg-header-contact">
@@ -54,13 +71,14 @@ export default function Header() {
           className="adg-mobile-nav container"
         >
           {nav.map(([name, href]) => (
-            <Link
+            <NavLink
               key={href}
               href={href}
+              onClick={() => setOpen(false)}
               aria-current={location === href ? "page" : undefined}
             >
               {name}
-            </Link>
+            </NavLink>
           ))}
           <Link href="/contact">Contact</Link>
           <Link href="/login">Member sign in</Link>

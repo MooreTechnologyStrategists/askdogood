@@ -1,429 +1,270 @@
-import { DERSFoundation, EverydayWellnessOffer } from "@/components/EverydayWellness";
-import WellnessPaths from "@/components/WellnessPaths";
-import VoterCallout from "@/components/VoterCallout";
-import PocketPeek from "@/components/PocketPeek";
-import CommunityEvents from "@/components/CommunityEvents";
-import NextStepBuilder from "@/components/NextStepBuilder";
-import { Link } from "wouter";
-import {
-  Action,
-  LinkedCard,
-  PageIntro,
-  Section,
-  TopicCards,
-  OfferCards,
-  HowItWorks,
-  Reassurance,
-} from "@/components/Experience";
+import { useEffect, useRef, useState } from "react";
+import { Action, PageIntro, Section } from "@/components/Experience";
 import { mission, vision } from "@/content/experience";
-import {
-  CommunityVoice,
-  CommunityResources,
-} from "@/components/CommunityVoice";
+import { catalogById } from "@/data/catalog";
+import { trackEvent } from "@/lib/analytics";
+
+const pathways = [
+  {
+    title: "Thyroid & Hormone Health",
+    description:
+      "Organize your questions and prepare to discuss thyroid labs with your clinician.",
+    free: ["Open the free thyroid lab guide", "/free-thyroid-lab-guide"],
+    guide: "thyroid-lab-interpretation-guide",
+    program: "thyroid-health-mastery",
+  },
+  {
+    title: "Budget Nutrition & Container Gardening",
+    description:
+      "Plan affordable meals and learn what you can grow in a small space.",
+    free: ["Explore the garden resources", "/garden"],
+    guide: "garden-to-table-wellness-bundle",
+    program: "21-day-plant-based-reset",
+  },
+  {
+    title: "Patient Advocacy & Appointment Prep",
+    description:
+      "Gather your notes, decide what to ask, and make the most of your next visit.",
+    free: ["Open the free appointment checklist", "/doctor-checklist"],
+    guide: "black-womens-health-advocacy-toolkit",
+    program: null,
+  },
+  {
+    title: "Rest & Everyday Routines",
+    description:
+      "Make room for rest, comfortable movement, and a practice that grounds you.",
+    free: ["Build a free DERS plan", "/services#wellness-planner"],
+    guide: "7-day-reset",
+    program: null,
+  },
+] as const;
+
+type Pathway = (typeof pathways)[number];
+
+function WellnessQuiz() {
+  const [pathway, setPathway] = useState<Pathway | null>(null);
+  const [format, setFormat] = useState<"free" | "guide" | "program" | null>(
+    null
+  );
+  const heading = useRef<HTMLHeadingElement>(null);
+  const step = format ? 3 : pathway ? 2 : 1;
+
+  useEffect(() => {
+    if (step > 1) heading.current?.focus();
+  }, [step]);
+
+  function chooseFormat(choice: NonNullable<typeof format>) {
+    setFormat(choice);
+    trackEvent("wellness_quiz_complete");
+  }
+
+  const productId = format === "program" ? pathway?.program : pathway?.guide;
+  const product =
+    format !== "free" && productId ? catalogById[productId] : undefined;
+
+  function goBack() {
+    if (format) setFormat(null);
+    else {
+      setPathway(null);
+      heading.current?.focus();
+    }
+  }
+
+  return (
+    <div className="adg-card" data-clarity-mask="true">
+      <p className="adg-eyebrow">Step {step} of 3</p>
+      <h3 ref={heading} tabIndex={-1}>
+        {step === 1
+          ? "What would you like support with?"
+          : step === 2
+            ? "How would you like to get started?"
+            : pathway?.title}
+      </h3>
+      {step === 1 && (
+        <div className="adg-actions">
+          {pathways.map(option => (
+            <button
+              key={option.title}
+              type="button"
+              className="adg-button adg-button-secondary"
+              onClick={() => {
+                setPathway(option);
+                trackEvent("wellness_quiz_start");
+              }}
+            >
+              {option.title}
+            </button>
+          ))}
+        </div>
+      )}
+      {step === 2 && (
+        <div className="adg-actions">
+          <button
+            type="button"
+            className="adg-button adg-button-secondary"
+            onClick={() => chooseFormat("free")}
+          >
+            Start with a free resource
+          </button>
+          <button
+            type="button"
+            className="adg-button adg-button-secondary"
+            onClick={() => chooseFormat("guide")}
+          >
+            Use a self-paced guide or toolkit
+          </button>
+          {pathway?.program && (
+            <button
+              type="button"
+              className="adg-button adg-button-secondary"
+              onClick={() => chooseFormat("program")}
+            >
+              Explore a structured program
+            </button>
+          )}
+        </div>
+      )}
+      {format && pathway && (
+        <>
+          <p>{product?.shortSummary ?? pathway.description}</p>
+          <div className="adg-actions">
+            {product?.internalPath && (
+              <a className="adg-button" href={product.internalPath}>
+                View {product.name} · {product.priceLabel}
+              </a>
+            )}
+            <a
+              className={
+                product?.internalPath
+                  ? "adg-button adg-button-secondary"
+                  : "adg-button"
+              }
+              href={pathway.free[1]}
+            >
+              {pathway.free[0]}
+            </a>
+          </div>
+        </>
+      )}
+      {step > 1 && (
+        <button
+          type="button"
+          className="adg-button adg-button-secondary"
+          onClick={goBack}
+        >
+          Back
+        </button>
+      )}
+      <p className="adg-small">
+        Your answers stay in this quiz. These recommendations are for wellness
+        education.
+      </p>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="adg-page">
       <PageIntro
-        brandImage="/images/branding/askdogood-logo.png"
-        eyebrow="AskDoGood · A little good, every day."
-        title="Healthier routines. Real life. Your next step."
-        text="Build healthier everyday routines with practical education, affordable choices, and community connections. Eat well, spend less, and find a next step that fits your life."
+        eyebrow="AskDoGood · Prince George’s County & Washington, DC"
+        title="Budget-friendly wellness for real life."
+        text="Eat well, spend less, and find a next step that fits your life. Start with practical guides, tools for your next appointment, and routines you can make your own."
         image="/images/community/family-kitchen.webp"
-        alt="A family preparing a meal together in a welcoming kitchen"
+        alt="A family preparing a meal together"
       >
-        <div className="adg-actions"><Action href="/services#everyday-wellness">Build my everyday wellness plan</Action><Action href="/shop" secondary>Browse wellness guides</Action><Action href="/resources/start#right-now" secondary>Find help &amp; resources</Action></div>
-        <p className="adg-small">Free starting tools · Faith-rooted · Built for real life</p>
-        <p>I’m RoSeé. I built AskDoGood to turn what I have lived and learned into something useful for our people. We deserve more than survival. We deserve choices, dignity, and room to grow. Let’s put one good step in motion.</p>
+        <div className="adg-actions">
+          <Action href="#find-your-next-step">
+            Take the 60-Second Wellness Quiz
+          </Action>
+          <Action href="#pathways" secondary>
+            Explore Our Guides
+          </Action>
+        </div>
       </PageIntro>
-      <EverydayWellnessOffer />
-      <DERSFoundation />
-      <Section id="meet-dogood" tone eyebrow="Meet RoSeé · The woman behind AskDoGood" title="Pull up a chair. There’s room for you here.">
-        <div className="adg-split" style={{alignItems:"start"}}>
-          <img src="/images/personal/a-moment-with-dogood.webp" alt="A Moment with DoGood: RoSeé with copper locs and a knowing smile, against a cream, green and blush background" width={1254} height={1254} style={{display:"block",width:"100%",height:"auto",borderRadius:24}} />
-          <div>
-            <p className="adg-lead">Allow me to introduce myself. And yes, this expression comes with commentary. 😂</p>
-            <p>I’m RoSeé—also known as DoGood—the woman behind AskDoGood.</p>
-            <p>Cloud architect. Hairstylist. Army veteran. Mother. Grandmother. Student. And apparently, someone who believes one lifetime should hold at least seven careers.</p>
-            <p>I love a good laugh, a meaningful conversation, and information you can actually do something with. My faith grounds me. My curiosity keeps me learning. And my life has given me plenty to write about—which is how a book became part of the mix, too.</p>
-            <p>AskDoGood brings those pieces together: practical resources, healthy living on a budget, real community connections, and room to pause when life gets loud.</p>
-            <p>Around here, we can talk about what’s for dinner, what’s draining your wallet, what’s happening in our communities, and what your next chapter might look like. There’s room for prayer, accountability, and a little well-placed side-eye.</p>
-            <p>I’m building a space where we can learn something, laugh a little, and leave better equipped to handle our business.</p>
-            <p><strong>Welcome to AskDoGood. Pull up a chair.</strong></p>
-            <p><strong>Eat Well • Spend Less • Find Your Next Step</strong></p>
-            <p>What could you use a little more of right now: peace, practical help, or a fresh start?</p>
-            <div className="adg-actions"><Action href="/pockets-of-peace">A little peace</Action><Action href="/resources/start" secondary>Practical help</Action><Action href="/journey" secondary>Get to know me</Action></div>
-          </div>
-        </div>
-      </Section>
-      <div className="container"><WellnessPaths /></div>
-      <VoterCallout />
-      <Section id="community-highlights" tone eyebrow="October 8–10 · Good in motion" title="Community highlights: access, inclusion, and opportunity.">
-        <p className="adg-lead">We’re taking wellness, learning, and opportunity into our community. See where we showed up—and find your next step with us.</p>
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/community#st-luke-recap" className="adg-card adg-image-card"><img src="/images/community/st-luke-gathering.webp" alt="Community members and resource tables fill the room at St. Luke in Washington, DC" loading="lazy" /><div><p className="adg-eyebrow">St. Luke · October 8 · Washington, DC</p><h3>A second chance needs an open door.</h3><p>Good people. Renewed hope. Real possibilities. Our reflection on the recruitment and resource fair centers on dignity, connection, and making room for people to begin again.</p><Action href="/community#st-luke-recap">See the St. Luke highlight</Action></div></LinkedCard>
-          <LinkedCard href="/community#trinidad-recap" className="adg-card adg-image-card"><img src="/images/community/trinidad-community.webp" alt="A smiling participant beside the DCT information table at the Trinidad Baptist Church tech fair" loading="lazy" /><div><p className="adg-eyebrow">The Code for Change · Trinidad Baptist Church</p><h3>The Code for Change Digital Inclusion &amp; Tech Fair</h3><p>The Digital Inclusion &amp; Tech Fair connected the community with digital tools, skills, and resources at Trinidad Baptist Church.</p><Action href="/community#trinidad-recap">See the Trinidad highlight</Action></div></LinkedCard>
-          <LinkedCard href="/community#ypd-recap" className="adg-card adg-image-card"><img src="/images/community/ypd-welcome.webp" alt="Youth Professional Development event welcome sign beside yellow flowers" loading="lazy" /><div><p className="adg-eyebrow">YPD · Community Impact Event</p><h3>Inclusion with room to grow.</h3><p>An inclusive gathering brought several developmental organizations together to share resources, with youth career information among the opportunities to explore.</p><Action href="/community#ypd-recap">See the YPD highlight</Action></div></LinkedCard>
-        </div>
-      </Section>
-      <Section tone eyebrow="NEW · Play & Grow" title="A little joy belongs in your next chapter."><PocketPeek /><div className="adg-grid adg-grid-three"><LinkedCard href="/play-grow" className="adg-card"><h3>Quick curiosity</h3><p>Four-question rounds on health, love, music, faith, and everyday foundations. Get the why behind each answer.</p><Action href="/play-grow">Pick my quiz</Action></LinkedCard><LinkedCard href="/play-grow?activity=puzzle" className="adg-card"><h3>Peace by piece</h3><p>Arrange word tiles into an original AskDoGood reminder. A gentle puzzle, with hints when you want them.</p><Action href="/play-grow?activity=puzzle" secondary>Piece together some peace</Action></LinkedCard><LinkedCard href="/play-grow?activity=pocket" className="adg-card"><h3>A surprise pocket</h3><p>Open a reflection about music, growth, kindness, or self-worth. No score, just a little room for you.</p><Action href="/play-grow?activity=pocket" secondary>Open my pocket</Action></LinkedCard></div></Section>
-      <Section id="take-action" tone eyebrow="The next move is yours" title="Choose a goal. Leave with a next step.">
-        <NextStepBuilder />
-      </Section>
-      <Section eyebrow="My life. Our learning. Your next step." title="Your diagnosis does not get to tell your whole story.">
-        <p className="adg-lead">I’m making room for the health experiences I have lived: hearing loss, thyroid cancer, mental health, migraines, digestive conditions, and changes in my body and habits. Explore 19 individual topics across six categories with trusted resources, clear visuals, and questions you can take to your next appointment.</p>
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/health-stories/category/mental-emotional-health" className="adg-card"><h3>Mental &amp; emotional health</h3><p>Panic attacks, anxiety, depression, and PTSD. Support starts with being heard.</p><Action href="/health-stories/category/mental-emotional-health" secondary>Explore health stories</Action></LinkedCard>
-          <LinkedCard href="/health-stories/category/digestive-health" className="adg-card"><h3>Digestive health</h3><p>IBS, ulcers, gastritis, and acid reflux each deserve their own conversation.</p><Action href="/health-stories/category/digestive-health" secondary>Explore digestive health</Action></LinkedCard>
-          <LinkedCard href="/health-stories" className="adg-card"><h3>Bring your questions</h3><p>Every topic includes an appointment worksheet you can download and keep.</p><Action href="/health-stories" secondary>Find my topic &amp; worksheet</Action></LinkedCard>
-        </div>
-      </Section>
-      <Section eyebrow="What we help you put into practice" title="A healthier life. A stronger sense of self. More choices.">
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/doctor-checklist" className="adg-card"><h3>Protect your health</h3><p>Meal planning, everyday routines, and appointment preparation help you act on your health goals. If you want to know whether healthier habits could change your medication needs, start with a review by your prescribing clinician. AskDoGood does not direct medication changes.</p><Action href="/doctor-checklist" secondary>Start my care conversation</Action></LinkedCard>
-          <LinkedCard href="/support/relationships" className="adg-card"><h3>Break patterns. Build self-worth.</h3><p>Explore habit-change resources, healthy relationship skills, boundaries, and reflection tools. Learn to name what is costing you peace and what support would help you move forward safely.</p><Action href="/support/relationships" secondary>Work on my boundaries &amp; worth</Action></LinkedCard>
-          <LinkedCard href="/support/career" className="adg-card"><h3>Build opportunity through learning</h3><p>Starting over does not erase your ability. Explore cloud and AI education through The Dope Cloud TeacHer, career resources, and steps toward a new direction—including after incarceration or a gap in work.</p><Action href="/support/career" secondary>Plan my learning &amp; career path</Action></LinkedCard>
-        </div>
-        <div className="adg-actions"><Action href="/contact?topic=Help%20choosing%20my%20next%20step">Ask us about my next step</Action><Action href="/shop" secondary>See wellness guides and prices</Action><Action href="/merch#original-checkout" secondary>Shop AskDoGood Merch</Action></div>
-      </Section>
-      <Section tone eyebrow="Original AskDoGood collection" title="Wear a little peace. Carry a little commUNITY.">
-        <div className="adg-split">
-          <Link href="/merch#original-collection" aria-label="View the original AskDoGood collection">
-            <img src="/images/merch/askdogood-original-three.webp" alt="AskDoGood black embroidered hoodie, hoodie and jogger set, and cream logo tee" className="adg-photo adg-photo-contain" loading="lazy" />
-          </Link>
-          <div>
-            <h3>Your message. Your everyday pieces.</h3>
-            <p>Cream logo tee $29. Black embroidered hoodie $59. Hoodie and jogger set $95. Choose sizes S–2XL, with separate hoodie and jogger sizes for the set.</p>
-            <div className="adg-actions"><Action href="/merch#original-checkout">Choose my piece &amp; size</Action><Action href="/merch#original-collection" secondary>See the collection</Action></div>
-            <p className="adg-small">Made to order · US delivery · Shipping calculated at secure Stripe checkout.</p>
-          </div>
-        </div>
-      </Section>
-      <Section eyebrow="NEW · Your five-minute escape" title="A little breathing room, with something useful to take away.">
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/pockets-of-peace" className="adg-card adg-image-card"><img src="/images/personal/food/collards-in-small-raised-bed.jpg" alt="Leafy greens growing in a small raised bed" loading="lazy" /><div><h3>Grow through what you go through.</h3><p>Learn when to start seeds, how to care for young plants, and what gardening can teach us about patience. Start with our existing garden guides.</p><Action href="/pockets-of-peace">Step into Pockets of Peace</Action></div></LinkedCard>
-          <LinkedCard href="/pockets-of-peace#take-five" className="adg-card"><p className="adg-eyebrow">Turn the music up</p><h3>The soundtrack of us.</h3><p>Pick a song that means something to you, reflect on the memory behind it, and save your thoughts to your own device. No account or purchase required.</p><Action href="/pockets-of-peace#take-five" secondary>Find your five-minute reset</Action></LinkedCard>
-          <LinkedCard href="/whats-good-to-eat" className="adg-card"><p className="adg-eyebrow">Good food. Real life.</p><h3>Beats, Plants &amp; Plates.</h3><p>Browse existing recipes and practical meal ideas. We’ll distinguish tested instructions from stories and works in progress.</p><Action href="/whats-good-to-eat" secondary>What's good to eat?</Action></LinkedCard>
-        </div>
-      </Section>
-      <Section
-        id="choose"
-        eyebrow="Start with what brought you here"
-        title="What would help today?"
-      >
-        <TopicCards />
-      </Section>
-      <Section tone eyebrow="Here for our neighbors" title="Your neighborhood deserves investment. Your life deserves room to grow.">
-        <div style={{ maxWidth: "48rem" }}>
-          <p>AskDoGood is rooted in Prince George’s County and Washington, DC, with a commitment to reaching underserved neighbors, including Wards 7 and 8. These communities hold talent, creativity, families, and futures worth investing in. Hardship is something people face; it is not the whole story of who they are.</p>
-          <p>My stance is clear: I stand with people seeking dignity, stability, care, and a fair chance to build a better life. I oppose policies and decisions—including those of the current administration—that strip our communities of opportunity or make everyday survival harder. I want our response to include both a clear voice and something useful people can do.</p>
-          <p>That means making free starting points easy to find, sharing resources people can check, connecting learning with opportunity, and being honest about what AskDoGood can offer. My faith calls me toward service. You do not need to share my beliefs to belong here.</p>
-        </div>
-        <div className="adg-actions"><Action href="/resources/start">Start with free support</Action><Action href="/work-with-askdogood" secondary>Bring this work to your community</Action></div>
-      </Section>
-      <Section eyebrow="The person. The practice. The purpose." title="See the work behind the words.">
-        <p className="adg-lead">My story is a starting point for connection. Here are places you can see what I share, what I teach, and why I keep showing up.</p>
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/journey" className="adg-card"><h3>A life rebuilt through learning</h3><p>I am a U.S. Army veteran, cloud technology professional, educator, and entrepreneur. My work brings service, practical knowledge, and lived experience into the same conversation.</p><Action href="/journey" secondary>Read my story</Action></LinkedCard>
-          <LinkedCard href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" className="adg-card"><div><h3>Taking my voice into the world</h3><p>The story of speaking in Paris documents a chapter of learning, speaking, and moving beyond fear. Read what that experience meant to me.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>See the Paris chapter</Action></div></LinkedCard>
-          <LinkedCard href="https://thedopecloudteacher.org/classes/" className="adg-card"><h3>Turning knowledge into opportunity</h3><p>Through The Dope Cloud TeacHer, I help make cloud, AI, and digital skills approachable. Explore the learning options and how this work connects with your next chapter.</p><Action href="https://thedopecloudteacher.org/classes/" secondary>Explore DCT learning</Action></LinkedCard>
-        </div>
-        <p className="adg-small">These are examples of my experience and work. Your path, timing, and outcomes will be your own.</p>
-      </Section>
-      <Section id="real-talk" tone eyebrow="Pull up a chair" title="The story has layers. So do we.">
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" className="adg-card adg-image-card">
-            <div><h3>How did a woman afraid to fly end up speaking in Paris?</h3><p>Fear had an opinion. Life had other plans. Come read the chapter behind that experience.</p><Action href="/blog/overcoming-fear-and-thriving-my-journey-to-paris-to-speak-on-thyroid-metabolism" secondary>Read the Paris story</Action></div>
-          </LinkedCard>
-          <LinkedCard href="/blog/how-to-build-a-weekly-relationship-check-in-ritual" className="adg-card"><p className="adg-eyebrow">Let’s talk about it</p><h3>Is it peace—or are you just tired of explaining yourself?</h3><p>Boundaries, connection, and the conversations we rehearse in the car. A little relationship tea, with room for honesty and a useful next step.</p><Action href="/blog/how-to-build-a-weekly-relationship-check-in-ritual" secondary>Start the conversation</Action></LinkedCard>
-          <LinkedCard href="/merch" className="adg-card"><p className="adg-eyebrow">Wear what you believe</p><h3>Good on you. Good in the world.</h3><p>A cream tee. A black hoodie. A message you can take into your everyday life. Meet the original AskDoGood collection.</p><Action href="/merch">Find your piece</Action></LinkedCard>
-        </div>
-        <div className="adg-actions"><Action href="#prayer" secondary>Take a prayer pause</Action><Action href="/blog" secondary>Browse the reading room</Action></div>
-      </Section>
-      <Section id="in-community" tone eyebrow="Good in motion" title="Meet us in the community.">
-        <p>Explore our latest St. Luke, YPD, and Trinidad church event highlights, then connect with us about bringing useful learning and resources to your community.</p><Action href="#community-highlights">See our community highlights</Action>
-        <CommunityEvents />
-        <div className="adg-actions"><Action href="/community" secondary>Events & community connections</Action><Action href="/whats-good-to-eat">What’s good to eat?</Action></div>
-      </Section>
-      <Section>
-        <CommunityVoice />
+
+      <Section id="find-your-next-step" tone title="Find Your Next Step">
+        <WellnessQuiz />
       </Section>
 
-      <Section
-        tone
-        eyebrow="Useful, even before you spend a dollar"
-        title="Start with one good step."
-      >
-        <div className="adg-split">
-          <div>
-            <p className="adg-lead">
-              Feeling overwhelmed? Take the free next-step checklist. Choose one
-              small action for today, then build from there.
-            </p>
-            <div className="adg-actions">
-              <Action href="/next-step-checklist.html">
-                Get the free checklist
+      <Section id="pathways" title="Explore wellness guides and tools">
+        <div className="adg-grid adg-grid-four">
+          {pathways.map(pathway => (
+            <article className="adg-card" key={pathway.title}>
+              <h3>{pathway.title}</h3>
+              <p>{pathway.description}</p>
+              <Action href={pathway.free[1]} secondary>
+                {pathway.free[0]}
               </Action>
-              <Action href="#stay-connected" secondary>
-                Stay connected
-              </Action>
-            </div>
-          </div>
-          <div className="adg-mini-poster">
-            <span>FEEL IT.</span>
-            <span>NAME IT.</span>
-            <strong>TAKE ONE STEP.</strong>
-            <p>Your pace. Your life. Your next chapter.</p>
-          </div>
+            </article>
+          ))}
         </div>
-      </Section>
-      <Section
-        tone
-        eyebrow="Practical support you can purchase"
-        title="More resources for your next step."
-      >
-        <OfferCards />
+        <p className="adg-lead">
+          Diet, Exercise, Rest, and Spiritual Practice are the four parts of
+          DERS, our framework for building routines you can live with.
+        </p>
         <div className="adg-actions">
           <Action href="/shop" secondary>
-            Browse all offers
+            Browse the shop
           </Action>
-          <Action href="/merch#original-checkout">Shop AskDoGood Merch</Action>
         </div>
       </Section>
-      <Section eyebrow="From exploring to doing" title="Here’s how it works.">
-        <HowItWorks />
-        <Reassurance />
-      </Section>
-      <Section
-        tone
-        eyebrow="Featured preview · In development"
-        title="Beats, Plants & Plates."
-      >
-        <div className="adg-split">
-          <img
-            src="/images/merch/beats-plants-plates-cover.webp"
-            alt="Beats, Plants & Plates review-edition cookbook cover"
-            className="adg-book-cover"
-            loading="lazy"
-          />
-          <div>
-            <h3>Good food. Good music. A stronger everyday rhythm.</h3>
-            <p>
-              Original recipes with a hip-hop heartbeat, practical swaps, and
-              sourced cultural notes. Read two recipe drafts while we prepare
-              the first release.
-            </p>
-            <div className="adg-actions">
-              <Action href="/cookbook">Explore the cookbook preview</Action>
-              <Action href="/contact?topic=Cookbook%20interest" secondary>
-                Tell me more
-              </Action>
-            </div>
-            <p className="adg-small">
-              Review edition. Kitchen testing and release preparation remain.
-              Purchasing is not open yet.
-            </p>
-          </div>
-        </div>
-      </Section>
-      <Section tone eyebrow="Made with a message" title="Wear a little good.">
-        <div>
 
-          <div>
-            <h3>Your original AskDoGood collection.</h3>
-            <p>
-              Black embroidered hoodie $59. Hoodie and jogger set $95. Cream
-              logo tee $29. Sizes S–2XL; shipping is calculated at checkout.
-            </p>
-            <div className="adg-actions">
-              <Action href="/merch#original-checkout">Choose my piece &amp; size</Action>
-            </div>
-            <p className="adg-small">
-              Made to order. Review sizing and delivery details before checkout.
-            </p>
-          </div>
-        </div>
-      </Section>
       <Section
-        eyebrow="Built from life, for life"
-        title="Meet the person behind AskDoGood."
+        id="meet-dogood"
+        tone
+        eyebrow="Meet RoSeé"
+        title="Pull up a chair. There’s room for you here."
       >
         <div className="adg-split">
-          <div>
-            <p>
-              I’m RoSeé. AskDoGood grew from my own experiences with health,
-              rebuilding, learning, and finding peace in the middle of real
-              life. God’s grace and mercy gave me another chance. Paying it forward is part of how I live now. This is where useful knowledge meets an honest conversation.
-            </p>
-            <h3>Our mission</h3>
-            <p>{mission}</p>
-            <h3>Our vision</h3>
-            <p>{vision}</p>
-            <p>
-              Faith-rooted, culturally grounded, and welcoming to people from
-              every walk of life.
-            </p>
-            <div className="adg-actions">
-              <Action href="/about" secondary>
-                Get to know AskDoGood
-              </Action>
-              <Action href="/journey" secondary>
-                Read my story
-              </Action>
-            </div>
-          </div>
           <img
-            src="/images/personal/rosee-garden-2026.webp"
-            alt="RoSeé in her garden"
             className="adg-photo"
+            src="/images/personal/a-moment-with-dogood.webp"
+            alt="RoSeé Murphy, founder of AskDoGood"
             loading="lazy"
           />
+          <div>
+            <p>
+              I’m RoSeé, also known as DoGood. I’m an Army veteran and cloud
+              architect. I built AskDoGood to turn what I’ve lived and learned
+              into something useful for our people.
+            </p>
+            <p>{mission}</p>
+            <p>{vision}</p>
+            <Action href="/about" secondary>
+              Meet the founder
+            </Action>
+          </div>
         </div>
       </Section>
+
       <Section
-        tone
-        eyebrow="For the people you serve"
-        title="Bring AskDoGood to your community."
+        id="community-highlights"
+        eyebrow="Wellness in the DMV"
+        title="Bring practical wellness to your group"
       >
-        <p className="adg-lead">
-          Practical workshops on food, stress, healthy routines, caregiving, and
-          life transitions for community groups, senior centers, veterans
-          organizations, and workplaces.
+        <p>
+          AskDoGood offers group workshops for faith communities, senior
+          centers, nonprofits, and workplaces. Tell us who you’re bringing
+          together and what you want participants to take home.
         </p>
         <div className="adg-actions">
-          <Action href="/work-with-askdogood">
-            Explore workshops & partnerships
+          <Action href="/contact?topic=Community%20workshop">
+            Inquire About a Group Workshop
+          </Action>
+          <Action href="/work-with-askdogood" secondary>
+            Explore Workshop Formats
           </Action>
         </div>
-      </Section>
-      <Section
-        tone
-        eyebrow="The reading room"
-        title="Stories that meet the moment."
-      >
-        <div className="adg-grid adg-grid-three">
-          {[
-            {
-              slug: "when-life-shifts-your-next-step-still-matters",
-              title: "When life shifts, your next step still matters",
-              text: "Work, care, and the pressure to keep going—with practical places to begin.",
-              image:
-                "/images/editorial/when-life-shifts-your-next-step-still-matters.svg",
-              alt: "Editorial graphic about life transitions",
-            },
-            {
-              slug: "dmv-meal-prep-for-busy-women-who-want-to-eat-clean-without-burning-out",
-              title: "Feed yourself without burning yourself out",
-              text: "A practical meal-prep rhythm for a life that is already full.",
-              image: "/images/community/family-meal.webp",
-              alt: "Family members preparing food together at home",
-            },
-            {
-              slug: "how-to-build-a-weekly-relationship-check-in-ritual",
-              title: "Connection takes a little room",
-              text: "Make space for listening, honesty, and a useful weekly check-in.",
-              image:
-                "/images/personal/professional/clay-banks-hands-together.jpg",
-              alt: "Hands together around a table",
-            },
-          ].map(item => (
-            <Link
-              key={item.slug}
-              href={`/blog/${item.slug}`}
-              className="adg-card adg-image-card"
-            >
-              <img src={item.image} alt={item.alt} loading="lazy" />
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <span className="adg-text-link">Read & take a next step</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Section>
-      <Section tone eyebrow="Scripture for the everyday" title="Faith that meets you here—and moves you forward.">
-        <div className="adg-grid adg-grid-three">
-          <LinkedCard href="https://www.biblegateway.com/passage/?search=James+1%3A5&version=KJV" className="adg-card"><p className="adg-eyebrow">James 1:5 · Wisdom</p><h3>Bring the question to God.</h3><p>James invites those who lack wisdom to ask God. What decision needs a quiet moment and an honest prayer today?</p><Action href="https://www.biblegateway.com/passage/?search=James+1%3A5&version=KJV" secondary>Read the passage</Action></LinkedCard>
-          <LinkedCard href="https://www.biblegateway.com/passage/?search=Micah+6%3A8&version=KJV" className="adg-card"><p className="adg-eyebrow">Micah 6:8 · Justice, mercy, humility</p><h3>Let your faith show up in your choices.</h3><p>Notice one person you can serve, one place you can practice mercy, and one conversation you can enter with humility.</p><Action href="https://www.biblegateway.com/passage/?search=Micah+6%3A8&version=KJV" secondary>Read the passage</Action></LinkedCard>
-          <LinkedCard href="/blog/does-revelation-speak-to-our-time" className="adg-card"><p className="adg-eyebrow">Revelation · A conversation</p><h3>Does Revelation speak to our time?</h3><p>Explore the parallels people notice, the passages behind them, and the hope that belongs in the conversation.</p><Action href="/blog/does-revelation-speak-to-our-time" secondary>Read & reflect</Action></LinkedCard>
-        </div>
-        <p className="adg-small">Reflections above paraphrase the themes. Follow each link to read the Scripture in context.</p>
-      </Section>
-      <Section id="prayer" tone eyebrow="Faith, with room to breathe" title="A prayer for the next good step.">
-        <div className="adg-split">
-          <div className="adg-card"><p className="adg-lead">God, help me quiet the noise long enough to hear what matters. Give me wisdom for the next decision, courage to release what drains me, and patience for what is still growing. Help me care for myself and show up with love for my community. One honest step at a time. Amen.</p></div>
-          <div><h3>Pause. Pray. Put one thing into practice.</h3><p>Take one slow breath. Name what is weighing on you. Choose one kind, practical action for today. This space is faith-rooted, and you are welcome wherever you are in your journey.</p><Action href="/blog/prayer-for-guidance-and-support-in-overcoming-vices-and-bad-habits" secondary>Read the prayer & reflection</Action><p className="adg-small">You can reflect privately; you do not need to submit anything.</p></div>
-        </div>
-      </Section>
-      <Section
-        id="pockets"
-        eyebrow="Little pockets of peace"
-        title="There’s room for joy, too."
-      >
-        <div className="adg-grid adg-grid-three">
-          {[
-            {
-              title: "In the garden",
-              text: "Growing, changing, and making room for a slower moment.",
-              href: "/garden",
-              image: "/images/personal/food/garden-peppers.jpg",
-              alt: "Peppers growing in RoSeé’s garden",
-            },
-            {
-              title: "What music made me",
-              text: "Old school sounds, culture, and stories worth sharing.",
-              href: "/interests",
-              image: "/images/personal/rosee-with-mc-lyte.jpg",
-              alt: "A photograph of RoSeé with MC Lyte",
-            },
-            {
-              title: "Life beyond the familiar",
-              text: "The places and experiences that open a new chapter.",
-              href: "/journey",
-              image: "/images/personal/professional/zachary-nelson-community.jpg",
-              alt: "Friends enjoying a joyful moment outdoors",
-            },
-          ].map(item => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="adg-card adg-image-card"
-            >
-              <img src={item.image} alt={item.alt} loading="lazy" />
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <span className="adg-text-link">Explore</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Section>
-      <Section
-        eyebrow="Care, work & community"
-        title="Real life doesn’t happen in separate boxes."
-      >
-        <p className="adg-lead">
-          A job change can affect your care. A money worry can follow you home.
-          Whole-life support makes room for that reality—and helps you find
-          something useful to do.
+        <p>
+          See where we’ve shown up in DC, from the resource fair at St. Luke to
+          the digital inclusion fair at Trinidad Baptist Church.
         </p>
-        <CommunityResources />
-        <div className="adg-card" style={{ marginTop: "1.5rem" }}>
-          <a href="https://thedopecloudteacher.org/classes/" className="adg-actions"><img src="/images/branding/the-dope-cloud-teacher-logo.png" alt="The Dope Cloud Teacher official logo" width="100" height="100" style={{ objectFit: "contain" }} /><span><strong>Grow your skills. Bring them back to your community.</strong><br />Explore cloud and AI classes, certification pathways, and instructor opportunities with our sister brand.</span></a>
-        </div>
         <div className="adg-actions">
-          <Action
-            href="/blog/when-life-shifts-your-next-step-still-matters"
-            secondary
-          >
-            Read: When life shifts
+          <Action href="/community" secondary>
+            See Community Highlights
           </Action>
         </div>
-      </Section>
-      <Section tone id="in-the-works" eyebrow="Looking ahead · Projects in development" title="Good things take vision—and work.">
-        <p>The memoir is being written. The hip-hop cookbook is being developed. Habit-change resources and more community learning opportunities are planned directions. See what each project is meant to do, where it stands, and what still needs to happen.</p>
-        <div className="adg-actions"><Action href="/in-the-works">Explore what’s in the works</Action><Action href="/contact?topic=Upcoming%20AskDoGood%20projects" secondary>Tell us what you’d like to see</Action></div>
       </Section>
     </div>
   );
