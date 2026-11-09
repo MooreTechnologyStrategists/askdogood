@@ -1,3 +1,5 @@
+import "./Home.css";
+import { ClipboardList, MoonStar, Sprout, Stethoscope } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Action, PageIntro, Section } from "@/components/Experience";
 import { mission, vision } from "@/content/experience";
@@ -7,6 +9,7 @@ import { trackEvent } from "@/lib/analytics";
 const pathways = [
   {
     title: "Thyroid & Hormone Health",
+    illustration: Stethoscope,
     description:
       "Organize your questions and prepare to discuss thyroid labs with your clinician.",
     free: ["Open the free thyroid lab guide", "/free-thyroid-lab-guide"],
@@ -15,6 +18,7 @@ const pathways = [
   },
   {
     title: "Budget Nutrition & Container Gardening",
+    illustration: Sprout,
     description:
       "Plan affordable meals and learn what you can grow in a small space.",
     free: ["Explore the garden resources", "/garden"],
@@ -23,6 +27,7 @@ const pathways = [
   },
   {
     title: "Patient Advocacy & Appointment Prep",
+    illustration: ClipboardList,
     description:
       "Gather your notes, decide what to ask, and make the most of your next visit.",
     free: ["Open the free appointment checklist", "/doctor-checklist"],
@@ -31,6 +36,7 @@ const pathways = [
   },
   {
     title: "Rest & Everyday Routines",
+    illustration: MoonStar,
     description:
       "Make room for rest, comfortable movement, and a practice that grounds you.",
     free: ["Build a free DERS plan", "/services#wellness-planner"],
@@ -190,7 +196,12 @@ export default function Home() {
       <Section id="pathways" title="Explore wellness guides and tools">
         <div className="adg-grid adg-grid-four">
           {pathways.map(pathway => (
-            <article className="adg-card" key={pathway.title}>
+            <article className="adg-card adg-pathway-card" key={pathway.title}>
+              <pathway.illustration
+                className="adg-pathway-illustration"
+                aria-hidden="true"
+                strokeWidth={1.1}
+              />
               <h3>{pathway.title}</h3>
               <p>{pathway.description}</p>
               <Action href={pathway.free[1]} secondary>
