@@ -264,11 +264,11 @@ export default function Home() {
               routine that fits the week you actually have.
             </p>
             <p>
-              We’ve shown up at the St. Luke recruitment and resource fair in
-              Washington, DC, and AskDoGood was represented at the YPD Community
-              Impact Event. We’ve also been in conversation with the University
-              of Maryland Extension’s Expanded Food and Nutrition Education
-              Program about what a community nutrition pilot could look like.
+              Two recent stops for AskDoGood were the St. Luke recruitment and
+              resource fair in Washington, DC, and the YPD Community Impact
+              Event. We’ve also been talking with the University of Maryland
+              Extension’s Expanded Food and Nutrition Education Program about
+              a possible community nutrition pilot.
             </p>
             <p>
               If you bring people together at a church, senior center,
