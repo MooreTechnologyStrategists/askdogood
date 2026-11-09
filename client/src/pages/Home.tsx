@@ -230,7 +230,7 @@ export default function Home() {
         <div className="adg-split">
           <img
             className="adg-photo"
-            src="/images/personal/a-moment-with-dogood.webp"
+            src="/images/personal/rosee-smiling.webp"
             alt="RoSeé Murphy, founder of AskDoGood"
             loading="lazy"
           />

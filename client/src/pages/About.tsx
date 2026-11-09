@@ -13,8 +13,8 @@ export default function About() {
         eyebrow="About AskDoGood"
         title="Useful guidance for a full, real life."
         text="Practical education, affordable choices, and community connections help you build healthier everyday routines. Diet, Exercise, Rest, and Spiritual practice are our foundation."
-        image="/images/personal/food/zay-at-first-watch.jpg"
-        alt="RoSeé smiling outside a restaurant"
+        image="/images/personal/rosee-on-the-deck.webp"
+        alt="RoSeé smiling on a deck lit by string lights"
       />
       <Section>
         <div className="adg-grid adg-grid-three">

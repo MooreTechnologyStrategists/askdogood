@@ -25,6 +25,21 @@ export default function Garden() {
         </p>
       </header>
 
+      <figure className="adg-card mt-10 max-w-sm">
+        <video
+          className="block h-auto w-full rounded-2xl"
+          src="/images/personal/rosee-greenhouse.mp4"
+          poster="/images/personal/rosee-greenhouse.webp"
+          width={384}
+          height={682}
+          controls
+          playsInline
+          preload="none"
+          aria-label="A greenhouse moment with RoSeé"
+        />
+        <figcaption className="mt-3">A greenhouse moment with RoSeé, surrounded by hanging ferns.</figcaption>
+      </figure>
+
       <section className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {gardenSeasons.map((s) => {
           // Prefer explicit title, otherwise Title Case the slug
