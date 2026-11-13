@@ -174,17 +174,17 @@ export default function Home() {
     <div className="adg-page">
       <PageIntro
         eyebrow="AskDoGood · Prince George’s County & Washington, DC"
-        title="Budget-friendly wellness for real life."
-        text="Eat well, spend less, and find a next step that fits your life. Start with practical guides, tools for your next appointment, and routines you can make your own."
+        title="Real life. Real wellness. Real community."
+        text="Good living doesn’t have to cost a fortune. Come as you are, find practical wellness resources, and grow from where you are—right here in our community."
         image="/images/community/family-kitchen.webp"
         alt="A family preparing a meal together"
       >
         <div className="adg-actions">
           <Action href="#find-your-next-step">
-            Take the 60-Second Wellness Quiz
+            Find My Wellness Starting Point
           </Action>
           <Action href="#pathways" secondary>
-            Explore Our Guides
+            Explore Free Resources & Guides
           </Action>
         </div>
       </PageIntro>
@@ -225,7 +225,7 @@ export default function Home() {
         id="meet-dogood"
         tone
         eyebrow="Meet RoSeé"
-        title="Pull up a chair. There’s room for you here."
+        title="A little good from DoGood. Pull up a chair."
       >
         <div className="adg-split">
           <img
