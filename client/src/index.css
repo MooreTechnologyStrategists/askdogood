@@ -1361,3 +1361,12 @@ html {
 .adg-linked-card:hover { border-color: #245747; }
 #wellness-selection { scroll-margin-top: 110px; }
 #wellness-selection:focus-visible { outline: 3px solid #245747; outline-offset: 4px; }
+
+/* Brand-consistent encouragement cards and high-contrast newsletter area */
+.life-sticker { background:#f1eee3; border:1px solid #c4d0b8; border-left:4px solid #a65b3f; color:#173c32; box-shadow:0 6px 18px #173c3210; }
+.life-sticker summary span { color:#496457; }
+.adg-newsletter-section { background:#e7eee4; border-block:1px solid #c5d4c8; }
+.adg-newsletter-section .adg-subscribe { background:#fffaf1; color:#173c32; border:1px solid #b7cbbd; box-shadow:0 10px 28px #173c3212; }
+.adg-newsletter-section .adg-subscribe h3 { color:#173c32; }
+.adg-newsletter-section .adg-subscribe p { color:#36564b; }
+.adg-newsletter-section .adg-subscribe .adg-button { background:#174c3c; color:#fffaf1; }
