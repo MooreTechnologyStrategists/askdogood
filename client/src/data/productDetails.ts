@@ -80,10 +80,11 @@ export const productDetailsById: Record<string, ProductDetailContent> = {
     subheadline:
       "A plain-language lab guide so you can ask better questions, track trends, and advocate with clarity in appointments.",
     includes: [
-      "TSH, Free T3, Free T4 breakdown",
-      "Antibodies and reverse T3 context",
-      "What to document before each appointment",
-      "Provider conversation prompts",
+      "Plain-language explanations of TSH, free T4, and free T3, including why reference ranges vary by laboratory",
+      "An overview of thyroid antibodies (TPOAb, TgAb, and TRAb) and when clinicians may use them",
+      "Context for reverse T3, including why it is not routinely recommended for diagnosing hypothyroidism",
+      "A worksheet for recording results, dates, laboratory reference ranges, symptoms, and medication changes",
+      "Questions to discuss with your clinician about repeat testing, treatment monitoring, and next steps",
     ],
     bestFor: [
       "People who get labs but still feel uncertain",
@@ -91,11 +92,11 @@ export const productDetailsById: Record<string, ProductDetailContent> = {
       "Anyone who wants practical lab literacy",
     ],
     outcomes: [
-      "Clearer interpretation of common thyroid markers",
+      "Better understanding of common thyroid markers and the limits of any single test",
       "Better communication with healthcare providers",
       "More confidence in follow-up decisions",
     ],
-    deliveryNote: "Digital guide delivered immediately after purchase.",
+    deliveryNote: "Educational digital guide; confirm the exact contents and access instructions at checkout. Lab results must be interpreted with your healthcare professional.",
   },
   "thyroid-supplement-protocol-templates": {
     headline: "Organize supplements and symptom response in one place.",
