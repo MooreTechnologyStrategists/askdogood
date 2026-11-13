@@ -2,6 +2,8 @@ import { Link, useLocation } from "wouter";
 import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
 import { Menu, X } from "lucide-react";
 const nav = [
+  ["Home", "/"],
+  ["Play & Grow", "/play-grow"],
   ["Find Your Next Step", "/#find-your-next-step"],
   ["Wellness Guides", "/#pathways"],
   ["Our Story", "/about"],
