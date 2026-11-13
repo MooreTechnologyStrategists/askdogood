@@ -9,8 +9,9 @@ export default function Footer() {
           <BeehiivSubscribe
             variant="card"
             source="site_footer"
-            title="Get practical wellness ideas in your inbox"
-            description="Get budget-friendly food ideas, everyday wellness tools, and news from AskDoGood."
+            buttonText="Join the free newsletter"
+            title="A little good in your inbox"
+            description="Real-life food and garden ideas, fresh recipes, encouraging stories, community updates, and first word when the cookbook is ready. Free to join; unsubscribe anytime."
           />
           <div className="adg-actions">
             <a
