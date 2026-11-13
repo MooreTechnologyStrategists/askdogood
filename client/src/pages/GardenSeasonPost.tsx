@@ -27,7 +27,7 @@ export default function GardenSeasonPost() {
           noindex
         />
         <h1 className="text-2xl font-bold">Not found</h1>
-          <LifeSticker />
+
         <p className="mt-2 text-muted-foreground">That season isn’t planted yet.</p>
         <Link href="/garden">
           <a className="underline mt-6 inline-block">Back to Garden</a>
@@ -98,6 +98,8 @@ export default function GardenSeasonPost() {
         {season.subtitle ? (
           <p className="mt-2 text-muted-foreground">{season.subtitle}</p>
         ) : null}
+
+        <div className="mt-6 rounded-3xl border border-[#c6d7c9] bg-[#eef4e9] p-5"><LifeSticker /></div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
           <img src={heroImg} alt={season.heroAlt ?? `${label} garden`} className="h-full min-h-80 max-h-[34rem] w-full rounded-3xl object-cover shadow-lg" loading="lazy" />
