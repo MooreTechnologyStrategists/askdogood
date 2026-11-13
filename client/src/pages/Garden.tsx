@@ -19,11 +19,15 @@ export default function Garden() {
       <header className="max-w-3xl space-y-3">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">RoSeé's garden journal</p>
         <h1 className="text-4xl md:text-5xl font-bold">Seasons of Growth</h1>
-          <LifeSticker />
+
         <p className="text-lg leading-8 text-muted-foreground">
           Gardening can feel intimidating when you have limited space, a tight budget, or a plant that keeps looking at you sideways. Start with what you can check today: sunlight, soil moisture, drainage, and the season. Explore the growing notes below for practical ideas, then adapt them to your space and local weather. I also share what gardening has taught me about patience, starting over, and accepting that not every seed will make it.
         </p>
       </header>
+
+      <section className="mt-8 max-w-3xl rounded-3xl border border-[#c6d7c9] bg-[#eef4e9] p-5 md:p-7" aria-label="A little good from AskDoGood">
+        <LifeSticker />
+      </section>
 
       <figure className="adg-card mt-10 max-w-sm">
         <video
@@ -37,7 +41,7 @@ export default function Garden() {
           preload="none"
           aria-label="A greenhouse moment with RoSeé"
         />
-        <figcaption className="mt-3">A greenhouse moment with RoSeé, surrounded by hanging ferns.</figcaption>
+        <figcaption className="mt-3"><strong>A greenhouse moment with RoSeé.</strong> A quick look at the plants and the space that inspire this journal. Use the seasonal guides below for practical growing notes, including what to plant, what to protect, and what to expect in the DMV. The video is a personal garden glimpse, not a step-by-step tutorial.</figcaption>
       </figure>
 
       <section className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
