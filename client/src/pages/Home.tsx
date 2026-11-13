@@ -189,6 +189,29 @@ export default function Home() {
         </div>
       </PageIntro>
 
+      <Section id="featured-experiences" title="Good things to explore right now" eyebrow="Made for real life">
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card">
+            <p className="adg-eyebrow">Family-friendly discovery</p>
+            <h3>Play & Grow</h3>
+            <p>Hands-on activities, fresh ideas, and space to learn something new together. Curiosity belongs here.</p>
+            <Action href="/play-grow">Explore Play & Grow</Action>
+          </article>
+          <article className="adg-card">
+            <p className="adg-eyebrow">From our kitchen</p>
+            <h3>The AskDoGood Cookbook</h3>
+            <p>Take a peek at the recipes and the stories behind them. The cookbook is being prepared for release; join us for updates.</p>
+            <Action href="/cookbook">Preview the cookbook</Action>
+          </article>
+          <article className="adg-card">
+            <p className="adg-eyebrow">Wear the good</p>
+            <h3>AskDoGood Merch</h3>
+            <p>Everyday pieces that carry a little encouragement into the world. See what is available in the shop.</p>
+            <Action href="/merch">Shop merch</Action>
+          </article>
+        </div>
+      </Section>
+
       <Section id="find-your-next-step" tone title="Find Your Next Step">
         <WellnessQuiz />
       </Section>
