@@ -1,4 +1,3 @@
-import VoterCallout from "@/components/VoterCallout";
 import {
   Action,
   PageIntro,
@@ -22,13 +21,6 @@ export default function Merch() {
           </Action>
         </div>
       </PageIntro>
-      <Section id="fall-holiday-editions" tone eyebrow="AskDoGood · Fall + holiday edition" title="Make room for your rhythm.">
-        <p className="adg-lead">Fall invites us to slow down, gather close and make room for what restores us. The holidays can bring joy and a full calendar, so protecting your peace is a practice worth wearing. This AskDoGood design celebrates the music, small rituals and moments of rest that help us come back to ourselves. A thoughtful gift can carry a message: your joy deserves room, too.</p>
-        <img src="https://thedopecloudteacher.org/assets/askdogood-fall-edition.webp" alt="AskDoGood black Protect Your Peace Press Play apparel concept, front and back with official back and sleeve logos" loading="lazy" style={{display:"block",width:"100%",maxWidth:1000,height:"auto",margin:"24px auto",borderRadius:20}} />
-        <article className="adg-card"><h3>Protect Your Peace. Press Play.</h3><p>Original headphones-and-botanical artwork in cream, green, terracotta and blush, shown on a black crewneck. The official AskDoGood logo is centered on the upper back, with a smaller sleeve mark. The shaded illustration gives the print a dimensional appearance.</p><p>Design preview. Fabric, print method, size chart, price and delivery estimates will be confirmed before sales open. Raised printing or embroidery is not promised.</p></article>
-        <VoterCallout />
-        <div className="adg-actions"><Action href="#original-collection">Shop available AskDoGood merch</Action></div>
-      </Section>
       <Section id="original-collection" title="Three ways to carry the good.">
         <p>
           Choose your piece and size. Shipping is calculated at secure checkout.
