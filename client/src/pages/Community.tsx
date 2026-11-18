@@ -2,6 +2,15 @@ import { Action, PageIntro, Section } from "@/components/Experience";
 import CommunityEvents from "@/components/CommunityEvents";
 export default function Community() { return <div className="adg-page">
   <PageIntro eyebrow="Faith in motion · Community" title="Grace gives us another chance. Good gives us something to do with it." text="We’re living, learning, and paying it forward. Meet us in the community, explore practical resources, or talk with us about serving the people you care for."  />
+  <Section id="strengthening-families" tone eyebrow="Free local resource · Prince George’s County" title="Strengthening Families Program">
+    <p className="adg-lead">The Prince George’s County Health Department offers this free seven-week program for county residents who are raising youth ages 10–14. It helps parents and caregivers build practical parenting skills and gives young people tools for handling peer pressure and making healthy choices.</p>
+    <p>Sessions meet once a week from <strong>6:00 to 8:00 p.m.</strong> and begin with dinner at 6:00 p.m. Parents and caregivers practice communication and setting boundaries, while youth work on managing emotions, building confidence, and setting goals. Each evening ends with a joint session to practice those skills as a family. The program also supports youth substance-use prevention.</p>
+    <p>Contact the program team for the next start date, location, and availability. Families with children outside the age range can ask about eligibility.</p>
+    <div className="adg-actions">
+      <Action href="https://www.princegeorgescountymd.gov/departments-offices/strengthening-families-program-parents-and-youth-10-14">View county program and registration</Action>
+      <Action href="mailto:StrengtheningFamilies@pg.co.md.us" secondary>Email the program team</Action>
+    </div>
+  </Section>
   <Section id="st-luke-recap" tone eyebrow="Community highlight · October 8, 2026 · Washington, DC" title="St. Luke: A second chance needs an open door.">
     <p className="adg-small">Jobs Not Guns / Jobs Not Drugs · Citywide Recruitment &amp; Resource Fair · St. Luke Roman Catholic Church Community Center</p>
     <p>The organizers’ published program named Mayor Muriel Bowser and Congresswoman Eleanor Holmes Norton as honorees, and listed support from Ward 7 Councilmember Wendell Felder and Ward 8 Councilmember Trayon White. The fair’s stated purpose was to connect District residents with work, training, and support services while addressing gun violence and the impact of drugs. <a href="https://jobsnotguns.org/schedule/" target="_blank" rel="noopener noreferrer">Read the organizer’s event program</a>.</p>
