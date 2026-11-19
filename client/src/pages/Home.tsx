@@ -198,6 +198,30 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section id="food-help" title="Find free groceries in Prince George’s County and DC">
+        <p className="adg-lead">If groceries are tight this week, start with the pickup closest to home. Check the organizer’s page before heading out, especially on holidays.</p>
+        <div className="adg-grid adg-grid-three">
+          <article className="adg-card">
+            <h3>Weekday pantries in Prince George’s County</h3>
+            <p>County residents can visit the Hyattsville pantry at 6505 Belcrest Road, the Landover pantry at 425 Brightseat Road, or the Temple Hills pantry at 4235 28th Avenue. Regular hours are weekdays, 8 a.m. to 4:30 p.m.</p>
+            <Action href="https://www.princegeorgescountymd.gov/departments-offices/food-pantry-services" secondary>Check county pantry details</Action>
+          </article>
+          <article className="adg-card">
+            <h3>Free produce in Hyattsville</h3>
+            <p>Walk up or drive up to First United Methodist Church, 6901 Belcrest Road, on the third Tuesday of the month. Pickup starts at noon. Call 301-985-5000 to confirm.</p>
+            <Action href="https://www.hyattsville.org/937/Meals-Assistance" secondary>See the city’s produce giveaways</Action>
+          </article>
+          <article className="adg-card">
+            <h3>Groceries in Shaw and Anacostia</h3>
+            <p>Bread for the City offers monthly grocery pickups at 1525 7th Street NW and 1700 Marion Barry Avenue SE. Both pantries normally open Monday through Thursday, 9 a.m. to 3 p.m.</p>
+            <Action href="https://breadforthecity.org/food/" secondary>Plan a Bread for the City visit</Action>
+          </article>
+        </div>
+        <p>Need a closer pickup? <a className="adg-text-link" href="https://www.capitalareafoodbank.org/find-food-assistance/">Search the Capital Area Food Bank map.</a> To find more help or give directly to the regional campaign, visit <a className="adg-text-link" href="https://www.nbcwashington.com/community/how-to-donate-to-food-4-families-and-how-to-find-help/4174658/">NBC4 and Telemundo 44’s Food 4 Families</a>.</p>
+        <p>Hosting a giveaway at your shop, church, or community center? Send the date, pickup address, eligibility details, and public event link so neighbors can find you.</p>
+        <div className="adg-actions"><Action href="/contact?topic=Community%20food%20listing" secondary>Submit or update a food listing</Action></div>
+      </Section>
+
       <Section id="featured-experiences" title="Good things to explore right now" eyebrow="Made for real life">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card">
