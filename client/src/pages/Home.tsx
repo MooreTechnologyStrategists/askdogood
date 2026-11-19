@@ -189,6 +189,15 @@ export default function Home() {
         </div>
       </PageIntro>
 
+      <Section id="survivor-day" eyebrow="Saturday, November 21, 2026" title="International Survivors of Suicide Loss Day">
+        <div className="adg-card">
+          <p>If someone you love died by suicide, you may miss the sound of their laugh or wish someone would say their name. Whether your loss was recent or years ago, there’s room for you here.</p>
+          <p>The American Foundation for Suicide Prevention brings people together to remember those they’ve lost. Find a gathering in the DC area or join Survivor Day Live online on November 21 at 7 p.m. Eastern.</p>
+          <p><a className="underline" href="https://afsp.org/chapter/national-capital-area-survivor-day-events">Find local gatherings and the livestream</a></p>
+          <p>If you need someone to talk to right now, you can reach a crisis counselor in the U.S. Call <a className="underline" href="tel:988?oai_link_source=model_response_hotline">988</a> or text <a className="underline" href="sms:988?oai_link_source=model_response_hotline">988</a>.</p>
+        </div>
+      </Section>
+
       <Section id="featured-experiences" title="Good things to explore right now" eyebrow="Made for real life">
         <div className="adg-grid adg-grid-three">
           <article className="adg-card">
