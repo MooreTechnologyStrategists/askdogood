@@ -176,8 +176,8 @@ export default function Home() {
         eyebrow="AskDoGood · Prince George’s County & Washington, DC"
         title="Real life. Real wellness. Real community."
         text="Good living doesn’t have to cost a fortune. Come as you are, find practical wellness resources, and grow from where you are—right here in our community."
-        image="/images/community/family-kitchen.webp"
-        alt="A family preparing a meal together"
+        image="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Columbia_Heights_14th_Street.JPG/1280px-Columbia_Heights_14th_Street.JPG"
+        alt="Looking north along 14th Street NW in Columbia Heights, Washington, DC"
       >
         <div className="adg-actions">
           <Action href="#find-your-next-step">
@@ -187,6 +187,7 @@ export default function Home() {
             Explore Free Resources & Guides
           </Action>
         </div>
+        <p className="adg-small">14th Street NW, Columbia Heights, 2008. Photo by <a className="underline" href="https://commons.wikimedia.org/wiki/File:Columbia_Heights_14th_Street.JPG">AgnosticPreachersKid</a> · <a className="underline" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
       </PageIntro>
 
       <Section id="survivor-day" eyebrow="Saturday, November 21, 2026" title="International Survivors of Suicide Loss Day">
@@ -218,6 +219,10 @@ export default function Home() {
           </article>
         </div>
         <p>Need a closer pickup? <a className="adg-text-link" href="https://www.capitalareafoodbank.org/find-food-assistance/">Search the Capital Area Food Bank map.</a> To find more help or give directly to the regional campaign, visit <a className="adg-text-link" href="https://www.nbcwashington.com/community/how-to-donate-to-food-4-families-and-how-to-find-help/4174658/">NBC4 and Telemundo 44’s Food 4 Families</a>.</p>
+        <figure className="my-5">
+            <img className="adg-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Setting_up_Produce_Stand_%289560825549%29.jpg/960px-Setting_up_Produce_Stand_%289560825549%29.jpg" alt="A market vendor arranging tomatoes in green baskets" loading="lazy" />
+            <figcaption className="adg-small">Setting up at the Columbia Heights Community Marketplace, 2013. Photo by <a className="underline" href="https://commons.wikimedia.org/wiki/File:Setting_up_Produce_Stand_(9560825549).jpg">Hakim Fobia / USDA</a> · <a className="underline" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</figcaption>
+          </figure>
         <p>Hosting a giveaway at your shop, church, or community center? Send the date, pickup address, eligibility details, and public event link so neighbors can find you.</p>
         <div className="adg-actions"><Action href="/contact?topic=Community%20food%20listing" secondary>Submit or update a food listing</Action></div>
       </Section>
@@ -340,23 +345,29 @@ export default function Home() {
               </Action>
             </div>
           </div>
-          <figure>
-            <img
-              className="adg-photo"
-              src="/images/community/st-luke-connections.webp"
-              alt="Attendees and recruiters talking beside resource tables at St. Luke"
-              loading="lazy"
-            />
-            <figcaption className="adg-small">
-              Connecting with neighbors at the St. Luke resource fair in
-              Washington, DC.
-            </figcaption>
-            <div className="adg-actions">
-              <Action href="/community" secondary>
-                See Community Highlights
-              </Action>
-            </div>
-          </figure>
+          <div>
+            <figure>
+              <img
+                className="adg-photo"
+                src="/images/community/st-luke-connections.webp"
+                alt="Attendees and recruiters talking beside resource tables at St. Luke"
+                loading="lazy"
+              />
+              <figcaption className="adg-small">
+                Connecting with neighbors at the St. Luke resource fair in
+                Washington, DC.
+              </figcaption>
+              <div className="adg-actions">
+                <Action href="/community" secondary>
+                  See Community Highlights
+                </Action>
+              </div>
+            </figure>
+            <figure className="my-5">
+              <img className="adg-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Watch_Out_%283678790941%29.jpg/960px-Watch_Out_%283678790941%29.jpg" alt="Close-up of a performer in a dark cap at an outdoor go-go set" loading="lazy" />
+              <figcaption className="adg-small">Respect Street Go-Go at the Other Folklife Festival in DC, 2009. Photo by <a className="underline" href="https://commons.wikimedia.org/wiki/File:Watch_Out_(3678790941).jpg">Steve Snodgrass</a> · <a className="underline" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</figcaption>
+            </figure>
+          </div>
         </div>
       </Section>
     </div>
