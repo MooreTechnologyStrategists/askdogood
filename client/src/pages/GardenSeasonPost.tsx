@@ -94,7 +94,6 @@ export default function GardenSeasonPost() {
 
       <article className="max-w-5xl">
         <h1 className="text-3xl md:text-4xl font-bold">{season.title}</h1>
-          <LifeSticker />
         {season.subtitle ? (
           <p className="mt-2 text-muted-foreground">{season.subtitle}</p>
         ) : null}
