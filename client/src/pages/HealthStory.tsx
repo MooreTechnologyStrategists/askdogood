@@ -24,6 +24,14 @@ export default function HealthStory() {
     <PageIntro eyebrow={`RoSeé’s health stories · ${story.category}`} title={story.title} text={story.story}>
       <div className="adg-actions"><Action href="#care-conversation">Prepare my care conversation</Action><Action href={`/health-stories/category/${story.categorySlug}`} secondary>{story.category}</Action></div>
     </PageIntro>
+    {story.slug === "graves-disease" && (
+      <Section title="Graves & Thyroid">
+        <p>Read about overlooked signs of an overactive thyroid and practical ways to prepare for care.</p>
+        <Action href="/blog/graves-and-thyroid-symptoms" secondary>
+          Read the Graves & Thyroid article
+        </Action>
+      </Section>
+    )}
     <Section eyebrow="My perspective" title="You deserve to be heard.">
       <div className="adg-split"><div><p>These are the things I want you to take with you:</p><ul className="health-list">{story.guidance.map(g=><li key={g}>{g}</li>)}</ul></div><aside className="adg-card"><p className="adg-eyebrow">The story is still growing</p><h3>From my life to the page</h3><p>I’m developing my memoir and the fuller stories behind these topics. Detailed reflections and selected excerpts are planned as the manuscript develops.</p><Action href="/in-the-works#memoir" secondary>See the book in progress</Action></aside></div>
       <p className="adg-small">This is personal encouragement and educational information. Your clinician can advise on diagnosis, treatment, and medication decisions.</p>
