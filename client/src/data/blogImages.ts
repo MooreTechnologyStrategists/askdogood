@@ -27,6 +27,7 @@ export function articleTopic(text: string) {
 }
 // Explicit editorial choices take priority; archive photos remain on their actual stories.
 const photoRules: [RegExp, string, string][] = [
+ [/^graves-and-thyroid-symptoms$/, "/assets/img/blog/assigned/the-thyroid-why-this-small-gland-is-such-a-big-deal.webp", "Editorial illustration about thyroid health"],
  [/from-kingston-courts-to-yonkers-dreams/, "/images/personal/professional/jamaica-youth-team.webp", "Youth basketball team from the AskDoGood archive"],
  [/overcoming-fear-and-thriving-my-journey-to-paris/, "/images/personal/travel/rosee-speaking-paris-2023.webp", "RoSeé speaking in Paris in 2023"],
  [/^dmv-meal-prep-/, "/images/personal/food/muhammad-dishes-1.jpg", "A colorful prepared vegetable dish"],
