@@ -14,13 +14,12 @@ export default function Shop() {
       <PageIntro
         eyebrow="Shop AskDoGood"
         title="Choose your next good step."
-        text="Start with free care preparation, choose a $25 food or routine toolkit, or shop the original merch. Personal support is arranged separately."
+        text="Start with practical wellness resources, shop the original AskDoGood apparel, or preview the newest DMV-inspired hoodies and headwear. Personal support is arranged separately."
       >
         <div className="adg-actions">
           <Action href="#offers">Find my support path</Action>
-          <Action href="#original-collection" secondary>
-            Shop merch
-          </Action>
+          <Action href="#original-collection" secondary>Shop original merch</Action>
+          <Action href="/merch#dmv-drop" secondary>See the DMV streetwear drop</Action>
         </div>
       </PageIntro>
       <Section id="offers" title="Care. Food. Your everyday routine.">
@@ -38,9 +37,7 @@ export default function Shop() {
         </p>
         <OriginalMerchCheckout />
         <div className="adg-actions">
-          <Action href="/merch" secondary>
-            View the full collection
-          </Action>
+          <Action href="/merch" secondary>View original merch and new DMV designs</Action>
         </div>
       </Section>
       <Section
