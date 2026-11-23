@@ -14,7 +14,7 @@ export default function Merch() {
       <PageIntro
         eyebrow="AskDoGood merch"
         title="Wear what moves you."
-        text="Shop the original AskDoGood collection, and explore our new DMV-inspired hoodies and headwear: Outta Pocket, Nah Moe, Whole Time You Lunchin’ Slim, and PG pride."
+        text="Shop the original AskDoGood collection, and explore our DMV hoodies: Outta Pocket, Nah Moe, Whole Time You Lunchin’ Slim, and PG pride."
       >
         <div className="adg-actions">
           <Action href="#dmv-drop">Explore the DMV drop</Action>
