@@ -1,4 +1,5 @@
 import { Action, Section } from "@/components/Experience";
+import { useState } from "react";
 
 type Design = {
   id: string;
@@ -9,6 +10,7 @@ type Design = {
   ink: string;
   backdrop: string;
   detail: string;
+  artwork?: string;
 };
 
 const designs: Design[] = [
@@ -17,7 +19,8 @@ const designs: Design[] = [
     name: "Outta Pocket Hoodie",
     type: "hoodie",
     words: ["OUTTA", "POCKET"],
-    garment: "#3a3c42",
+    garment: "#a6a4a4",
+    artwork: "/images/merch/dmv-outta-pocket.webp",
     ink: "#f3e6d1",
     backdrop: "#e5e5e7",
     detail: "DMV expression up front; the DC three-star, two-bar flag is planned for the back.",
@@ -27,9 +30,10 @@ const designs: Design[] = [
     name: "Nah Moe Hoodie",
     type: "hoodie",
     words: ["NAH", "MOE"],
-    garment: "#143e35",
-    ink: "#f5dfba",
-    backdrop: "#e7efdc",
+    garment: "#073cb2",
+    ink: "#fff1c9",
+    backdrop: "#dce6f8",
+    artwork: "/images/merch/dmv-nah-moe.webp",
     detail: "A hometown phrase, with AskDoGood branding on the finished piece.",
   },
   {
@@ -37,9 +41,10 @@ const designs: Design[] = [
     name: "Whole Time, You Lunchin' Slim Hoodie",
     type: "hoodie",
     words: ["WHOLE TIME", "YOU LUNCHIN'", "SLIM"],
-    garment: "#172c4c",
-    ink: "#f4e7d9",
-    backdrop: "#dbe8ee",
+    garment: "#ca9f70",
+    ink: "#7d3a23",
+    backdrop: "#efe0cf",
+    artwork: "/images/merch/dmv-lunchin-slim.webp",
     detail: "A familiar DMV line, built for a bold streetwear look.",
   },
   {
@@ -47,20 +52,22 @@ const designs: Design[] = [
     name: "PG Circle Hoodie",
     type: "hoodie",
     words: ["PG"],
-    garment: "#161b1c",
+    garment: "#4a2a21",
     ink: "#efb56a",
     backdrop: "#e9dace",
+    artwork: "/images/merch/dmv-pg-circle.webp",
     detail: "Oversized PG initials, with a circular design celebrating Prince George's County.",
   },
   {
     id: "blue-logo",
-    name: "Powder Blue Signature Hoodie",
+    name: "I Still Make Plans — Powder Blue Hoodie",
     type: "hoodie",
-    words: ["AskDoGood"],
+    words: ["I STILL", "MAKE", "PLANS"],
     garment: "#add8e8",
     ink: "#173b66",
     backdrop: "#dce9ef",
-    detail: "The powder-blue concept with the darker navy version of the official AskDoGood logo.",
+    artwork: "/images/merch/dmv-i-still-make-plans.webp",
+    detail: "The I Still Make Plans powder-blue front-and-back concept with a dark navy AskDoGood logo.",
   },
   {
     id: "outta-pocket-skullcap",
@@ -105,6 +112,7 @@ const designs: Design[] = [
 ];
 
 function DesignPreview({ design }: { design: Design }) {
+  const [photoLoaded, setPhotoLoaded] = useState(false);
   const isHoodie = design.type === "hoodie";
   const isWrap = design.type === "headwrap";
   const isBeanie = design.type === "skullcap";
@@ -173,6 +181,16 @@ function DesignPreview({ design }: { design: Design }) {
           ASKDOGOOD • DMV COLLECTION
         </text>
       </svg>
+      {design.artwork && (
+        <img
+          src={design.artwork}
+          alt={design.name + " concept mockup"}
+          loading="lazy"
+          onLoad={() => setPhotoLoaded(true)}
+          onError={() => setPhotoLoaded(false)}
+          className={"absolute inset-0 h-full w-full object-contain transition-opacity " + (photoLoaded ? "opacity-100" : "opacity-0")}
+        />
+      )}
       <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#173c32]">
         Design preview
       </span>
