@@ -5,6 +5,7 @@ import {
   Reassurance,
 } from "@/components/Experience";
 import OriginalMerchCheckout from "@/components/OriginalMerchCheckout";
+import DMVStreetwearDrop from "@/components/DMVStreetwearDrop";
 import { merchProducts, hasValidCheckoutUrl } from "@/data/merch-products";
 export default function Merch() {
   const other = merchProducts.filter(p => p.brand === "askdogood");
@@ -13,14 +14,14 @@ export default function Merch() {
       <PageIntro
         eyebrow="AskDoGood merch"
         title="Wear what moves you."
-        text="The original black embroidered hoodie, matching hoodie and jogger set, and cream logo tee. Pieces rooted in peace, culture, and commUNITY."
+        text="Shop the original AskDoGood collection, and explore our new DMV-inspired hoodies and headwear: Outta Pocket, Nah Moe, Whole Time You Lunchin’ Slim, and PG pride."
       >
         <div className="adg-actions">
-          <Action href="#original-collection">
-            Shop the original collection
-          </Action>
+          <Action href="#dmv-drop">Explore the DMV drop</Action>
+          <Action href="#original-collection" secondary>Shop the original collection</Action>
         </div>
       </PageIntro>
+      <DMVStreetwearDrop />
       <Section id="original-collection" title="Three ways to carry the good.">
         <p>
           Choose your piece and size. Shipping is calculated at secure checkout.
