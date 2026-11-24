@@ -43,19 +43,14 @@ export default function RouteSeo({ location }: RouteSeoProps) {
         "Explore articles, recipes, relationship tools, and practical resources for everyday life.",
     },
     "/shop": {
-      title: "Guides, Plans, Membership & Merch | AskDoGood",
+      title: "Wellness Guides, Plans & Membership | AskDoGood",
       description:
-        "Explore the $17 reset guide, $97 personalized wellness plan, $19/month membership, and original AskDoGood merch.",
+        "Explore practical wellness guides, personalized plans, membership, and resources for everyday living.",
     },
     "/cookbook": {
       title: "Beats, Plants & Plates Cookbook Preview | AskDoGood",
       description:
         "Explore original recipe drafts, hip-hop cultural notes, and the free preview of the AskDoGood cookbook in development.",
-    },
-    "/merch": {
-      title: "Shop AskDoGood Merch",
-      description:
-        "Explore the original embroidered black hoodie, hoodie and jogger set, and cream logo tee.",
     },
     "/blog": {
       title: "Articles & Stories | AskDoGood",
@@ -220,7 +215,7 @@ function getSchemaForPath(path: string) {
         name: "Ask DoGood Shop",
         url: `${SITE_URL}/shop`,
         description:
-          "Wellness guides, personalized plans, membership, and made-to-order merchandise.",
+          "Wellness guides, personalized plans, and membership.",
       };
     case "/coaching":
       return {
