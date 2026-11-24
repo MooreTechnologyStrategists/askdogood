@@ -242,10 +242,10 @@ export default function Home() {
             <Action href="/cookbook">Preview the cookbook</Action>
           </article>
           <article className="adg-card">
-            <p className="adg-eyebrow">Wear the good</p>
-            <h3>AskDoGood Merch</h3>
-            <p>Everyday pieces that carry a little encouragement into the world. See what is available in the shop.</p>
-            <Action href="/merch">Shop merch</Action>
+            <p className="adg-eyebrow">Community & connection</p>
+            <h3>Practical Workshops</h3>
+            <p>Bring useful everyday wellness conversations and activities to your neighborhood group or organization.</p>
+            <Action href="/work-with-askdogood">Explore workshops</Action>
           </article>
         </div>
       </Section>
