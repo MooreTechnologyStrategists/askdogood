@@ -450,16 +450,6 @@ export const staticSeoPages: StaticSeoPage[] = [
     changefreq: "weekly",
   },
   {
-    path: "/merch",
-    title: "Merch Design Previews | Ask DoGood",
-    description:
-      "Preview AskDoGood tees, mugs, hoodies, and totes celebrating joy, healing, and community. Sign up for launch and ordering updates.",
-    keywords: ["Ask DoGood merch", "wellness merch"],
-    type: "website",
-    priority: 0.7,
-    changefreq: "monthly",
-  },
-  {
     path: "/course/thyroid-health-mastery",
     title: "Thyroid Health Mastery Course | Ask DoGood",
     description:
