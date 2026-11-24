@@ -695,7 +695,6 @@ export const launchOrder = [
   "dogood-wellness-circle",
   "black-womens-health-advocacy-toolkit",
   "garden-to-table-wellness-bundle",
-  "askdogood-merch-preview",
   "discovery-call",
 ];
 
@@ -711,7 +710,6 @@ export const catalogItems = [
   ...membershipOffers,
   ...leadMagnets,
   ...serviceCatalog,
-  ...comingSoonMerchItems,
 ];
 
 export const catalogById = Object.fromEntries(
