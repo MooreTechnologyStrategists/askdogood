@@ -43,9 +43,6 @@ export default function About() {
         <TopicCards />
         <div className="adg-actions">
           <Action href="/shop">Explore guides, plans & membership</Action>
-          <Action href="/merch" secondary>
-            Shop merch
-          </Action>
         </div>
       </Section>
       <Section title="Built from lived experience.">
