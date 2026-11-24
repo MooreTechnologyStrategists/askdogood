@@ -1,5 +1,7 @@
 import { Action, Section } from "@/components/Experience";
 
+const HOODIE_PRICE = 59;
+
 const hoodies = [
   { name: "Outta Pocket", color: "Heather gray", image: "dmv-outta-pocket" },
   { name: "Nah Moe", color: "Royal blue", image: "dmv-nah-moe" },
@@ -19,7 +21,7 @@ export default function DMVStreetwearDrop({ compact = false }: { compact?: boole
         </>
       ) : (
         <>
-          <p className="mb-5">Preview the DMV designs. Orders open once the printed hoodies are available.</p>
+          <p className="mb-5">Each hoodie is $59 before shipping and applicable taxes. These are the original approved designs. Secure purchasing opens when the matching production items and delivery options have been verified.</p>
           <div className="grid gap-6 sm:grid-cols-2">
             {hoodies.map(hoodie => (
               <article key={hoodie.image} className="adg-card">
@@ -28,6 +30,8 @@ export default function DMVStreetwearDrop({ compact = false }: { compact?: boole
                   alt={`${hoodie.name} hoodie in ${hoodie.color.toLowerCase()} with the AskDoGood chest logo`} />
                 <h3 className="mt-4">{hoodie.name}</h3>
                 <p>{hoodie.color}</p>
+                <p className="adg-price mt-3">${HOODIE_PRICE.toFixed(2)}</p>
+                <p className="adg-small">Purchase link pending production setup. No payment will be collected here.</p>
                 {hoodie.image === "dmv-outta-pocket" && (
                   <details className="mt-3">
                     <summary>View the DC flag back</summary>
@@ -40,10 +44,14 @@ export default function DMVStreetwearDrop({ compact = false }: { compact?: boole
           </div>
           <details className="mt-6">
             <summary>Also in development · I Still Make Plans</summary>
+            <p className="adg-price mt-3">${HOODIE_PRICE.toFixed(2)}</p>
             <img src="/images/merch/dmv-plans.webp" loading="lazy" className="mt-3 h-auto w-full max-w-2xl rounded-xl"
               alt="Powder-blue I Still Make Plans hoodie with navy lettering, shown front and back." />
           </details>
-          <Action href="#original-collection">Shop available AskDoGood apparel</Action>
+          <div className="adg-actions mt-6">
+            <Action href="/contact?topic=DMV%20hoodie%20drop%20notification" secondary>Get notified when DMV hoodies launch</Action>
+            <Action href="#original-collection">Shop available AskDoGood apparel</Action>
+          </div>
         </>
       )}
     </Section>
