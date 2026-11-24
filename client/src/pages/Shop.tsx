@@ -6,8 +6,6 @@ import {
   OfferCards,
   Reassurance,
 } from "@/components/Experience";
-import DMVStreetwearDrop from "@/components/DMVStreetwearDrop";
-import OriginalMerchCheckout from "@/components/OriginalMerchCheckout";
 import { flagshipDigitalProducts } from "@/data/catalog";
 export default function Shop() {
   return (
@@ -15,32 +13,15 @@ export default function Shop() {
       <PageIntro
         eyebrow="Shop AskDoGood"
         title="Choose your next good step."
-        text="Start with practical wellness resources, shop the original AskDoGood apparel, or explore the DMV hoodie collection. Personal support is arranged separately."
+        text="Explore practical wellness guides and tools for everyday life. Personal support and workshops are arranged separately."
       >
         <div className="adg-actions">
           <Action href="#offers">Find my support path</Action>
-          <Action href="#original-collection" secondary>Shop original merch</Action>
-          <Action href="#dmv-drop" secondary>See the DMV streetwear drop</Action>
         </div>
       </PageIntro>
-      <DMVStreetwearDrop compact />
       <Section id="offers" title="Care. Food. Your everyday routine.">
         <WellnessPaths />
         <Reassurance />
-      </Section>
-      <Section
-        id="original-collection"
-        tone
-        eyebrow="Made with a message"
-        title="The original AskDoGood collection."
-      >
-        <p>
-          Choose your piece and size. Shipping is calculated at secure checkout.
-        </p>
-        <OriginalMerchCheckout />
-        <div className="adg-actions">
-          <Action href="/merch" secondary>View original merch and new DMV designs</Action>
-        </div>
       </Section>
       <Section
         eyebrow="Explore a specific topic"
