@@ -122,6 +122,16 @@ export default function WorkWithAskDoGood() {
           ))}
         </div>
       </Section>
+      <Section eyebrow="Sponsor access" title="Help a community build healthier routines.">
+        <p>Sometimes the barrier to a healthier routine is not motivation. It is time, cost, access to reliable information, or the feeling of having to figure everything out alone. AskDoGood offers practical, non-clinical education designed around everyday circumstances. Sponsors can help community members participate without carrying the entire cost themselves.</p>
+        <div className="adg-grid adg-grid-two">
+          <article className="adg-card"><h3>Life Reset Lab · proposed $500–$1,000</h3><p>Bring a facilitated group workshop to your organization. Participants explore practical food planning, everyday routines, community resources, and manageable next steps during life transitions. The final quote reflects group size, preparation, delivery and accessibility needs.</p><Action href="/contact?topic=Sponsored%20Life%20Reset%20Lab">Request a workshop proposal</Action></article>
+          <article className="adg-card"><h3>Sponsor a wellness series</h3><p>Support a connected set of sessions based on Diet, Exercise, Rest and Spiritual well-being (DERS). Together we define the audience, educational goals, materials, participation and appropriate aggregate feedback. A written proposal establishes pricing and delivery before any commitment.</p><Action href="/contact?topic=Sponsor%20a%20Wellness%20Series">Discuss sponsorship</Action></article>
+          <article className="adg-card"><h3>Tech &amp; Wellness Community Day</h3><p>Bring practical technology education and everyday wellness together. Explore digital safety, responsible AI use, budget-friendly meal planning, movement and community resources in an event adapted to your audience. Technology instruction is offered through our sister education brand, DCT.</p><a href="https://thedopecloudteacher.org/partners.html#sponsorship">Explore joint programming</a></article>
+          <article className="adg-card"><h3>The gift of a fresh start</h3><p>We are developing downloadable tools such as Eat Better, Still Eat Good and the 30-Day DoGood Reset. These proposed resources focus on realistic meal planning, grocery budgeting and sustainable habits. Tell us what would help you or someone you care about; gift redemption and new product purchases will be announced when ready.</p><Action href="/contact?topic=Wellness%20Digital%20Resources">Ask about digital resources</Action></article>
+        </div>
+        <p className="adg-note">Sponsorships are commercial educational service arrangements, not tax-deductible donations. Programs are subject to funding, written scope and facilitator availability. We do not provide medical treatment, individualized nutrition prescriptions or guaranteed health outcomes. For independent food budgeting resources, visit <a href="https://www.myplate.gov/eat-healthy/healthy-eating-budget">USDA MyPlate</a>.</p>
+      </Section>
       <Section title="From idea to a clear proposal.">
         <div className="adg-grid adg-grid-three">
           {[
