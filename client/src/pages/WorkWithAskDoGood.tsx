@@ -21,6 +21,10 @@ export default function WorkWithAskDoGood() {
           </Action>
         </div>
       </PageIntro>
+      <Section eyebrow="Why this work matters" title="Practical resources. Real community connections.">
+        <p>AskDoGood grew from founder RoSeé Murphy’s belief that healthy living and personal growth should not depend on having a large budget or a perfect set of circumstances. As a working cloud architect, Army veteran and community educator rooted in the DMV, she connects everyday challenges with practical resources and approachable learning.</p>
+        <p>Our workshops encourage people to make realistic changes, find reliable information and build supportive connections. Between sessions, explore <a href="https://www.nutrition.gov/topics/food-security-and-access/nutrition-budget">Nutrition.gov’s budget-friendly food resources</a> and <a href="https://www.nbcwashington.com/community/">NBC4 and Telemundo 44’s community resource coverage</a>. These are independent resources, not endorsements or affiliated organizations.</p>
+      </Section>
       <Section tone eyebrow="One foundation, shared community goals" title="Everyday Wellness Plan for your group.">
         <p className="adg-lead">A facilitated DERS workshop where participants create a seven-day plan for food, movement, rest, and a personally meaningful grounding practice.</p>
         <p>Plan for approximately 75 minutes, with demonstration, guided practice, facilitator feedback, and a take-home plan. Group fees are quoted for your audience, location, group size, accessibility needs, and requested customization. Public individual pilot pricing is $25 per participant; group quotations are separate.</p>
