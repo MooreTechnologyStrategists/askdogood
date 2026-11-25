@@ -55,7 +55,7 @@ export default function Cookbook() {
       </Section>
       <Section id="cookbook-interest" tone title="Taste the preview. Be part of the next chapter.">
         <p>Start with two free recipe drafts. If the flavor and the concept speak to you, send a cookbook-interest inquiry so we can hear what you want from the full collection. No payment is collected for an inquiry.</p>
-        <div className="adg-actions"><Action href="/downloads/Beats-Plants-and-Plates-Preview.pdf">Read the free preview</Action><Action href="/contact?topic=Beats%20Plants%20Plates%20cookbook%20interest">Register my cookbook interest</Action><Action href="/subscribe" secondary>Get AskDoGood updates</Action></div>
+        <div className="adg-actions"><Action href="/downloads/Beats-Plants-and-Plates-Preview.pdf">Read the free preview</Action><Action href="/contact?topic=Beats%20Plants%20Plates%20cookbook%20interest">Register my cookbook interest</Action><Action href="#stay-connected" secondary>Get AskDoGood updates</Action></div>
         <p className="adg-small">The cookbook is in development. Price and release date are not set; orders are not open yet.</p>
       </Section>
       <Section title="Want a practical routine today?"><p>The available AskDoGood 7-Day Reset offers daily prompts for food, movement, and rest. It is a separate $17 product, not the cookbook.</p><Action href="/product/7-day-reset">See what’s included in the $17 reset</Action></Section>
@@ -82,7 +82,7 @@ export default function Cookbook() {
               cookbook inquiry. Release date and price have not been set;
               purchasing is not open.
             </p>
-            <Action href="/subscribe" secondary>
+            <Action href="#stay-connected" secondary>
               Join the newsletter
             </Action>
           </article>
