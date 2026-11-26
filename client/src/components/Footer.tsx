@@ -52,6 +52,7 @@ export default function Footer() {
                 ["Everyday Wellness Plan", "/services#everyday-wellness"],
                 ["Free DERS plan starter", "/services#wellness-planner"],
                 ["Guides, plans & membership", "/shop"],
+                ["The Good Finds Collection", "/shop#good-finds"],
                 ["Cookbook preview", "/cookbook"],
                 ["What’s good to eat?", "/whats-good-to-eat"],
                 ["Events & community", "/community"],

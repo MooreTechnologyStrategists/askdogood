@@ -23,6 +23,10 @@ const AffiliateLink: React.FC<AffiliateLinkProps> = ({
   price,
   description,
 }) => {
+  // All legacy Amazon product links are paused until the account and each destination are verified.
+  const affiliateLinksEnabled = false;
+  if (!affiliateLinksEnabled) return null;
+
   // Add affiliate tag to Amazon URL
   const getAffiliateUrl = () => {
     try {

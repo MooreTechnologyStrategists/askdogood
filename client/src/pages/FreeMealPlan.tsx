@@ -246,16 +246,16 @@ export default function FreeMealPlan() {
                 Get Your Free Checklist + 3-Day Plan Now
               </h2>
               <p className="text-muted-foreground">
-                Enter your email and I will send it straight to your inbox. Then
-                confirm your subscription email to unlock the free download.
+                Open the free printable starter pack now. Newsletter signup is optional.
               </p>
             </div>
 
+            <div className="mb-6 text-center"><a className="adg-button" href="/downloads/three-day-meal-plan.html">Open, print or save the free starter pack</a></div>
             <BeehiivSubscribe
               variant="card"
-              title="Download Your Free Thyroid Starter Pack"
-              description="Symptom checklist + 3-day meal plan + weekly support"
-              buttonText="Send Me The Free Pack"
+              title="Join AskDoGood’s free newsletter"
+              description="Get practical food and wellness updates"
+              buttonText="Join the newsletter"
               source="free_meal_plan_page"
               magnetType="thyroid-checklist-3day-plan"
             />

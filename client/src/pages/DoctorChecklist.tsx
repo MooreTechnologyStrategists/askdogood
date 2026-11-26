@@ -262,16 +262,16 @@ export default function DoctorChecklist() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Get Your Free Checklist</h2>
               <p className="text-muted-foreground">
-                Enter your email and I'll send it straight to your inbox. You'll also get 
-                weekly tips on advocating for better thyroid care.
+                Open the free printable checklist now. You can also join our newsletter for ongoing health education.
               </p>
             </div>
 
+            <div className="mb-6 text-center"><a className="adg-button" href="/downloads/doctor-appointment-checklist.html">Open, print or save the free checklist</a></div>
             <BeehiivSubscribe 
               variant="card"
-              title="Download Your Free Doctor Appointment Checklist"
-              description="Get instant access + advocacy tips"
-              buttonText="Send Me The Checklist"
+              title="Join AskDoGood’s free newsletter"
+              description="Get advocacy tips and community updates"
+              buttonText="Join the newsletter"
             />
 
             <div className="mt-6 text-center space-y-2">
@@ -282,7 +282,7 @@ export default function DoctorChecklist() {
                 </span>
                 <span className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
-                  Printable PDF
+                  Print or save as PDF
                 </span>
                 <span className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
